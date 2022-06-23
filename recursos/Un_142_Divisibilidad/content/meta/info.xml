@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<recurso 
+	id="_Un_142_Divisibilidad" 
+	nivel="Licenciatura" 
+	area="Matemáticas, Cálculo, Funciones" 
+	plataforma="HTML 5" 
+	>
+	<titulo><![CDATA[
+		Divisibilidad 
+	]]></titulo>
+	
+	<Descripcion><![CDATA[
+		Se explora el concepto general y diversos criterios particulares de divisibilidad. El estudiante puede generar números aleatoriamente y explorar si es divisible por varios primos.
+	]]></Descripcion>
+	<tags>
+	<![CDATA[
+		Divisibilidad,Algoritmo de la división,Cociente, Residuo 
+	]]></tags>
+</recurso>
+
+<!--
+********************************************************************************
+                               **** Áreas **** 
+Matemáticas 
+	Aritmética
+		Fracciones
+	Álgebra
+		Combinatoria
+		Ecuaciones lineales
+		Ecuaciones polinomiales
+		Polinomios
+		Álgebra lineal
+		Teoría de grupos
+		Álgebra abstracta
+	Geometría
+		Geometría elemental
+		Geometría clásica
+		Geometría analítica
+	Trigonometría 
+	Probabilidad 
+		Cálculo de probabilidades
+		Eventos
+		Variables aleatorias
+		Ley de los grandes números
+		Teorema del límite central
+	Estadística
+		Medidas de tendencia central
+		Muestreo
+		Distribuciones
+		Inferencia
+	Cálculo
+		Funciones 
+		Límites
+		Continuidad
+		Derivadas 
+		Integrales 
+	Teoría de números
+	Teoría de gráficas
+Física
+	Mecánica
+	Electromagnetismo
+	Óptica
+	Físico-química 
+	Termodinámica
+	Mecánica estadística
+	Mecánica cuántica
+	Relatividad
+
+********************************************************************************
+
+********************************************************************************
+                             **** Niveles ****
+
+	Primaria
+	Preescolar
+	Secundaria
+	Bachillerato
+	Licenciatura
+	Posgrado 
+	Maestria
+	Doctorado
+
+********************************************************************************
+
+-->

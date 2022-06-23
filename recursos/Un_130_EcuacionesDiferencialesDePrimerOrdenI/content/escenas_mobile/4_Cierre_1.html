@@ -1,0 +1,201 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<title>Desarrollo</title>	
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<link href="../css/DescHTML5.css" rel="stylesheet" type="text/css" media="screen" />
+	<link href="../css/html5_mobile.css" rel="stylesheet" type="text/css" media="screen" />
+    <script type="text/javascript" src='../javascript/inject_functions_scorms_descartes.js'></script>
+	<script type='text/javascript' src='../lib/descartes-min.js'></script>
+</head>
+<body>
+	<!-------- MathJax --- para fórmulas matemáticas ------>	
+	<script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script> 
+  <article class="course_content_container">
+    <div class="course_content">
+  
+  
+    <!------ INICIA EL CONTENIDO DE LA PÁGINA ------- -->
+
+	<h2 align="center">Actividad y ley de decaimiento</h2>
+	
+	<p>
+	Un núclido al desintegrarse se transforma en otro núclido, esto de forma muy rápida o puede durar hasta miles de millones de años.
+La actividad es la tasa de transformación de un núcleo. Es el número de átomos de un radionúclido que se transforma por unidad de tiempo. Teniendo \( n \) núcleos radiactivos la actividad \( A \), es proporcional al número de núcleos \( n \) en cada momento, \( A =λn \), \( λ \) (constante de decaimiento) es la probabilidad de decaimiento por núcleo y no es posible modificarla por ningún proceso, es característica para cada elemento y  sus tipos de decaimiento. De acuerdo con la fórmula, para un valor dado de \( n \) si \( λ \) es grande, el decaimiento es rápido; si \( λ \) es pequeña, el decaimiento es lento.
+		</p>
+		
+	  <!-- ejemplo para incluir una imagen -->
+    <div class="course_extern_content"> 
+      <img src="imgs/grafica.jpg"></img>
+    </div>
+	
+	<p>
+	La actividad \( A \) se mide en (transformaciones)/(unidad de tiempo) y se mide en Becquerel \( (Bq) \), que equivale a 1 (transformación)/(segundo) también se utiliza Curie que equivale a \( 3.7 X 10^{10} Bq \).<br><br>
+Cuando se van creando las transformaciones  el número de núcleos va disminuyendo junto con la actividad de forma proporcional por lo que están en función del tiempo. La rapidez con la que disminuye \( n \) es \( \frac{–dn}{dt} \)que es la actividad ya que cada transformación corresponde a disminuir \( n \) en una unidad, \( A = \frac{–dn}{dt} \).<br><br>
+
+	Tenemos entonces que \( λn = \frac{–dn}{dt} \);
+<div align="center"> \( \frac{dn}{n} = -λ dt \) </div>
+<div align="center"> \( ln(n) = -λt + k \) </div>
+<div align="center"> \( n = e^{-λt + k} = e^{-λt} e^{k} \)</div><br>
+
+Cuando \( t=0 \), \( n=n_0 \) donde \( n_0 \) es el número de núcleos iniciales, sustituyendo estos valores tenemos que \( n_0 = e^k \) por lo que la ecuación nos queda:<br>
+
+<div align="center"> \(n(t) = n_0 e^{-λt} \) </div><br>
+
+Como la actividad es proporcional a \( n \) finalmente tenemos:<br><br>
+
+<div align="center"> \(A (t) = A_0 e-λt \) </div><br>
+
+Cuando tenemos una \( A_0 \) y esta se reduce a \( \frac{A_0}{2} \) en un cierto tiempo, a este tiempo lo denotaremos como vida media \( t_{\frac{1}{2}} \):
+
+<div align="center"> \( \frac{A0}{2} = A_0 e^{-λ t_{1/2}} \) </div>
+<div align="center"> \( ln(1/2) = -λ t_{1/2} \) </div>
+<div align="center"> \( t_{1/2} = \frac{0.693}{λ} \) </div>
+
+La vida promedio \( τ \) de una fuente radiactiva es el tiempo promedio que tarda uno de sus núcleos en desintegrarse. Corresponde al tiempo necesario para llegar a la fracción \( \frac{1}{e} \) de la actividad inicial obteniendo:<br><br>
+<div align="center"> \( τ = \frac{1}{λ} = 1.443 t_{1/2} \).
+	</p>
+	
+	
+
+  <div class="course_content">
+	<p class='instruccion'>
+    <span class="instrucciones">
+  	A continuación se muestra la simulación de un decaimiento radiactivo.	A partir de la actividad inicial y la vida media nota cuántos núcleos quedan al tiempo t, puedes modificar estos valores pulsando los botones más y menos.
+    </span>
+	</p>
+	
+<div class="Descartes_extern_content">
+  <ajs name="Descartes" width=495 height=320 code="Descartes">
+  <param name="tamaño" value="495x320">
+   <param name="image_loader" value="">
+   <param name="expand" value="">
+   <param name="decimal_symbol" value=".">
+   <param name="antialias" value="sí">
+   <param name="deshacer" value="no">
+   <param name="nombre" value="Descartes">
+   <param name="Versión" value="5.336, 2015-02-13">
+   <param name="Idioma" value="español">
+   <param name="Botones" value="créditos=no config=no inicio=no limpiar=no">
+   <param name="E_01" value="tipo='R2' id='E1' fijo='sí' escala='20' O.y='50' imagen='imgs/tpl/fondo_suave.jpg' despl_imagen='arr-izq' fondo='c0d0d8' red='no' red10='no' ejes='no' texto='no'">
+   <param name="E_02" value="tipo='R2' id='E2_Graf' x='0' y='222' ancho='485' alto='60' dibujar-si='0' despl_imagen='arr-izq' fondo='30f0f8fa' red='b8c4c8' red10='889498' ejes='405860' texto='no'">
+   <param name="E_03" value="tipo='R2' id='CTRS_north' x='CTRS.x' y='CTRS.y' ancho='485' alto='150' dibujar-si='0' fijo='sí' escala='-1' O.x='-50%' O.y='-50%' despl_imagen='arr-izq' fondo='88000000' red='no' red10='no' ejes='no' texto='no'">
+   <param name="E_04" value="tipo='R2' id='btnOpenClose' x='btnOpenClose.x' y='btnOpenClose.y' ancho='35' alto='30' dibujar-si='0' fijo='sí' escala='1' O.x='-50%' O.y='-50%' despl_imagen='arr-izq' fondo='ff000000' red='no' red10='no' ejes='no' texto='no'">
+   <param name="E_05" value="tipo='R2' id='MASK' dibujar-si='INFO.visible' fijo='sí' imagen='imgs/tpl/backwindow.png' despl_imagen='mosaico' fondo='95000000' red='no' red10='no' ejes='no' texto='no'">
+   <param name="E_06" value="tipo='R2' id='INFO' x='INFO.x' y='INFO.y' ancho='485' alto='310' dibujar-si='INFO.visible' fijo='sí' imagen='imgs/tpl/retro_790x470.png' despl_imagen='mosaico' red='no' red10='no' ejes='no' texto='no'">
+   <param name="C_01" value="id='cerrarInfo' tipo='numérico' interfaz='botón' región='interior' espacio='INFO' nombre='×' expresión='(cerrarInfo.x,cerrarInfo.y,cerrarInfo.w,cerrarInfo.h)' fijo='sí' visible='sí' color='blanco' fuente puntos='26' imagen='_STYLE_|class=btnUNADM|shadowTextColor=rgba(0,0,0,0.2)|shadowTextOffsetY=2|shadowTextBlur=0|textBorder=0' acción='calcular' parámetro='INFO.visible=0' dibujar-si='cerrarInfo.visible'">
+   <param name="C_02" value="id='btnOpen' tipo='numérico' interfaz='botón' región='interior' espacio='btnOpenClose' expresión='(0,0,35,30)' fijo='sí' visible='sí' fuente puntos='16' imagen='_STYLE_|class=btnUNADM open north|shadowTextColor=rgba(0,0,0,0.2)|shadowTextOffsetY=2|shadowTextBlur=0|textBorder=0' acción='calcular' parámetro='openPanelCtrs()' dibujar-si='!CTRS.opened'">
+   <param name="C_03" value="id='btnClose' tipo='numérico' interfaz='botón' región='interior' espacio='btnOpenClose' expresión='(0,0,35,30)' fijo='sí' visible='sí' imagen='_STYLE_|class=btnUNADM close north|shadowTextColor=rgba(0,0,0,0.2)|shadowTextOffsetY=2|shadowTextBlur=0|textBorder=0' acción='calcular' parámetro='closePanelCtrs()' dibujar-si='CTRS.opened'">
+   <param name="C_04" value="id='N+' tipo='numérico' interfaz='botón' región='interior' espacio='E1' expresión='(420,200,30,30)' fijo='sí' visible='sí' imagen='_STYLE_|class=btnUNADM icon siguiente|shadowTextColor=rgba(0,0,0,0.2)|shadowTextOffsetY=2|shadowTextBlur=0|textBorder=0' acción='calcular' parámetro='Ni=Ni+50\nllenaPos()\npermutaPos()' dibujar-si='(Ni&lt;2500)&amp;(t=0)'">
+   <param name="C_05" value="id='N-' tipo='numérico' interfaz='botón' región='interior' espacio='E1' expresión='(320,200,30,30)' fijo='sí' visible='sí' imagen='_STYLE_|class=btnUNADM icon anterior|shadowTextColor=rgba(0,0,0,0.2)|shadowTextOffsetY=2|shadowTextBlur=0|textBorder=0' acción='calcular' parámetro='Ni=Ni-50\nllenaPos()\npermutaPos()' dibujar-si='(Ni&gt;500)&amp;(t=0)'">
+   <param name="C_06" value="id='inicia' tipo='numérico' interfaz='botón' región='interior' espacio='E1' nombre='Iniciar' expresión='(325,270,120,30)' fijo='sí' visible='sí' color='blanco' color-int='fff0f8ff' fuente puntos='18' imagen='images/btn120.png' acción='animar' dibujar-si='t=0'">
+   <param name="A_01" value="id='initEscena()' algoritmo='sí' algoritmo='sí' hacer='initBtns();initEsp();openPanelCtrs();titulo=&squot;Ejemplos de campos vectoriales&squot;;titulo.w=_AnchoDeCadena_(titulo,&squot;SansSerif&squot;,&squot;PLAIN&squot;,&squot;30&squot;);titulo.x=(E1._w-titulo.w)/2;titulo.y=30'">
+   <param name="A_02" value="id='irAEscena(idxEscena)' algoritmo='sí' algoritmo='sí' hacer='parent.set(&squot;scene&squot;,idxEscena);parent.update()'">
+   <param name="A_03" value="id='initBtns()' algoritmo='sí' algoritmo='sí' hacer='cerrarInfo.w=40;cerrarInfo.h=30;cerrarInfo.x=INFO._w-cerrarInfo.w-2;cerrarInfo.y=1;cerrarInfo.img=&squot;imgs/tpl/cerrar.png&squot;;cerrarInfo.visible=1;;;ctrF.w=275;ctrF.h=40;ctrF.txt.w=60;ctrF.txt.h=18 ;;ctrF.txt.x=10;ctrF.txt.y=(E2_Graf._h-ctrF.h-5)+10;ctrF.x=ctrF.txt.x+ctrF.txt.w;ctrF.y=ctrF.txt.y-10;;;;ctr_a.w=120;ctr_a.h=50;ctr_b.w=ctr_a.w;ctr_b.h=ctr_a.h;ctr_c.w=ctr_b.w;ctr_c.h=ctr_b.h;_gapX=30;_allW=(ctr_a.w+ctr_b.w+ctr_c.w+_gapX*2);;ctr_a.x=(CTRS_north._w-_allW)/2;ctr_a.y=(CTRS_north._h-ctr_a.h)/2;;;ctr_b.x=ctr_a.x+ctr_a.w+_gapX;ctr_b.y=ctr_a.y;;ctr_c.x=ctr_b.x+ctr_b.w+_gapX;ctr_c.y=ctr_a.y;'">
+   <param name="A_04" value="id='initEsp()' algoritmo='sí' algoritmo='sí' hacer='INFO.x=(E1._w-INFO._w)/2;INFO.y=(E1._h-INFO._h)/2;INFO.visible=0;;E2_Graf.x=5;E2_Graf.y=5;E2_Graf.visible=1;;EspTxt.x=E1._w-EspTxt._w-10;EspTxt.y=E1._h-EspTxt._h-10;EspTxt.visible=1;;;;CTRS.x=(E1._w-CTRS_north._w)/2;CTRS.y=(E1._h-CTRS_north._h);CTRS.visible=0;;CTRS.x=0;CTRS.y=0;;btnOpenClose.y=(CTRS.y-btnOpenClose._h);btnOpenClose.x=(E1._w-btnOpenClose._w);'">
+   <param name="A_05" value="id='closePanelCtrs()' algoritmo='sí' expresión='x' algoritmo='sí' hacer='CTRS.visible=1;;CTRS.opened=0;CTRS.y=-CTRS_north._h;;btnOpenClose.y=CTRS.y+CTRS_north._h;btnOpenClose.x=(E1._w-btnOpenClose._w)'">
+   <param name="A_06" value="id='openPanelCtrs()' algoritmo='sí' expresión='x' algoritmo='sí' hacer='CTRS.visible=1;CTRS.opened=1;;CTRS.x=(E1._w-CTRS_north._w)/2;CTRS.y=0;;btnOpenClose.y=CTRS.y+CTRS_north._h;btnOpenClose.x=(E1._w-btnOpenClose._w)'">
+   <param name="A_07" value="id='__FIN_TPL_()'">
+   <param name="A_08" value="id='init()' algoritmo='sí' algoritmo='sí' hacer='elem=ent(rnd*3);Ni=1200;anim=0;llenaPos();permutaPos()'">
+   <param name="A_09" value="id='posX' vector='sí' evaluar='una-sola-vez' tamaño='2500'">
+   <param name="A_10" value="id='posY' vector='sí' evaluar='una-sola-vez' tamaño='2500'">
+   <param name="A_11" value="id='Vm' vector='sí' evaluar='una-sola-vez' expresión='Vm[0]=11.7;Vm[1]=3.64;Vm[2]=14.8'">
+   <param name="A_12" value="id='decae' vector='sí' evaluar='una-sola-vez' tamaño='2500'">
+   <param name="A_13" value="id='decaimiento()' algoritmo='sí' algoritmo='sí' inicio='_i=0;N=Ni*exp((-.693/(Vm[elem]*24))*t);decaen=Ni-N' hacer='decae[_i]=1;_i=_i+1' mientras='_i&lt;decaen'">
+   <param name="A_14" value="id='llenaPos()' algoritmo='sí' algoritmo='sí' Local='_i' inicio='_i=0' hacer='posX[_i]=50+4*(_i%50);posY[_i]=50+4*ent(_i/50);decae[_i]=0;_i=_i+1' mientras='_i&lt;Ni'">
+   <param name="A_15" value="id='permutaPos()' algoritmo='sí' algoritmo='sí' Local='_i,aa' inicio='_i=0' hacer='aa=ent(rnd*Ni);primerX=posX[_i];primerY=posY[_i];segundoX=posX[aa];segundoY=posY[aa];posX[_i]=segundoX;posY[_i]=segundoY;posX[aa]=primerX;posY[aa]=primerY;_i=_i+1' mientras='_i&lt;Ni'">
+   <param name="A_16" value="id='INICIO' algoritmo='sí' evaluar='una-sola-vez' hacer='initEscena();init()'">
+   <param name="A_17" value="id='CALCULOS' algoritmo='sí' evaluar='siempre' hacer='anim=(N&gt;Ni/4)?1:0'">
+   <param name="G_01" value="espacio='E1' tipo='polígono' fondo='sí' color='5566aa' coord_abs='sí' expresión='(0,0)(E1._w-1,0)(E1._w-1,E1._h-1)(0,E1._h-1)(0,0)' relleno='f05566aa'">
+   <param name="G_02" value="espacio='E1' tipo='texto' fondo='sí' dibujar-si='0' expresión='[__GRAF__,20]' fijo='sí'">
+   <param name="G_03" value="espacio='E1' tipo='texto' fondo='sí' dibujar-si='0' expresión='[__INFO__,20]' fijo='sí'">
+   <param name="G_04" value="espacio='INFO' tipo='polígono' fondo='sí' color='5566aa' coord_abs='sí' expresión='(0,0)(INFO._w-1,0)(INFO._w-1,INFO._h-1)(0,INFO._h-1)(0,0)' relleno='f85566aa' ancho='2'">
+   <param name="G_05" value="espacio='E1' tipo='imagen' coord_abs='sí' expresión='(20,20)' archivo='imgs/contenedor.png'">
+   <param name="G_06" value="espacio='E1' tipo='texto' expresión='[80,285]' texto='Elemento Ra[223+elem]' fuente='SansSerif,PLAIN,20' decimales='0' fijo='sí'">
+   <param name="G_07" value="espacio='E1' tipo='texto' expresión='[310,40]' texto='{\rtf1\uc0{\fonttbl\f0\fcharset0 Times New Roman;\f1\fcharset0 Arial;\f2\fcharset0 Arial;}\f1\fs36     Vida media\par   {\*\mjaformula{\expr Vm[elem]}} dias\par \par N(0 hrs) = {\*\mjaformula{\expr Ni\decimals 0\fixed0}}\par N({\*\mjaformula{\expr t\decimals 0\fixed0}}hrs) = {\*\mjaformula{\expr N\decimals 0\fixed0}}\fs34}' fuente='SansSerif,PLAIN,18' fijo='sí'">
+   <param name="G_08" value="espacio='E1' tipo='texto' dibujar-si='t&gt;0' expresión='[335,210]' texto='{\rtf1\uc0{\fonttbl\f0\fcharset0 Times New Roman;\f1\fcharset0 Arial;\f2\fcharset0 Arial;}\f1\fs36 Vidas medias\par transcurridas\par       {\*\mjaformula{\expr t/(Vm[elem]*24)\decimals 1\fixed1}}\fs34}' fuente='SansSerif,PLAIN,18' fijo='sí'">
+   <param name="G_09" value="espacio='E1' tipo='punto' color='(decae[s],decae[s],decae[s],)' coord_abs='sí' expresión='(posX[s],posY[s])' familia='s' s.intervalo='[0,Ni-1]' s.pasos='Ni-1' fijo='sí'">
+   <param name="Animación" value="controles='no' auto='no' inicio='t=0' hacer='decaimiento();t=t+1' mientras='anim'">
+</ajs>
+</div>
+
+
+             <!------ TERMINA EL CONTENIDO DE LA PÁGINA --------->
+
+   <!------ INICIA LA INFO SOBRE LAS LICENCIAS Y LOS CRÉDITOS. ---------->
+    <a id="btCopyright" class="standardButton" title="Haz clic aquí para consultar los créditos y las condiciones de uso de este recurso." href="#" onClick="document.getElementById('copyright').className='visible';">&#169;</a>
+    <div id="copyright" class="oculto">
+      
+      <div class='innerCopyright'>
+      
+          <a id="btCloseCopyright" class="standardButton" title="Haz clic aquí para cerrar esta ventana." href="#" onClick="document.getElementById('copyright').className='oculto'">×</a>
+  
+          <!-- Créditos UAM  (siempre deben ir en primer lugar) -->
+			<div class="creditos">
+				<h1>
+					Créditos 
+				</h1>
+
+				<h2>
+					Escena original
+				</h2>				<table class="autores" 	>
+
+					<tr> <td  class="rol"> Diseño del contenido			</td>		<td class="nombre"> Víctor Hugo García Jarillo (Facultad de Ciencias UNAM, LITE)</td></tr>
+					<tr> <td  class="rol"> Diseño funcional				</td>		<td class="nombre"> Víctor Hugo García Jarillo (Facultad de Ciencias UNAM, LITE)</td></tr>
+					<tr> <td  class="rol"> Programación					</td>		<td class="nombre"> Víctor Hugo García Jarillo (Facultad de Ciencias UNAM, LITE)</td></tr>
+					<tr> <td  class="rol"> Diseño gráfico				</td>		<td class="nombre"> Ricardo López Gómez</td></tr>
+					<tr> <td  class="rol" >Coordinación			</td>		<td class="nombre"> Leticia Montserrat Vargas Rocha</td></tr>
+					</table>
+				<h2>
+					Adaptación 
+				</h2>
+				<table class="autores" 	>
+				<tr> <td  class="rol"> Diseño funcional				</td>		<td class="nombre"> Victor Hugo García Jarillo (Facultad de                    Ciencias, UNAM)		</td></tr>
+					<tr> <td  class="rol"> Programación				</td>		<td class="nombre"> Victor Hugo García Jarillo (Facultad de                    Ciencias, UNAM)</td></tr>
+
+					<tr> <td  class="rol"> Diseño gráfico			</td>		<td class="nombre"> Francisco	Varela Fuentes</td></tr>
+					<tr> <td  class="rol" >Coordinación			</td>		<td class="nombre"> Leticia Montserrat Vargas Rocha</td></tr>
+		
+				</table>
+	         
+	         <div class='logos'>
+	            <a href=''>
+	               <img src="../images/info/icns/logoLite.png">
+	            </a>
+	            <a href="http://www.unadmexico.mx/">
+	               <img src="../images/info/icns/logoUNADM.png">
+	            </a>
+	         </div>
+          </div>
+          
+          <!-- Linea separación créditos -->
+          <hr class="linea" />
+     
+          <!-- Aviso licencias -->
+          <div class="licencias">
+          
+				<p class="creativeCommons">Los contenidos de esta unidad didáctica interactiva están bajo una licencia <a href="http://creativecommons.org/licenses/by-nc-sa/2.5/es/" target="_blank">Creative Commons Reconocimiento-NoComercial-CompartirIgual</a>.</p>
+
+				<!--arquimedes (optativo)-->
+				<p>La unidad didáctica fue creada con <a href="http://arquimedes.matem.unam.mx/Descartes5/creditos/conCCL.html" target="_blank">Arquímedes</a>, una herramienta de código abierto.</p>
+
+				<!-- Descartes -->
+				<p>La unidad didáctica contiene escenas elaboradas con Descartes, una herramienta de código abierto.</p>
+
+
+          	<p style='text-align:center'> LITE - UnADM 2014</p>
+          </div>
+      </div>
+    </div> 
+   <!------ TERMINA LA INFO SOBRE LAS LICENCIAS Y LOS CRÉDITOS. ---------->
+  
+  
+  </div>
+  
+  
+</article>
+
+
+</body>
+
+</html>

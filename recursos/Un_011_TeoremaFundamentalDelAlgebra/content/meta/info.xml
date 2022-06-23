@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<recurso 
+	id="_Un_011_TeoremaFundamentalDelAlgebra" 
+	nivel="Licenciatura" 
+	area="Matemáticas, Variable compleja" 
+	plataforma="HTML 5" 
+	>
+	<titulo><![CDATA[
+		Teorema fundamental del álgebra 
+	]]></titulo>
+	
+	<Descripcion><![CDATA[
+		Pensar en cómo son las raíces de los polinomios nos lleva a uno de los teoremas más importantes de las matemáticas, el Teorema fundamental del &Aacute;lgebra. En esta unidad didáctica se repasan conceptos relativos a los números complejos: representación geométrica por medio de diagramas de Argand, producto y potencias y la fórmula de Euler. El objetivo de la unidad es que el alumno tengo una aproximación a dos posibles demostraciones del teorema a través del desarrollo de una intuición geométrica sobre el comportamiento de las raíces de un polinomio. 
+	]]></Descripcion>
+</recurso>
+
+<!--
+********************************************************************************
+                               **** Áreas **** 
+Matemáticas 
+	Aritmética
+		Fracciones
+	Álgebra
+		Combinatoria
+		Ecuaciones lineales
+		Ecuaciones polinomiales
+		Polinomios
+		Álgebra lineal
+		Teoría de grupos
+		Álgebra abstracta
+	Geometría
+		Geometría elemental
+		Geometría clásica
+		Geometría analítica
+	Trigonometría 
+	Probabilidad 
+		Cálculo de probabilidades
+		Eventos
+		Variables aleatorias
+		Ley de los grandes números
+		Teorema del límite central
+	Estadística
+		Medidas de tendencia central
+		Muestreo
+		Distribuciones
+		Inferencia
+	Cálculo
+		Funciones 
+		Límites
+		Continuidad
+		Derivadas 
+		Integrales 
+	Teoría de números
+	Teoría de gráficas
+Física
+	Mecánica
+	Electromagnetismo
+	Óptica
+	Físico-química 
+	Termodinámica
+	Mecánica estadística
+	Mecánica cuántica
+	Relatividad
+
+********************************************************************************
+
+********************************************************************************
+                             **** Niveles ****
+
+	Primaria
+	Preescolar
+	Secundaria
+	Bachillerato
+	Licenciatura
+	Posgrado 
+	Maestria
+	Doctorado
+
+********************************************************************************
+
+-->

@@ -1,0 +1,205 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+ 	<link href="../css/html5_mobile.css" rel="stylesheet" type="text/css" media="screen" />
+	<link href="../css/DescHTML5.css" rel="stylesheet" type="text/css" media="screen" />
+	<script type="text/javascript" src='../javascript/inject_functions_scorms_descartes.js'></script>
+	<script type='text/javascript' src='../javascript/lib/descartes-min.js'></script>
+</head>
+
+<body>
+ <!-------- MathJax --- para fórmulas matemáticas ------>	
+	<script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script> 
+
+<article class="course_content_container">
+  
+  <div class="course_content">
+    
+    
+    <!------ INICIA EL CONTENIDO DE LA PÁGINA --------->
+    
+    
+    <!--- Título de la página --->
+    <center><h2>Los números complejos</h2></center>
+    
+    
+	<div class='text_panel'>
+		  
+    <h2>Diagramas de Argand</h2>
+		<!--- Párrafo --->
+        <p>
+        Hay dos representaciones geométricas del número complejo \(z=x+iy\)
+        <ol>
+				<li>
+					como el punto \(P(x,y)\)
+				</li>
+				<li>
+					como el vector \(\overrightarrow{OP}\) del origen a \(P\)
+				</li>
+			</ol>
+        </p>
+        
+		<p>
+			En cada representación, el \(eje-x\) es el <strong>eje real</strong> y el \(eje-y\) es el <strong>eje imaginario</strong>. Ambas representaciones son <strong>diagramas de Argand</strong> de \(x+iy\). En términos de las coordenadas polares de \(x\) y \(y\), se tiene que 
+		</p>
+        
+        <p>
+        <center>\(x=r \cos \varphi \ \ \ \ \ y=r \sin \varphi  \)</center>
+		</p>
+
+		<p>
+			y
+            \[z=x+iy=r(\cos \varphi +i \sin \varphi )\]
+		</p>
+		<p>
+		Definimos el <strong>valor absoluto</strong> o <strong>módulo</strong> de un número complejo \(x+iy\) (o su magnitud), como la longitud \(r\) del vector \(\overrightarrow{OP}\), así
+        \[|x+iy|=\sqrt{x^2+y^2} \]
+        Si siempre elegimos las coordenadas polares \(r\) y \( \varphi\) de manera que \(r\) no sea negativo, entonces 
+        \[r=|x+iy|\]
+		</p>
+        <p>
+        El ángulo \( \varphi\) se llama <strong>argumento</strong> de \(z\) y se escribe como \( \varphi=arg\) \(z\). Por supuesto, cualquier entero múltiplo de \(2 \pi \) pude sumársele a \( \varphi \) para obtener otro ángulo apropiado. 
+        </p>
+        
+        <p>
+        La siguiente ecuación nos da una fórmula muy útil que relaciona un número complejo \(z\), su <strong>conjugado</strong> \(\overline{z}\) y su módulo \(|z|\)
+        \[z\cdot \overline{z} =|z|^2\]
+        
+        <div class="course_extern_content"> 
+      <img src="imgs/argand_80.png"></img>
+    	</div>
+        </p>
+		
+        <h2>Producto de números complejos</h2>
+        
+        <p>
+        Si expresamos dos números complejos en términos de sus coordenadas polares, digamos \(z_1=r_1(\cos \varphi_1 +i \sin \varphi_1 )\) y \(z_2=r_2(\cos \varphi_2 +i \sin \varphi_2 )\), entonces el <strong>producto</strong> de esto dos número complejos se puede expresar como 
+        \[z_1z_2=r_1r_2(\cos \varphi_1 +i \sin \varphi_1 )(\cos \varphi_2 +i \sin \varphi_2 )\]
+        Multiplicando término a término, y usando identidades trigonométricas, se llega a que 
+        \[z_1z_2=r_1r_2(\cos (\varphi_1+\varphi_2)+i \sin (\varphi_1+\varphi_2))\]
+        que es la expresión de un número complejo con módulo \(r_1r_2 \) y argumento \( \varphi_1+\varphi_2 \)
+		</p>
+        <br>
+        <h2>Potencias de números complejos</h2>
+        
+        <p>
+        El resultado anterior puede extenderse para el producto de \(n\) números complejos. Si los \(n\) números complejos en cuestión son el mismo número, tenemos el número elevado a la \(n\), es decir \(z^n=(r\cos \varphi + i r\sin \varphi)^n\), pero 
+        \[(\cos \varphi + i \sin \varphi)^n=\cos n\varphi + i \sin n\varphi\]
+        por lo que 
+        \[z^n=r^n(\cos n\varphi + i \sin n\varphi )\]
+        
+        <br>La segunda igualdad es el enunciado del <em>Teorema de De Moivre</em>. 
+        </p>
+        <p>
+        De lo anterior se deriva que si \(z=r(\cos \varphi + i \sin \varphi) \) es un número complejo distinto de cero, y \(n\) es un entero positivo, entonces hay \(n\) números complejos diferentes entre sí que son raíces \(n-ésimas\) de \(z\). Para ver por qué, tomemos \(w=\rho (\cos \alpha + i \sin \alpha )\), una raíz \(n-ésima\) de \(z\), entonces \(w^n=z\), o 
+        \[\rho^n (\cos n\alpha + i \sin n\alpha )=r(\cos \varphi + i \sin \varphi )\]
+        entonces \(\rho=\sqrt[n]{r}\) es la raíz \(n-ésima\) real positiva de \(r\). En cuanto al ángulo, aunque no podemos decir que \(n\alpha\) y \(\varphi\) son iguales, podemos decir que difieren solamente por un entero múltimplo de \(2\pi\). Es decir,
+        \[n\alpha=\varphi+2k\pi\]
+        con \(k=0,\pm 1, \pm2,...\). Entonces\[\alpha=\frac{\varphi}{n}+k\frac{2\pi}{n}\]
+        Por lo que las \(n\) raíces de \(z\) están dadas por
+        \[\sqrt[n]{r(\cos \varphi + i \sin \varphi )}=\sqrt[n]{r}\Bigl(\cos \Bigl(\frac{\varphi}{n}+k\frac{2\pi}{n}\Bigr)+ i \sin \Bigl(\frac{\varphi}{n}+k\frac{2\pi}{n}\Bigr)\Bigr)\]
+        </p>
+        <br>
+        <p>
+        En la siguiente escena hablaremos acerca de las raíces de un polinomio de grado \(n\).
+        </p>
+        <!------</p><br>
+    <h2>La demostración</h2>
+    	
+		
+    <p>
+    	La idea de la demostración es la siguiente. Si \(|z|\) es suficientemente grande, el término de grado \(n\) domina el comportamiento de \(P ( z )\) y la imagen de un círculo \(C\) suficientemente grande, centrado en el orígen, gira \(n\) veces al rededor del \(0\).  \(C\) es tal que  
+    </p>
+
+    
+    
+  
+    <!------ TERMINA EL CONTENIDO DE LA PÁGINA --------->
+</div>
+
+
+
+  <!------ INICIA LA INFO SOBRE LAS LICENCIAS Y LOS CRÉDITOS. ---------->
+    <a id="btCopyright" class="standardButton" title="Haz clic aquí para consultar los créditos y las condiciones de uso de este recurso." href="#" onclick="document.getElementById('copyright').className='visible';">&#169;</a>
+    <div id="copyright" class="oculto">
+      
+      <div class='innerCopyright'>
+      
+          <a id="btCloseCopyright" class="standardButton" title="Haz clic aquí para cerrar esta ventana." href="#" onclick="document.getElementById('copyright').className='oculto'">×</a>
+  
+           <!-- Créditos UAM  (siempre deben ir en primer lugar) -->
+			<div class="creditos">
+				<h1>
+					Créditos 
+				</h1>
+				<h2>
+					Escena original
+				</h2>
+				<table class="autores" 	>
+					<tr> <td  class="rol"> Diseño del contenido			</td>		<td class="nombre"> Elsa Sirenia Vega Camacho		</td></tr>
+					<tr> <td  class="rol"> Diseño funcional				</td>		<td class="nombre"> Elsa Sirenia Vega Camacho		</td></tr>
+					<tr> <td  class="rol"> Programación						</td>		<td class="nombre"> Elsa Sirenia Vega Camacho		</td></tr>
+					<!-- Varias personas en el mismo rubro, separar por <br> -->
+					<tr> <td  class="rol"> Asesoría de programación		</td>		<td class="nombre"> 
+																											Leticia Montserrat Vargas Rocha 
+																										
+																									</td></tr>
+					<tr> <td  class="rol"> Diseño gráfico					</td>		<td class="nombre"> Ricardo López Gómez										</td></tr>
+					<tr> <td  class="rol" >Coordinación			</td>		<td class="nombre"> Leticia Montserrat Vargas Rocha</tr>
+				</table>
+	         <h2>
+					Adaptación 
+				</h2>
+				<table class="autores" 	>
+					<tr> <td  class="rol"> Diseño funcional				</td>		<td class="nombre"> Elsa Sirenia Vega Camacho </td></tr>
+					<tr> <td  class="rol"> Programación						</td>		<td class="nombre"> Elsa Sirenia Vega Camacho </td></tr>
+					<!-- Varias personas en el mismo rubro, separar por <br> -->
+					<tr> <td  class="rol"> Asesoría de programación		</td>		<td class="nombre"> Leticia Montserrat Vargas Rocha </td></tr>
+					<tr> <td  class="rol"> Diseño gráfico					</td>		<td class="nombre"> Francisco	Varela Fuentes						</td></tr>
+					<tr> <td  class="rol"> Ilustración					</td>		<td class="nombre"> Francisco	Varela Fuentes						</td></tr>
+					<tr> <td  class="rol" >Coordinación			</td>		<td class="nombre"> Leticia Montserrat Vargas Rocha						</td></tr>
+				</table>
+                
+	         <div class='logos'>
+	            <a href=''>
+	               <img src="../images/info/icns/logoLite.png">
+	            </a>
+	            <a href="http://www.unadmexico.mx/">
+	               <img src="../images/info/icns/logoUNADM.png">
+	            </a>
+	         </div>
+          </div>
+          
+          <!-- Linea separación créditos -->
+          <hr class="linea" />
+     
+          <!-- Aviso licencias -->
+          <div class="licencias">
+          
+				<p class="creativeCommons">Los contenidos de esta unidad didáctica interactiva están bajo una licencia <a href="http://creativecommons.org/licenses/by-nc-sa/2.5/es/" target="_blank">Creative Commons Reconocimiento-NoComercial-CompartirIgual</a>.</p>
+
+				<!--arquimedes (optativo)-->
+				<p>La unidad didáctica fue creada con <a href="http://arquimedes.matem.unam.mx/Descartes5/creditos/conCCL.html" target="_blank">Arquímedes</a>, una herramienta de código abierto.</p>
+
+				<!-- Descartes -->
+				<p>La unidad didáctica contiene escenas elaboradas con Descartes, una herramienta de código abierto.</p>
+
+
+          	<p style='text-align:center'> LITE - UnADM 2014</p>
+          </div>
+      </div>
+    </div> 
+   <!------ TERMINA LA INFO SOBRE LAS LICENCIAS Y LOS CRÉDITOS. ---------->
+  
+  
+  </div>
+  
+  
+</article>
+
+
+</body>
+
+</html>

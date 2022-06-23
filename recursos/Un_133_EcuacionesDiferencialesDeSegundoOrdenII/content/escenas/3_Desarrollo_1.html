@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+ 	<link href="../css/html5_mobile.css" rel="stylesheet" type="text/css" media="screen" />
+	<link href="../css/DescHTML5.css" rel="stylesheet" type="text/css" media="screen" />
+	<script type="text/javascript" src='../javascript/inject_functions_scorms_descartes.js'></script>
+	<script type='text/javascript' src='../lib/descartes-min.js'></script>
+</head>
+
+<body>
+ <!-------- MathJax --- para fórmulas matemáticas ------>	
+	<script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script> 
+
+<article class="course_content_container">
+  
+  <div class="course_content">
+    
+    
+    <!------ INICIA EL CONTENIDO DE LA PÁGINA --------->
+
+	<h1 align="center">Solución algebraica del oscilador armónico</h1>
+	
+		<div class='text_panel'>
+	
+	<p>
+		Para resolver la ecuación consideraremos primero el caso más sencillo, el movimiento libre no amortiguado. Como no hay fricción ni fuerzas externas la ecuación queda como:</p>
+		
+        <div align="center"> \( m \frac{d^2y}{dt^2} + k y = 0 \),</div>
+		<p>o bien,</p>
+		<div align="center"> \( \frac{d^2y}{dt^2} + w_0^2 y = 0 \), </div>
+		<p>donde</p>
+		<div align="center"> \( w^2_0 = \frac{k}{m} \)
+	
+	<p>Para los fines de este análisis podemos tomar \( k = 1 \) y \( m = 1 \) por lo que nuestro sistema queda como:</p>
+                    
+					<div align="center"> \( \frac{d^2y}{dt^2} = -y \)</div>
+					
+	<p>Esta ecuación es fácil de resolver pues algebráicamente nos esta diciendo que la segunda derivada de \( y(t) \) debe ser \( -y(t) \). Dos funciones que conocemos y que cumplen con estas condiciones son \( sen(t) \) y \( cos(t) \). Entonces podemos tomar \( y(t) = sen(t) \) como solución a nuestro sistema. Esta solución nos dice la posición de la masa al tiempo \( t \), y como ya sabemos, esta función es periódica de amplitud constante, como se esperaba que fuera el movimiento de nuestro sistema, debido a la ausencia de fuerzas externas y fuerzas de fricción.
+	</p><br>
+
+  <div class="course_content">
+	<p class='instruccion'>
+    <span class="instrucciones">
+  		En el siguiente espacio se muestra el comportamiento de la solución algebráica del oscilador armónico. Pulsa el botón animar para comenzar la animación.
+    </span>
+	</p>
+	
+<div  align="center" class="Descartes_extern_content">
+  <ajs name="Descartes" width=495 height=300 code="Descartes">
+   <param name="tamaño" value="495x300">
+   <param name="image_loader" value="">
+   <param name="expand" value="">
+   <param name="decimal_symbol" value=".">
+   <param name="antialias" value="sí">
+   <param name="deshacer" value="no">
+   <param name="nombre" value="Descartes">
+   <param name="Versión" value="5.336, 2015-02-13">
+   <param name="Idioma" value="español">
+   <param name="Botones" value="créditos=no config=no inicio=no limpiar=no">
+   <param name="E_01" value="tipo='R2' id='E1' fijo='sí' escala='1' O.x='-50%' O.y='-50%' imagen='imgs/tpl/fondo_01.jpg' despl_imagen='arr-izq' fondo='c0d0d8' red='no' red10='no' ejes='no' texto='no'">
+   <param name="E_02" value="tipo='R2' id='E2_Graf' x='E2_Graf.x' y='E2_Graf.y' ancho='485' alto='290' dibujar-si='E2_Graf.visible' fijo='sí' despl_imagen='arr-izq' fondo='dcdbe1' red='b8c4c8' red10='no' ejes='no' texto='no'">
+   <param name="E_03" value="tipo='R2' id='MASK' dibujar-si='INFO.visible' fijo='sí' imagen='imgs/tpl/backwindow.png' despl_imagen='mosaico' fondo='95000000' red='no' red10='no' ejes='no' texto='no'">
+   <param name="E_04" value="tipo='R2' id='INFO' x='INFO.x' y='INFO.y' ancho='485' alto='290' dibujar-si='INFO.visible' fijo='sí' imagen='imgs/tpl/retro_790x470.png' despl_imagen='mosaico' red='no' red10='no' ejes='no' texto='no'">
+   <param name="E_05" value="tipo='R2' id='E3_Graf' x='E2_Graf.x+196' y='E2_Graf.y' ancho='240' alto='290' dibujar-si='E2_Graf.visible' fijo='sí' O.x='-73' despl_imagen='arr-izq' fondo='ffdcdbe1' red='no' red10='no' ejes='no' texto='no'">
+   <param name="C_01" value="id='anim' tipo='numérico' interfaz='botón' región='interior' espacio='E2_Graf' nombre='Animar' expresión='(50,250,100,30)' fijo='sí' visible='sí' color='blanco' fuente puntos='18' acción='calcular' parámetro='animar=1\nValPer0=1\ncalPer()' dibujar-si='animar=0'">
+   <param name="A_01" value="id='irAEscena(idxEscena)' algoritmo='sí' algoritmo='sí' hacer='parent.set(&squot;scene&squot;,idxEscena);parent.update()'">
+   <param name="A_02" value="id='initBtns()' algoritmo='sí' algoritmo='sí'">
+   <param name="A_03" value="id='initEsp()' algoritmo='sí' algoritmo='sí' hacer='INFO.x=(E1._w-INFO._w)/2;INFO.y=(E1._h-INFO._h)/2;INFO.visible=0;;E2_Graf.x=5;E2_Graf.y=5;E2_Graf.visible=1;;EspTxt.x=E1._w-EspTxt._w-10;EspTxt.y=E1._h-EspTxt._h-10;EspTxt.visible=1'">
+   <param name="A_04" value="id='initEscena()' algoritmo='sí' algoritmo='sí' hacer='initBtns();initEsp();animar=0'">
+   <param name="A_05" value="id='__FIN_TPL_()'">
+   <param name="A_06" value="id='getSCORMState()' algoritmo='sí' expresión='res' algoritmo='sí' Local='res,c' inicio='c=&squot;@&squot;' hacer='ö=|Estandar ---- [MIDC]XX.<var>  SI SOLO EXISTE UNA ESCENA EN EL HTML|;ö=|Estandar ---- [MIDC]XX_YY.<var>  SI HAY MAS DE UNA ESCENA EN EL HTML|;res=&squot;D01.a:&squot;+ctr_a+c;res=res+&squot;D01.b:&squot;+ctr_b+c;res=res+&squot;D01.c:&squot;+ctr_c+c;res=res+&squot;D01.function:&squot;+ctrF+c;'">
+   <param name="A_07" value="id='initStateScorm()' algoritmo='sí' expresión='x' algoritmo='sí' hacer='ctr_a=getSCORMStateVar(&squot;D01.a&squot;) ;ctr_b=getSCORMStateVar(&squot;D01.b&squot;) ;ctr_c=getSCORMStateVar(&squot;D01.c&squot;) ;ctrF=getSCORMStateVar(&squot;D01.function&squot;);ctrF=(ctrF!=0)?ctrF:&squot;a*(x-b)^2*sen(c/(x-b))&squot;;;a=(ctr_a!=0)?ctr_a:2;b=(ctr_b!=0)?ctr_b:0;c=(ctr_c!=0)?ctr_c:2'">
+   <param name="A_08" value="id='f(x)' expresión='1.5*sen(x*(pi/2))'">
+   <param name="A_09" value="id='ValPer' vector='sí' evaluar='una-sola-vez' tamaño='20'">
+   <param name="A_10" value="id='calPer()' algoritmo='sí' algoritmo='sí' hacer='ValPer[0]=(ValPer0)?1:ValPer[0];per=100*ValPer[0];setSCORMPercentage(per)'">
+   <param name="A_11" value="id='getSCORMState()' algoritmo='sí' expresión='res' algoritmo='sí' Local='res,arroba' inicio='arroba=&squot;@&squot;' hacer='ö=|Estandar ---- [MIDC]XX.<var>  SI SOLO EXISTE UNA ESCENA EN  EL HTML|;ö=|Estandar ---- [MIDC]XX_YY.<var>  SI HAY MAS DE UNA ESCENA EN EL  HTML|;res=&squot;D01.ValPer[0]:&squot;+ValPer[0]+arroba;'">
+   <param name="A_12" value="id='initStateScorm()' algoritmo='sí' expresión='x' algoritmo='sí' hacer='ValPer[0]=getSCORMStateVar(&squot;D01.ValPer[0]&squot;);calPer();'">
+   <param name="A_13" value="id='INICIO' algoritmo='sí' evaluar='una-sola-vez' hacer='initStateScorm();initEscena()'">
+   <param name="A_14" value="id='CALCULOS' algoritmo='sí' evaluar='siempre'">
+   <param name="A_15" value="id='anima' evento='sí' condición='animar=1' acción='animar' ejecución='alternar' pos_mensajes='centro'">
+   <param name="G_01" value="espacio='E1' tipo='imagen' fondo='sí' coord_abs='sí' expresión='(-50,-100)' archivo='imgs/tpl/fondo_01.jpg'">
+   <param name="G_02" value="espacio='E1' tipo='texto' fondo='sí' dibujar-si='0' expresión='[__GRAF__,20]' fijo='sí'">
+   <param name="G_03" value="espacio='E3_Graf' tipo='ecuación' expresión='y=f(x+t)'">
+   <param name="G_04" value="espacio='E2_Graf' tipo='segmento' color='ee0000' expresión='(-5,0)(-3,0)' fijo='sí' tamaño='0'">
+   <param name="G_05" value="espacio='E2_Graf' tipo='segmento' expresión='(-4,f(t))(4,f(t))' fijo='sí' tamaño='0'">
+   <param name="G_06" value="espacio='E2_Graf' tipo='segmento' expresión='(-4.1,3-(3-f(t))/10*s)(-3.9,3-(3-f(t))/10*(s+1))' familia='s' s.intervalo='[0,9]' s.pasos='9' fijo='sí' tamaño='0'">
+   <param name="G_07" value="espacio='E2_Graf' tipo='segmento' expresión='(-3.9,3-(3-f(t))/10*(s+1))(-4.1,3-(3-f(t))/10*(s+1))' familia='s' s.intervalo='[0,8]' s.pasos='8' fijo='sí' tamaño='0'">
+   <param name="G_08" value="espacio='E2_Graf' tipo='punto' expresión='(-4,f(t))' fijo='sí' tamaño='8'">
+   <param name="G_09" value="espacio='E2_Graf' tipo='polígono' expresión='(-5,3)(-3,3)(-3,2.3)(-5,2.3)(-5,3)' relleno='grisClaro'">
+   <param name="G_10" value="espacio='E2_Graf' tipo='polígono' fondo='sí' color='blanco' coord_abs='sí' expresión='(0,0)(EspGraf._w-1,0)(EspGraf._w-1,EspGraf._h-1)(0,EspGraf._h-1)(0,0)' ancho='3'">
+   <param name="G_11" value="espacio='E3_Graf' tipo='segmento' expresión='(-.9,2.3)(-.9,-2.5)' fijo='sí' tamaño='0' ancho='2'">
+   <param name="G_12" value="espacio='E3_Graf' tipo='segmento' expresión='(-.9,0)(10,0)' fijo='sí' tamaño='0' ancho='2'">
+   <param name="G_13" value="espacio='E2_Graf' tipo='texto' color='ee0000' expresión='[30,160]' texto='Punto de equilibrio' fuente='Serif,ITALIC,20' fijo='sí'">
+   <param name="G_14" value="espacio='E2_Graf' tipo='texto' expresión='[300,230]' texto='y(t)=sen(t)=[f(t)]' fuente='Serif,ITALIC,20' decimales='1' fijo='sí'">
+   <param name="G_15" value="espacio='E2_Graf' tipo='texto' expresión='[200,5]' texto='y(t)' fuente='Serif,ITALIC,20' fijo='sí'">
+   <param name="G_16" value="espacio='E2_Graf' tipo='texto' expresión='[440,140]' texto='t' fuente='Serif,ITALIC,20' fijo='sí'">
+   <param name="G_17" value="espacio='E2_Graf' tipo='texto' dibujar-si='debug' expresión='[20,20]' texto='animar=[animar]\nt=[t]' fijo='sí'">
+   <param name="Animación" value="pausa='300' controles='no' auto='no' repetir='sí' inicio='t=0' hacer='aux=f(t);t=t+1' mientras='animar=1'">
+</ajs>
+</div>
+<br>
+
+	<p>
+	Como podemos ver, la amplitud de \( sen(t) \) esta relacionada con la posición de la masa y específicamente con la condición inicial para \( y = y_0 \), pues entre más se estire el resorte al inicio, la masa estará oscilando con mayor amplitud. Como \( y(t) = sen(t) \) tiene una amplitud fija, hay que tomar otra solución para el sistema, de tal forma que intervengan las condiciones iniciales. La función que más conviene es \( y(t) = a sen(t) \) la cual satisface la ecuación del modelo, y en la que, al sustituir las condiciones inicales, se obtiene el valor de \( a \).</p>
+	
+</div>
+             <!------ TERMINA EL CONTENIDO DE LA PÁGINA --------->
+
+    <!------ INICIA LA INFO SOBRE LAS LICENCIAS Y LOS CRÉDITOS. ---------->
+    <a id="btCopyright" class="standardButton" title="Haz clic aquí para consultar los créditos y las condiciones de uso de este recurso." href="#" onClick="document.getElementById('copyright').className='visible';">©</a>
+    <div id="copyright" class="oculto">
+      
+      <div class='innerCopyright'>
+      
+          <a id="btCloseCopyright" class="standardButton" title="Haz clic aquí para cerrar esta ventana." href="#" onClick="document.getElementById('copyright').className='oculto'">×</a>
+  
+          <!-- Créditos UAM  (siempre deben ir en primer lugar) -->
+			<div class="creditos">
+				<h1>
+					Créditos 
+				</h1>
+
+				<h2>
+					Escena original
+				</h2>				<table class="autores" 	>
+
+					<tr> <td  class="rol"> Diseño del contenido			</td>		<td class="nombre"> Víctor Hugo García Jarillo (Facultad de Ciencias UNAM, LITE)</td></tr>
+					<tr> <td  class="rol"> Diseño funcional				</td>		<td class="nombre"> Víctor Hugo García Jarillo (Facultad de Ciencias UNAM, LITE)</td></tr>
+					<tr> <td  class="rol"> Programación					</td>		<td class="nombre"> Víctor Hugo García Jarillo (Facultad de Ciencias UNAM, LITE)</td></tr>
+					<tr> <td  class="rol"> Diseño gráfico				</td>		<td class="nombre"> Ricardo López Gómez</td></tr>
+					<tr> <td  class="rol" >Coordinación			</td>		<td class="nombre"> Leticia Montserrat Vargas Rocha</td></tr>
+					</table>
+				<h2>
+					Adaptación 
+				</h2>
+				<table class="autores" 	>
+				<tr> <td  class="rol"> Diseño funcional				</td>		<td class="nombre"> Victor Hugo García Jarillo (Facultad de                    Ciencias, UNAM)		</td></tr>
+					<tr> <td  class="rol"> Programación				</td>		<td class="nombre"> Victor Hugo García Jarillo (Facultad de                    Ciencias, UNAM)</td></tr>
+
+					<tr> <td  class="rol"> Diseño gráfico			</td>		<td class="nombre"> Francisco	Varela Fuentes</td></tr>
+					<tr> <td  class="rol" >Coordinación			</td>		<td class="nombre"> Leticia Montserrat Vargas Rocha</td></tr>
+		
+				</table>
+	          <div class='logos'>
+	            <a href=''>
+	               <img src="../images/info/icns/logoLite.png">
+	            </a>
+	            <a href="http://www.unadmexico.mx/">
+	               <img src="../images/info/icns/logoUNADM.png">
+	            </a>
+	         </div>
+          </div>
+          
+          <!-- Linea separación créditos -->
+          <hr class="linea" />
+     
+          <!-- Aviso licencias -->
+          <div class="licencias">
+          
+				<p class="creativeCommons">Los contenidos de esta unidad didáctica interactiva están bajo una licencia <a href="http://creativecommons.org/licenses/by-nc-sa/2.5/es/" target="_blank">Creative Commons Reconocimiento-NoComercial-CompartirIgual</a>.</p>
+
+				<!--arquimedes (optativo)-->
+				<p>La unidad didáctica fue creada con <a href="http://arquimedes.matem.unam.mx/Descartes5/creditos/conCCL.html" target="_blank">Arquímedes</a>, una herramienta de código abierto.</p>
+
+				<!-- Descartes -->
+				<p>La unidad didáctica contiene escenas elaboradas con Descartes, una herramienta de código abierto.</p>
+
+
+          	<p style='text-align:center'> LITE - UnADM 2014</p>
+          </div>
+      </div>
+    </div> 
+   <!------ TERMINA LA INFO SOBRE LAS LICENCIAS Y LOS CRÉDITOS. ---------->
+  
+  
+  </div>
+  
+  
+</article>
+
+
+</body>
+
+</html>

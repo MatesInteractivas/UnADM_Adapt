@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<recurso 
+	id="_Un_109_DefinicionFormalDeLimite_FuncionesNoContinuas" 
+	nivel="Licenciatura" 
+	area="Matemáticas, Cálculo, Cálculo diferencial e integral, Cálculo de una variable" 
+	plataforma="HTML 5" 
+	>
+	<titulo><![CDATA[
+		Definición formal del límite y funciones no continuas 
+	]]></titulo>
+	
+	<Descripcion><![CDATA[
+		La definición de función continua está necesariamente ligada con el concepto de límite. Cuando una función no es continua, ¿qué pasa con el límite de la función en un punto donde dicha función no está definida? En esta unidad estudiamos los casos de funciones que son discontinuas a partir de que alguna de las hipótesis de la definición de función continua no se cumpla: cuando un valor no está en el dominio de la función, o la función no tiene límite en ese valor, o el límite no iguala al valor de la función en ese valor.
+	]]></Descripcion>
+</recurso>
+
+<!--
+********************************************************************************
+                               **** Áreas **** 
+Matemáticas 
+	Aritmética
+		Fracciones
+	Álgebra
+		Combinatoria
+		Ecuaciones lineales
+		Ecuaciones polinomiales
+		Polinomios
+		Álgebra lineal
+		Teoría de grupos
+		Álgebra abstracta
+	Geometría
+		Geometría elemental
+		Geometría clásica
+		Geometría analítica
+	Trigonometría 
+	Probabilidad 
+		Cálculo de probabilidades
+		Eventos
+		Variables aleatorias
+		Ley de los grandes números
+		Teorema del límite central
+	Estadística
+		Medidas de tendencia central
+		Muestreo
+		Distribuciones
+		Inferencia
+	Cálculo
+		Funciones 
+		Límites
+		Continuidad
+		Derivadas 
+		Integrales 
+	Teoría de números
+	Teoría de gráficas
+Física
+	Mecánica
+	Electromagnetismo
+	Óptica
+	Físico-química 
+	Termodinámica
+	Mecánica estadística
+	Mecánica cuántica
+	Relatividad
+
+********************************************************************************
+
+********************************************************************************
+                             **** Niveles ****
+
+	Primaria
+	Preescolar
+	Secundaria
+	Bachillerato
+	Licenciatura
+	Posgrado 
+	Maestria
+	Doctorado
+
+********************************************************************************
+
+-->

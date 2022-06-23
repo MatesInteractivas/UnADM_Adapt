@@ -1,0 +1,133 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <link href="../css/html5.css" rel="stylesheet" type="text/css" media="screen" />
+  
+  <!-------- MathJax --- para fórmulas matemáticas ------>
+  <script type="text/javascript"
+    src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+  </script>
+  <script type="text/javascript" src='../javascript/inject_functions_scorms_descartes.js'></script>
+</head>
+
+<body>
+<article class="course_content_container">
+  
+  <div class="course_content">  
+    
+    <!------ INICIA EL CONTENIDO DE LA PÁGINA --------->
+    
+    
+    <!--- Título de la página --->
+    <h1>¿Qué es una curva paramétrica?</h1>
+    
+    
+	<div class='text_panel'>
+		<!--- Subtítulo (no necesario en introducción) --->
+		  
+      	<!--- Párrafo --->
+		<p>
+        	Normalmente, en un plano, vemos a una curva como la gráfica de una función expresada de manera explícita, es decir, una ecuación donde una de las variables está dada en términos de las otras dos. Sin embargo, para describir la trayectoria de una partícula como una curva en el espacio como la que se muestra en la figura, más que describirla con una expresión que relacione una de sus coordenadas en términos de las otras dos, nos conviene expresar cada una de las coordenadas de la partícula como una función del tiempo \(t  \). Para realizar el seguimiento de una partícula que se mueve en el espacio, se tira un vector \(r\) desde el orígen del espacio cartesiano hasta la partícula y estudiamos los cambios en \(r\). 
+        </p>
+     <div class="course_extern_content"> 
+      <img src="imgs/curva.png"></img>
+    </div>
+        <p><br>    
+             Entonces la curva expresada de esta manera será la trayectoria de la partícula. Las ecuaciones, \(x=f(t) \),  \(y=g(t) \) y \(z=h(t) \) son funciones que nos dicen cuál es la posición de la partícula en cualquier tiempo \(t \) y están definidas en un \(intervalo \) \(I \). El conjunto de puntos \( (x,y,z)=(f(t),g(t),h(t)) \) es una \(curva \) en el espacio. Las ecuaciones se llaman \(ecuaciones \) \(paramétricas \) de la curva y \(t \) es el parámetro. Las ecuaciones y el intervalo constituyen una \(parametrización \) de la curva. El vector
+            \[\textbf{r}(t)=\overrightarrow{OP}=f(t)\textbf{i}+g(t)\textbf{j}+h(t)\textbf{k} \]
+            que va del orígen a la posición de la partícula \(P(f(t),g(t),h(t)) \) en el tiempo \(t \) es el \( vector\) \(de \) \(posición\) de la partícula. 
+       </p>
+       <p>
+        Si las coordenadas de la posición de la partícula son funciones del tiempo dos veces diferenciables, entonces también \(r\) es dos veces diferenciable, y por lo tanto podemos encontrar vectores de velocidad y de aceleración de la partícula en cualquier momento mediante la diferenciación de \(r\). Y si conocemos el vector de velocidad de la partícula o de aceleración como una función continua del tiempo, y tenemos suficiente información sobre la velocidad y la posición iniciales de la partícula, tendríamos una ecuación diferencial y por lo tanto podriamos encontrar \(r\) como una función del tiempo mediante la integración (analítica o numérica). De manera que, en ambos casos, podemos describir el movimiento de la partícula.   
+       </p>
+       <!------ TERMINA EL CONTENIDO DE LA PÁGINA --------->
+		
+   <!------ INICIA LA INFO SOBRE LAS LICENCIAS Y LOS CRÉDITOS. ---------->
+    <a id="btCopyright" class="standardButton" title="Haz clic aquí para consultar los créditos y las condiciones de uso de este recurso." href="#" onclick="document.getElementById('copyright').className='visible';">&#169;</a>
+    <div id="copyright" class="oculto">
+      
+      <div class='innerCopyright'>
+      
+          <a id="btCloseCopyright" class="standardButton" title="Haz clic aquí para cerrar esta ventana." href="#" onclick="document.getElementById('copyright').className='oculto'">×</a>
+  
+          
+			<div class="creditos">
+				<h1>
+					Créditos 
+				</h1>
+				<h2>
+					Escena original
+				</h2>				<table class="autores" 	>
+					<tr> <td  class="rol"> Diseño del contenido			</td>		<td class="nombre"> Brenda Casandra Vargas Rocha (Instituto de Ciencia e Ingeniería de Materiales, UNAM)</td></tr>
+					<tr> <td  class="rol"> Diseño funcional				</td>		<td class="nombre">Brenda Casandra Vargas Rocha (Instituto de Ciencia e Ingeniería de Materiales, UNAM)</td></tr>
+					<tr> <td  class="rol"> Programación						</td>		<td class="nombre"> Brenda Casandra Vargas Rocha (Instituto de Ciencia e Ingeniería de Materiales, UNAM)		</td></tr>
+					<!-- Varias personas en el mismo rubro, separar por <br> -->
+					<tr> <td  class="rol"> Asesoría de programación		</td>
+		<td class="nombre"> 
+																											José Luis Abreu León (Instituto de Matemáticas, UNAM)<br>       																									Leticia Montserrat Vargas Rocha<br>		
+																									</td></tr>
+			<tr> <td  class="rol"> Diseño gráfico					</td>		<td class="nombre"> Ricardo López Gómez										</td></tr>
+					<tr> <td  class="rol" >Coordinación			</td>		<td class="nombre"> Leticia Montserrat Vargas Rocha						</td></tr>
+				</table>
+				<h2>
+					Adaptación 
+				</h2>
+				<table class="autores" 	>
+					<tr> <td  class="rol"> Diseño funcional				</td>		<td class="nombre"> Elsa Sirenia Vega Camacho</td></tr>
+					<tr> <td  class="rol"> Programación						</td>		<td class="nombre"> Elsa Sirenia Vega Camacho</td></tr>
+					<!-- Varias personas en el mismo rubro, separar por <br> -->
+					<tr> <td  class="rol"> Asesoría de programación		</td>		<td class="nombre"> 
+																											Leticia Montserrat Vargas Rocha<br>
+																												
+																									</td></tr>
+					
+<tr> <td  class="rol"> Diseño gráfico					</td>		<td class="nombre"> Francisco	Varela Fuentes						</td></tr>
+
+<tr> <td  class="rol"> Ilustración					</td>		<td class="nombre"> Francisco	Varela Fuentes						</td></tr>
+
+					<tr> <td  class="rol" >Coordinación			</td>		<td class="nombre"> Leticia Montserrat Vargas Rocha						</td></tr>
+				</table>
+	         
+	         <div class='logos'>
+	            <a href=''>
+	               <img src="../images/info/icns/logoLite.png">
+	            </a>
+	            <a href="http://www.unadmexico.mx/">
+	               <img src="../images/info/icns/logoUNADM.png">
+	            </a>
+	         </div>
+          </div>
+          
+          <!-- Linea separación créditos -->
+          <hr class="linea" />
+     
+          <!-- Aviso licencias -->
+          <div class="licencias">
+          
+				<p class="creativeCommons">Los contenidos de esta unidad didáctica interactiva están bajo una licencia <a href="http://creativecommons.org/licenses/by-nc-sa/2.5/es/" target="_blank">Creative Commons Reconocimiento-NoComercial-CompartirIgual</a>.</p>
+
+				<!--arquimedes (optativo)-->
+				<p>La unidad didáctica fue creada con <a href="http://arquimedes.matem.unam.mx/Descartes5/creditos/conCCL.html" target="_blank">Arquímedes</a>, una herramienta de código abierto.</p>
+
+				<!-- Descartes -->
+				<p>La unidad didáctica contiene escenas elaboradas con Descartes, una herramienta de código abierto.</p>
+
+
+          	<p style='text-align:center'> LITE - UnADM 2014</p>
+          </div>
+      </div>
+    </div> 
+   <!------ TERMINA LA INFO SOBRE LAS LICENCIAS Y LOS CRÉDITOS. ---------->
+  
+  
+  </div>
+  
+  
+</article>
+
+
+</body>
+
+</html>

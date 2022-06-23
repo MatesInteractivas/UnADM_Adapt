@@ -1,0 +1,81 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<recurso 
+	id="_Un_133_EcuacionesDiferencialesDeSegundoOrden2" 
+	nivel="Licenciatura" 
+	area="Matemáticas, Cálculo, Cálculo diferencial e integral" 
+	plataforma="HTML 5" 
+	>
+	<titulo><![CDATA[
+		Ecuaciones diferenciales de segundo orden II 
+	]]></titulo>
+	
+	<Descripcion><![CDATA[
+		A partir de conocimientos previos sobre ecuaciones diferenciales, se pretende que en esta unidad el usuario aplique las definiciones, propiedades, y teoremas relativos a los sistemas de ecuaciones diferenciales para poder determinar la estabilidad en un sistema y el comportamiento del mismo. El modelo a tratar es el del oscilador armónico, ya que tiene numerosas aplicaciones en muchas ramas de la ciencia como la Mecánica, la Electrónica y la Física, además por que las ideas matemáticas utilizadas para resolverlo son muy atractivas.
+	]]></Descripcion>
+</recurso>
+
+<!--
+********************************************************************************
+                               **** Áreas **** 
+Matemáticas 
+	Aritmética
+		Fracciones
+	Álgebra
+		Combinatoria
+		Ecuaciones lineales
+		Ecuaciones polinomiales
+		Polinomios
+		Álgebra lineal
+		Teoría de grupos
+		Álgebra abstracta
+	Geometría
+		Geometría elemental
+		Geometría clásica
+		Geometría analítica
+	Trigonometría 
+	Probabilidad 
+		Cálculo de probabilidades
+		Eventos
+		Variables aleatorias
+		Ley de los grandes números
+		Teorema del límite central
+	Estadística
+		Medidas de tendencia central
+		Muestreo
+		Distribuciones
+		Inferencia
+	Cálculo
+		Funciones 
+		Límites
+		Continuidad
+		Derivadas 
+		Integrales 
+	Teoría de números
+	Teoría de gráficas
+Física
+	Mecánica
+	Electromagnetismo
+	Óptica
+	Físico-química 
+	Termodinámica
+	Mecánica estadística
+	Mecánica cuántica
+	Relatividad
+
+********************************************************************************
+
+********************************************************************************
+                             **** Niveles ****
+
+	Primaria
+	Preescolar
+	Secundaria
+	Bachillerato
+	Licenciatura
+	Posgrado 
+	Maestria
+	Doctorado
+
+********************************************************************************
+
+-->

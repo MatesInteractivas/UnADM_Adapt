@@ -1,0 +1,149 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+ 	<link href="../css/html5_mobile.css" rel="stylesheet" type="text/css" media="screen" />
+	<link href="../css/DescHTML5.css" rel="stylesheet" type="text/css" media="screen" />
+	<script type="text/javascript" src='../javascript/inject_functions_scorms_descartes.js'></script>
+	<script type='text/javascript' src='../lib/descartes-min.js'></script>
+</head>
+
+<body BGCOLOR="c0c0c0" leftmargin="0" topmargin="0">
+
+<ajs name="Descartes" width=970 height=550 code="Descartes">
+   <param name="tamaño" value="970x550">
+   <param name="image_loader" value="">
+   <param name="expand" value="">
+   <param name="decimal_symbol" value=".">
+   <param name="antialias" value="sí">
+   <param name="deshacer" value="no">
+   <param name="nombre" value="Descartes">
+   <param name="Versión" value="5.336, 2015-02-13">
+   <param name="Idioma" value="español">
+   <param name="Botones" value="créditos=no config=no inicio=no limpiar=no">
+   <param name="E_01" value="tipo='R2' id='E1' fijo='sí' escala='1' O.x='-50%' O.y='-50%' imagen='imgs/tpl/fondo_04.jpg' despl_imagen='arr-izq' fondo='c0d0d8' red='no' red10='no' ejes='no' texto='no'">
+   <param name="E_02" value="tipo='R2' id='EspG' x='EspG.x' y='EspG.y' ancho='425' alto='400' dibujar-si='EspG.visible' despl_imagen='arr-izq' fondo='dcdbe1' red='b8c4c8' red10='889498' ejes='405860' texto='no'">
+   <param name="E_03" value="tipo='R2' id='EspUp' x='EspUp.x' y='EspUp.y' ancho='375' alto='190' dibujar-si='EspUp.visible' escala='1' O.x='-50%' O.y='-50%' despl_imagen='arr-izq' fondo='fffbfadc' red='no' red10='no' ejes='no' texto='no'">
+   <param name="E_04" value="tipo='R2' id='EspDw' x='EspDw.x' y='EspDw.y' ancho='375' alto='190' dibujar-si='EspDw.visible' fijo='sí' despl_imagen='arr-izq' fondo='ffd5f3fe' red='no' red10='no' ejes='no' texto='no'">
+   <param name="E_05" value="tipo='R2' id='MASK' dibujar-si='INFO.visible' fijo='sí' imagen='imgs/tpl/backwindow.png' despl_imagen='mosaico' fondo='95000000' red='no' red10='no' ejes='no' texto='no'">
+   <param name="E_06" value="tipo='R2' id='INFO' x='INFO.x' y='INFO.y' ancho='850' alto='540' dibujar-si='INFO.visible' fijo='sí' imagen='imgs/tpl/retro_790x470.png' despl_imagen='expand.' red='no' red10='no' ejes='no' texto='no'">
+   <param name="C_01" value="id='cerrarInfo' tipo='numérico' interfaz='botón' región='interior' espacio='INFO' expresión='(cerrarInfo.x,cerrarInfo.y,cerrarInfo.w,cerrarInfo.h)' fijo='sí' visible='sí' imagen='_STYLE_|class=btnUNADM icon cerrar|shadowTextColor=rgba(0,0,0,0.2)|shadowTextOffsetY=2|shadowTextBlur=0|textBorder=0 |' acción='calcular' parámetro='INFO.visible=0\nValPer0=1\ncalPer()\nllamaAnimaScorm()' dibujar-si='cerrarInfo.visible'">
+   <param name="C_02" value="id='ctr_i' tipo='numérico' interfaz='botón' región='interior' espacio='E1' expresión='(ctr_i.x,ctr_i.y,ctr_i.w,ctr_i.h)' valor='ctr_i' fijo='sí' visible='sí' color='blanco' cursiva='sí' fuente puntos='20' imagen='_STYLE_|class=btnUNADM icon info|shadowTextColor=rgba(0,0,0,0.2)|shadowTextOffsetY=2|shadowTextBlur=0|textBorder=0 |' acción='calcular' parámetro='INFO.visible=1' pos_mensajes='centro'">
+   <param name="C_03" value="id='EspUp.Oy' tipo='numérico' región='interior' espacio='EspUp' nombre='EspUp.Oy' expresión='(EspUp.Oy.x,EspUp.Oy.y,EspUp.Oy.w,EspUp.Oy.h)' valor='ctr_EspUp.Oy' incr='EspUp._h/6' min='-1350' max='-95' discreto='sí' fijo='sí' visible='no' acción='calcular' parámetro='calPer()'">
+   <param name="C_04" value="id='EspUp.Ox' tipo='numérico' región='exterior' espacio='E1' nombre='EspUp.Ox' valor='EspUp.Ox' min='-EspUp._w/2' max='-EspUp._w/2' fijo='sí' visible='sí' dibujar-si='0'">
+   <param name="C_05" value="id='Siguiente' tipo='numérico' interfaz='botón' región='interior' espacio='EspDw' nombre='Siguiente' expresión='(250,155,btnAceptar.w,btnAceptar.h)' fijo='sí' visible='sí' color='blanco' color-int='da000000' negrita='sí' fuente puntos='16' acción='calcular' parámetro='paso=paso+1\npunto()\nValPer2=1\ncalPer()' dibujar-si='_ind<2000'">
+   <param name="C_06" value="id='reinit' tipo='numérico' interfaz='botón' región='interior' espacio='EspDw' nombre='Limpiar' expresión='(8,155,btnAceptar.w,btnAceptar.h)' fijo='sí' visible='sí' color='blanco' color-int='da000000' negrita='sí' fuente puntos='16' acción='calcular' parámetro='_ind=0\npaso=0\npx0=1\npy0=1\nx1=1\ny1=1' dibujar-si='paso>30' pos_mensajes='centro'">
+   <param name="A_01" value="id='initEscena()' algoritmo='sí' algoritmo='sí' hacer='initBtns();initEsp();_ind=0;ô=|***************************************|;ô=|*  Si el botón de para cerrar la info *|;ô=|*  esta VISIBLE                       *|;ô=|***************************************|;INFO.visible=1;;ô=|***************************************|;ô=|*  Calculamos la posicion del titulo  *|;ô=|***************************************|;titulo=&squot;Método de Euler en ecuaciones diferenciales de segundo orden&squot;;titulo.w=_AnchoDeCadena_(titulo,&squot;SansSerif&squot;,&squot;PLAIN&squot;,&squot;30&squot;);titulo.x=(E1._w-titulo.w)/2;titulo.y=20;a=.1;x1=1;y1=1'">
+   <param name="A_02" value="id='initEsp()' algoritmo='sí' algoritmo='sí' hacer='INFO.x=(E1._w-INFO._w)/2;INFO.y=(E1._h-INFO._h)/2;INFO.visible=0;;EspG.x=55;EspG.y=106;EspG.visible=1;;EspUp.x=540;EspUp.y=105;EspUp.visible=1;;EspDw.x=540;EspDw.y=316;EspDw.visible=1'">
+   <param name="A_03" value="id='initBtns()' algoritmo='sí' algoritmo='sí' hacer='cerrarInfo.w=21;cerrarInfo.h=cerrarInfo.w;cerrarInfo.x=INFO._w-cerrarInfo.w-6;cerrarInfo.y=6;cerrarInfo.img=&squot;imgs/tpl/cerrar.png&squot;;cerrarInfo.visible=1;;btnAceptar.w=120;btnAceptar.h=30;btnAceptar.x=(E1._w-btnAceptar.w-5);btnAceptar.y=(E1._h-btnAceptar.h-5);btnAceptar.img=&squot;imgs/tpl/btn120.png&squot;;btnAceptar.txt=&squot;Introducción&squot;;;ctrF.w=275;ctrF.h=40;ctrF.txt.w=70;ctrF.txt.h=18 ;;ctrF.txt.x=10;ctrF.txt.y=3;ctrF.x=ctrF.txt.x+ctrF.txt.w;ctrF.y=ctrF.txt.y;;;ctr_c.w=120;ctr_c.h=40;ctr_c.x=(EspDw._w-ctr_c.w)/2+123;ctr_c.y=(EspDw._h-ctr_c.h-100);;ctr_a.w=120;ctr_a.h=40;ctr_a.x=(EspDw._w-(ctr_a.w*2+5*1))/2-63;ctr_a.y=ctr_c.y;;ctr_b.x=ctr_a.x+ctr_a.w+5;ctr_b.y=ctr_c.y;ctr_b.w=ctr_a.w;ctr_b.h=ctr_a.h;;ctr_i.w=30;ctr_i.h=30;ctr_i.x=10;ctr_i.y=10;;ô=|*****************************************************|;ô=|*Para que siga al scroll hay que agregar la mitad de*|;ô=|*altura a la posicion y sumarle el Oy del espacio   *|;ô=|*                                                   *|;ô=|* El espcio de tener :                              *|;ô=|*   escala = 1                                      *|;ô=|*   Ox = -50% Oy = -50%                             *|;ô=|*****************************************************|;;EspUp.Oy.w=27;EspUp.Oy.h=50;EspUp.Oy.x=EspUp._w-EspUp.Oy.w-5;EspUp.Oy.y=EspUp._h-EspUp.Oy.h-5;;spnSigScroll.w=150;spnSigScroll.h=50;spnSigScroll.x=(EspUp._w-spnSigScroll.w)/2;spnSigScroll.y=400+EspUp._h/2'">
+   <param name="A_04" value="id='cX' vector='sí' evaluar='una-sola-vez' tamaño='2000'">
+   <param name="A_05" value="id='cY' vector='sí' evaluar='una-sola-vez' tamaño='2000'">
+   <param name="A_06" value="id='g(x,y)' expresión='-x+(1-x^2)*y'">
+   <param name="A_07" value="id='h(x,y)' expresión='y'">
+   <param name="A_08" value="id='punto()' algoritmo='sí' algoritmo='sí' inicio='x0=x1;y0=y1' hacer='px0=x1;py0=y1;x1=x0+(h(x0,y0)*a);y1=y0+(g(x0,y0)*a);px1=px0+(x1-px0)*1/a;py1=py0+(y1-py0)*1/a;_ind=_ind+1;cX[_ind]=px0;cY[_ind]=py0'">
+   <param name="A_09" value="id='ValPer' vector='sí' evaluar='una-sola-vez' tamaño='20'">
+   <param name="A_10" value="id='calPer()' algoritmo='sí' algoritmo='sí' hacer='ValPer[0]=(ValPer0)?1:ValPer[0];ValPer[1]=(EspUp.Oy<-400)?1:ValPer[1];ValPer[2]=(ValPer2)?1:ValPer[2];per=(30*ValPer[0])+(35*(ValPer[1]+ValPer[2]));setSCORMPercentage(per)'">
+   <param name="A_11" value="id='getSCORMState()' algoritmo='sí' expresión='res' algoritmo='sí' Local='res,arroba' inicio='arroba=&squot;@&squot;' hacer='ö=|Estandar ---- [MIDC]XX.<var>  SI SOLO EXISTE UNA ESCENA EN EL HTML|;ö=|Estandar ---- [MIDC]XX_YY.<var>  SI HAY MAS DE UNA ESCENA EN EL HTML|;res=res+&squot;D02.EspUp.Oy:&squot;+EspUp.Oy+arroba;res=res+&squot;D02.paso:&squot;+paso+arroba;res=res+&squot;D02.ValPer[0]:&squot;+ValPer[0]+arroba;res=res+&squot;D02.ValPer[1]:&squot;+ValPer[1]+arroba;res=res+&squot;D02.ValPer[2]:&squot;+ValPer[2]+arroba'">
+   <param name="A_12" value="id='initStateScorm()' algoritmo='sí' expresión='x' algoritmo='sí' hacer='EspUp.Oy=getSCORMStateVar(&squot;D02.EspUp.Oy&squot;);paso=getSCORMStateVar(&squot;D02.paso&squot;);;ValPer[0]=getSCORMStateVar(&squot;D02.ValPer[0]&squot;);ValPer[1]=getSCORMStateVar(&squot;D02.ValPer[1]&squot;);ValPer[2]=getSCORMStateVar(&squot;D02.ValPer[2]&squot;);calPer();;ctr_EspUp.Oy=(EspUp.Oy!=0)?EspUp.Oy:-95;ctr_paso=(paso!=0)?paso:0;'">
+   <param name="A_13" value="id='llamaAnimaScorm()' algoritmo='sí' algoritmo='sí' Local='ss' inicio='ss=0' hacer='punto();ss=ss+1' mientras='ss<paso'">
+   <param name="A_14" value="id='INICIO' algoritmo='sí' evaluar='una-sola-vez' hacer='initStateScorm();initEscena()'">
+   <param name="A_15" value="id='CALCULOS' algoritmo='sí' evaluar='siempre'">
+   <param name="G_01" value="espacio='E1' tipo='texto' fondo='sí' expresión='[titulo.x,titulo.y]' texto='[titulo]' fuente='SansSerif,PLAIN,30' fijo='sí'">
+   <param name="G_02" value="espacio='EspUp' tipo='texto' fondo='sí' dibujar-si='0' expresión='[_TEXT_____,20]' fijo='sí'">
+   <param name="G_03" value="espacio='EspUp' tipo='punto' fondo='sí' expresión='(5,-23)' texto='{\rtf1\uc0{\fonttbl\f0\fcharset0 Arial;\f1\fcharset0 Arial;}\f1\fs42 Como vimos, el m\u233 todo de Euler se\par basa en la idea de aproximar la\par gr\u225 fica soluci\u243 n mediante segmentos\par de recta cuyas pendientes se\par obtienen de {\*\mjaformula f(x,y)}. En un sistema\par de ecuaciones, el m\u233 todo de Euler\par se trata con \u233 ste mismo principio,\par pero interpretado en un marco\par vectorial.\par \par Escogemos primero un tama\u241 o de\par paso {\*\mjaformula\u916 t} que es la distancia que se\par avanzar\u225  en direcci\u243 n de la pendiente\par para encontrar el siguiente punto,\par entre m\u225 s peque\u241 o sea el salto\par mayor ser\u225  la precisi\u243 n con la que\par se encontrar\u225  la gr\u225 fica soluci\u243 n.\par \par El vector {\*\mjaformula F(x{\subix 0},y{\subix 0})} nos da la\par pendiente en el punto {\*\mjaformula (x{\subix 0},y{\subix 0})},\par por lo que comenzamos usando\par {\*\mjaformula\u916 tF(x{\subix 0},y{\subix 0})} para encontrar\par {\*\mjaformula (x{\subix 1},y{\subix 1})} de nuestra aproximaci\u243 n \par gr\u225 fica, es decir pasamos de\par {\*\mjaformula (x{\subix 0},y{\subix 0})} a {\*\mjaformula (x{\subix 1},y{\subix 1})} por medio de:\par  {\*\mjaformula (x{\subix 1},y{\subix 1})=(x{\subix 0},y{\subix 0})+\u916 t F(x{\subix 0},y{\subix 0})}\par \par Una vez que calculamos {\*\mjaformula (x{\subix 1},y{\subix 1})}\par repetimos el proceso para {\*\mjaformula (x{\subix 2},y{\subix 2})} y\par en general para{\*\mjaformula (x{\subix n},y{\subix n})} formando as\u237 \par la aproximaci\u243 n de la soluci\u243 n. Como\par {\*\mjaformula (x{\subix n},y{\subix n})} es un vector podemos\par encontrar {\*\mjaformula x{\subix n}} y {\*\mjaformula y{\subix n}} por separado,\par es decir, {\*\mjaformula x{\subix n}=x{\subix n-1}+\u916 t f(x{\subix n-1},y{\subix n-1})} y\par {\*\mjaformula y{\subix n}=y{\subix n-1}+\u916 t g(x{\subix n-1},y{\subix n-1})}.\par \par Como ejemplo consideraremos la\par ecuaci\u243 n de Van der Pol:\par                 {\*\mjaformula{\fraction{\num d{\supix 2}x}{\den dt{\supix 2}}}-(1-x{\supix 2}){\fraction{\num dx}{\den dt}}+x=0}\par Haciendo {\*\mjaformula y={\fraction{\num dx}{\den dt}}}\par El sistema resultante es:\par       {\*\mjaformula{\fraction{\num dx}{\den dt}}=y} {\*\mjaformula{\fraction{\num dy}{\den dt}}=-x+(1-x{\supix 2})y}\par \par A continuaci\u243 n pulsa repetidas veces\par el bot\u243 n siguiente y nota como se va\par graficando la soluci\u243 n al sistema.\par \par Tomaremos\par \par  {\*\mjaformula\u916 t=0.1} y {\*\mjaformula (x{\subix 0},y{\subix 0})=(1,1)}.\fs36}' fuente='SansSerif,PLAIN,21' fijo='sí' tamaño='0'">
+   <param name="G_04" value="espacio='EspDw' tipo='texto' fondo='sí' dibujar-si='0' expresión='[_CTRS_____,20]' fijo='sí'">
+   <param name="G_05" value="espacio='EspDw' tipo='texto' expresión='[1,20]' texto='{\rtf1\uc0{\fonttbl\f0\fcharset0 Times New Roman;\f1\fcharset0 Times New Roman;\f2\fcharset0 Times New Roman;\f3\fcharset0 Arial;}\f1\fs36\i{\*\mjaformula\u916 t =0.1}; \fs40{\*\mjaformula x{\subix 0}=1}; {\*\mjaformula y{\subix 0}=1}\f3\fs36\i0}' fuente='Serif,ITALIC,18' fijo='sí'">
+   <param name="G_06" value="espacio='EspDw' tipo='texto' dibujar-si='paso=0' expresión='[1,60]' texto='{\rtf1\uc0{\fonttbl\f0\fcharset0 Times New Roman;\f1\fcharset0 Times New Roman;\f2\fcharset0 Arial;}\f1\fs36\i{\*\mjaformula x{\subix 1} = x{\subix 0}+\u916 t f(x{\subix 0},y{\subix 0}{\subix})}\par {\*\mjaformula y{\subix 1} = y{\subix 0}+\u916 t g(x{\subix 0},y{\subix 0})}\f2\fs36\i0}' fuente='Serif,ITALIC,18' fijo='sí'">
+   <param name="G_07" value="espacio='EspDw' tipo='texto' dibujar-si='paso>0' expresión='[1,60]' texto='{\rtf1\uc0{\fonttbl\f0\fcharset0 Times New Roman;\f1\fcharset0 Times New Roman;\f2\fcharset0 Arial;}\f1\fs36\i{\*\mjaformula x{\subix{\expr paso\decimals 0\fixed1}} = x{\subix{\expr paso-1\decimals 0\fixed1}}+{\expr a\decimals 1\fixed1} (x{\subix{\expr paso-1\decimals 0\fixed1}}{\subix})= {\expr x1\decimals 2\fixed1}}\par {\*\mjaformula y{\subix{\expr paso\decimals 0\fixed1}} = y{\subix{\expr paso-1\decimals 0\fixed1}}+{\expr a\decimals 1\fixed1}(-x{\subix{\expr paso-1\decimals 0\fixed1}}+(1-x{\subix{\expr paso-1\decimals 0\fixed1}}{\supix 2})y{\subix{\expr paso-1\decimals 0\fixed1}}) = {\expr y1\decimals 2\fixed1}}\f2\fs36\i0}' fuente='Serif,ITALIC,18' fijo='sí'">
+   <param name="G_08" value="espacio='EspG' tipo='texto' fondo='sí' dibujar-si='0' expresión='[_GRAF_____,20]' fijo='sí'">
+   <param name="G_09" value="espacio='EspG' tipo='flecha' dibujar-si='paso>0' expresión='(px0,py0)(px1,py1)' fijo='sí' tamaño='1' ancho='1' punta='2'">
+   <param name="G_10" value="espacio='EspG' tipo='punto' expresión='(1,1)' rastro='gris' texto='{\rtf1\uc0{\fonttbl\f0\fcharset0 Times New Roman;\f1\fcharset0 Times New Roman;\f2\fcharset0 Courier New;}\f1\fs42\i{\*\mjaformula (x{\subix 0},y{\subix 0})}\f2\fs30\i0}' fuente='Serif,ITALIC,21' fijo='sí' tamaño='3'">
+   <param name="G_11" value="espacio='EspG' tipo='punto' dibujar-si='paso>0' expresión='(cX[s],cY[s])' familia='s' s.intervalo='[1,_ind]' s.pasos='_ind' fijo='sí' tamaño='3'">
+   <param name="G_12" value="espacio='INFO' tipo='texto' fondo='sí' dibujar-si='0' expresión='[_INFO_____,20]' fijo='sí'">
+   <param name="G_13" value="espacio='INFO' tipo='texto' fondo='sí' color='blanco' expresión='[20,5]' texto='Método de Euler en una ecuación de segundo orden' fuente='SansSerif,PLAIN,24' fijo='sí'">
+   <param name="G_14" value="espacio='INFO' tipo='texto' fondo='sí' expresión='[30,50]' texto='{\rtf1\uc0{\fonttbl\f0\fcharset0 Times New Roman;\f1\fcharset0 Arial;\f2\fcharset0 Arial;}\f1\fs42 Ahora que ya conocemos la idea del m\u233 todo de Euler, aplicaremos este principio a\par ecuaciones de segundo orden y, como ya comentamos, conviene transformar la\par ecuaci\u243 n de segundo orden a un sistema de dos ecuaciones de primer orden:\par                                      {\*\mjaformula{\fraction{\num dx}{\den dt}}=f(x, y)}\par                                      {\*\mjaformula{\fraction{\num dy}{\den dt}}=g(x, y)}\par Al igual que en el m\u233 todo de Euler para las ecuaciones de primer orden, usaremos\par condiciones iniciales {\*\mjaformula (x(t{\subix 0}),y(t{\subix 0}))=(x{\subix 0},y{\subix 0}) } para aproximar la soluci\u243 n. Al\par conjunto{\*\mjaformula\{ f, g \}}podemos verlo como una funci\u243 n vectorial {\*\mjaformula F} que da un campo\par vectorial que concuerda con los vectores tangentes a la curva, que es soluci\u243 n al\par sistema y, por consecuencia, nos muestra el comportamiento de la soluci\u243 n de la\par ecuaci\u243 n de primer orden.\fs38}' fuente='SansSerif,PLAIN,21' fijo='sí' info='Texto ventana informativa'">
+   <param name="G_15" value="espacio='INFO' tipo='imagen' coord_abs='sí' expresión='(420,440,.65,.65)' archivo='imgs/campo.jpg'">
+   <param name="G_16" value="espacio='E1' tipo='texto' fondo='sí' expresión='[_FIN_PLANTILLA__,20]' fijo='sí'">
+   <param name="G_17" value="espacio='E1' tipo='texto' dibujar-si='0' expresión='[20,20]' texto='a=[a]\nx1=[x1]\ny1=[y1]' fijo='sí'">
+   <param name="G_18" value="espacio='EspG' tipo='punto' dibujar-si='paso>0' expresión='(1,1)' fijo='sí' tamaño='3'">
+   <param name="G_19" value="espacio='E1' tipo='texto' dibujar-si='debug' expresión='[20,50]' texto='EspUp.Oy=[EspUp.Oy]' fijo='sí'">
+</ajs>
+
+	<!------ INICIA LA INFO SOBRE LAS LICENCIAS Y LOS CRÉDITOS. ---------->
+    <a id="btCopyright" class="standardButton" title="Haz clic aquí para consultar los créditos y las condiciones de uso de este recurso." href="#" onClick="document.getElementById('copyright').className='visible';">©</a>
+    <div id="copyright" class="oculto">
+      
+      <div class='innerCopyright'>
+      
+          <a id="btCloseCopyright" class="standardButton" title="Haz clic aquí para cerrar esta ventana." href="#" onClick="document.getElementById('copyright').className='oculto'">×</a>
+  
+          <!-- Créditos UAM  (siempre deben ir en primer lugar) -->
+			<div class="creditos">
+				<h1>
+					Créditos 
+				</h1>
+
+				<h2>
+					Escena original
+				</h2>				<table class="autores" 	>
+
+					<tr> <td  class="rol"> Diseño del contenido			</td>		<td class="nombre"> Víctor Hugo García Jarillo (Facultad de Ciencias UNAM, LITE)</td></tr>
+					<tr> <td  class="rol"> Diseño funcional				</td>		<td class="nombre"> Víctor Hugo García Jarillo (Facultad de Ciencias UNAM, LITE)</td></tr>
+					<tr> <td  class="rol"> Programación					</td>		<td class="nombre"> Víctor Hugo García Jarillo (Facultad de Ciencias UNAM, LITE)</td></tr>
+					<tr> <td  class="rol"> Diseño gráfico				</td>		<td class="nombre"> Ricardo López Gómez</td></tr>
+					<tr> <td  class="rol" >Coordinación			</td>		<td class="nombre"> Leticia Montserrat Vargas Rocha</td></tr>
+					</table>
+				<h2>
+					Adaptación 
+				</h2>
+				<table class="autores" 	>
+				<tr> <td  class="rol"> Diseño funcional				</td>		<td class="nombre"> Victor Hugo García Jarillo (Facultad de                    Ciencias, UNAM)		</td></tr>
+					<tr> <td  class="rol"> Programación				</td>		<td class="nombre"> Victor Hugo García Jarillo (Facultad de                    Ciencias, UNAM)</td></tr>
+
+					<tr> <td  class="rol"> Diseño gráfico			</td>		<td class="nombre"> Francisco	Varela Fuentes</td></tr>
+					<tr> <td  class="rol" >Coordinación			</td>		<td class="nombre"> Leticia Montserrat Vargas Rocha</td></tr>
+		
+				</table>
+
+ <div class='logos'>
+	            <a href=''>
+	               <img src="../images/info/icns/logoLite.png">
+	            </a>
+	            <a href="http://www.unadmexico.mx/">
+	               <img src="../images/info/icns/logoUNADM.png">
+	            </a>
+	         </div>
+          </div>
+          
+          <!-- Linea separación créditos -->
+          <hr class="linea" />
+     
+          <!-- Aviso licencias -->
+          <div class="licencias">
+          
+				<p class="creativeCommons">Los contenidos de esta unidad didáctica interactiva están bajo una licencia <a href="http://creativecommons.org/licenses/by-nc-sa/2.5/es/" target="_blank">Creative Commons Reconocimiento-NoComercial-CompartirIgual</a>.</p>
+
+				<!--arquimedes (optativo)-->
+				<p>La unidad didáctica fue creada con <a href="http://arquimedes.matem.unam.mx/Descartes5/creditos/conCCL.html" target="_blank">Arquímedes</a>, una herramienta de código abierto.</p>
+
+				<!-- Descartes -->
+				<p>La unidad didáctica contiene escenas elaboradas con Descartes, una herramienta de código abierto.</p>
+
+
+          	<p style='text-align:center'> LITE - UnADM 2014</p>
+          </div>
+      </div>
+    </div> 
+   <!------ TERMINA LA INFO SOBRE LAS LICENCIAS Y LOS CRÉDITOS. ---------->
+  
+  
+  </div>
+  
+  
+</article>
+
+
+</body>
+
+</html>

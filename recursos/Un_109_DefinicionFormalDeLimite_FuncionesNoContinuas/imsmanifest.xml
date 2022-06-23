@@ -1,0 +1,101 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!--This is a Reload version 2.5.6 SCORM 1.2 Content Package document-->
+<!--Spawned from the Reload Content Package Generator - http://www.reload.ac.uk-->
+<manifest xmlns="http://www.imsproject.org/xsd/imscp_rootv1p1p2" xmlns:imsmd="http://www.imsglobal.org/xsd/imsmd_rootv1p2p1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:adlcp="http://www.adlnet.org/xsd/adlcp_rootv1p2" identifier="MANIFEST-C51B770DC10499E56D2A78EF8D8ECE52" xsi:schemaLocation="http://www.imsproject.org/xsd/imscp_rootv1p1p2 imscp_rootv1p1p2.xsd http://www.imsglobal.org/xsd/imsmd_rootv1p2p1 imsmd_rootv1p2p1.xsd http://www.adlnet.org/xsd/adlcp_rootv1p2 adlcp_rootv1p2.xsd">
+  <metadata>
+    <schema>ADL SCORM</schema>
+    <adlcp:location />
+    <imsmd:lom>
+      <imsmd:general>
+        <imsmd:identifier>_Un_109_DefinicionFormalDeLimite_FuncionesNoContinuas</imsmd:identifier>
+        <imsmd:title>
+          <imsmd:langstring xml:lang="es">Definición formal de Límite y Funciones no Continuas</imsmd:langstring>
+        </imsmd:title>
+        <imsmd:description>
+          <imsmd:langstring xml:lang="es"><![CDATA[
+            Funciones discontinuas. Sus tipos y propiedades y su relación con el límite.
+			
+			La definición de función continua está necesariamente ligada con el concepto de límite. Cuando una función no es continua, ¿qué
+            pasa con el límite de la función en un punto donde dicha función no está definida? En esta unidad estudiamos los casos de funciones que son discontinuas a partir de que alguna de las hipótesis de la definición de función continua no se cumpla.
+          ]]></imsmd:langstring>
+        </imsmd:description>
+        <imsmd:keyword>
+          <imsmd:langstring xml:lang="es">Función no continua</imsmd:langstring>
+          <imsmd:langstring xml:lang="es">Discontinuidad</imsmd:langstring>
+          <imsmd:langstring xml:lang="es">Límite</imsmd:langstring>
+          <imsmd:langstring xml:lang="es">Límite lateral</imsmd:langstring>
+        </imsmd:keyword>
+      </imsmd:general>
+      <imsmd:lifecycle>
+        <imsmd:version>
+          <imsmd:langstring xml:lang="es">1.0</imsmd:langstring>
+        </imsmd:version>
+        <imsmd:status>
+          <imsmd:source>
+            <imsmd:langstring xml:lang="x-none">LOMv1.0</imsmd:langstring>
+          </imsmd:source>
+          <imsmd:value>
+            <imsmd:langstring xml:lang="es" />
+          </imsmd:value>
+        </imsmd:status>
+        <imsmd:contribute>
+          <imsmd:role>
+            <imsmd:source>
+              <imsmd:langstring xml:lang="x-none">LOMv1.0</imsmd:langstring>
+            </imsmd:source>
+            <imsmd:value>
+              <imsmd:langstring xml:lang="es">Autor</imsmd:langstring>
+            </imsmd:value>
+          </imsmd:role>
+          <imsmd:centity>
+            <imsmd:vcard>Elsa Sirenia Vega Camacho</imsmd:vcard>
+          </imsmd:centity>
+        </imsmd:contribute>
+        <imsmd:contribute>
+          <imsmd:role>
+            <imsmd:value>
+              <imsmd:langstring xml:lang="es">Asesoría de programación</imsmd:langstring>
+            </imsmd:value>
+          </imsmd:role>
+          <imsmd:centity>
+            <imsmd:vcard>Leticia Montserrat Vargas Rocha</imsmd:vcard>
+          </imsmd:centity>
+        </imsmd:contribute>
+      </imsmd:lifecycle>
+      <imsmd:metametadata>
+        <imsmd:identifier>_Un_109_DefinicionFormalDeLimite_FuncionesNoContinuas</imsmd:identifier>
+      </imsmd:metametadata>
+      <imsmd:technical>
+        <imsmd:format>text/html</imsmd:format>
+        <imsmd:requirement>
+          <imsmd:name>
+            <imsmd:source>
+              <imsmd:langstring xml:lang="x-none">LOMv1.0</imsmd:langstring>
+            </imsmd:source>
+            <imsmd:value>
+              <imsmd:langstring xml:lang="es" />
+            </imsmd:value>
+          </imsmd:name>
+        </imsmd:requirement>
+      </imsmd:technical>
+      <imsmd:classification>
+        
+      </imsmd:classification>
+    </imsmd:lom>
+  </metadata>
+  <organizations default="ORG-66DFEE253D6A683735115ADE32F39FD5">
+    <organization identifier="ORG-66DFEE253D6A683735115ADE32F39FD5" structure="hierarchical">
+      <title>PDefinición formal de Límite y Funciones no Continuas</title>
+      <item identifier="ITEM-7D8E13C3DD94DF2137682321FE228CC3" isvisible="true" identifierref="RES-7AEBA12A3C37D31569C88FD366C6F96A">
+        <title>Definición formal de Límite y Funciones no Continuas</title>
+      </item>
+    </organization>
+  </organizations>
+  <resources>
+ <resource identifier="RES-7AEBA12A3C37D31569C88FD366C6F96A" adlcp:scormtype="sco" href="content/index.html" type="webcontent">
+      <file href="content/index.html" />
+      <file href="content/css/estilo.css" />
+    </resource>
+  </resources>
+</manifest>
+

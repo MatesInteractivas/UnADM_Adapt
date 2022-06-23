@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<title>Desarrollo 2</title>
+	<link href="../css/DescHTML5.css" rel="stylesheet" type="text/css" media="screen" />
+	<link href="../css/html5.css" rel="stylesheet" type="text/css" media="screen" />		
+	 <script type="text/javascript" src='../javascript/inject_functions_scorms_descartes.js'></script>
+	<script type='text/javascript' src='../lib/descartes-min.js'></script>
+</head>
+
+<body BGCOLOR="c0c0c0" leftmargin="0" topmargin="0">
+<ajs name="Descartes" width=970 height=550 code="Descartes">
+   <param name="tamaño" value="970x550">
+   <param name="image_loader" value="">
+   <param name="expand" value="">
+   <param name="decimal_symbol" value=".">
+   <param name="antialias" value="sí">
+   <param name="deshacer" value="no">
+   <param name="nombre" value="Descartes">
+   <param name="Versión" value="5.356, 2016-05-03">
+   <param name="Idioma" value="español">
+   <param name="Botones" value="créditos=no config=no inicio=no limpiar=no">
+   <param name="E_01" value="tipo='R2' id='E1' fijo='sí' escala='1' O.x='-50%' O.y='-50%' imagen='imgs/tpl/fondo_02.jpg' despl_imagen='arr-izq' fondo='c0d0d8' red='no' red10='no' ejes='no' texto='no'">
+   <param name="E_02" value="tipo='R2' id='EspG' x='EspG.x' y='EspG.y' ancho='425' alto='400' dibujar-si='EspG.visible' fijo='sí' imagen='imgs/tpl/imamat_op.jpg' despl_imagen='mosaico' fondo='fff0f8fa' red='no' red10='no' ejes='no' texto='no'">
+   <param name="E_03" value="tipo='R2' id='EspUp' x='EspUp.x' y='EspUp.y' ancho='375' alto='400' dibujar-si='EspUp.visible' fijo='sí' escala='1' O.x='-50%' O.y='-50%' imagen='imgs/tpl/imamat_op.jpg' despl_imagen='mosaico' fondo='fffbfadc' red='no' red10='no' ejes='no' texto='no'">
+   <param name="E_04" value="tipo='R2' id='MASK' dibujar-si='INFO.visible | TEO.visible' fijo='sí' imagen='imgs/tpl/backwindow.png' despl_imagen='mosaico' fondo='95000000' red='no' red10='no' ejes='no' texto='no'">
+   <param name="E_05" value="tipo='R2' id='INFO' x='INFO.x' y='INFO.y' ancho='700' alto='400' dibujar-si='INFO.visible' fijo='sí' imagen='imgs/tpl/retro_490x470.png' despl_imagen='mosaico' red='no' red10='no' ejes='no' texto='no'">
+   <param name="E_06" value="tipo='R2' id='TEO' x='TEO.x' y='TEO.y' ancho='700' alto='400' dibujar-si='TEO.visible' fijo='sí' imagen='imgs/tpl/retro_490x470.png' despl_imagen='mosaico' red='no' red10='no' ejes='no' texto='no'">
+   <param name="C_01" value="id='cerrarInfo' tipo='numérico' interfaz='botón' región='interior' espacio='INFO' expresión='(cerrarInfo.x,cerrarInfo.y,cerrarInfo.w,cerrarInfo.h)' fijo='sí' visible='sí' imagen='_STYLE_|class=btnUNADM icon cerrar|shadowTextColor=rgba(0,0,0,0.2)|shadowTextOffsetY=2|shadowTextBlur=0|textBorder=0' acción='calcular' parámetro='INFO.visible=0' dibujar-si='cerrarInfo.visible'">
+   <param name="C_02" value="id='cerrarInfo' tipo='numérico' interfaz='botón' región='interior' espacio='INFO' expresión='(cerrarInfo.x,cerrarInfo.y,cerrarInfo.w,cerrarInfo.h)' fijo='sí' visible='sí' imagen='_STYLE_|class=btnUNADM icon cerrar|shadowTextColor=rgba(0,0,0,0.2)|shadowTextOffsetY=2|shadowTextBlur=0|textBorder=0' acción='calcular' parámetro='INFO.visible=0' dibujar-si='cerrarInfo.visible' pos_mensajes='centro'">
+   <param name="C_03" value="id='cerrarTeo' tipo='numérico' interfaz='botón' región='interior' espacio='TEO' expresión='(cerrarTeo.x,cerrarTeo.y,cerrarTeo.w,cerrarTeo.h)' fijo='sí' visible='sí' imagen='_STYLE_|class=btnUNADM icon cerrar|shadowTextColor=rgba(0,0,0,0.2)|shadowTextOffsetY=2|shadowTextBlur=0|textBorder=0' acción='calcular' parámetro='TEO.visible=0' dibujar-si='cerrarTeo.visible' pos_mensajes='centro'">
+   <param name="C_04" value="id='btnIniciar' tipo='numérico' interfaz='botón' región='interior' espacio='EspUp' nombre='[btnIniciar.txt]' expresión='(ctrF.x-40,ctrF.y+40,btnAceptar.w,btnAceptar.h)' fijo='sí' visible='sí' color='blanco' color-int='ff000000' negrita='sí' fuente puntos='16' imagen='_STYLE_|class=btnUNADM|shadowTextColor=rgba(0,0,0,0.2)|shadowTextOffsetY=2|shadowTextBlur=0|textBorder=0' acción='calcular' parámetro='aleatorio()' activo-si='paso=0' pos_mensajes='centro'">
+   <param name="C_05" value="id='btnCont' tipo='numérico' interfaz='botón' región='interior' espacio='EspUp' nombre='Continuar' expresión='(ctrF.x+135,ctrF.y+40,btnAceptar.w,btnAceptar.h)' fijo='sí' visible='sí' color='blanco' color-int='ff000000' negrita='sí' fuente puntos='16' imagen='_STYLE_|class=btnUNADM|shadowTextColor=rgba(0,0,0,0.2)|shadowTextOffsetY=2|shadowTextBlur=0|textBorder=0' acción='calcular' parámetro='paso=paso+1' dibujar-si='paso=0' pos_mensajes='centro'">
+   <param name="C_06" value="id='reinit' tipo='numérico' interfaz='botón' región='interior' espacio='EspUp' nombre='Reiniciar' expresión='(ctrF.x+150,ctrF.y+345,btnAceptar.w,btnAceptar.h)' fijo='sí' visible='sí' color='blanco' color-int='ff000000' negrita='sí' fuente puntos='16' imagen='_STYLE_|class=btnUNADM|shadowTextColor=rgba(0,0,0,0.2)|shadowTextOffsetY=2|shadowTextBlur=0|textBorder=0' acción='calcular' parámetro='paso=0\naleatorio()' dibujar-si='paso=1' pos_mensajes='centro'">
+   <param name="A_01" value="id='initEsp()' algoritmo='sí' algoritmo='sí' hacer='INFO.x=(E1._w-INFO._w)/2;INFO.y=(E1._h-INFO._h)/2+20;INFO.visible=0;;TEO.x=(E1._w-TEO._w)/2;TEO.y=(E1._h-TEO._h)/2+20;TEO.visible=0;;EspG.x=55;EspG.y=106;EspG.visible=1;;EspUp.x=540;EspUp.y=105;EspUp.visible=1;;EspDw.x=540;EspDw.y=316;EspDw.visible=1'">
+   <param name="A_02" value="id='initBtns()' algoritmo='sí' algoritmo='sí' hacer='cerrarInfo.w=21;cerrarInfo.h=cerrarInfo.w;cerrarInfo.x=INFO._w-cerrarInfo.w-10;cerrarInfo.y=8;cerrarInfo.img=&squot;imgs/tpl/cerrar.png&squot;;cerrarInfo.visible=1;;cerrarTeo.w=21;cerrarTeo.h=cerrarInfo.w;cerrarTeo.x=INFO._w-cerrarInfo.w-10;cerrarTeo.y=8;cerrarTeo.img=&squot;imgs/tpl/cerrar.png&squot;;cerrarTeo.visible=1;;btnAceptar.w=120;btnAceptar.h=30;btnAceptar.x=(E1._w-btnAceptar.w-5);btnAceptar.y=(E1._h-btnAceptar.h-5);btnAceptar.img=&squot;imgs/tpl/btn120.png&squot;;btnAceptar.txt=&squot;Instrucciones&squot;;;btnTeo.w=120;btnTeo.h=30;btnTeo.x=(E1._w-btnTeo.w-5);btnTeo.y=(E1._h-btnTeo.h-5);btnTeo.img=&squot;imgs/tpl/btn120.png&squot;;btnTeo.txt=&squot;Criterio&squot;;;btnIniciar.w=120;btnIniciar.h=30;btnIniciar.img=&squot;imgs/tpl/btn120.png&squot;;btnIniciar.txt=&squot;Generar&squot;;;btnParar.w=120;btnParar.h=30;btnParar.img=&squot;imgs/tpl/btn120.png&squot;;btnParar.txt=&squot;Parar&squot;;;btnCua.w=30;btnCua.h=30;btnCua.img=&squot;imgs/tpl/btn040.png&squot;;;ctrF.w=275;ctrF.h=40;ctrF.txt.w=70;ctrF.txt.h=18 ;;ctrF.txt.x=10;ctrF.txt.y=25;ctrF.x=ctrF.txt.x+ctrF.txt.w;ctrF.y=ctrF.txt.y-10;;;ctr_c.w=120;ctr_c.h=40;ctr_c.x=(EspDw._w-ctr_c.w)/2;ctr_c.y=(EspDw._h-ctr_c.h-15);;ctr_a.w=120;ctr_a.h=40;ctr_a.x=(EspDw._w-(ctr_a.w*2+5*1))/2;ctr_a.y=ctr_c.y-ctr_c.h-20;;ctr_b.x=ctr_a.x+ctr_a.w+5;ctr_b.y=ctr_a.y;ctr_b.w=ctr_a.w;ctr_b.h=ctr_a.h;;;;;;;;;ô=|*****************************************************|;ô=|*Para que siga al scroll hay que agregar la mitad de*|;ô=|*altura a la posicion y sumarle el Oy del espacio   *|;ô=|*                                                   *|;ô=|* El espcio de tener :                              *|;ô=|*   escala = 1                                      *|;ô=|*   Ox = -50% Oy = -50%                             *|;ô=|*****************************************************|;EspUp.Oy.w=27;EspUp.Oy.h=50;EspUp.Oy.x=EspUp._w-EspUp.Oy.w-5;EspUp.Oy.y=EspUp._h-EspUp.Oy.h-5;;'">
+   <param name="A_03" value="id='initEscena()' algoritmo='sí' algoritmo='sí' hacer='initBtns();initEsp();aleatorio();paso=0;;ô=|***************************************|;ô=|*  Si el botón de para cerrar la info *|;ô=|*  esta VISIBLE                       *|;ô=|***************************************|;;ô=|***************************************|;ô=|*  Calculamos la posicion del titulo  *|;ô=|***************************************|;titulo=&squot;¿Divisible por 11?&squot;;titulo.w=_AnchoDeCadena_(titulo,&squot;SansSerif&squot;,&squot;PLAIN&squot;,&squot;30&squot;);titulo.x=(E1._w-titulo.w)/2;titulo.y=20;;'">
+   <param name="A_04" value="id='f(x)' expresión='_Eval_(ctrF)'">
+   <param name="A_05" value="id='r' expresión='10*rnd'">
+   <param name="A_06" value="id='aleatorio()' algoritmo='sí' algoritmo='sí' hacer='num=(11*350)+(11*ent(rnd*350))+(ent(rnd*2));var1=ent(num/1000);var2=ent((num-var1*1000)/100);var3=ent((num-(var1*1000+var2*100))/10);var4=num-(var1*1000+var2*100+var3*10);;res1=(var1+var3)-(var2+var4);dig1=ent(res1/100);dig2=ent((res1-(dig1*100))/10);dig3=ent(res1-(dig1*100+dig2*10))'">
+   <param name="A_07" value="id='__SCORM___()'">
+   <param name="A_08" value="id='getSCORMState()' algoritmo='sí' expresión='res' algoritmo='sí' Local='res,c' inicio='c=&squot;@&squot;;res=&squot;&squot;' hacer='res=res+&squot;D02.nResueltos:&squot;+nResueltos+c;res=res+&squot;D02.ANT.per:&squot;+ANT.per+c;'">
+   <param name="A_09" value="id='initStateScorm()' algoritmo='sí' expresión='x' algoritmo='sí' hacer='nResueltos=getSCORMStateVar(&squot;D02.nResueltos&squot;);ANT.per=getSCORMStateVar(&squot;D02.ANT.per&squot;);;'">
+   <param name="A_10" value="id='regObjetivos()' algoritmo='sí' expresión='0' algoritmo='sí' Local='actRes,per,tt' hacer='isNew=(isNew)|((ANT.paso==0)&(paso>0));actRes=(paso>=1)&(isNew);nResueltos=nResueltos+actRes;isNew=(isNew)&(!actRes);;;ô=|*****************************************************|;ô=|*        Si ve 3 ejercicios tienen el 100%          *|;ô=|*****************************************************|;per=min(ent((100/3)*nResueltos),100);tt=(ANT.per<per);tt=(tt)?setSCORMPercentage(per):0;;;_Print_(&squot;******************************&squot;);_Print_(&squot;Paso :&squot;+paso+&squot; -ANT :&squot;+ANT.paso);_Print_(&squot;N Res : &squot;+nResueltos+&squot;. Es nuevo &squot;+isNew);_Print_(&squot;Porce : &squot;+per+&squot;%&squot;);_Print_(&squot;&squot;);ANT.paso=paso;ANT.per=per'">
+   <param name="A_11" value="id='INICIO' algoritmo='sí' evaluar='una-sola-vez' hacer='initStateScorm();initEscena()'">
+   <param name="A_12" value="id='CALCULOS' algoritmo='sí' evaluar='siempre' hacer='regObjetivos()'">
+   <param name="G_01" value="espacio='E1' tipo='texto' fondo='sí' expresión='[_E1__,20]' fijo='sí'">
+   <param name="G_02" value="espacio='E1' tipo='texto' fondo='sí' expresión='[titulo.x,titulo.y]' texto='[titulo]' fuente='SansSerif,PLAIN,30' fijo='sí'">
+   <param name="G_03" value="espacio='E1' tipo='texto' fondo='sí' expresión='[_TEO__,20]' fijo='sí'">
+   <param name="G_04" value="espacio='TEO' tipo='texto' fondo='sí' color='blanco' expresión='[10,8]' texto='Teoría' fuente='SansSerif,PLAIN,22' fijo='sí' ancho='2' info='Título de la info'">
+   <param name="G_05" value="espacio='TEO' tipo='texto' fondo='sí' color='negro' expresión='[10,60]' texto='{\rtf1\uc0{\fonttbl\f0\fcharset0 Times New Roman;\f1\fcharset0 Arial;}\f1\fs34 Recuerda que un n\u250 mero es divisible entre 7 cuando, al separar la \u250 ltima cifra\par de la derecha, multiplicarla por 2 y restarla de las cifras restantes la diferencia \par es igual a 0 o es un m\u250 ltiplo de 7.\f0\fs30}' fuente='SansSerif,PLAIN,17' decimales='0' fijo='sí' ancho='10' info='Texto ventana informativa'">
+   <param name="G_06" value="espacio='INFO' tipo='texto' fondo='sí' dibujar-si='0' expresión='[_INFO_____,20]' fijo='sí'">
+   <param name="G_07" value="espacio='INFO' tipo='texto' fondo='sí' color='blanco' expresión='[10,8]' texto='Instrucciones' fuente='SansSerif,PLAIN,22' fijo='sí' ancho='2' info='Título de la info'">
+   <param name="G_08" value="espacio='INFO' tipo='texto' fondo='sí' color='negro' expresión='[10,50]' texto='{\rtf1\uc0{\fonttbl\f0\fcharset0 Times New Roman;\f1\fcharset0 Arial;}\f1\fs34 En esta escena te invitamos a calcular, si el n\u250 mero que te proponemos\par es divisible por siete. Para esto:\par  \par 1. En el espacio superior derecho genera un n\u250 mero al azar.\par \par 2. En base al criterio de divisiblidad para el n\u250 mero siete, comprueba con \par l\u225 piz y papel si tu n\u250 mero es divisible entre siete.\par \par 3. Si no est\u225 s seguro del criterio, lo puedes consultar con el bot\u243 n &quote;Criterio&quote;.\par \par 4. Si tu n\u250 mero es divisible, en el espacio inferior izquierdo aparecer\u225 \par     tu respuesta.}' fuente='SansSerif,PLAIN,17' decimales='0' fijo='sí' ancho='10' info='Texto instrucciones'">
+   <param name="G_09" value="espacio='EspG' tipo='texto' fondo='sí' dibujar-si='0' expresión='[_GRAF_____,20]' fijo='sí'">
+   <param name="G_10" value="espacio='EspG' tipo='texto' fondo='sí' expresión='(0,20)' texto='{\rtf1\uc0{\fonttbl\f0\fcharset0 Times New Roman;\f1\fcharset0 Arial;}\f1\fs36 Para ver si n\u250 mero es divisible entre 11, sumas \par las cifras en posici\u243 n impar, luego las de posici\u243 n \par par. Resta el resultado de ambas sumas obtenidas. \par Si el resultado es cero o un m\u250 ltiplo de 11, el \par n\u250 mero es divisible por 11.  Si el n\u250 mero tiene \par s\u243 lo dos cifras y estas son iguales ser\u225  m\u250 ltiplo \par de 11.\par \par Pulsa el bot\u243 n Generar para mostrar un n\u250 mero \par aleatorio y el bot\u243 n Continuar para ver el proceso \par y saber si el n\u250 mero es divisible entre 11.}' fuente='SansSerif,PLAIN,18' fijo='sí' ancho='10' info='¿Cumple la divisibilidad por 11?'">
+   <param name="G_11" value="espacio='EspUp' tipo='texto' fondo='sí' dibujar-si='0' expresión='[_EspUp_____,20]' fijo='sí'">
+   <param name="G_12" value="espacio='EspUp' tipo='texto' expresión='[120,20]' texto='[var1]' fuente='Serif,ITALIC,22' decimales='0' fijo='sí' info='c'">
+   <param name="G_13" value="espacio='EspUp' tipo='texto' expresión='[160,20]' texto='[var2]' fuente='Serif,ITALIC,22' decimales='0' fijo='sí' info='b'">
+   <param name="G_14" value="espacio='EspUp' tipo='texto' expresión='[200,20]' texto='[var3]' fuente='Serif,ITALIC,22' decimales='0' fijo='sí' info='e'">
+   <param name="G_15" value="espacio='EspUp' tipo='texto' expresión='[240,20]' texto='[var4]' fuente='Serif,ITALIC,22' decimales='0' fijo='sí' info='f'">
+   <param name="G_16" value="espacio='EspUp' tipo='texto' dibujar-si='(paso>0)&(num%11=0)' expresión='(10,120)' texto='{\rtf1\uc0{\fonttbl\f0\fcharset0 Arial;\f1\fcharset0 Times New Roman;\f2\fcharset0 Times New Roman;}\f0\fs36 Sumando el primer y tercer d\u237 gito del\par n\u250 mero obtenemos\f1\fs36\i  {\*\mjaformula{\expr var1+var3\decimals 0\fixed0},}\f0\fs36\i0  sumando\par el segundo y cuarto d\u237 gito obtenemos\par \f2\fs40\i{\*\mjaformula{\expr var2+var4\decimals 0\fixed1},}\f0\fs36\i0  la resta de estos resultados\par es \f2\fs40\i{\*\mjaformula{\expr (var1+var3)-(var2+var4)\decimals 0\fixed1},}\f0\fs36\i0  este n\u250 mero es m\u250 ltiplo\par de \f2\fs40\i{\*\mjaformula 11,}\f0\fs36\i0  por lo tanto \f2\fs40\i{\*\mjaformula{\expr num\decimals 0\fixed1}}\f0\fs36\i0  es\par divisible por \f2\fs40\i{\*\mjaformula 11.}\f0\fs36\i0\par \par \f2\fs40\i{\*\mjaformula{\expr num\decimals 0\fixed1} = 11}\f0\fs36\i0 x\f2\fs40\i  {\*\mjaformula{\expr num/11\decimals 0\fixed1}}\f0\fs36\i0}' fuente='SansSerif,PLAIN,18' fijo='sí' info='¿Cumple la divisibilidad por 7?'">
+   <param name="G_17" value="espacio='EspUp' tipo='texto' dibujar-si='(paso>0)&(num%11#0)' expresión='(10,120)' texto='{\rtf1\uc0{\fonttbl\f0\fcharset0 Times New Roman;\f1\fcharset0 Arial;\f2\fcharset0 Times New Roman;\f3\fcharset0 Times New Roman;}\f1\fs36 Sumando el primer y tercer d\u237 gito del\par n\u250 mero obtenemos\f2\fs36\i  {\*\mjaformula{\expr var1+var3\decimals 0\fixed0},}\f1\fs36\i0  sumando\par el segundo y cuarto d\u237 gito obtenemos\par \f3\fs40\i{\*\mjaformula{\expr var2+var4\decimals 0\fixed1},}\f1\fs36\i0  la resta de estos resultados\par es \f3\fs40\i{\*\mjaformula{\expr (var1+var3)-(var2+var4)\decimals 0\fixed1},}\f1\fs36\i0  este n\u250 mero no es\par m\u250 ltiplo de \f3\fs40\i{\*\mjaformula 11,}\f1\fs36\i0  por lo tanto \f3\fs40\i{\*\mjaformula{\expr num\decimals 0\fixed1}}\f1\fs36\i0  no\par es divisible por \f3\fs40\i{\*\mjaformula 11.}\f1\fs36\i0}' fuente='SansSerif,PLAIN,18' fijo='sí' info='¿Cumple la divisibilidad por 7?'">
+   <param name="G_18" value="espacio='E1' tipo='texto' dibujar-si='debug' expresión='[20,20]' texto='[num]' fijo='sí'">
+</ajs>
+
+<!------ INICIA LA INFO SOBRE LAS LICENCIAS Y LOS CRÉDITOS. ---------->
+    <a id="btCopyright" class="standardButton" title="Haz clic aquí para consultar los créditos y las condiciones de uso de este recurso." href="#" onClick="document.getElementById('copyright').className='visible';">©</a>
+    <div id="copyright" class="oculto">
+      
+      <div class='innerCopyright'>
+      
+          <a id="btCloseCopyright" class="standardButton" title="Haz clic aquí para cerrar esta ventana." href="#" onClick="document.getElementById('copyright').className='oculto'">×</a>
+  
+          <!-- Créditos UAM  (siempre deben ir en primer lugar) -->
+			<div class="creditos">
+				<h1>
+					Créditos 
+				</h1>
+				<h2>
+					Escena original
+				</h2>				
+                
+               <table class="autores" 	>
+					<tr> <td  class="rol"> Diseño del contenido			</td>		<td class="nombre"> Gustavo Magallanes Guijón</td></tr>
+					<tr> <td  class="rol"> Diseño funcional				</td>		<td class="nombre">Gustavo Magallanes Guijón</td></tr>
+					<tr> <td  class="rol"> Programación						</td>		<td class="nombre"> Gustavo Magallanes Guijón</td></tr>
+					<!-- Varias personas en el mismo rubro, separar por <br> -->
+							        
+					<tr> <td  class="rol"> Diseño gráfico					</td>		<td class="nombre"> Ricardo López Gómez										</td></tr>
+					<tr> <td  class="rol" >Coordinación			</td>		<td class="nombre"> Leticia Montserrat Vargas Rocha						</td></tr>
+				</table>
+				<h2>
+					Adaptación 
+				</h2>
+				<table class="autores" 	>
+					<tr> <td  class="rol"> Diseño funcional				</td>	<td class="nombre"> Julio Arnoldo Prado Saavedra<br>Victor Manuel Amezcua y Raz 
+                    </td></tr>
+					<tr> <td  class="rol"> Programación					</td>	<td class="nombre">Julio Arnoldo Prado Saavedra<br>Victor Manuel Amezcua y Raz</td></tr>
+					<tr> <td  class="rol"> Diseño gráfico				</td>	<td class="nombre"> Francisco	Varela Fuentes	        </td></tr>
+					<tr> <td  class="rol" >Coordinación			        </td>	<td class="nombre"> Leticia Montserrat Vargas Rocha		</td></tr>
+		            
+				</table>
+	         
+	         <div class='logos'>
+	            <a href=''>
+	               <img src="../images/info/icns/logoLite.png">
+	            </a>
+	            <a href="http://www.unadmexico.mx/">
+	               <img src="../images/info/icns/logoUNADM.png">
+	            </a>
+	         </div>
+          </div>
+          
+          <!-- Linea separación créditos -->
+          <hr class="linea" />
+     
+          <!-- Aviso licencias -->
+          <div class="licencias">
+          
+				<p class="creativeCommons">Los contenidos de esta unidad didáctica interactiva están bajo una licencia <a href="http://creativecommons.org/licenses/by-nc-sa/2.5/es/" target="_blank">Creative Commons Reconocimiento-NoComercial-CompartirIgual</a>.</p>
+
+				<!--arquimedes (optativo)-->
+				<p>La unidad didáctica fue creada con <a href="http://arquimedes.matem.unam.mx/Descartes5/creditos/conCCL.html" target="_blank">Arquímedes</a>, una herramienta de código abierto.</p>
+
+				<!-- Descartes -->
+				<p>La unidad didáctica contiene escenas elaboradas con Descartes, una herramienta de código abierto.</p>
+
+
+          	<p style='text-align:center'> LITE - UnADM 2014</p>
+          </div>
+      </div>
+    </div> 
+   <!------ TERMINA LA INFO SOBRE LAS LICENCIAS Y LOS CRÉDITOS. ---------->
+</body>
+</html>

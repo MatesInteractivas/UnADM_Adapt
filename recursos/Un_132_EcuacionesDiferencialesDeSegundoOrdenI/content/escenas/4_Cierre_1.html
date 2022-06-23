@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Desarrollo</title>	
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<link href="../css/DescHTML5.css" rel="stylesheet" type="text/css" media="screen" />
+	<link href="../css/html5.css" rel="stylesheet" type="text/css" media="screen" />
+	<script type='text/javascript' src='../lib/descartes-min.js'></script>
+</head>
+<body BGCOLOR="c0c0c0" leftmargin="0" topmargin="0">
+
+<ajs name="Descartes" width=970 height=550 code="Descartes">
+   <param name="tamaño" value="970x550">
+   <param name="image_loader" value="">
+   <param name="expand" value="">
+   <param name="decimal_symbol" value=".">
+   <param name="antialias" value="sí">
+   <param name="deshacer" value="no">
+   <param name="nombre" value="Descartes">
+   <param name="Versión" value="5.356, 2016-05-03">
+   <param name="Idioma" value="español">
+   <param name="Botones" value="créditos=no config=no inicio=no limpiar=no">
+   <param name="E_01" value="tipo='R2' id='E1' fijo='sí' escala='1' O.x='-50%' O.y='-50%' imagen='imgs/tpl/fondo_02.jpg' despl_imagen='arr-izq' fondo='c0d0d8' red='no' red10='no' ejes='no' texto='no'">
+   <param name="E_02" value="tipo='R2' id='E2' x='E2.x' y='E2.y' ancho='426' alto='400' dibujar-si='E2.visible' escala='35' O.x='-150' O.y='150' despl_imagen='arr-izq' fondo='dcdbe1' red='90b8c4c8' red10='no' ejes='405860' texto='405860'">
+   <param name="E_03" value="tipo='R2' id='EspTxt' x='EspTxt.x' y='EspTxt.y' ancho='375' alto='400' dibujar-si='EspTxt.visible' fijo='sí' despl_imagen='arr-izq' fondo='fff8ffd9' red='no' red10='no' ejes='no' texto='no'">
+   <param name="E_04" value="tipo='R2' id='MASK' dibujar-si='INFO.visible' fijo='sí' imagen='imgs/tpl/backwindow.png' despl_imagen='mosaico' fondo='95000000' red='no' red10='no' ejes='no' texto='no'">
+   <param name="E_05" value="tipo='R2' id='INFO' x='INFO.x' y='INFO.y' ancho='790' alto='470' dibujar-si='INFO.visible' fijo='sí' imagen='imgs/tpl/retro_790x470.png' despl_imagen='expand.' red='no' red10='no' ejes='no' texto='no'">
+   <param name="C_01" value="id='cerrarInfo' tipo='numérico' interfaz='botón' región='interior' espacio='INFO' expresión='(cerrarInfo.x,cerrarInfo.y,cerrarInfo.w,cerrarInfo.h)' fijo='sí' visible='sí' imagen='_STYLE_|class=btnUNADM icon cerrar|shadowTextColor=rgba(0,0,0,0.2)|shadowTextOffsetY=2|shadowTextBlur=0|textBorder=0 |' acción='calcular' parámetro='INFO.visible=0' dibujar-si='cerrarInfo.visible'">
+   <param name="C_02" value="id='ctr_i' tipo='numérico' interfaz='botón' región='interior' espacio='E1' expresión='(ctr_i.x,ctr_i.y,ctr_i.w,ctr_i.h)' valor='ctr_i' fijo='sí' visible='sí' color='blanco' cursiva='sí' fuente puntos='20' imagen='_STYLE_|class=btnUNADM icon info|shadowTextColor=rgba(0,0,0,0.2)|shadowTextOffsetY=2|shadowTextBlur=0|textBorder=0 |' acción='calcular' parámetro='INFO.visible=1' activo-si='t=0'">
+   <param name="C_03" value="id='ctrF' tipo='numérico' interfaz='campo de texto' solo_texto='sí' región='interior' espacio='EspTxt' expresión='(ctrF.x,ctrF.y,ctrF.w,ctrF.h)' valor='&squot;(2*x)-(1.2*x*y) &squot;' fijo='sí' visible='sí' activo-si='t=0'">
+   <param name="C_04" value="id='ctrG' tipo='numérico' interfaz='campo de texto' solo_texto='sí' región='interior' espacio='EspTxt' expresión='(ctrF.x,ctrF.y+60,ctrF.w,ctrF.h)' valor='&squot;(-y)+((0.9)*x*y)&squot;' fijo='sí' visible='sí' activo-si='t=0'">
+   <param name="C_05" value="id='limpiar' tipo='numérico' interfaz='botón' región='interior' espacio='EspTxt' nombre='Limpiar' expresión='(250,365,100,30)' fijo='sí' visible='sí' color='blanco' color-int='fff0f8ff' fuente puntos='18' acción='calcular' parámetro='inicio=0\nt=0' dibujar-si='inicio=1'">
+   <param name="C_06" value="id='ctr_a' tipo='numérico' región='interior' espacio='EspTxt' nombre='_nada_' expresión='(ctr_a.x,ctr_a.y,ctr_a.w,ctr_a.h)' valor='a' incr='0.02' min='0' max='10' fijo='sí' visible='sí' acción='calcular' parámetro='a=ctr_a' activo-si='t=0'">
+   <param name="C_07" value="id='ctr_b' tipo='numérico' región='interior' espacio='EspTxt' nombre='_nada_' expresión='(ctr_b.x,ctr_b.y,ctr_b.w,ctr_b.h)' valor='b' incr='0.02' min='0' max='10' fijo='sí' visible='sí' acción='calcular' parámetro='b=ctr_b' activo-si='t=0'">
+   <param name="C_08" value="id='ctr_c' tipo='numérico' región='interior' espacio='EspTxt' nombre='_nada_' expresión='(ctr_c.x,ctr_c.y,ctr_c.w,ctr_c.h)' valor='c' incr='0.01' min='.01' max='1' fijo='sí' visible='sí' acción='calcular' parámetro='c=ctr_c' activo-si='t=0'">
+   <param name="C_09" value="id='ctr_d' tipo='numérico' región='interior' espacio='EspTxt' nombre='_nada_' expresión='(ctr_c.x,ctr_c.y+65,ctr_c.w,ctr_c.h+10)' valor='d' incr='5' min='50' max='999' decimales='0' fijo='sí' visible='sí' acción='calcular' parámetro='d=ctr_d' activo-si='t=0'">
+   <param name="C_10" value="id='animar' tipo='numérico' interfaz='botón' región='interior' espacio='EspTxt' nombre='Solución' expresión='(250,365,100,30)' fijo='sí' visible='sí' color='blanco' color-int='fff0f8ff' fuente puntos='18' acción='calcular' parámetro='aux=punto()\ninicio=1' activo-si='t=0'">
+   <param name="A_01" value="id='irAEscena(idxEscena)' algoritmo='sí' algoritmo='sí' hacer='parent.set(&squot;scene&squot;,idxEscena);parent.update()'">
+   <param name="A_02" value="id='initBtns()' algoritmo='sí' algoritmo='sí' hacer='cerrarInfo.w=21;cerrarInfo.h=cerrarInfo.w;cerrarInfo.x=INFO._w-cerrarInfo.w-6;cerrarInfo.y=6;cerrarInfo.img=&squot;imgs/tpl/cerrar.png&squot;;cerrarInfo.visible=1;;ctr_i.w=30;ctr_i.h=30;ctr_i.x=10;ctr_i.y=10;;btnAceptar.w=120;btnAceptar.h=30;btnAceptar.x=380;btnAceptar.y=500;btnAceptar.img=&squot;imgs/tpl/btn120.png&squot;;btnAceptar.txt=&squot;Aceptar&squot;;;;;;ctrF.w=275;ctrF.h=40;ctrF.txt.w=70;ctrF.txt.h=18 ;;ctrF.txt.x=10;ctrF.txt.y=15;ctrF.x=ctrF.txt.x+ctrF.txt.w;ctrF.y=ctrF.txt.y+10;;;;ctr_a.w=80;ctr_a.h=40;ctr_a.x=(EspTxt._w-(ctr_a.w*3+5*2))/2+20;ctr_a.y=EspTxt._h-ctr_a.h-200;;;ctr_b.x=ctr_a.x;ctr_b.y=ctr_a.y+60;ctr_b.w=ctr_a.w;ctr_b.h=ctr_a.h;;ctr_c.x=ctr_a.x;ctr_c.y=ctr_b.y+60;ctr_c.w=ctr_b.w;ctr_c.h=ctr_b.h'">
+   <param name="A_03" value="id='initEsp()' algoritmo='sí' algoritmo='sí' hacer='INFO.x=(E1._w-INFO._w)/2;INFO.y=(E1._h-INFO._h)/2;INFO.visible=1;;E2.x=54;E2.y=105;E2.visible=1;;EspTxt.x=540;EspTxt.y=105;EspTxt.visible=1'">
+   <param name="A_04" value="id='initEscena()' algoritmo='sí' algoritmo='sí' hacer='initBtns();initEsp();;ô=|***************************************|;ô=|*  Calculamos la posicion del titulo  *|;ô=|***************************************|;titulo=&squot;Aproximación de soluciones a sistemas&squot;;titulo.w=_AnchoDeCadena_(titulo,&squot;SansSerif&squot;,&squot;PLAIN&squot;,&squot;30&squot;);titulo.x=(E1._w-titulo.w)/2;titulo.y=30;;paso=0;a=3;b=4;c=.02;d=100'">
+   <param name="A_05" value="id='__FIN_TPL_()'">
+   <param name="A_06" value="id='R' vector='sí' evaluar='una-sola-vez' tamaño='1000'">
+   <param name="A_07" value="id='F' vector='sí' evaluar='una-sola-vez' tamaño='1000'">
+   <param name="A_08" value="id='f(x,y)' expresión='_Eval_(ctrF)'">
+   <param name="A_09" value="id='g(x,y)' expresión='_Eval_(ctrG)'">
+   <param name="A_10" value="id='punto()' algoritmo='sí' algoritmo='sí' inicio='R[0]=a;F[0]=b;t=0;dt=c' hacer='R[t+1]=R[t]+dt*f(R[t],F[t]);F[t+1]=F[t]+dt*g(R[t],F[t]);t=t+1;entro=t' mientras='t<d'">
+   <param name="A_11" value="id='INICIO' algoritmo='sí' evaluar='una-sola-vez' hacer='initEscena()'">
+   <param name="A_12" value="id='CALCULOS' algoritmo='sí' evaluar='siempre'">
+   <param name="G_01" value="espacio='E1' tipo='texto' fondo='sí' expresión='[titulo.x,titulo.y]' texto='[titulo]' fuente='SansSerif,PLAIN,30' fijo='sí'">
+   <param name="G_02" value="espacio='INFO' tipo='texto' fondo='sí' color='blanco' expresión='[20,5]' texto='Método de Euler en diversas ecuaciones' fuente='SansSerif,PLAIN,24' fijo='sí'">
+   <param name="G_03" value="espacio='INFO' tipo='texto' expresión='[20,65]' texto='{\rtf1\uc0{\fonttbl\f0\fcharset0 Times New Roman;\f1\fcharset0 Arial;}\f1\fs42 En el estudio de ecuaciones diferenciales de segundo orden, o bien, un\par sistema de dos ecuaciones de primer orden, existen pocos procedimientos\par anal\u237 ticos que nos muestran ecuaciones para resolverlos, pero acabamos de\par ver que contamos con m\u233 todos numericos y cualitativos que nos permiten\par entender lo escencial de las soluciones.\par \par A continuaci\u243 n se presentan dos campos de texto en los que puedes\par escribir las ecuaciones de un sistema, puedes elegir las condiciones\par iniciales, el tama\u241 o del salto y finalmente dando clic en el bot\u243 n soluci\u243 n, se\par muestra una aproximaci\u243 n al sistema.\par }' fuente='SansSerif,PLAIN,21' fijo='sí'">
+   <param name="G_04" value="espacio='E1' tipo='texto' dibujar-si='0' expresión='[20,20]' texto='t=[t]\nentro=[entro]\npaso=[paso]' fijo='sí'">
+   <param name="G_05" value="espacio='E2' tipo='punto' color='ae0000' expresión='(R[s],F[s])' familia='s' s.intervalo='[0,t-1]' s.pasos='t-1' fijo='sí'">
+   <param name="G_06" value="espacio='E2' tipo='texto' dibujar-si='0' expresión='[0,20+18*s]' familia='s' s.intervalo='[0,35]' s.pasos='35' texto='R([s])=[R[s]]     F([s])=[F[s]]' fijo='sí'">
+   <param name="G_07" value="espacio='EspTxt' tipo='texto' expresión='[10,20]' texto='{\rtf1\uc0{\fonttbl\f0\fcharset0 Times New Roman;\f1\fcharset0 Times New Roman;\f2\fcharset0 Courier New;}\f1\fs44\i{\*\mjaformula{\fraction{\num dx}{\den dt}}=}\f2\fs30\i0}' fuente='Serif,ITALIC,22' fijo='sí'">
+   <param name="G_08" value="espacio='EspTxt' tipo='texto' expresión='[10,80]' texto='{\rtf1\uc0{\fonttbl\f0\fcharset0 Times New Roman;\f1\fcharset0 Times New Roman;\f2\fcharset0 Courier New;}\f1\fs44\i{\*\mjaformula{\fraction{\num dy}{\den dt}}=}\f2\fs30\i0}' fuente='Serif,ITALIC,22' fijo='sí'">
+   <param name="G_09" value="espacio='EspTxt' tipo='texto' expresión='[30,165]' texto='{\rtf1\uc0{\fonttbl\f0\fcharset0 Times New Roman;\f1\fcharset0 Times New Roman;\f2\fcharset0 Courier New;}\f1\fs44\i{\*\mjaformula x{\subix 0}=}\f2\fs30\i0}' fuente='Serif,ITALIC,22' fijo='sí'">
+   <param name="G_10" value="espacio='EspTxt' tipo='texto' expresión='[30,225]' texto='{\rtf1\uc0{\fonttbl\f0\fcharset0 Times New Roman;\f1\fcharset0 Times New Roman;\f2\fcharset0 Courier New;}\f1\fs44\i{\*\mjaformula y{\subix 0}=}\f2\fs30\i0}' fuente='Serif,ITALIC,22' fijo='sí'">
+   <param name="G_11" value="espacio='EspTxt' tipo='texto' expresión='[30,287]' texto='{\rtf1\uc0{\fonttbl\f0\fcharset0 Times New Roman;\f1\fcharset0 Times New Roman;\f2\fcharset0 Courier New;}\f1\fs44\i{\*\mjaformula\u916 t=}\f2\fs30\i0}' fuente='Serif,ITALIC,22' fijo='sí'">
+   <param name="G_12" value="espacio='EspTxt' tipo='texto' expresión='[30,357]' texto='{\rtf1\uc0{\fonttbl\f0\fcharset0 Times New Roman;\f1\fcharset0 Times New Roman;\f2\fcharset0 Courier New;}\f1\fs44\i{\*\mjaformula t{\subix n}=}\f2\fs30\i0}' fuente='Serif,ITALIC,22' fijo='sí'">
+   <param name="G_13" value="espacio='E2' tipo='punto' expresión='(a,b)' texto='{\rtf1\uc0{\fonttbl\f0\fcharset0 Times New Roman;\f1\fcharset0 Times New Roman;\f2\fcharset0 Courier New;}\f1\fs34\i{\*\mjaformula (x{\subix 0},y{\subix 0})}\f2\fs30\i0}' fuente='Serif,ITALIC,17' fijo='sí'">
+</ajs>
+
+	<!------ INICIA LA INFO SOBRE LAS LICENCIAS Y LOS CRÉDITOS. ---------->
+    <a id="btCopyright" class="standardButton" title="Haz clic aquí para consultar los créditos y las condiciones de uso de este recurso." href="#" onClick="document.getElementById('copyright').className='visible';">©</a>
+    <div id="copyright" class="oculto">
+      
+      <div class='innerCopyright'>
+      
+          <a id="btCloseCopyright" class="standardButton" title="Haz clic aquí para cerrar esta ventana." href="#" onClick="document.getElementById('copyright').className='oculto'">×</a>
+  
+          <!-- Créditos UAM  (siempre deben ir en primer lugar) -->
+			<div class="creditos">
+				<h1>
+					Créditos 
+				</h1>
+
+				<h2>
+					Escena original
+				</h2>				<table class="autores" 	>
+
+					<tr> <td  class="rol"> Diseño del contenido			</td>		<td class="nombre"> Víctor Hugo García Jarillo (Facultad de Ciencias UNAM, LITE)</td></tr>
+					<tr> <td  class="rol"> Diseño funcional				</td>		<td class="nombre"> Víctor Hugo García Jarillo (Facultad de Ciencias UNAM, LITE)</td></tr>
+					<tr> <td  class="rol"> Programación					</td>		<td class="nombre"> Víctor Hugo García Jarillo (Facultad de Ciencias UNAM, LITE)</td></tr>
+					<tr> <td  class="rol"> Diseño gráfico				</td>		<td class="nombre"> Ricardo López Gómez</td></tr>
+					<tr> <td  class="rol" >Coordinación			</td>		<td class="nombre"> Leticia Montserrat Vargas Rocha</td></tr>
+					</table>
+				<h2>
+					Adaptación 
+				</h2>
+				<table class="autores" 	>
+				<tr> <td  class="rol"> Diseño funcional				</td>		<td class="nombre"> Victor Hugo García Jarillo (Facultad de                    Ciencias, UNAM)		</td></tr>
+					<tr> <td  class="rol"> Programación				</td>		<td class="nombre"> Victor Hugo García Jarillo (Facultad de                    Ciencias, UNAM)</td></tr>
+
+					<tr> <td  class="rol"> Diseño gráfico			</td>		<td class="nombre"> Francisco	Varela Fuentes</td></tr>
+					<tr> <td  class="rol" >Coordinación			</td>		<td class="nombre"> Leticia Montserrat Vargas Rocha</td></tr>
+		
+				</table>
+
+ <div class='logos'>
+	            <a href=''>
+	               <img src="../images/info/icns/logoLite.png">
+	            </a>
+	            <a href="http://www.unadmexico.mx/">
+	               <img src="../images/info/icns/logoUNADM.png">
+	            </a>
+	         </div>
+          </div>
+          
+          <!-- Linea separación créditos -->
+          <hr class="linea" />
+     
+          <!-- Aviso licencias -->
+          <div class="licencias">
+          
+				<p class="creativeCommons">Los contenidos de esta unidad didáctica interactiva están bajo una licencia <a href="http://creativecommons.org/licenses/by-nc-sa/2.5/es/" target="_blank">Creative Commons Reconocimiento-NoComercial-CompartirIgual</a>.</p>
+
+				<!--arquimedes (optativo)-->
+				<p>La unidad didáctica fue creada con <a href="http://arquimedes.matem.unam.mx/Descartes5/creditos/conCCL.html" target="_blank">Arquímedes</a>, una herramienta de código abierto.</p>
+
+				<!-- Descartes -->
+				<p>La unidad didáctica contiene escenas elaboradas con Descartes, una herramienta de código abierto.</p>
+
+
+          	<p style='text-align:center'> LITE - UnADM 2014</p>
+          </div>
+      </div>
+    </div> 
+   <!------ TERMINA LA INFO SOBRE LAS LICENCIAS Y LOS CRÉDITOS. ---------->
+  
+  
+  </div>
+  
+  
+</article>
+
+
+</body>
+
+</html>

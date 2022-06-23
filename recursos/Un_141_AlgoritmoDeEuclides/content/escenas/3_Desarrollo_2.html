@@ -1,0 +1,192 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<title>Desarrollo 2</title>	
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<link href="../css/DescHTML5.css" rel="stylesheet" type="text/css" media="screen" />
+	
+  <link href="../css/html5.css" rel="stylesheet" type="text/css" media="screen" />	
+  <script type="text/javascript" src='../javascript/inject_functions_scorms_descartes.js'></script>
+	<script type='text/javascript' src='../lib/descartes-min.js'></script>
+</head>
+<body BGCOLOR="c0c0c0" leftmargin="0" topmargin="0">
+<ajs name="Descartes" width=970 height=550 code="Descartes">
+   <param name="tamaño" value="970x550">
+   <param name="image_loader" value="">
+   <param name="expand" value="">
+   <param name="decimal_symbol" value=".">
+   <param name="antialias" value="sí">
+   <param name="deshacer" value="no">
+   <param name="nombre" value="Descartes">
+   <param name="Versión" value="5.4, 2016-05-18">
+   <param name="Idioma" value="español">
+   <param name="Botones" value="créditos=no config=no inicio=no limpiar=no">
+   <param name="E_01" value="tipo='R2' id='E1' fijo='sí' escala='1' O.x='-50%' O.y='-50%' imagen='imgs/tpl/fondo_04.jpg' despl_imagen='arr-izq' fondo='c0d0d8' red='no' red10='no' ejes='no' texto='no'">
+   <param name="E_02" value="tipo='R2' id='EspG' x='EspG.x' y='EspG.y' ancho='425' alto='400' dibujar-si='EspG.visible' fijo='sí' despl_imagen='mosaico' fondo='fa00ffff' red='no' red10='no' ejes='no' texto='no'">
+   <param name="E_03" value="tipo='R2' id='EspUp' x='EspUp.x' y='EspUp.y' ancho='375' alto='190' dibujar-si='EspUp.visible' fijo='sí' escala='1' O.x='-50%' O.y='-50%' despl_imagen='mosaico' fondo='ffffffff' red='no' red10='no' ejes='no' texto='no'">
+   <param name="E_04" value="tipo='R2' id='EspDw' x='EspDw.x' y='EspDw.y' ancho='375' alto='190' dibujar-si='EspDw.visible' fijo='sí' despl_imagen='mosaico' fondo='ffffffff' red='no' red10='no' ejes='no' texto='no'">
+   <param name="E_05" value="tipo='R2' id='MASK' dibujar-si='INFO.visible | TEO.visible' fijo='sí' imagen='imgs/tpl/backwindow.png' despl_imagen='mosaico' fondo='95000000' red='no' red10='no' ejes='no' texto='no'">
+   <param name="E_06" value="tipo='R2' id='INFO' x='INFO.x' y='INFO.y' ancho='700' alto='400' dibujar-si='INFO.visible' fijo='sí' imagen='imgs/tpl/retro_490x470.png' despl_imagen='mosaico' red='no' red10='no' ejes='no' texto='no'">
+   <param name="E_07" value="tipo='R2' id='TEO' x='TEO.x' y='TEO.y' ancho='700' alto='400' dibujar-si='TEO.visible' fijo='sí' imagen='imgs/tpl/retro_490x470.png' despl_imagen='mosaico' red='no' red10='no' ejes='no' texto='no'">
+   <param name="C_01" value="id='cerrarInfo' tipo='numérico' interfaz='botón' región='interior' espacio='INFO' expresión='(cerrarInfo.x,cerrarInfo.y,cerrarInfo.w,cerrarInfo.h)' fijo='sí' visible='sí' imagen='_STYLE_|class=btnUNADM icon cerrar|shadowTextColor=rgba(0,0,0,0.2)|shadowTextOffsetY=2|shadowTextBlur=0|textBorder=0 |' acción='calcular' parámetro='INFO.visible=0' dibujar-si='cerrarInfo.visible'">
+   <param name="C_02" value="id='cerrarTeo' tipo='numérico' interfaz='botón' región='interior' espacio='TEO' expresión='(cerrarTeo.x,cerrarTeo.y,cerrarTeo.w,cerrarTeo.h)' fijo='sí' visible='sí' imagen='_STYLE_|class=btnUNADM icon cerrar|shadowTextColor=rgba(0,0,0,0.2)|shadowTextOffsetY=2|shadowTextBlur=0|textBorder=0 |' acción='calcular' parámetro='TEO.visible=0' dibujar-si='cerrarTeo.visible' pos_mensajes='centro'">
+   <param name="C_03" value="id='btnTeo' tipo='numérico' interfaz='botón' región='interior' espacio='EspG' nombre='[btnTeo.txt]' expresión='(20,360,btnTeo.w,btnTeo.h)' fijo='sí' visible='sí' color='blanco' color-int='ff000000' negrita='sí' fuente puntos='16' imagen='_STYLE_|class=btnUNADM |shadowTextColor=rgba(0,0,0,0.2)|shadowTextOffsetY=2|shadowTextBlur=0|textBorder=0 |' acción='calcular' parámetro='TEO.visible=1' pos_mensajes='centro'">
+   <param name="C_04" value="id='btnAceptar' tipo='numérico' interfaz='botón' región='interior' espacio='EspG' nombre='[btnAceptar.txt]' expresión='(155,360,btnTeo.w,btnTeo.h)' fijo='sí' visible='sí' color='blanco' color-int='ff000000' negrita='sí' fuente puntos='16' imagen='_STYLE_|class=btnUNADM |shadowTextColor=rgba(0,0,0,0.2)|shadowTextOffsetY=2|shadowTextBlur=0|textBorder=0 |' acción='calcular' parámetro='INFO.visible=1' pos_mensajes='centro'">
+   <param name="C_05" value="id='btnLimpiar' tipo='numérico' interfaz='botón' región='interior' espacio='EspG' nombre='Limpiar' expresión='(290,360,btnTeo.w,btnTeo.h)' fijo='sí' visible='sí' color='blanco' color-int='ff000000' negrita='sí' fuente puntos='16' imagen='_STYLE_|class=btnUNADM |shadowTextColor=rgba(0,0,0,0.2)|shadowTextOffsetY=2|shadowTextBlur=0|textBorder=0 |' acción='calcular' parámetro='aa_trdwn=1\nbtr=&squot;&squot;\ndtr=&squot;&squot;\netr=&squot;&squot;\nftr=&squot;&squot;\ngtr=&squot;&squot;\nhtr=&squot;&squot;' pos_mensajes='centro'">
+   <param name="C_06" value="id='ctr' tipo='numérico' interfaz='campo de texto' región='interior' espacio='EspG' expresión='(ctrF.x-146,ctrF.y+165-50,ctrF.w-240,ctrF.h-10)' valor='1' incr='0' min='1' max='999' decimales='0' fijo='sí' visible='sí' acción='calcular' activo-si='btr=&squot;&squot;' pos_mensajes='centro'">
+   <param name="C_07" value="id='atr' tipo='numérico' interfaz='campo de texto' región='interior' espacio='EspG' expresión='(ctrF.x-100,ctrF.y+165-50,ctrF.w-240,ctrF.h-10)' valor='1' incr='0' min='1' max='999' decimales='0' fijo='sí' visible='sí' acción='calcular' activo-si='btr=&squot;&squot;' pos_mensajes='centro'">
+   <param name="C_08" value="id='btr' tipo='numérico' interfaz='campo de texto' región='interior' espacio='EspG' expresión='(ctrF.x-52,ctrF.y+165-50,ctrF.w-240,ctrF.h-10)' valor='&squot;&squot;' incr='0' min='0' decimales='0' fijo='sí' visible='sí' acción='calcular' activo-si='(ctr>0)&(atr>0)&(ctr>atr)' pos_mensajes='centro'">
+   <param name="C_09" value="id='dtr' tipo='numérico' interfaz='campo de texto' región='interior' espacio='EspG' expresión='(ctrF.x-3,ctrF.y+165-50,ctrF.w-240,ctrF.h-10)' valor='&squot;&squot;' incr='0' min='0' decimales='0' fijo='sí' visible='sí' acción='calcular' activo-si='(btr>0)&(atr%btr#0)' pos_mensajes='centro'">
+   <param name="C_10" value="id='etr' tipo='numérico' interfaz='campo de texto' región='interior' espacio='EspG' expresión='(ctrF.x+42,ctrF.y+165-50,ctrF.w-240,ctrF.h-10)' valor='&squot;&squot;' incr='0' min='0' decimales='0' fijo='sí' visible='sí' acción='calcular' activo-si='(dtr>0)&(btr%dtr#0)' pos_mensajes='centro'">
+   <param name="C_11" value="id='ftr' tipo='numérico' interfaz='campo de texto' región='interior' espacio='EspG' expresión='(ctrF.x+92,ctrF.y+165-50,ctrF.w-240,ctrF.h-10)' valor='&squot;&squot;' incr='0' min='0' decimales='0' fijo='sí' visible='sí' acción='calcular' activo-si='(etr>0)&(dtr%etr#0)' pos_mensajes='centro'">
+   <param name="C_12" value="id='gtr' tipo='numérico' interfaz='campo de texto' región='interior' espacio='EspG' expresión='(ctrF.x+142,ctrF.y+165-50,ctrF.w-240,ctrF.h-10)' valor='&squot;&squot;' incr='0' min='0' decimales='0' fijo='sí' visible='sí' acción='calcular' activo-si='(ftr>0)&(etr%ftr#0)' pos_mensajes='centro'">
+   <param name="C_13" value="id='htr' tipo='numérico' interfaz='campo de texto' región='interior' espacio='EspG' expresión='(ctrF.x+190,ctrF.y+165-50,ctrF.w-240,ctrF.h-10)' valor='&squot;&squot;' incr='0' min='0' decimales='0' fijo='sí' visible='sí' acción='calcular' activo-si='(gtr>0)&(ftr%gtr#0)' pos_mensajes='centro'">
+   <param name="C_14" value="id='aa_trdwn' tipo='numérico' interfaz='campo de texto' región='interior' espacio='EspDw' expresión='(67,135,40,40)' valor='&squot;&squot;' incr='0' min='1' decimales='0' fijo='sí' visible='sí' acción='calcular' activo-si='(atr<ctr)&(atr>0)' pos_mensajes='centro'">
+   <param name="C_15" value="id='atrdwn' tipo='numérico' interfaz='campo de texto' región='interior' espacio='EspDw' expresión='(btnIniciar.x+65+103,btnIniciar.y+86+28,ctrF.w-240,ctrF.h-10)' valor='aleatorios()' incr='0' min='1' decimales='0' fijo='sí' visible='sí' acción='calcular' dibujar-si='1' activo-si='0' pos_mensajes='centro'">
+   <param name="C_16" value="id='btrdwn' tipo='numérico' interfaz='campo de texto' región='interior' espacio='EspDw' expresión='(btnIniciar.x+65+103,btnIniciar.y+91+39+25,ctrF.w-240,ctrF.h-10)' valor='aleatorios2()' incr='0' min='1' decimales='0' fijo='sí' visible='sí' acción='calcular' dibujar-si='1' activo-si='0' pos_mensajes='centro'">
+   <param name="C_17" value="id='btnIniciar' tipo='numérico' interfaz='botón' región='interior' espacio='EspUp' nombre='[btnIniciar.txt]' expresión='(btnIniciar.x+123,btnIniciar.y+140,btnIniciar.w,btnIniciar.h)' valor='1' fijo='sí' visible='sí' color='blanco' color-int='blanco' negrita='sí' fuente puntos='16' imagen='_STYLE_|class=btnUNADM |shadowTextColor=rgba(0,0,0,0.2)|shadowTextOffsetY=2|shadowTextBlur=0|textBorder=0 |' acción='calcular' parámetro='aleatorios()\nbtr=&squot;&squot;\nctr=&squot;&squot;\ndtr=&squot;&squot;\netr=&squot;&squot;\nftr=&squot;&squot;\ngtr=&squot;&squot;\naa_trdwn=&squot;&squot;' pos_mensajes='centro'">
+   <param name="C_18" value="id='H' tipo='numérico' región='interior' espacio='E1' nombre='H' incr='1' fijo='sí' visible='sí' dibujar-si='0' pos_mensajes='centro'">
+   <param name="C_19" value="id='V' tipo='numérico' región='interior' espacio='E1' nombre='v' incr='1' fijo='sí' visible='sí' dibujar-si='0' pos_mensajes='centro'">
+   <param name="A_01" value="id='initEsp()' algoritmo='sí' algoritmo='sí' hacer='INFO.x=(E1._w-INFO._w)/2;INFO.y=(E1._h-INFO._h)/2+20;INFO.visible=1;;TEO.x=(E1._w-TEO._w)/2;TEO.y=(E1._h-TEO._h)/2+20;TEO.visible=0;;EspG.x=55;EspG.y=106;EspG.visible=1;;EspUp.x=540;EspUp.y=105;EspUp.visible=1;;EspDw.x=540;EspDw.y=316;EspDw.visible=1'">
+   <param name="A_02" value="id='initBtns()' algoritmo='sí' algoritmo='sí' hacer='cerrarInfo.w=30;cerrarInfo.h=cerrarInfo.w;cerrarInfo.x=INFO._w-cerrarInfo.w-1;cerrarInfo.y=1;cerrarInfo.img=&squot;imgs/tpl/cerrar.png&squot;;cerrarInfo.visible=1;;;cerrarTeo.w=30;cerrarTeo.h=cerrarInfo.w;cerrarTeo.x=INFO._w-cerrarInfo.w-1;cerrarTeo.y=1;cerrarTeo.img=&squot;imgs/tpl/cerrar.png&squot;;cerrarTeo.visible=1;;btnAceptar.w=120;btnAceptar.h=30;btnAceptar.x=(E1._w-btnAceptar.w-5);btnAceptar.y=(E1._h-btnAceptar.h-5);btnAceptar.img=&squot;imgs/tpl/btn120.png&squot;;btnAceptar.txt=&squot;Instrucciones&squot;;;btnTeo.w=120;btnTeo.h=30;btnTeo.x=(E1._w-btnTeo.w-5);btnTeo.y=(E1._h-btnTeo.h-5);btnTeo.img=&squot;imgs/tpl/btn120.png&squot;;btnTeo.txt=&squot;Algoritmo&squot;;;;;;btnIniciar.w=120;btnIniciar.h=30;btnIniciar.img=&squot;imgs/tpl/btn120.png&squot;;btnIniciar.txt=&squot;Generar&squot;;;btnParar.w=120;btnParar.h=30;btnParar.img=&squot;imgs/tpl/btn120.png&squot;;btnParar.txt=&squot;Parar&squot;;;btnCua.w=30;btnCua.h=30;btnCua.img=&squot;imgs/tpl/btn040.png&squot;;;ctrF.w=275;ctrF.h=40;ctrF.txt.w=70;ctrF.txt.h=18 ;;ctrF.txt.x=10;ctrF.txt.y=25;ctrF.x=175;ctrF.y=65;;;ctr_c.w=120;ctr_c.h=40;ctr_c.x=(EspDw._w-ctr_c.w)/2;ctr_c.y=(EspDw._h-ctr_c.h-15);;ctr_a.w=120;ctr_a.h=40;ctr_a.x=(EspDw._w-(ctr_a.w*2+5*1))/2;ctr_a.y=ctr_c.y-ctr_c.h-20;;ctr_b.x=ctr_a.x+ctr_a.w+5;ctr_b.y=ctr_a.y;ctr_b.w=ctr_a.w;ctr_b.h=ctr_a.h;;;;;;;;;ô=|*****************************************************|;ô=|*Para que siga al scroll hay que agregar la mitad de*|;ô=|*altura a la posicion y sumarle el Oy del espacio   *|;ô=|*                                                   *|;ô=|* El espcio de tener :                              *|;ô=|*   escala = 1                                      *|;ô=|*   Ox = -50% Oy = -50%                             *|;ô=|*****************************************************|;EspUp.Oy.w=27;EspUp.Oy.h=50;EspUp.Oy.x=EspUp._w-EspUp.Oy.w-5;EspUp.Oy.y=EspUp._h-EspUp.Oy.h-5;;'">
+   <param name="A_03" value="id='initEscena()' algoritmo='sí' algoritmo='sí' hacer='initBtns();initEsp();aleatorios();;ô=|***************************************|;ô=|*  Si el botón de para cerrar la info *|;ô=|*  esta VISIBLE                       *|;ô=|***************************************|;;ô=|***************************************|;ô=|*  Calculamos la posicion del titulo  *|;ô=|***************************************|;titulo=&squot;Aplicación del algoritmo&squot;;titulo.w=_AnchoDeCadena_(titulo,&squot;SansSerif&squot;,&squot;PLAIN&squot;,&squot;30&squot;);titulo.x=(E1._w-titulo.w)/2;titulo.y=20;;;;'">
+   <param name="A_04" value="id='getSCORMState()' algoritmo='sí' expresión='res' algoritmo='sí' Local='res,c' inicio='c=&squot;@&squot;;res=&squot;&squot;' hacer='res=res+&squot;D02.nResueltos:&squot;+nResueltos+c;res=res+&squot;D02.yaTeo:&squot;+yaTeo+c;'">
+   <param name="A_05" value="id='initStateScorm()' algoritmo='sí' expresión='x' algoritmo='sí' hacer='nResueltos=getSCORMStateVar(&squot;D02.nResueltos&squot;);yaTeo=getSCORMStateVar(&squot;D02.yaTeo&squot;)'">
+   <param name="A_06" value="id='q' vector='sí' evaluar='una-sola-vez' tamaño='30'">
+   <param name="A_07" value="id='r' expresión='10*rnd'">
+   <param name="A_08" value="id='aleatorios()' algoritmo='sí' expresión='xrandom' algoritmo='sí' hacer='var1=1+ent(rnd*9);var2=ent(rnd*10);var3=ent(rnd*10);var4=1+ent(rnd*9);var5=ent(rnd*10);var6=ent(rnd*10);xrandom=100*var1+10*var2+var3;yrandom=100*var4+10*var5+var6;atrdwn=xrandom;btrdwn=yrandom;ctr=(atrdwn>btrdwn)?atrdwn:btrdwn;atr=(atrdwn>btrdwn)?btrdwn:atrdwn'">
+   <param name="A_09" value="id='aleatorios2()' algoritmo='sí' expresión='yrandom' algoritmo='sí' hacer='var4=1+ent(rnd*9);var5=ent(rnd*10);var6=ent(rnd*10);yrandom=100*var4+10*var5+var6;btrdwn=yrandom;'">
+   <param name="A_10" value="id='calMCD()' algoritmo='sí' algoritmo='sí' inicio='r[0]=ctr;r[1]=atr;ind=2' hacer='r[ind]=(r[ind-2])%(r[ind-1]);ind=ind+1;' mientras='r[ind-1]>0'">
+   <param name="A_11" value="id='regObjetivos()' algoritmo='sí' expresión='0' algoritmo='sí' Local='mcdA,mcdB,mcdD,mcdE,mcdF,mcdG,mcdH,encontroMCD,porcentage' hacer='isNew=(isNew)|(ANT.ctr!=ctr)|(ANT.atr!=atr);;mcdA=((atr!=&squot;&squot;)&((ctr%atr)==0));mcdB=((btr!=&squot;&squot;)&((atr%btr)==0));mcdD=((dtr!=&squot;&squot;)&((btr%dtr)==0));mcdE=((etr!=&squot;&squot;)&((dtr%etr)==0));mcdF=((ftr!=&squot;&squot;)&((etr%ftr)==0));mcdG=((gtr!=&squot;&squot;)&((ftr%gtr)==0));mcdH=((htr!=&squot;&squot;)&((gtr%htr)==0));encontroMCD=(mcdA|mcdB|mcdD|mcdE|mcdF|mcdG) ;;yaTeo=yaTeo|showTeo;yaMosResp=yaMosResp|mosResp;yaMCD=yaMCD|encontroMCD;nResueltos=nResueltos+(encontroMCD&isNew);isNew=(encontroMCD)?0:isNew;;;;porcentage=(nResueltos>0)?33:0;porcentage=(nResueltos>1)?66:porcentage;porcentage=(nResueltos>2)?100:porcentage;porcentage=(yaTeo&yaMosResp)*porcentage;;_Print_(&squot;Como vamos : &squot;+yaTeo+&squot;, &squot;+yaMosResp+&squot;, &squot;+yaMCD+&squot;, &squot;+nResueltos);_Print_(&squot;Encontro MCD : &squot;+encontroMCD+(&squot;      &squot;+mcdA+mcdB+mcdD+mcdE+mcdF+mcdG));_Print_(&squot;PORCENTAGE : &squot;+porcentage);_Print_(&squot;**************** isNew:&squot;+isNew);_Print_(&squot;&squot;);;tt=(ANT.porcentage<porcentage);tt=(tt)?setSCORMPercentage(porcentage):0;;;ANT.ctr=ctr;ANT.atr=atr;ANT.porcentage=porcentage'">
+   <param name="A_12" value="id='INICIO' algoritmo='sí' evaluar='una-sola-vez' hacer='initStateScorm();initEscena();genera1();atrdwn=xrandom;genera2();btrdwn=yrandom;'">
+   <param name="A_13" value="id='CALCULOS' algoritmo='sí' evaluar='siempre' hacer='ctr=(atrdwn>btrdwn)?atrdwn:btrdwn;atr=(atrdwn>btrdwn)?btrdwn:atrdwn;calMCD();regObjetivos()'">
+   <param name="G_01" value="espacio='EspUp' tipo='texto' fondo='sí' dibujar-si='0' expresión='[_E1_____,20]' fijo='sí'">
+   <param name="G_02" value="espacio='E1' tipo='texto' fondo='sí' expresión='[titulo.x,titulo.y]' texto='[titulo]' fuente='SansSerif,PLAIN,30' fijo='sí'">
+   <param name="G_03" value="espacio='E1' tipo='texto' fondo='sí' expresión='[_EspDW__,20]' fijo='sí'">
+   <param name="G_04" value="espacio='E1' tipo='texto' fondo='sí' expresión='[_EspG__,20]' fijo='sí'">
+   <param name="G_05" value="espacio='INFO' tipo='texto' fondo='sí' color='blanco' expresión='[10,8]' texto='Instrucciones' fuente='SansSerif,PLAIN,22' fijo='sí' ancho='2' info='Título de la info'">
+   <param name="G_06" value="espacio='INFO' tipo='texto' expresión='[20,90]' texto='{\rtf1\uc0{\fonttbl\f0\fcharset0 Times New Roman;\f1\fcharset0 Arial;\f2\fcharset0 Courier New;}\f1\fs40 Con ayuda del algoritmo de Euclides puedes simplificar la fracci\u243 n que \par escribes en los campos de texto o que generas al azar presionando el \par bot\u243 n Generar. Usa la Pizarra Euclidia para encontrar el MCD. \par \par En el campo de texto &quote;\u191 Divisor com\u250 n?&quote; puedes introducir cualquier \par n\u250 mero, pero si el  n\u250 mero introducido no es un divisor com\u250 n, los \par n\u250 meros en la fracci\u243 n no ser\u225 n enteros, la  fracci\u243 n s\u243 lo se simplifica \par con un divisor com\u250 n y la m\u225 xima simplificaci\u243 n occurre con el MCD. \par Observa que si el MCD es 1 los n\u250 meros que componen la fracci\u243 n son \par primos relativos, es decir que el \u250 nico divisor que tienen en com\u250 n es el 1.\f2\fs30}' fuente='SansSerif,PLAIN,20' fijo='sí' info='[15,80]'">
+   <param name="G_07" value="espacio='INFO' tipo='texto' fondo='sí' dibujar-si='0' expresión='[_INFO_____,20]' fijo='sí'">
+   <param name="G_08" value="espacio='TEO' tipo='texto' fondo='sí' color='blanco' expresión='[10,8]' texto='Algoritmo' fuente='SansSerif,PLAIN,22' fijo='sí' ancho='2' info='Título de la info'">
+   <param name="G_09" value="espacio='TEO' tipo='texto' fondo='sí' expresión='[30,60]' texto='{\rtf1\uc0{\fonttbl\f0\fcharset0 Times New Roman;\f1\fcharset0 Arial;\f2\fcharset0 Arial;\f3\fcharset0 Arial;\f4\fcharset0 Times New Roman;\f5\fcharset0 Times New Roman;\f6\fcharset0 Times New Roman;}\f1\fs40 Puedes calcular el MCD con un un algoritmo computacional \fs42 usando el\par siguiente pseudoc\u243 digo:\par \par Entrada: Valores\i{\*\mjaformula a}\fs40\i0 y\fs42\i{\*\mjaformula b}\fs40\i0     Salida: Un m\u225 ximo com\u250 n divisor de\fs42\i{\*\mjaformula a}\fs40\i0 y\fs42\i{\*\mjaformula b}\fs40\i0\par  \fs42    \f4\fs46\i{\*\mjaformula r{\subix 0}}\fs60\u8592 \f2\fs42\i0  a \par     \f4\fs46\i{\*\mjaformula r{\subix 1}}\f2\fs42\i0  \f5\fs60\i\u8592 \f2\fs42\i0  b\fs40\par     Mientras \f6\fs44\i{\*\mjaformula r{\subix i}\u8772 0}\f1\fs40\i0  hacer\par         \f4\fs46\i{\*\mjaformula r{\subix i+1}}\f2\fs42\i0  \f5\fs60\i\u8592 \f2\fs42\i0  \f4\fs46\i{\*\mjaformula r{\subix i-1}}\f2\fs42\i0  mod \f4\fs46\i{\*\mjaformula r{\subix i}}\f1\fs40\i0\par        \fs42  i \f5\fs60\i\u8592 \f2\fs42\i0  i+1\fs40\par     El resultado es: \f6\fs44\i{\*\mjaformula r{\subix i-1}}\fs30\i0}' fuente='SansSerif,PLAIN,20' decimales='0' fijo='sí' ancho='10' info='Calcula el MCD con un un algoritmo computacional con el...'">
+   <param name="G_10" value="espacio='EspDw' tipo='texto' expresión='[5,5]' texto='La fracción sólo se simplifica en números en-\nteros con un divisor común y la máxima sim-\nplificación ocurre con el MCD. Compruébalo:' fuente='SansSerif,PLAIN,18' fijo='sí' info='En el campo de texto puedes introducir cualquier...'">
+   <param name="G_11" value="espacio='EspDw' tipo='texto' expresión='[5,105]' texto='¿Divisor común?' fuente='SansSerif,BOLD,18' fijo='sí' info='Divisor común'">
+   <param name="G_12" value="espacio='EspDw' tipo='imagen' dibujar-si='((atrdwn/aa_trdwn)*100)-((ent(atrdwn/aa_trdwn))*100)>0' coord_abs='sí' expresión='(320,120)' archivo='imgs/mal.png'">
+   <param name="G_13" value="espacio='EspDw' tipo='imagen' dibujar-si='((atrdwn/aa_trdwn)*100)-((ent(atrdwn/aa_trdwn))*100)=0' coord_abs='sí' expresión='(320,120)' archivo='imgs/bien.png'">
+   <param name="G_14" value="espacio='EspDw' tipo='imagen' dibujar-si='((btrdwn/aa_trdwn)*100)-((ent(btrdwn/aa_trdwn))*100)>0' coord_abs='sí' expresión='(320,160)' archivo='imgs/mal.png'">
+   <param name="G_15" value="espacio='EspDw' tipo='imagen' dibujar-si='((btrdwn/aa_trdwn)*100)-((ent(btrdwn/aa_trdwn))*100)=0' coord_abs='sí' expresión='(320,160)' archivo='imgs/bien.png'">
+   <param name="G_16" value="espacio='EspDw' tipo='texto' dibujar-si='(atrdwn>0)&(aa_trdwn!=&squot;&squot;)' expresión='(238,122)' texto='{\rtf1\uc0{\fonttbl\f0\fcharset0 Times New Roman;\f1\fcharset0 Arial;\f2\fcharset0 Courier New;}\f1\fs38\i{\*\mjaformula{\expr atrdwn/aa_trdwn\decimals 2\fixed1}}\f2\fs30\i0}' fuente='SansSerif,ITALIC,19' fijo='sí' info='atrdwn/aa_trdwn'">
+   <param name="G_17" value="espacio='EspDw' tipo='texto' dibujar-si='(btrdwn>0)&(aa_trdwn!=&squot;&squot;)' expresión='(238,155)' texto='{\rtf1\uc0{\fonttbl\f0\fcharset0 Times New Roman;\f1\fcharset0 Arial;\f2\fcharset0 Courier New;}\f1\fs38\i{\*\mjaformula{\expr btrdwn/aa_trdwn\decimals 2\fixed1}}\f2\fs30\i0}' fuente='SansSerif,ITALIC,19' fijo='sí' info='btrdwn/aa_trdwn'">
+   <param name="G_18" value="espacio='EspDw' tipo='texto' fondo='sí' expresión='(214,134)' texto='{\rtf1\uc0{\fonttbl\f0\fcharset0 Times New Roman;\f1\fcharset0 Arial;}\f1\fs50 =}' fuente='SansSerif,PLAIN,25' fijo='sí' info='Signo igual'">
+   <param name="G_19" value="espacio='EspDw' tipo='punto' color='negro' dibujar-si='0*(atrdwn>0)' expresión='(1.5,-0.85)' texto='{\rtf1\uc0{\fonttbl\f0\fcharset0 Times New Roman;\f1\fcharset0 Times New Roman;\f2\fcharset0 Courier New;}\f1\fs40\i{\*\mjaformula{\expr atrdwn/aa_trdwn\decimals 2\fixed1}}\f2\fs30\i0}' fuente='Serif,ITALIC,20' fijo='sí' tamaño='0'">
+   <param name="G_20" value="espacio='EspDw' tipo='punto' color='negro' dibujar-si='0*(btrdwn>0)' expresión='(1.5,-1.75)' texto='{\rtf1\uc0{\fonttbl\f0\fcharset0 Times New Roman;\f1\fcharset0 Times New Roman;\f2\fcharset0 Courier New;}\f1\fs40\i{\*\mjaformula{\expr btrdwn/aa_trdwn\decimals 2\fixed1}}\f2\fs30\i0}' fuente='Serif,ITALIC,20' fijo='sí' tamaño='0'">
+   <param name="G_21" value="espacio='EspDw' tipo='segmento' color='00429a' expresión='(-.5,-1.15)(.4,-1.15)' fijo='sí' tamaño='1' ancho='2' info='linea de fracción izq.'">
+   <param name="G_22" value="espacio='EspDw' tipo='segmento' color='00429a' expresión='(2.0-0.9,-1.15)(1.3+1.3,-1.15)' fijo='sí' tamaño='1' ancho='2' info='linea de fracción der.'">
+   <param name="G_23" value="espacio='EspDw' tipo='texto' fondo='sí' dibujar-si='0' expresión='[_EspUp_____,20]' fijo='sí'">
+   <param name="G_24" value="espacio='EspUp' tipo='texto' expresión='[5,5]' texto='{\rtf1\uc0{\fonttbl\f0\fcharset0 Times New Roman;\f1\fcharset0 Arial;\f2\fcharset0 Courier New;}\f1\fs36 Reduce a su forma m\u225 s simple la siguiente \par fracci\u243 n con ayuda del Algoritmo de Euclides\f2\fs30}' fuente='SansSerif,PLAIN,18' fijo='sí' info='Reduce a su forma más simple la...'">
+   <param name="G_25" value="espacio='EspUp' tipo='texto' expresión='[155,105-24+V]' texto='{\rtf1\uc0{\fonttbl\f0\fcharset0 Times New Roman;\f1\fcharset0 Arial;\f2\fcharset0 Courier New;}{\colortbl\red0\green0\blue255;\red255\green255\blue255;}\cf0\cb1\f1\fs38{\*\mjaformula{\expr xrandom\decimals 0\fixed1}}\f2\fs30}' fuente='SansSerif,PLAIN,19' fijo='sí' info='N1=Var1*100+Var2*10+Var3'">
+   <param name="G_26" value="espacio='EspUp' tipo='texto' expresión='[155,130-24+V]' texto='{\rtf1\uc0{\fonttbl\f0\fcharset0 Times New Roman;\f1\fcharset0 Arial;\f2\fcharset0 Courier New;}{\colortbl\red0\green0\blue255;\red255\green255\blue255;}\cf0\cb1\f1\fs38{\*\mjaformula{\expr yrandom\decimals 0\fixed1}}\f2\fs30}' fuente='SansSerif,PLAIN,19' fijo='sí' info='N2=Var4*100+Var5*10+Var6'">
+   <param name="G_27" value="espacio='EspUp' tipo='segmento' color='00429a' expresión='(130+27,-127+21+H)(210-2,-127+21+H)' fijo='sí' tamaño='1' ancho='1.5' info='línea de la fracción'">
+   <param name="G_28" value="espacio='EspG' tipo='texto' fondo='sí' dibujar-si='0' expresión='[_EspTEO_____,20]' fijo='sí'">
+   <param name="G_29" value="espacio='EspG' tipo='texto' color='00429a' expresión='[130,40]' texto='{\rtf1\uc0{\fonttbl\f0\fcharset0 Times New Roman;\f1\fcharset0 Arial;\f2\fcharset0 Times New Roman;}{\colortbl\red0\green66\blue154;\red32\green48\blue58;}\f1\fs40\cf0 Pizarra eucl\u237 dea\cf1\f2\fs34\i}' fuente='SansSerif,PLAIN,20' fijo='sí' info='Pizarra euclidea'">
+   <param name="G_30" value="espacio='EspG' tipo='texto' dibujar-si='(atr<ctr)&(atr>0)' expresión='[70,140]' texto='{\rtf1\uc0{\fonttbl\f0\fcharset0 Times New Roman;\f1\fcharset0 Arial;\f2\fcharset0 Times New Roman;}{\colortbl\red0\green0\blue0;\red32\green48\blue58;}\f1\fs34\i\cf0{\*\mjaformula{\expr ent(ctr/atr)\decimals 0\fixed1}} \cf1\f2\fs34}' fuente='SansSerif,ITALIC,17' decimales='0' fijo='sí' info='Resultado ent(ctr/atr)'">
+   <param name="G_31" value="espacio='EspG' tipo='texto' dibujar-si='btr>0' expresión='[118,140]' texto='{\rtf1\uc0{\fonttbl\f0\fcharset0 Times New Roman;\f1\fcharset0 Arial;\f2\fcharset0 Times New Roman;}{\colortbl\red0\green0\blue0;\red32\green48\blue58;}\f1\fs34\i\cf0{\*\mjaformula{\expr ent(atr/btr)\decimals 0\fixed1}} \cf1\f2\fs34}' fuente='SansSerif,ITALIC,17' decimales='0' fijo='sí' info='Resultado ent(atr/btr)'">
+   <param name="G_32" value="espacio='EspG' tipo='texto' dibujar-si='dtr>0' expresión='[165,140]' texto='{\rtf1\uc0{\fonttbl\f0\fcharset0 Times New Roman;\f1\fcharset0 Arial;\f2\fcharset0 Times New Roman;}{\colortbl\red0\green0\blue0;\red32\green48\blue58;}\f1\fs34\i\cf0{\*\mjaformula{\expr ent(btr/dtr)\decimals 0\fixed1}} \cf1\f2\fs34}' fuente='SansSerif,ITALIC,17' decimales='0' fijo='sí' info='Resultado ent(btr/dtr)'">
+   <param name="G_33" value="espacio='EspG' tipo='texto' dibujar-si='etr>0' expresión='[213,140]' texto='{\rtf1\uc0{\fonttbl\f0\fcharset0 Times New Roman;\f1\fcharset0 Arial;\f2\fcharset0 Times New Roman;}{\colortbl\red0\green0\blue0;\red32\green48\blue58;}\f1\fs34\i\cf0{\*\mjaformula{\expr ent(dtr/etr)\decimals 0\fixed1}} \cf1\f2\fs34}' fuente='SansSerif,ITALIC,17' decimales='0' fijo='sí' info='Resultado ent(dtr/etr)'">
+   <param name="G_34" value="espacio='EspG' tipo='texto' dibujar-si='ftr>0' expresión='[260,140]' texto='{\rtf1\uc0{\fonttbl\f0\fcharset0 Times New Roman;\f1\fcharset0 Arial;\f2\fcharset0 Times New Roman;}{\colortbl\red0\green0\blue0;\red32\green48\blue58;}\f1\fs34\i\cf0{\*\mjaformula{\expr ent(etr/ftr)\decimals 0\fixed1}} \cf1\f2\fs34}' fuente='SansSerif,ITALIC,17' decimales='0' fijo='sí' info='Resultado ent(etr/ftr)'">
+   <param name="G_35" value="espacio='EspG' tipo='texto' dibujar-si='gtr>0' expresión='[310,140]' texto='{\rtf1\uc0{\fonttbl\f0\fcharset0 Times New Roman;\f1\fcharset0 Arial;\f2\fcharset0 Times New Roman;}{\colortbl\red0\green0\blue0;\red32\green48\blue58;}\f1\fs34\i\cf0{\*\mjaformula{\expr ent(ftr/gtr)\decimals 0\fixed1}} \cf1\f2\fs34}' fuente='SansSerif,ITALIC,17' decimales='0' fijo='sí' info='Resultado ent(ftr/gtr)'">
+   <param name="G_36" value="espacio='EspG' tipo='texto' dibujar-si='(htr>0)' expresión='[368,140]' texto='{\rtf1\uc0{\fonttbl\f0\fcharset0 Times New Roman;\f1\fcharset0 Arial;}{\colortbl\red32\green48\blue58;}\f1\fs34\i{\*\mjaformula{\expr ent(gtr/htr)\decimals 0\fixed1}} \cf0\f0\fs34}' fuente='SansSerif,ITALIC,17' decimales='0' fijo='sí' info='Resultado ent(gtr/htr)'">
+   <param name="G_37" value="espacio='EspG' tipo='segmento' color='00429a' expresión='(-3,-1.2)(-3,1.5)' fijo='sí' tamaño='0' ancho='3'">
+   <param name="G_38" value="espacio='EspG' tipo='segmento' color='00429a' expresión='(-2,-1.2)(-2,1.5)' fijo='sí' tamaño='0' ancho='3'">
+   <param name="G_39" value="espacio='EspG' tipo='segmento' color='00429a' expresión='(-1,-1.2)(-1,1.5)' fijo='sí' tamaño='0' ancho='3'">
+   <param name="G_40" value="espacio='EspG' tipo='segmento' color='00429a' expresión='(0,-1.2)(0,1.5)' fijo='sí' tamaño='0' ancho='3'">
+   <param name="G_41" value="espacio='EspG' tipo='segmento' color='00429a' expresión='(1,-1.2)(1,1.5)' fijo='sí' tamaño='0' ancho='3'">
+   <param name="G_42" value="espacio='EspG' tipo='segmento' color='00429a' expresión='(2,-1.2)(2,1.5)' fijo='sí' tamaño='0' ancho='3'">
+   <param name="G_43" value="espacio='EspG' tipo='segmento' color='00429a' expresión='(3,-1.2)(3,1.5)' fijo='sí' tamaño='0' ancho='3'">
+   <param name="G_44" value="espacio='EspG' tipo='segmento' color='00429a' expresión='(-4,-0.3)(3.8,-0.3)' fijo='sí' tamaño='0' ancho='3'">
+   <param name="G_45" value="espacio='EspG' tipo='segmento' color='00429a' expresión='(-4,0.6)(3.8,0.6)' fijo='sí' tamaño='0' ancho='3'">
+   <param name="G_46" value="espacio='EspG' tipo='segmento' color='00429a' expresión='(-4,1.5)(3.8,1.5)' fijo='sí' tamaño='0' ancho='3'">
+   <param name="G_47" value="espacio='EspG' tipo='segmento' color='00429a' expresión='(-4,-1.2)(3.8,-1.2)' fijo='sí' tamaño='0' ancho='3'">
+   <param name="G_48" value="espacio='EspG' tipo='texto' dibujar-si='(atr<ctr)&(atr>0)' expresión='[65,230]' texto='{\rtf1\uc0{\fonttbl\f0\fcharset0 Times New Roman;\f1\fcharset0 Arial;\f2\fcharset0 Times New Roman;}{\colortbl\red0\green0\blue0;\red32\green48\blue58;}\f1\fs34\i\cf0{\*\mjaformula{\expr ctr%atr\decimals 0\fixed1}} \cf1\f2\fs34}' fuente='SansSerif,ITALIC,17' decimales='0' fijo='sí' info='Resultado ctr%atr'">
+   <param name="G_49" value="espacio='EspG' tipo='texto' dibujar-si='btr>0' expresión='[110,230]' texto='{\rtf1\uc0{\fonttbl\f0\fcharset0 Times New Roman;\f1\fcharset0 Arial;\f2\fcharset0 Times New Roman;}{\colortbl\red0\green0\blue0;\red32\green48\blue58;}\f1\fs34\i\cf0{\*\mjaformula{\expr atr%btr\decimals 0\fixed1}} \cf1\f2\fs34}' fuente='SansSerif,ITALIC,17' decimales='0' fijo='sí' info='Resultado atr%btr'">
+   <param name="G_50" value="espacio='EspG' tipo='texto' dibujar-si='dtr>0' expresión='[160,230]' texto='{\rtf1\uc0{\fonttbl\f0\fcharset0 Times New Roman;\f1\fcharset0 Arial;\f2\fcharset0 Times New Roman;}{\colortbl\red0\green0\blue0;\red32\green48\blue58;}\f1\fs34\i\cf0{\*\mjaformula{\expr btr%dtr\decimals 0\fixed1}} \cf1\f2\fs34}' fuente='SansSerif,ITALIC,17' decimales='0' fijo='sí' info='Resultado btr%dtr'">
+   <param name="G_51" value="espacio='EspG' tipo='texto' dibujar-si='etr>0' expresión='[210,230]' texto='{\rtf1\uc0{\fonttbl\f0\fcharset0 Times New Roman;\f1\fcharset0 Arial;\f2\fcharset0 Times New Roman;}{\colortbl\red0\green0\blue0;\red32\green48\blue58;}\f1\fs34\i\cf0{\*\mjaformula{\expr dtr%etr\decimals 0\fixed1}} \cf1\f2\fs34}' fuente='SansSerif,ITALIC,17' decimales='0' fijo='sí' info='Resultado dtr%etr'">
+   <param name="G_52" value="espacio='EspG' tipo='texto' dibujar-si='ftr>0' expresión='[255,230]' texto='{\rtf1\uc0{\fonttbl\f0\fcharset0 Times New Roman;\f1\fcharset0 Arial;\f2\fcharset0 Times New Roman;}{\colortbl\red0\green0\blue0;\red32\green48\blue58;}\f1\fs34\i\cf0{\*\mjaformula{\expr etr%ftr\decimals 0\fixed1}} \cf1\f2\fs34}' fuente='SansSerif,ITALIC,17' decimales='0' fijo='sí' info='Resultado etr%ftr'">
+   <param name="G_53" value="espacio='EspG' tipo='texto' dibujar-si='gtr>0' expresión='[310,230]' texto='{\rtf1\uc0{\fonttbl\f0\fcharset0 Times New Roman;\f1\fcharset0 Arial;\f2\fcharset0 Times New Roman;}{\colortbl\red0\green0\blue0;\red32\green48\blue58;}\f1\fs34\i\cf0{\*\mjaformula{\expr ftr%gtr\decimals 0\fixed1}} \cf1\f2\fs34}' fuente='SansSerif,ITALIC,17' decimales='0' fijo='sí' info='Resultado ftr%gtr'">
+   <param name="G_54" value="espacio='EspG' tipo='texto' dibujar-si='(htr>0)' expresión='[358,230]' texto='{\rtf1\uc0{\fonttbl\f0\fcharset0 Times New Roman;\f1\fcharset0 Arial;\f2\fcharset0 Times New Roman;}{\colortbl\red0\green0\blue0;\red32\green48\blue58;}\f1\fs34\i\cf0{\*\mjaformula{\expr gtr%htr\decimals 0\fixed1}} \cf1\f2\fs34}' fuente='SansSerif,ITALIC,17' decimales='0' fijo='sí' info='Resultado gtr%htr'">
+   <param name="G_55" value="espacio='EspG' tipo='texto' expresión='[35,137]' texto='{\rtf1\uc0{\fonttbl\f0\fcharset0 Times New Roman;\f1\fcharset0 Arial;\f2\fcharset0 Arial;}\f1\fs38 q\fs30 i\f0\fs30}' fuente='SansSerif,PLAIN,19' fijo='sí' info='qi'">
+   <param name="G_56" value="espacio='EspG' tipo='texto' expresión='[35,227]' texto='{\rtf1\uc0{\fonttbl\f0\fcharset0 Times New Roman;\f1\fcharset0 Arial;\f2\fcharset0 Arial;}\f1\fs38 r\fs30 i\fs38}' fuente='SansSerif,PLAIN,19' fijo='sí' info='ri'">
+   <param name="Animación" value="pausa='1000' controles='no' auto='sí' inicio='t=0' hacer='t=t+1' mientras='t<240'">
+</ajs>
+
+<!------ INICIA LA INFO SOBRE LAS LICENCIAS Y LOS CRÉDITOS. ---------->
+    <a id="btCopyright" class="standardButton" title="Haz clic aquí para consultar los créditos y las condiciones de uso de este recurso." href="#" onclick="document.getElementById('copyright').className='visible';">©</a>
+    <div id="copyright" class="oculto">
+      
+      <div class='innerCopyright'>
+      
+          <a id="btCloseCopyright" class="standardButton" title="Haz clic aquí para cerrar esta ventana." href="#" onclick="document.getElementById('copyright').className='oculto'">×</a>
+  
+          <!-- Créditos UAM  (siempre deben ir en primer lugar) -->
+			<div class="creditos">
+				<h1>
+					Créditos 
+				</h1>
+				<h2>
+					Escena original
+				</h2>				
+                
+               <table class="autores" 	>
+					<tr> <td  class="rol"> Diseño del contenido			</td>		<td class="nombre"> Gustavo Magallanes Guijón</td></tr>
+					<tr> <td  class="rol"> Diseño funcional				</td>		<td class="nombre">Gustavo Magallanes Guijón</td></tr>
+					<tr> <td  class="rol"> Programación						</td>		<td class="nombre"> Gustavo Magallanes Guijón</td></tr>
+					<!-- Varias personas en el mismo rubro, separar por <br> -->
+							        
+					<tr> <td  class="rol"> Diseño gráfico					</td>		<td class="nombre"> Ricardo López Gómez										</td></tr>
+					<tr> <td  class="rol" >Coordinación			</td>		<td class="nombre"> Leticia Montserrat Vargas Rocha						</td></tr>
+				</table>
+				<h2>
+					Adaptación 
+				</h2>
+				<table class="autores" 	>
+					<tr> <td  class="rol"> Diseño funcional				</td>	<td class="nombre"> Julio Arnoldo Prado Saavedra<br>Victor Manuel Amezcua y Raz 
+                    </td></tr>
+					<tr> <td  class="rol"> Programación					</td>	<td class="nombre">Julio Arnoldo Prado Saavedra<br>Victor Manuel Amezcua y Raz</td></tr>
+					<tr> <td  class="rol"> Diseño gráfico				</td>	<td class="nombre"> Francisco	Varela Fuentes	        </td></tr>
+					<tr> <td  class="rol" >Coordinación			        </td>	<td class="nombre"> Leticia Montserrat Vargas Rocha		</td></tr>
+		            
+				</table>
+	         
+	         <div class='logos'>
+	            <a href=''>
+	               <img src="../images/info/icns/logoLite.png">
+	            </a>
+	            <a href="http://www.unadmexico.mx/">
+	               <img src="../images/info/icns/logoUNADM.png">
+	            </a>
+	         </div>
+          </div>
+          
+          <!-- Linea separación créditos -->
+          <hr class="linea" />
+     
+          <!-- Aviso licencias -->
+          <div class="licencias">
+          
+				<p class="creativeCommons">Los contenidos de esta unidad didáctica interactiva están bajo una licencia <a href="http://creativecommons.org/licenses/by-nc-sa/2.5/es/" target="_blank">Creative Commons Reconocimiento-NoComercial-CompartirIgual</a>.</p>
+
+				<!--arquimedes (optativo)-->
+				<p>La unidad didáctica fue creada con <a href="http://arquimedes.matem.unam.mx/Descartes5/creditos/conCCL.html" target="_blank">Arquímedes</a>, una herramienta de código abierto.</p>
+
+				<!-- Descartes -->
+				<p>La unidad didáctica contiene escenas elaboradas con Descartes, una herramienta de código abierto.</p>
+
+
+          	<p style='text-align:center'> LITE - UnADM 2014</p>
+          </div>
+      </div>
+    </div> 
+   <!------ TERMINA LA INFO SOBRE LAS LICENCIAS Y LOS CRÉDITOS. ---------->
+
+</body>
+</html>

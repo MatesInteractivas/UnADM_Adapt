@@ -1,0 +1,232 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <link href="../css/html5_mobile.css" rel="stylesheet" type="text/css" media="screen" />
+  
+  <!-------- MathJax --- para fórmulas matemáticas ------>
+  <script type="text/javascript"
+    src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+  </script>
+
+</head>
+
+<body>
+  
+
+<article class="course_content_container">
+  
+  <div class="course_content">
+    
+    
+    <!------ INICIA EL CONTENIDO DE LA PÁGINA ------- -->
+    
+    
+    <!--- Título de la página - -->
+    <h1>Algoritmo de Euclides y algoritmos computacionales</h1>
+    
+    <!--- Para poner un panel con fondo - -->
+    <div class='text_panel'>
+    
+    <!--- Subtítulo (no necesario en introducción) - -->
+<h2 style="text-align:center;">Algoritmo de Euclides y algoritmos computacionales</h2>
+    
+    <!--- Párrafo - -->
+		<p>En la actualidad existen muchos algoritmos computacionales que simulan el algoritmo de Euclides. A continuación te presentamos algunos de ellos:</p>
+
+          	<p style='text-align:center'> ***</p>
+		<p><strong>En Java:</strong></p>
+
+		<p><div style="color:gray">***Primero se declara una función llamada "Euclides", la cual se evaluará en las variables enteras "n1" y "n2".</div></p>
+		<p><div style="font-size:15px"> \( int Euclides(int n1, int n2) \ \{ 	\)</div><p>
+        <p><div style="color:gray">***A continuación se genera un ciclo en el cuál se obtiene el residuo de la división entre n1 y n2 mediante "%", el proceso se repite hasta que el residuo sea cero, y por el algoritmo explicado al inicio, sabemos que el penúltimo residuo es el MCD.</div></p>
+		<p><div style="font-size:15px"> \( int r = n1 % n2;                     \)</div><p>
+		<p><div style="font-size:15px"> \( while (r != 0) \ \{					\)</div><p>
+		<p><div style="font-size:15px"> \( n1 = n2;								\)</div><p>
+		<p><div style="font-size:15px"> \( n2 = r;								\)</div><p>
+		<p><div style="font-size:15px"> \( r = n1 % n2;							\)</div><p>
+		<p><div style="font-size:15px"> \( \ \}									\)</div><p>
+		<p><div style="font-size:15px"> \( return\quad{}n2;							\)</div><p>
+		<p><div style="font-size:15px"> \(							    \ \}	\)</div><p>
+
+          	<p style='text-align:center'> ***</p>
+
+		<p><strong>En C:</strong></p>
+        <p><div style="color:gray">***En las siguientes dos líneas lo que hace el código es llamar a 2 tipos de librerías que necesita el programa para poder hacer operaciones algebraicas, las librerías son "stdio.h" y "stdlib.h".</div></p>
+		<p><div style="font-size:15px"> \(  \# include	< stdio.h >				\)</div><p>
+		<p><div style="font-size:15px"> \(  \# include	< stdlib.h >			\)</div><p>
+        <p><div style="color:gray">***"int main()" Es la función principal del programa, dentro de ésta se deben declarar las variables y funciones globales que se utilizarán en todo el programa.</div></p>
+		<p><div style="font-size:15px"> \(  int main()							\)</div><p>
+		<p><div style="font-size:15px"> \(	\ \{								\)</div><p>
+         <p><div style="color:gray">***Aquí se coloca la palabra “int” la cual está declarando la existencia de tres números enteros, "printf" permite que el usuario pueda introducir un valor, el cual se le asignara a "n1" con ayuda de "scanf". El mismo proceso se hace para "n2"</div></p>
+		<p><div style="font-size:15px"> \(  int r=0,n1,n2;						\)</div><p>
+		<p><div style="font-size:15px"> \(	printf("introduzca n1: ");			\)</div><p>
+		<p><div style="font-size:15px"> \(	scanf("\%d",\&n1);					\)</div><p>
+		<p><div style="font-size:15px"> \(	printf("introduzca n2: ");			\)</div><p>
+		<p><div style="font-size:15px"> \(	scanf("\%d",\&n2);					\)</div><p>
+        <p><div style="color:gray">***A continuación se genera un ciclo de tipo "if", lo que se hace es sacar el residuo del cociente de los dos números que se introdujeron, mediante "%", proceso se repite varias veces hasta que el residuo sea cero, como se explicó al inicio de la unidad.</div></p>
+		<p><div style="font-size:15px"> \(	if (r==0)							\)</div><p>
+		<p><div style="font-size:15px"> \(	\ \{								\)</div><p>
+		<p><div style="font-size:15px"> \(	while(n2>0)							\)</div><p>
+		<p><div style="font-size:15px"> \(	\ \{								\)</div><p>
+		<p><div style="font-size:15px"> \(	r=n2\%n1;							\)</div><p>
+		<p><div style="font-size:15px"> \(	n1=n2;								\)</div><p>
+		<p><div style="font-size:15px"> \(	n2=r;								\)</div><p>
+		<p><div style="font-size:15px"> \(	\ \};								\)</div><p>
+         <p><div style="color:gray">***Finalmente "print" muestra en la pantalla el valor del MCD y para finalizar el programa la función principal se regresa a cero mediante "return 0".</div></p>
+		<p><div style="font-size:15px"> \(	printf("el MCD:\%d",\&n1);			\)</div><p>
+		<p><div style="font-size:15px"> \(	return 0;							\)</div><p>
+		<p><div style="font-size:15px"> \(	\ \}								\)</div><p>
+		<p><div style="font-size:15px"> \(	\ \} 								\)</div><p>
+
+        <p style='text-align:center'> ***</p>
+		<p><strong>En C++:</strong></p>
+
+		<p><div style="color:gray">***En las siguientes dos líneas lo que hace el código es llamar a 2 tipos de librerías que necesita el programa para poder hacer operaciones algebraicas, las librerías son "stdio.h" y "stdlib.h".</strong></div></p>
+		<p><div style="font-size:15px"> \(  \# include	< stdio.h >				\)</div><p>
+		<p><div style="font-size:15px"> \(  \# include	< stdlib.h >			\)</div><p>
+		<p><div style="font-size:15px"> \(  using namespace std;				\)</div><p>
+        <p><div style="color:gray">***"int mcd(int x, int y)" Es una función, en la cual se está declarando que se va a trabajar con dos valores enteros, "x" y "y".</div></p>
+		<p><div style="font-size:15px"> \(  int mcd(int x , int y)\ \{			\)</div><p>
+		<p><div style="color:gray">>***Dentro de la función se declara otra variable , "t", y después se analiza como son los valores de "x" y "y", si estos son negativos, se cambian a positivos, a la variable t se le asigna el valor más pequeño entre "x" y "y".</div></p>
+        <p><div style="font-size:15px"> \(  int t;								\)</div><p>
+		<p><div style="font-size:15px"> \(  x = (x < 0) ? -x:x;  				\)</div><p>
+		<p><div style="font-size:15px"> \(  y = (y < 0) ? -y:y;					\)</div><p>
+		<p><div style="font-size:15px"> \(  t = (x < y) ? x : y;				\)</div><p>
+        <p><div style="color:gray">***A continuación se genera un ciclo de tipo "while", lo que se hace es sacar el residuo del cociente de "x" entre "t" y "y" entre "t", el ciclo se detiene cuando alguno de los dos residuos es cero, lo cual significa que ya se encontró el MCD. </div></p>
+		<p><div style="font-size:15px"> \(  while ( (x \% t) || (y \% t))		\)</div><p>
+		<p><div style="font-size:15px"> \(	--t;								\)</div><p>
+		<p><div style="font-size:15px"> \(	return t;							\)</div><p>
+		<p><div style="font-size:15px"> \(	\ \}								\)</div><p>
+		<p><div style="font-size:15px"> \(	int euc(int x,int y)\ \{			\)</div><p>
+		<p><div style="font-size:15px"> \(	return (!y) ? x : euc(y,x\%y);		\)</div><p>
+		<p><div style="font-size:15px"> \(	\ \}								\)</div><p>
+        <p><div style="color:gray">***A continuación se solicita al usuario que introduzca el valor de "x" y "y" mediante "cout" y "cin". Finalmente se imprime el valor del MCD, el cual se obtiene al llamar la función “mcd()”, evaluada en los valores "x" y "y" que se acaban de introducir.</div></p>
+		<p><div style="font-size:15px"> \(	int main()							\)</div><p>
+		<p><div style="font-size:15px"> \(	\ \{								\)</div><p>
+		<p><div style="font-size:15px"> \(	int x,y;							\)</div><p>
+		<p><div style="font-size:15px"> \(	cout << "x: ";						\)</div><p>
+		<p><div style="font-size:15px"> \(	cin >> x;							\)</div><p>
+		<p><div style="font-size:15px"> \(	cout << "y: ";						\)</div><p>
+		<p><div style="font-size:15px"> \(	cin >> y;  							\)</div><p>
+		<p><div style="font-size:15px"> \(	cout << "MCD: " << mcd(x,y) << endl;			\)</div><p>
+		<p><div style="font-size:15px"> \(  cout << "MCD (euclides): " << euc(x,y) << endl;	\)</div><p>
+		<p><div style="font-size:15px"> \(	\ \}								\)</div><p>
+
+
+          	<p style='text-align:center'> ***</p>
+
+    <div class="course_extern_content"> 
+      <img src="imgs/espiral-teodoro.jpg"></img>
+    </div>
+    <div class="course_extern_content"> 
+    </div>
+    
+    <p><div align="center" style="font-size:12px"> La imagen muestra la representación de la secuencia de un algoritmo, tal algoritmo es la espiral de Teodoro cuya geometría tiene varias propiedades incluyendo una que se relaciona con el MCD.</div></p>
+
+   
+    <!--Párrafo-->
+        
+    <!--ejemplo para incluir una imagen-->
+    
+    
+    
+     <!--Párrafo-->
+    
+
+
+    
+
+
+ 	
+</div>
+   
+
+    <!------ TERMINA EL CONTENIDO DE LA PÁGINA --------->
+
+
+
+
+   <!------ INICIA LA INFO SOBRE LAS LICENCIAS Y LOS CRÉDITOS. ---------->
+    <a id="btCopyright" class="standardButton" title="Haz clic aquí para consultar los créditos y las condiciones de uso de este recurso." href="#" onclick="document.getElementById('copyright').className='visible';">&#169;</a>
+    <div id="copyright" class="oculto">
+      
+      <div class='innerCopyright'>
+      
+          <a id="btCloseCopyright" class="standardButton" title="Haz clic aquí para cerrar esta ventana." href="#" onclick="document.getElementById('copyright').className='oculto'">×</a>
+
+
+  
+          <!-- Créditos UAM  (siempre deben ir en primer lugar) -->
+			<div class="creditos">
+				<h1>
+					Créditos 
+				</h1>
+				<h2>
+					Escena original
+				</h2>				
+                
+               <table class="autores" 	>
+					<tr> <td  class="rol"> Diseño del contenido			</td>		<td class="nombre"> Gustavo Magallanes Guijón</td></tr>
+					<tr> <td  class="rol"> Diseño funcional				</td>		<td class="nombre">Gustavo Magallanes Guijón</td></tr>
+					<tr> <td  class="rol"> Programación						</td>		<td class="nombre"> Gustavo Magallanes Guijón</td></tr>
+					<!-- Varias personas en el mismo rubro, separar por <br> -->
+							        
+					<tr> <td  class="rol"> Diseño gráfico					</td>		<td class="nombre"> Ricardo López Gómez										</td></tr>
+					<tr> <td  class="rol" >Coordinación			</td>		<td class="nombre"> Leticia Montserrat Vargas Rocha						</td></tr>
+				</table>
+				<h2>
+					Adaptación 
+				</h2>
+				<table class="autores" 	>
+					<tr> <td  class="rol"> Diseño funcional				</td>	<td class="nombre"> Julio Arnoldo Prado Saavedra<br>Victor Manuel Amezcua y Raz 
+                    </td></tr>
+					<tr> <td  class="rol"> Programación					</td>	<td class="nombre">Julio Arnoldo Prado Saavedra<br>Victor Manuel Amezcua y Raz</td></tr>
+					<tr> <td  class="rol"> Diseño gráfico				</td>	<td class="nombre"> Francisco	Varela Fuentes	        </td></tr>
+					<tr> <td  class="rol" >Coordinación			        </td>	<td class="nombre"> Leticia Montserrat Vargas Rocha		</td></tr>
+		            
+				</table>
+	         
+	         <div class='logos'>
+	            <a href=''>
+	               <img src="../images/info/icns/logoLite.png">
+	            </a>
+	            <a href="http://www.unadmexico.mx/">
+	               <img src="../images/info/icns/logoUNADM.png">
+	            </a>
+	         </div>
+          </div>
+          
+          <!-- Linea separación créditos -->
+
+          <hr class="linea" />
+     
+          <!-- Aviso licencias -->
+          <div class="licencias">
+          
+				<p class="creativeCommons">Los contenidos de esta unidad didáctica interactiva están bajo una licencia <a href="http://creativecommons.org/licenses/by-nc-sa/2.5/es/" target="_blank">Creative Commons Reconocimiento-NoComercial-CompartirIgual</a>.</p>
+
+				<!--arquimedes (optativo)-->
+				<p>La unidad didáctica fue creada con <a href="http://arquimedes.matem.unam.mx/Descartes5/creditos/conCCL.html" target="_blank">Arquímedes</a>, una herramienta de código abierto.</p>
+
+				<!-- Descartes -->
+				<p>La unidad didáctica contiene escenas elaboradas con Descartes, una herramienta de código abierto.</p>
+
+
+          	<p style='text-align:center'> LITE - UnADM 2014</p>
+          </div>
+      </div>
+    </div> 
+   <!------ TERMINA LA INFO SOBRE LAS LICENCIAS Y LOS CRÉDITOS. ---------->
+  
+  
+  </div>
+  
+  
+</article>
+
+
+</body>
+
+</html>

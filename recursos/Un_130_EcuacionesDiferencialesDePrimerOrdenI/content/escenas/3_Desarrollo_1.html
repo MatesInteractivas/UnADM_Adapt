@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+ 	<link href="../css/html5_mobile.css" rel="stylesheet" type="text/css" media="screen" />
+	<link href="../css/DescHTML5.css" rel="stylesheet" type="text/css" media="screen" />
+	<script type="text/javascript" src='../javascript/inject_functions_scorms_descartes.js'></script>
+	<script type='text/javascript' src='../lib/descartes-min.js'></script>
+</head>
+
+<body BGCOLOR="c0c0c0" leftmargin="0" topmargin="0">
+
+<ajs name="Descartes" width=970 height=550 code="Descartes">
+   <param name="tamaño" value="970x550">
+   <param name="image_loader" value="">
+   <param name="expand" value="">
+   <param name="decimal_symbol" value=".">
+   <param name="antialias" value="sí">
+   <param name="deshacer" value="no">
+   <param name="nombre" value="Descartes">
+   <param name="Versión" value="5.336, 2015-02-13">
+   <param name="Idioma" value="español">
+   <param name="Botones" value="créditos=no config=no inicio=no limpiar=no">
+   <param name="E_01" value="tipo='R2' id='E1' fijo='sí' escala='1' O.x='-50%' O.y='-50%' imagen='imgs/tpl/fondo_01.jpg' despl_imagen='arr-izq' fondo='c0d0d8' red='no' red10='no' ejes='no' texto='no'">
+   <param name="E_02" value="tipo='R2' id='EspText01' x='55' y='105' ancho='860' alto='400' fijo='sí' escala='1' O.x='-50%' O.y='-50%' despl_imagen='arr-izq' fondo='fffbfadc' red='no' red10='no' ejes='no' texto='no'">
+   <param name="E_03" value="tipo='R2' id='Covertura' dibujar-si='verGraf' fijo='sí' escala='1' imagen='imgs/tpl/backwindow.png' despl_imagen='mosaico' fondo='fffbfadc' red='no' red10='no' ejes='no' texto='no'">
+   <param name="E_04" value="tipo='R2' id='Grafica' x='50' y='100' ancho='870' alto='410' dibujar-si='verGraf' fijo='sí' escala='35' despl_imagen='expand.' fondo='dcdbe1' red='b8c4c8' red10='no' ejes='405860' texto='no'">
+   <param name="C_01" value="id='verGraf' tipo='numérico' interfaz='botón' región='interior' espacio='EspText01' nombre='Ver gráfica' expresión='(20,350,120,30)' valor='ctr_verGraf' fijo='sí' visible='sí' color='blanco' color-int='f7000000' negrita='sí' fuente puntos='16' imagen='imgs/tpl/btn120.png' acción='calcular' parámetro='verGraf=!verGraf\nmosSig=1\nValPer0=1\ncalPer()'">
+   <param name="C_02" value="id='Cerrar' tipo='numérico' interfaz='botón' región='interior' espacio='Grafica' expresión='(840,10,20,20)' fijo='sí' visible='sí' color='blanco' color-int='f7000000' negrita='sí' fuente puntos='16' imagen='_STYLE_|class=btnUNADM icon cerrar|shadowTextColor=rgba(0,0,0,0.2)|shadowTextOffsetY=2|shadowTextBlur=0|textBorder=0 |' acción='calcular' parámetro='verGraf=!verGraf' pos_mensajes='centro'">
+   <param name="C_03" value="id='c' tipo='numérico' región='interior' espacio='Grafica' nombre='c' expresión='(spinA.x,spinA.y,spinA.w,spinA.h)' valor='ctr_c' incr='.5' min='-10' max='10' decimales='1' fijo='no' visible='sí' acción='calcular' parámetro='ValPer1=1\ncalPer()' pos_mensajes='centro'">
+   <param name="C_04" value="id='x0' tipo='numérico' región='interior' espacio='Grafica' nombre='x' expresión='(spinA.x+spinA.w+20,spinA.y,spinA.w,spinA.h)' valor='ctr_x0' incr='.2' min='0' max='3' decimales='1' fijo='no' visible='sí' acción='calcular' parámetro='ValPer2=1\ncalPer()' dibujar-si='paso>0' pos_mensajes='centro'">
+   <param name="C_05" value="id='anterior' tipo='numérico' interfaz='botón' región='interior' espacio='EspText01' nombre='Anterior' expresión='(580,350,120,30)' fijo='sí' visible='sí' color='blanco' color-int='f7000000' negrita='sí' fuente puntos='16' imagen='imgs/tpl/btn120.png' acción='calcular' parámetro='paso=paso-1' dibujar-si='paso>0' pos_mensajes='centro'">
+   <param name="C_06" value="id='siguiente' tipo='numérico' interfaz='botón' región='interior' espacio='EspText01' nombre='Siguiente' expresión='(720,350,120,30)' fijo='sí' visible='sí' color='blanco' color-int='f7000000' negrita='sí' fuente puntos='16' imagen='imgs/tpl/btn120.png' acción='calcular' parámetro='paso=paso+1' dibujar-si='(paso<2)&(mosSig=1)' pos_mensajes='centro'">
+   <param name="A_01" value="id='init()' algoritmo='sí' algoritmo='sí' hacer='initBtns()'">
+   <param name="A_02" value="id='initBtns()' algoritmo='sí' algoritmo='sí' hacer='titulo=&squot;Representación gráfica de la solución de una ecuación diferencial&squot;;titulo.w=_AnchoDeCadena_(titulo,&squot;SansSerif&squot;,&squot;PLAIN&squot;,&squot;30&squot;);titulo.x=(E1._w-titulo.w)/2;titulo.y=20;;spinA.x=20;spinA.y=345;spinA.w=120;spinA.h=50'">
+   <param name="A_03" value="id='ValPer' vector='sí' evaluar='una-sola-vez' tamaño='20'">
+   <param name="A_04" value="id='calPer()' algoritmo='sí' algoritmo='sí' hacer='ValPer[0]=(ValPer0)?1:ValPer[0];ValPer[1]=(ValPer1)?1:ValPer[1];ValPer[2]=(ValPer2)?1:ValPer[2];per=30*ValPer[0]+(35*(ValPer[1]+ValPer[2]));setSCORMPercentage(per)'">
+   <param name="A_05" value="id='getSCORMState()' algoritmo='sí' expresión='res' algoritmo='sí' Local='res,arroba' inicio='arroba=&squot;@&squot;' hacer='ö=|Estandar ---- [MIDC]XX.<var>  SI SOLO EXISTE UNA ESCENA EN EL HTML|;ö=|Estandar ---- [MIDC]XX_YY.<var>  SI HAY MAS DE UNA ESCENA EN EL HTML|;res=&squot;D01.paso:&squot;+paso+arroba;res=res+&squot;D01.c:&squot;+c+arroba;res=res+&squot;D01.x0:&squot;+x0+arroba;res=res+&squot;D01.mosSig:&squot;+mosSig+arroba;res=res+&squot;D01.ValPer[0]:&squot;+ValPer[0]+arroba;res=res+&squot;D01.ValPer[1]:&squot;+ValPer[1]+arroba;res=res+&squot;D01.ValPer[2]:&squot;+ValPer[2]+arroba'">
+   <param name="A_06" value="id='initStateScorm()' algoritmo='sí' expresión='x' algoritmo='sí' hacer='paso=getSCORMStateVar(&squot;D01.paso&squot;);c=getSCORMStateVar(&squot;D01.c&squot;);x0=getSCORMStateVar(&squot;D01.x0&squot;);mosSig=getSCORMStateVar(&squot;D01.mosSig&squot;);;ValPer[0]=getSCORMStateVar(&squot;D01.ValPer[0]&squot;);ValPer[1]=getSCORMStateVar(&squot;D01.ValPer[1]&squot;);ValPer[2]=getSCORMStateVar(&squot;D01.ValPer[2]&squot;);calPer();;ctr_paso=(paso!=0)?paso:0;ctr_c=(c!=0)?c:0;ctr_x0=(x0!=0)?x0:0;ctr_mosSig=(mosSig!=0)?mosSig:0'">
+   <param name="A_07" value="id='INICIO' algoritmo='sí' evaluar='una-sola-vez' hacer='initStateScorm();init()'">
+   <param name="A_08" value="id='CALCULOS' algoritmo='sí' evaluar='siempre'">
+   <param name="G_01" value="espacio='E1' tipo='texto' fondo='sí' expresión='[titulo.x,titulo.y]' texto='[titulo]' fuente='SansSerif,PLAIN,30' fijo='sí' info='El título de la escena'">
+   <param name="G_02" value="espacio='EspText01' tipo='texto' dibujar-si='paso=0' expresión='[10,10]' texto='{\rtf1\uc0{\fonttbl\f0\fcharset0 Times New Roman;\f1\fcharset0 Arial;\f2\fcharset0 Times New Roman;\f3\fcharset0 Times New Roman;}\f1\fs36 Para saber c\u243 mo es la gr\u225 fica de la soluci\u243 n de una ecuaci\u243 n diferencial primero analizaremos como\par se resuelve la ecuaci\u243 n \f2\fs36\i{\*\mjaformula y&squot;=f(x).}\f1\fs36\i0  Para este problema s\u243 lo necesitamos encontrar una primitiva de la\par funci\u243 n \f2\fs36\i{\*\mjaformula f(x).}\f1\fs36\i0\par \par Ejemplo: \f3\fs40\i{\*\mjaformula y&squot;(x)=2.}\f1\fs36\i0  Sabemos que la primitiva de la funci\u243 n \f3\fs40\i{\*\mjaformula f(x) = 2}\f1\fs36\i0  es \f3\fs40\i{\*\mjaformula y(x)= 2x+ c}\f1\fs36\i0  donde \f3\fs40\i{\*\mjaformula c}\f1\fs36\i0\par es una constante, el integrar nos permiti\u243  encontrar una soluci\u243 n con una constante arbitraria que\par determina una infinidad de soluciones pues todas son de la forma \f3\fs40\i{\*\mjaformula y(x)=2x.}\f1\fs36\i0  Geom\u233 tricamente lo que\par se quiere decir, es que sus gr\u225 ficas se obtienen una de otra haciendo una traslaci\u243 n en la direcci\u243 n\par del eje de las ordenadas.\par \par Da clic en el bot\u243 n &quote;Ver gr\u225 fica&quote; y se mostrar\u225  la gr\u225 fica de la soluci\u243 n con la constante c a distintos\par valores, utiliza los pulsadores para cambiar el valor de c.}' fuente='SansSerif,PLAIN,18' fijo='sí' ancho='0' info='Texto simple con auto salto de linea. Ver el campo ancho'">
+   <param name="G_03" value="espacio='EspText01' tipo='texto' dibujar-si='paso=1' expresión='[10,10]' texto='{\rtf1\uc0{\fonttbl\f0\fcharset0 Arial;\f1\fcharset0 Times New Roman;\f2\fcharset0 Times New Roman;}\f0\fs36 Siguiendo con el an\u225 lisis de la gr\u225 fica podemos notar que las soluciones de la ecuaci\u243 n cubren\par \u237 ntegramente el \u225 rea del plano entre las rectas \f1\fs40\i{\*\mjaformula x=0}\f0\fs36\i0  y \f1\fs40\i{\*\mjaformula x=3.} \f0\fs36\i0 Tambi\u233 n podemos observar que dado\par cualquier punto \f2\fs36\i{\*\mjaformula (x{\subix 0},y{\subix 0})}\f0\fs36\i0  en el \u225 rea mencionada, hay una soluci\u243 n que pasa por \u233 l. La soluci\u243 n\par mencionada es \u250 nica, pues hay s\u243 lo una recta con pendiente 2 que pase por el punto mencionado.\par \par Este resultado no es exclusivo del m\u233 todo que utilizamos para analizar la soluci\u243 n, pues tambi\u233 n se\par puede obtener de forma anal\u237 tica.\par \par Entonces dada la ecuaci\u243 n \f1\fs40\i{\*\mjaformula y&squot; = f(x)}\f0\fs36\i0 , si \f1\fs40\i{\*\mjaformula f}\f0\fs36\i0  es cont\u237 nua en un intervalo \f1\fs40\i{\*\mjaformula I}\f0\fs36\i0  y \f1\fs40\i{\*\mjaformula x{\subix 0} \u1013  I, y{\subix 0} \u1013  R}\f0\fs36\i0 , entonces\par existe una y s\u243 lo una soluci\u243 n \f1\fs40\i{\*\mjaformula y(x)}\f0\fs36\i0 , con la propiedad de que \f1\fs40\i{\*\mjaformula y(x{\subix 0}) = y{\subix 0}.}\f0\fs36\i0}' fuente='SansSerif,PLAIN,18' fijo='sí' ancho='0' info='Texto simple con auto salto de linea. Ver el campo ancho'">
+   <param name="G_04" value="espacio='EspText01' tipo='texto' dibujar-si='paso=2' expresión='[10,10]' texto='{\rtf1\uc0{\fonttbl\f0\fcharset0 Times New Roman;\f1\fcharset0 Arial;\f2\fcharset0 Times New Roman;}\f1\fs36 Anteriormente vimos que a cada valor de \f2\fs40\i{\*\mjaformula (x{\subix 0},y{\subix 0})}\f1\fs36\i0  le corresponde una funci\u243 n del conjunto de\par soluciones de una ecuaci\u243 n diferencial. A la soluci\u243 n con constante \f2\fs40\i{\*\mjaformula c}\f1\fs36\i0  se le denomina soluci\u243 n\par general. A la correspondiente a los puntos \f2\fs40\i{\*\mjaformula (x{\subix 0},y{\subix 0})}\f1\fs36\i0  se le conoce como soluci\u243 n particular, y a los\par puntos se les conoce como condiciones iniciales a un problema.\par \par Teniendo los valores de las condiciones iniciales podemos evaluar la soluci\u243 n general,\par despejamos la constante y obtenemos su valor, as\u237  podemos obtener los datos necesarios para\par identificar la soluci\u243 n particular que corresponde al problema presentado.}' fuente='SansSerif,PLAIN,18' fijo='sí' ancho='0' info='Texto simple con auto salto de linea. Ver el campo ancho'">
+   <param name="G_05" value="espacio='Grafica' tipo='texto' expresión='[10,10]' texto='{\rtf1\uc0{\fonttbl\f0\fcharset0 Times New Roman;\f1\fcharset0 Arial;\f2\fcharset0 Times New Roman;}\f1\fs36 Soluci\u243 n a la ecuaci\u243 n \f2\fs40\i{\*\mjaformula y&squot;(x)=2}\f1\fs36\i0\par \par La soluci\u243 n est\u225  dada por\par la funci\u243 n \f2\fs40\i{\*\mjaformula y(x) = 2x {\expr (c>-1)?&squot;+ &squot;+c:c\decimals 0\fixed1}}}' fuente='SansSerif,PLAIN,18' fijo='sí' ancho='0' info='Texto simple con auto salto de linea. Ver el campo ancho'">
+   <param name="G_06" value="espacio='Grafica' tipo='punto' expresión='(0,5)' texto='y(x)' fuente='Serif,ITALIC,26' fijo='sí' tamaño='0'">
+   <param name="G_07" value="espacio='Grafica' tipo='punto' expresión='(11,0)' texto='x' fuente='Serif,ITALIC,26' fijo='sí' tamaño='0'">
+   <param name="G_08" value="espacio='Grafica' tipo='ecuación' color='0000ae' dibujar-si='paso<2' expresión='y=2*x+c' rastro='62808080'">
+   <param name="G_09" value="espacio='Grafica' tipo='ecuación' color='0000ae' dibujar-si='paso=2' expresión='y=2*x+c'">
+   <param name="G_10" value="espacio='Grafica' tipo='ecuación' color='bbae0000' dibujar-si='paso=1' expresión='x=3*s' rastro='62808080' familia='s' s.intervalo='[0,1]' s.pasos='1' ancho='2'">
+   <param name="G_11" value="espacio='Grafica' tipo='punto' dibujar-si='paso>0' expresión='(x0,2*x0+c)' texto='{\rtf1\uc0{\fonttbl\f0\fcharset0 Times New Roman;\f1\fcharset0 Times New Roman;\f2\fcharset0 Times New Roman;}\f1\fs36\i{\*\mjaformula (x{\subix 0},y{\subix 0})}\fs52}' fuente='Serif,ITALIC,18' fijo='sí'">
+   <param name="G_12" value="espacio='E1' tipo='texto' dibujar-si='debug' expresión='[5,50]' texto='per=[per]\nverGraf=[verGraf]    mosSig=[mosSig]    paso=[paso]' fijo='sí'">
+</ajs>
+
+
+	<!------ INICIA LA INFO SOBRE LAS LICENCIAS Y LOS CRÉDITOS. ---------->
+    <a id="btCopyright" class="standardButton" title="Haz clic aquí para consultar los créditos y las condiciones de uso de este recurso." href="#" onClick="document.getElementById('copyright').className='visible';">©</a>
+    <div id="copyright" class="oculto">
+      
+      <div class='innerCopyright'>
+      
+          <a id="btCloseCopyright" class="standardButton" title="Haz clic aquí para cerrar esta ventana." href="#" onClick="document.getElementById('copyright').className='oculto'">×</a>
+  
+          <!-- Créditos UAM  (siempre deben ir en primer lugar) -->
+			<div class="creditos">
+				<h1>
+					Créditos 
+				</h1>
+
+				<h2>
+					Escena original
+				</h2>				<table class="autores" 	>
+
+					<tr> <td  class="rol"> Diseño del contenido			</td>		<td class="nombre"> Víctor Hugo García Jarillo (Facultad de Ciencias UNAM, LITE)</td></tr>
+					<tr> <td  class="rol"> Diseño funcional				</td>		<td class="nombre"> Víctor Hugo García Jarillo (Facultad de Ciencias UNAM, LITE)</td></tr>
+					<tr> <td  class="rol"> Programación					</td>		<td class="nombre"> Víctor Hugo García Jarillo (Facultad de Ciencias UNAM, LITE)</td></tr>
+					<tr> <td  class="rol"> Diseño gráfico				</td>		<td class="nombre"> Ricardo López Gómez</td></tr>
+					<tr> <td  class="rol" >Coordinación			</td>		<td class="nombre"> Leticia Montserrat Vargas Rocha</td></tr>
+					</table>
+				<h2>
+					Adaptación 
+				</h2>
+				<table class="autores" 	>
+				<tr> <td  class="rol"> Diseño funcional				</td>		<td class="nombre"> Victor Hugo García Jarillo (Facultad de                    Ciencias, UNAM)		</td></tr>
+					<tr> <td  class="rol"> Programación				</td>		<td class="nombre"> Victor Hugo García Jarillo (Facultad de                    Ciencias, UNAM)</td></tr>
+
+					<tr> <td  class="rol"> Diseño gráfico			</td>		<td class="nombre"> Francisco	Varela Fuentes</td></tr>
+					<tr> <td  class="rol" >Coordinación			</td>		<td class="nombre"> Leticia Montserrat Vargas Rocha</td></tr>
+		
+				</table>
+
+ <div class='logos'>
+	            <a href=''>
+	               <img src="../images/info/icns/logoLite.png">
+	            </a>
+	            <a href="http://www.unadmexico.mx/">
+	               <img src="../images/info/icns/logoUNADM.png">
+	            </a>
+	         </div>
+          </div>
+          
+          <!-- Linea separación créditos -->
+          <hr class="linea" />
+     
+          <!-- Aviso licencias -->
+          <div class="licencias">
+          
+				<p class="creativeCommons">Los contenidos de esta unidad didáctica interactiva están bajo una licencia <a href="http://creativecommons.org/licenses/by-nc-sa/2.5/es/" target="_blank">Creative Commons Reconocimiento-NoComercial-CompartirIgual</a>.</p>
+
+				<!--arquimedes (optativo)-->
+				<p>La unidad didáctica fue creada con <a href="http://arquimedes.matem.unam.mx/Descartes5/creditos/conCCL.html" target="_blank">Arquímedes</a>, una herramienta de código abierto.</p>
+
+				<!-- Descartes -->
+				<p>La unidad didáctica contiene escenas elaboradas con Descartes, una herramienta de código abierto.</p>
+
+
+          	<p style='text-align:center'> LITE - UnADM 2014</p>
+          </div>
+      </div>
+    </div> 
+   <!------ TERMINA LA INFO SOBRE LAS LICENCIAS Y LOS CRÉDITOS. ---------->
+  
+  
+  </div>
+  
+  
+</article>
+
+
+</body>
+
+</html>

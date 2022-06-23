@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Desarrollo</title>	
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<link href="../css/DescHTML5.css" rel="stylesheet" type="text/css" media="screen" />
+	<link href="../css/html5_mobile.css" rel="stylesheet" type="text/css" media="screen" />
+    <script type="text/javascript" src='../javascript/inject_functions_scorms_descartes.js'></script>
+	<script type='text/javascript' src='../lib/descartes-min.js'></script>
+</head>
+<body>
+	<!-------- MathJax --- para fórmulas matemáticas ------>	
+	<script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script> 
+
+
+  <article class="course_content_container">
+    <div class="course_content">
+  
+  
+    <!------ INICIA EL CONTENIDO DE LA PÁGINA ------- -->
+
+	<h2 align="center">Tablas de verdad</h2>
+	
+	<p>
+		A continuación haremos un recordatorio de conceptos básicos de lógica matemática: tablas de verdad y conectores lógicos.<br><br>
+		
+		Se usan las tablas de verdad para saber el valor de una proposición compuesta y sus posibles combinaciones. Se hace uso de la fórmula \( 2^n \) para saber el número de posibles combinaciones, \( n \) está determinada por el número de proposiciones a combinar, por  ejemplo si tenemos \( 2 \) proposiciones, hacemos \( 2^2 =4 \) y obtenemos \( 4 \) posibles combinaciones para cada proposición. Para la negación de una proposición \( p \), tenemos la siguiente tabla:</p>
+                    
+					
+		<table border="1"; align="center"> 
+<tr><th> &nbsp; &nbsp; p &nbsp; &nbsp; </th>                         <th> &nbsp; &nbsp; \( ¬ p \) &nbsp; &nbsp;</th></tr>
+<tr><td align="center"> &nbsp; &nbsp; V &nbsp; &nbsp;</td>           <td> &nbsp; &nbsp; F &nbsp; &nbsp;</td> </tr>
+<tr><td align="center"> &nbsp; &nbsp; F &nbsp; &nbsp;</td>           <td> &nbsp; &nbsp; V &nbsp; &nbsp;</td> </tr>
+		</table>
+					
+	<p>
+		En la tabla se trata una operación unitaria, a partir de una proposición \( p \) se obtiene otra que es su negación. La proposición \( p \) puede ser verdadera o falsa, al aplicar la negación se hace falsa si era verdadera, y se hace verdadera si era falsa. A continuación deduciremos las tablas de verdad de otros conectores.	
+	</p>
+
+  <div class="course_content">
+	<p class='instruccion'>
+    <span class="instrucciones">
+  		En el siguiente espacio se muestra la definición de una operación y después una tabla de verdad, utiliza los botones para responder si el resultado es <strong> F </strong> (Falso) o <strong> V </strong> (Verdadero).
+    </span>
+	</p>
+	
+<div  align="center" class="Descartes_extern_content">
+  <ajs name="Descartes" width=495 height=300 code="Descartes">
+   <param name="tamaño" value="495x300">
+   <param name="image_loader" value="">
+   <param name="expand" value="">
+   <param name="decimal_symbol" value=".">
+   <param name="antialias" value="sí">
+   <param name="deshacer" value="no">
+   <param name="nombre" value="Descartes">
+   <param name="Versión" value="5.336, 2015-02-13">
+   <param name="Idioma" value="español">
+   <param name="Botones" value="créditos=no config=no inicio=no limpiar=no">
+   <param name="E_01" value="tipo='R2' id='E1' fijo='sí' escala='1' O.x='-50%' O.y='-50%' despl_imagen='arr-izq' fondo='c0d0d8' red='no' red10='no' ejes='no' texto='no'">
+   <param name="E_02" value="tipo='R2' id='E2_Graf' x='E2_Graf.x' y='E2_Graf.y' ancho='485' alto='290' dibujar-si='E2_Graf.visible' fijo='sí' despl_imagen='arr-izq' fondo='dcdbe1' red='no' red10='no' ejes='no' texto='no'">
+   <param name="E_03" value="tipo='R2' id='MASK' dibujar-si='INFO.visible' fijo='sí' imagen='imgs/tpl/backwindow.png' despl_imagen='mosaico' fondo='95000000' red='no' red10='no' ejes='no' texto='no'">
+   <param name="E_04" value="tipo='R2' id='INFO' x='INFO.x' y='INFO.y' ancho='485' alto='290' dibujar-si='INFO.visible' fijo='sí' imagen='imgs/tpl/retro_400x400.png' despl_imagen='mosaico' red='no' red10='no' ejes='no' texto='no'">
+   <param name="C_01" value="id='cerrarInfo' tipo='numérico' interfaz='botón' región='interior' espacio='INFO' nombre='×' expresión='(cerrarInfo.x,cerrarInfo.y,cerrarInfo.w,cerrarInfo.h)' fijo='sí' visible='sí' color='blanco' fuente puntos='26' imagen='_STYLE_|class=btnUNADM| shadowTextColor=rgba(0,0,0,0.2)| shadowTextOffsetY=2| shadowTextBlur=0| textBorder=0 ' acción='calcular' parámetro='INFO.visible=0\ninicioSol=1\nllenaseccion()' dibujar-si='cerrarInfo.visible'">
+   <param name="C_02" value="id='ctr_i' tipo='numérico' interfaz='botón' región='interior' espacio='E2_Graf' expresión='(E2_Graf._w-30,0,30,30)' valor='ctr_i' fijo='sí' visible='sí' color='blanco' cursiva='sí' fuente puntos='20' imagen='_STYLE_|class=btnUNADM icon info|shadowTextColor=rgba(0,0,0,0.2)|shadowTextOffsetY=2|shadowTextBlur=0|textBorder=0 |' acción='calcular' parámetro='INFO.visible=1'">
+   <param name="C_03" value="id='v1' tipo='numérico' interfaz='botón' región='interior' espacio='E2_Graf' nombre='V' expresión='(237+Dx,98+Dy,40,40)' valor='resp1' fijo='sí' visible='sí' color='blanco' fuente puntos='18' acción='calcular' parámetro='resp1=1\ncontestadas=contestadas+1' dibujar-si='resp1=0'">
+   <param name="C_04" value="id='f1' tipo='numérico' interfaz='botón' región='interior' espacio='E2_Graf' nombre='F' expresión='(295+Dx,98+Dy,40,40)' valor='resp1' fijo='sí' visible='sí' color='blanco' fuente puntos='18' acción='calcular' parámetro='resp1=2\ncontestadas=contestadas+1' dibujar-si='resp1=0' pos_mensajes='centro'">
+   <param name="C_05" value="id='v2' tipo='numérico' interfaz='botón' región='interior' espacio='E2_Graf' nombre='V' expresión='(237+Dx,143+Dy,40,40)' valor='resp2' fijo='sí' visible='sí' color='blanco' fuente puntos='18' acción='calcular' parámetro='resp2=1\ncontestadas=contestadas+1' dibujar-si='resp2=0' pos_mensajes='centro'">
+   <param name="C_06" value="id='f2' tipo='numérico' interfaz='botón' región='interior' espacio='E2_Graf' nombre='F' expresión='(295+Dx,143+Dy,40,40)' valor='resp2' fijo='sí' visible='sí' color='blanco' fuente puntos='18' acción='calcular' parámetro='resp2=2\ncontestadas=contestadas+1' dibujar-si='resp2=0' pos_mensajes='centro'">
+   <param name="C_07" value="id='v3' tipo='numérico' interfaz='botón' región='interior' espacio='E2_Graf' nombre='V' expresión='(237+Dx,188+Dy,40,40)' valor='resp3' fijo='sí' visible='sí' color='blanco' fuente puntos='18' acción='calcular' parámetro='resp3=1\ncontestadas=contestadas+1' dibujar-si='resp3=0' pos_mensajes='centro'">
+   <param name="C_08" value="id='f3' tipo='numérico' interfaz='botón' región='interior' espacio='E2_Graf' nombre='F' expresión='(295+Dx,188+Dy,40,40)' valor='resp3' fijo='sí' visible='sí' color='blanco' fuente puntos='18' acción='calcular' parámetro='resp3=2\ncontestadas=contestadas+1' dibujar-si='resp3=0' pos_mensajes='centro'">
+   <param name="C_09" value="id='v4' tipo='numérico' interfaz='botón' región='interior' espacio='E2_Graf' nombre='V' expresión='(237+Dx,233+Dy,40,40)' valor='resp4' fijo='sí' visible='sí' color='blanco' fuente puntos='18' acción='calcular' parámetro='resp4=1\ncontestadas=contestadas+1' dibujar-si='resp4=0' pos_mensajes='centro'">
+   <param name="C_10" value="id='f4' tipo='numérico' interfaz='botón' región='interior' espacio='E2_Graf' nombre='F' expresión='(295+Dx,233+Dy,40,40)' valor='resp4' fijo='sí' visible='sí' color='blanco' fuente puntos='18' acción='calcular' parámetro='resp4=2\ncontestadas=contestadas+1' dibujar-si='resp4=0' pos_mensajes='centro'">
+   <param name="C_11" value="id='sig' tipo='numérico' interfaz='menú' región='interior' espacio='E2_Graf' nombre='Siguiente' expresión='(133,250,160,35)' fijo='sí' visible='sí' color='blanco' color-int='fff0f8ff' fuente puntos='18' imagen='imgs/tpl/btn120.png' opciones='Conjunción, Disyunción, Implicación, Doble implicación' acción='calcular' parámetro='resp1=0\nresp2=0\nresp3=0\nresp4=0\ncontestadas=0\npaso=sig\nINFO.visible=1\nllenaseccion()' dibujar-si='(contestadas=4)'">
+   <param name="A_01" value="id='irAEscena(idxEscena)' algoritmo='sí' algoritmo='sí' hacer='parent.set(&squot;scene&squot;,idxEscena);parent.update()'">
+   <param name="A_02" value="id='initBtns()' algoritmo='sí' algoritmo='sí' hacer='cerrarInfo.w=40;cerrarInfo.h=30;cerrarInfo.x=INFO._w-cerrarInfo.w-2;cerrarInfo.y=1;cerrarInfo.img=&squot;imgs/tpl/cerrar.png&squot;;cerrarInfo.visible=1;;ctrF.w=275;ctrF.h=40;ctrF.txt.w=60;ctrF.txt.h=18 ;;ctrF.txt.x=(E2_Graf._w-(ctrF.w+ctrF.txt.w)-3);ctrF.txt.y=(E2_Graf._h-ctrF.h-5)+10;ctrF.x=ctrF.txt.x+ctrF.txt.w;ctrF.y=ctrF.txt.y-10;;ctr_a.w=120;ctr_a.h=50;ctr_a.x=5;ctr_a.y=5;;ctr_b.x=ctr_a.x;ctr_b.y=ctr_a.y+ctr_a.h+5;ctr_b.w=ctr_a.w;ctr_b.h=ctr_a.h;;ctr_c.x=ctr_b.x;ctr_c.y=ctr_b.y+ctr_b.h+5;ctr_c.w=ctr_b.w;ctr_c.h=ctr_b.h'">
+   <param name="A_03" value="id='initEsp()' algoritmo='sí' algoritmo='sí' hacer='INFO.x=(E1._w-INFO._w)/2;INFO.y=(E1._h-INFO._h)/2;INFO.visible=1;;E2_Graf.x=5;E2_Graf.y=5;E2_Graf.visible=1;;EspTxt.x=E1._w-EspTxt._w-10;EspTxt.y=E1._h-EspTxt._h-10;EspTxt.visible=1'">
+   <param name="A_04" value="id='initEscena()' algoritmo='sí' algoritmo='sí' hacer='initBtns();initEsp();;paso=0;resp1=0;resp2=0;resp3=0;resp4=0;contestadas=0;Dx=-60;Dy=-35'">
+   <param name="A_05" value="id='__FIN_TPL_()'">
+   <param name="A_06" value="id='secciones' vector='sí' evaluar='una-sola-vez' tamaño='5' expresión='secciones[0]=0;secciones[1]=0;secciones[2]=0;secciones[3]=0'">
+   <param name="A_07" value="id='llenaseccion()' algoritmo='sí' algoritmo='sí' hacer='secciones[0]=(inicioSol=1)?1:secciones[0];secciones[1]=(sig=1)?1:secciones[1];secciones[2]=(sig=2)?1:secciones[2];secciones[3]=(sig=3)?1:secciones[3];per=25*(secciones[0]+secciones[1]+secciones[2]+secciones[3]);setSCORMPercentage(per)'">
+   <param name="A_08" value="id='getSCORMState()' algoritmo='sí' expresión='res' algoritmo='sí' Local='res,c' inicio='c=&squot;@&squot;' hacer='ö=|Estandar ---- [MIDC]XX.<var>  SI SOLO EXISTE UNA ESCENA EN EL HTML|;ö=|Estandar ---- [MIDC]XX_YY.<var>  SI HAY MAS DE UNA ESCENA EN EL HTML|;res=&squot;D01.secciones[0]:&squot;+secciones[0]+c;res=res+&squot;D01.secciones[1]:&squot;+secciones[1]+c;res=res+&squot;D01.secciones[2]:&squot;+secciones[2]+c;res=res+&squot;D01.secciones[3]:&squot;+secciones[3]+c;'">
+   <param name="A_09" value="id='initStateScorm()' algoritmo='sí' expresión='x' algoritmo='sí' hacer='secciones[0]=getSCORMStateVar(&squot;D01.secciones[0]&squot;) ;secciones[1]=getSCORMStateVar(&squot;D01.secciones[1]&squot;) ;secciones[2]=getSCORMStateVar(&squot;D01.secciones[2]&squot;);secciones[3]=getSCORMStateVar(&squot;D01.secciones[3]&squot;) ;ctrFTmp=getSCORMStateVar(&squot;D01.function&squot;);llenaseccion();;;a=(ctr_a!=0)?ctr_a:2;b=(ctr_b!=0)?ctr_b:0;c=(ctr_c!=0)?ctr_c:2'">
+   <param name="A_10" value="id='INICIO' algoritmo='sí' evaluar='una-sola-vez' hacer='initStateScorm();initEscena()'">
+   <param name="A_11" value="id='CALCULOS' algoritmo='sí' evaluar='siempre'">
+   <param name="G_01" value="espacio='E1' tipo='imagen' fondo='sí' coord_abs='sí' expresión='(-50,-100)' archivo='imgs/tpl/fondo_01.jpg'">
+   <param name="G_02" value="espacio='E1' tipo='texto' fondo='sí' dibujar-si='0' expresión='[__GRAF__,20]' fijo='sí'">
+   <param name="G_03" value="espacio='E2_Graf' tipo='segmento' coord_abs='sí' expresión='(70+Dx,50+45*s+Dy)(350+Dx,50+45*s+Dy)' familia='s' s.intervalo='[0,5]' s.pasos='5' fijo='sí' tamaño='0' ancho='2'">
+   <param name="G_04" value="espacio='E2_Graf' tipo='segmento' coord_abs='sí' expresión='(70+75*s+Dx,50+Dy)(70+75*s+Dx,275+Dy)' familia='s' s.intervalo='[0,2]' s.pasos='2' fijo='sí' tamaño='0' ancho='2'">
+   <param name="G_05" value="espacio='E2_Graf' tipo='segmento' coord_abs='sí' expresión='(350+Dx,50+Dy)(350+Dx,275+Dy)' familia='s' s.intervalo='[0,2]' s.pasos='2' fijo='sí' tamaño='0' ancho='2'">
+   <param name="G_06" value="espacio='E2_Graf' tipo='texto' expresión='[95+Dx,63+Dy]' texto='{\rtf1\uc0{\fonttbl\f0\fcharset0 Times New Roman;\f1\fcharset0 Arial;}\f1\fs40 P          Q}' fuente='SansSerif,PLAIN,20' fijo='sí'">
+   <param name="G_07" value="espacio='E2_Graf' tipo='texto' expresión='[95+Dx,107+Dy]' texto='V          V' fuente='SansSerif,PLAIN,20' fijo='sí'">
+   <param name="G_08" value="espacio='E2_Graf' tipo='texto' dibujar-si='resp1>0' expresión='[268+Dx,107+Dy]' texto='{\rtf1\uc0{\fonttbl\f0\fcharset0 Times New Roman;\f1\fcharset0 Arial;}\f1\fs40{\*\mjaformula{\expr (resp1=1)?&squot;V&squot;:&squot;F&squot;\decimals 0\fixed0}}}' fuente='SansSerif,PLAIN,20' fijo='sí'">
+   <param name="G_09" value="espacio='E2_Graf' tipo='texto' expresión='[95+Dx,153+Dy]' texto='V          F' fuente='SansSerif,PLAIN,20' fijo='sí'">
+   <param name="G_10" value="espacio='E2_Graf' tipo='texto' dibujar-si='resp2>0' expresión='[268+Dx,153+Dy]' texto='{\rtf1\uc0{\fonttbl\f0\fcharset0 Times New Roman;\f1\fcharset0 Arial;}\f1\fs40{\*\mjaformula{\expr (resp2=1)?&squot;V&squot;:&squot;F&squot;\decimals 0\fixed0}}}' fuente='SansSerif,PLAIN,20' fijo='sí'">
+   <param name="G_11" value="espacio='E2_Graf' tipo='texto' expresión='[95+Dx,198+Dy]' texto='F          V' fuente='SansSerif,PLAIN,20' fijo='sí'">
+   <param name="G_12" value="espacio='E2_Graf' tipo='texto' dibujar-si='resp3>0' expresión='[268+Dx,198+Dy]' texto='{\rtf1\uc0{\fonttbl\f0\fcharset0 Times New Roman;\f1\fcharset0 Arial;}\f1\fs40{\*\mjaformula{\expr (resp3=1)?&squot;V&squot;:&squot;F&squot;\decimals 0\fixed0}}}' fuente='SansSerif,PLAIN,20' fijo='sí'">
+   <param name="G_13" value="espacio='E2_Graf' tipo='texto' expresión='[95+Dx,245+Dy]' texto='F          F' fuente='SansSerif,PLAIN,20' fijo='sí'">
+   <param name="G_14" value="espacio='E2_Graf' tipo='texto' dibujar-si='resp4>0' expresión='[268+Dx,245+Dy]' texto='{\rtf1\uc0{\fonttbl\f0\fcharset0 Times New Roman;\f1\fcharset0 Arial;}\f1\fs40{\*\mjaformula{\expr (resp4=1)?&squot;V&squot;:&squot;F&squot;\decimals 0\fixed0}}}' fuente='SansSerif,PLAIN,20' fijo='sí'">
+   <param name="G_15" value="espacio='E2_Graf' tipo='texto' dibujar-si='paso=0' expresión='[255+Dx,63+Dy]' texto='{\rtf1\uc0{\fonttbl\f0\fcharset0 Times New Roman;\f1\fcharset0 Arial;}\f1\fs40{\*\mjaformula P\u8896 Q}}' fuente='SansSerif,PLAIN,20' fijo='sí'">
+   <param name="G_16" value="espacio='E2_Graf' tipo='texto' dibujar-si='paso=1' expresión='[255+Dx,63+Dy]' texto='{\rtf1\uc0{\fonttbl\f0\fcharset0 Times New Roman;\f1\fcharset0 Arial;}\f1\fs40{\*\mjaformula P\u8897 Q}}' fuente='SansSerif,PLAIN,20' fijo='sí'">
+   <param name="G_17" value="espacio='E2_Graf' tipo='texto' dibujar-si='paso=2' expresión='[255+Dx,63+Dy]' texto='{\rtf1\uc0{\fonttbl\f0\fcharset0 Times New Roman;\f1\fcharset0 Arial;}\f1\fs40{\*\mjaformula P\u8594 Q}}' fuente='SansSerif,PLAIN,20' fijo='sí'">
+   <param name="G_18" value="espacio='E2_Graf' tipo='texto' dibujar-si='paso=3' expresión='[255+Dx,63+Dy]' texto='{\rtf1\uc0{\fonttbl\f0\fcharset0 Times New Roman;\f1\fcharset0 Arial;}\f1\fs40{\*\mjaformula P\u8596 Q}}' fuente='SansSerif,PLAIN,20' fijo='sí'">
+   <param name="G_19" value="espacio='E2_Graf' tipo='texto' dibujar-si='(paso=0)&(contestadas=4)' expresión='[300,30]' texto='Sólo el primer renglón es verdadero, pues es donde las dos proposiciones son verdaderas.' fuente='SansSerif,PLAIN,20' fijo='sí' ancho='170'">
+   <param name="G_20" value="espacio='E2_Graf' tipo='texto' dibujar-si='(paso=1)&(contestadas=4)' expresión='[300,30]' texto='Sólo el último renglón es falso, ya que es el caso en el que las dos proposiciones son falsas.' fuente='SansSerif,PLAIN,20' fijo='sí' ancho='170'">
+   <param name="G_21" value="espacio='E2_Graf' tipo='texto' dibujar-si='(paso=2)&(contestadas=4)' expresión='[300,30]' texto='La implicación sólo es falsa cuando el antecedente es verdadero y el consecuente es falso.' fuente='SansSerif,PLAIN,20' fijo='sí' ancho='170'">
+   <param name="G_22" value="espacio='E2_Graf' tipo='texto' dibujar-si='(paso=3)&(contestadas=4)' expresión='[300,30]' texto='Los casos en donde se conserva el mismo valor, se dan en donde las dos proposiciones son falsas o verdaderas.' fuente='SansSerif,PLAIN,20' fijo='sí' ancho='170'">
+   <param name="G_23" value="espacio='E2_Graf' tipo='imagen' dibujar-si='(resp1=1)&(contestadas=4)' coord_abs='sí' expresión='(312+Dx,107+Dy)' archivo='imgs/bien.png'">
+   <param name="G_24" value="espacio='E2_Graf' tipo='imagen' dibujar-si='(resp1=2)&(contestadas=4)' coord_abs='sí' expresión='(312+Dx,107+Dy)' archivo='imgs/mal.png'">
+   <param name="G_25" value="espacio='E2_Graf' tipo='imagen' dibujar-si='(((paso=0)&(resp2=2))|((paso=1)&(resp2=1))|((paso=2)&(resp2=2))|((paso=3)&(resp2=2)))&(contestadas=4)' coord_abs='sí' expresión='(312+Dx,152+Dy)' archivo='imgs/bien.png'">
+   <param name="G_26" value="espacio='E2_Graf' tipo='imagen' dibujar-si='(((paso=0)&(resp2=1))|((paso=1)&(resp2=2))|((paso=2)&(resp2=1))|((paso=3)&(resp2=1)))&(contestadas=4)' coord_abs='sí' expresión='(312+Dx,152+Dy)' archivo='imgs/mal.png'">
+   <param name="G_27" value="espacio='E2_Graf' tipo='imagen' dibujar-si='(((paso=0)&(resp3=2))|((paso=1)&(resp3=1))|((paso=2)&(resp3=1))|((paso=3)&(resp3=2)))&(contestadas=4)' coord_abs='sí' expresión='(312+Dx,197+Dy)' archivo='imgs/bien.png'">
+   <param name="G_28" value="espacio='E2_Graf' tipo='imagen' dibujar-si='(((paso=0)&(resp3=1))|((paso=1)&(resp3=2))|((paso=2)&(resp3=2))|((paso=3)&(resp3=1)))&(contestadas=4)' coord_abs='sí' expresión='(312+Dx,197+Dy)' archivo='imgs/mal.png'">
+   <param name="G_29" value="espacio='E2_Graf' tipo='imagen' dibujar-si='(((paso=0)&(resp4=2))|((paso=1)&(resp4=2))|((paso=2)&(resp4=1))|((paso=3)&(resp4=1)))&(contestadas=4)' coord_abs='sí' expresión='(312+Dx,242+Dy)' archivo='imgs/bien.png'">
+   <param name="G_30" value="espacio='E2_Graf' tipo='imagen' dibujar-si='(((paso=0)&(resp4=1))|((paso=1)&(resp4=1))|((paso=2)&(resp4=2))|((paso=3)&(resp4=2)))&(contestadas=4)' coord_abs='sí' expresión='(312+Dx,242+Dy)' archivo='imgs/mal.png'">
+   <param name="G_31" value="espacio='INFO' tipo='texto' color='blanco' expresión='[10,6]' texto='{\rtf1\uc0{\fonttbl\f0\fcharset0 Arial;}\f0\fs40 Utiliza la siguiente definici\u243 n para responder:}' fuente='SansSerif,PLAIN,20' fijo='sí'">
+   <param name="G_32" value="espacio='INFO' tipo='texto' dibujar-si='paso=0' expresión='[50,80]' texto='{\rtf1\uc0{\fonttbl\f0\fcharset0 Times New Roman;\f1\fcharset0 Arial;\f2\fcharset0 Times New Roman;}\f1\fs40 La conjunci\u243 n \f2\fs44\i{\*\mjaformula (\u8896 )}\f1\fs40\i0  es una operaci\u243 n\par entre dos proposiciones, por ejemplo\par \f2\fs44\i{\*\mjaformula p}\f1\fs40\i0  y \f2\fs44\i{\*\mjaformula q.}\f1\fs40\i0  Esta operaci\u243 n establece que\par la conjunci\u243 n s\u243 lo es verdadera si las\par dos proposiciones son verdaderas.}' fuente='SansSerif,PLAIN,20' fijo='sí'">
+   <param name="G_33" value="espacio='INFO' tipo='texto' dibujar-si='paso=1' expresión='[50,80]' texto='{\rtf1\uc0{\fonttbl\f0\fcharset0 Times New Roman;\f1\fcharset0 Arial;}\f1\fs40 La disyunci\u243 n entre dos proposiciones\par es verdadera en el caso en el que al\par menos una de las proposiciones se\par cumple (es verdadera).}' fuente='SansSerif,PLAIN,20' fijo='sí'">
+   <param name="G_34" value="espacio='INFO' tipo='texto' dibujar-si='paso=2' expresión='[50,80]' texto='{\rtf1\uc0{\fonttbl\f0\fcharset0 Times New Roman;\f1\fcharset0 Arial;\f2\fcharset0 Times New Roman;}\f1\fs40 Para la implicaci\u243 n o condicional usamos\par dos proposiciones,\f2\fs44\i  {\*\mjaformula P}\f1\fs40\i0  que se llama\par antecedente y \f2\fs44\i{\*\mjaformula Q}\f1\fs40\i0  consecuente. Para\par que la implicaci\u243 n sea verdadera, es\par necesario que el consecuente se derive\par l\u243 gicamente del antecedente.}' fuente='SansSerif,PLAIN,20' fijo='sí'">
+   <param name="G_35" value="espacio='INFO' tipo='texto' dibujar-si='paso=3' expresión='[50,80]' texto='{\rtf1\uc0{\fonttbl\f0\fcharset0 Times New Roman;\f1\fcharset0 Arial;}\f1\fs40 La doble implicaci\u243 n o bicondicional\par es verdadera si ambas proposiciones\par conservan el mismo valor.}' fuente='SansSerif,PLAIN,20' fijo='sí'">
+   <param name="G_36" value="espacio='E2_Graf' tipo='texto' dibujar-si='debug' expresión='[20,20]' texto='resp1=[resp1]\ninicioSol=[inicioSol]\ncontestadas=[contestadas]' fijo='sí'">
+</ajs>
+</div>
+
+
+
+             <!------ TERMINA EL CONTENIDO DE LA PÁGINA --------->
+
+    <!------ INICIA LA INFO SOBRE LAS LICENCIAS Y LOS CRÉDITOS. ---------->
+    <a id="btCopyright" class="standardButton" title="Haz clic aquí para consultar los créditos y las condiciones de uso de este recurso." href="#" onClick="document.getElementById('copyright').className='visible';">©</a>
+    <div id="copyright" class="oculto">
+      
+      <div class='innerCopyright'>
+      
+          <a id="btCloseCopyright" class="standardButton" title="Haz clic aquí para cerrar esta ventana." href="#" onClick="document.getElementById('copyright').className='oculto'">×</a>
+  
+          <!-- Créditos UAM  (siempre deben ir en primer lugar) -->
+			<div class="creditos">
+				<h1>
+					Créditos 
+				</h1>
+
+				<h2>
+					Escena original
+				</h2>				<table class="autores" 	>
+
+					<tr> <td  class="rol"> Diseño del contenido			</td>		<td class="nombre"> Víctor Hugo García Jarillo (Facultad de Ciencias UNAM, LITE)</td></tr>
+					<tr> <td  class="rol"> Diseño funcional				</td>		<td class="nombre"> Víctor Hugo García Jarillo (Facultad de Ciencias UNAM, LITE)</td></tr>
+					<tr> <td  class="rol"> Programación					</td>		<td class="nombre"> Víctor Hugo García Jarillo (Facultad de Ciencias UNAM, LITE)</td></tr>
+					<tr> <td  class="rol"> Diseño gráfico				</td>		<td class="nombre"> Ricardo López Gómez</td></tr>
+					<tr> <td  class="rol" >Coordinación			</td>		<td class="nombre"> Leticia Montserrat Vargas Rocha</td></tr>
+					</table>
+				<h2>
+					Adaptación 
+				</h2>
+				<table class="autores" 	>
+				<tr> <td  class="rol"> Diseño funcional				</td>		<td class="nombre"> Victor Hugo García Jarillo (Facultad de                    Ciencias, UNAM)		</td></tr>
+					<tr> <td  class="rol"> Programación				</td>		<td class="nombre"> Victor Hugo García Jarillo (Facultad de                    Ciencias, UNAM)</td></tr>
+
+					<tr> <td  class="rol"> Diseño gráfico			</td>		<td class="nombre"> Francisco	Varela Fuentes</td></tr>
+					<tr> <td  class="rol" >Coordinación			</td>		<td class="nombre"> Leticia Montserrat Vargas Rocha</td></tr>
+		
+				</table>
+	          <div class='logos'>
+	            <a href=''>
+	               <img src="../images/info/icns/logoLite.png">
+	            </a>
+	            <a href="http://www.unadmexico.mx/">
+	               <img src="../images/info/icns/logoUNADM.png">
+	            </a>
+	         </div>
+          </div>
+          
+          <!-- Linea separación créditos -->
+          <hr class="linea" />
+     
+          <!-- Aviso licencias -->
+          <div class="licencias">
+          
+				<p class="creativeCommons">Los contenidos de esta unidad didáctica interactiva están bajo una licencia <a href="http://creativecommons.org/licenses/by-nc-sa/2.5/es/" target="_blank">Creative Commons Reconocimiento-NoComercial-CompartirIgual</a>.</p>
+
+				<!--arquimedes (optativo)-->
+				<p>La unidad didáctica fue creada con <a href="http://arquimedes.matem.unam.mx/Descartes5/creditos/conCCL.html" target="_blank">Arquímedes</a>, una herramienta de código abierto.</p>
+
+				<!-- Descartes -->
+				<p>La unidad didáctica contiene escenas elaboradas con Descartes, una herramienta de código abierto.</p>
+
+
+          	<p style='text-align:center'> LITE - UnADM 2014</p>
+          </div>
+      </div>
+    </div> 
+   <!------ TERMINA LA INFO SOBRE LAS LICENCIAS Y LOS CRÉDITOS. ---------->
+  
+  
+  </div>
+  
+  
+</article>
+
+
+</body>
+
+</html>

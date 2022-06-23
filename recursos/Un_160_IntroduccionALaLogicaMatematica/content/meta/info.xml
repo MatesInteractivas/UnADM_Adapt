@@ -1,0 +1,81 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<recurso 
+	id="_Un_160_IntroduccionALaLogicaMatematica" 
+	nivel="Licenciatura" 
+	area="Matemáticas, Lógica matemática" 
+	plataforma="HTML 5" 
+	>
+	<titulo><![CDATA[
+		Introducción a la lógica matemática 
+	]]></titulo>
+	
+	<Descripcion><![CDATA[
+		Con esta unidad se pretende que el usuario conozca el lenguaje de la Lógica matemática, en particular la utilización de las tablas de verdad para demostrar diversos teoremas que se presentan en matemáticas y otra áreas de la ciencia. 
+	]]></Descripcion>
+</recurso>
+
+<!--
+********************************************************************************
+                               **** Áreas **** 
+Matemáticas 
+	Aritmética
+		Fracciones
+	Álgebra
+		Combinatoria
+		Ecuaciones lineales
+		Ecuaciones polinomiales
+		Polinomios
+		Álgebra lineal
+		Teoría de grupos
+		Álgebra abstracta
+	Geometría
+		Geometría elemental
+		Geometría clásica
+		Geometría analítica
+	Trigonometría 
+	Probabilidad 
+		Cálculo de probabilidades
+		Eventos
+		Variables aleatorias
+		Ley de los grandes números
+		Teorema del límite central
+	Estadística
+		Medidas de tendencia central
+		Muestreo
+		Distribuciones
+		Inferencia
+	Cálculo
+		Funciones 
+		Límites
+		Continuidad
+		Derivadas 
+		Integrales 
+	Teoría de números
+	Teoría de gráficas
+Física
+	Mecánica
+	Electromagnetismo
+	Óptica
+	Físico-química 
+	Termodinámica
+	Mecánica estadística
+	Mecánica cuántica
+	Relatividad
+
+********************************************************************************
+
+********************************************************************************
+                             **** Niveles ****
+
+	Primaria
+	Preescolar
+	Secundaria
+	Bachillerato
+	Licenciatura
+	Posgrado 
+	Maestria
+	Doctorado
+
+********************************************************************************
+
+-->

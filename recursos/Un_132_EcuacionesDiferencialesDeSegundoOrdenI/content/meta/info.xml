@@ -1,0 +1,81 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<recurso 
+	id="_Un_132_EcuacionesDiferencialesDeSegundoOrden1" 
+	nivel="Licenciatura" 
+	area="Matemáticas, Ecuaciones diferenciales" 
+	plataforma="HTML 5" 
+	>
+	<titulo><![CDATA[
+		Ecuaciones diferenciales de segundo orden 1 
+	]]></titulo>
+	
+	<Descripcion><![CDATA[
+		El objetivo de esta unidad es que el usuario conozca y utilice el método de Euler para aproximar soluciones a un sistema de dos ecuaciones de primer orden, las cuales se pueden obtener a partir de una ecuación de segundo orden.
+	]]></Descripcion>
+</recurso>
+
+<!--
+********************************************************************************
+                               **** Áreas **** 
+Matemáticas 
+	Aritmética
+		Fracciones
+	Álgebra
+		Combinatoria
+		Ecuaciones lineales
+		Ecuaciones polinomiales
+		Polinomios
+		Álgebra lineal
+		Teoría de grupos
+		Álgebra abstracta
+	Geometría
+		Geometría elemental
+		Geometría clásica
+		Geometría analítica
+	Trigonometría 
+	Probabilidad 
+		Cálculo de probabilidades
+		Eventos
+		Variables aleatorias
+		Ley de los grandes números
+		Teorema del límite central
+	Estadística
+		Medidas de tendencia central
+		Muestreo
+		Distribuciones
+		Inferencia
+	Cálculo
+		Funciones 
+		Límites
+		Continuidad
+		Derivadas 
+		Integrales 
+	Teoría de números
+	Teoría de gráficas
+Física
+	Mecánica
+	Electromagnetismo
+	Óptica
+	Físico-química 
+	Termodinámica
+	Mecánica estadística
+	Mecánica cuántica
+	Relatividad
+
+********************************************************************************
+
+********************************************************************************
+                             **** Niveles ****
+
+	Primaria
+	Preescolar
+	Secundaria
+	Bachillerato
+	Licenciatura
+	Posgrado 
+	Maestria
+	Doctorado
+
+********************************************************************************
+
+-->

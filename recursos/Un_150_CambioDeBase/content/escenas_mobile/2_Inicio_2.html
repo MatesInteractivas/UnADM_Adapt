@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+ 	<link href="../css/html5_mobile.css" rel="stylesheet" type="text/css" media="screen" />
+	<link href="../css/DescHTML5.css" rel="stylesheet" type="text/css" media="screen" />
+	<script type="text/javascript" src='../javascript/inject_functions_scorms_descartes.js'></script>
+	<script type='text/javascript' src='../lib/descartes-min.js'></script>
+</head>
+
+<body>
+ <!------ MathJax -- para fórmulas matemáticas ---->	
+	<script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script> 
+
+<article class="course_content_container">
+  
+  <div class="course_content">
+    
+    
+    <!---- INICIA EL CONTENIDO DE LA PÁGINA ------>
+    
+    
+    <!-- Título de la página -->
+    <h1>Base binaria vs base decimal</h1>
+	
+	<h2 align="center">Base binaria vs base decimal</h2>
+    
+    
+	<div class='text_panel'>
+		<!-- Subtítulo (no necesario en introducción) -->
+		<h2>¿Cómo contamos en base binaria?</h2>
+    
+    
+		<!-- Párrafo -->
+		<p>
+		Aquí podrás observar cómo se cuenta en base binaria y comparar con la base decimal que ya conoces. En particular, nota cada cuando en la base binaria es necesario agregar un dígito para poder seguir contando.
+		</p>
+		<p>
+		Podrás agregar elementos a contar, y también podrás reiniciar la escena para empezar desde cero.
+		</p>
+		<p>
+		El número de elementos contados se presenta como líneas y taches.
+		</p>
+		<p>
+		Presta atención al conteo, que se hace del dígito de la derecha y hacia la izquierda. Observa cómo cambian los símbolos en cada dígito y qué ocurre cuando te has gastado todos los símbolos tanto en el caso binario como en el decimal.
+		</p>
+		<p>
+		Una vez que hayas revisado el interactivo, intenta encontrar una fórmula que te permita saber cuántos palitos puedes contar usando un cierto número de dígitos en binario ¿Cuál sería la contraparte de dicha fórmula para el caso decimal?
+		</p>
+		
+		<p class="instrucciones">
+		A continuación usarás un interactivo para ver cómo se cuenta con una base binaria. Revisa bien las instrucciones al principio del interactivo.
+		</p>
+		
+		<div class="course_extern_content"> 
+			<div class="Descartes_extern_content">
+				<ajs name="Descartes" width=485 height=300 code="Descartes">
+   <param name="tamaño" value="485x300">
+   <param name="image_loader" value="">
+   <param name="expand" value="">
+   <param name="decimal_symbol" value=".">
+   <param name="antialias" value="sí">
+   <param name="deshacer" value="no">
+   <param name="nombre" value="Descartes">
+   <param name="Versión" value="5.356, 2016-05-03">
+   <param name="Idioma" value="español">
+   <param name="Botones" value="créditos=no config=no inicio=no limpiar=no">
+   <param name="E_01" value="tipo='R2' id='E1' fijo='sí' escala='1' O.x='-50%' O.y='-50%' despl_imagen='arr-izq' fondo='dcdbe1' red='no' red10='no' ejes='no' texto='405860'">
+   <param name="E_02" value="tipo='R2' id='E2_Graf' x='E2_Graf.x' y='E2_Graf.y' ancho='510' alto='310' dibujar-si='E2_Graf.visible&0' O.x='-5%' O.y='25%' despl_imagen='arr-izq' fondo='blanco' red='no' red10='no' ejes='no' texto='no'">
+   <param name="E_03" value="tipo='R2' id='CTRS' x='CTRS.x' y='CTRS.y' ancho='520' alto='80' dibujar-si='1|CTRS.visible' fijo='sí' escala='-1' O.x='-50%' O.y='-50%' despl_imagen='arr-izq' fondo='88000000' red='no' red10='no' ejes='no' texto='no'">
+   <param name="E_04" value="tipo='R2' id='btnOpenClose' x='btnOpenClose.x' y='btnOpenClose.y' ancho='35' alto='30' fijo='sí' escala='1' O.x='-50%' O.y='-50%' despl_imagen='arr-izq' fondo='ff000000' red='no' red10='no' ejes='no' texto='no'">
+   <param name="E_05" value="tipo='R2' id='MASK' dibujar-si='INFO.visible==1' fijo='sí' imagen='imgs/tpl/backwindow.png' despl_imagen='mosaico' fondo='95000000' red='no' red10='no' ejes='no' texto='no'">
+   <param name="E_06" value="tipo='R2' id='INFO' x='INFO.x' y='INFO.y' ancho='485' alto='300' dibujar-si='INFO.visible==1' fijo='sí' imagen='imgs/tpl/retro_790x470.png' despl_imagen='mosaico' red='no' red10='no' ejes='no' texto='no'">
+   <param name="C_01" value="id='cerrarInfo' tipo='numérico' interfaz='botón' región='interior' espacio='INFO' expresión='(cerrarInfo.x,cerrarInfo.y,cerrarInfo.w,cerrarInfo.h)' fijo='sí' visible='sí' color='blanco' fuente puntos='26' imagen='_STYLE_|class=btnUNADM icon cerrar|shadowTextColor=rgba(0,0,0,0.2)|shadowTextOffsetY=2|shadowTextBlur=0|textBorder=0' acción='calcular' parámetro='INFO.visible=-1' dibujar-si='cerrarInfo.visible'">
+   <param name="C_02" value="id='btnAumentar' tipo='numérico' interfaz='botón' región='interior' espacio='CTRS' nombre='Aumentar' expresión='(btnAumentar.x,btnAumentar.y,btnAumentar.w,btnAumentar.h)' fijo='sí' visible='sí' color='blanco' color-int='da000000' negrita='sí' fuente puntos='16' imagen='_STYLE_|class=btnUNADM|shadowTextColor=rgba(0,0,0,0.2)|shadowTextOffsetY=2|shadowTextBlur=0|textBorder=0 |' acción='calcular' parámetro='conteo=conteo+1\ncontSCORM=conteo+1\nbla=(conteo>=0)?calcDatos():bla' activo-si='conteo<134' pos_mensajes='centro'">
+   <param name="C_03" value="id='btnReiniciar' tipo='numérico' interfaz='botón' región='interior' espacio='CTRS' nombre='Reiniciar' expresión='(btnReiniciar.x,btnReiniciar.y,btnReiniciar.w,btnReiniciar.h)' fijo='sí' visible='sí' color='blanco' color-int='da000000' negrita='sí' fuente puntos='16' imagen='_STYLE_|class=btnUNADM|shadowTextColor=rgba(0,0,0,0.2)|shadowTextOffsetY=2|shadowTextBlur=0|textBorder=0 |' acción='calcular' parámetro='ReInit()' pos_mensajes='centro'">
+   <param name="C_04" value="id='btnOpen' tipo='numérico' interfaz='botón' región='interior' espacio='btnOpenClose' expresión='(0,0,35,30)' fijo='sí' visible='sí' fuente puntos='16' imagen='_STYLE_|class=btnUNADM open|shadowTextColor=rgba(0,0,0,0.2)|shadowTextOffsetY=2|shadowTextBlur=0|textBorder=0' acción='calcular' parámetro='openPanelCtrs()' dibujar-si='!CTRS.opened' pos_mensajes='centro'">
+   <param name="C_05" value="id='btnClose' tipo='numérico' interfaz='botón' región='interior' espacio='btnOpenClose' expresión='(0,0,35,30)' fijo='sí' visible='sí' imagen='_STYLE_|class=btnUNADM close|shadowTextColor=rgba(0,0,0,0.2)|shadowTextOffsetY=2|shadowTextBlur=0|textBorder=0' acción='calcular' parámetro='closePanelCtrs()' dibujar-si='CTRS.opened' pos_mensajes='centro'">
+   <param name="A_01" value="id='EntBin' vector='sí' evaluar='una-sola-vez' tamaño='9'">
+   <param name="A_02" value="id='EntDec' vector='sí' evaluar='una-sola-vez' tamaño='9'">
+   <param name="A_03" value="id='irAEscena(idxEscena)' algoritmo='sí' algoritmo='sí' hacer='parent.set(&squot;scene&squot;,idxEscena);parent.update()'">
+   <param name="A_04" value="id='initBtns()' algoritmo='sí' algoritmo='sí' hacer='cerrarInfo.w=30;cerrarInfo.h=30;cerrarInfo.x=INFO._w-cerrarInfo.w-1;cerrarInfo.y=1;cerrarInfo.visible=1;;ctrF.w=275;ctrF.h=40;ctrF.txt.w=60;ctrF.txt.h=18 ;;ctrF.txt.x=10;ctrF.txt.y=(E2_Graf._h-ctrF.h-5)+10;ctrF.x=ctrF.txt.x+ctrF.txt.w;ctrF.y=ctrF.txt.y-10;;ctr_a.w=120;ctr_a.h=50;ctr_b.w=ctr_a.w;ctr_b.h=ctr_a.h;ctr_c.w=ctr_b.w;ctr_c.h=ctr_b.h;_gapX=30;_allW=(ctr_a.w+ctr_b.w+ctr_c.w+_gapX*2);;ctr_a.x=(CTRS._w-_allW)/2;ctr_a.y=(CTRS._h-ctr_a.h)/2;;;ctr_b.x=ctr_a.x+ctr_a.w+_gapX;ctr_b.y=ctr_a.y;;ctr_c.x=ctr_b.x+ctr_b.w+_gapX;ctr_c.y=ctr_a.y;;;btnAumentar.w=120;btnAumentar.h=40;btnAumentar.x=CTRS._w/3-btnAumentar.w/2;btnAumentar.y=CTRS._h-btnAumentar.h-20;btnAumentar.img=&squot;imgs/tpl/btn120.png&squot;;btnAumentar.txt=&squot;Aumentar&squot;;;btnReiniciar.w=120;btnReiniciar.h=40;btnReiniciar.x=CTRS._w*2/3-btnReiniciar.w/2;btnReiniciar.y=CTRS._h-btnReiniciar.h-20;btnReiniciar.img=&squot;imgs/tpl/btn120.png&squot;;btnReiniciar.txt=&squot;Reiniciar&squot;;;btnShwInfo.w=40;btnShwInfo.h=40;btnShwInfo.x=510-20;btnShwInfo.y=305-20;btnShwInfo.img=&squot;imgs/tpl/btn120.png&squot;;btnShwInfo.txt=&squot;i&squot;;;btnShwRetro.w=120;btnShwRetro.h=40;btnShwRetro.x=50+20+btnAumentar.w+15+btnReiniciar.w+15;btnShwRetro.y=E1._h-40-btnShwRetro.h-15;btnShwRetro.img=&squot;imgs/tpl/btn120.png&squot;;btnShwRetro.txt=&squot;Explicación&squot;;;cerrarRetro.w=21;cerrarRetro.h=cerrarRetro.w;cerrarRetro.x=INFO._w-cerrarRetro.w-10;cerrarRetro.y=8;cerrarRetro.img=&squot;imgs/tpl/cerrar.png&squot;;cerrarRetro.visible=1'">
+   <param name="A_05" value="id='initEsp()' algoritmo='sí' algoritmo='sí' hacer='INFO.x=(E1._w-INFO._w)/2;INFO.y=(E1._h-INFO._h)/2;INFO.visible=1;;E2_Graf.x=5;E2_Graf.y=5;E2_Graf.visible=1;;EspTxt.x=E1._w-EspTxt._w-10;EspTxt.y=E1._h-EspTxt._h-10;EspTxt.visible=1;;;;CTRS.x=(E1._w-CTRS._w)/2;CTRS.y=(E1._h-CTRS._h);CTRS.visible=0;;;btnOpenClose.y=(CTRS.y-btnOpenClose._h);btnOpenClose.x=(E1._w-btnOpenClose._w);'">
+   <param name="A_06" value="id='initEscena()' algoritmo='sí' algoritmo='sí' hacer='initBtns();initEsp();openPanelCtrs();;a=2;b=0;c=2;;conteo=-1;ntaches=0'">
+   <param name="A_07" value="id='__FIN_TPL_()'">
+   <param name="A_08" value="id='calcDatos()' algoritmo='sí' algoritmo='sí' inicio='ntaches=ent((conteo+1)/5);nDigBin=ent(log2(conteo+1));nDigDec=ent(log10(conteo+1))' hacer='EntBin[0]=ent(conteo)%2;EntBin[1]=ent(conteo/2)%2;EntBin[2]=ent(conteo/4)%2;EntBin[3]=ent(conteo/8)%2;EntBin[4]=ent(conteo/16)%2;EntBin[5]=ent(conteo/32)%2;EntBin[6]=ent(conteo/64)%2;EntBin[7]=ent(conteo/128)%2;EntBin[8]=ent(conteo/254)%2;;EntDec[0]=ent(conteo)%10;EntDec[1]=ent(conteo/10)%10;EntDec[2]=ent(conteo/100)%10;EntDec[3]=ent(conteo/1000)%10;;per=(conteo<=32)?max(100*conteo/32,per):per;setSCORMPercentage(per)'">
+   <param name="A_09" value="id='ReInit()' algoritmo='sí' algoritmo='sí' Local='i' inicio='conteo=-1;ntaches=0;nDigBin=0;nDigDec=0;i=0' hacer='EntBin[i]=0;EntDec[i]=0;i=i+1' mientras='i<9'">
+   <param name="A_10" value="id='log2(l2arg)' expresión='log(l2arg)/log(2)'">
+   <param name="A_11" value="id='closePanelCtrs()' algoritmo='sí' expresión='x' algoritmo='sí' hacer='CTRS.visible=1;;CTRS.opened=0;CTRS.y=(E1._h);;btnOpenClose.y=(CTRS.y-btnOpenClose._h);btnOpenClose.x=(E1._w-btnOpenClose._w-5)'">
+   <param name="A_12" value="id='openPanelCtrs()' algoritmo='sí' expresión='x' algoritmo='sí' hacer='CTRS.visible=1;CTRS.opened=1;CTRS.x=(E1._w-CTRS._w)/2;CTRS.y=(E1._h-CTRS._h);;btnOpenClose.y=(CTRS.y-btnOpenClose._h);btnOpenClose.x=(E1._w-btnOpenClose._w-5)'">
+   <param name="A_13" value="id='getSCORMState()' algoritmo='sí' expresión='res' algoritmo='sí' Local='res,c' inicio='c=&squot;@&squot;' hacer='ö=|Estandar ---- [MIDC]XX.<var>  SI SOLO EXISTE UNA ESCENA EN EL HTML|;ö=|Estandar ---- [MIDC]XX_YY.<var>  SI HAY MAS DE UNA ESCENA EN EL HTML|;;res=&squot;I02.dispRetro:&squot;+displayBtnRetro+c;res=res+&squot;I02.conteo:&squot;+conteo+c;res=res+&squot;I02.contSCORM:&squot;+contSCORM+c;res=res+&squot;I02.ntaches:&squot;+ntaches+c;;res=res+&squot;I02.INFO.visible:&squot;+INFO.visible+c;res=res+&squot;I02.RETRO.visible:&squot;+RETRO.visible+c;;res=res+&squot;I02.eb0:&squot;+EntBin[0]+c;res=res+&squot;I02.eb1:&squot;+EntBin[1]+c;res=res+&squot;I02.eb2:&squot;+EntBin[2]+c;res=res+&squot;I02.eb3:&squot;+EntBin[3]+c;res=res+&squot;I02.eb4:&squot;+EntBin[4]+c;res=res+&squot;I02.eb5:&squot;+EntBin[5]+c;res=res+&squot;I02.eb6:&squot;+EntBin[6]+c;res=res+&squot;I02.eb7:&squot;+EntBin[7]+c;res=res+&squot;I02.eb8:&squot;+EntBin[8]+c;;res=res+&squot;I02.ed0:&squot;+EntDec[0]+c;res=res+&squot;I02.ed1:&squot;+EntDec[1]+c;res=res+&squot;I02.ed2:&squot;+EntDec[2]+c;res=res+&squot;I02.ed3:&squot;+EntDec[3]+c;;res=res+&squot;I02.ndb:&squot;+nDigBin+c;res=res+&squot;I02.ndd:&squot;+nDigDec+c;;res=res+&squot;I02.per:&squot;+per+c'">
+   <param name="A_14" value="id='initStateScorm()' algoritmo='sí' expresión='x' algoritmo='sí' hacer='displayBtnRetro=getSCORMStateVar(&squot;I02.dispRetro&squot;);ntaches=getSCORMStateVar(&squot;I02.ntaches&squot;);contSCORM=getSCORMStateVar(&squot;I02.contSCORM&squot;);conteo=(contSCORM!=0)?getSCORMStateVar(&squot;I02.conteo&squot;):-1;;INFO.visible=(getSCORMStateVar(&squot;I02.INFO.visible&squot;)==0)?1:getSCORMStateVar(&squot;I02.INFO.visible&squot;);RETRO.visible=getSCORMStateVar(&squot;I02.RETRO.visible&squot;);;EntBin[0]=getSCORMStateVar(&squot;I02.eb0&squot;);EntBin[1]=getSCORMStateVar(&squot;I02.eb1&squot;);EntBin[2]=getSCORMStateVar(&squot;I02.eb2&squot;);EntBin[3]=getSCORMStateVar(&squot;I02.eb3&squot;);EntBin[4]=getSCORMStateVar(&squot;I02.eb4&squot;);EntBin[5]=getSCORMStateVar(&squot;I02.eb5&squot;);EntBin[6]=getSCORMStateVar(&squot;I02.eb6&squot;);EntBin[7]=getSCORMStateVar(&squot;I02.eb7&squot;);EntBin[8]=getSCORMStateVar(&squot;I02.eb8&squot;);;EntDec[0]=getSCORMStateVar(&squot;I02.ed0&squot;);EntDec[1]=getSCORMStateVar(&squot;I02.ed1&squot;);EntDec[2]=getSCORMStateVar(&squot;I02.ed2&squot;);EntDec[3]=getSCORMStateVar(&squot;I02.ed3&squot;);;nDigBin=getSCORMStateVar(&squot;I02.ndb&squot;);nDigDec=getSCORMStateVar(&squot;I02.ndd&squot;);;per=getSCORMStateVar(&squot;I02.per&squot;)'">
+   <param name="A_15" value="id='initCtrsAnim()' algoritmo='sí' algoritmo='sí' hacer='primeraVez=1'">
+   <param name="A_16" value="id='INICIO' algoritmo='sí' evaluar='una-sola-vez' hacer='primeraVez=0;initEscena();initStateScorm();initCtrsAnim()'">
+   <param name="A_17" value="id='CALCULOS' algoritmo='sí' evaluar='siempre'">
+   <param name="G_01" value="espacio='E1' tipo='texto' fondo='sí' dibujar-si='0' expresión='[__GRAF__,20]' fijo='sí'">
+   <param name="G_02" value="espacio='E1' tipo='texto' fondo='sí' dibujar-si='0' expresión='[__INFO__,20]' fijo='sí'">
+   <param name="G_03" value="espacio='INFO' tipo='texto' fondo='sí' color='blanco' expresión='[20,5]' texto='¿Cómo contamos en base binaria?' fuente='SansSerif,PLAIN,24' fijo='sí'">
+   <param name="G_04" value="espacio='INFO' tipo='texto' expresión='[5,40]' texto='Usa el botón “Agregar” para añadir un elemento a contar.\nUsa el botón “Reiniciar” para empezar el conteo desde cero.\nRecuerda que en la base binaria sólo cuentas con los símbolos 0 y 1. Nota qué pasa cuando al contar agotas los símbolos del primer dígito del extremo derecho. Luego, nota qué pasa cuando se agotan las combinaciones de símbolos cuando tienes más de un dígito.' fuente='SansSerif,PLAIN,20' fijo='sí' ancho='INFO._w-10'">
+   <param name="G_05" value="espacio='E1' tipo='segmento' color='rojo' dibujar-si='(conteo>=0)&(s%5!=0)' coord_abs='sí' expresión='(10+(s%45)*10,10+25*ent(s/45))(10+(s%45)*10,25+25*ent(s/45))' familia='s' s.intervalo='[0,conteo+1]' s.pasos='conteo+1' fijo='sí' tamaño='0' ancho='2'">
+   <param name="G_06" value="espacio='E1' tipo='segmento' color='rojo' dibujar-si='ntaches>0' coord_abs='sí' expresión='(10+(s%9)*50,25+25*ent(s/9))(60+(s%9)*50,10+25*ent(s/9))' familia='s' s.intervalo='[0,ntaches-1]' s.pasos='ntaches-1' fijo='sí' tamaño='0' ancho='2'">
+   <param name="G_07" value="espacio='E1' tipo='texto' dibujar-si='conteo==-1' expresión='[20,20]' texto='Usa el botón “Aumentar” para agregar elementos a contar. Compara cómo se cuenta en base binaria respecto a la decimal. Puedes empezar a contar desde el inicio con el botón “Reiniciar”.' fuente='SansSerif,PLAIN,19' fijo='sí' ancho='E1._w-40' info='Información inicial antes del conteo'">
+   <param name="G_08" value="espacio='E1' tipo='segmento' color='(20,((s==nDigBin)&(ent(log2(conteo+1))==log2(conteo+1)))?0.75:0.1875,3a,00)' coord_abs='sí' expresión='(E1._w-65-s*40,120)(E1._w-95-s*40,120)' familia='s' s.intervalo='[0,nDigBin]' s.pasos='nDigBin' fijo='sí' tamaño='0' info='Subraya dígitos binario'">
+   <param name="G_09" value="espacio='E1' tipo='texto' color='(20,((s==nDigBin)&(ent(log2(conteo+1))==log2(conteo+1)))?0.75:0.1875,3a,00)' dibujar-si='conteo>=0' expresión='[E1._w-77-s*40,110,0,0]' familia='s' s.intervalo='[0,nDigBin]' s.pasos='nDigBin' texto='[EntBin[s]]' fuente='SansSerif,PLAIN,17' decimales='5' fijo='no' info='texto dígitos binario'">
+   <param name="G_10" value="espacio='E1' tipo='texto' expresión='[E1._w-72-45,130]' texto='Binario' fuente='SansSerif,PLAIN,17' fijo='sí' info='texto binario bajo dígitos'">
+   <param name="G_11" value="espacio='E1' tipo='texto' dibujar-si='(ent(log2(conteo+1))==log2(conteo+1))&(conteo>=1)' expresión='[20,130]' texto='{\rtf1\uc0{\fonttbl\f0\fcharset0 Times New Roman;\f1\fcharset0 Arial;\f2\fcharset0 Arial;}{\colortbl\red32\green192\blue58;\red32\green48\blue58;}\f1\fs34 Agotaste todas las opciones de los\par d\u237 gitos presentes \b para el binario\b0  (el\par \u250 ltimo d\u237 gito de todos es ahora 1).\par Debemos \cf0 abrir un d\u237 gito adicional\cf1  a\par la izquierda para continuar contando.\par Tras agregar el nuevo s\u237 mbolo en el\par d\u237 gito, se repetir\u225 n todas las combina-\par ciones hasta ahora logradas.}' fuente='SansSerif,PLAIN,17' fijo='sí' info='Explicación binario nuevo dígito'">
+   <param name="G_12" value="espacio='E1' tipo='segmento' color='(20,((s==nDigDec)&(ent(log10(conteo+1))==log10(conteo+1)))?0.75:0.1875,3a,00)' coord_abs='sí' expresión='(E1._w-65-s*40,180)(E1._w-95-s*40,180)' familia='s' s.intervalo='[0,nDigDec]' s.pasos='nDigDec' fijo='sí' tamaño='0' info='Subraya dígitos decimal'">
+   <param name="G_13" value="espacio='E1' tipo='texto' color='(20,((s==nDigDec)&(ent(log10(conteo+1))==log10(conteo+1)))?0.75:0.1875,3a,00)' dibujar-si='conteo>=0' expresión='[E1._w-77-s*40,170,0,0]' familia='s' s.intervalo='[0,nDigDec]' s.pasos='nDigDec' texto='[EntDec[s]]' fuente='SansSerif,PLAIN,17' decimales='5' fijo='no' info='texto dígitos decimal'">
+   <param name="G_14" value="espacio='E1' tipo='texto' expresión='[E1._w-78-45,190]' texto='Decimal' fuente='SansSerif,PLAIN,17' fijo='sí' info='texto decimal bajo dígitos'">
+   <param name="G_15" value="espacio='E1' tipo='texto' dibujar-si='(ent(log10(conteo+1))==log10(conteo+1))&(conteo>=1)' expresión='[20,130]' texto='{\rtf1\uc0{\fonttbl\f0\fcharset0 Times New Roman;\f1\fcharset0 Arial;\f2\fcharset0 Arial;}{\colortbl\red32\green192\blue58;\red32\green48\blue58;}\f1\fs34 Agotaste todas las opciones de los\par d\u237 gitos presentes \b para el decimal\b0  (el\par s\u237 mbolo en todos los d\u237 gitos es ahora 9).\par Debemos \cf0 abrir un d\u237 gito adicional\cf1  a\par la izquierda para continuar contando.\par Tras agregar el nuevo s\u237 mbolo en\par el d\u237 gito, se repetir\u225 n todas las combina-\par ciones hasta ahora logradas.}' fuente='SansSerif,PLAIN,17' fijo='sí' info='Explicación decimal nuevo dígito'">
+   <param name="G_16" value="espacio='E1' tipo='texto' dibujar-si='0' expresión='[20,20]' texto='antes=[antes]\ndespues=[despues]\nper=[per]' fijo='no' info='debug'">
+</ajs>
+			</div>
+		</div>
+	<!-- Fin bloque de descartes -->
+
+
+	<!-- Subtítulo (no necesario en introducción) -->
+    <h2>Fórmula para saber cuántos palitos se pueden contar</h2>
+    
+    
+    <!-- Párrafo -->
+    <p>
+    Ahora que ya has practicado hasta contar bastantes palitos en base binaria, habrás notado que cada dígito cuenta con 2 símbolos (el 0 y el 1). Por cada dígito que se agrega, se multiplica el número de opciones pasadas por 2 (el número de símbolos).
+	</p>
+	<p>
+	Así pues, si tienes 3 dígitos, el número de opciones de conteo que tienes es \(2)(2)(2)=2^3=8\). De forma general, si tienes \(n\) dígitos, puedes contar \(2^n\) palitos en binario.
+	</p>
+	<p>
+	Observa que algo parecido pasa cuando usas base decimal. ¿Se te ocurre una fórmula para cuántos palitos puedes contar dado un número de dígitos n en la base decimal?
+    </p>
+
+    <!---- TERMINA EL CONTENIDO DE LA PÁGINA ------>
+</div>
+
+
+
+  <!---- INICIA LA INFO SOBRE LAS LICENCIAS Y LOS CRÉDITOS. ------->
+    <a id="btCopyright" class="standardButton" title="Haz clic aquí para consultar los créditos y las condiciones de uso de este recurso." href="#" onclick="document.getElementById('copyright').className='visible';">©</a>
+    <div id="copyright" class="oculto">
+      
+      <div class='innerCopyright'>
+      
+          <a id="btCloseCopyright" class="standardButton" title="Haz clic aquí para cerrar esta ventana." href="#" onclick="document.getElementById('copyright').className='oculto'">×</a>
+  
+          <!-- Créditos UAM  (siempre deben ir en primer lugar) -->
+			<div class="creditos">
+				<h1>
+					Créditos 
+				</h1>
+								<table class="autores" 	>
+					<tr> <td  class="rol"> Diseño del contenido			</td>		<td class="nombre"> Alejandro Radillo Díaz, LITE</td></tr>
+					<tr> <td  class="rol"> Diseño funcional				</td>		<td class="nombre"> Alejandro Radillo Díaz, LITE</td></tr>
+					<tr> <td  class="rol"> Programación					</td>		<td class="nombre"> Alejandro Radillo Díaz, LITE</td></tr>
+					<!-- Varias personas en el mismo rubro, separar por <br> -->
+					<tr> <td  class="rol"> Asesoría de programación		</td>		<td class="nombre">Oscar Escamilla González, LITE</td></tr>
+					<tr> <td  class="rol"> Diseño gráfico				</td>		<td class="nombre">Francisco Varela Fuentes</td></tr>
+					<tr> <td  class="rol" >Coordinación					</td>		<td class="nombre"> Leticia Montserrat Vargas Rocha</td></tr>
+					
+				</table>
+	         
+	         <div class='logos'>
+	            <a href=''>
+	               <img src="../images/info/icns/logoLite.png">
+	            </a>
+	            <a href="http://www.unadmexico.mx/">
+	               <img src="../images/info/icns/logoUNADM.png">
+	            </a>
+	         </div>
+          </div>
+          
+          <!-- Linea separación créditos -->
+          <hr class="linea" />
+     
+          <!-- Aviso licencias -->
+          <div class="licencias">
+          
+				<p class="creativeCommons">Los contenidos de esta unidad didáctica interactiva están bajo una licencia <a href="http://creativecommons.org/licenses/by-nc-sa/2.5/es/" target="_blank">Creative Commons Reconocimiento-NoComercial-CompartirIgual</a>.</p>
+
+				<!--arquimedes (optativo)-->
+				<p>La unidad didáctica fue creada con <a href="http://arquimedes.matem.unam.mx/Descartes5/creditos/conCCL.html" target="_blank">Arquímedes</a>, una herramienta de código abierto.</p>
+
+				<!-- Descartes -->
+				<p>La unidad didáctica contiene escenas elaboradas con Descartes, una herramienta de código abierto.</p>
+
+
+          	<p style='text-align:center'> LITE - UnADM 2014</p>
+          </div>
+      </div>
+    </div> 
+   <!---- TERMINA LA INFO SOBRE LAS LICENCIAS Y LOS CRÉDITOS. ------->
+  
+  
+  </div>
+  
+  
+</article>
+
+
+</body>
+
+</html>

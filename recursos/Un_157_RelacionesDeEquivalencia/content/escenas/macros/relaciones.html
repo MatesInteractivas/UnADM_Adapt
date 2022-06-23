@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <title>TITULO</title>
+  
+  <script type='text/javascript' src='lib/descartes-min.js'></script>
+</head>
+
+<body bgcolor="e0e4e8">
+
+  <p align="center">
+    <ajs name="Descartes" width="970" height="550" code="Descartes">
+      <param name="tamaño" value="970x550">
+      <param name="decimal_symbol" value=",">
+      <param name="image_loader" value="">
+      <param name="expand" value="">
+      <param name="nombre" value="Descartes">
+      <param name="antialias" value="sí">
+      <param name="deshacer" value="no">
+      <param name="editable" value="no">
+      <param name="Idioma" value="español">
+      <param name="Botones" value="créditos=no config=no inicio=no limpiar=no filas_norte=0 filas_sur=0 ancho_este=150 ancho_oeste=150 alto=40 ">
+      <param name="E_01" value="tipo='R2' id='E1' x='0' y='0' ancho='100%' alto='100%' dibujar-si='1' fijo='sí' escala='48' O.x='0' O.y='0' despl_imagen='arr-izq' fondo='ffffff' red='c0c0c0' red10='808080' ejes='404040' texto='no' números='no' sensible_a_los_movimientos_del_ratón='no' ">
+      <param name="C_01" value="id='n1' interfaz='botón' tipo='numérico' región='sur' espacio='E1' nombre='n1' expresión='(0,0)' valor='0' visible='sí' color='222222' color-int='f0f8ff' negrita='no' cursiva='no' subrayada='no' fuente puntos='19' acción='calcular' parámetro='delLastRel()' ">
+      <param name="C_02" value="id='selected' tipo='numérico' interfaz='pulsador' región='sur' espacio='E1' nombre='selected' expresión='(0,0,150,40)' valor='selected' incr='1' min='-1' max='RELS.n-1' discreto='no' decimales='2' fijo='sí' visible='sí' ">
+      <param name="A_01" value="id='development' expresión='1' ">
+      <param name="A_02" value="id='debug' expresión='1' ">
+      <param name="A_03" value="id='C1' matriz='sí' evaluar='una-sola-vez' columnas='20' filas='10' expresión=';' ">
+      <param name="A_04" value="id='C2' matriz='sí' evaluar='una-sola-vez' columnas='20' filas='10' expresión=';' ">
+      <param name="A_05" value="id='RELS' matriz='sí' evaluar='una-sola-vez' columnas='20' filas='10' expresión=';' ">
+      <param name="A_06" value="id='FLECHAS' matriz='sí' evaluar='una-sola-vez' columnas='20' filas='10' expresión=';' ">
+      <param name="A_07" value="id='_DEVELOP__()' algoritmo='no' expresión='x' ">
+      <param name="A_08" value="id='initCs()' algoritmo='sí' expresión='x' local='i,iC1,iC2' inicio='i=0;' hacer='iC1=min(i,C1.n);iC2=min(i,C2.n);;;;C1[iC1,0]=-3;C1[iC1,1]=3-iC1;C1[iC1,2]=0.25;C1[iC1,3]=&squot;&squot;+iC1;;;;C2[iC1,0]=3;C2[iC2,1]=3-iC2;C2[iC2,2]=0.30;C2[iC2,3]=&squot;&squot;+iC2;;i=i+1' mientras='i<max(C1.n,C2.n)' ">
+      <param name="A_09" value="id='updateEspTest()' algoritmo='sí' expresión='x' hacer='Esp.mx=E1.mouse_x;Esp.my=E1.mouse_y;Esp.press=E1.mouse_pressed;Esp.escala=E1.escala' ">
+      <param name="A_10" value="id='relationAdded(iC1,iC2)' algoritmo='no' expresión='0' ">
+      <param name="A_11" value="id='_NORMAL__()' algoritmo='no' expresión='x' ">
+      <param name="A_12" value="id='getArcC1(idx)' algoritmo='sí' expresión='idx<C1.n' hacer='obj.x=C1[idx,0];obj.y=C1[idx,1];obj.r=C1[idx,2];obj.arc.init=0;obj.arc.end=360;obj.txt=C1[idx,3];;' ">
+      <param name="A_13" value="id='getArcC2(idx)' algoritmo='sí' expresión='idx<C2.n' hacer='obj.x=C2[idx,0];obj.y=C2[idx,1];obj.r=C2[idx,2];obj.arc.init=0;obj.arc.end=360;obj.txt=C2[idx,3]' ">
+      <param name="A_14" value="id='sobreCualC1(mx,my)' algoritmo='sí' expresión='res' local='i,px,px,pr,res' inicio='i=0;res=-1' hacer='dist=sqrt((C1[i,0]-mx)^2+(C1[i,1]-my)^2);res=(dist<=(C1[i,2]))?i:res;i=i+1' mientras='(res<0)&(i<C1.n)' ">
+      <param name="A_15" value="id='sobreCualC2(mx,my)' algoritmo='sí' expresión='res' local='i,px,px,pr,res' inicio='i=0;res=-1' hacer='dist=sqrt((C2[i,0]-mx)^2+(C2[i,1]-my)^2);res=(dist<=(C2[i,2]))?i:res;i=i+1' mientras='(res<0)&(i<C2.n)' ">
+      <param name="A_16" value="id='getAng(x1,y1,x2,y2)' algoritmo='sí' expresión='theta' local='theta,pPunto,normA,normB' hacer='normA=sqrt(x1^2+y1^2);normB=sqrt(x2^2+y2^2);pPunto=(x1*x2+y1*y2);theta=acos(pPunto/(normA*normB));;' ">
+      <param name="A_17" value="id='getFlechaRel(idx)' algoritmo='sí' expresión='(idx<RELS.n)' local='iC1,iC2,ang,dir.x,dir.y.mPix' hacer='iC1=RELS[idx,0];iC2=RELS[idx,1];;mPix=(5/Esp.escala);f.p1.x=C1[iC1,0];f.p1.y=C1[iC1,1];f.p1.r=C1[iC1,2]+mPix;;f.p2.x=C2[iC2,0];f.p2.y=C2[iC2,1];f.p2.r=C2[iC2,2]+mPix;;dir.x=(f.p2.x-f.p1.x) ;dir.y=(f.p2.y-f.p1.y);;ang=getAng(dir.x,dir,y);ang=ent(ang/(2*pi)+0.45);ang=2*pi*ang;;dir.x=cos(ang);dir.y=sen(ang);;f.p1.x=f.p1.x+dir.x*f.p1.r;f.p1.y=f.p1.y+dir.y*f.p1.r;;f.p2.x=f.p2.x-dir.x*f.p2.r;f.p2.y=f.p2.y-dir.y*f.p2.r;' ">
+      <param name="A_18" value="id='getPosTxtGC1(idx)' algoritmo='sí' expresión='1' hacer='txt=C1[idx,3]+&squot;&squot;;txt.h=24;txt.w=_AnchoDeCadena_(txt,&squot;SansSerif&squot;,&squot;PLAIN&squot;,txt.h+&squot;&squot;);;txt.w=(txt.w)/Esp.escala;txt.h=20/Esp.escala;;txt.x=C1[idx,0]-txt.w/2;txt.y=C1[idx,1]-txt.h/2' ">
+      <param name="A_19" value="id='getPosTxtGC2(idx)' algoritmo='sí' expresión='1' hacer='txt=C2[idx,3]+&squot;&squot;;txt.h=24;txt.w=_AnchoDeCadena_(txt,&squot;SansSerif&squot;,&squot;PLAIN&squot;,txt.h+&squot;&squot;);;txt.w=(txt.w)/Esp.escala;txt.h=20/Esp.escala;;txt.x=C2[idx,0]-txt.w/2;txt.y=C2[idx,1]-txt.h/2' ">
+      <param name="A_20" value="id='existeRel(iC1,iC2)' algoritmo='sí' expresión='res' local='i,res,isRel' inicio='i=0;res=-1' hacer='isRes=(RELS[i,0]==iC1)&(RELS[i,1]==iC2)&(RELS.n>i);res=(isRes)?i:res;i=i+1' mientras='(i<RELS.n)&(res<0)' ">
+      <param name="A_21" value="id='addRel(iC1,iC2)' algoritmo='sí' expresión='x' local='idxRes,doAdd,tt' hacer='RELS.n=max(RELS.n,0);idxRes=existeRel(iC1,iC2);doAdd=(idxRes<0);;idxRes=(doAdd)?RELS.n:idxRes;RELS[idxRes,0]=iC1;RELS[idxRes,1]=iC2;;RELS.n=RELS.n+doAdd;tt=(doAdd)?updateFlechas():0;tt=(doAdd)?relationAdded(iC1,iC2):0' ">
+      <param name="A_22" value="id='delLastRel()' algoritmo='sí' expresión='x' hacer='RELS.n=max(0,RELS.n-1)' ">
+      <param name="A_23" value="id='updateFlechas()' algoritmo='sí' expresión='0' local='j' inicio='_Print_(&squot;Vamos a agregar flechas :&squot;+RELS.n);j=0;' hacer='getFlechaRel(j);FLECHAS[j,0]=1;FLECHAS[j,1]=f.p1.x;FLECHAS[j,2]=f.p1.y;FLECHAS[j,3]=f.p2.x;FLECHAS[j,4]=f.p2.y;;j=j+1' mientras='j<RELS.n' ">
+      <param name="A_24" value="id='update()' algoritmo='sí' expresión='x' local='doCalcC2,doAddRel,tt' hacer='recienPress=(!ANT.press)&(Esp.press);recienSol=(ANT.press)&(!Esp.press);;doCalcC1=(actC1<0)&(recienPress);;actC1=(doCalcC1)?sobreCualC1(Esp.mx,Esp.my):actC1;;doCalcC2=((recienSol)|(Esp.press))&(actC1>=0);actC2=(doCalcC2)?sobreCualC2(Esp.mx,Esp.my):actC2;doAddRel=(recienSol)&(actC1>=0)&(actC2>=0);tt=(doAddRel)?addRel(actC1,actC2):0;;actC1=(!Esp.press)?-1:actC1;actC2=(!Esp.press)?-1:actC2;ANT.press=Esp.press' ">
+      <param name="A_25" value="id='INICIO' algoritmo='sí' evaluar='una-sola-vez' hacer='_Print_(&squot;Iniciamos el macro !!!1&squot;);Esp.mx=E1.mouse_x;Esp.my=E1.mouse_y;Esp.press=E1.mouse_pressed;Esp.escala=E1.escala;;actC2=-1;actC1=-1;;C1.n=3;C2.n=3;RELS.n=0;ANT.press=0;verFlechas=1;selected=-1;initCs();;addRel(0,2);' ">
+      <param name="A_26" value="id='CALCULOS' algoritmo='sí' evaluar='siempre' hacer='tt=(development)?(updateEspTest()+update()):0;;' ">
+      <param name="G_01" value="espacio='E1' tipo='arco' fondo='sí' color='20303a' dibujar-si='getArcC1(s)' coord_abs='no' centro='(obj.x,obj.y)' radio='obj.r' inicio='obj.arc.init' fin='obj.arc.end' vectores='no' familia='s' s.intervalo='[0,C1.n-1]' s.pasos='C1.n-1' decimales='2' fijo='sí' relleno='f68b00' ancho='1' fuente='SansSerif,PLAIN,18' ">
+      <param name="G_02" value="espacio='E1' tipo='punto' fondo='no' color='20303a' dibujar-si='getPosTxtGC1(s)' coord_abs='no' expresión='(txt.x,txt.y)' familia='s' s.intervalo='[0,C1.n-1]' s.pasos='C1.n-1' texto='[txt]' decimales='2' fijo='no' tamaño='0' fuente='SansSerif,PLAIN,24' ">
+      <param name="G_03" value="espacio='E1' tipo='arco' fondo='sí' color='20303a' dibujar-si='getArcC2(s)' coord_abs='no' centro='(obj.x,obj.y)' radio='obj.r' inicio='obj.arc.init' fin='obj.arc.end' vectores='no' familia='s' s.intervalo='[0,C2.n-1]' s.pasos='C2.n-1' decimales='2' fijo='sí' relleno='4f8694' ancho='1' fuente='SansSerif,PLAIN,18' ">
+      <param name="G_04" value="espacio='E1' tipo='punto' fondo='no' color='20303a' dibujar-si='getPosTxtGC2(s)' coord_abs='no' expresión='(txt.x,txt.y)' familia='s' s.intervalo='[0,C2.n-1]' s.pasos='C2.n-1' texto='[txt]' decimales='2' fijo='no' tamaño='0' fuente='SansSerif,PLAIN,24' ">
+      <param name="G_05" value="espacio='E1' tipo='arco' fondo='no' color='20303a' dibujar-si='(actC1>=0)&(getArcC1(actC1))' coord_abs='no' centro='(obj.x,obj.y)' radio='obj.r' inicio='obj.arc.init' fin='obj.arc.end' vectores='no' decimales='2' fijo='sí' relleno='verde' ancho='2' fuente='SansSerif,PLAIN,18' ">
+      <param name="G_06" value="espacio='E1' tipo='punto' fondo='no' color='20303a' dibujar-si='(actC1>=0)&(getPosTxtGC1(actC1))' coord_abs='no' expresión='(txt.x,txt.y)' texto='[txt]' decimales='2' fijo='no' tamaño='0' fuente='SansSerif,PLAIN,24' ">
+      <param name="G_07" value="espacio='E1' tipo='arco' fondo='no' color='20303a' dibujar-si='(actC2>=0)&(getArcC2(actC2))' coord_abs='no' centro='(obj.x,obj.y)' radio='obj.r' inicio='obj.arc.init' fin='obj.arc.end' vectores='no' decimales='2' fijo='sí' relleno='6800ee00' ancho='1' fuente='SansSerif,PLAIN,18' ">
+      <param name="G_08" value="espacio='E1' tipo='punto' fondo='no' color='20303a' dibujar-si='(actC2>=0)&(getPosTxtGC2(actC2))' coord_abs='no' expresión='(txt.x,txt.y)' texto='[txt]' decimales='2' fijo='no' tamaño='0' fuente='SansSerif,PLAIN,24' ">
+      <param name="G_09" value="espacio='E1' tipo='flecha' fondo='no' color='blanco' dibujar-si='(verFlechas)&(FLECHAS[s,0])' coord_abs='no' expresión='(FLECHAS[s,1],FLECHAS[s,2])(FLECHAS[s,3],FLECHAS[s,4])' familia='s' s.intervalo='[0,RELS.n-1]' s.pasos='RELS.n-1' decimales='2' fijo='sí' ancho='3' punta='4' flecha='20303a' fuente='SansSerif,PLAIN,18' ">
+      <param name="G_10" value="espacio='E1' tipo='flecha' fondo='no' color='20303a' dibujar-si='(actC1>=0)&(Esp.press)&(getArcC1(actC1))' coord_abs='no' expresión='(obj.x,obj.y)(Esp.mx,Esp.my)' decimales='2' fijo='sí' ancho='3' punta='4' flecha='b6cd89' fuente='SansSerif,PLAIN,18' info='Flecha Actual' ">
+      <param name="G_11" value="espacio='E1' tipo='flecha' fondo='no' color='blanco' dibujar-si='(selected>=0)&(getFlechaRel(selected))' coord_abs='no' expresión='(f.p1.x,f.p1.y)(f.p2.x,f.p2.y)' familia='s' s.intervalo='[0,RELS.n-1]' s.pasos='RELS.n-1' decimales='2' fijo='sí' ancho='3' punta='4' flecha='c13030' fuente='SansSerif,PLAIN,18' ">
+      <param name="G_12" value="espacio='E1' tipo='texto' fondo='no' color='20303a' dibujar-si='debug' expresión='[20,20]' texto='Esp.mouse = ([Esp.mx],[Esp.my])\nANT.press=[ANT.press]\nEsp.press=[Esp.press]\n\nRELS.n = [RELS.n]\nactCX=[actC1] [actC2]' decimales='2' fijo='no' ancho='700' fuente='SansSerif,PLAIN,18' ">
+    </ajs>
+    <ajs name="Descartes" width="970" height="550" code="Descartes">
+      <param name="tamaño" value="970x550">
+      <param name="decimal_symbol" value=",">
+      <param name="image_loader" value="">
+      <param name="expand" value="">
+      <param name="nombre" value="Descartes">
+      <param name="Versión" value="6">
+      <param name="antialias" value="sí">
+      <param name="deshacer" value="no">
+      <param name="editable" value="sí">
+      <param name="Idioma" value="español">
+      <param name="Botones" value="créditos=no config=no inicio=no limpiar=no filas_norte=0 filas_sur=0 ancho_este=150 ancho_oeste=150 alto=40 ">
+      <param name="E_01" value="tipo='R2' id='E1' x='0' y='0' ancho='100%' alto='100%' dibujar-si='1' fijo='sí' escala='48' O.x='0' O.y='0' despl_imagen='arr-izq' fondo='ffffff' red='c0c0c0' red10='808080' ejes='404040' texto='no' números='no' sensible_a_los_movimientos_del_ratón='no' ">
+      <param name="C_01" value="id='n1' interfaz='botón' tipo='numérico' región='interior' espacio='E1' nombre='Borrar ' expresión='(0,0,100,40)' valor='0' visible='sí' color='222222' color-int='f0f8ff' negrita='no' cursiva='no' subrayada='no' fuente puntos='19' acción='calcular' parámetro='relacion.delLastRel()' ">
+      <param name="C_02" value="id='n2' interfaz='botón' tipo='numérico' región='sur' espacio='E1' nombre='n2' expresión='(0,0,150,40)' valor='0' visible='sí' color='222222' color-int='f0f8ff' negrita='no' cursiva='no' subrayada='no' fuente puntos='19' acción='calcular' parámetro='relacion.addRel(2,2)' ">
+      <param name="A_01" value="id='relacion._Print_(str)' algoritmo='sí' expresión='0' hacer='_Print_(&squot;Debug from MACRO :&squot;+str)' ">
+      <param name="A_02" value="id='INICIO' algoritmo='sí' evaluar='una-sola-vez' hacer='relacion.development=0;;relacion.Esp.escala=E1.escala;;relacion.update();;relacion.addRel(0,2);relacion.addRel(1,2)' ">
+      <param name="A_03" value="id='CALCULOS' algoritmo='sí' evaluar='siempre' hacer='relacion.Esp.mx=E1.mouse_x;relacion.Esp.my=E1.mouse_y;relacion.Esp.press=E1.mouse_pressed;relacion.Esp.escala=E1.escala;;relacion.update()' ">
+      <param name="G_01" value="espacio='E1' tipo='macro' fondo='no' dibujar-si='1' coord_abs='no' nombre='relacion' expresión='relaciones.txt' rotini='0' posini='[0,0]' ">
+    </ajs>
+  </p>
+
+
+</body>
+</html>

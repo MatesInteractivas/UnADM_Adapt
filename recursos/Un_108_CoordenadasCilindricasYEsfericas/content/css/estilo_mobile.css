@@ -1,0 +1,202 @@
+@media (max-width: 979px), (max-height: 639px) {
+	#container {
+		width:520px;
+		height:320px;
+		position: relative;
+	}
+
+	ul#listaSecciones li span a, .ui-buttonset{
+		width:200px;
+		border-right: none;
+	}
+
+
+	#header #areaTitleContainer, 
+	#header #pageTitleContainer{
+		display: none;
+	}
+
+	#header #seccionTitleContainer{
+		position: absolute;
+		top: 50%;
+		left: 50px;
+		right: 100px;
+		transform:translate(0,-50%);
+		text-align: center;
+		font-size: 22px;
+	}
+
+
+	#container .interactive {
+		width: 520px;
+		height: 274px;
+	}
+
+
+	#container iframe#containerApplet{
+		width: 100%;
+		height: 100%;
+		border: 0px;
+		margin: 0px;
+	}
+
+	#menuContainer {
+		display: inline-block;
+		position: absolute;
+		top: 45px;
+		left: 0;
+		bottom: 0;
+		background-color: rgba(0,0,0,.8);
+		padding: 0 ;
+		display: none;
+		border-right: 2px #999 solid;
+	}
+
+	#menuContainer #secciones{ background: none; }
+	#menuContainer ul#listaSecciones li{
+		display: block;
+		margin: 0;
+	}
+	#menuContainer ul#listaSecciones li span.ui-button {
+		height: 45px;
+		font-size: 22px;
+	}
+
+	#menuContainer ul#listaSecciones li span.ui-buttonset{
+		margin: 0px;
+	}
+
+
+	#menuContainer ul#listaSecciones li span.ui-buttonset .ui-button-icon-only{
+		width: 40px;
+	}
+
+	#menuContainer #info {
+		display: none;
+	}
+
+	#menuContainer #anterior,
+	#menuContainer #siguiente{
+		position: absolute;
+		bottom: 5px;
+		right: 5px;
+	}
+
+	#menuContainer #anterior{
+		right: auto;
+		left: 5px;
+	}
+
+	#container .submenu {
+		bottom: 0px;
+		right: 0px;
+		background: rgba(0,0,0,.8);
+		border: none;
+		border-radius: 0;
+		color:#fff;
+	}
+	#container .submenu li.ui-menu-item{
+		font-size: 18px;
+		line-height: 20px;
+		color:inherit;
+	}
+	#container .submenu li.ui-menu-item a{
+		color: inherit;
+	}
+
+	#container .submenu li > a.ui-state-focus{
+		border: none;
+	}
+
+	/**
+	************************************************
+	* PARA OCULTAR EL HEADER
+	************************************************
+	*/
+
+
+	/*
+	PARA ANIMAR CUANDO SE OCULTA o APARECE
+	*/
+	.interactive, #header,#menuContainer{
+
+		-moz-transition:    height 1s ease;
+    	-webkit-transition: height 1s ease;
+    	-o-transition:      height 1s ease;
+    	transition:         height 1s ease;
+
+    	transition-property : height, top;
+	}
+
+	#container .ui-effects-wrapper #menuContainer{
+		transition-property : none;
+	}
+	
+	#container.header_oculto #header{
+		padding: 0px;
+		height: 0px;
+	}
+
+
+
+	#container.header_oculto .interactive{
+		height: 100%;
+		top:0px;
+	}
+
+
+	#container.header_oculto #menuContainer{
+		top: 0px;
+
+	}
+}
+
+@media (min-width: 980px) and (min-height: 640px){
+	#header .creditos,
+	#header  .info{
+		display: none;
+	}
+
+	#header #btnShowMenu {
+		display: none;
+	}
+}
+
+@media (max-width: 979px) and (orientation: portrait), (max-height: 639px) and (orientation: portrait) {
+	html,body{
+		width: 100%;
+		height: 100%;
+		border: 0;
+		padding:0;
+		margin: 0;
+		overflow: hidden; 
+	}
+
+	html{
+		display: table;	
+	}
+	body{
+		display: table-cell;
+		text-align: center;
+		vertical-align: middle;
+		padding: 20px;
+	}
+	body:before{
+		content: 'El material está diseñado para verse en pantallas horizontales';
+
+		text-align: center;
+		font-weight: bolder;
+		color: white;
+		text-shadow: 0px 0px 2px black;
+		font-size: 36px;
+	}
+	body:after{
+		margin-top:10px; 
+		content: url('images/icon-rotate.png');
+		display: block;
+	}
+
+	#container{
+		display: none;
+	}
+}

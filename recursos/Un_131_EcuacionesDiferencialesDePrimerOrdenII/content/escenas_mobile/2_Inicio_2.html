@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <link href="../css/html5_mobile.css" rel="stylesheet" type="text/css" media="screen" />
+  <!-------- MathJax --- para fórmulas matemáticas ------>
+  <script type="text/javascript"
+    src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+  </script>
+  <script type="text/javascript" src='../javascript/inject_functions_scorms_descartes.js'></script>
+ 
+</head>
+
+<body>
+  
+
+<article class="course_content_container">
+  
+  <div class="course_content">   
+
+    <!------ INICIA EL CONTENIDO DE LA PÁGINA --------->
+
+    <!--- Título de la página --->
+
+    <h2 align="center">Estudio de poblaciones y ecuaciones diferenciales</h2>
+
+	<div class='text_panel'>
+
+		<!--- Subtítulo (no necesario en introducción) --->
+
+		<h2>Modelos de crecimiento</h2>
+
+		<!--- Párrafo --->
+
+		<p>En general, en un sistema poblacional, el número de individuos en un instante futuro es el resultado de sumar los individuos que nacerán hasta el instante futuro a la población actual, y los individuos que se incorporarán por inmigración, además hay que restar los individuos que perecerán por diversas características y los individuos que emigrarán.</p>
+
+        <p>Para describir el sistema debemos hacer algunas consideraciones que nos llevan a un problema simplificado, y en el caso más sencillo, podremos modelar tal situación mediante una ecuación diferencial lineal de primer orden con sus respectivas condiciones iniciales:</p>
+
+
+        <p><div align="center">\( \frac{dy}{dt} = ky\) , \( y(0) = y_{0} \)</div></p>
+
+        <p>Afortunadamente para el caso de las ecuaciones diferenciales lineales de primer orden existen diversos métodos para poder resolverlas. Usando el método de separación de variables llegamos a que la solución de la ecuación anterior está dada por la función \( y(t) = y_{0}e^{kt} \)
+
+        <p>La forma de la solución nos permite ver que el número de individuos crece de forma exponencial si el valor de \(k\) es positivo o decrece de forma exponencial si el valor de \(k\) es negativo.</p>
+
+       <!-- ejemplo para incluir una imagen -->
+
+    <div class="course_extern_content"> 
+
+      <img src="imgs/grafica.jpg"></img>
+
+    </div>
+
+        <p>En general, no es razonable suponer un crecimiento de la población como el descrito anteriormente. Es más realista introducir algún factor externo que suponga un freno en el crecimiento, por ejemplo, la existencia de depredadores que reduzcan el número de individuos de una población, la limitación de los recursos alimenticios, el confinamiento espacial de la población, etc. Como consecuencia de agregar estos factores la representación matemática correspondiente nos conduce a ecuaciones diferenciales no lineales del estilo de la ecuación de Bernoulli, de tal forma que podemos llevarlas a la forma de un sistema lineal que, como ya vimos, es más fácil resolver.</p>
+
+        <p>Un ejemplo de modelado por medio de una ecuación de Bernoulli es el caso de la propagación de enfermedades, en donde la velocidad de propagación de una enfermedad es proporcional a la probabilidad de que un individuo infecte a otro, multiplicado por el número de individuos infectados \(N\).</p> La probabilidad (\(P\)) de que un individuo infecte a otro es proporcional a la relación entre individuos sanos \(N_0-N\) y la cantidad total \( N_{0} \) de individuos, \(P = (\frac{N_{0}-N}{N_{0}})\).</p>
+
+        <p>\( \frac{dN}{dt} = N(\frac{N_{0}-N}{N_{0}})\)</p>
+
+        <p>\( \frac{dN}{dt} = N - \frac{N^{2}}{N_{0}}\)</p>
+
+        <p>\( \frac{dN}{dt} - N = (-\frac{1}{N_{0}})N^{2}\)</p>
+
+        <p>La última ecuación es no lineal y tiene la forma de la ecuación de Bernoulli:</p>
+
+        <p> \( \frac{dy}{dt} + p(x)y = Q(x)y^{n}\)</p>
+
+    <p>A continuación analizaremos cómo nos ayuda este tipo de ecuaciones.</p>
+
+            <!------ TERMINA EL CONTENIDO DE LA PÁGINA --------->
+
+   <!------ INICIA LA INFO SOBRE LAS LICENCIAS Y LOS CRÉDITOS. ---------->
+    <a id="btCopyright" class="standardButton" title="Haz clic aquí para consultar los créditos y las condiciones de uso de este recurso." href="#" onClick="document.getElementById('copyright').className='visible';">&#169;</a>
+    <div id="copyright" class="oculto">
+      
+      <div class='innerCopyright'>
+      
+          <a id="btCloseCopyright" class="standardButton" title="Haz clic aquí para cerrar esta ventana." href="#" onClick="document.getElementById('copyright').className='oculto'">×</a>
+  
+          <!-- Créditos UAM  (siempre deben ir en primer lugar) -->
+			<div class="creditos">
+				<h1>
+					Créditos 
+				</h1>
+
+				<h2>
+					Escena original
+				</h2>				<table class="autores" 	>
+
+					<tr> <td  class="rol"> Diseño del contenido			</td>		<td class="nombre"> Víctor Hugo García Jarillo (Facultad de Ciencias UNAM, LITE)</td></tr>
+					<tr> <td  class="rol"> Diseño funcional				</td>		<td class="nombre"> Víctor Hugo García Jarillo (Facultad de Ciencias UNAM, LITE)</td></tr>
+					<tr> <td  class="rol"> Programación					</td>		<td class="nombre"> Víctor Hugo García Jarillo (Facultad de Ciencias UNAM, LITE)</td></tr>
+					<tr> <td  class="rol"> Diseño gráfico				</td>		<td class="nombre"> Ricardo López Gómez</td></tr>
+					<tr> <td  class="rol" >Coordinación			</td>		<td class="nombre"> Leticia Montserrat Vargas Rocha</td></tr>
+					</table>
+				<h2>
+					Adaptación 
+				</h2>
+				<table class="autores" 	>
+				<tr> <td  class="rol"> Diseño funcional				</td>		<td class="nombre"> Victor Hugo García Jarillo (Facultad de                    Ciencias, UNAM)		</td></tr>
+					<tr> <td  class="rol"> Programación				</td>		<td class="nombre"> Victor Hugo García Jarillo (Facultad de                    Ciencias, UNAM)</td></tr>
+
+					<tr> <td  class="rol"> Diseño gráfico			</td>		<td class="nombre"> Francisco	Varela Fuentes</td></tr>
+					<tr> <td  class="rol" >Coordinación			</td>		<td class="nombre"> Leticia Montserrat Vargas Rocha</td></tr>
+		
+				</table>
+	         
+	         <div class='logos'>
+	            <a href=''>
+	               <img src="../images/info/icns/logoLite.png">
+	            </a>
+	            <a href="http://www.unadmexico.mx/">
+	               <img src="../images/info/icns/logoUNADM.png">
+	            </a>
+	         </div>
+          </div>
+          
+          <!-- Linea separación créditos -->
+          <hr class="linea" />
+     
+          <!-- Aviso licencias -->
+          <div class="licencias">
+          
+				<p class="creativeCommons">Los contenidos de esta unidad didáctica interactiva están bajo una licencia <a href="http://creativecommons.org/licenses/by-nc-sa/2.5/es/" target="_blank">Creative Commons Reconocimiento-NoComercial-CompartirIgual</a>.</p>
+
+				<!--arquimedes (optativo)-->
+				<p>La unidad didáctica fue creada con <a href="http://arquimedes.matem.unam.mx/Descartes5/creditos/conCCL.html" target="_blank">Arquímedes</a>, una herramienta de código abierto.</p>
+
+				<!-- Descartes -->
+				<p>La unidad didáctica contiene escenas elaboradas con Descartes, una herramienta de código abierto.</p>
+
+
+          	<p style='text-align:center'> LITE - UnADM 2014</p>
+          </div>
+      </div>
+    </div> 
+   <!------ TERMINA LA INFO SOBRE LAS LICENCIAS Y LOS CRÉDITOS. ---------->
+  
+  
+  </div>
+  
+  
+</article>
+
+
+</body>
+
+</html>

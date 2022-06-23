@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+   	<link href="../css/html5.css" rel="stylesheet" type="text/css" media="screen" />
+	<link href="../css/DescHTML5.css" rel="stylesheet" type="text/css" media="screen" />	
+	<script type='text/javascript' src='../lib/descartes-min.js'></script>
+  <!-------- MathJax --- para fórmulas matemáticas ------>
+  <script type="text/javascript"
+    src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+  </script>
+ 
+</head>
+
+<body>
+  
+
+<article class="course_content_container">
+  
+  <div class="course_content">    
+
+    <!------ INICIA EL CONTENIDO DE LA PÁGINA --------->
+
+    
+
+    
+
+    <!--- Título de la página --->
+
+    <h1>La solución de una ecuación diferencial</h1>
+
+    
+
+    
+
+	<div class='text_panel'>
+
+    
+
+		<!---Subtítulo (no necesario en introducción) 
+
+		<h2>Subtítulo (opcional)</h2>--->
+
+    
+
+    
+
+		<!--- Párrafo --->
+
+		<p>¿Qué significa resolver una ecuación diferencial y cómo podemos resolverla? Para responder esta pregunta nos servirá analizar ecuaciones algebraicas de la forma \( F(x) = 0 \) por ejemplo \( x^2 - 4x + 3 = 0 \) cuyas soluciones son un <strong>conjunto de valores</strong> los cuales puede tomar la variable \(x\) de tal forma que <strong>satisface la ecuación</strong>. Cabe mencionar que el conjunto está restringido a un cierto número valores, para esta ecuación el conjunto está compuesto por dos elementos {1,3} y se puede decir que 1 y 3 son soluciones de la ecuación.</p><br>
+
+        
+
+            <!-- ejemplo para incluir un documento externo en un iframe, aqui van las escenas y videos -->
+
+        <div align="center" class="Descartes_extern_content">
+	<ajs name="Descartes" width=450 height=350 code="Descartes">
+	<param name="tamaño" value="450x350">
+   <param name="decimal_symbol" value=".">
+   <param name="antialias" value="sí">
+   <param name="deshacer" value="no">
+   <param name="nombre" value="Descartes">
+   <param name="Versión" value="5.3.12, 2014-07-09">
+   <param name="Idioma" value="español">
+   <param name="Botones" value="créditos=no config=no inicio=no limpiar=no ancho_este=150 ancho_oeste=150 alto=40">
+   <param name="E_01" value="tipo='R2' id='E1' fijo='sí' despl_imagen='arr-izq' fondo='blanco' red='grisClaro' red10='gris' ejes='grisObscuro' texto='no'">
+   <param name="A_01" value="id='INICIO' algoritmo='sí' evaluar='una-sola-vez'">
+   <param name="A_02" value="id='CALCULOS' algoritmo='sí' evaluar='siempre'">
+   <param name="G_01" value="espacio='E1' tipo='texto' fondo='sí' expresión='[10,10]' texto='{\rtf1\uc0{\fonttbl\f0\fcharset0 Times New Roman;\f1\fcharset0 Arial;\f2\fcharset0 Times New Roman;\f3\fcharset0 Courier New;}\f1\fs36 Las soluciones de la ecuaci\u243 n \f2\fs36\i{\*\mjaformula x{\supix 2}-4x+3=0}\f1\fs36\i0  son\par \f2\fs36\i{\*\mjaformula x=1}\f1\fs36\i0  y \f2\fs36\i{\*\mjaformula x=3}\f1\fs36\i0  y se pueden representar en el plano\f3\fs30 .}' fuente='SansSerif,PLAIN,18' fijo='sí'">
+   <param name="G_02" value="espacio='E1' tipo='punto' expresión='(1,0)' texto='x=1' fijo='sí' tamaño='4'">
+   <param name="G_03" value="espacio='E1' tipo='punto' expresión='(3,0)' texto='x=3' fijo='sí' tamaño='4'">
+   <param name="G_04" value="espacio='E1' tipo='texto' fondo='sí' expresión='[10,210]' texto='{\rtf1\uc0{\fonttbl\f0\fcharset0 Times New Roman;\f1\fcharset0 Arial;\f2\fcharset0 Times New Roman;\f3\fcharset0 Times New Roman;\f4\fcharset0 Courier New;}\f1\fs36 Si sustituimos los valores de \f2\fs36\i{\*\mjaformula x=1}\f1\fs36\i0  y \f2\fs36\i{\*\mjaformula x=3}\f1\fs36\i0  en la\par ecuaci\u243 n\f3\fs40\i  {\*\mjaformula x{\supix 2}-4x+3=0}\f1\fs36\i0  podemos ver que del lado\par izquierdo resulta cero al igual que el valor en el\par miembro derecho por lo que se dice que se satisface\par la ecuaci\u243 n.\f4\fs30}' fuente='SansSerif,PLAIN,18' fijo='sí'">
+   <param name="G_05" value="espacio='E1' tipo='polígono' fondo='sí' color='grisObscuro' coord_abs='sí' expresión='(0,0)(E1._w-1,0)(E1._w-1,E1._h-1)(0,E1._h-1)(0,0)' ancho='3'">
+   	</ajs>
+	</div><br>
+
+        
+
+        <p>Las soluciones de ecuaciones con dos variables están dadas por un <strong>conjunto de parejas ordenadas</strong>, cuyos valores corresponden a cada variable. Por ejemplo para la ecuación \( y - 3x = 0 \) necesitamos conjuntos de parejas de tal forma que <strong>al evaluarlas se satisface la ecuación</strong>. La ecuación tiene diversas soluciones, y si queremos alguna que nos interese podemos asignar un valor arbitrario a una de las variables (condición inicial), despejamos la otra y obtenemos su valor. Algunas soluciones son {(1,3),(2,6),(3,9),...}.</p><br>
+
+        
+
+          <div align="center" class="Descartes_extern_content">
+	<ajs name="Descartes" width=450 height=350 code="Descartes">
+	 <param name="tamaño" value="450x350">
+   <param name="decimal_symbol" value=".">
+   <param name="antialias" value="sí">
+   <param name="deshacer" value="no">
+   <param name="nombre" value="Descartes">
+   <param name="Versión" value="5.3.12, 2014-07-09">
+   <param name="Idioma" value="español">
+   <param name="Botones" value="créditos=no config=no inicio=no limpiar=no ancho_este=150 ancho_oeste=150 alto=40">
+   <param name="E_01" value="tipo='R2' id='E1' fijo='sí' despl_imagen='arr-izq' fondo='blanco' red='grisClaro' red10='no' ejes='405860' texto='no'">
+   <param name="C_01" value="id='p' tipo='gráfico' espacio='E1' tamaño='5' expresión='(p.x,p.y)' constricción='y=3x'">
+   <param name="A_01" value="id='INICIO' algoritmo='sí' evaluar='una-sola-vez'">
+   <param name="A_02" value="id='CALCULOS' algoritmo='sí' evaluar='siempre'">
+   <param name="G_01" value="espacio='E1' tipo='texto' fondo='sí' expresión='[10,10]' texto='{\rtf1\uc0{\fonttbl\f0\fcharset0 Times New Roman;\f1\fcharset0 Arial;\f2\fcharset0 Times New Roman;}\f1\fs36 Las soluciones de la ecuaci\u243 n \f2\fs36\i{\*\mjaformula y-3x=0}\f1\fs36\i0  es un\par conjunto de parejas cuyos valores satisfaen la\par ecuaci\u243 n. Arrastra el punto y fijate los valores\par de las parejas soluci\u243 n, nota que en este caso\par el conjunto soluci\u243 n es infinito.}' fuente='SansSerif,PLAIN,18' fijo='sí'">
+   <param name="G_02" value="espacio='E1' tipo='ecuación' expresión='y=3*x'">
+   <param name="G_03" value="espacio='E1' tipo='texto' expresión='[10,300]' texto='{\rtf1\uc0{\fonttbl\f0\fcharset0 Times New Roman;\f1\fcharset0 Arial;\f2\fcharset0 Times New Roman;}\f1\fs36 Soluci\u243 n a la ecuaci\u243 n:\f2\fs36\i  x={\*\mjaformula{\expr p.x}}, y={\*\mjaformula{\expr p.y}}}' fuente='SansSerif,PLAIN,18' fijo='sí'">
+   <param name="G_04" value="espacio='E1' tipo='polígono' fondo='sí' color='grisObscuro' coord_abs='sí' expresión='(0,0)(E1._w-1,0)(E1._w-1,E1._h-1)(0,E1._h-1)(0,0)' ancho='3'">
+    </ajs>
+	</div><br>
+   
+        <p>De forma análoga a los ejemplos anteriores, cuando se nos presenta una ecuación diferencial de la forma \( F(x,f(x),f'(x)) = 0 \), se piensa que existe un cierto conjunto de funciones donde la ecuación está bien definida. Dichas funciones deben tener derivadas hasta de orden n, y para este caso necesariamente tendrá que ser un subconjunto del conjunto de funciones. Por solución de una ecuación diferencial se entenderá la función \( f(x) \) que junto con sus derivadas, al evaluarse en la ecuación se satisface la relación. Por ejemplo la función:</p>
+
+        
+
+        <p><div align="center">\( y(x) = 2sen(x) - \frac{1}{3}cos(2x) \)</div></p>
+
+        
+
+        <p>es una solución de la ecuación diferencial de segundo orden:</p>
+
+        <p><div align="center">\( \frac{d^2y}{dx^2} + y = cos(2x) \)</div></p>
+
+        
+
+        <p>Si obtenemos \( y''(x) \) y evaluamos en la ecuación tanto \( y(x) \) como \( y''(x) \) vemos que la ecuación se satisface.
+
+		
+
+		
+
+        
+
+            <!------ TERMINA EL CONTENIDO DE LA PÁGINA --------->
+
+
+	<!------ INICIA LA INFO SOBRE LAS LICENCIAS Y LOS CRÉDITOS. ---------->
+    <a id="btCopyright" class="standardButton" title="Haz clic aquí para consultar los créditos y las condiciones de uso de este recurso." href="#" onClick="document.getElementById('copyright').className='visible';">&#169;</a>
+    <div id="copyright" class="oculto">
+      
+      <div class='innerCopyright'>
+      
+          <a id="btCloseCopyright" class="standardButton" title="Haz clic aquí para cerrar esta ventana." href="#" onClick="document.getElementById('copyright').className='oculto'">×</a>
+  
+          <!-- Créditos UAM  (siempre deben ir en primer lugar) -->
+			<div class="creditos">
+				<h1>
+					Créditos 
+				</h1>
+
+				<h2>
+					Escena original
+				</h2>				<table class="autores" 	>
+
+					<tr> <td  class="rol"> Diseño del contenido			</td>		<td class="nombre"> Víctor Hugo García Jarillo (Facultad de Ciencias UNAM, LITE)</td></tr>
+					<tr> <td  class="rol"> Diseño funcional				</td>		<td class="nombre"> Víctor Hugo García Jarillo (Facultad de Ciencias UNAM, LITE)</td></tr>
+					<tr> <td  class="rol"> Programación					</td>		<td class="nombre"> Víctor Hugo García Jarillo (Facultad de Ciencias UNAM, LITE)</td></tr>
+					<tr> <td  class="rol"> Diseño gráfico				</td>		<td class="nombre"> Ricardo López Gómez</td></tr>
+					<tr> <td  class="rol" >Coordinación			</td>		<td class="nombre"> Leticia Montserrat Vargas Rocha</td></tr>
+					</table>
+				<h2>
+					Adaptación 
+				</h2>
+				<table class="autores" 	>
+				<tr> <td  class="rol"> Diseño funcional				</td>		<td class="nombre"> Victor Hugo García Jarillo (Facultad de                    Ciencias, UNAM)		</td></tr>
+					<tr> <td  class="rol"> Programación				</td>		<td class="nombre"> Victor Hugo García Jarillo (Facultad de                    Ciencias, UNAM)</td></tr>
+
+					<tr> <td  class="rol"> Diseño gráfico			</td>		<td class="nombre"> Francisco	Varela Fuentes</td></tr>
+					<tr> <td  class="rol" >Coordinación			</td>		<td class="nombre"> Leticia Montserrat Vargas Rocha</td></tr>
+		
+				</table>
+
+ <div class='logos'>
+	            <a href=''>
+	               <img src="../images/info/icns/logoLite.png">
+	            </a>
+	            <a href="http://www.unadmexico.mx/">
+	               <img src="../images/info/icns/logoUNADM.png">
+	            </a>
+	         </div>
+          </div>
+          
+          <!-- Linea separación créditos -->
+          <hr class="linea" />
+     
+          <!-- Aviso licencias -->
+          <div class="licencias">
+          
+				<p class="creativeCommons">Los contenidos de esta unidad didáctica interactiva están bajo una licencia <a href="http://creativecommons.org/licenses/by-nc-sa/2.5/es/" target="_blank">Creative Commons Reconocimiento-NoComercial-CompartirIgual</a>.</p>
+
+				<!--arquimedes (optativo)-->
+				<p>La unidad didáctica fue creada con <a href="http://arquimedes.matem.unam.mx/Descartes5/creditos/conCCL.html" target="_blank">Arquímedes</a>, una herramienta de código abierto.</p>
+
+				<!-- Descartes -->
+				<p>La unidad didáctica contiene escenas elaboradas con Descartes, una herramienta de código abierto.</p>
+
+
+          	<p style='text-align:center'> LITE - UnADM 2014</p>
+          </div>
+      </div>
+    </div> 
+   <!------ TERMINA LA INFO SOBRE LAS LICENCIAS Y LOS CRÉDITOS. ---------->
+  
+  
+  </div>
+  
+  
+</article>
+
+
+</body>
+
+</html>

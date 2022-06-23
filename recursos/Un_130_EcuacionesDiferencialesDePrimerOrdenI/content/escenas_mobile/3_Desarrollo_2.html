@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Desarrollo</title>	
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<link href="../css/DescHTML5.css" rel="stylesheet" type="text/css" media="screen" />
+	<link href="../css/html5_mobile.css" rel="stylesheet" type="text/css" media="screen" />
+    <script type="text/javascript" src='../javascript/inject_functions_scorms_descartes.js'></script>
+	<script type='text/javascript' src='../lib/descartes-min.js'></script>
+</head>
+<body>
+	<!-------- MathJax --- para fórmulas matemáticas ------>	
+	<script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script> 
+
+
+  <article class="course_content_container">
+    <div class="course_content">
+  
+  
+    <!------ INICIA EL CONTENIDO DE LA PÁGINA ------- -->
+
+	<h2 align="center">Sistemas dinámicos</h2>
+	
+	<p>
+		Las ecuaciones diferenciales son muy útiles cuando se quiere modelar un fenómeno físico, y para estos casos, los cambios en el fenómeno están determinados por los cambios en el tiempo, por lo que la variable independiente es el tiempo \( t \). A tales situaciones se les conoce como sistemas dinámicos. La forma general de sistemas dinámicos es \( F(t, y(t), y'(t))=0 \).<br>
+
+Discutiremos un modelo biológico de crecimiento de población, que nos servirá para entender el camino a seguir en la construcción de un modelo matemático.<br><br>
+
+Para inicar la discución es necesario realizar una abstracción de las partes del sistema que nos interesan, y cuya interacción es determinante para el estudio de los procesos que se quieren estudiar.<br>
+Para realizar esta abstracción podemos seguir los siguientes pasos:<br><br>
+
+ 1. Listar todos los elementos que constituyen el sistema,<br>
+ 2. Especificar las propiedades del sistema cuyo cambio se quiere estudiar y<br>
+ 3. Tomar en cuenta todos aquellos agentes externos al sistema que a través de su interacción con éste pueden afectar de manera relevante las propiedades de interés.<br><br>
+ 
+ Estudiaremos la forma en que el número de integrantes (presas) de una población cambia en el tiempo. Los factores a tomar en cuenta son: la interacción entre ellos para aumentar el número de individuos, y la interacción con otra especie (depredadores), que provoca una disminución en el número total de la población.  Al número de individuos al tiempo \( t \) lo denotaremos como \( N(t) \) y estará balanceado por los fenómenos de natalidad y mortalidad. Podemos expresar el sitema como:<br><br>
+ 
+                                           <div align="center"> \( \frac{dN}{dt} = N(n-m) \)</div>
+<UL type = disk >
+<LI>\( \frac{dN}{dt} \) representa el cambio en el número de individuos en la población al tiempo \( t \).
+<LI>\( n(N,t) \) es el número de nacimientos por unidad de tiempo y por poblador (natalidad).
+<LI>\( m(N,t) \) es el número de muertes por unidad de tiempo y por poblador (mortalidad).
+</UL>
+
+Note que la natalidad y mortalidad son parámetros que dependen del número de individuos de la población al tiempo \( t \). La diferencia \( n-m \) representa la sobrevivencia de la especie quitando \( m \) presas cazadas a \( n \) nacimientos en la población. En general la ecuación nos dice que el cambio en la población es proporcional a la población y a los parámetros de natalidad y mortalidad.<br>
+
+<br>Vamos a considerar que el número de presas cazadas es equivalente al número de nacimientos, entonces la diferencia se mantiene constante, es decir \( n-m=k \) en consecuencia tenemos:<br><br>
+
+               <div align="center">  \( \frac{dN}{dt} = Nk \)   ⇒    \( \frac{1}{N} \frac{dN}{dt} = k \)</div> <br>
+			   
+Observamos que \( \frac{1}{N}\frac{dN}{dt}= \frac{d}{dt}ln(N) \) entonces obtenemos:<br><br>
+
+    <div align="center">\( \frac{d}{dt} ln(N) = k \) </div>
+	<div align="center">\( \int \frac{d}{dt} ln(N) dt = \int k dt \)   </div>
+	<div align="center">\( ln(N(t))=kt+c_1 \) </div>
+	<div align="center">\( N(t) = e^{kt+c_1} \) </div>
+    <div align="center">\( N(t) = e^{c_1} e^{kt} \) </div>
+	<div align="center">\( N(t) = ce^{kt} \) </div><br><br>
+
+El conjunto de funciones que satisfacen este problema es de la forma \( ce^{kt} \). Definimos \( c=N_0 \) donde \( N_0 \) es la población al tiempo \( t=0 \).<br><br>
+
+En el siguiente apartado analizaremos qué significa ésto.
+ 
+		</p>
+
+
+            <!------ TERMINA EL CONTENIDO DE LA PÁGINA --------->
+
+   <!------ INICIA LA INFO SOBRE LAS LICENCIAS Y LOS CRÉDITOS. ---------->
+    <a id="btCopyright" class="standardButton" title="Haz clic aquí para consultar los créditos y las condiciones de uso de este recurso." href="#" onClick="document.getElementById('copyright').className='visible';">&#169;</a>
+    <div id="copyright" class="oculto">
+      
+      <div class='innerCopyright'>
+      
+          <a id="btCloseCopyright" class="standardButton" title="Haz clic aquí para cerrar esta ventana." href="#" onClick="document.getElementById('copyright').className='oculto'">×</a>
+  
+          <!-- Créditos UAM  (siempre deben ir en primer lugar) -->
+			<div class="creditos">
+				<h1>
+					Créditos 
+				</h1>
+
+				<h2>
+					Escena original
+				</h2>				<table class="autores" 	>
+
+					<tr> <td  class="rol"> Diseño del contenido			</td>		<td class="nombre"> Víctor Hugo García Jarillo (Facultad de Ciencias UNAM, LITE)</td></tr>
+					<tr> <td  class="rol"> Diseño funcional				</td>		<td class="nombre"> Víctor Hugo García Jarillo (Facultad de Ciencias UNAM, LITE)</td></tr>
+					<tr> <td  class="rol"> Programación					</td>		<td class="nombre"> Víctor Hugo García Jarillo (Facultad de Ciencias UNAM, LITE)</td></tr>
+					<tr> <td  class="rol"> Diseño gráfico				</td>		<td class="nombre"> Ricardo López Gómez</td></tr>
+					<tr> <td  class="rol" >Coordinación			</td>		<td class="nombre"> Leticia Montserrat Vargas Rocha</td></tr>
+					</table>
+				<h2>
+					Adaptación 
+				</h2>
+				<table class="autores" 	>
+				<tr> <td  class="rol"> Diseño funcional				</td>		<td class="nombre"> Victor Hugo García Jarillo (Facultad de                    Ciencias, UNAM)		</td></tr>
+					<tr> <td  class="rol"> Programación				</td>		<td class="nombre"> Victor Hugo García Jarillo (Facultad de                    Ciencias, UNAM)</td></tr>
+
+					<tr> <td  class="rol"> Diseño gráfico			</td>		<td class="nombre"> Francisco	Varela Fuentes</td></tr>
+					<tr> <td  class="rol" >Coordinación			</td>		<td class="nombre"> Leticia Montserrat Vargas Rocha</td></tr>
+		
+				</table>
+	         
+	         <div class='logos'>
+	            <a href=''>
+	               <img src="../images/info/icns/logoLite.png">
+	            </a>
+	            <a href="http://www.unadmexico.mx/">
+	               <img src="../images/info/icns/logoUNADM.png">
+	            </a>
+	         </div>
+          </div>
+          
+          <!-- Linea separación créditos -->
+          <hr class="linea" />
+     
+          <!-- Aviso licencias -->
+          <div class="licencias">
+          
+				<p class="creativeCommons">Los contenidos de esta unidad didáctica interactiva están bajo una licencia <a href="http://creativecommons.org/licenses/by-nc-sa/2.5/es/" target="_blank">Creative Commons Reconocimiento-NoComercial-CompartirIgual</a>.</p>
+
+				<!--arquimedes (optativo)-->
+				<p>La unidad didáctica fue creada con <a href="http://arquimedes.matem.unam.mx/Descartes5/creditos/conCCL.html" target="_blank">Arquímedes</a>, una herramienta de código abierto.</p>
+
+				<!-- Descartes -->
+				<p>La unidad didáctica contiene escenas elaboradas con Descartes, una herramienta de código abierto.</p>
+
+
+          	<p style='text-align:center'> LITE - UnADM 2014</p>
+          </div>
+      </div>
+    </div> 
+   <!------ TERMINA LA INFO SOBRE LAS LICENCIAS Y LOS CRÉDITOS. ---------->
+  
+  
+  </div>
+  
+  
+</article>
+
+
+</body>
+
+</html>

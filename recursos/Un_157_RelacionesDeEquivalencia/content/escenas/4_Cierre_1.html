@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <title>Cierre</title>
+  <link href="../css/html5.css" rel="stylesheet" type="text/css" media="screen">
+  <link href="../css/DescHTML5.css" rel="stylesheet" type="text/css" media="screen">
+  <style>
+    .DescartesMenuContainer:has(select#selR_menuSelect:disable) {
+      border: 1px solid red;
+    }
+    
+    .DescartesMenuContainer label {
+      width: 98% !important;
+      text-align: left !important;
+      padding-left: 5px;
+      text-shadow: 0px 1px rgba(0, 0, 0, 0.2);
+      font-size: 18px !important;
+    }
+    
+    select#selR_menuSelect {
+      width: auto !important;
+      left: auto !important;
+      right: 0px;
+    }
+    
+    select#selR_menuSelect {
+      width: auto !important;
+      left: auto !important;
+      right: 0px;
+    }
+    
+    #E1 {
+      border: 1px solid #8e8e8e;
+      background-color: #e3e3e3;
+      box-shadow: 0px 0px 10px 1px #AAA;
+    }
+  </style>
+  <script type="text/javascript" src="../javascript/inject_functions_scorms_descartes.js"></script>
+  
+  <script type='text/javascript' src='lib/descartes-min.js'></script>
+</head>
+
+<body bgcolor="c0c0c0" leftmargin="0" topmargin="0">
+  <ajs name="Descartes" width=970 height=550 code="Descartes">
+   <param name="tamaño" value="970x550">
+   <param name="image_loader" value="">
+   <param name="expand" value="">
+   <param name="decimal_symbol" value=".">
+   <param name="antialias" value="sí">
+   <param name="deshacer" value="no">
+   <param name="nombre" value="Descartes">
+   <param name="Versión" value="5.4, 2016-05-18">
+   <param name="Idioma" value="español">
+   <param name="Botones" value="créditos=no config=no inicio=no limpiar=no ancho_este=150 ancho_oeste=150">
+   <param name="E_01" value="tipo='R2' id='E2' x='0' y='0' ancho='100%' alto='100%' dibujar-si='1' fijo='sí' escala='1' O.x='-50%' O.y='-50%' despl_imagen='arr-izq' fondo='blanco' red='no' red10='no' ejes='no' texto='no'">
+   <param name="E_02" value="tipo='R2' id='E1' x='E1.x' y='E1.y' ancho='890' alto='400' dibujar-si='1' fijo='sí' escala='1' O.x='-50%' O.y='-50%' despl_imagen='arr-izq' fondo='ffc0d0d8' red='no' red10='no' ejes='no' texto='no'">
+   <param name="C_01" value="id='btnOtraQ' tipo='numérico' interfaz='botón' región='interior' espacio='E1' nombre='Otra pregunta' expresión='(btnAceptar.x,btnAceptar.y,btnAceptar.w,btnAceptar.h)' fijo='sí' visible='sí' color='blanco' color-int='da000000' negrita='sí' fuente puntos='16' imagen='_STYLE_|class=btnUNADM|shadowTextColor=rgba(0,0,0,0.2)|shadowTextOffsetY=2|shadowTextBlur=0|textBorder=0 |' acción='calcular' parámetro='dispAns=0\nPrintQ()' activo-si='Valid'">
+   <param name="C_02" value="id='selR' tipo='numérico' interfaz='menú' región='interior' espacio='E1' nombre='Selecciona&nbsp;la&nbsp;opción&nbsp;correcta' expresión='(selR.x,selR.y,selR.w,selR.h)' valor='selR' decimales='0' fijo='sí' visible='no' opciones='--,A,B,C' acción='calcular' parámetro='respuesta=selR\nCheckAns()\ndispAns=1\n' activo-si='!Valid' pos_mensajes='centro'">
+   <param name="C_03" value="id='H' tipo='numérico' región='interior' espacio='E1' nombre='H' incr='1' decimales='0' fijo='sí' visible='sí' acción='calcular' dibujar-si='0' pos_mensajes='centro'">
+   <param name="C_04" value="id='V' tipo='numérico' región='interior' espacio='E1' nombre='V' incr='1' decimales='0' fijo='sí' visible='sí' dibujar-si='0' pos_mensajes='centro'">
+   <param name="C_05" value="id='H1' tipo='numérico' región='interior' espacio='E1' nombre='H1' incr='1' decimales='0' fijo='sí' visible='sí' dibujar-si='0' pos_mensajes='centro'">
+   <param name="C_06" value="id='V1' tipo='numérico' región='interior' espacio='E1' nombre='V1' incr='1' decimales='0' fijo='sí' visible='sí' dibujar-si='0' pos_mensajes='centro'">
+   <param name="A_01" value="id='initEsp()' algoritmo='sí' expresión='x' algoritmo='sí' hacer='E1.x=(E2._w-E1._w)/2;E1.y=(E2._h-E1._h-40)'">
+   <param name="A_02" value="id='initBtns()' algoritmo='sí' expresión='x' algoritmo='sí' hacer='btnAceptar.w=120;btnAceptar.h=40;btnAceptar.x=(E1._w-btnAceptar.w-40);btnAceptar.y=(E1._h-btnAceptar.h-10);btnAceptar.txt=&squot;Otra Pregunta&squot;;;selR.w=320;selR.h=40;selR.x=(btnAceptar.x-selR.w-10);selR.y=btnAceptar.y+(btnAceptar.h-selR.h)/2;;;;txtRetro.x=710;txtRetro.y=300'">
+   <param name="A_03" value="id='initEscena()' algoritmo='sí' expresión='x' algoritmo='sí' hacer='initBtns();initEsp();;ô=|***************************************|;ô=|*  Calculamos la posicion del título  *|;ô=|***************************************|;titulo=&squot;Evaluación - Relaciones&squot;;titulo.w=_AnchoDeCadena_(titulo,&squot;SansSerif&squot;,&squot;BOLD&squot;,&squot;30&squot;);titulo.x=(E2._w-titulo.w)/2;titulo.y=30;'">
+   <param name="A_04" value="id='Preguntas' vector='sí' matriz='sí' evaluar='una-sola-vez' columnas='9' filas='300'">
+   <param name="A_05" value="id='Preg' vector='sí' evaluar='una-sola-vez' tamaño='90' archivo='PreguntasSobreRelaciones.txt'">
+   <param name="A_06" value="id='PrintV' vector='sí' evaluar='una-sola-vez' tamaño='9'">
+   <param name="A_07" value="id='sbar' vector='sí' evaluar='una-sola-vez' tamaño='9' expresión='sbar[0]=2;sbar[1]=2;sbar[2]=2;sbar[3]=2;sbar[4]=2;sbar[5]=2;sbar[6]=2;sbar[7]=2;sbar[8]=2;'">
+   <param name="A_08" value="id='CorrectAns' vector='sí' evaluar='una-sola-vez' tamaño='2' expresión='CorrectAns[0]=&squot;Incorrecto&squot;;CorrectAns[1]=&squot;Correcto&squot;;'">
+   <param name="A_09" value="id='init_preg()' algoritmo='sí' expresión='x' algoritmo='sí' Local='n' inicio='s=0;n=9' hacer='Preguntas[s%n,ent(s/n)]=Preg[s];s=s+1' mientras='s<maxQ*n'">
+   <param name="A_10" value="id='PrintQ()' algoritmo='sí' expresión='x' algoritmo='sí' Local='s' inicio='s=0;selR=0;curQ=(curQ+1)%maxQ;idxPreg=(idxPreg+1)%maxQ;Valid=0;' hacer='PrintV[s]=Preguntas[s,curQ];s=s+1;' mientras='s<9'">
+   <param name="A_11" value="id='CheckAns()' algoritmo='sí' expresión='x' algoritmo='sí' hacer='CA=Preguntas[8,curQ];SA=respuesta;Valid=(CA==SA);regObjetivos()'">
+   <param name="A_12" value="id='__SCORM__()' expresión='0'">
+   <param name="A_13" value="id='getSCORMState()' algoritmo='sí' expresión='res' algoritmo='sí' Local='res,c,pref' inicio='c=&squot;@&squot;;res=&squot;&squot;;pref=SCORM.prefix+&squot;.&squot;' hacer='res=res+pref+ &squot;nResueltos:&squot;+nResueltos+c;res=res+pref+ &squot;ANT.per:&squot;   +ANT.per+c;;;;'">
+   <param name="A_14" value="id='initStateScorm()' algoritmo='sí' expresión='x' algoritmo='sí' Local='pref' inicio='pref=SCORM.prefix+&squot;.&squot;' hacer='nResueltos=getSCORMStateVar(pref+&squot;nResueltos&squot;);   ANT.per=getSCORMStateVar(pref+&squot;ANT.per&squot;);;'">
+   <param name="A_15" value="id='regObjetivos()' algoritmo='sí' expresión='0' algoritmo='sí' Local='actRes,per,tt,maxNR' inicio='maxNR=4' hacer='isNew=(ANT.curQ!=curQ)|isNew;otroRes=(isNew)&(Valid);nResueltos=min(nResueltos+otroRes,maxNR);;;ô=|*****************************************************|;ô=|* Si ve 4 ejercicios tienen el 80% +20% por explorar*|;ô=|*****************************************************|;per=ent((100/maxNR)*nResueltos);tt=(ANT.per<per);tt=(tt)?setSCORMPercentage(per):0;;;_Print_(&squot;*************************** isNew : &squot;+isNew);_Print_(&squot;curQ :&squot;+curQ+&squot; -ANT.curQ :&squot;+ANT.curQ);_Print_(&squot;N Res :&squot;+nResueltos+&squot; otroRes: &squot;+otroRes );_Print_(&squot;Porce :&squot;+per+&squot;%&squot;);_Print_(&squot;&squot;);isNew=(isNew)&(!otroRes);ANT.per=per;ANT.curQ=curQ'">
+   <param name="A_16" value="id='INICIO' algoritmo='sí' evaluar='una-sola-vez' hacer='initEscena();maxQ=Preg.long/9;;_Print_(&squot;Max Q:&squot;+maxQ);curQ=-1+ent(maxQ*rnd);idxPreg=-1;init_preg();respuesta=1;dispAns=0;PrintQ();Debug=0;;ANT.curQ=-1;SCORM.prefix=&squot;C01&squot;'">
+   <param name="A_17" value="id='CALCULOS' algoritmo='sí' evaluar='siempre' hacer='counter.txt=(idxPreg+1)+&squot;/&squot;+maxQ;counter.x=E1._w-10-_AnchoDeCadena_(counter.txt,&squot;SansSerif&squot;,&squot;BOLD&squot;,&squot;20&squot;);counter.y=5'">
+   <param name="G_01" value="espacio='E2' tipo='texto' fondo='sí' expresión='[titulo.x,titulo.y]' texto='[titulo]' fuente='SansSerif,BOLD,30' fijo='sí'">
+   <param name="G_02" value="espacio='E2' tipo='texto' fondo='sí' expresión='[_FIN_PLANTILLA__,20]' texto='{\rtf1\uc0{\fonttbl\f0\fcharset0 Times New Roman;}}' fuente='Serif,PLAIN,15' fijo='sí'">
+   <param name="G_03" value="espacio='E1' tipo='texto' expresión='[20,40+s*22]' familia='s' s.intervalo='[0,1]' s.pasos='1' texto='[PrintV[s]]' fuente='SansSerif,BOLD,20' fijo='sí' info='PrintV[s]  s = 0, 1'">
+   <param name="G_04" value="espacio='E1' tipo='texto' expresión='[30,110+s*50]' familia='s' s.intervalo='[0,2]' s.pasos='2' texto='[(s==0)?&squot;A&squot;:((s==1)?&squot;B&squot;:&squot;C&squot;)])' fuente='SansSerif,BOLD,20' fijo='sí' info='s+1'">
+   <param name="G_05" value="espacio='E1' tipo='texto' expresión='[-10+35*sbar[s],60+s*25]' familia='s' s.intervalo='[2,7]' s.pasos='5' texto='[PrintV[s]]' fuente='SansSerif,PLAIN,20' fijo='sí' info='PrintV[s]  '">
+   <param name="G_06" value="espacio='E1' tipo='texto' color='a0464a' dibujar-si='(dispAns=1)&(Valid==0)' expresión='[txtRetro.x,txtRetro.y]' texto='[CorrectAns[0]]' fuente='SansSerif,BOLD+ITALIC,32' fijo='sí' info='Incorrecto'">
+   <param name="G_07" value="espacio='E1' tipo='texto' color='4fae56' dibujar-si='(dispAns=1)&(Valid==1)' expresión='[txtRetro.x,txtRetro.y]' texto='[CorrectAns[1]]' fuente='SansSerif,BOLD+ITALIC,32' fijo='sí' info='Correcto'">
+   <param name="G_08" value="espacio='E1' tipo='texto' color='246c9b' expresión='[counter.x,counter.y]' texto='[counter.txt]' fuente='SansSerif,BOLD,20' fijo='no'">
+   <param name="G_09" value="espacio='E1' tipo='texto' fondo='sí' expresión='[_FIN_TEXTO__,20]' texto='{\rtf1\uc0{\fonttbl\f0\fcharset0 Times New Roman;}}' fuente='Serif,PLAIN,15' fijo='sí'">
+   <param name="G_10" value="espacio='E1' tipo='texto' dibujar-si='0&dispAns=1' expresión='[-40+0*H+40*sbar[5],50+0*V+5*30]' texto='{\rtf1\uc0{\fonttbl\f0\fcharset0 Times New Roman;\f1\fcharset0 Times New Roman;\f2\fcharset0 Courier New;}\f1\fs36\b\i Opcion correcta: {\*\mjaformula{\expr PrintV[5]\decimals 0\fixed1}}\f2\fs30\b0\i0}' fuente='Serif,BOLD+ITALIC,18' fijo='sí' info='Opcion correcta: PrintV[5]'">
+   <param name="G_11" value="espacio='E1' tipo='texto' dibujar-si='(dispAns=1)&Debug' expresión='[300,340]' texto='{\rtf1\uc0{\fonttbl\f0\fcharset0 Times New Roman;\f1\fcharset0 Courier New;\f2\fcharset0 Times New Roman;}\f1\fs30 Pregunta\f2\fs34\i ={\*\mjaformula{\expr curQ\decimals 0\fixed1}}\f1\fs30\i0   Respuesta = \f2\fs34\i{\*\mjaformula{\expr respuesta\decimals 0\fixed1}}\f1\fs30\i0}' fuente='SansSerif,PLAIN,18' fijo='sí' info='Pregunta=[curQ] Respuesta = [respuesta]'">
+   <param name="G_12" value="espacio='E1' tipo='texto' dibujar-si='Debug' expresión='[20,80+s*30]' familia='s' s.intervalo='[0,14]' s.pasos='14' texto='{\rtf1\uc0{\fonttbl\f0\fcharset0 Times New Roman;\f1\fcharset0 Times New Roman;\f2\fcharset0 Courier New;}\f1\fs34\i{\*\mjaformula{\expr Preguntas[s%5,ent(s/5)]\decimals 0\fixed1}}\f2\fs30\i0}' fuente='Serif,ITALIC,17' fijo='sí' info='Preguntas[s%8,ent(s/8)]'">
+   <param name="G_13" value="espacio='E1' tipo='texto' dibujar-si='Debug' expresión='[120,80+s*30]' familia='s' s.intervalo='[0,14]' s.pasos='14' texto='{\rtf1\uc0{\fonttbl\f0\fcharset0 Times New Roman;\f1\fcharset0 Times New Roman;\f2\fcharset0 Courier New;}\f1\fs34\i{\*\mjaformula{\expr Preguntas[s%5,ent((s+15)/5)]\decimals 0\fixed1}}\f2\fs30\i0}' fuente='Serif,ITALIC,17' fijo='sí' info='Preguntas[s%8,ent((s+15)/8)]'">
+   <param name="G_14" value="espacio='E1' tipo='texto' dibujar-si='Debug' expresión='[220,80+s*30]' familia='s' s.intervalo='[0,14]' s.pasos='14' texto='{\rtf1\uc0{\fonttbl\f0\fcharset0 Times New Roman;\f1\fcharset0 Times New Roman;\f2\fcharset0 Courier New;}\f1\fs34\i{\*\mjaformula{\expr Preguntas[s%5,ent((s+30)/5)]\decimals 0\fixed1}}\f2\fs30\i0}' fuente='Serif,ITALIC,17' fijo='sí' info='Preguntas[s%8,ent((s+30)/5)]'">
+   <param name="G_15" value="espacio='E1' tipo='texto' dibujar-si='Debug' expresión='[320,80+s*30]' familia='s' s.intervalo='[0,14]' s.pasos='14' texto='{\rtf1\uc0{\fonttbl\f0\fcharset0 Times New Roman;\f1\fcharset0 Times New Roman;\f2\fcharset0 Courier New;}\f1\fs34\i{\*\mjaformula{\expr Preguntas[s%5,ent((s+45)/5)]\decimals 0\fixed1}}\f2\fs30\i0}' fuente='Serif,ITALIC,17' fijo='sí' info='Preguntas[s%5,ent((s+45)/5)]'">
+   <param name="G_16" value="espacio='E1' tipo='texto' dibujar-si='Debug' expresión='[420,80+s*30]' familia='s' s.intervalo='[0,4]' s.pasos='4' texto='{\rtf1\uc0{\fonttbl\f0\fcharset0 Times New Roman;\f1\fcharset0 Times New Roman;\f2\fcharset0 Courier New;}\f1\fs34\i{\*\mjaformula{\expr Preguntas[s%5,ent((s+60)/5)]\decimals 0\fixed1}}\f2\fs30\i0}' fuente='Serif,ITALIC,17' fijo='sí' info='Preguntas[s%5,ent((s+60)/5)]'">
+   <param name="G_17" value="espacio='E1' tipo='texto' dibujar-si='Debug' expresión='[20,80+s*30]' familia='s' s.intervalo='[0,65]' s.pasos='65' texto='{\rtf1\uc0{\fonttbl\f0\fcharset0 Times New Roman;\f1\fcharset0 Times New Roman;\f2\fcharset0 Courier New;}\f1\fs34\i{\*\mjaformula{\expr Preg[s]\decimals 0\fixed1}}\f2\fs30\i0}' fuente='Serif,ITALIC,17' fijo='sí' info='Preg[s]'">
+   <param name="G_18" value="espacio='E1' tipo='texto' dibujar-si='Debug' expresión='[20,80+s*30]' familia='s' s.intervalo='[0,4]' s.pasos='4' texto='{\rtf1\uc0{\fonttbl\f0\fcharset0 Times New Roman;\f1\fcharset0 Times New Roman;\f2\fcharset0 Courier New;}\f1\fs34\i{\*\mjaformula{\expr Preguntas[s,selQ-1]\decimals 0\fixed1}}\f2\fs30\i0}' fuente='Serif,ITALIC,17' fijo='sí' info='Preguntas[s,selQ-1]'">
+   <param name="G_19" value="espacio='E1' tipo='texto' fondo='sí' expresión='[_FIN_DEBUG__,20]' texto='{\rtf1\uc0{\fonttbl\f0\fcharset0 Times New Roman;}}' fuente='Serif,PLAIN,15' fijo='sí'">
+</ajs>
+  <!------ INICIA LA INFO SOBRE LAS LICENCIAS Y LOS CRÉDITOS. ---------->
+  <a id="btCopyright" class="standardButton" title="Haz clic aquí para consultar los créditos y las condiciones de uso de este recurso." href="#" onclick="document.getElementById('copyright').className='visible';">©</a>
+
+  <div id="copyright" class="oculto">
+
+    <div class="innerCopyright">
+      <a id="btCloseCopyright" class="standardButton" title="Haz clic aquí para cerrar esta ventana." href="#" onclick="document.getElementById('copyright').className='oculto'">×</a>
+      <!-- Créditos UAM  (siempre deben ir en primer lugar) -->
+
+      <div class="creditos">
+        <h1>
+Créditos
+</h1>
+        <h2>
+Escena original
+</h2>
+        <table class="autores">
+          <tbody>
+            <tr>
+              <td class="rol"> Diseño del contenido </td>
+              <td class="nombre"> Julio Arnoldo Prado Saavedra
+                <br>Víctor Manuel Amezcua Y Raz</td>
+            </tr>
+            <tr>
+              <td class="rol"> Diseño funcional </td>
+              <td class="nombre">Julio Arnoldo Prado Saavedra
+                <br>Víctor Manuel Amezcua Y Raz</td>
+            </tr>
+            <tr>
+              <td class="rol"> Programación </td>
+              <td class="nombre"> Julio Arnoldo Prado Saavedra</td>
+            </tr>
+            <tr>
+              <td class="rol"> Asesoría de programación </td>
+              <td class="nombre">
+                Víctor Manuel Amezcua Y Raz
+                <!-- Varias personas en el mismo rubro, separar por <br> -->
+              </td>
+            </tr>
+            <tr>
+              <td class="rol"> Diseño gráfico </td>
+              <td class="nombre"> Ricardo López Gómez </td>
+            </tr>
+            <tr>
+              <td class="rol">Coordinación </td>
+              <td class="nombre"> Leticia Montserrat Vargas Rocha </td>
+            </tr>
+          </tbody>
+        </table>
+        <h2>
+Adaptación
+</h2>
+        <table class="autores	">
+          <tbody>
+            <tr>
+              <td class="rol"> Diseño funcional </td>
+              <td class="nombre">Julio Arnoldo Prado Saavedra
+                <br>Oscar Escamilla González </td>
+            </tr>
+            <tr>
+              <td class="rol"> Programación </td>
+              <td class="nombre">Julio Arnoldo Prado Saavedra</td>
+            </tr>
+            <!-- Varias personas en el mismo rubro, separar por <br> -->
+            <tr>
+              <td class="rol"> Asesoría de programación </td>
+              <td class="nombre">Oscar Escamilla González
+                <br> Leticia Montserrat Vargas Rocha
+              </td>
+            </tr>
+            <tr>
+              <td class="rol"> Diseño gráfico </td>
+              <td class="nombre"> Francisco Varela Fuentes </td>
+            </tr>
+            <tr>
+              <td class="rol">Coordinación </td>
+              <td class="nombre"> Leticia Montserrat Vargas Rocha </td>
+            </tr>
+          </tbody>
+        </table>
+
+        <div class="logos">
+          <a href="">
+            <img src="../images/info/icns/logoLite.png">
+          </a>
+          <a href="http://www.unadmexico.mx/">
+            <img src="../images/info/icns/logoUNADM.png">
+          </a>
+        </div>
+      </div>
+      <!-- Linea separación créditos -->
+      <hr class="linea">
+      <!-- Aviso licencias -->
+
+      <div class="licencias">
+
+        <p class="creativeCommons">Los contenidos de esta unidad didáctica interactiva están bajo una licencia
+          <a href="http://creativecommons.org/licenses/by-nc-sa/2.5/es/" target="_blank">Creative Commons Reconocimiento-NoComercial-CompartirIgual</a>.</p>
+        <!--arquimedes (optativo)-->
+
+        <p>La unidad didáctica fue creada con
+          <a href="http://arquimedes.matem.unam.mx/Descartes5/creditos/conCCL.html" target="_blank">Arquímedes</a>, una herramienta de código abierto.</p>
+        <!-- Descartes -->
+
+        <p>La unidad didáctica contiene escenas elaboradas con Descartes, una herramienta de código abierto.</p>
+
+        <p style="text-align:center"> LITE - UnADM 2014</p>
+      </div>
+    </div>
+  </div>
+  <!------ TERMINA LA INFO SOBRE LAS LICENCIAS Y LOS CRÉDITOS. ---------->
+
+
+
+</body>
+</html>

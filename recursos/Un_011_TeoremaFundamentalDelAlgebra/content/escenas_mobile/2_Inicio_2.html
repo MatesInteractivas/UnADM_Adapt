@@ -1,0 +1,158 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+ 	<link href="../css/html5_mobile.css" rel="stylesheet" type="text/css" media="screen" />
+	<link href="../css/DescHTML5.css" rel="stylesheet" type="text/css" media="screen" />
+	<script type="text/javascript" src='../javascript/inject_functions_scorms_descartes.js'></script>
+	<script type='text/javascript' src='../javascript/lib/descartes-min.js'></script>
+</head>
+
+<body>
+ <!-------- MathJax --- para fórmulas matemáticas ------>	
+	<script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script> 
+
+<article class="course_content_container">
+  
+  <div class="course_content">
+    
+    
+    <!------ INICIA EL CONTENIDO DE LA PÁGINA --------->
+    
+    
+    <!--- Título de la página --->
+    <center><h2>Teorema Fundamental del Álgebra</h2></center>
+    
+    
+	<div class='text_panel'>
+		  
+    <h2>TFdA</h2>
+		<!--- Párrafo --->
+        <p>
+        Toda ecuación polinomial de la forma 
+        \[c_0+c_1z+c_2z^2+...+c_{n-1}z^{n-1}+c_nz^n=0\]
+        en la que los coeficientes \(c_0\), \(c_1\),..., \(c_n\) son números complejos, cuyo grado \(n\) es mayor o igual a uno, y cuyo coeficiente \(c_n\) no es cero, tiene \(n\) raíces complejas, siempre y cuando cada raíz múltiple de multiplicidad \(m\) se cuente como \(m\) raíces.
+        </p>
+        
+		<p>
+			Es decir que un polinomio \(p ( z )\) de grado \(n\) tiene \(n\) valores \(z_i\) para los que \(p ( z_i ) = 0 \). Tales valores se llaman <em>raíces del polinomio</em>. Esta afirmación es equivalente a la afirmación de que todo polinomio que tiene coeficientes complejos y grado mayor o igual a 1 tiene al menos una raíz compleja. Un ejemplo de un polinomio con una sola raíz con <em>multiplicidad</em> mayor a uno es 
+            \[z ^ 2-2z + 1 = (z - 1 ) (z - 1 )\] 
+            que tiene \(z = 1\) como una raíz de multiplicidad dos.
+		</p>
+        
+        <p>
+        Otro ejemplo, las raíces del polinomio 
+        \[x ^ 3-2x ^ 2 -x + 2 = (x - 2 ) (x - 1 ) (x + 1 )\]
+        son \(-1\), \(1\) y \(2\), todas con multiplicidad uno. 
+		</p>
+
+		<p>
+Encontrar las raíces de un polinomio es por lo tanto equivalente a factorizar el polinomio en factores lineales (de grado uno), y las raíces del polinomio no son más que las preimágenes del cero. En los números complejos, si el polinomio es de grado \(n\), su factorización está compuesta por \(n\) factores lineales, no necesariamente distintos entre sí. 
+		</p>
+		<p>
+Este teorema nos habla sobre la existencia de dichas raíces, mas no nos dice cómo encontrarlas. Sin embargo cualquier polinomio puede ser factorizado numéricamente.
+		</p>
+
+		<p>
+		En la siguiente escena veremos una representación geométrica de las potencias de un número complejo y en seguida, una interepretación geométrica del teorema fundamental del álgebra para polinomios hasta de grado cinco.
+		</p>
+
+        <!------</p><br>
+    <h2>La demostración</h2>
+    	
+		
+    <p>
+    	La idea de la demostración es la siguiente. Si \(|z|\) es suficientemente grande, el término de grado \(n\) domina el comportamiento de \(P ( z )\) y la imagen de un círculo \(C\) suficientemente grande, centrado en el orígen, gira \(n\) veces al rededor del \(0\).  \(C\) es tal que  
+    </p>
+
+    
+    
+  
+    <!------ TERMINA EL CONTENIDO DE LA PÁGINA --------->
+</div>
+
+
+
+  <!------ INICIA LA INFO SOBRE LAS LICENCIAS Y LOS CRÉDITOS. ---------->
+    <a id="btCopyright" class="standardButton" title="Haz clic aquí para consultar los créditos y las condiciones de uso de este recurso." href="#" onclick="document.getElementById('copyright').className='visible';">&#169;</a>
+    <div id="copyright" class="oculto">
+      
+      <div class='innerCopyright'>
+      
+          <a id="btCloseCopyright" class="standardButton" title="Haz clic aquí para cerrar esta ventana." href="#" onclick="document.getElementById('copyright').className='oculto'">×</a>
+  
+           <!-- Créditos UAM  (siempre deben ir en primer lugar) -->
+			<div class="creditos">
+				<h1>
+					Créditos 
+				</h1>
+				<h2>
+					Escena original
+				</h2>
+				<table class="autores" 	>
+					<tr> <td  class="rol"> Diseño del contenido			</td>		<td class="nombre"> Elsa Sirenia Vega Camacho		</td></tr>
+					<tr> <td  class="rol"> Diseño funcional				</td>		<td class="nombre"> Elsa Sirenia Vega Camacho		</td></tr>
+					<tr> <td  class="rol"> Programación						</td>		<td class="nombre"> Elsa Sirenia Vega Camacho		</td></tr>
+					<!-- Varias personas en el mismo rubro, separar por <br> -->
+					<tr> <td  class="rol"> Asesoría de programación		</td>		<td class="nombre"> 
+																											Leticia Montserrat Vargas Rocha 
+																										
+																									</td></tr>
+					<tr> <td  class="rol"> Diseño gráfico					</td>		<td class="nombre"> Ricardo López Gómez										</td></tr>
+					<tr> <td  class="rol" >Coordinación			</td>		<td class="nombre"> Leticia Montserrat Vargas Rocha</tr>
+				</table>
+	         <h2>
+					Adaptación 
+				</h2>
+				<table class="autores" 	>
+					<tr> <td  class="rol"> Diseño funcional				</td>		<td class="nombre"> Elsa Sirenia Vega Camacho </td></tr>
+					<tr> <td  class="rol"> Programación						</td>		<td class="nombre"> Elsa Sirenia Vega Camacho </td></tr>
+					<!-- Varias personas en el mismo rubro, separar por <br> -->
+					<tr> <td  class="rol"> Asesoría de programación		</td>		<td class="nombre"> Leticia Montserrat Vargas Rocha </td></tr>
+					<tr> <td  class="rol"> Diseño gráfico					</td>		<td class="nombre"> Francisco	Varela Fuentes						</td></tr>
+					<tr> <td  class="rol"> Ilustración					</td>		<td class="nombre"> Francisco	Varela Fuentes						</td></tr>
+					<tr> <td  class="rol" >Coordinación			</td>		<td class="nombre"> Leticia Montserrat Vargas Rocha						</td></tr>
+				</table>
+                
+	         <div class='logos'>
+	            <a href=''>
+	               <img src="../images/info/icns/logoLite.png">
+	            </a>
+	            <a href="http://www.unadmexico.mx/">
+	               <img src="../images/info/icns/logoUNADM.png">
+	            </a>
+	         </div>
+          </div>
+          
+          <!-- Linea separación créditos -->
+          <hr class="linea" />
+     
+          <!-- Aviso licencias -->
+          <div class="licencias">
+          
+				<p class="creativeCommons">Los contenidos de esta unidad didáctica interactiva están bajo una licencia <a href="http://creativecommons.org/licenses/by-nc-sa/2.5/es/" target="_blank">Creative Commons Reconocimiento-NoComercial-CompartirIgual</a>.</p>
+
+				<!--arquimedes (optativo)-->
+				<p>La unidad didáctica fue creada con <a href="http://arquimedes.matem.unam.mx/Descartes5/creditos/conCCL.html" target="_blank">Arquímedes</a>, una herramienta de código abierto.</p>
+
+				<!-- Descartes -->
+				<p>La unidad didáctica contiene escenas elaboradas con Descartes, una herramienta de código abierto.</p>
+
+
+          	<p style='text-align:center'> LITE - UnADM 2014</p>
+          </div>
+      </div>
+    </div> 
+   <!------ TERMINA LA INFO SOBRE LAS LICENCIAS Y LOS CRÉDITOS. ---------->
+  
+  
+  </div>
+  
+  
+</article>
+
+
+</body>
+
+</html>

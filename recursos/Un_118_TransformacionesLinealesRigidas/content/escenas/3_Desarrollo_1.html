@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Desarrollo</title>	
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<link href="../css/DescHTML5.css" rel="stylesheet" type="text/css" media="screen" />
+	
+  <link href="../css/html5.css" rel="stylesheet" type="text/css" media="screen" />	
+  <script type="text/javascript" src='../javascript/inject_functions_scorms_descartes.js'></script>
+	<script type='text/javascript' src='../lib/descartes-min.js'></script>
+</head>
+<body BGCOLOR="c0c0c0" leftmargin="0" topmargin="0">
+<ajs name="Descartes" width=970 height=550 code="Descartes">
+   <param name="tamaño" value="970x550">
+   <param name="image_loader" value="">
+   <param name="expand" value="">
+   <param name="decimal_symbol" value=".">
+   <param name="antialias" value="sí">
+   <param name="deshacer" value="no">
+   <param name="nombre" value="Descartes">
+   <param name="Versión" value="5.356, 2016-05-03">
+   <param name="Idioma" value="español">
+   <param name="Botones" value="créditos=no config=no inicio=no limpiar=no">
+   <param name="E_01" value="tipo='R2' id='E1' fijo='sí' escala='1' O.x='-50%' O.y='-50%' imagen='imgs/tpl/fondo_02.jpg' despl_imagen='arr-izq' fondo='c0d0d8' red='no' red10='no' ejes='no' texto='no'">
+   <param name="E_02" value="tipo='R2' id='E2' x='E2.x' y='E2.y' ancho='426' alto='400' dibujar-si='E2.visible' despl_imagen='arr-izq' fondo='dcdbe1' red='b8c4c8' red10='889498' ejes='405860' texto='no'">
+   <param name="E_03" value="tipo='R2' id='EspTxt' x='EspTxt.x' y='EspTxt.y' ancho='375' alto='400' dibujar-si='EspTxt.visible' fijo='sí' despl_imagen='arr-izq' fondo='fff8ffd9' red='no' red10='no' ejes='no' texto='no'">
+   <param name="C_01" value="id='btnAceptar' tipo='numérico' interfaz='botón' región='interior' espacio='EspTxt' nombre='[btnAceptar.txt]' expresión='(btnAceptar.x,btnAceptar.y,btnAceptar.w,btnAceptar.h)' fijo='sí' visible='sí' color='blanco' color-int='f7000000' negrita='sí' fuente puntos='16' imagen='[btnAceptar.img]' acción='inicio' dibujar-si='rot=1'">
+   <param name="C_02" value="id='dasX' tipo='numérico' región='exterior' espacio='E1' nombre='dasX' incr='1' discreto='sí' fijo='sí' visible='sí' pos_mensajes='centro'">
+   <param name="C_03" value="id='dasY' tipo='numérico' región='exterior' espacio='E1' nombre='dasY' incr='1' discreto='sí' fijo='sí' visible='sí' pos_mensajes='centro'">
+   <param name="C_04" value="id='g1' tipo='gráfico' espacio='E2' expresión='(2,3)' fijo='sí' dibujar-si='set>0'">
+   <param name="C_05" value="id='g2' tipo='gráfico' espacio='E2' expresión='(1,2)' fijo='sí' dibujar-si='set>1'">
+   <param name="C_06" value="id='g3' tipo='gráfico' espacio='E2' expresión='(3,1)' fijo='sí' dibujar-si='set>2'">
+   <param name="C_07" value="id='set' tipo='numérico' interfaz='menú' región='interior' espacio='EspTxt' expresión='(110,65-16,130,35)' fijo='sí' visible='no' opciones='Selecciona [0],Un punto [1],Un segmento [2],Un triángulo[3]' acción='calcular' parámetro='setflag1=(set=1)?setflag1+1:setflag1\nsetflag2=(set=2)?setflag2+1:setflag2\nsetflag3=(set=3)?setflag3+1:setflag3\nsetflg=setflag1+setflag2+setflag3\ng1.activo=0\ng2.activo=0\ng3.activo=0\ng1activoflag=0\ng2activoflag=0\ng3activoflag=0\ngflg=0\n\n\n' pos_mensajes='centro'">
+   <param name="C_08" value="id='ctrF_' tipo='numérico' región='interior' espacio='EspTxt' nombre='θ' expresión='(140,124,120,ctrF.h)' decimales='1' fijo='sí' visible='sí' acción='calcular' parámetro='grad_=(ctrF_*pi)/180\nllamar=rot(grad_)\nrot=1\ncf=(ctrF_old = ctrF_)?0:1\nrotflg=rotflg+cf\nctrF_old = ctrF_\ng1.activo=0\ng2.activo=0\ng3.activo=0\ng1activoflag=0\ng2activoflag=0\ng3activoflag=0\ngflg=0\nsetflag=0\n' parámetro.fuente='Monospaced,BOLD,15' activo-si='set>0' pos_mensajes='centro'">
+   <param name="C_09" value="id='atras' tipo='numérico' interfaz='botón' región='interior' espacio='EspTxt' expresión='(0,355,32,30)' fijo='sí' visible='sí' fuente puntos='14' imagen='imgs/tpl/retroceder.png' acción='calcular' dibujar-si='0' pos_mensajes='centro'">
+   <param name="C_10" value="id='H' tipo='numérico' región='interior' espacio='E1' nombre='H' incr='5' fijo='sí' visible='sí' dibujar-si='0' pos_mensajes='centro'">
+   <param name="C_11" value="id='V' tipo='numérico' región='interior' espacio='E1' nombre='V' incr='5' fijo='sí' visible='sí' dibujar-si='0' pos_mensajes='centro'">
+   <param name="C_12" value="id='R' tipo='numérico' interfaz='botón' región='interior' espacio='E2' nombre='R' expresión='(E2._w-3*50,E2._h-30,50,30)' fijo='no' visible='sí' acción='calcular' parámetro='UpdatePerFlg()\nSalir=0\nEntrar=0\ninicioFlg=0' dibujar-si='Debug' pos_mensajes='centro'">
+   <param name="C_13" value="id='S' tipo='numérico' interfaz='botón' región='interior' espacio='E2' nombre='S' expresión='(E2._w-2*50,E2._h-30,50,30)' fijo='no' visible='sí' acción='calcular' parámetro='Salir=1\nEntrar=0' dibujar-si='Debug' pos_mensajes='centro'">
+   <param name="C_14" value="id='T' tipo='numérico' interfaz='botón' región='interior' espacio='E2' nombre='T' expresión='(E2._w-50,E2._h-30,50,30)' fijo='no' visible='sí' acción='calcular' parámetro='Entrar=1\nSalir=0\n' dibujar-si='Debug' pos_mensajes='centro'">
+   <param name="A_01" value="id='irAEscena(idxEscena)' algoritmo='sí' algoritmo='sí' hacer='parent.set(&squot;scene&squot;,idxEscena);parent.update()'">
+   <param name="A_02" value="id='initBtns()' algoritmo='sí' algoritmo='sí' hacer='cerrarInfo.w=21;cerrarInfo.h=cerrarInfo.w;cerrarInfo.x=INFO._w-cerrarInfo.w-10;cerrarInfo.y=8;cerrarInfo.img=&squot;imgs/tpl/cerrar.png&squot;;cerrarInfo.visible=1;;btnAceptar.w=120;btnAceptar.h=30;btnAceptar.x=120;btnAceptar.y=355;btnAceptar.img=&squot;imgs/tpl/btn120.png&squot;;btnAceptar.txt=&squot;Limpiar&squot;;;ctrF.w=80;ctrF.h=40;ctrF.txt.w=70;ctrF.txt.h=18 ;;ctrF.txt.x=10;ctrF.txt.y=15;ctrF.x=ctrF.txt.x+ctrF.txt.w;ctrF.y=ctrF.txt.y-10;'">
+   <param name="A_03" value="id='initEsp()' algoritmo='sí' algoritmo='sí' hacer='INFO.x=(E1._w-INFO._w)/2;INFO.y=(E1._h-INFO._h)/2;INFO.visible=1;;E2.x=54;E2.y=105;E2.visible=1;;EspTxt.x=540;EspTxt.y=105;EspTxt.visible=1'">
+   <param name="A_04" value="id='initEscena()' algoritmo='sí' algoritmo='sí' hacer='initBtns();initEsp();;ô=|***************************************|;ô=|*  Calculamos la posicion del titulo  *|;ô=|***************************************|;titulo=&squot;Rotación con centro en el origen&squot;;titulo.w=_AnchoDeCadena_(titulo,&squot;SansSerif&squot;,&squot;PLAIN&squot;,&squot;30&squot;);titulo.x=(E1._w-titulo.w)/2;titulo.y=30;'">
+   <param name="A_05" value="id='__FIN_TPL_()'">
+   <param name="A_06" value="id='gr.x' vector='sí' evaluar='una-sola-vez' expresión='gr.x[0]=0;gr.x[1]=0;gr.x[2]=0'">
+   <param name="A_07" value="id='gr.y' vector='sí' evaluar='una-sola-vez' expresión='gr.y[0]=0;gr.y[1]=0;gr.y[2]=0'">
+   <param name="A_08" value="id='V' vector='sí' evaluar='una-sola-vez' expresión='V[0]=|a|;V[1]=|b|;V[2]=|c|'">
+   <param name="A_09" value="id='rot(ro)' algoritmo='sí' expresión='x' algoritmo='sí' hacer='gr.x[0]=(cos(ro)*g1.x)-(sen(ro)*g1.y);gr.y[0]=(sen(ro)*g1.x)+(cos(ro)*g1.y);gr.x[1]=(cos(ro)*g2.x)-(sen(ro)*g2.y);gr.y[1]=(sen(ro)*g2.x)+(cos(ro)*g2.y);gr.x[2]=(cos(ro)*g3.x)-(sen(ro)*g3.y);gr.y[2]=(sen(ro)*g3.x)+(cos(ro)*g3.y)'">
+   <param name="A_10" value="id='setflag1'">
+   <param name="A_11" value="id='setflag2'">
+   <param name="A_12" value="id='setflag3'">
+   <param name="A_13" value="id='rotflag'">
+   <param name="A_14" value="id='getSCORMState()' algoritmo='sí' expresión='res' algoritmo='sí' Local='res,c' inicio='c=&squot;@&squot;' hacer='ö=|Estandar ---- [MIDC]XX.<var>  SI SOLO EXISTE UNA ESCENA EN EL HTML|;ö=|Estandar ---- [MIDC]XX_YY.<var>  SI HAY MAS DE UNA ESCENA EN EL HTML|;;res=&squot;D01.PER1:&squot;+per+c;res=res+&squot;D01.SETFLG_D1:&squot;+setflg+c;res=res+&squot;D01.ROTFLG_D1:&squot;+rotflg+c;res=res+&squot;D01.GFLG_D1:&squot;+gflg+c;;;;'">
+   <param name="A_15" value="id='initStateScorm()' algoritmo='sí' expresión='x' algoritmo='sí' hacer='PER1=getSCORMStateVar(&squot;D01.PER1&squot;);SETFLG_D1=getSCORMStateVar(&squot;D01.SETFLG_D1&squot;);ROTFLG_D1=getSCORMStateVar(&squot;D01.ROTFLG_D1&squot;);GFLG_D1=getSCORMStateVar(&squot;D01.GFLG_D1&squot;);;;'">
+   <param name="A_16" value="id='Percent()' algoritmo='sí' expresión='per' algoritmo='sí' hacer='per=((setflg=0)&(rotflg=0))?0:per;per=((setflg>=1)&(rotflg=0)&gflg=1)?25:per;per=((setflg>=1)&(rotflg>=1)&(gflg=1))?50:per;per=((setflg>=2)&(rotflg>=2)&(gflg=1))?75:per;per=((setflg>=3)&(rotflg>=3)&(gflg=1))?100:per;;'">
+   <param name="A_17" value="id='UpdatePerFlg()' algoritmo='sí' expresión='x' algoritmo='sí' hacer='setflg=SETFLG_D1;rotflg=ROTFLG_D1;gflg=GFLG_D1'">
+   <param name="A_18" value="id='INICIO' algoritmo='sí' evaluar='una-sola-vez' hacer='Debug=0;;initEscena();;initStateScorm();;UpdatePerFlg();;setflg=0;;ctrF_old = ctrF;;inicioFlg=inicioFlg+1;;;;'">
+   <param name="A_19" value="id='CALCULOS' algoritmo='sí' evaluar='siempre' hacer='grados=(ctrF_*pi)/180;g1activoflag=g1activoflag+g1.activo;g2activoflag=g2activoflag+g2.activo;g3activoflag=g3activoflag+g3.activo;gg=g1activoflag+g2activoflag+g3activoflag;gflg=(gg>0)?1:0;;Oldper=per;per=Percent();;sendflg=(Oldper=per)?0:1;ooooo=(sendflg=1)?setSCORMPercentage(per):0;;'">
+   <param name="A_20" value="id='Rot' evento='sí' condición='(rot=1)&(g1.activo|g2.activo|g3.activo)' acción='calcular' parámetro='llamar_1=rot(grad_)\n' ejecución='siempre' pos_mensajes='centro'">
+   <param name="G_01" value="espacio='E1' tipo='texto' fondo='sí' expresión='[titulo.x,titulo.y]' texto='[titulo]' fuente='SansSerif,PLAIN,30' fijo='sí'">
+   <param name="G_02" value="espacio='E1' tipo='texto' fondo='sí' dibujar-si='0' expresión='[__GRAF__,20]' fijo='sí'">
+   <param name="G_03" value="espacio='E1' tipo='texto' fondo='sí' dibujar-si='0' expresión='[__INFO__,20]' fijo='sí'">
+   <param name="G_04" value="espacio='E2' tipo='segmento' color='azul' dibujar-si='1&(set=2)' expresión='(g1.x,g1.y)(g2.x,g2.y)' fijo='sí' ancho='2' info='lado del segmento caso set=2'">
+   <param name="G_05" value="espacio='E2' tipo='polígono' color='azul' dibujar-si='1&(set=3)' expresión='(g1.x,g1.y)(g2.x,g2.y)(g3.x,g3.y)(g1.x,g1.y)' relleno='77ffc800' ancho='2' info='lados del triángulo caso set=3'">
+   <param name="G_06" value="espacio='E2' tipo='segmento' color='0079ff' dibujar-si='1&(rot=1)&(set=2)' expresión='(gr.x[0],gr.y[0])(gr.x[1],gr.y[1])' fijo='sí' ancho='2' info='lado del segmento rotado caso (rot=1)&(set=2)'">
+   <param name="G_07" value="espacio='E2' tipo='polígono' color='0079ff' dibujar-si='1&(rot=1)&(set=3)' expresión='(gr.x[0],gr.y[0])(gr.x[1],gr.y[1])(gr.x[2],gr.y[2])(gr.x[0],gr.y[0])' relleno='77ffff80' ancho='2' info='lados del triángulo rotado caso (rot=1)&(set=3)'">
+   <param name="G_08" value="espacio='E2' tipo='punto' dibujar-si='1&(set>0)' expresión='(g1.x+.2,g1.y-.1)' texto='{\rtf1\uc0{\fonttbl\f0\fcharset0 Times New Roman;\f1\fcharset0 Arial;\f2\fcharset0 Courier New;}\f1\fs38 a\f2\fs30}' fuente='SansSerif,PLAIN,19' fijo='sí' tamaño='0' info='a caso set>0'">
+   <param name="G_09" value="espacio='E2' tipo='punto' dibujar-si='1&(set>1)' expresión='(g2.x+.2,g2.y-.1)' texto='{\rtf1\uc0{\fonttbl\f0\fcharset0 Times New Roman;\f1\fcharset0 Arial;\f2\fcharset0 Courier New;}\f1\fs38 b\f2\fs30}' fuente='SansSerif,PLAIN,19' fijo='sí' tamaño='0' info='b caso set>1'">
+   <param name="G_10" value="espacio='E2' tipo='punto' dibujar-si='1&(set>2)' expresión='(g3.x+.2,g3.y-.1)' texto='{\rtf1\uc0{\fonttbl\f0\fcharset0 Times New Roman;\f1\fcharset0 Arial;\f2\fcharset0 Courier New;}\f1\fs38 c\f2\fs30}' fuente='SansSerif,PLAIN,19' fijo='sí' tamaño='0' info='c caso set>2'">
+   <param name="G_11" value="espacio='E2' tipo='punto' color='magenta' dibujar-si='1&(rot=1)&(set>s)' expresión='(gr.x[s],gr.y[s])' familia='s' s.intervalo='[0,2]' s.pasos='2' texto='{\rtf1\uc0{\fonttbl\f0\fcharset0 Times New Roman;}}' fuente='Serif,PLAIN,15' fijo='sí' tamaño='4' info='puntos rotados caso (rot=1)&(set>s)'">
+   <param name="G_12" value="espacio='E2' tipo='punto' color='magenta' dibujar-si='1&(rot=1)&(set>s)' expresión='(gr.x[s],gr.y[s])' familia='s' s.intervalo='[0,2]' s.pasos='2' texto='{\rtf1\uc0{\fonttbl\f0\fcharset0 Times New Roman;\f1\fcharset0 Arial;\f2\fcharset0 Courier New;}{\colortbl\red64\green64\blue64;\red255\green0\blue255;}\cf0\f1\fs38\i{\*\mjaformula{\expr V[s]\decimals 2\fixed0}&squot;}\cf1\f2\fs30\i0}' fuente='SansSerif,ITALIC,19' fijo='sí' tamaño='0' info='Nombres de puntos rotados (V[s], s=0,1,2) caso (rot=1)&(set>s)'">
+   <param name="G_13" value="espacio='E2' tipo='segmento' color='gris' dibujar-si='1&(rot)&(set>0)&(g1.activo)' expresión='(g1.x,g1.y)(0,0)' fijo='sí' tamaño='1' info='linea del ángulo de rotación de 0 a a, caso (rot)&(set>1)&(g1.activo)'">
+   <param name="G_14" value="espacio='E2' tipo='segmento' color='gris' dibujar-si='1&(rot)&(set>0)&(g1.activo)' expresión='(0,0)(gr.x[0],gr.y[0])' fijo='sí' tamaño='1' info='linea del ángulo de rotación de 0 a a&squot;, caso(rot)&(set>1)&(g1.activo)'">
+   <param name="G_15" value="espacio='E2' tipo='segmento' color='gris' dibujar-si='1&(rot)&(set>1)&(g2.activo)' expresión='(g2.x,g2.y)(0,0)' fijo='sí' tamaño='1' info='linea del ángulo de rotación de 0 a b, caso (rot)&(set>1)&(g2.activo)'">
+   <param name="G_16" value="espacio='E2' tipo='segmento' color='gris' dibujar-si='1&(rot)&(set>1)&(g2.activo)' expresión='(0,0)(gr.x[1],gr.y[1])' fijo='sí' tamaño='1' info='linea del ángulo de rotación de 0 a b&squot;, caso (rot)&(set>1)&(g2.activo)'">
+   <param name="G_17" value="espacio='E2' tipo='segmento' color='gris' dibujar-si='1&(rot)&(set>1)&(g3.activo)' expresión='(g3.x,g3.y)(0,0)' fijo='sí' tamaño='1' info='linea del ángulo de rotación de 0 a c, caso (rot)&(set>1)&(g3.activo)'">
+   <param name="G_18" value="espacio='E2' tipo='segmento' color='gris' dibujar-si='1&(rot)&(set>1)&(g3.activo)' expresión='(0,0)(gr.x[2],gr.y[2])' fijo='sí' tamaño='1' info='linea del ángulo de rotación de 0 a c&squot;, caso (rot)&(set>1)&(g3.activo)'">
+   <param name="G_19" value="espacio='E2' tipo='arco' color='00b400' dibujar-si='1&(rot)&(set>0)&(g1.activo)' inicio='(g1.x,g1.y)' fin='(gr.x[0],gr.y[0])' texto='{\rtf1\uc0{\fonttbl\f0\fcharset0 Times New Roman;\f1\fcharset0 Arial;}{\colortbl\red129\green0\blue0;\red0\green180\blue0;}\cf0\f1\fs40\i{\*\mjaformula{\expr ctrF_\decimals 2\fixed0}\u176 }\cf1}' fuente='SansSerif,ITALIC,20' fijo='no' relleno='b400b400' info='graph and measure of angle entre a y a&squot; caso (rot)&(set>1)&(g1.activo)'">
+   <param name="G_20" value="espacio='E2' tipo='arco' color='00b400' dibujar-si='1&(rot)&(set>1)&(g2.activo)' inicio='(g2.x,g2.y)' fin='(gr.x[1],gr.y[1])' texto='{\rtf1\uc0{\fonttbl\f0\fcharset0 Times New Roman;\f1\fcharset0 Arial;}{\colortbl\red129\green0\blue0;\red0\green180\blue0;}\cf0\f1\fs40\i{\*\mjaformula{\expr ctrF_\decimals 2\fixed0}\u176 }\cf1}' fuente='SansSerif,ITALIC,20' fijo='no' relleno='b400b400' info='graph and measure of angle entre b y b&squot; caso (rot)&(set>1)&(g2.activo)'">
+   <param name="G_21" value="espacio='E2' tipo='arco' color='00b400' dibujar-si='1&(rot)&(set>1)&(g3.activo)' inicio='(g3.x,g3.y)' fin='(gr.x[2],gr.y[2])' texto='{\rtf1\uc0{\fonttbl\f0\fcharset0 Times New Roman;\f1\fcharset0 Arial;}{\colortbl\red129\green0\blue0;\red0\green180\blue0;}\cf0\f1\fs40\i{\*\mjaformula{\expr ctrF_\decimals 2\fixed0}\u176 }\cf1}' fuente='SansSerif,ITALIC,20' fijo='no' relleno='b400b400' info='graph and measure of angle entre c y c&squot; caso (rot)&(set>1)&(g3.activo)'">
+   <param name="G_22" value="espacio='E2' tipo='texto' dibujar-si='Debug' expresión='[120*s,0]' familia='s' s.intervalo='[0,2]' s.pasos='2' texto='{\rtf1\uc0{\fonttbl\f0\fcharset0 Times New Roman;\f1\fcharset0 Times New Roman;\f2\fcharset0 Courier New;}\f1\fs34\i{\*\mjaformula ({\expr gr.x[s]\decimals 2\fixed1}}\f2\fs30\i0 ,\f1\fs34\i{\*\mjaformula{\expr gr.y[s]\decimals 2\fixed1})}\f2\fs30\i0}' fuente='Serif,ITALIC,17' fijo='sí' info='(gr.x[s],gr.y[s]) s = 0,1,2'">
+   <param name="G_23" value="espacio='E2' tipo='texto' dibujar-si='Debug' expresión='[0,20]' texto='{\rtf1\uc0{\fonttbl\f0\fcharset0 Times New Roman;\f1\fcharset0 Arial;\f2\fcharset0 Times New Roman;\f3\fcharset0 Courier New;}\f1\fs30 set=\f2\fs34\i{\*\mjaformula{\expr set\decimals 0\fixed1}}\f3\fs30\i0}' fuente='SansSerif,PLAIN,15' fijo='sí' info='set = [set}'">
+   <param name="G_24" value="espacio='E2' tipo='texto' dibujar-si='Debug' expresión='[50,20]' texto='{\rtf1\uc0{\fonttbl\f0\fcharset0 Times New Roman;\f1\fcharset0 Arial;\f2\fcharset0 Courier New;}\f1\fs30 setflg = {\*\mjaformula{\expr setflg\decimals 0\fixed1}}\f2\fs30}' fuente='SansSerif,PLAIN,15' fijo='sí' info='setflg = [setflg]'">
+   <param name="G_25" value="espacio='E2' tipo='texto' dibujar-si='Debug' expresión='[125,20]' texto='{\rtf1\uc0{\fonttbl\f0\fcharset0 Times New Roman;\f1\fcharset0 Arial;\f2\fcharset0 Courier New;}\f1\fs30\b per ={\*\mjaformula{\expr per\decimals 0\fixed1}}OldPer ={\*\mjaformula{\expr OldPer\decimals 0\fixed1}}PER1={\*\mjaformula{\expr PER1\decimals 0\fixed1}}\f2\fs30\b0}' fuente='SansSerif,BOLD,15' fijo='sí' info='per OldPer PER1'">
+   <param name="G_26" value="espacio='E2' tipo='texto' dibujar-si='Debug' expresión='[0,40]' texto='{\rtf1\uc0{\fonttbl\f0\fcharset0 Times New Roman;\f1\fcharset0 Courier New;\f2\fcharset0 Times New Roman;}\f1\fs30 setflag1=\f2\fs34\i{\*\mjaformula{\expr setflag1\decimals 0\fixed1}}\f1\fs30\i0}' fijo='sí' info='setflag1 = [setflag1]'">
+   <param name="G_27" value="espacio='E2' tipo='texto' dibujar-si='Debug' expresión='[120,40]' texto='{\rtf1\uc0{\fonttbl\f0\fcharset0 Times New Roman;\f1\fcharset0 Courier New;\f2\fcharset0 Times New Roman;}\f1\fs30 setflag2 = \f2\fs34\i{\*\mjaformula{\expr setflag2\decimals 0\fixed1}}\f1\fs30\i0}' fijo='sí' info='setflag2 = [setflag2]'">
+   <param name="G_28" value="espacio='E2' tipo='texto' dibujar-si='Debug' expresión='[240,40]' texto='{\rtf1\uc0{\fonttbl\f0\fcharset0 Times New Roman;\f1\fcharset0 Courier New;\f2\fcharset0 Times New Roman;}\f1\fs30 setflag3 = \f2\fs34\i{\*\mjaformula{\expr setflag3\decimals 0\fixed1}}\f1\fs30\i0}' fijo='sí' info='setflag3 = [setflag3]'">
+   <param name="G_29" value="espacio='E2' tipo='texto' dibujar-si='Debug' expresión='[0,60]' texto='{\rtf1\uc0{\fonttbl\f0\fcharset0 Times New Roman;\f1\fcharset0 Courier New;\f2\fcharset0 Times New Roman;}\f1\fs30 rot = \f2\fs34\i{\*\mjaformula{\expr rot\decimals 0\fixed1}}\f1\fs30\i0}' fijo='sí' info='rot = [rot]'">
+   <param name="G_30" value="espacio='E2' tipo='texto' dibujar-si='Debug' expresión='[90,60]' texto='{\rtf1\uc0{\fonttbl\f0\fcharset0 Times New Roman;\f1\fcharset0 Courier New;\f2\fcharset0 Times New Roman;}\f1\fs30 ctrF_ = \f2\fs34\i{\*\mjaformula{\expr ctrF_\decimals 0\fixed1}}\f1\fs30\i0}' fijo='sí' info='ctrF_ = [ctrF_]'">
+   <param name="G_31" value="espacio='E2' tipo='texto' dibujar-si='Debug' expresión='[200,60]' texto='{\rtf1\uc0{\fonttbl\f0\fcharset0 Times New Roman;\f1\fcharset0 Courier New;\f2\fcharset0 Times New Roman;}\f1\fs30 rotflg = \f2\fs34\i{\*\mjaformula{\expr rotflg\decimals 0\fixed1}}\f1\fs30\i0}' fijo='sí' info='rotflg = [rotflg]'">
+   <param name="G_32" value="espacio='E2' tipo='texto' dibujar-si='Debug' expresión='[0,80]' texto='{\rtf1\uc0{\fonttbl\f0\fcharset0 Times New Roman;\f1\fcharset0 Times New Roman;\f2\fcharset0 Courier New;}\f1\fs34\i g1.activo = {\*\mjaformula{\expr g1.activo\decimals 0\fixed1}}\f2\fs30\i0}' fuente='Serif,ITALIC,17' fijo='sí' info='g1.activo'">
+   <param name="G_33" value="espacio='E2' tipo='texto' dibujar-si='Debug' expresión='[110,80]' texto='{\rtf1\uc0{\fonttbl\f0\fcharset0 Times New Roman;\f1\fcharset0 Times New Roman;\f2\fcharset0 Courier New;}\f1\fs34\i g1activoflag = {\*\mjaformula{\expr g1activoflag\decimals 0\fixed1}}\f2\fs30\i0}' fuente='Serif,ITALIC,17' fijo='sí' info='g1activoflag'">
+   <param name="G_34" value="espacio='E2' tipo='texto' dibujar-si='Debug' expresión='[0,100]' texto='{\rtf1\uc0{\fonttbl\f0\fcharset0 Times New Roman;\f1\fcharset0 Times New Roman;\f2\fcharset0 Courier New;}\f1\fs34\i g2.activo = {\*\mjaformula{\expr g2.activo\decimals 0\fixed1}}\f2\fs30\i0}' fuente='Serif,ITALIC,17' fijo='sí' info='g2.activo'">
+   <param name="G_35" value="espacio='E2' tipo='texto' dibujar-si='Debug' expresión='[110,100]' texto='{\rtf1\uc0{\fonttbl\f0\fcharset0 Times New Roman;\f1\fcharset0 Times New Roman;\f2\fcharset0 Courier New;}\f1\fs34\i g2activoflag = {\*\mjaformula{\expr g2activoflag\decimals 0\fixed1}}\f2\fs30\i0}' fuente='Serif,ITALIC,17' fijo='sí' info='g2activoflag'">
+   <param name="G_36" value="espacio='E2' tipo='texto' dibujar-si='Debug' expresión='[0,120]' texto='{\rtf1\uc0{\fonttbl\f0\fcharset0 Times New Roman;\f1\fcharset0 Times New Roman;\f2\fcharset0 Courier New;}\f1\fs34\i g3.activo = {\*\mjaformula{\expr g3.activo\decimals 0\fixed1}}\f2\fs30\i0}' fuente='Serif,ITALIC,17' fijo='sí' info='g3.activo'">
+   <param name="G_37" value="espacio='E2' tipo='texto' dibujar-si='Debug' expresión='[110,120]' texto='{\rtf1\uc0{\fonttbl\f0\fcharset0 Times New Roman;\f1\fcharset0 Times New Roman;\f2\fcharset0 Courier New;}\f1\fs34\i g3activoflag = {\*\mjaformula{\expr g3activoflag\decimals 0\fixed1}}\f2\fs30\i0}' fuente='Serif,ITALIC,17' fijo='sí' info='g3activoflag'">
+   <param name="G_38" value="espacio='E2' tipo='texto' dibujar-si='Debug' expresión='[0,140]' texto='{\rtf1\uc0{\fonttbl\f0\fcharset0 Times New Roman;\f1\fcharset0 Times New Roman;\f2\fcharset0 Courier New;}\f1\fs34\i gg= {\*\mjaformula{\expr gg\decimals 0\fixed1}}\f2\fs30\i0  gflg=\f1\fs34\i{\*\mjaformula{\expr gflg\decimals 0\fixed1}}\f2\fs30\i0   sendflg=\f1\fs34\i{\*\mjaformula{\expr sendflg\decimals 0\fixed1}}\f2\fs30\i0}' fuente='Serif,ITALIC,17' fijo='sí' info='gg= [gg] gflg=[gflg] sendflg=[sendflg]'">
+   <param name="G_39" value="espacio='EspTxt' tipo='texto' expresión='[5,12]' texto='{\rtf1\uc0{\fonttbl\f0\fcharset0 Times New Roman;\f1\fcharset0 Arial;}\f1\fs40 Selecciona el tipo de conjunto a rotar:}' fuente='SansSerif,PLAIN,20' fijo='sí' info='Selecciona el tipo de conjunto a rotar:'">
+   <param name="G_40" value="espacio='EspTxt' tipo='texto' expresión='[5,12+80]' texto='{\rtf1\uc0{\fonttbl\f0\fcharset0 Times New Roman;\f1\fcharset0 Arial;}\f1\fs40 Indica los grados de rotaci\u243 n:}' fuente='SansSerif,PLAIN,20' fijo='sí' info='Indica los grados de rotación:'">
+   <param name="G_41" value="espacio='EspTxt' tipo='texto' dibujar-si='0' expresión='[5+110,12+80+40]' texto='{\rtf1\uc0{\fonttbl\f0\fcharset0 Arial;\f1\fcharset0 Times New Roman;}\f1\fs44\i{\*\mjaformula\u952 :}\f0\fs40\i0}' fuente='Serif,ITALIC,22' fijo='sí' info='θ='">
+   <param name="G_42" value="espacio='EspTxt' tipo='texto' dibujar-si='rot=0' expresión='[-12,195]' texto='{\rtf1\uc0{\fonttbl\f0\fcharset0 Times New Roman;\f1\fcharset0 Times New Roman;\f2\fcharset0 Arial;}\f1\fs44\i{\*\mjaformula{\matrix\rows 2\columns 2{\element cos \u952 }{\element -sen \u952 }{\element sen \u952 }{\element cos \u952 }}}\f2\fs40\i0}' fuente='Serif,ITALIC,22' fijo='sí' info='Matriz (texto)'">
+   <param name="G_43" value="espacio='EspTxt' tipo='texto' dibujar-si='rot=0' expresión='[-12+147,195]' texto='{\rtf1\uc0{\fonttbl\f0\fcharset0 Times New Roman;\f1\fcharset0 Times New Roman;\f2\fcharset0 Arial;}\f1\fs44\i{\*\mjaformula{\matrix\rows 2\columns 1{\element x}{\element y}}=}\f2\fs40\i0}' fuente='Serif,ITALIC,22' fijo='sí' info='vector (texto)'">
+   <param name="G_44" value="espacio='EspTxt' tipo='texto' dibujar-si='rot=0' expresión='[198+9-15,195]' texto='{\rtf1\uc0{\fonttbl\f0\fcharset0 Times New Roman;\f1\fcharset0 Times New Roman;\f2\fcharset0 Arial;}\f1\fs44\i{\*\mjaformula{\matrix\rows 2\columns 1{\element x cos \u952 \u8722  y sen \u952 }{\element x sen \u952 +y cos \u952 }}}\f2\fs40\i0}' fuente='Serif,ITALIC,22' fijo='sí' info='Matriz(Vector) (texto)'">
+   <param name="G_45" value="espacio='EspTxt' tipo='texto' dibujar-si='(rot=1)&(g1.activo=0)&(g2.activo=0)&(g3.activo=0)' expresión='[5,195]' texto='{\rtf1\uc0{\fonttbl\f0\fcharset0 Times New Roman;\f1\fcharset0 Arial;}\f1\fs40 Mueve alguno de los puntos iniciales...}' fuente='SansSerif,PLAIN,20' fijo='sí' info='Mueve alguno de los puntos iniciales...'">
+   <param name="G_46" value="espacio='EspTxt' tipo='texto' dibujar-si='(rot=1)&(g1.activo)' expresión='[-11,195]' texto='{\rtf1\uc0{\fonttbl\f0\fcharset0 Times New Roman;\f1\fcharset0 Times New Roman;\f2\fcharset0 Arial;}\f1\fs44\i{\*\mjaformula{\matrix\rows 2\columns 2{\element cos {\expr ctrF_\decimals 2\fixed0}}{\element -sen {\expr ctrF_\decimals 2\fixed0}}{\element sen {\expr ctrF_\decimals 2\fixed0}}{\element cos {\expr ctrF_\decimals 2\fixed0}}}}\f2\fs40\i0}' fuente='Serif,ITALIC,22' fijo='sí' info='Matriz(ctrF_) caso (rot=1)&(g1.activo)'">
+   <param name="G_47" value="espacio='EspTxt' tipo='texto' dibujar-si='(rot=1)&(g1.activo)' expresión='[-11+180+22,195]' texto='{\rtf1\uc0{\fonttbl\f0\fcharset0 Times New Roman;\f1\fcharset0 Times New Roman;\f2\fcharset0 Arial;}\f1\fs48\i{\*\mjaformula{\matrix\rows 2\columns 1{\element{\expr g1.x\decimals 2\fixed0}}{\element{\expr g1.y\decimals 2\fixed0}}}}\f2\fs40\i0}' fuente='Serif,ITALIC,24' fijo='sí' info='(g1.x,g1.y) caso (rot=1)&(g1.activo)'">
+   <param name="G_48" value="espacio='EspTxt' tipo='texto' dibujar-si='(rot=1)&(g1.activo)' expresión='[-11+180+74+22,195]' texto='{\rtf1\uc0{\fonttbl\f0\fcharset0 Times New Roman;\f1\fcharset0 Times New Roman;\f2\fcharset0 Arial;}\f1\fs48\i{\*\mjaformula ={\matrix\rows 2\columns 1{\element{\expr gr.x[0]\decimals 2\fixed0}}{\element{\expr gr.y[0]\decimals 2\fixed0}}}}\f2\fs40\i0}' fuente='Serif,ITALIC,24' fijo='sí' info='(gr.x[0]gr.y[0]) caso (rot=1)&(g1.activo)'">
+   <param name="G_49" value="espacio='EspTxt' tipo='texto' dibujar-si='(rot=1)&(g2.activo)' expresión='[-11,195]' texto='{\rtf1\uc0{\fonttbl\f0\fcharset0 Times New Roman;\f1\fcharset0 Times New Roman;\f2\fcharset0 Arial;}\f1\fs44\i{\*\mjaformula{\matrix\rows 2\columns 2{\element cos {\expr ctrF_\decimals 2\fixed0}}{\element -sen {\expr ctrF_\decimals 2\fixed0}}{\element sen {\expr ctrF_\decimals 2\fixed0}}{\element cos {\expr ctrF_\decimals 2\fixed0}}}}\f2\fs40\i0}' fuente='Serif,ITALIC,22' fijo='sí' info='Matriz(ctrF_) caso (rot=1)&(g2.activo)'">
+   <param name="G_50" value="espacio='EspTxt' tipo='texto' dibujar-si='(rot=1)&(g2.activo)' expresión='[-11+180+22,195]' texto='{\rtf1\uc0{\fonttbl\f0\fcharset0 Times New Roman;\f1\fcharset0 Times New Roman;\f2\fcharset0 Arial;}\f1\fs48\i{\*\mjaformula{\matrix\rows 2\columns 1{\element{\expr g2.x\decimals 2\fixed0}}{\element{\expr g2.y\decimals 2\fixed0}}}}\f2\fs40\i0}' fuente='Serif,ITALIC,24' fijo='sí' info='(g2.x, g2.y) caso (rot=1)&(g2.activo)'">
+   <param name="G_51" value="espacio='EspTxt' tipo='texto' dibujar-si='(rot=1)&(g2.activo)' expresión='[-11+180+74+22,195]' texto='{\rtf1\uc0{\fonttbl\f0\fcharset0 Times New Roman;\f1\fcharset0 Times New Roman;\f2\fcharset0 Arial;}\f1\fs48\i{\*\mjaformula ={\matrix\rows 2\columns 1{\element{\expr gr.x[1]\decimals 2\fixed0}}{\element{\expr gr.y[1]\decimals 2\fixed0}}}}\f2\fs40\i0}' fuente='Serif,ITALIC,24' fijo='sí' info='(gr.x[1],gr.y[1]) caso (rot=1)&(g2.activo)'">
+   <param name="G_52" value="espacio='EspTxt' tipo='texto' dibujar-si='(rot=1)&(g3.activo)' expresión='[-11,195]' texto='{\rtf1\uc0{\fonttbl\f0\fcharset0 Times New Roman;\f1\fcharset0 Times New Roman;\f2\fcharset0 Arial;}\f1\fs44\i{\*\mjaformula{\matrix\rows 2\columns 2{\element cos {\expr ctrF_\decimals 2\fixed0}}{\element -sen {\expr ctrF_\decimals 2\fixed0}}{\element sen {\expr ctrF_\decimals 2\fixed0}}{\element cos {\expr ctrF_\decimals 2\fixed0}}}}\f2\fs40\i0}' fuente='Serif,ITALIC,22' fijo='sí' info='Matriz(ctrF_) caso (rot=1)&(g3.activo)'">
+   <param name="G_53" value="espacio='EspTxt' tipo='texto' dibujar-si='(rot=1)&(g3.activo)' expresión='[-11+180+22,195]' texto='{\rtf1\uc0{\fonttbl\f0\fcharset0 Times New Roman;\f1\fcharset0 Times New Roman;\f2\fcharset0 Arial;}\f1\fs48\i{\*\mjaformula{\matrix\rows 2\columns 1{\element{\expr g3.x\decimals 2\fixed0}}{\element{\expr g3.y\decimals 2\fixed0}}}}\f2\fs40\i0}' fuente='Serif,ITALIC,24' fijo='sí' info='(g3.x, g3.y) caso (rot=1)&(g3.activo)'">
+   <param name="G_54" value="espacio='EspTxt' tipo='texto' dibujar-si='(rot=1)&(g3.activo)' expresión='[-11+180+74+22,195]' texto='{\rtf1\uc0{\fonttbl\f0\fcharset0 Times New Roman;\f1\fcharset0 Times New Roman;\f2\fcharset0 Arial;}\f1\fs48\i{\*\mjaformula ={\matrix\rows 2\columns 1{\element{\expr gr.x[2]\decimals 2\fixed0}}{\element{\expr gr.y[2]\decimals 2\fixed0}}}}\f2\fs40\i0}' fuente='Serif,ITALIC,24' fijo='sí' info='(gr.x[2], gr.y[2]) caso (rot=1)&(g3.activo)'">
+   <param name="G_55" value="espacio='E2' tipo='texto' dibujar-si='Debug' expresión='[0,160]' texto='{\rtf1\uc0{\fonttbl\f0\fcharset0 Times New Roman;\f1\fcharset0 Arial;\f2\fcharset0 Courier New;}\f1\fs26 Salir{\*\mjaformula ={\expr Salir\decimals 0\fixed1}}Entrar{\*\mjaformula ={\expr Entrar\decimals 0\fixed1}}\par     per{\*\mjaformula ={\expr per\decimals 0\fixed1}}           setflg{\*\mjaformula ={\expr setflg\decimals 0\fixed1}}            rotflg{\*\mjaformula ={\expr rotflg\decimals 0\fixed1}}          gflg{\*\mjaformula ={\expr gflg\decimals 0\fixed1}}\par PER1{\*\mjaformula ={\expr PER1\decimals 0\fixed1}}SETFLG_D1{\*\mjaformula ={\expr SETFLG_D1\decimals 0\fixed1}} ROTFLG_D1{\*\mjaformula ={\expr ROTFLG_D1\decimals 0\fixed1}} GFLG_D1{\*\mjaformula ={\expr GFLG_D1\decimals 0\fixed1}}\f2\fs30}' fuente='SansSerif,PLAIN,13' fijo='sí' info='Salir Entrar SETFLG_D1 ROTFLG_D1 GFLG_D1'">
+   <param name="G_56" value="espacio='E2' tipo='texto' dibujar-si='Debug' expresión='[20,210]' texto='{\rtf1\uc0{\fonttbl\f0\fcharset0 Times New Roman;\f1\fcharset0 Arial;\f2\fcharset0 Courier New;}\f1\fs30 inicioFlg{\*\mjaformula ={\expr inicioFlg\decimals 0\fixed1}}\f2\fs30}' fuente='SansSerif,PLAIN,15' fijo='sí' info='inicioFlg'">
+</ajs>
+
+	<!------ INICIA LA INFO SOBRE LAS LICENCIAS Y LOS CRÉDITOS. ---------->
+    <a id="btCopyright" class="standardButton" title="Haz clic aquí para consultar los créditos y las condiciones de uso de este recurso." href="#" onClick="document.getElementById('copyright').className='visible';">©</a>
+    <div id="copyright" class="oculto">
+      
+      <div class='innerCopyright'>
+      
+          <a id="btCloseCopyright" class="standardButton" title="Haz clic aquí para cerrar esta ventana." href="#" onClick="document.getElementById('copyright').className='oculto'">×</a>
+  
+          <!-- Créditos UAM  (siempre deben ir en primer lugar) -->
+			<div class="creditos">
+				<h1>
+					Créditos 
+				</h1>
+				<h2>
+					Escena original
+				</h2>				
+                  <table class="autores" 	>
+					<tr> <td  class="rol"> Diseño del contenido			</td>		<td class="nombre"> Julio Arnoldo Prado Saavedra</td></tr>
+					<tr> <td  class="rol"> Diseño funcional				</td>		<td class="nombre">Julio Arnoldo Prado Saavedra</td></tr>
+					<tr> <td  class="rol"> Programación						</td>		<td class="nombre"> Julio Arnoldo Prado Saavedra</td></tr>
+					<!-- Varias personas en el mismo rubro, separar por <br> -->
+				
+					          
+					<tr> <td  class="rol"> Diseño gráfico					</td>		<td class="nombre"> Ricardo López Gómez										</td></tr>
+					<tr> <td  class="rol" >Coordinación			</td>		<td class="nombre"> Leticia Montserrat Vargas Rocha						</td></tr>
+				</table>
+				<h2>
+					Adaptación 
+				</h2>
+				<table class="autores" 	>
+					<tr> <td  class="rol"> Diseño funcional				</td>	<td class="nombre"> Victor Manuel Amezcua y Raz</td></tr>
+					<tr> <td  class="rol"> Programación					</td>	<td class="nombre">Victor Manuel Amezcua y Raz</td></tr>
+					<tr> <td  class="rol"> Asesoría de rogramación					</td>	<td class="nombre">Víctor Hugo García Jarillo  (LITE)</td></tr>
+                    <tr> <td  class="rol"> Diseño gráfico				</td>	<td class="nombre"> Francisco	Varela Fuentes	        </td></tr>
+					<tr> <td  class="rol" >Coordinación			        </td>	<td class="nombre"> Leticia Montserrat Vargas Rocha		</td></tr>
+		            
+				</table>
+
+	         <div class='logos'>
+	            <a href=''>
+	               <img src="../images/info/icns/logoLite.png">
+	            </a>
+	            <a href="http://www.unadmexico.mx/">
+	               <img src="../images/info/icns/logoUNADM.png">
+	            </a>
+	         </div>
+          </div>
+          
+          <!-- Linea separación créditos -->
+          <hr class="linea" />
+     
+          <!-- Aviso licencias -->
+          <div class="licencias">
+          
+				<p class="creativeCommons">Los contenidos de esta unidad didáctica interactiva están bajo una licencia <a href="http://creativecommons.org/licenses/by-nc-sa/2.5/es/" target="_blank">Creative Commons Reconocimiento-NoComercial-CompartirIgual</a>.</p>
+
+				<!--arquimedes (optativo)-->
+				<p>La unidad didáctica fue creada con <a href="http://arquimedes.matem.unam.mx/Descartes5/creditos/conCCL.html" target="_blank">Arquímedes</a>, una herramienta de código abierto.</p>
+
+				<!-- Descartes -->
+				<p>La unidad didáctica contiene escenas elaboradas con Descartes, una herramienta de código abierto.</p>
+
+
+          	<p style='text-align:center'> LITE - UnADM 2014</p>
+          </div>
+      </div>
+    </div> 
+   <!------ TERMINA LA INFO SOBRE LAS LICENCIAS Y LOS CRÉDITOS. ---------->
+  
+  
+  </div>
+  
+  
+</article>
+
+
+</body>
+
+</html>

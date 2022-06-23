@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Desarrollo</title>	
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<link href="../css/DescHTML5.css" rel="stylesheet" type="text/css" media="screen" />
+	<link href="../css/html5_mobile.css" rel="stylesheet" type="text/css" media="screen" />
+    <script type="text/javascript" src='../javascript/inject_functions_scorms_descartes.js'></script>
+	<script type='text/javascript' src='../lib/descartes-min.js'></script>
+</head>
+<body>
+	<!-------- MathJax --- para fórmulas matemáticas ------>	
+	<script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script> 
+
+
+  <article class="course_content_container">
+    <div class="course_content">
+  
+  
+    <!------ INICIA EL CONTENIDO DE LA PÁGINA ------- -->
+
+	<h2 align="center">Campo direccional del modelo poblacional</h2>
+	
+	<p>
+		Al inicio se propuso un modelo de crecimiento de la forma:<br>
+                  <div align="center"> \( \frac{dy}{dt} = ky \)<br> </div>
+		La solución a este modelo se puede encontrar por el método del campo direccional, si damos solución de forma analítica llegamos a \( y(t) = y_0 e^{kt} \) <br><br>
+		
+		 </p>
+		
+  <div class="course_content">
+	<p class='instruccion'>
+    <span class="instrucciones">
+  		Utiliza los pulsadores de la parte de abajo para asignar valores a \( y \) y a la constante \( k \). Recuerda que \( k \) puede tomar valores positivos, negativos, o ser igual a cero. Para encontrar las soluciones basta con asignar \( k = 0 \), \( k = 1 \) y \( k = -1 \).
+    </span>
+	</p>
+	
+<div class="Descartes_extern_content">
+  <ajs name="Descartes" width=495 height=320 code="Descartes">
+   <param name="tamaño" value="495x320">
+   <param name="image_loader" value="">
+   <param name="expand" value="">
+   <param name="decimal_symbol" value=".">
+   <param name="antialias" value="sí">
+   <param name="deshacer" value="no">
+   <param name="nombre" value="Descartes">
+   <param name="Versión" value="5.336, 2015-02-13">
+   <param name="Idioma" value="español">
+   <param name="Botones" value="créditos=no config=no inicio=no limpiar=no">
+   <param name="E_01" value="tipo='R2' id='E1' escala='30' imagen='x' despl_imagen='arr-izq' fondo='dcdbe1' red='b8c4c8' red10='no' ejes='405860' texto='no' sensible_a_los_movimientos_del_ratón='sí'">
+   <param name="E_02" value="tipo='R2' id='E2_Graf' x='E2_Graf.x' y='E2_Graf.y' ancho='510' alto='310' dibujar-si='0' despl_imagen='arr-izq' red='b8c4c8' red10='889498' ejes='dcdbe1' texto='no'">
+   <param name="E_03" value="tipo='R2' id='CTRS' x='CTRS.x' y='CTRS.y' ancho='520' alto='70' fijo='sí' escala='-1' O.x='-50%' O.y='-50%' despl_imagen='arr-izq' fondo='88000000' red='no' red10='no' ejes='no' texto='no'">
+   <param name="E_04" value="tipo='R2' id='btnOpenClose' x='btnOpenClose.x' y='btnOpenClose.y' ancho='35' alto='30' fijo='sí' escala='1' O.x='-50%' O.y='-50%' despl_imagen='arr-izq' fondo='ff000000' red='no' red10='no' ejes='no' texto='no'">
+   <param name="E_05" value="tipo='R2' id='CTRS_north' x='CTRSN.x' y='CTRSN.y' ancho='520' alto='100' fijo='sí' escala='-1' O.x='-50%' O.y='-50%' despl_imagen='arr-izq' fondo='88000000' red='no' red10='no' ejes='no' texto='no'">
+   <param name="E_06" value="tipo='R2' id='btnOpenCloseN' x='btnOpenCloseN.x' y='btnOpenCloseN.y' ancho='35' alto='30' fijo='sí' escala='1' O.x='-50%' O.y='-50%' despl_imagen='arr-izq' fondo='rojo' red='no' red10='no' ejes='no' texto='no'">
+   <param name="E_07" value="tipo='R2' id='MASK' dibujar-si='INFO.visible' fijo='sí' imagen='imgs/tpl/backwindow.png' despl_imagen='mosaico' fondo='95000000' red='no' red10='no' ejes='no' texto='no'">
+   <param name="E_08" value="tipo='R2' id='INFO' x='INFO.x' y='INFO.y' ancho='495' alto='320' dibujar-si='INFO.visible' fijo='sí' imagen='imgs/tpl/retro_790x470.png' despl_imagen='mosaico' red='no' red10='no' ejes='no' texto='no'">
+   <param name="C_01" value="id='cerrarInfo' tipo='numérico' interfaz='botón' región='interior' espacio='INFO' nombre='×' expresión='(cerrarInfo.x,cerrarInfo.y,cerrarInfo.w,cerrarInfo.h)' fijo='sí' visible='sí' color='blanco' fuente puntos='26' imagen='_STYLE_|class=btnUNADM|shadowTextColor=rgba(0,0,0,0.2)|shadowTextOffsetY=2|shadowTextBlur=0|textBorder=0' acción='calcular' parámetro='INFO.visible=0\n openPanelCtrs()' dibujar-si='cerrarInfo.visible'">
+   <param name="C_02" value="id='btnOpen' tipo='numérico' interfaz='botón' región='interior' espacio='btnOpenClose' expresión='(0,0,35,30)' fijo='sí' visible='sí' fuente puntos='16' imagen='_STYLE_|class=btnUNADM open |shadowTextColor=rgba(0,0,0,0.2)|shadowTextOffsetY=2|shadowTextBlur=0|textBorder=0' acción='calcular' parámetro='openPanelCtrs()' dibujar-si='!CTRS.opened' pos_mensajes='centro'">
+   <param name="C_03" value="id='btnClose' tipo='numérico' interfaz='botón' región='interior' espacio='btnOpenClose' expresión='(0,0,35,30)' fijo='sí' visible='sí' imagen='_STYLE_|class=btnUNADM close |shadowTextColor=rgba(0,0,0,0.2)|shadowTextOffsetY=2|shadowTextBlur=0|textBorder=0' acción='calcular' parámetro='closePanelCtrs()' dibujar-si='CTRS.opened' pos_mensajes='centro'">
+   <param name="C_04" value="id='btnOpenN' tipo='numérico' interfaz='botón' región='interior' espacio='btnOpenCloseN' expresión='(0,0,35,30)' fijo='sí' visible='sí' fuente puntos='16' imagen='_STYLE_|class=btnUNADM open north|shadowTextColor=rgba(0,0,0,0.2)|shadowTextOffsetY=2|shadowTextBlur=0|textBorder=0' acción='calcular' parámetro='openPanelCtrsNoth()' dibujar-si='!CTRSN.opened' pos_mensajes='centro'">
+   <param name="C_05" value="id='btnCloseN' tipo='numérico' interfaz='botón' región='interior' espacio='btnOpenCloseN' expresión='(0,0,35,30)' fijo='sí' visible='sí' imagen='_STYLE_|class=btnUNADM close north|shadowTextColor=rgba(0,0,0,0.2)|shadowTextOffsetY=2|shadowTextBlur=0|textBorder=0' acción='calcular' parámetro='closePanelCtrsNorth()' dibujar-si='CTRSN.opened' pos_mensajes='centro'">
+   <param name="C_06" value="id='ctr_a' tipo='numérico' región='interior' espacio='CTRS_north' nombre='y=' expresión='(ctr_a.x+80,ctr_a.y,ctr_a.w,ctr_a.h)' valor='a' incr='1' min='-7' max='7' fijo='sí' visible='sí' acción='calcular' parámetro='a=ctr_a\ncalc_m()' pos_mensajes='centro'">
+   <param name="C_07" value="id='ctr_b' tipo='numérico' región='interior' espacio='CTRS_north' nombre='k=' expresión='(ctr_b.x+120,ctr_a.y,ctr_a.w,ctr_a.h)' valor='b' incr='1' min='-1' max='1' fijo='sí' visible='sí' acción='calcular' parámetro='b=ctr_b\ncalc_m()' pos_mensajes='centro'">
+   <param name="C_08" value="id='ctr_c' tipo='numérico' región='interior' espacio='CTRS' nombre='y(0)=' expresión='(ctr_b.x+5,15,ctr_c.w,ctr_a.h-5)' valor='c' incr='.5' min='1' max='20' fijo='sí' visible='sí' acción='calcular' parámetro='c=ctr_c\ncalc_m()' dibujar-si='mostrar' pos_mensajes='centro'">
+   <param name="C_09" value="id='mostSol' tipo='numérico' interfaz='botón' región='interior' espacio='CTRS' nombre='Solución' expresión='(50,20,100,30)' fijo='sí' visible='sí' color='blanco' color-int='fff0f8ff' negrita='sí' fuente puntos='17' imagen='imgs/tpl/btn100.png' acción='calcular' parámetro='mostrar=!mostrar' pos_mensajes='centro'">
+   <param name="C_10" value="id='limpiar' tipo='numérico' interfaz='botón' región='interior' espacio='CTRS' nombre='Limpiar' expresión='(380,20,100,30)' fijo='sí' visible='sí' color='blanco' color-int='fff0f8ff' negrita='sí' fuente puntos='17' imagen='imgs/tpl/btn100.png' acción='inicio' pos_mensajes='centro'">
+   <param name="A_01" value="id='irAEscena(idxEscena)' algoritmo='sí' algoritmo='sí' hacer='parent.set(&squot;scene&squot;,idxEscena);parent.update()'">
+   <param name="A_02" value="id='initBtns()' algoritmo='sí' algoritmo='sí' hacer='cerrarInfo.w=40;cerrarInfo.h=30;cerrarInfo.x=INFO._w-cerrarInfo.w-2;cerrarInfo.y=1;cerrarInfo.img=&squot;imgs/tpl/cerrar.png&squot;;cerrarInfo.visible=1;;ctr_a.w=135;ctr_a.h=50;ctr_b.w=ctr_a.w;ctr_b.h=ctr_a.h;ctr_c.w=ctr_b.w+40;ctr_c.h=ctr_b.h;_gapX=30;_allW=(ctr_a.w+ctr_b.w+ctr_c.w+_gapX*2);;ctr_a.x=(CTRS_north._w-_allW)/3;ctr_a.y=(CTRS_north._h-ctr_a.h)/3;;;ctr_b.x=ctr_a.x+ctr_a.w+_gapX;ctr_b.y=ctr_a.y;;ctr_c.x=ctr_b.x+ctr_a.w+_gapX;ctr_c.y=ctr_a.y;'">
+   <param name="A_03" value="id='initEsp()' algoritmo='sí' algoritmo='sí' hacer='INFO.x=(E1._w-INFO._w)/2;INFO.y=(E1._h-INFO._h)/2;INFO.visible=1;;E2_Graf.x=5;E2_Graf.y=5;E2_Graf.visible=1;;EspTxt.x=E1._w-EspTxt._w-10;EspTxt.y=E1._h-EspTxt._h-10;EspTxt.visible=1;;;;CTRS.x=(E1._w-CTRS_north._w)/2;CTRS.y=(E1._h-CTRS_north._h);CTRS.visible=0;;CTRS.x=0;CTRS.y=0;;btnOpenClose.y=(CTRS.y-btnOpenClose._h);btnOpenClose.x=(E1._w-btnOpenClose._w);'">
+   <param name="A_04" value="id='initEscena()' algoritmo='sí' algoritmo='sí' hacer='initBtns();initEsp();openPanelCtrs();;CTRSN.x=(E1._w-CTRS_north._w)/2;CTRSN.y=0;;y1=10;x1=-10;x2=x1-.2;k=20;r=20;a=2;b=1;c=1;mostrar=0;calc_m();'">
+   <param name="A_05" value="id='openPanelCtrs()' algoritmo='sí' expresión='x' algoritmo='sí' hacer='closePanelCtrsNorth();;CTRS.opened=1;;;CTRS.x=(E1._w-CTRS._w)/2;CTRS.y=(E1._h-CTRS._h);;btnOpenClose.y=(CTRS.y-btnOpenClose._h);btnOpenClose.x=(E1._w-btnOpenClose._w)'">
+   <param name="A_06" value="id='openPanelCtrsNoth()' algoritmo='sí' expresión='x' algoritmo='sí' hacer='closePanelCtrs();;CTRSN.opened=1;;CTRSN.x=(E1._w-CTRS_north._w)/2;CTRSN.y=0;;btnOpenCloseN.y=CTRSN.y+CTRS_north._h;btnOpenCloseN.x=(E1._w-btnOpenCloseN._w);;;_Trace_(&squot;Abriendo panel NORTE&squot;)'">
+   <param name="A_07" value="id='closePanelCtrsNorth()' algoritmo='sí' expresión='x' algoritmo='sí' hacer='CTRS.visible=1;;CTRSN.opened=0;CTRSN.y=-CTRS_north._h;;btnOpenCloseN.y=CTRSN.y+CTRS_north._h;btnOpenCloseN.x=(E1._w-btnOpenCloseN._w);;_Trace_(&squot;Cerrando panel NORTE&squot;)'">
+   <param name="A_08" value="id='closePanelCtrs()' algoritmo='sí' expresión='x' algoritmo='sí' hacer='CTRS.visible=1;;CTRS.opened=0;CTRS.y=E1._h-10;;btnOpenClose.y=(CTRS.y-btnOpenClose._h);btnOpenClose.x=(E1._w-btnOpenClose._w)'">
+   <param name="A_09" value="id='__FIN_TPL_()'">
+   <param name="A_10" value="id='m' vector='sí' evaluar='una-sola-vez' tamaño='20'">
+   <param name="A_11" value="id='calc_m()' algoritmo='sí' algoritmo='sí' inicio='_i=0' hacer='m[_i]=b*(y1-_i);_i=_i+1' mientras='_i<r'">
+   <param name="A_12" value="id='INICIO' algoritmo='sí' evaluar='una-sola-vez' hacer='initEscena()'">
+   <param name="A_13" value="id='CALCULOS' algoritmo='sí' evaluar='siempre'">
+   <param name="G_01" value="espacio='E1' tipo='texto' fondo='sí' dibujar-si='0' expresión='[__GRAF__,20]' fijo='sí'">
+   <param name="G_02" value="espacio='E2_Graf' tipo='ecuación' color='negro' expresión='y=f(x)' ancho='2'">
+   <param name="G_03" value="espacio='E1' tipo='texto' fondo='sí' dibujar-si='0' expresión='[__INFO__,20]' fijo='sí'">
+   <param name="G_04" value="espacio='INFO' tipo='texto' fondo='sí' color='blanco' expresión='[20,5]' texto='Instrucciones' fuente='SansSerif,PLAIN,24' fijo='sí'">
+   <param name="G_05" value="espacio='INFO' tipo='texto' expresión='[25,80]' texto='{\rtf1\uc0{\fonttbl\f0\fcharset0 Times New Roman;\f1\fcharset0 Arial;\f2\fcharset0 Times New Roman;}\f1\fs40 La soluci\u243 n a la ecuaci\u243 n: {\*\mjaformula{\fraction{\num dy}{\den dt}}=ky} es {\*\mjaformula y(t)=y{\subix 0}e{\supix kt}}\par Si das clic en el bot\u243 n &quote;Soluci\u243 n&quote; se muestra la\par gr\u225 fica soluci\u243 n y puedes modificar la condici\u243 n\par inicial {\*\mjaformula y(0)} con el pulsador que se muestra.\f2\fs40\i}' fuente='SansSerif,PLAIN,20' fijo='sí' ancho='5'">
+   <param name="G_06" value="espacio='E1' tipo='segmento' color='azul' expresión='(x1+(s%k),y1-10+a-(ent(s/k)))(x2+(s%k),m[ent(s/(k))+10-a]*(x2-x1)+y1-10+a-(ent(s/k)))' rastro='gris' familia='s' s.intervalo='[0,k]' s.pasos='k' fijo='sí' tamaño='0' ancho='2'">
+   <param name="G_07" value="espacio='E1' tipo='punto' expresión='(0,4.5)' texto='y(t)' fuente='Serif,ITALIC,28' fijo='sí' tamaño='0'">
+   <param name="G_08" value="espacio='E1' tipo='punto' expresión='(7.5,0)' texto='t' fuente='Serif,ITALIC,28' fijo='sí' tamaño='0'">
+   <param name="G_09" value="espacio='E1' tipo='punto' color='ae0000' expresión='(0,a)' texto='y=[a]' fuente='Serif,ITALIC,20' decimales='0' fijo='sí' tamaño='0'">
+   <param name="G_10" value="espacio='E1' tipo='ecuación' color='0000ae' dibujar-si='mostrar' expresión='y=c*exp(b*x)' ancho='2'">
+</ajs>
+</div>
+
+	
+             <!------ TERMINA EL CONTENIDO DE LA PÁGINA --------->
+
+   <!------ INICIA LA INFO SOBRE LAS LICENCIAS Y LOS CRÉDITOS. ---------->
+    <a id="btCopyright" class="standardButton" title="Haz clic aquí para consultar los créditos y las condiciones de uso de este recurso." href="#" onClick="document.getElementById('copyright').className='visible';">©</a>
+    <div id="copyright" class="oculto">
+      
+      <div class='innerCopyright'>
+      
+          <a id="btCloseCopyright" class="standardButton" title="Haz clic aquí para cerrar esta ventana." href="#" onClick="document.getElementById('copyright').className='oculto'">×</a>
+  
+          <!-- Créditos UAM  (siempre deben ir en primer lugar) -->
+			<div class="creditos">
+				<h1>
+					Créditos 
+				</h1>
+
+				<h2>
+					Escena original
+				</h2>				<table class="autores" 	>
+
+					<tr> <td  class="rol"> Diseño del contenido			</td>		<td class="nombre"> Víctor Hugo García Jarillo (Facultad de Ciencias UNAM, LITE)</td></tr>
+					<tr> <td  class="rol"> Diseño funcional				</td>		<td class="nombre"> Víctor Hugo García Jarillo (Facultad de Ciencias UNAM, LITE)</td></tr>
+					<tr> <td  class="rol"> Programación					</td>		<td class="nombre"> Víctor Hugo García Jarillo (Facultad de Ciencias UNAM, LITE)</td></tr>
+					<tr> <td  class="rol"> Diseño gráfico				</td>		<td class="nombre"> Ricardo López Gómez</td></tr>
+					<tr> <td  class="rol" >Coordinación			</td>		<td class="nombre"> Leticia Montserrat Vargas Rocha</td></tr>
+					</table>
+				<h2>
+					Adaptación 
+				</h2>
+				<table class="autores" 	>
+				<tr> <td  class="rol"> Diseño funcional				</td>		<td class="nombre"> Victor Hugo García Jarillo (Facultad de                    Ciencias, UNAM)		</td></tr>
+					<tr> <td  class="rol"> Programación				</td>		<td class="nombre"> Victor Hugo García Jarillo (Facultad de                    Ciencias, UNAM)</td></tr>
+
+					<tr> <td  class="rol"> Diseño gráfico			</td>		<td class="nombre"> Francisco	Varela Fuentes</td></tr>
+					<tr> <td  class="rol" >Coordinación			</td>		<td class="nombre"> Leticia Montserrat Vargas Rocha</td></tr>
+		
+				</table>
+	         
+	         <div class='logos'>
+	            <a href=''>
+	               <img src="../images/info/icns/logoLite.png">
+	            </a>
+	            <a href="http://www.unadmexico.mx/">
+	               <img src="../images/info/icns/logoUNADM.png">
+	            </a>
+	         </div>
+          </div>
+          
+          <!-- Linea separación créditos -->
+          <hr class="linea" />
+     
+          <!-- Aviso licencias -->
+          <div class="licencias">
+          
+				<p class="creativeCommons">Los contenidos de esta unidad didáctica interactiva están bajo una licencia <a href="http://creativecommons.org/licenses/by-nc-sa/2.5/es/" target="_blank">Creative Commons Reconocimiento-NoComercial-CompartirIgual</a>.</p>
+
+				<!--arquimedes (optativo)-->
+				<p>La unidad didáctica fue creada con <a href="http://arquimedes.matem.unam.mx/Descartes5/creditos/conCCL.html" target="_blank">Arquímedes</a>, una herramienta de código abierto.</p>
+
+				<!-- Descartes -->
+				<p>La unidad didáctica contiene escenas elaboradas con Descartes, una herramienta de código abierto.</p>
+
+
+          	<p style='text-align:center'> LITE - UnADM 2014</p>
+          </div>
+      </div>
+    </div> 
+   <!------ TERMINA LA INFO SOBRE LAS LICENCIAS Y LOS CRÉDITOS. ---------->
+  
+  
+  </div>
+  
+  
+</article>
+
+
+</body>
+
+</html>

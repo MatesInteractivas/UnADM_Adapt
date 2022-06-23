@@ -1,0 +1,166 @@
+﻿<!DOCTYPE html>
+<html>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<head>
+  <meta charset="utf-8" />
+   	<link href="../css/html5.css" rel="stylesheet" type="text/css" media="screen" />
+	<link href="../css/DescHTML5.css" rel="stylesheet" type="text/css" media="screen" />
+  <!-------- MathJax --- para fórmulas matemáticas ------>
+  <script type="text/javascript"
+    src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+  </script>
+	<script type='text/javascript' src='lib/descartes-min.js'></script>
+</head>
+
+<body>
+  
+
+<article class="course_content_container">
+  
+  <div class="course_content">    
+
+    <!------ INICIA EL CONTENIDO DE LA PÁGINA --------->
+	
+    <!--- Título de la página --->
+    <h1 div align="center">Osciladores y las ecuaciones diferenciales de segundo orden</h1>
+    
+        
+    <!--- Para poner un panel con fondo - -->
+    <div class='text_panel'>
+    
+		<!--- Párrafo --->
+		<p>Cuando hacemos observaciones en nuestro entorno nos damos cuenta de que muchos fenómenos naturales están sometidos a la repetición de procesos. Estos fenómenos se dan tanto a nivel microscópico como macroscópico. Por ejemplo, a nivel microscópico, observamos que la actividad química en las células puede ir acompañada de una actividad eléctrica que resulta en un fenómeno periódico. A nivel macroscópico, la rotación de la tierra en torno al eje polar es un buen ejemplo. En ambos ejemplos los fenómenos se repiten cíclicamente tras un intervalo de tiempo fijo. En éste tipo de fenómenos, los movimientos se caracterizan por su <em>período</em>, que es el tiempo requerido para completar un ciclo completo del movimiento. También se caracterizan por su <em>frecuencia</em>, que representa el número de ciclos completos por unidad de tiempo.</p>
+        
+        <p>Para analizar este tipo de sistemas se buscó un modelo que pudiera representar la mayoría de los casos. Este modelo es el movimiento del <em>oscilador armónico</em>.</p>
+        
+        <p>El oscilador armónico como modelo es un sistema físico que oscila alrededor de una posición de equilibrio estable. Un ejemplo es el de una masa sujeta a un extremo de un resorte que cuelga de un techo. En este caso la masa es el sistema físico en donde la posición de equilibrio se da cuando la masa y el resorte están en una posición fija, si se jala o empuja el resorte en dirección vertical, la masa comenzará a oscilar alrededor del punto de equilibrio. El sistema realiza dos trayectorias, una desde el punto en que se suelta hasta el otro extremo, después se realiza la misma trayectoria pero en sentido opuesto: el sentido de su movimiento se invierte en los dos extremos de la trayectoria. Un ciclo completo se da cuando la posición del sistema físico toma el valor de la posición de equilibrio en dos ocasiones. Una masa sujeta al extremo de un péndulo, la carga eléctrica almacenada en un condensador, las cuerdas de un instrumento musical, y las moléculas de una red cristalina son otros ejemplos de sistemas físicos que a menudo, bajo ciertas condiciones, realizan un movimiento oscilatorio.</p><br/>
+		
+		  <div class="course_content">
+	<p class='instruccion'>
+    <span class="instrucciones">
+  		En la siguiente animación arrastra la masa de color rojo sobre el eje x y sepárala del punto de equilibrio. Con esto aparecerá el botón <em>Iniciar</em>, con el que podrás soltar la masa. Observa el movimiento del sistema.
+    </span>
+	</p>
+        
+<div  align="center" class="Descartes_extern_content">
+  <ajs name="Descartes" width=495 height=300 code="Descartes">
+   <param name="tamaño" value="495x300">
+   <param name="image_loader" value="">
+   <param name="expand" value="">
+   <param name="decimal_symbol" value=".">
+   <param name="antialias" value="sí">
+   <param name="deshacer" value="no">
+   <param name="nombre" value="Descartes">
+   <param name="Versión" value="5.4, 2016-05-18">
+   <param name="Idioma" value="español">
+   <param name="Botones" value="créditos=no config=no inicio=no limpiar=no ancho_este=150 ancho_oeste=150 alto=40">
+   <param name="E_01" value="tipo='R2' id='E1' fijo='sí' despl_imagen='arr-izq' fondo='blanco' red='no' red10='no' ejes='no' texto='no' sensible_a_los_movimientos_del_ratón='sí'">
+   <param name="C_01" value="id='m' tipo='gráfico' espacio='E1' tamaño='7' expresión='(m.x,m.y)' constricción='y=0' dibujar-si='(t=0)' activo-si='(t=0)|(t=110)'">
+   <param name="C_02" value="id='m.x' tipo='numérico' región='escenario' espacio='E1' nombre='m.x' expresión='(0,0,0,0)' min='-2' max='2.7' fijo='sí' visible='sí'">
+   <param name="C_03" value="id='initBt' tipo='numérico' interfaz='botón' región='interior' espacio='E1' nombre='Iniciar' expresión='(E1._w-200-10,E1._h-30-5,100,30)' fijo='sí' visible='sí' color='blanco' color-int='fff0f8ff' fuente puntos='18' imagen='images/btn100.png' acción='animar' dibujar-si='(abs(m.x)>0.5)&(t=0)'">
+   <param name="C_04" value="id='reinit' tipo='numérico' interfaz='botón' región='interior' espacio='E1' nombre='Reiniciar' expresión='(E1._w-100-5,E1._h-30-5,100,30)' fijo='sí' visible='sí' color='blanco' color-int='fff0f8ff' fuente puntos='18' imagen='images/btn100.png' acción='inicio' dibujar-si='t>5'">
+   <param name="A_01" value="id='init()' algoritmo='sí' algoritmo='sí' hacer='y0=2
+;t=0'">
+   <param name="A_02" value="id='f(t)' algoritmo='sí' algoritmo='sí' hacer='y=(aa*cos(t));m.x=0;m.y=0'">
+   <param name="A_03" value="id='INICIO' algoritmo='sí' evaluar='una-sola-vez' hacer='init()'">
+   <param name="A_04" value="id='CALCULOS' algoritmo='sí' evaluar='siempre' hacer='
+;'">
+   <param name="G_01" value="espacio='E1' tipo='punto' dibujar-si='t>0' expresión='(y,0)' fijo='sí' tamaño='8'">
+   <param name="G_02" value="espacio='E1' tipo='segmento' dibujar-si='(t=0)' expresión='(-3+(3+m.x)/10*s,-0.1)(-3+(3+m.x)/10*(s+1),0.1)' familia='s' s.intervalo='[0,9]' s.pasos='9' fijo='sí' tamaño='0' ancho='3'">
+   <param name="G_03" value="espacio='E1' tipo='segmento' dibujar-si='(t=0)' expresión='(-3+(3+m.x)/10*(s+1),0.1)(-3+(3+m.x)/10*(s+1),-0.1)' familia='s' s.intervalo='[0,8]' s.pasos='8' fijo='sí' tamaño='0' ancho='3'">
+   <param name="G_04" value="espacio='E1' tipo='segmento' dibujar-si='t>0' expresión='(-3+(3+y)/10*s,-0.1)(-3+(3+y)/10*(s+1),0.1)' familia='s' s.intervalo='[0,9]' s.pasos='9' fijo='sí' tamaño='0' ancho='3'">
+   <param name="G_05" value="espacio='E1' tipo='segmento' dibujar-si='(t>0)' expresión='(-3+(3+y)/10*(s+1),0.1)(-3+(3+y)/10*(s+1),-0.1)' familia='s' s.intervalo='[0,8]' s.pasos='8' fijo='sí' tamaño='0' ancho='3'">
+   <param name="G_06" value="espacio='E1' tipo='polígono' expresión='(-4,-1)(-4,1)(-3,1)(-3,-1)(-4,-1)' relleno='grisClaro'">
+   <param name="G_07" value="espacio='E1' tipo='segmento' expresión='(0,-1)(0,1)' fuente='SansSerif,PLAIN,15' fijo='sí' tamaño='0'">
+   <param name="G_08" value="espacio='E1' tipo='texto' expresión='[105,85]' texto='Punto de equilibrio' fuente='Serif,ITALIC,15' fijo='sí'">
+   <param name="G_09" value="espacio='E1' tipo='texto' dibujar-si='debug' expresión='[20,20]' texto='t=[t]\ny=[y]\nentro=[entro]\nm.y=[m.y]\nE1.mouse_pressed=[E1.mouse_pressed]\nm.activo=[m.activo]\nE1.mouse_x=[E1.mouse_x]\nE1.mouse_y=[E1.mouse_y]\n[sqrt((m.x-E1.mouse_x)^2+(m.y-E1.mouse_y)^2)>.5]\n' fijo='sí'">
+   <param name="Animación" value="pausa='200' controles='no' auto='no' inicio='t=0;y=m.y;aa=m.x' hacer='aux=f(t);t=t+1' mientras='1'">
+</ajs>
+</div>
+        
+        <p>El caso más sencillo de movimiento oscilatorio se denomina <em>movimiento armónico simple</em>, y se produce cuando la fuerza resultante que actúa sobre el sistema es una fuerza restauradora lineal y además no existe un medio que permita que el sistema se detenga (fuerza de fricción) como la animación que se muestra arriba. Cabe mencionar que un sistema sin fricción es un sistema ideal, pues en la naturaleza los fenómenos se producen en medios como el aire o el agua quienes son los que se oponen al movimiento de los objetos.</p>
+        
+        <p>El <em>Teorema de Fourier</em> nos da una razón de la importancia del movimiento armónico simple. Según este teorema, cualquier clase de movimiento periódico u oscilatorio puede considerarse como la suma de movimientos armónicos simples.</p>
+        
+    <!------ TERMINA EL CONTENIDO DE LA PÁGINA --------->
+
+
+
+	<!------ INICIA LA INFO SOBRE LAS LICENCIAS Y LOS CRÉDITOS. ---------->
+    <a id="btCopyright" class="standardButton" title="Haz clic aquí para consultar los créditos y las condiciones de uso de este recurso." href="#" onClick="document.getElementById('copyright').className='visible';">©</a>
+    <div id="copyright" class="oculto">
+      
+      <div class='innerCopyright'>
+      
+          <a id="btCloseCopyright" class="standardButton" title="Haz clic aquí para cerrar esta ventana." href="#" onClick="document.getElementById('copyright').className='oculto'">×</a>
+  
+          <!-- Créditos UAM  (siempre deben ir en primer lugar) -->
+			<div class="creditos">
+				<h1>
+					Créditos 
+				</h1>
+
+				<h2>
+					Escena original
+				</h2>				<table class="autores" 	>
+
+					<tr> <td  class="rol"> Diseño del contenido			</td>		<td class="nombre"> Víctor Hugo García Jarillo (Facultad de Ciencias UNAM, LITE)</td></tr>
+					<tr> <td  class="rol"> Diseño funcional				</td>		<td class="nombre"> Víctor Hugo García Jarillo (Facultad de Ciencias UNAM, LITE)</td></tr>
+					<tr> <td  class="rol"> Programación					</td>		<td class="nombre"> Víctor Hugo García Jarillo (Facultad de Ciencias UNAM, LITE)</td></tr>
+					<tr> <td  class="rol"> Diseño gráfico				</td>		<td class="nombre"> Ricardo López Gómez</td></tr>
+					<tr> <td  class="rol" >Coordinación			</td>		<td class="nombre"> Leticia Montserrat Vargas Rocha</td></tr>
+					</table>
+				<h2>
+					Adaptación 
+				</h2>
+				<table class="autores" 	>
+				<tr> <td  class="rol"> Diseño funcional				</td>		<td class="nombre"> Victor Hugo García Jarillo (Facultad de                    Ciencias, UNAM)		</td></tr>
+					<tr> <td  class="rol"> Programación				</td>		<td class="nombre"> Victor Hugo García Jarillo (Facultad de                    Ciencias, UNAM)</td></tr>
+
+					<tr> <td  class="rol"> Diseño gráfico			</td>		<td class="nombre"> Francisco	Varela Fuentes</td></tr>
+					<tr> <td  class="rol" >Coordinación			</td>		<td class="nombre"> Leticia Montserrat Vargas Rocha</td></tr>
+		
+				</table>
+
+ <div class='logos'>
+	            <a href=''>
+	               <img src="../images/info/icns/logoLite.png">
+	            </a>
+	            <a href="http://www.unadmexico.mx/">
+	               <img src="../images/info/icns/logoUNADM.png">
+	            </a>
+	         </div>
+          </div>
+          
+          <!-- Linea separación créditos -->
+          <hr class="linea" />
+     
+          <!-- Aviso licencias -->
+          <div class="licencias">
+          
+				<p class="creativeCommons">Los contenidos de esta unidad didáctica interactiva están bajo una licencia <a href="http://creativecommons.org/licenses/by-nc-sa/2.5/es/" target="_blank">Creative Commons Reconocimiento-NoComercial-CompartirIgual</a>.</p>
+
+				<!--arquimedes (optativo)-->
+				<p>La unidad didáctica fue creada con <a href="http://arquimedes.matem.unam.mx/Descartes5/creditos/conCCL.html" target="_blank">Arquímedes</a>, una herramienta de código abierto.</p>
+
+				<!-- Descartes -->
+				<p>La unidad didáctica contiene escenas elaboradas con Descartes, una herramienta de código abierto.</p>
+
+
+          	<p style='text-align:center'> LITE - UnADM 2014</p>
+          </div>
+      </div>
+    </div> 
+   <!------ TERMINA LA INFO SOBRE LAS LICENCIAS Y LOS CRÉDITOS. ---------->
+  
+  
+  </div>
+  
+  
+</article>
+
+
+</body>
+
+</html>

@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+ 	<link href="../css/html5_mobile.css" rel="stylesheet" type="text/css" media="screen" />
+	<link href="../css/DescHTML5.css" rel="stylesheet" type="text/css" media="screen" />
+	<script type="text/javascript" src='../javascript/inject_functions_scorms_descartes.js'></script>
+	<script type='text/javascript' src='../lib/descartes-min.js'></script>
+</head>
+
+<body BGCOLOR="c0c0c0" leftmargin="0" topmargin="0">
+
+<ajs name="Descartes" width=970 height=550 code="Descartes">
+   <param name="tamaño" value="970x550">
+   <param name="image_loader" value="">
+   <param name="expand" value="">
+   <param name="decimal_symbol" value=".">
+   <param name="antialias" value="sí">
+   <param name="deshacer" value="no">
+   <param name="nombre" value="Descartes">
+   <param name="Versión" value="5.336, 2015-02-13">
+   <param name="Idioma" value="español">
+   <param name="Botones" value="créditos=no config=no inicio=no limpiar=no">
+   <param name="E_01" value="tipo='R2' id='E1' fijo='sí' escala='1' O.x='-50%' O.y='-50%' imagen='imgs/tpl/fondo_02.jpg' despl_imagen='arr-izq' fondo='c0d0d8' red='no' red10='no' ejes='no' texto='no'">
+   <param name="E_02" value="tipo='R2' id='E2' x='E2.x' y='E2.y' ancho='426' alto='400' dibujar-si='E2.visible' escala='35' O.x='-150' O.y='150' despl_imagen='arr-izq' fondo='dcdbe1' red='90b8c4c8' red10='no' ejes='405860' texto='405860'">
+   <param name="E_03" value="tipo='R2' id='EspTxt' x='EspTxt.x' y='EspTxt.y' ancho='375' alto='400' dibujar-si='EspTxt.visible' fijo='sí' despl_imagen='arr-izq' fondo='fff8ffd9' red='no' red10='no' ejes='no' texto='no'">
+   <param name="E_04" value="tipo='R2' id='MASK' dibujar-si='INFO.visible' fijo='sí' imagen='imgs/tpl/backwindow.png' despl_imagen='mosaico' fondo='95000000' red='no' red10='no' ejes='no' texto='no'">
+   <param name="E_05" value="tipo='R2' id='INFO' x='INFO.x' y='INFO.y' ancho='890' alto='530' dibujar-si='INFO.visible' fijo='sí' imagen='imgs/tpl/retro_790x470.png' despl_imagen='expand.' red='no' red10='no' ejes='no' texto='no'">
+   <param name="C_01" value="id='cerrarInfo' tipo='numérico' interfaz='botón' región='interior' espacio='INFO' expresión='(cerrarInfo.x,cerrarInfo.y,cerrarInfo.w,cerrarInfo.h)' fijo='sí' visible='sí' imagen='_STYLE_|class=btnUNADM icon cerrar|shadowTextColor=rgba(0,0,0,0.2)|shadowTextOffsetY=2|shadowTextBlur=0|textBorder=0 |' acción='calcular' parámetro='INFO.visible=0\nVarTemp=((ValPer[3]=1)|(ValPer[6]=1))?llamaAnimaScorm():0\nt=600\ntmax=(paso=2)?600:tmax' dibujar-si='cerrarInfo.visible'">
+   <param name="C_02" value="id='ctr_i' tipo='numérico' interfaz='botón' región='interior' espacio='E1' expresión='(ctr_i.x,ctr_i.y,ctr_i.w,ctr_i.h)' valor='ctr_i' fijo='sí' visible='sí' color='blanco' cursiva='sí' fuente puntos='20' imagen='_STYLE_|class=btnUNADM icon info|shadowTextColor=rgba(0,0,0,0.2)|shadowTextOffsetY=2|shadowTextBlur=0|textBorder=0 |' acción='calcular' parámetro='INFO.visible=1' pos_mensajes='centro'">
+   <param name="C_03" value="id='atras' tipo='numérico' interfaz='botón' región='interior' espacio='E1' nombre='Atrás' expresión='(EspTxt.x,E1._h-35,100,30)' fijo='sí' visible='sí' color='blanco' color-int='fff0f8ff' fuente puntos='18' imagen='imgs/tpl/btn100.png' acción='calcular' parámetro='paso=paso-1\nanima1=0\nanima2=0\nt=((paso<3)&(paso>1))?0:t' dibujar-si='(paso>0)&((paso#1)|((paso=1)&((t=t<tmax)|(t=0))))' activo-si='(t=0)|(t=tmax)'">
+   <param name="C_04" value="id='sig' tipo='numérico' interfaz='botón' región='interior' espacio='E1' nombre='Siguiente' expresión='(EspTxt.x+EspTxt._w-100,E1._h-35,100,30)' fijo='sí' visible='sí' color='blanco' color-int='fff0f8ff' fuente puntos='18' imagen='imgs/tpl/btn100.png' acción='calcular' parámetro='paso=paso+1\nanima1=0\nanima2=0\nt=(paso<3)?0:t\nValPer0=1\ncalPer()' dibujar-si='(paso<4)' activo-si='(t=0)|(t=tmax)|(paso=0)'">
+   <param name="C_05" value="id='ctr_a' tipo='numérico' región='interior' espacio='EspTxt' nombre='Rₒ' expresión='(ctr_a.x,ctr_a.y+5,ctr_a.w,ctr_a.h)' valor='a' incr='0.02' min='0' max='10' fijo='sí' visible='sí' acción='calcular' parámetro='a=ctr_a\nt=0\nanima1=0\nanima2=0\nValPer1=(paso=1)?1:ValPer1\nValPer4=(paso=2)?1:ValPer4\ncalPer()' dibujar-si='(paso>0)&(paso<3)' activo-si='(t=0)|(t=tmax)|(t=600)'">
+   <param name="C_06" value="id='ctr_b' tipo='numérico' región='interior' espacio='EspTxt' nombre='Fₒ' expresión='(ctr_b.x,ctr_b.y+5,ctr_b.w,ctr_b.h)' valor='b' incr='0.02' min='0' max='10' fijo='sí' visible='sí' acción='calcular' parámetro='b=ctr_b\nt=0\nanima1=0\nanima2=0\nValPer2=(paso=1)?1:ValPer2\nValPer5=(paso=2)?1:ValPer5\ncalPer()' dibujar-si='(paso>0)&(paso<3)' activo-si='(t=0)|(t=tmax)|(t=600)'">
+   <param name="C_07" value="id='animar' tipo='numérico' interfaz='botón' región='interior' espacio='EspTxt' nombre='Animar' expresión='(140,365,100,30)' fijo='sí' visible='sí' color='blanco' color-int='fff0f8ff' fuente puntos='18' imagen='imgs/tpl/btn100.png' acción='calcular' parámetro='tmax=500\nanima1=1\nValPer3=1\ncalPer()' dibujar-si='paso=1' activo-si='(t=0)'">
+   <param name="C_08" value="id='animar2' tipo='numérico' interfaz='botón' región='interior' espacio='EspTxt' nombre='Animar' expresión='(140,365,100,30)' fijo='sí' visible='sí' color='blanco' color-int='fff0f8ff' fuente puntos='18' imagen='imgs/tpl/btn100.png' acción='calcular' parámetro='tmax=600\nanima2=1\nValPer6=1\ncalPer()' dibujar-si='paso=2' activo-si='(t=0)'">
+   <param name="C_09" value="id='paso' tipo='numérico' región='escenario' espacio='E1' nombre='paso' expresión='(0,0,0,0)' valor='ctr_paso' fijo='sí' visible='sí'">
+   <param name="A_01" value="id='irAEscena(idxEscena)' algoritmo='sí' algoritmo='sí' hacer='parent.set(&squot;scene&squot;,idxEscena);parent.update()'">
+   <param name="A_02" value="id='initBtns()' algoritmo='sí' algoritmo='sí' hacer='cerrarInfo.w=21;cerrarInfo.h=cerrarInfo.w;cerrarInfo.x=INFO._w-cerrarInfo.w-6;cerrarInfo.y=6;cerrarInfo.img=&squot;imgs/tpl/cerrar.png&squot;;cerrarInfo.visible=1;;btnAceptar.w=120;btnAceptar.h=30;btnAceptar.x=380;btnAceptar.y=500;btnAceptar.img=&squot;imgs/tpl/btn120.png&squot;;btnAceptar.txt=&squot;Aceptar&squot;;;;;;ctrF.w=275;ctrF.h=40;ctrF.txt.w=70;ctrF.txt.h=18 ;;ctrF.txt.x=10;ctrF.txt.y=15;ctrF.x=ctrF.txt.x+ctrF.txt.w;ctrF.y=ctrF.txt.y-10;;;;ctr_a.w=120;ctr_a.h=40;ctr_a.x=(EspTxt._w-(ctr_a.w*3+5*2))/2+25;ctr_a.y=EspTxt._h-ctr_a.h-50;;;ctr_b.x=ctr_a.x+ctr_a.w+40;ctr_b.y=ctr_a.y;ctr_b.w=ctr_a.w;ctr_b.h=ctr_a.h;;ctr_c.x=ctr_b.x+ctr_b.w+5;ctr_c.y=ctr_b.y;ctr_c.w=ctr_b.w;ctr_c.h=ctr_b.h;;ctr_i.w=30;ctr_i.h=30;ctr_i.x=10;ctr_i.y=10'">
+   <param name="A_03" value="id='initEsp()' algoritmo='sí' algoritmo='sí' hacer='INFO.x=(E1._w-INFO._w)/2;INFO.y=(E1._h-INFO._h)/2;INFO.visible=1;;E2.x=54;E2.y=105;E2.visible=1;;EspTxt.x=540;EspTxt.y=105;EspTxt.visible=1'">
+   <param name="A_04" value="id='initEscena()' algoritmo='sí' algoritmo='sí' hacer='initBtns();initEsp();;ô=|***************************************|;ô=|*  Calculamos la posicion del titulo  *|;ô=|***************************************|;titulo=&squot;Sistema depredador-presa&squot;;titulo.w=_AnchoDeCadena_(titulo,&squot;SansSerif&squot;,&squot;PLAIN&squot;,&squot;30&squot;);titulo.x=(E1._w-titulo.w)/2;titulo.y=30'">
+   <param name="A_05" value="id='__FIN_TPL_()'">
+   <param name="A_06" value="id='R' vector='sí' evaluar='una-sola-vez' tamaño='1000'">
+   <param name="A_07" value="id='F' vector='sí' evaluar='una-sola-vez' tamaño='1000'">
+   <param name="A_08" value="id='f(x,y)' expresión='(2*x)-(1.2*x*y)'">
+   <param name="A_09" value="id='g(x,y)' expresión='(-y)+((0.9)*x*y)'">
+   <param name="A_10" value="id='punto()' algoritmo='sí' algoritmo='sí' hacer='R[t+1]=R[t]+dt*f(R[t],F[t]);F[t+1]=F[t]+dt*g(R[t],F[t])'">
+   <param name="A_11" value="id='punto2()' algoritmo='sí' algoritmo='sí' hacer='R[t+1]=R[t]+dt*f(R[t],F[t]);F[t+1]=F[t]+dt*g(R[t],F[t]);entro=entro+1'">
+   <param name="A_12" value="id='ValPer' vector='sí' evaluar='una-sola-vez' tamaño='20'">
+   <param name="A_13" value="id='calPer()' algoritmo='sí' algoritmo='sí' hacer='ValPer[0]=(ValPer0)?1:ValPer[0];ValPer[1]=(ValPer1)?1:ValPer[1];ValPer[2]=(ValPer2)?1:ValPer[2];ValPer[3]=(ValPer3)?1:ValPer[3];ValPer[4]=(ValPer4)? 1:ValPer[4];ValPer[5]=(ValPer5)?1:ValPer[5];ValPer[6]=(ValPer6)?1:ValPer[6];per=10*ValPer[0]+15*(ValPer[1]+ValPer[2]+ValPer[3]+ValPer[4]+ValPer[5]+ValPer[6]);setSCORMPercentage(per)'">
+   <param name="A_14" value="id='getSCORMState()' algoritmo='sí' expresión='res' algoritmo='sí' Local='res,arroba' inicio='arroba=&squot;@&squot;' hacer='ö=|Estandar ---- [MIDC]XX.<var>  SI SOLO EXISTE UNA ESCENA EN  EL HTML|;ö=|Estandar ---- [MIDC]XX_YY.<var>  SI HAY MAS DE UNA ESCENA EN EL  HTML|;res=&squot;D03.ctr_a:&squot;+ctr_a+arroba;res=res+&squot;D03.ctr_b:&squot;+ctr_b+arroba;res=res+&squot;D03.paso:&squot;+paso+arroba;res=res+&squot;D03.ValPer[0]:&squot;+ValPer[0]+arroba;res=res+&squot;D03.ValPer[1]:&squot;+ValPer[1]+arroba;res=res+&squot;D03.ValPer[2]:&squot;+ValPer[2]+arroba;res=res+&squot;D03.ValPer[3]:&squot;+ValPer[3]+arroba;res=res+&squot;D03.ValPer[4]:&squot;+ValPer[4]+arroba;res=res+&squot;D03.ValPer[5]:&squot;+ValPer[5]+arroba;res=res+&squot;D03.ValPer[6]:&squot;+ValPer[6]+arroba'">
+   <param name="A_15" value="id='initStateScorm()' algoritmo='sí' expresión='x' algoritmo='sí' hacer='ctr_a=getSCORMStateVar (&squot;D03.ctr_a&squot;);ctr_b=getSCORMStateVar(&squot;D03.ctr_b&squot;);paso=getSCORMStateVar(&squot;D03.paso&squot;);;;ValPer[0]=getSCORMStateVar(&squot;D03.ValPer[0]&squot;);ValPer[1]=getSCORMStateVar(&squot;D03.ValPer[1]&squot;);ValPer[2]=getSCORMStateVar(&squot;D03.ValPer[2]&squot;);ValPer[3]=getSCORMStateVar(&squot;D03.ValPer[3]&squot;);ValPer[4]=getSCORMStateVar(&squot;D03.ValPer[4]&squot;);ValPer[5]=getSCORMStateVar(&squot;D03.ValPer[5]&squot;);ValPer[6]=getSCORMStateVar(&squot;D03.ValPer[6]&squot;);calPer();;a=(ctr_a!=0)?ctr_a:1;b=(ctr_b!=0)?ctr_b:0.5;ctr_paso=(paso!=0)?paso:0;'">
+   <param name="A_16" value="id='llamaAnimaScorm()' algoritmo='sí' algoritmo='sí' inicio='R[0]=a;F[0]=b;dt=0.01;t=0' hacer='aux=(paso=1)?punto():punto2();t=t+1;entr2=entr2+10' mientras='t<600'">
+   <param name="A_17" value="id='INICIO' algoritmo='sí' evaluar='una-sola-vez' hacer='initStateScorm();initEscena()'">
+   <param name="A_18" value="id='CALCULOS' algoritmo='sí' evaluar='siempre'">
+   <param name="A_19" value="id='animacion1' evento='sí' condición='anima1=1' acción='animar' ejecución='alternar' pos_mensajes='centro'">
+   <param name="A_20" value="id='animacion2' evento='sí' condición='anima2=1' acción='animar' ejecución='alternar' pos_mensajes='centro'">
+   <param name="G_01" value="espacio='E1' tipo='texto' fondo='sí' dibujar-si='0' expresión='[__INFO__,20]' fijo='sí'">
+   <param name="G_02" value="espacio='E1' tipo='texto' fondo='sí' expresión='[titulo.x,titulo.y]' texto='[titulo]' fuente='SansSerif,PLAIN,30' fijo='sí'">
+   <param name="G_03" value="espacio='INFO' tipo='texto' fondo='sí' color='blanco' expresión='[20,5]' texto='Modelación por medio de sistemas' fuente='SansSerif,PLAIN,30' fijo='sí'">
+   <param name="G_04" value="espacio='INFO' tipo='texto' expresión='[20,65]' texto='{\rtf1\uc0{\fonttbl\f0\fcharset0 Times New Roman;\f1\fcharset0 Arial;\f2\fcharset0 Times New Roman;\f3\fcharset0 Arial;}\f1\fs42 A continuaci\u243 n estudiaremos el modelo del sistema depredador-presa. A trav\u233 s de la\par aproximaci\u243 n de Euler analizaremos el comportamiento de su soluci\u243 n.\par \par El modelo trata sobre el n\u250 mero de individuos en dos tipos de poblaciones. Una ser\u225 n\par las presas y la otra los depredadores. \f2\fs42\i{\*\mjaformula R(t)}\f1\fs42\i0  representa el n\u250 mero de presas al tiempo\par \f2\fs42\i{\*\mjaformula t}\f1\fs42\i0 , y \f2\fs42\i{\*\mjaformula F(t)}\f1\fs42\i0  denota la poblacion de depredadores. Cabe mencionar que tanto \f2\fs42\i{\*\mjaformula R(t)}\f1\fs42\i0\par como \f2\fs42\i{\*\mjaformula F(t)}\f1\fs42\i0  son positivas, y adem\u225 s la unidad puede representar miles, millones, o\par cualquier otro m\u250 ltiplo de la unidad. El sistema estar\u225  representado como:\par                        \f2\fs42\i{\*\mjaformula{\fraction{\num dR}{\den dt}} = 2R - 1.2RF}\f1\fs42\i0 ;                      \f2\fs42\i{\*\mjaformula{\fraction{\num dF}{\den dt}} = -F + 0.9RF}\f1\fs42\i0\par El t\u233 rmino \f2\fs42\i{\*\mjaformula 2R}\f1\fs42\i0  representa un crecimiento exponencial de las presas en ausencia de\par depredadores. El t\u233 rmino \f2\fs42\i{\*\mjaformula -1.2RF}\f1\fs42\i0  corresponde al deceso debido a interacciones entre\par especies. La expresi\u243 n \f2\fs42\i{\*\mjaformula -F}\f1\fs42\i0  representa deceso de depredadores debido a auscencia de\par presas, y \f2\fs42\i{\*\mjaformula 0.9RF}\f1\fs42\i0  es el aumento de depredadores debido a la interacci\u243 n entre especies.\par Los coeficientes \f2\fs42\i{\*\mjaformula 2}\f1\fs42\i0 , \f2\fs42\i{\*\mjaformula -1.2}\f1\fs42\i0 , \f2\fs42\i{\*\mjaformula -1}\f1\fs42\i0  y \f2\fs42\i{\*\mjaformula 0.9}\f1\fs42\i0  son factores caracter\u237 sticos de las especies\par implicadas, as\u237  que estos var\u237 an con otras especies implicadas. La presencia de los\par t\u233 rminos \f2\fs42\i{\*\mjaformula RF}\f1\fs42\i0  en las ecuaciones dificulta resolver el sistema, por lo que en este caso es\par necesario la ayuda de m\u233 todos num\u233 ricos.\fs40}' fuente='SansSerif,PLAIN,21' fijo='sí'">
+   <param name="G_05" value="espacio='E1' tipo='texto' fondo='sí' dibujar-si='0' expresión='[__ESP_TXT__,20]' fijo='sí'">
+   <param name="G_06" value="espacio='EspTxt' tipo='texto' dibujar-si='paso=0' expresión='[3,10]' texto='{\rtf1\uc0{\fonttbl\f0\fcharset0 Times New Roman;\f1\fcharset0 Arial;\f2\fcharset0 Times New Roman;\f3\fcharset0 Arial;}\f1\fs42 Para este problema no se puede\par obtener una ecuaci\u243 n que represente\par la soluci\u243 n general, pero las\par condiciones iniciales nos ayudan a\par encontrar una aproximaci\u243 n y adem\u225 s\par ciertos resultados interesantes. Si\par \f2\fs42\i{\*\mjaformula R=0}\f1\fs42\i0  y \f2\fs42\i{\*\mjaformula F=0}\f1\fs42\i0  al evaluarlas en el\par sistema, nos damos cuenta que\par cuando aumenta el valor de \f2\fs42\i{\*\mjaformula t,}\f1\fs42\i0  las\par poblaciones tienden a cero, este\par resultado es esperado f\u237 sicamente\par debido a que como no hay presas ni\par depredadores, es imposible el\par crecimiento del n\u250 mero de sus\par poblaciones.\fs40}' fuente='SansSerif,PLAIN,21' fijo='sí'">
+   <param name="G_07" value="espacio='EspTxt' tipo='texto' dibujar-si='paso=1' expresión='[0,5]' texto='{\rtf1\uc0{\fonttbl\f0\fcharset0 Times New Roman;\f1\fcharset0 Arial;\f2\fcharset0 Times New Roman;\f3\fcharset0 Arial;}\f1\fs42 Este tipo de valores de \f2\fs42\i{\*\mjaformula R}\f1\fs42\i0  y \f2\fs42\i{\*\mjaformula F}\f1\fs42\i0  son\par soluciones de la ecuaci\u243 n y se llaman\par puntos de equilibrio debido a que el\par sistema se mantiene estable, conforme\par \f2\fs42\i{\*\mjaformula t}\f1\fs42\i0  aumenta \f2\fs42\i{\*\mjaformula R}\f1\fs42\i0  y \f2\fs42\i{\*\mjaformula F}\f1\fs42\i0  se mantienen cons-\par tantes. Un sistema puede tener m\u225 s de\par un punto de equilibrio con implicaciones\par m\u225 s interesantes y diferentes. Elige\par valores iniciales de \f2\fs42\i{\*\mjaformula R{\subix 0}}\f1\fs42\i0  y \f2\fs42\i{\*\mjaformula F{\subix 0}}\f1\fs42\i0  para\par encontrar soluciones por el m\u233 todo de\par Euler. Repite varias veces hasta iden-\par tificar un punto de equilibrio.\fs40}' fuente='SansSerif,PLAIN,21' fijo='sí'">
+   <param name="G_08" value="espacio='EspTxt' tipo='texto' dibujar-si='paso=2' expresión='[3,5]' texto='{\rtf1\uc0{\fonttbl\f0\fcharset0 Arial;\f1\fcharset0 Arial;\f2\fcharset0 Times New Roman;\f3\fcharset0 Arial;}\f1\fs42 Si no encontraste el punto de equilibrio\par regresa y prueba con \f2\fs42\i{\*\mjaformula R{\subix 0}=1.12}\f3\fs42  y\par \f2\fs42{\*\mjaformula F{\subix 0}=1.68}\f3\fs42 . \i0 Esta soluci\u243 n nos dice\par que el sistema se encuentra en\par equilibrio perfecto, es decir, existen\par suficientes presas para mantener\par constante la poblaci\u243 n de\par depredadores y no hay demasiados\par depredadores para que disminuyan\par la poblaci\u243 n de presas. Ahora da clic\par en animar para analizar las\par poblaciones de forma independiente.\fs40}' fuente='SansSerif,PLAIN,21' fijo='sí'">
+   <param name="G_09" value="espacio='EspTxt' tipo='texto' dibujar-si='paso=3' expresión='[3,5]' texto='{\rtf1\uc0{\fonttbl\f0\fcharset0 Times New Roman;\f1\fcharset0 Arial;\f2\fcharset0 Arial;}\f1\fs42 Podemos ver que resulta un poco dif\u237 cil\par analizar las gr\u225 ficas de forma\par independiente, pero en este caso de los\par dos tipos de gr\u225 ficas podemos notar\par que el comportamiento de la soluci\u243 n\par del sistema es similar\par independientemente de las condiciones\par iniciales.\par \par Finalmente podemos concluir que dadas\par las cantidades iniciales de las\par poblaciones, estas tienden a\par incrementarse, en alg\u250 n momento, los\par depredadores comienzan a consumir en\par exceso las presas, \u233 stas comienzan a\fs40}' fuente='SansSerif,PLAIN,21' fijo='sí'">
+   <param name="G_10" value="espacio='EspTxt' tipo='texto' dibujar-si='paso=4' expresión='[3,5]' texto='{\rtf1\uc0{\fonttbl\f0\fcharset0 Times New Roman;\f1\fcharset0 Arial;\f2\fcharset0 Arial;}\f1\fs42 disminuir, provocando que mueran los\par depredadores debido a la falta de\par alimento. Como los depredadores\par disminuyeron, el n\u250 mero de presas\par comienza a aumentar. Finalmente los\par pocos depredadores restantes\par comienzan a alimentarse (habiendo\par nuevas presas) aumentando su\par poblaci\u243 n. El proceso entra en un ciclo\par repitiendo los pasos anteriores. Este\par comportamiento se identifica en las\par gr\u225 ficas debido a que estas forman\par curvas cerradas repitiendose conforme\par avanza el tiempo.\fs40}' fuente='SansSerif,PLAIN,21' fijo='sí'">
+   <param name="G_11" value="espacio='E1' tipo='texto' fondo='sí' dibujar-si='0' expresión='[__GRAF__,20]' fijo='sí'">
+   <param name="G_12" value="espacio='E2' tipo='punto' color='ae0000' dibujar-si='paso<2' expresión='(R[s],F[s])' familia='s' s.intervalo='[0,t-1]' s.pasos='t-1' fijo='sí' tamaño='1'">
+   <param name="G_13" value="espacio='E2' tipo='punto' color='ae0000' dibujar-si='paso>1' expresión='(s/100,R[s]*2)' familia='s' s.intervalo='[0,t-1]' s.pasos='t-1' fijo='sí'">
+   <param name="G_14" value="espacio='E2' tipo='punto' color='azul' dibujar-si='paso>1' expresión='(s/100,F[s]*2)' familia='s' s.intervalo='[0,t-1]' s.pasos='t-1' fijo='sí'">
+   <param name="G_15" value="espacio='E2' tipo='punto' color='negro' dibujar-si='paso<2' expresión='(-1.1,9)' texto='F(t)' fuente='Serif,ITALIC,20' fijo='sí' tamaño='0'">
+   <param name="G_16" value="espacio='E2' tipo='punto' color='ae0000' dibujar-si='paso>1' expresión='(-1.5,2*R[0])' texto='R(t)' fuente='Serif,ITALIC,20' fijo='sí' tamaño='0'">
+   <param name="G_17" value="espacio='E2' tipo='punto' color='azul' dibujar-si='paso>1' expresión='(-1.2,2*F[0])' texto='F(t)' fuente='Serif,ITALIC,20' fijo='sí' tamaño='0'">
+   <param name="G_18" value="espacio='E2' tipo='punto' color='negro' dibujar-si='paso<2' expresión='(9,-.5)' texto='R(t)' fuente='Serif,ITALIC,20' fijo='sí' tamaño='0'">
+   <param name="G_19" value="espacio='E2' tipo='punto' color='negro' dibujar-si='paso=1' expresión='(1,-.7)' texto='t=[t]' fuente='Serif,ITALIC,20' decimales='0' fijo='sí' tamaño='0'">
+   <param name="G_20" value="espacio='E2' tipo='punto' color='negro' dibujar-si='paso>1' expresión='(9,-.5)' texto='t' fuente='Serif,ITALIC,20' fijo='sí' tamaño='0'">
+   <param name="G_21" value="espacio='E2' tipo='punto' color='negro' dibujar-si='paso=1' expresión='(6,9)' texto='R(t)=[R[t]]\nF(t)=[F[t]]' fuente='Serif,ITALIC,20' decimales='3' fijo='sí' tamaño='0'">
+   <param name="G_22" value="espacio='E1' tipo='texto' dibujar-si='debug' expresión='[20,2]' texto='t=[t]\nentro=[entro]\npaso=[paso]\nanima1=[anima1]\nanima2=[anima2]    entr2=[entr2]   tmax=[tmax]' fijo='sí'">
+   <param name="G_23" value="espacio='E2' tipo='texto' dibujar-si='debug' expresión='[0,20+18*s]' familia='s' s.intervalo='[0,35]' s.pasos='35' texto='R([s])=[R[s]]     F([s])=[F[s]]' fijo='sí'">
+   <param name="Animación" value="controles='no' auto='no' inicio='R[0]=a;F[0]=b;dt=0.01;t=0' hacer='aux=(paso=1)?punto():punto2();t=t+1' mientras='t<tmax'">
+</ajs>
+
+
+	<!------ INICIA LA INFO SOBRE LAS LICENCIAS Y LOS CRÉDITOS. ---------->
+    <a id="btCopyright" class="standardButton" title="Haz clic aquí para consultar los créditos y las condiciones de uso de este recurso." href="#" onClick="document.getElementById('copyright').className='visible';">©</a>
+    <div id="copyright" class="oculto">
+      
+      <div class='innerCopyright'>
+      
+          <a id="btCloseCopyright" class="standardButton" title="Haz clic aquí para cerrar esta ventana." href="#" onClick="document.getElementById('copyright').className='oculto'">×</a>
+  
+          <!-- Créditos UAM  (siempre deben ir en primer lugar) -->
+			<div class="creditos">
+				<h1>
+					Créditos 
+				</h1>
+
+				<h2>
+					Escena original
+				</h2>				<table class="autores" 	>
+
+					<tr> <td  class="rol"> Diseño del contenido			</td>		<td class="nombre"> Víctor Hugo García Jarillo (Facultad de Ciencias UNAM, LITE)</td></tr>
+					<tr> <td  class="rol"> Diseño funcional				</td>		<td class="nombre"> Víctor Hugo García Jarillo (Facultad de Ciencias UNAM, LITE)</td></tr>
+					<tr> <td  class="rol"> Programación					</td>		<td class="nombre"> Víctor Hugo García Jarillo (Facultad de Ciencias UNAM, LITE)</td></tr>
+					<tr> <td  class="rol"> Diseño gráfico				</td>		<td class="nombre"> Ricardo López Gómez</td></tr>
+					<tr> <td  class="rol" >Coordinación			</td>		<td class="nombre"> Leticia Montserrat Vargas Rocha</td></tr>
+					</table>
+				<h2>
+					Adaptación 
+				</h2>
+				<table class="autores" 	>
+				<tr> <td  class="rol"> Diseño funcional				</td>		<td class="nombre"> Victor Hugo García Jarillo (Facultad de                    Ciencias, UNAM)		</td></tr>
+					<tr> <td  class="rol"> Programación				</td>		<td class="nombre"> Victor Hugo García Jarillo (Facultad de                    Ciencias, UNAM)</td></tr>
+
+					<tr> <td  class="rol"> Diseño gráfico			</td>		<td class="nombre"> Francisco	Varela Fuentes</td></tr>
+					<tr> <td  class="rol" >Coordinación			</td>		<td class="nombre"> Leticia Montserrat Vargas Rocha</td></tr>
+		
+				</table>
+
+ <div class='logos'>
+	            <a href=''>
+	               <img src="../images/info/icns/logoLite.png">
+	            </a>
+	            <a href="http://www.unadmexico.mx/">
+	               <img src="../images/info/icns/logoUNADM.png">
+	            </a>
+	         </div>
+          </div>
+          
+          <!-- Linea separación créditos -->
+          <hr class="linea" />
+     
+          <!-- Aviso licencias -->
+          <div class="licencias">
+          
+				<p class="creativeCommons">Los contenidos de esta unidad didáctica interactiva están bajo una licencia <a href="http://creativecommons.org/licenses/by-nc-sa/2.5/es/" target="_blank">Creative Commons Reconocimiento-NoComercial-CompartirIgual</a>.</p>
+
+				<!--arquimedes (optativo)-->
+				<p>La unidad didáctica fue creada con <a href="http://arquimedes.matem.unam.mx/Descartes5/creditos/conCCL.html" target="_blank">Arquímedes</a>, una herramienta de código abierto.</p>
+
+				<!-- Descartes -->
+				<p>La unidad didáctica contiene escenas elaboradas con Descartes, una herramienta de código abierto.</p>
+
+
+          	<p style='text-align:center'> LITE - UnADM 2014</p>
+          </div>
+      </div>
+    </div> 
+   <!------ TERMINA LA INFO SOBRE LAS LICENCIAS Y LOS CRÉDITOS. ---------->
+  
+  
+  </div>
+  
+  
+</article>
+
+
+</body>
+
+</html>

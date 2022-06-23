@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Desarrollo</title>	
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<link href="../css/DescHTML5.css" rel="stylesheet" type="text/css" media="screen" />
+	<link href="../css/html5.css" rel="stylesheet" type="text/css" media="screen" />
+	<script type='text/javascript' src='../lib/descartes-min.js'></script>
+</head>
+<body BGCOLOR="c0c0c0" leftmargin="0" topmargin="0">
+<ajs name="Descartes" width=970 height=550 code="Descartes">
+   <param name="tamaño" value="970x550">
+   <param name="image_loader" value="">
+   <param name="expand" value="">
+   <param name="decimal_symbol" value=".">
+   <param name="antialias" value="sí">
+   <param name="deshacer" value="no">
+   <param name="nombre" value="Descartes">
+   <param name="Versión" value="5.336, 2015-02-13">
+   <param name="Idioma" value="español">
+   <param name="Botones" value="créditos=no config=no inicio=no limpiar=no">
+   <param name="E_01" value="tipo='R2' id='E1' fijo='sí' escala='1' O.x='-50%' O.y='-50%' imagen='imgs/tpl/fondo_01.jpg' despl_imagen='arr-izq' fondo='c0d0d8' red='no' red10='no' ejes='no' texto='no'">
+   <param name="E_02" value="tipo='R3' id='E3' x='E2.x' y='E2.y' ancho='600' alto='400' escala='70' despl_imagen='arr-izq' fondo='negro' despliegue='pintor' R3='sí'">
+   <param name="E_03" value="tipo='R2' id='EspTxt' x='EspTxt.x' y='EspTxt.y' ancho='262' alto='400' dibujar-si='EspTxt.visible' fijo='sí' despl_imagen='arr-izq' fondo='fff8ffd9' red='no' red10='no' ejes='no' texto='no'">
+   <param name="E_04" value="tipo='R2' id='MASK' dibujar-si='INFO.visible' fijo='sí' imagen='imgs/tpl/backwindow.png' despl_imagen='mosaico' fondo='95000000' red='no' red10='no' ejes='no' texto='no'">
+   <param name="E_05" value="tipo='R2' id='INFO' x='INFO.x' y='INFO.y' ancho='790' alto='470' dibujar-si='INFO.visible' fijo='sí' imagen='imgs/tpl/retro_790x470.png' despl_imagen='mosaico' red='no' red10='no' ejes='no' texto='no'">
+   <param name="C_01" value="id='cerrarInfo' tipo='numérico' interfaz='botón' región='interior' espacio='INFO' expresión='(cerrarInfo.x,cerrarInfo.y,cerrarInfo.w,cerrarInfo.h)' fijo='sí' visible='sí' imagen='_STYLE_|class=btnUNADM icon cerrar|shadowTextColor=rgba(0,0,0,0.2)|shadowTextOffsetY=2|shadowTextBlur=0|textBorder=0 |' acción='calcular' parámetro='INFO.visible=0\nValPer0=1\ncalPer()' dibujar-si='cerrarInfo.visible'">
+   <param name="C_02" value="id='sig' tipo='numérico' interfaz='botón' región='interior' espacio='INFO' nombre='Siguiente' expresión='(670,420,100,30)' fijo='sí' visible='sí' color='blanco' fuente puntos='18' imagen='_STYLE_|class=btnUNADM |shadowTextColor=rgba(0,0,0,0.2)|shadowTextOffsetY=2|shadowTextBlur=0|textBorder=0 |' acción='calcular' parámetro='paso=1\nValPer1=1\ncalPer()' dibujar-si='paso==0'">
+   <param name="C_03" value="id='ant' tipo='numérico' interfaz='botón' región='interior' espacio='INFO' nombre='Anterior' expresión='(20,420,100,30)' fijo='sí' visible='sí' color='blanco' fuente puntos='18' imagen='_STYLE_|class=btnUNADM |shadowTextColor=rgba(0,0,0,0.2)|shadowTextOffsetY=2|shadowTextBlur=0|textBorder=0 |' acción='calcular' parámetro='paso=0' dibujar-si='paso=1'">
+   <param name="C_04" value="id='fi' tipo='numérico' región='interior' espacio='EspTxt' nombre='θ=' expresión='(15,260,110,40)' valor='ctr_fi' incr='3' min='0' max='87' decimales='0' fijo='sí' visible='sí' acción='calcular' parámetro='ValPer2=1\ncalPer()'">
+   <param name="C_05" value="id='teta' tipo='numérico' región='interior' espacio='EspTxt' nombre='ϕ=' expresión='(140,260,110,40)' valor='ctr_teta' incr='3' decimales='0' fijo='sí' visible='sí' acción='calcular' parámetro='ValPer3=1\ncalPer()'">
+   <param name="C_06" value="id='aa' tipo='numérico' interfaz='campo de texto' región='escenario' espacio='E3' nombre='a' expresión='(0,0,0,0)' valor='-0.2' fijo='sí' visible='sí' activo-si='0' pos_mensajes='centro'">
+   <param name="C_07" value="id='bb' tipo='numérico' interfaz='campo de texto' región='escenario' espacio='E3' nombre='b' expresión='(0,0,0,0)' valor='0.5' fijo='sí' visible='sí' activo-si='0' pos_mensajes='centro'">
+   <param name="C_08" value="id='c' tipo='numérico' región='interior' espacio='EspTxt' nombre='c' expresión='(85,312,110,40)' valor='ctr_c' incr='0.05' fijo='sí' visible='sí' acción='calcular' parámetro='ValPer4=1\ncalPer()'">
+   <param name="C_09" value="id='ver' tipo='numérico' interfaz='botón' región='interior' espacio='EspTxt' nombre='Gradiente' expresión='(85,360,120,40)' fijo='sí' visible='sí' color='blanco' fuente puntos='18' imagen='_STYLE_|class=btnUNADM |shadowTextColor=rgba(0,0,0,0.2)|shadowTextOffsetY=2|shadowTextBlur=0|textBorder=0 |' acción='calcular' parámetro='verG=1-verG\nValPer5=1\ncalPer()'">
+   <param name="C_10" value="id='abrirInfo' tipo='numérico' interfaz='botón' región='interior' espacio='E1' nombre='Información' expresión='(742,515,120,30)' fijo='sí' visible='sí' color='blanco' color-int='fff0f8ff' fuente puntos='18' imagen='_STYLE_|class=btnUNADM |shadowTextColor=rgba(0,0,0,0.2)|shadowTextOffsetY=2|shadowTextBlur=0|textBorder=0 |' acción='calcular' parámetro='INFO.visible=1' pos_mensajes='centro'">
+   <param name="A_01" value="id='initEsp()' algoritmo='sí' algoritmo='sí' hacer='INFO.x=(E1._w-INFO._w)/2;INFO.y=(E1._h-INFO._h)/2;INFO.visible=1;E2.x=54;E2.y=105;E2.visible=1;;EspTxt.x=655;EspTxt.y=105;EspTxt.visible=1;;cerrarInfo.w=21;cerrarInfo.h=cerrarInfo.w;cerrarInfo.x=INFO._w-cerrarInfo.w-10;cerrarInfo.y=8;cerrarInfo.img=&squot;imgs/tpl/cerrar.png&squot;;cerrarInfo.visible=1'">
+   <param name="A_02" value="id='__FIN_TPL_()'">
+   <param name="A_03" value="id='initEscena()' algoritmo='sí' algoritmo='sí' hacer='initEsp();ô=|***************************************|;ô=|*  Calculamos la posicion del titulo  *|;ô=|***************************************|;titulo=&squot;Gradiente&squot;;titulo.w=_AnchoDeCadena_(titulo,&squot;SansSerif&squot;,&squot;PLAIN&squot;,&squot;30&squot;);titulo.x=(E1._w-titulo.w)/2;titulo.y=30'">
+   <param name="A_04" value="id='ValPer' vector='sí' evaluar='una-sola-vez' tamaño='20'">
+   <param name="A_05" value="id='calPer()' algoritmo='sí' algoritmo='sí' hacer='ValPer[0]=(ValPer0)?1:ValPer[0];ValPer[1]=(ValPer1)?1:ValPer[1];ValPer[2]=(ValPer2)?1:ValPer[2];ValPer[3]=(ValPer3)?1:ValPer[3];ValPer[4]=(ValPer4)?1:ValPer[4];ValPer[5]=(ValPer5)?1:ValPer[5];per=10*(ValPer[0]+ValPer[1])+(20*(ValPer[2]+ValPer[3]+ValPer[4]+ValPer[5]));setSCORMPercentage(per)'">
+   <param name="A_06" value="id='getSCORMState()' algoritmo='sí' expresión='res' algoritmo='sí' Local='res,arroba' inicio='arroba=&squot;@&squot;' hacer='ö=|Estandar ---- [MIDC]XX.<var>  SI SOLO EXISTE UNA ESCENA EN EL HTML|;ö=|Estandar ---- [MIDC]XX_YY.<var>  SI HAY MAS DE UNA ESCENA EN EL HTML|;res=&squot;D03.fi:&squot;+fi+arroba;res=res+&squot;D03.teta:&squot;+teta+arroba;res=res+&squot;D03.c:&squot;+c+arroba;res=res+&squot;D03.verG:&squot;+verG+arroba;;res=res+&squot;D03.ValPer[0]:&squot;+ValPer[0]+arroba;res=res+&squot;D03.ValPer[1]:&squot;+ValPer[1]+arroba;res=res+&squot;D03.ValPer[2]:&squot;+ValPer[2]+arroba;res=res+&squot;D03.ValPer[3]:&squot;+ValPer[3]+arroba;res=res+&squot;D03.ValPer[4]:&squot;+ValPer[4]+arroba;res=res+&squot;D03.ValPer[5]:&squot;+ValPer[5]+arroba'">
+   <param name="A_07" value="id='initStateScorm()' algoritmo='sí' expresión='x' algoritmo='sí' hacer='fi=getSCORMStateVar(&squot;D03.fi&squot;);teta=getSCORMStateVar(&squot;D03.teta&squot;);c=getSCORMStateVar(&squot;D03.c&squot;);verG=getSCORMStateVar(&squot;D03.verG&squot;);;ValPer[0]=getSCORMStateVar(&squot;D03.ValPer[0]&squot;);ValPer[1]=getSCORMStateVar(&squot;D03.ValPer[1]&squot;);ValPer[2]=getSCORMStateVar(&squot;D03.ValPer[2]&squot;);ValPer[3]=getSCORMStateVar(&squot;D03.ValPer[3]&squot;);ValPer[4]=getSCORMStateVar(&squot;D03.ValPer[4]&squot;);ValPer[5]=getSCORMStateVar(&squot;D03.ValPer[5]&squot;);calPer();;ctr_fi=(fi!=0)?fi:30;ctr_teta=(teta!=0)?teta:132;ctr_c=(c!=0)?c:1.5;ctr_verG=(verG!=0)?verG:1.5'">
+   <param name="A_08" value="id='INICIO' algoritmo='sí' evaluar='una-sola-vez' inicio='ew=0.000' hacer='initStateScorm();initEscena();E3.rot.z=-10;'">
+   <param name="A_09" value="id='CALCULOS' algoritmo='sí' evaluar='siempre' hacer='teta=teta%360;aa=tan(fi*pi/180)*cos(ew+teta*pi/180);bb=tan(fi*pi/180)*sen(ew+teta*pi/180);a=aa;b=bb'">
+   <param name="G_01" value="espacio='E1' tipo='texto' fondo='sí' expresión='[titulo.x,titulo.y]' texto='[titulo]' fuente='SansSerif,PLAIN,30' fijo='sí'">
+   <param name="G_02" value="espacio='E1' tipo='texto' fondo='sí' dibujar-si='0' expresión='[__GRAF__,20]' fijo='sí'">
+   <param name="G_03" value="espacio='E1' tipo='texto' fondo='sí' dibujar-si='0' expresión='[__INFO__,20]' fijo='sí'">
+   <param name="G_04" value="espacio='INFO' tipo='texto' fondo='sí' color='blanco' expresión='[20,5]' texto='Gradiente' fuente='SansSerif,PLAIN,24' fijo='sí'">
+   <param name="G_05" value="espacio='INFO' tipo='texto' dibujar-si='paso=0' expresión='[10,50]' texto='{\rtf1\uc0{\fonttbl\f0\fcharset0 Times New Roman;\f1\fcharset0 Arial;\f2\fcharset0 Times New Roman;\f3\fcharset0 Times New Roman;\f4\fcharset0 Arial;}\f1\fs40 Si tenemos una funci\u243 n de dos o tres variables, y adem\u225 s dicha funci\u243 n es\par diferenciable, entonces podemos obtener todas las derivadas direccionales\par posibles de \f2\fs44\i{\*\mjaformula f}\f1\fs40\i0  en un punto dado. \u201 stas dan las razones de cambio de \f2\fs44\i{\*\mjaformula f}\f1\fs40\i0  en todas\par las direcciones posibles.\par \par De todas estas razones y direcciones \u191 cu\u225 l es la que indica el cambio m\u225 s r\u225 pido\par para\f2\fs44\i  {\*\mjaformula f}\f1\fs40\i0 ? y \u191 cu\u225 l es la m\u225 xima raz\u243 n de cambio? El valor m\u225 ximo de la derivada\par direccional se da cuando el vector unitario \f2\fs44\i{\*\mjaformula\u363 }\f1\fs40\i0  tiene la misma direcci\u243 n que el vector\par gradiente \f3\fs48\i{\*\mjaformula\f2\fs44\i\u8711 \fs48 f}\f1\fs40\i0 :\par                                        \f2\fs44\i{\*\mjaformula D{\subix u}f=\f2\fs44\i\u8711 f\u183 \u363 =|\u8711 f||\u363 |cos\u952 =|\u8711 f|cos\u952 }\f1\fs40\i0\par \par donde \f3\fs48\i{\*\mjaformula\u952 }\f1\fs40\i0  es el \u225 ngulo entre \f2\fs44\i{\*\mjaformula\f4\fs40\i\u8711 \f2\fs44 f}\f1\fs40\i0  y \f2\fs44\i{\*\mjaformula\u363 .}\f1\fs40\i0  El valor m\u225 ximo se da cuando \f2\fs44\i{\*\mjaformula cos\u952 =1.}\f1\fs40\i0  y\par esto ocurre cuando \f2\fs44\i{\*\mjaformula\u952 =0,}\f1\fs40\i0 es decir cuando \f2\fs44\i{\*\mjaformula\f4\fs40\i\u8711 \f2\fs44 f}\f1\fs40\i0  y \f2\fs44\i{\*\mjaformula\u363 }\f1\fs40\i0  tiene la misma direcci\u243 n.\par Entonces el valor m\u225 ximo de la derivada direccional es \f2\fs44\i{\*\mjaformula |\f4\fs40\i\u8711 \f2\fs44 f|.}\f1\fs40\i0}' fuente='SansSerif,PLAIN,20' fijo='sí'">
+   <param name="G_06" value="espacio='INFO' tipo='texto' dibujar-si='paso=1' expresión='[10,60]' texto='{\rtf1\uc0{\fonttbl\f0\fcharset0 Times New Roman;\f1\fcharset0 Arial;\f2\fcharset0 Times New Roman;\f3\fcharset0 Times New Roman;\f4\fcharset0 Arial;}\f1\fs40 Todas las derivadas direccionales de una superficie en un punto son tangentes a ella,\par por lo que todas \u233 stas est\u225 n contenidas en el plano tangente a la superficie, y como\par hemos visto, el \f2\fs48\i{\*\mjaformula\f3\fs44\i\u8711 \fs48 f}\f1\fs40\i0  es ortogonal a las derivadas y en general al plano tangente.\par \par Si proyectamos el \f3\fs44\i{\*\mjaformula\f4\fs40\i\u8711 \f3\fs44 f} \f1\fs40\i0 sobre el plano \f3\fs44\i{\*\mjaformula XY,}\f1\fs40\i0  \u233 ste nos indicar\u225  hacia donde est\u225  el\par m\u225 ximo cambio en nuestra superficie. Como vimos anteriormente, este cambio se\par denota como \f3\fs44\i{\*\mjaformula |\f4\fs40\i\u8711 \f3\fs44 f|.}\f1\fs40\i0\par \par En la siguiente escena se muestra un plano, el cual puede ser el plano tangente a \par cualquier superficie. Se muestra un vector de color amarillo sobre el plano \f3\fs44\i{\*\mjaformula XY}\f1\fs40\i0  que \par indica la direcci\u243 n del m\u225 ximo crecimiento del plano, que tambi\u233 n es el m\u225 ximo \par crecimiento a la superficie, es decir, apunta en direcci\u243 n a la pendiente mayor a la\par superficie en el punto elegido.\par }' fuente='SansSerif,PLAIN,20' fijo='sí'">
+   <param name="G_07" value="espacio='EspTxt' tipo='texto' expresión='[5,20]' texto='{\rtf1\uc0{\fonttbl\f0\fcharset0 Times New Roman;\f1\fcharset0 Arial;\f2\fcharset0 Times New Roman;\f3\fcharset0 Times New Roman;}\f1\fs40 Aqu\u237  puedes modificar el\par \u225 ngulo\f2\fs44\i  {\*\mjaformula\u952 }\f1\fs40\i0  y \f2\fs44\i{\*\mjaformula\u981 .}\f1\fs40\i0  \f2\fs44\i{\*\mjaformula\f2\fs44\i\u952 } \f1\fs40\i0 es el\par \u225 ngulo de inclinaci\u243 n del\par plano con respecto al\par plano \f2\fs44\i{\*\mjaformula XY}\f1\fs40\i0  y \f3\fs48\i{\*\mjaformula\f2\fs44\i\u952 \fs48} \f1\fs40\i0 es el\par \u225 ngulo de rotaci\u243 n del\par plano,\f2\fs44\i{\*\mjaformula c}\f1\fs40\i0  es la altura del\par plano con respecto al\par eje \f2\fs44\i{\*\mjaformula Z}\f1\fs40\i0 .}' fuente='SansSerif,PLAIN,20' fijo='sí'">
+   <param name="G_08" value="espacio='E1' tipo='texto' dibujar-si='DEBUG' expresión='[20,20]' texto='verG=[verG]\nper=[per]' fijo='sí'">
+   <param name="S_01" value="espacio='E3' tipo='texto' fondo='sí' color='blanco' expresión='[20,30]' texto='f(x,y) = a x + b y + c' fuente='Serif,BOLD+ITALIC,24' fijo='sí'">
+   <param name="S_02" value="espacio='E3' tipo='superficie' color='a0ffffff' color_reverso='a0ffffff' expresión='x=3*(2*u-1) y=3*(2*v-1) z=0' aristas='sí' modelo='metal' Nu='2' Nv='2'">
+   <param name="S_03" value="espacio='E3' tipo='segmento' color='gris' expresión='(0,0,0)(0,0,1.5)' Nu='1'">
+   <param name="S_04" value="espacio='E3' tipo='superficie' color='a0ffffff' color_reverso='a0ffffff' expresión='x=2*(2*u-1) y=2*(2*v-1) z=a*x+b*y+c' aristas='sí' modelo='metal' Nu='1' Nv='1'">
+   <param name="S_05" value="espacio='E3' tipo='segmento' color='4080ff' expresión='(0,0,c)(0+1,0+0,c+a)' Nu='1'">
+   <param name="S_06" value="espacio='E3' tipo='curva' color='4080ff' expresión='x=u y=0 z=a*x+b*y+c' ancho='2' Nu='1'">
+   <param name="S_07" value="espacio='E3' tipo='curva' color='ff4080' expresión='x=0 y=u z=a*x+b*y+c' ancho='2' Nu='1'">
+   <param name="S_08" value="espacio='E3' tipo='curva' color='00d57b' expresión='x=-a*u y=-b*u z=c+u' ancho='2' Nu='1'">
+   <param name="S_09" value="espacio='E3' tipo='curva' color='00d57b' expresión='x=-a*u y=-b*u z=0' ancho='3' Nu='1'">
+   <param name="S_10" value="espacio='E3' tipo='curva' color='00d57b' expresión='x=-a y=-b z=(c+1)*u' Nu='1'">
+   <param name="S_11" value="espacio='E3' tipo='curva' color='00d57b' dibujar-si='verG' expresión='x=-a*u y=-b*u z=a*x+b*y+c' ancho='2' Nu='1'">
+   <param name="S_12" value="espacio='E3' tipo='curva' color='amarillo' dibujar-si='verG' expresión='x=a*u y=b*u z=0' ancho='3' Nu='1'">
+   <param name="S_13" value="espacio='E3' tipo='curva' color='amarillo' dibujar-si='verG' expresión='x=a*u y=b*u z=a*x+b*y+c' ancho='2' Nu='1'">
+   <param name="S_14" value="espacio='E3' tipo='curva' color='amarillo' dibujar-si='verG' expresión='x=a y=b z=(a*x+b*y+c)*u' Nu='1'">
+   <param name="S_15" value="espacio='E3' tipo='punto' color='ffff80' color_reverso='ffff80' dibujar-si='verG' expresión='(a,b,0)' texto='grad f = ∇f = (a,b)' fuente='Serif,BOLD+ITALIC,20' fijo='sí' ancho='2'">
+</ajs>
+
+	<!------ INICIA LA INFO SOBRE LAS LICENCIAS Y LOS CRÉDITOS. ---------->
+    <a id="btCopyright" class="standardButton" title="Haz clic aquí para consultar los créditos y las condiciones de uso de este recurso." href="#" onClick="document.getElementById('copyright').className='visible';">©</a>
+    <div id="copyright" class="oculto">
+      
+      <div class='innerCopyright'>
+      
+          <a id="btCloseCopyright" class="standardButton" title="Haz clic aquí para cerrar esta ventana." href="#" onClick="document.getElementById('copyright').className='oculto'">×</a>
+  
+          <!-- Créditos UAM  (siempre deben ir en primer lugar) -->
+			<div class="creditos">
+				<h1>
+					Créditos 
+				</h1>
+				<h2>
+					Escena original
+				</h2>				<table class="autores" 	>
+					<tr> <td  class="rol"> Diseño del contenido			</td>		<td class="nombre"> Elsa Sirenia Vega Camacho (LITE) </td></tr>
+
+					<tr> <td  class="rol"> Diseño funcional				</td>		<td class="nombre"> Elsa Sirenia Vega Camacho (LITE)</td></tr>
+
+					<tr> <td  class="rol"> Programación					</td>		<td class="nombre"> Elsa Sirenia Vega Camacho (LITE) </td></tr>
+                    
+					<tr> <td class="rol"> Asesoría de programación		</td>		<td class="nombre"> Victor Hugo García Jarillo (Facultad de                    Ciencias, UNAM)</td></tr>
+
+					<tr> <td  class="rol"> Diseño gráfico					</td>		<td class="nombre"> Ricardo López Gómez										</td></tr>
+					<tr> <td  class="rol" >Coordinación			</td>		<td class="nombre"> Leticia Montserrat Vargas Rocha						</td></tr>
+				</table>
+				<h2>
+					Adaptación 
+				</h2>
+				<table class="autores" 	>
+					<tr> <td  class="rol"> Diseño funcional				</td>		<td class="nombre"> Victor Hugo García Jarillo (Facultad de                    Ciencias, UNAM)		</td></tr>
+					<tr> <td  class="rol"> Programación						</td>		<td class="nombre"> Victor Hugo García Jarillo (Facultad de                    Ciencias, UNAM)</td></tr>
+
+					<tr> <td  class="rol"> Diseño gráfico					</td>		<td class="nombre"> Francisco	Varela Fuentes						</td></tr>
+					<tr> <td  class="rol" >Coordinación			</td>		<td class="nombre"> Leticia Montserrat Vargas Rocha						</td></tr>
+		<tr> <td  class="rol" >Desarrollo del contenedor			</td>		<td class="nombre"> Oscar Escamilla González</td></tr>
+				</table>
+	         
+	         <div class='logos'>
+	            <a href=''>
+	               <img src="../images/info/icns/logoLite.png">
+	            </a>
+	            <a href="http://www.unadmexico.mx/">
+	               <img src="../images/info/icns/logoUNADM.png">
+	            </a>
+	         </div>
+          </div>
+          
+          <!-- Linea separación créditos -->
+          <hr class="linea" />
+     
+          <!-- Aviso licencias -->
+          <div class="licencias">
+          
+				<p class="creativeCommons">Los contenidos de esta unidad didáctica interactiva están bajo una licencia <a href="http://creativecommons.org/licenses/by-nc-sa/2.5/es/" target="_blank">Creative Commons Reconocimiento-NoComercial-CompartirIgual</a>.</p>
+
+				<!--arquimedes (optativo)-->
+				<p>La unidad didáctica fue creada con <a href="http://arquimedes.matem.unam.mx/Descartes5/creditos/conCCL.html" target="_blank">Arquímedes</a>, una herramienta de código abierto.</p>
+
+				<!-- Descartes -->
+				<p>La unidad didáctica contiene escenas elaboradas con Descartes, una herramienta de código abierto.</p>
+
+
+          	<p style='text-align:center'> LITE - UnADM 2014</p>
+          </div>
+      </div>
+    </div> 
+   <!------ TERMINA LA INFO SOBRE LAS LICENCIAS Y LOS CRÉDITOS. ---------->
+
+</body>
+
+</html>

@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+ 	<link href="../css/html5.css" rel="stylesheet" type="text/css" media="screen" />
+	<link href="../css/DescHTML5.css" rel="stylesheet" type="text/css" media="screen" />	
+	 <script type="text/javascript" src='../javascript/inject_functions_scorms_descartes.js'></script>
+	<script type='text/javascript' src='lib/descartes-min.js'></script>
+</head>
+
+<body>
+ <!-------- MathJax --- para fórmulas matemáticas ------>	
+	<script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script> 
+
+<article class="course_content_container">
+  
+  <div class="course_content">
+    
+    
+    <!------ INICIA EL CONTENIDO DE LA PÁGINA --------->
+    
+    
+    <!--- Título de la página --->
+    <h1>Base binaria, decimal y hexadecimal</h1>
+    
+    
+	<div class='text_panel'>
+		
+		<p>
+		Ya se mencionó que el sistema binario se usa cuando se tienen fenómenos que sólo adoptan dos opciones y no hay un estado intermedio. Por ejemplo, un circuito eléctrico puede estar cerrado o abierto. Tampoco hay un estado intermedio (no hay una opción de <em>medio abierto</em>).
+		</p>
+		
+		<div class="course_extern_content"> 
+			<img src="imgs/circ_apag_pren.png"></img>
+		</div>
+		
+		<p>
+		Para el ejemplo de los circuitos, podemos asignarle un símbolo a los circuitos abiertos (donde no pasa corriente) y uno a los cerrados (donde sí pasa corriente). Podríamos usar como símbolos un tache y una paloma, como se muestra a continuación.
+		</p>
+
+		<div class="course_extern_content"> 
+			<img src="imgs/circ_circ_tache.png"></img>
+		</div>
+		
+		<p>
+		Pero usemos mejor un par de números: el cero (0) y el uno (1) respectivamente. Al haber sólo dos estados posibles, éstos son los únicos dos símbolos de los que podemos echar mano (no existen el 2, 3, 4, y demás símbolos numéricos que conoces). Si un circuito está abierto usamos el símbolo 0 y si está cerrado el 1, como se muestra a continuación.
+		</p>
+		
+		<div class="course_extern_content"> 
+			<img src="imgs/circ_cero_uno.png"></img>
+		</div>
+	
+		<p>
+		¿Cómo es entonces que una computadora, que está formada por circuitos, pueda representar símbolos más allá del 0 y el 1? La respuesta a eso es que no cuenta con un único circuito. Cuenta con varios, y esto le permite contar más allá de dos símbolos. A este sistema de conteo donde sólo tenemos dos símbolos (el cero y el uno) en lugar de diez (del 0 al 9) como en el sistema decimal común y corriente, se le conoce como sistema binario. Nosotros pensamos de forma natural en sistema decimal, pero para la construcción de una computadora es necesario saber cómo pasar de decimal a binario, y de binario a decimal. Es esto precisamente lo que se llama un <em>cambio de base</em>.
+		</p></br>
+		
+		<p>
+		Ahora ya sabes que existe, además del sistema decimal que ya conoces, uno de base más pequeña que el decimal y que se llama <em>binario</em>. ¿Habrá otras bases además de éstas? En particular, ¿habrá bases que usen más símbolos que la conocida decimal? La respuesta es sí. Existe una base conocida como hexadecimal que tiene 16 diferentes símbolos. Aquí la cosa se pone interesante. Estamos acostumbrados a la base decimal y sus diez únicos símbolos, así que tendremos que echar mano de más símbolos de alguna manera. Pero verás que también es posible contar cosas con esta base y que se pueden traducir valores de la base decimal a la hexadecimal y viceversa.
+		</p>
+	
+    <!------ TERMINA EL CONTENIDO DE LA PÁGINA --------->
+</div>
+
+
+
+  <!------ INICIA LA INFO SOBRE LAS LICENCIAS Y LOS CRÉDITOS. ---------->
+    <a id="btCopyright" class="standardButton" title="Haz clic aquí para consultar los créditos y las condiciones de uso de este recurso." href="#" onclick="document.getElementById('copyright').className='visible';">©</a>
+    <div id="copyright" class="oculto">
+      
+      <div class='innerCopyright'>
+      
+          <a id="btCloseCopyright" class="standardButton" title="Haz clic aquí para cerrar esta ventana." href="#" onclick="document.getElementById('copyright').className='oculto'">×</a>
+  
+          <!-- Créditos UAM  (siempre deben ir en primer lugar) -->
+			<div class="creditos">
+				<h1>
+					Créditos 
+				</h1>
+				
+								<table class="autores" 	>
+					<tr> <td  class="rol"> Diseño del contenido			</td>		<td class="nombre"> Alejandro Radillo Díaz, LITE</td></tr>
+					<tr> <td  class="rol"> Diseño funcional				</td>		<td class="nombre"> Alejandro Radillo Díaz, LITE</td></tr>
+					<tr> <td  class="rol"> Programación					</td>		<td class="nombre"> Alejandro Radillo Díaz, LITE</td></tr>
+					<!-- Varias personas en el mismo rubro, separar por <br> -->
+					<tr> <td  class="rol"> Asesoría de programación		</td>		<td class="nombre">Oscar Escamilla González, LITE</td></tr>
+					<tr> <td  class="rol"> Diseño gráfico				</td>		<td class="nombre">Francisco Varela Fuentes</td></tr>
+					<tr> <td  class="rol" >Coordinación					</td>		<td class="nombre"> Leticia Montserrat Vargas Rocha</td></tr>
+					
+				</table>
+	         
+	         <div class='logos'>
+	            <a href=''>
+	               <img src="../images/info/icns/logoLite.png">
+	            </a>
+	            <a href="http://www.unadmexico.mx/">
+	               <img src="../images/info/icns/logoUNADM.png">
+	            </a>
+	         </div>
+          </div>
+          
+          <!-- Linea separación créditos -->
+          <hr class="linea" />
+     
+          <!-- Aviso licencias -->
+          <div class="licencias">
+          
+				<p class="creativeCommons">Los contenidos de esta unidad didáctica interactiva están bajo una licencia <a href="http://creativecommons.org/licenses/by-nc-sa/2.5/es/" target="_blank">Creative Commons Reconocimiento-NoComercial-CompartirIgual</a>.</p>
+
+				<!--arquimedes (optativo)-->
+				<p>La unidad didáctica fue creada con <a href="http://arquimedes.matem.unam.mx/Descartes5/creditos/conCCL.html" target="_blank">Arquímedes</a>, una herramienta de código abierto.</p>
+
+				<!-- Descartes -->
+				<p>La unidad didáctica contiene escenas elaboradas con Descartes, una herramienta de código abierto.</p>
+
+
+          	<p style='text-align:center'> LITE - UnADM 2014</p>
+          </div>
+      </div>
+    </div> 
+   <!------ TERMINA LA INFO SOBRE LAS LICENCIAS Y LOS CRÉDITOS. ---------->
+  
+  
+  </div>
+  
+  
+</article>
+
+
+</body>
+
+</html>

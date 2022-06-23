@@ -1,0 +1,81 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<recurso 
+	id="_Un_131_EcuacionesDiferencialesDePrimerOrden2" 
+	nivel="Licenciatura" 
+	area="Matemáticas, Ecuaciones diferenciales" 
+	plataforma="HTML 5" 
+	>
+	<titulo><![CDATA[
+		Ecuaciones diferenciales de primer orden II 
+	]]></titulo>
+	
+	<Descripcion><![CDATA[
+		En esta unidad se muestran y se utilizan los principios de las ecuaciones diferenciales para resolver problemas mediante un modelo matemático. Se pretende que el usuario conozca cómo modelar un fenómeno, para así poder predecir su comportamiento futuro a partir de conocer sus características y cuáles son las reglas que gobiernan los cambios que ocurrirán. El objetivo principal de esta unidad es que el usuario comprenda los pasos que siguen los investigadores para resolver problemas de la vida real usando ecuaciones diferenciales.
+	]]></Descripcion>
+</recurso>
+
+<!--
+********************************************************************************
+                               **** Áreas **** 
+Matemáticas 
+	Aritmética
+		Fracciones
+	Álgebra
+		Combinatoria
+		Ecuaciones lineales
+		Ecuaciones polinomiales
+		Polinomios
+		Álgebra lineal
+		Teoría de grupos
+		Álgebra abstracta
+	Geometría
+		Geometría elemental
+		Geometría clásica
+		Geometría analítica
+	Trigonometría 
+	Probabilidad 
+		Cálculo de probabilidades
+		Eventos
+		Variables aleatorias
+		Ley de los grandes números
+		Teorema del límite central
+	Estadística
+		Medidas de tendencia central
+		Muestreo
+		Distribuciones
+		Inferencia
+	Cálculo
+		Funciones 
+		Límites
+		Continuidad
+		Derivadas 
+		Integrales 
+	Teoría de números
+	Teoría de gráficas
+Física
+	Mecánica
+	Electromagnetismo
+	Óptica
+	Físico-química 
+	Termodinámica
+	Mecánica estadística
+	Mecánica cuántica
+	Relatividad
+
+********************************************************************************
+
+********************************************************************************
+                             **** Niveles ****
+
+	Primaria
+	Preescolar
+	Secundaria
+	Bachillerato
+	Licenciatura
+	Posgrado 
+	Maestria
+	Doctorado
+
+********************************************************************************
+
+-->

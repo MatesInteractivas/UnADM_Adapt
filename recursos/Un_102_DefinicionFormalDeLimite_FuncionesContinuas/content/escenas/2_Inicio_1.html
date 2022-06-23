@@ -1,0 +1,224 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+ 	<link href="../css/html5.css" rel="stylesheet" type="text/css" media="screen" />
+	<link href="../css/DescHTML5.css" rel="stylesheet" type="text/css" media="screen" />
+	<script type='text/javascript' src='lib/descartes-min.js'></script>
+</head>
+
+<body>
+ <!-------- MathJax --- para fórmulas matemáticas ------>	
+	<script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script> 
+
+<article class="course_content_container">
+  
+  <div class="course_content">
+    
+    
+    <!------ INICIA EL CONTENIDO DE LA PÁGINA --------->
+    
+    
+    <!--- Título de la página --->
+    <h1>Definición formal de límite</h1>
+    
+    
+	<div class='text_panel'>
+		<!--- Subtítulo (no necesario en introducción) --->
+		<h2>Definición formal de límite para funciones continuas</h2>
+    
+    
+		<!--- Párrafo --->
+		<p>
+			El <strong>límite de una función</strong> se define como sigue:<br />
+			<ol>
+					
+				Sea \(f(x)\) una función definida en un intervalo abierto al rededor de \( x_0 \).
+                Decimos que \( f(x) \) se aproxima al límite \(L\) cuando \( x \) se aproxima a  \( x_0 \)
+                y lo escribimos como 
+				
+			</ol>
+    			\[ lim_{x\rightarrow{x_0}}f(x)=L\]
+        	<ol>
+            	si, para todo número \(\varepsilon>0\), existe un número correspondiente 
+                \(\delta>0\) tal que para toda \(x\) 
+            </ol>
+            	\[0<|x-x_0|<\delta \Rightarrow |f(x)-L|<\varepsilon \]
+		</p>
+			
+		<p>
+        	Si la función es continua \(L=f(x_0)\). Es decir
+                \[ lim_{x\rightarrow{x_0}}f(x)=f(x_0)\]
+             
+        De hecho esta es parte de la definición de función continua. Una función \(f(x)\) es <strong>continua</strong> en \(x=c\) si y sólo si cumple las tres condiciones siguientes:
+        <ol>
+				<li>
+					c está en el dominio de la función, es decir \(f(c)\) existe.
+				</li>
+				<li>
+					\(f\) tiene límite cuando \( x\rightarrow{c}\), es decir \( lim_{x\rightarrow{c}}f(x)\) existe.
+				</li>
+                <li>
+					el límite iguala al valor de la función en \(c\), es decir \( lim_{x\rightarrow{c}}f(x)=f(c)\)
+				</li>
+			</ol>
+         </p>
+         <p>
+         En esta unidad trataremos sólo con funciones continuas definidas para todos los números reales, por lo que su límite siempre existirá para cualquier \(x_0\) en \(\mathbb{R}\), su dominio.
+         </p>
+        
+		<!--- Párrafo --->
+	    <p>
+	    	<span class="instrucciones">
+	    		La relación de \(\delta\) con \(\varepsilon\) en la definición de límite.
+	    	</span>
+	    </p>
+		
+		<!--	
+			Ejemplo para incluir una escena de descartes, 
+			el div.Descartes_extern_content es necesario para acomadr bien los elementos  
+		-->
+		<div class="course_extern_content"> 
+			<div class="Descartes_extern_content">
+				<ajs name="Descartes" width=750 height=480 code="Descartes">
+   <param name="tamaño" value="750x480">
+   <param name="image_loader" value="">
+   <param name="expand" value="">
+   <param name="decimal_symbol" value=".">
+   <param name="antialias" value="sí">
+   <param name="deshacer" value="no">
+   <param name="nombre" value="Descartes">
+   <param name="Versión" value="5.356, 2016-05-03">
+   <param name="Idioma" value="español">
+   <param name="Botones" value="créditos=no config=no inicio=no limpiar=no">
+   <param name="E_01" value="tipo='R2' id='EspText01' x='EspText01.x' y='EspText01.y' dibujar-si='EspText01.visible' fijo='sí' escala='1' O.x='-50%' O.y='-50%' despl_imagen='arr-izq' fondo='fbfadc' red='no' red10='no' ejes='no' texto='no'">
+   <param name="E_02" value="tipo='R2' id='EspGraf' x='EspGraf.x' y='EspGraf.y' ancho='730' alto='460' dibujar-si='EspGraf.visible' fijo='sí' O.x='-30%' O.y='20%' despl_imagen='arr-izq' red='no' red10='no' ejes='405860' texto='no'">
+   <param name="E_03" value="tipo='R2' id='MASK' dibujar-si='INFO.visible' fijo='sí' imagen='imgs/tpl/backwindow.png' despl_imagen='mosaico' fondo='95000000' red='no' red10='no' ejes='no' texto='no'">
+   <param name="E_04" value="tipo='R2' id='INFO' x='INFO.x' y='INFO.y' ancho='700' alto='400' dibujar-si='INFO.visible' fijo='sí' imagen='imgs/tpl/retro_490x470.png' despl_imagen='mosaico' red='no' red10='no' ejes='no' texto='no'">
+   <param name="C_01" value="id='cerrarInfo' tipo='numérico' interfaz='botón' región='interior' espacio='INFO' expresión='(cerrarInfo.x,cerrarInfo.y,cerrarInfo.w,cerrarInfo.h)' fijo='sí' visible='sí' imagen='[cerrarInfo.img]' acción='calcular' parámetro='INFO.visible=0' dibujar-si='cerrarInfo.visible'">
+   <param name="A_01" value="id='initEsp()' algoritmo='sí' expresión='x' algoritmo='sí' hacer='EspText01.visible=1;EspText01.x=0;EspText01.y=0;;EspGraf.x=EspText01.x+10;EspGraf.y=EspText01.y+EspText01._h-EspGraf._h-10;EspGraf.visible=1 ;;INFO.x=(E1._w-INFO._w)/2;INFO.y=(E1._h-INFO._h)/2+20;INFO.visible=0'">
+   <param name="A_02" value="id='initBtns()' algoritmo='sí' algoritmo='sí' hacer='cerrarInfo.w=21;cerrarInfo.h=cerrarInfo.w;cerrarInfo.x=INFO._w-cerrarInfo.w-10;cerrarInfo.y=8;cerrarInfo.img=&squot;imgs/tpl/cerrar.png&squot;;cerrarInfo.visible=1;;btnCua.x=340;btnCua.y=220;btnCua.w=40;btnCua.h=30;btnCua.img=&squot;imgs/tpl/btn040.png&squot;;;btnPeq.x=btnCua.x+btnCua.w+5;btnPeq.y=btnCua.y;btnPeq.w=80;btnPeq.h=30;btnPeq.img=&squot;imgs/tpl/btn080.png&squot;;;btnMed.x=btnPeq.x+btnPeq.w+5;btnMed.y=btnPeq.y;btnMed.w=100;btnMed.h=30;btnMed.img=&squot;imgs/tpl/btn100.png&squot;;;btnGra.x=btnMed.x+ btnMed.w+5;btnGra.y=btnMed.y;btnGra.w=140;btnGra.h=30;btnGra.img=&squot;imgs/tpl/btn140.png&squot;;;btnAceptar.w=120;btnAceptar.h=30;btnAceptar.x=btnCua.x;btnAceptar.y=btnCua.y+btnGra.h+5;btnAceptar.img=&squot;imgs/tpl/btn120.png&squot;;btnAceptar.txt=&squot;Aceptar&squot;;;;spinA.x=580;spinA.y=320;spinA.w=120;spinA.h=50;;menu.x=spinA.x;menu.y=spinA.y+spinA.h+15;menu.w=150;menu.h=35;;txt01.x=spinA.x;txt01.y=menu.y+menu.h+15;txt01.w=150;txt01.h=35;;;;'">
+   <param name="A_03" value="id='initEscena()' algoritmo='sí' algoritmo='sí' hacer='initBtns();initEsp();'">
+   <param name="A_04" value="id='INICIO' algoritmo='sí' evaluar='una-sola-vez' hacer='initEscena()'">
+   <param name="A_05" value="id='CALCULOS' algoritmo='sí' evaluar='siempre'">
+   <param name="G_01" value="espacio='EspText01' tipo='polígono' fondo='sí' color='5566aa' coord_abs='sí' expresión='(0,0)(EspText01._w-1,0)(EspText01._w-1,EspText01._h-1)(0,EspText01._h-1)(0,0)' relleno='f05566aa' info='Marco general de la escena, para que se vea integrado al contenedor'">
+   <param name="G_02" value="espacio='EspText01' tipo='texto' fondo='sí' expresión='[_Texto_____,20]' fijo='sí'">
+   <param name="G_03" value="espacio='EspGraf' tipo='texto' fondo='sí' expresión='[_Grafica_____,20]' fijo='sí'">
+   <param name="G_04" value="espacio='EspGraf' tipo='polígono' fondo='sí' color='1a3497' coord_abs='sí' expresión='(0,0)(EspGraf._w-1,0)(EspGraf._w-1,EspGraf._h-1)(0,EspGraf._h-1)(0,0)' info='Para dar el efecto de un marco en la gráfica'">
+   <param name="G_05" value="espacio='EspText01' tipo='segmento' expresión='(0,0)(1,1)' fijo='sí'">
+   <param name="G_06" value="espacio='EspGraf' tipo='punto' color='a80014' expresión='(6,0)' fuente='Serif,ITALIC,15' fijo='sí' tamaño='3'">
+   <param name="G_07" value="espacio='EspGraf' tipo='punto' color='a80014' expresión='(5.8,0)' texto='{\rtf1\uc0{\fonttbl\f0\fcharset0 Times New Roman;\f1\fcharset0 Times New Roman;\f2\fcharset0 Courier New;}\f1\fs30\i\par {\*\mjaformula x}\f2\fs30\i0}' fuente='Serif,ITALIC,15' fijo='sí' tamaño='0'">
+   <param name="G_08" value="espacio='EspGraf' tipo='punto' color='negro' expresión='(7,0)' fuente='Serif,ITALIC,15' fijo='sí'">
+   <param name="G_09" value="espacio='EspGraf' tipo='punto' color='negro' expresión='(6.75,0)' texto='{\rtf1\uc0{\fonttbl\f0\fcharset0 Times New Roman;\f1\fcharset0 Times New Roman;\f2\fcharset0 Courier New;}\f1\fs30\i\par {\*\mjaformula x\u8320 }\f2\fs30\i0}' fuente='Serif,ITALIC,15' fijo='sí' tamaño='0'">
+   <param name="G_10" value="espacio='EspGraf' tipo='texto' color='a80014' expresión='[327,311]' texto='{\rtf1\uc0{\fonttbl\f0\fcharset0 Times New Roman;\f1\fcharset0 Times New Roman;\f2\fcharset0 Courier New;}\f1\fs34\i{\*\mjaformula (}\f2\fs30\i0\par \f1\fs34\i{\*\mjaformula x\u8320 -\u948 }\f2\fs30\i0}' fuente='Serif,ITALIC,17' fijo='sí'">
+   <param name="G_11" value="espacio='EspGraf' tipo='texto' color='a80014' expresión='[610,311]' texto='{\rtf1\uc0{\fonttbl\f0\fcharset0 Times New Roman;\f1\fcharset0 Times New Roman;\f2\fcharset0 Courier New;}\f1\fs34\i{\*\mjaformula )}\f2\fs30\i0\par \f1\fs34\i{\*\mjaformula x\u8320 +\u948 }\f2\fs30\i0}' fuente='Serif,ITALIC,17' fijo='sí'">
+   <param name="G_12" value="espacio='EspGraf' tipo='punto' color='negro' expresión='(0,3)' fuente='Serif,ITALIC,17' fijo='sí'">
+   <param name="G_13" value="espacio='EspGraf' tipo='punto' color='negro' expresión='(-.5,2.9)' texto='{\rtf1\uc0{\fonttbl\f0\fcharset0 Times New Roman;\f1\fcharset0 Times New Roman;\f2\fcharset0 Times New Roman;}\f1\fs38\i{\*\mjaformula L}\fs34}' fuente='Serif,ITALIC,19' fijo='sí' tamaño='0'">
+   <param name="G_14" value="espacio='EspGraf' tipo='punto' color='002796' expresión='(0,2.5)' texto='{\rtf1\uc0{\fonttbl\f0\fcharset0 Times New Roman;\f1\fcharset0 Times New Roman;\f2\fcharset0 Times New Roman;\f3\fcharset0 Courier New;}\f1\fs16\i\par \fs34{\*\mjaformula f(x)}\f3\fs30\i0}' fuente='Serif,ITALIC,8' fijo='sí' tamaño='3'">
+   <param name="G_15" value="espacio='EspGraf' tipo='segmento' color='a80014' expresión='(-.2,4)(.2,4)' fijo='sí' tamaño='0'">
+   <param name="G_16" value="espacio='EspGraf' tipo='segmento' color='a80014' expresión='(-.2,2)(.2,2)' fijo='sí' tamaño='0'">
+   <param name="G_17" value="espacio='EspGraf' tipo='punto' expresión='(-1,3.8)' texto='{\rtf1\uc0{\fonttbl\f0\fcharset0 Times New Roman;\f1\fcharset0 Times New Roman;\f2\fcharset0 Courier New;}\f1\fs34\i{\*\mjaformula L+\u949 }\f2\fs30\i0}' fuente='Serif,ITALIC,17' fijo='sí' tamaño='0'">
+   <param name="G_18" value="espacio='EspGraf' tipo='punto' expresión='(-1,1.8)' texto='{\rtf1\uc0{\fonttbl\f0\fcharset0 Times New Roman;\f1\fcharset0 Times New Roman;\f2\fcharset0 Courier New;}\f1\fs34\i{\*\mjaformula L-\u949 }\f2\fs30\i0}' fuente='Serif,ITALIC,17' fijo='sí' tamaño='0'">
+   <param name="G_19" value="espacio='EspGraf' tipo='flecha' color='a80014' expresión='(7,.5)(10,.5)' texto='{\rtf1\uc0{\fonttbl\f0\fcharset0 Times New Roman;\f1\fcharset0 Times New Roman;\f2\fcharset0 Times New Roman;\f3\fcharset0 Courier New;}\f1\fs16\i\par \fs34{\*\mjaformula\u948 }\f3\fs30\i0}' fuente='Serif,ITALIC,8' fijo='sí' ancho='1' punta='1' flecha='a80014'">
+   <param name="G_20" value="espacio='EspGraf' tipo='flecha' color='a80014' expresión='(7,.5)(4,.5)' texto='{\rtf1\uc0{\fonttbl\f0\fcharset0 Times New Roman;\f1\fcharset0 Times New Roman;\f2\fcharset0 Times New Roman;\f3\fcharset0 Courier New;}\f1\fs16\i\par \fs34{\*\mjaformula\u948 }\f3\fs30\i0}' fuente='Serif,ITALIC,8' fijo='sí' ancho='1' punta='1' flecha='a80014'">
+   <param name="G_21" value="espacio='EspGraf' tipo='segmento' color='negro' expresión='(7,.4)(7,.6)' fijo='sí' tamaño='0'">
+   <param name="G_22" value="espacio='EspGraf' tipo='texto' color='negro' expresión='[400,200]' texto='{\rtf1\uc0{\fonttbl\f0\fcharset0 Times New Roman;\f1\fcharset0 Arial;\f2\fcharset0 Times New Roman;\f3\fcharset0 Courier New;}\f1\fs36 Para toda \f2\fs40\b\i{\*\mjaformula x}\f1\fs36\b0\i0 aqu\u237 \f3\fs30}' fuente='SansSerif,PLAIN,18' fijo='sí'">
+   <param name="G_23" value="espacio='EspGraf' tipo='flecha' color='negro' expresión='(7,2)(7,1)' fijo='sí' ancho='3' ancho='3' punta='6' flecha='negro'">
+   <param name="G_24" value="espacio='EspGraf' tipo='texto' color='negro' expresión='[250,165]' texto='{\rtf1\uc0{\fonttbl\f0\fcharset0 Times New Roman;\f1\fcharset0 Arial;\f2\fcharset0 Times New Roman;\f3\fcharset0 Courier New;}\f1\fs36  \f2\fs40\b\i{\*\mjaformula f(x)}\f1\fs36\b0\i0 est\u225  aqu\u237 \f3\fs30}' fuente='SansSerif,PLAIN,18' fijo='sí'">
+   <param name="G_25" value="espacio='EspGraf' tipo='flecha' color='negro' expresión='(2,3)(1,3)' fijo='sí' ancho='3' ancho='3' punta='6' flecha='negro'">
+   <param name="G_26" value="espacio='INFO' tipo='texto' fondo='sí' expresión='[_INFO_____,20]' fijo='sí'">
+   <param name="G_27" value="espacio='INFO' tipo='polígono' fondo='sí' color='5566aa' dibujar-si='0' coord_abs='sí' expresión='(0,0)(INFO._w-1,0)(INFO._w-1,INFO._h-1)(0,INFO._h-1)(0,0)' relleno='f85566aa'">
+   <param name="G_28" value="espacio='INFO' tipo='texto' fondo='sí' color='blanco' expresión='[10,5]' texto='Introducción, explicación o instrucciones' fuente='SansSerif,PLAIN,22' fijo='sí' info='Título del popup'">
+</ajs>
+			</div>
+		</div>
+	<!-- Fin bloque de descartes -->
+
+
+	
+</div>
+
+
+
+  <!------ INICIA LA INFO SOBRE LAS LICENCIAS Y LOS CRÉDITOS. ---------->
+    <a id="btCopyright" class="standardButton" title="Haz clic aquí para consultar los créditos y las condiciones de uso de este recurso." href="#" onclick="document.getElementById('copyright').className='visible';">©</a>
+    <div id="copyright" class="oculto">
+      
+      <div class='innerCopyright'>
+      
+          <a id="btCloseCopyright" class="standardButton" title="Haz clic aquí para cerrar esta ventana." href="#" onclick="document.getElementById('copyright').className='oculto'">×</a>
+  
+          <!-- Créditos UAM  (siempre deben ir en primer lugar) -->
+			<div class="creditos">
+				<h1>
+					Créditos 
+				</h1>
+				<h2>
+					Escena original
+				</h2>
+				<table class="autores" 	>
+					<tr> <td  class="rol"> Diseño del contenido			</td>		<td class="nombre"> Elsa Sirenia Vega Camacho		</td>		</td></tr>
+					<tr> <td  class="rol"> Diseño funcional				</td>		<td class="nombre"> Elsa Sirenia Vega Camacho		</td></tr>
+					<tr> <td  class="rol"> Programación						</td>		<td class="nombre"> Elsa Sirenia Vega Camacho		</td></tr>
+					<!-- Varias personas en el mismo rubro, separar por <br> -->
+					<tr> <td  class="rol"> Asesoría de programación		</td>		<td class="nombre"> 
+																											Leticia Montserrat Vargas Rocha 
+																										
+																									</td></tr>
+					<tr> <td  class="rol"> Diseño gráfico					</td>		<td class="nombre"> Ricardo López Gómez										</td></tr>
+					<tr> <td  class="rol" >Coordinación			</td>		<td class="nombre"> Leticia Montserrat Vargas Rocha</tr>
+				</table>
+	         <h2>
+					Adaptación 
+				</h2>
+				<table class="autores" 	>
+					<tr> <td  class="rol"> Diseño funcional				</td>		<td class="nombre"> Elsa Sirenia Vega Camacho </td></tr>
+					<tr> <td  class="rol"> Programación						</td>		<td class="nombre"> Elsa Sirenia Vega Camacho </td></tr>
+					<!-- Varias personas en el mismo rubro, separar por <br> -->
+					<tr> <td  class="rol"> Asesoría de programación		</td>		<td class="nombre"> Leticia Montserrat Vargas Rocha </td></tr>
+					<tr> <td  class="rol"> Diseño gráfico					</td>		<td class="nombre"> Francisco	Varela Fuentes						</td></tr>
+					<tr> <td  class="rol" >Coordinación			</td>		<td class="nombre"> Leticia Montserrat Vargas Rocha						</td></tr>
+				</table>
+                
+	         <div class='logos'>
+	            <a href=''>
+	               <img src="../images/info/icns/logoLite.png">
+	            </a>
+	            <a href="http://www.unadmexico.mx/">
+	               <img src="../images/info/icns/logoUNADM.png">
+	            </a>
+	         </div>
+          </div>
+          
+          <!-- Linea separación créditos -->
+          <hr class="linea" />
+     
+          <!-- Aviso licencias -->
+          <div class="licencias">
+          
+				<p class="creativeCommons">Los contenidos de esta unidad didáctica interactiva están bajo una licencia <a href="http://creativecommons.org/licenses/by-nc-sa/2.5/es/" target="_blank">Creative Commons Reconocimiento-NoComercial-CompartirIgual</a>.</p>
+
+				<!--arquimedes (optativo)-->
+				<p>La unidad didáctica fue creada con <a href="http://arquimedes.matem.unam.mx/Descartes5/creditos/conCCL.html" target="_blank">Arquímedes</a>, una herramienta de código abierto.</p>
+
+				<!-- Descartes -->
+				<p>La unidad didáctica contiene escenas elaboradas con Descartes, una herramienta de código abierto.</p>
+
+
+          	<p style='text-align:center'> LITE - UnADM 2014</p>
+          </div>
+      </div>
+    </div> 
+   <!------ TERMINA LA INFO SOBRE LAS LICENCIAS Y LOS CRÉDITOS. ---------->
+  
+  
+  </div>
+  
+  
+</article>
+
+
+</body>
+
+</html>

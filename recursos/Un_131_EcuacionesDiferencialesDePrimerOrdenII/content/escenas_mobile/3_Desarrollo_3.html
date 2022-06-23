@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Desarrollo</title>	
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<link href="../css/DescHTML5.css" rel="stylesheet" type="text/css" media="screen" />
+	<link href="../css/html5_mobile.css" rel="stylesheet" type="text/css" media="screen" />
+    <script type="text/javascript" src='../javascript/inject_functions_scorms_descartes.js'></script>
+	<script type='text/javascript' src='../lib/descartes-min.js'></script>
+</head>
+<body>
+	<!-------- MathJax --- para fórmulas matemáticas ------>	
+	<script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script> 
+
+
+  <article class="course_content_container">
+    <div class="course_content">
+  
+  
+    <!------ INICIA EL CONTENIDO DE LA PÁGINA ------- -->
+
+	<h2 align="center">Análisis del campo direccional</h2>
+	
+	<p>
+		Como puede verse, el campo direccional proporciona información cualitativa acerca de las soluciones. En nuestro ejemplo parece evidente que las soluciones son funciones decrecientes cuando \( y>3 \), son crecientes cuando \( y<3 \), y todas las soluciones tienden al valor \( 3 \) cuando \( x \mapsto \infty  \). En el caso de situaciones poblacionales, el campo direccional es de este estilo, y es muy importante fijar nuestra atención en la recta donde las pendientes son \( 0 \).<br><br>
+	
+	Un aspecto importante de los campos direccionales es el caso en el que las pendientes resultan ser \( 0 \), se denotan como "puntos de equilibrio". En el ejercicio se hizo notar que las soluciones convergen a este valor, pero no siempre pasa ésto, pues existen dos tipos de puntos de equilibro: los de tipo fuente, y los de tipo sumidero. En nuestro ejemplo es un sumidero y es cuando las solución convergen. El otro caso es cuando las soluciones se alejan lo más posible conforme transcurra el tiempo, es decir en dirección positiva del eje \( x \).<br><br>
+	
+	Para indicar un sumidero se coloca una flecha vertical con dirección a dicho valor, si se quiere indicar una fuente la flecha se coloca en dirección contraria. Cabe mencionar que un punto de equilibrio puede funcionar como fuente y sumidero dependiendo de como sea el campo direccional y de si se esta debajo o encima del valor.
+		</p>
+		
+
+  <div class="course_content">
+	<p class='instruccion'>
+    <span class="instrucciones">
+  		En el siguiente espacio se muestra el campo de pendientes que correponde a la ecuación \( y = 3 + ce^{-\frac{x}{2}} \) que es solución a la ecuación \( \frac{dy}{dx} = \frac{3-y}{2} \). Utiliza el pulsador para evaluar la función en diferentes valores.
+    </span>
+	</p>
+	
+<div class="Descartes_extern_content">
+  <ajs name="Descartes" width=495 height=320 code="Descartes">
+   <param name="tamaño" value="495x320">
+   <param name="image_loader" value="">
+   <param name="expand" value="">
+   <param name="decimal_symbol" value=".">
+   <param name="antialias" value="sí">
+   <param name="deshacer" value="no">
+   <param name="nombre" value="Descartes">
+   <param name="Versión" value="5.336, 2015-02-13">
+   <param name="Idioma" value="español">
+   <param name="Botones" value="créditos=no config=no inicio=no limpiar=no">
+   <param name="E_01" value="tipo='R2' id='E1' escala='30' O.x='-30' O.y='70' imagen='imgs/tpl/fondo_02.jpg' despl_imagen='arr-izq' fondo='dcdbe1' red='b8c4c8' red10='no' ejes='405860' texto='no'">
+   <param name="E_02" value="tipo='R2' id='E2_Graf' x='E2_Graf.x' y='E2_Graf.y' ancho='510' alto='310' dibujar-si='E2_Graf.visible' despl_imagen='arr-izq' red='b8c4c8' red10='889498' ejes='dcdbe1' texto='no'">
+   <param name="E_03" value="tipo='R2' id='CTRS' x='CTRS.x' y='CTRS.y' ancho='520' alto='160' fijo='sí' escala='-1' O.x='-50%' O.y='-50%' despl_imagen='arr-izq' fondo='88000000' red='no' red10='no' ejes='no' texto='no'">
+   <param name="E_04" value="tipo='R2' id='CTRS_north' x='CTRSN.x' y='CTRSN.y' ancho='520' alto='100' dibujar-si='0' fijo='sí' escala='-1' O.x='-50%' O.y='-50%' despl_imagen='arr-izq' fondo='88000000' red='no' red10='no' ejes='no' texto='no'">
+   <param name="E_05" value="tipo='R2' id='btnOpenClose' x='btnOpenClose.x' y='btnOpenClose.y' ancho='35' alto='30' fijo='sí' escala='1' O.x='-50%' O.y='-50%' despl_imagen='arr-izq' fondo='ff000000' red='no' red10='no' ejes='no' texto='no'">
+   <param name="E_06" value="tipo='R2' id='btnOpenCloseN' x='btnOpenCloseN.x' y='btnOpenCloseN.y' ancho='35' alto='30' dibujar-si='0' fijo='sí' escala='1' O.x='-50%' O.y='-50%' despl_imagen='arr-izq' fondo='rojo' red='no' red10='no' ejes='no' texto='no'">
+   <param name="E_07" value="tipo='R2' id='MASK' dibujar-si='INFO.visible' fijo='sí' imagen='imgs/tpl/backwindow.png' despl_imagen='mosaico' fondo='95000000' red='no' red10='no' ejes='no' texto='no'">
+   <param name="E_08" value="tipo='R2' id='INFO' x='INFO.x' y='INFO.y' ancho='510' alto='310' dibujar-si='INFO.visible' fijo='sí' imagen='imgs/tpl/retro_790x470.png' despl_imagen='mosaico' red='no' red10='no' ejes='no' texto='no'">
+   <param name="C_01" value="id='cerrarInfo' tipo='numérico' interfaz='botón' región='interior' espacio='INFO' nombre='×' expresión='(cerrarInfo.x,cerrarInfo.y,cerrarInfo.w,cerrarInfo.h)' fijo='sí' visible='sí' color='blanco' fuente puntos='26' imagen='_STYLE_|class=btnUNADM|shadowTextColor=rgba(0,0,0,0.2)|shadowTextOffsetY=2|shadowTextBlur=0|textBorder=0' acción='calcular' parámetro='INFO.visible=0\n openPanelCtrs()' dibujar-si='cerrarInfo.visible'">
+   <param name="C_02" value="id='btnOpen' tipo='numérico' interfaz='botón' región='interior' espacio='btnOpenClose' expresión='(0,0,35,30)' fijo='sí' visible='sí' fuente puntos='16' imagen='_STYLE_|class=btnUNADM open |shadowTextColor=rgba(0,0,0,0.2)|shadowTextOffsetY=2|shadowTextBlur=0|textBorder=0' acción='calcular' parámetro='openPanelCtrs()' dibujar-si='!CTRS.opened' pos_mensajes='centro'">
+   <param name="C_03" value="id='btnClose' tipo='numérico' interfaz='botón' región='interior' espacio='btnOpenClose' expresión='(0,0,35,30)' fijo='sí' visible='sí' imagen='_STYLE_|class=btnUNADM close |shadowTextColor=rgba(0,0,0,0.2)|shadowTextOffsetY=2|shadowTextBlur=0|textBorder=0' acción='calcular' parámetro='closePanelCtrs()' dibujar-si='CTRS.opened' pos_mensajes='centro'">
+   <param name="C_04" value="id='btnOpenN' tipo='numérico' interfaz='botón' región='interior' espacio='btnOpenCloseN' expresión='(0,0,35,30)' fijo='sí' visible='sí' fuente puntos='16' imagen='_STYLE_|class=btnUNADM open |shadowTextColor=rgba(0,0,0,0.2)|shadowTextOffsetY=2|shadowTextBlur=0|textBorder=0' acción='calcular' parámetro='openPanelCtrsNoth()' dibujar-si='0' pos_mensajes='centro'">
+   <param name="C_05" value="id='btnCloseN' tipo='numérico' interfaz='botón' región='interior' espacio='btnOpenCloseN' expresión='(0,0,35,30)' fijo='sí' visible='sí' imagen='_STYLE_|class=btnUNADM close |shadowTextColor=rgba(0,0,0,0.2)|shadowTextOffsetY=2|shadowTextBlur=0|textBorder=0' acción='calcular' parámetro='closePanelCtrsNorth()' dibujar-si='0' pos_mensajes='centro'">
+   <param name="C_06" value="id='ctr_a' tipo='numérico' región='interior' espacio='CTRS' nombre='c=' expresión='(20,20,ctr_a.w,ctr_a.h)' valor='a' incr='0.25' min='-7' max='7' fijo='sí' visible='sí' acción='calcular' parámetro='a=ctr_a\nValPer0=1\ncalPer()' pos_mensajes='centro'">
+   <param name="A_01" value="id='irAEscena(idxEscena)' algoritmo='sí' algoritmo='sí' hacer='parent.set(&squot;scene&squot;,idxEscena);parent.update();;initBtns();initEsp();y1=10;x1=-10;x2=x1-.2;k=20;r=20;calc_m();;ô=|***************************************|;ô=|*  Si el botón de para cerrar la info *|;ô=|*  esta VISIBLE                       *|;ô=|***************************************|;INFO.visible=0;;ô=|***************************************|;ô=|*  Calculamos la posicion del titulo  *|;ô=|***************************************|;titulo=&squot;Análisis del campo direccional&squot;;titulo.w=_AnchoDeCadena_(titulo,&squot;SansSerif&squot;,&squot;PLAIN&squot;,&squot;30&squot;);titulo.x=(E1._w-titulo.w)/2;titulo.y=20;'">
+   <param name="A_02" value="id='initBtns()' algoritmo='sí' algoritmo='sí' hacer='cerrarInfo.w=40;cerrarInfo.h=30;cerrarInfo.x=INFO._w-cerrarInfo.w-2;cerrarInfo.y=1;cerrarInfo.img=&squot;imgs/tpl/cerrar.png&squot;;cerrarInfo.visible=1;;;ctrF.w=275;ctrF.h=40;ctrF.txt.w=60;ctrF.txt.h=18 ;;ctrF.txt.x=(CTRS._w-ctrF.txt.w-ctrF.w)/2;ctrF.txt.y=(CTRS._h-ctrF.h)/2;ctrF.x=ctrF.txt.x+ctrF.txt.w;ctrF.y=ctrF.txt.y-10;;;;ctr_a.w=120;ctr_a.h=50;ctr_b.w=ctr_a.w;ctr_b.h=ctr_a.h;ctr_c.w=ctr_b.w;ctr_c.h=ctr_b.h;_gapX=30;_allW=(ctr_a.w+ctr_b.w+ctr_c.w+_gapX*2);;ctr_a.x=(CTRS_north._w-_allW)/2;ctr_a.y=(CTRS_north._h-ctr_a.h)/2;;;ctr_b.x=ctr_a.x+ctr_a.w+_gapX;ctr_b.y=ctr_a.y;;ctr_c.x=ctr_b.x+ctr_b.w+_gapX;ctr_c.y=ctr_a.y;'">
+   <param name="A_03" value="id='initEsp()' algoritmo='sí' algoritmo='sí' hacer='INFO.x=(E1._w-INFO._w)/2;INFO.y=(E1._h-INFO._h)/2;INFO.visible=1;;E2_Graf.x=5;E2_Graf.y=5;E2_Graf.visible=1;;EspTxt.x=E1._w-EspTxt._w-10;EspTxt.y=E1._h-EspTxt._h-10;EspTxt.visible=1;;;;CTRS.x=(E1._w-CTRS_north._w)/2;CTRS.y=(E1._h-CTRS_north._h);CTRS.visible=0;;CTRS.x=0;CTRS.y=0;;btnOpenClose.y=(CTRS.y-btnOpenClose._h);btnOpenClose.x=(E1._w-btnOpenClose._w);'">
+   <param name="A_04" value="id='initEscena()' algoritmo='sí' algoritmo='sí' hacer='initBtns();initEsp();openPanelCtrs();;CTRSN.x=(E1._w-CTRS_north._w)/2;CTRSN.y=0;;y1=10;x1=-10;x2=x1-.2;k=20;r=20;calc_m();;ô=|***************************************|;ô=|*  Si el botón de para cerrar la info *|;ô=|*  esta VISIBLE                       *|;ô=|***************************************|;INFO.visible=0;;ô=|***************************************|;ô=|*  Calculamos la posicion del titulo  *|;ô=|***************************************|;titulo=&squot;Campo direccional (campo de pendientes)&squot;;titulo.w=_AnchoDeCadena_(titulo,&squot;SansSerif&squot;,&squot;PLAIN&squot;,&squot;30&squot;);titulo.x=(E1._w-titulo.w)/2;titulo.y=20;'">
+   <param name="A_05" value="id='openPanelCtrs()' algoritmo='sí' expresión='x' algoritmo='sí' hacer='closePanelCtrsNorth();;CTRS.opened=1;;;CTRS.x=(E1._w-CTRS._w)/2;CTRS.y=(E1._h-CTRS._h);;btnOpenClose.y=(CTRS.y-btnOpenClose._h);btnOpenClose.x=(E1._w-btnOpenClose._w)'">
+   <param name="A_06" value="id='openPanelCtrsNoth()' algoritmo='sí' expresión='x' algoritmo='sí' hacer='closePanelCtrs();;CTRSN.opened=1;;CTRSN.x=(E1._w-CTRS_north._w)/2;CTRSN.y=0;;btnOpenCloseN.y=CTRSN.y+CTRS_north._h;btnOpenCloseN.x=(E1._w-btnOpenCloseN._w);;;_Trace_(&squot;Abriendo panel NORTE&squot;)'">
+   <param name="A_07" value="id='closePanelCtrsNorth()' algoritmo='sí' expresión='x' algoritmo='sí' hacer='CTRS.visible=1;;CTRSN.opened=0;CTRSN.y=-CTRS_north._h;;btnOpenCloseN.y=CTRSN.y+CTRS_north._h;btnOpenCloseN.x=(E1._w-btnOpenCloseN._w);;_Trace_(&squot;Cerrando panel NORTE&squot;)'">
+   <param name="A_08" value="id='closePanelCtrs()' algoritmo='sí' expresión='x' algoritmo='sí' hacer='CTRS.visible=1;;CTRS.opened=0;CTRS.y=E1._h-10;;btnOpenClose.y=(CTRS.y-btnOpenClose._h);btnOpenClose.x=(E1._w-btnOpenClose._w)'">
+   <param name="A_09" value="id='__FIN_TPL_()'">
+   <param name="A_10" value="id='initEsp()' algoritmo='sí' algoritmo='sí' hacer='EspG.x=55;EspG.y=106;EspG.visible=1;;EspUp.x=540;EspUp.y=105;EspUp.visible=1;;EspDw.x=540;EspDw.y=316;EspDw.visible=1'">
+   <param name="A_11" value="id='initBtns()' algoritmo='sí' algoritmo='sí' hacer='ctr_a.w=120;ctr_a.h=40;ctr_a.x=EspG._w-125;ctr_a.y=EspG._h-45;;ô=|*****************************************************|;ô=|*Para que siga al scroll hay que agregar la mitad de*|;ô=|*altura a la posicion y sumarle el Oy del espacio   *|;ô=|*                                                   *|;ô=|* El espcio de tener :                              *|;ô=|*   escala = 1                                      *|;ô=|*   Ox = -50% Oy = -50%                             *|;ô=|*   El valor min en la config de EspUp.Oy indica    *|;ô=|*   cuanto permite bajar el espacio Up              *|;ô=|*****************************************************|;EspUp.Oy.w=27;EspUp.Oy.h=50;EspUp.Oy.x=EspUp._w-EspUp.Oy.w-5;EspUp.Oy.y=EspUp._h-EspUp.Oy.h-5;;spnSigScroll.w=150;spnSigScroll.h=50;spnSigScroll.x=(EspUp._w-spnSigScroll.w)/2;spnSigScroll.y=400+EspUp._h/2;'">
+   <param name="A_12" value="id='m' vector='sí' evaluar='una-sola-vez' tamaño='20'">
+   <param name="A_13" value="id='calc_m()' algoritmo='sí' algoritmo='sí' inicio='_i=0' hacer='m[_i]=(3-(y1-_i))/2;_i=_i+1' mientras='_i<r'">
+   <param name="A_14" value="id='ValPer' vector='sí' evaluar='una-sola-vez' tamaño='20'">
+   <param name="A_15" value="id='calPer()' algoritmo='sí' algoritmo='sí' hacer='ValPer[0]=(ValPer0)?1:ValPer[0];per=100*(ValPer[0]);setSCORMPercentage(per)'">
+   <param name="A_16" value="id='getSCORMState()' algoritmo='sí' expresión='res' algoritmo='sí' Local='res,arroba' inicio='arroba=&squot;@&squot;' hacer='ö=|Estandar ---- [MIDC]XX.<var>  SI SOLO EXISTE UNA ESCENA EN  EL HTML|;ö=|Estandar ---- [MIDC]XX_YY.<var>  SI HAY MAS DE UNA ESCENA EN EL  HTML|;res=&squot;D03.ctr_a:&squot;+ctr_a+arroba;res=res+&squot;D03.ValPer[0]:&squot;+ValPer[0]+arroba'">
+   <param name="A_17" value="id='initStateScorm()' algoritmo='sí' expresión='x' algoritmo='sí' hacer='ctr_a=getSCORMStateVar(&squot;D03.ctr_a&squot;);;ValPer [0]=getSCORMStateVar(&squot;D03.ValPer[0]&squot;);calPer();;a=(ctr_a!=0)?ctr_a:0'">
+   <param name="A_18" value="id='INICIO' algoritmo='sí' evaluar='una-sola-vez' hacer='initStateScorm();initEscena()'">
+   <param name="A_19" value="id='CALCULOS' algoritmo='sí' evaluar='siempre'">
+   <param name="G_01" value="espacio='E1' tipo='texto' fondo='sí' dibujar-si='0' expresión='[__GRAF__,20]' fijo='sí'">
+   <param name="G_02" value="espacio='E1' tipo='texto' fondo='sí' dibujar-si='0' expresión='[__INFO__,20]' fijo='sí'">
+   <param name="G_03" value="espacio='INFO' tipo='texto' fondo='sí' color='blanco' expresión='[20,5]' texto='Explicación o instrucciones' fuente='SansSerif,PLAIN,24' fijo='sí'">
+   <param name="G_04" value="espacio='INFO' tipo='texto' expresión='[5,40]' texto='Esta escena muestra cómo utilizar uno de los fondos de pantalla que se sugieren al desarrollador.\n\nEl uso de estos fondos de pantalla no es obligatorio pero puede hacer que las unidades obtengan un tema común en el diseño y por ello hacemos larecomendación.\n\nEste fondo es útil para mostrar un espacio de dos o tres dimensiones y otro con textos fijos o variables.\n\nEn el ejemplo que ofrecemos va un espacio 2D con un objeto gráfico en el espacio de la izquierda y explicaciones y controles a la derecha.' fuente='SansSerif,PLAIN,20' fijo='sí' ancho='INFO._w-10'">
+   <param name="G_05" value="espacio='EspG' tipo='segmento' color='rojo' expresión='(x1+(s%k),y1-(ent(s/k)))(x2+(s%k),m[ent(s/(k))]*(x2-x1)+y1-(ent(s/k)))' familia='s' s.intervalo='[0,k*r]' s.pasos='k*r' fijo='sí' tamaño='0'">
+   <param name="G_06" value="espacio='E1' tipo='punto' expresión='(0,6.5)' texto='y' fuente='Serif,ITALIC,28' fijo='sí' tamaño='0'">
+   <param name="G_07" value="espacio='E1' tipo='punto' expresión='(8,0)' texto='x' fuente='Serif,ITALIC,28' fijo='sí' tamaño='0'">
+   <param name="G_08" value="espacio='E1' tipo='punto' expresión='(-6,3.1)' texto='Punto de equilibrio\n    (sumidero)' fuente='SansSerif,PLAIN,17' fijo='sí' tamaño='0'">
+   <param name="G_09" value="espacio='E1' tipo='punto' color='ae0000' expresión='(1,3+a)' texto='{\rtf1\uc0{\fonttbl\f0\fcharset0 Times New Roman;\f1\fcharset0 Times New Roman;\f2\fcharset0 Times New Roman;}\f1\fs44\b\i{\*\mjaformula y=3{\expr (a>=0)?&squot;+&squot;+a:a\decimals 2\fixed1}e{\supix -{\fraction{\num x}{\den 2}}}}\fs56\b0}' fuente='Serif,BOLD+ITALIC,22' fijo='sí' tamaño='0'">
+   <param name="G_10" value="espacio='EspG' tipo='ecuación' color='d320303a' expresión='y=3'">
+   <param name="G_11" value="espacio='EspG' tipo='ecuación' color='0000a3' expresión='y=3+a*exp(-x/2)'">
+   <param name="G_12" value="espacio='EspG' tipo='flecha' color='rojo' expresión='(0,4)(0,3)' fijo='sí' tamaño='3' ancho='4' ancho='4' punta='4' flecha='azul'">
+   <param name="G_13" value="espacio='EspG' tipo='flecha' color='rojo' expresión='(0,2)(0,3)' fijo='sí' tamaño='3' ancho='4' ancho='4' punta='4' flecha='azul'">
+   <param name="G_14" value="espacio='CTRS' tipo='texto' color='blanco' expresión='[20,85]' texto='{\rtf1\uc0{\fonttbl\f0\fcharset0 Times New Roman;\f1\fcharset0 Arial;\f2\fcharset0 Times New Roman;}\f1\fs36 Las soluciones particulares componen el campo\par direccional. Si \f2\fs40\i{\*\mjaformula c={\expr a\decimals 2\fixed1}}\f1\fs36\i0  entonces:\f2\fs40\i{\*\mjaformula y=3{\expr (a>=0)?&squot;+&squot;+a:a\decimals 2\fixed1}e{\supix -{\fraction{\num x}{\den 2}}}}\f1\fs36\i0}' fuente='SansSerif,PLAIN,18' fijo='sí'">
+</ajs>
+</div>
+
+	
+             <!------ TERMINA EL CONTENIDO DE LA PÁGINA --------->
+
+   <!------ INICIA LA INFO SOBRE LAS LICENCIAS Y LOS CRÉDITOS. ---------->
+    <a id="btCopyright" class="standardButton" title="Haz clic aquí para consultar los créditos y las condiciones de uso de este recurso." href="#" onClick="document.getElementById('copyright').className='visible';">©</a>
+    <div id="copyright" class="oculto">
+      
+      <div class='innerCopyright'>
+      
+          <a id="btCloseCopyright" class="standardButton" title="Haz clic aquí para cerrar esta ventana." href="#" onClick="document.getElementById('copyright').className='oculto'">×</a>
+  
+          <!-- Créditos UAM  (siempre deben ir en primer lugar) -->
+			<div class="creditos">
+				<h1>
+					Créditos 
+				</h1>
+
+				<h2>
+					Escena original
+				</h2>				<table class="autores" 	>
+
+					<tr> <td  class="rol"> Diseño del contenido			</td>		<td class="nombre"> Víctor Hugo García Jarillo (Facultad de Ciencias UNAM, LITE)</td></tr>
+					<tr> <td  class="rol"> Diseño funcional				</td>		<td class="nombre"> Víctor Hugo García Jarillo (Facultad de Ciencias UNAM, LITE)</td></tr>
+					<tr> <td  class="rol"> Programación					</td>		<td class="nombre"> Víctor Hugo García Jarillo (Facultad de Ciencias UNAM, LITE)</td></tr>
+					<tr> <td  class="rol"> Diseño gráfico				</td>		<td class="nombre"> Ricardo López Gómez</td></tr>
+					<tr> <td  class="rol" >Coordinación			</td>		<td class="nombre"> Leticia Montserrat Vargas Rocha</td></tr>
+					</table>
+				<h2>
+					Adaptación 
+				</h2>
+				<table class="autores" 	>
+				<tr> <td  class="rol"> Diseño funcional				</td>		<td class="nombre"> Victor Hugo García Jarillo (Facultad de                    Ciencias, UNAM)		</td></tr>
+					<tr> <td  class="rol"> Programación				</td>		<td class="nombre"> Victor Hugo García Jarillo (Facultad de                    Ciencias, UNAM)</td></tr>
+
+					<tr> <td  class="rol"> Diseño gráfico			</td>		<td class="nombre"> Francisco	Varela Fuentes</td></tr>
+					<tr> <td  class="rol" >Coordinación			</td>		<td class="nombre"> Leticia Montserrat Vargas Rocha</td></tr>
+		
+				</table>
+	         
+	         <div class='logos'>
+	            <a href=''>
+	               <img src="../images/info/icns/logoLite.png">
+	            </a>
+	            <a href="http://www.unadmexico.mx/">
+	               <img src="../images/info/icns/logoUNADM.png">
+	            </a>
+	         </div>
+          </div>
+          
+          <!-- Linea separación créditos -->
+          <hr class="linea" />
+     
+          <!-- Aviso licencias -->
+          <div class="licencias">
+          
+				<p class="creativeCommons">Los contenidos de esta unidad didáctica interactiva están bajo una licencia <a href="http://creativecommons.org/licenses/by-nc-sa/2.5/es/" target="_blank">Creative Commons Reconocimiento-NoComercial-CompartirIgual</a>.</p>
+
+				<!--arquimedes (optativo)-->
+				<p>La unidad didáctica fue creada con <a href="http://arquimedes.matem.unam.mx/Descartes5/creditos/conCCL.html" target="_blank">Arquímedes</a>, una herramienta de código abierto.</p>
+
+				<!-- Descartes -->
+				<p>La unidad didáctica contiene escenas elaboradas con Descartes, una herramienta de código abierto.</p>
+
+
+          	<p style='text-align:center'> LITE - UnADM 2014</p>
+          </div>
+      </div>
+    </div> 
+   <!------ TERMINA LA INFO SOBRE LAS LICENCIAS Y LOS CRÉDITOS. ---------->
+  
+  
+  </div>
+  
+  
+</article>
+
+
+</body>
+
+</html>

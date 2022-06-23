@@ -1,0 +1,189 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <link href="../css/html5.css" rel="stylesheet" type="text/css" media="screen" />
+  <style type="text/css">
+  	.caption {
+  		font-size: 12px;
+  		font-size: 10px;
+		font-style: oblique;
+		width: 40%;
+		display: block;
+		margin-left: auto;
+		margin-right: auto;
+  	}
+  </style>
+  <!-------- MathJax --- para fórmulas matemáticas ------>
+  <script type="text/javascript"
+    src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+  </script>
+
+</head>
+
+<body>
+  
+
+<article class="course_content_container">
+  
+  <div class="course_content">
+    
+    
+    <!------ INICIA EL CONTENIDO DE LA PÁGINA ------- -->
+    
+    
+    <!--- Título de la página - -->
+    <h1>Rotar y cuadrar</h1>
+    
+    <!--- Para poner un panel con fondo - -->
+    <div class='text_panel'>
+    
+    <!--- Subtítulo (no necesario en introducción) - -->
+    <h2>¿Qué usó Gauss para demostrar el TFdA?</h2>
+    
+    
+    <!--- Párrafo - -->
+    <p>
+		Carl Friedrich Gauss (1777-1855) fue uno de los más grandes matemáticos de todos los tiempos. A los 22 años presentó su tesis doctoral en la Universidad de Helmstedt, en la que demostró el teorema fundamental del álgebra. Los intereses científicos de Gauss eran muy amplios, fue un gran inventor e influyó en muchas áreas de la ciencia, además de contribuir a varias de las principales áreas de las matemáticas. Gauss no imaginaba las matemáticas separadas de sus aplicaciones científicas, y aunque sus mayores realizaciones pertenecen justamente al campo de las matemáticas su lema fue
+    </p>
+	<p ALIGN=center> <cite>
+    "Tú, naturaleza, eres mi diosa; a tus leyes mis servicios subordino..."</cite> De Shakespeare, Rey Lear, acto I, escena II.
+    </p> 
+
+	<p>	
+	A él se debe la frase: "La matemática, reina de las ciencias". En su tesis (en 1799) Gauss demostró el significado físico de \(\sqrt{-1}\) con el principio de cuadrar (elevar un número o expresión algebraica a la segunda potencia, o sea multiplicarlo una vez por sí mismo), que se ilustra a continuación.
+	</p>
+ <!-- ejemplo para incluir una imagen -->
+    
+	<div class="course_extern_content">
+        <img src="imgs/TFalgebra01.png"/><br>
+        <span class='caption'>El principio de "cuadrar" implica doblar el ángulo de rotación y cuadrar la longitud. El ángulo \(\beta\) es el doble del ángulo \( \alpha \), y el ángulo \( \gamma \) es el doble del ángulo \( \beta \). También, la longitud de \( B \) es el cuadrado de \(A\), y la longitud de \(C\) es el cuadrado de \(B\).</span>
+        </div>
+    
+    <p>
+En la imagen se traza un cuadrado de área \(1\) cuya diagonal es \(A\). Se traza un nuevo cuadrado con A como uno de sus lados. El área de éste último es \(2\) y su diagonal es \(B\). Se repite esta acción para generar el cuadrado de área \(4\), su lado es \(B\) y su diagonal es \(C\). El cuadrado de área \(2\) fue generado por una rotación de \(\pi/4\) radianes y un aumento de la magnitud del lado de \(1\) a \(\sqrt{2}\). Para producir el cuadrado de área \(4\), nuevamente se aplica una rotación de \(\pi/4\), que con respecto al cuadrado original es de \(\pi/2\), y se cuadra la longitud del lado para convertirse en \(2\). 
+	</p>
+    <p>
+El principio de cuadrar es equivalente a una acción física combinada: duplicar la rotación y cuadrar la longitud. La raíz cuadrada es simplemente la acción inversa, es decir rotar la mitad del ángulo y disminuir la lontitud a la raíz cuadrada de la longitud original.
+	</p>
+    <p>
+Si se aplica esta acción física de cuadrar a cada punto sobre un círculo, es decir, se toma cualquier punto sobre la circunferencia del círculo (el punto \(z\) en la figura), y se traza el radio que conecta a ese punto con el centro del círculo, ese radio forma un ángulo con el diámetro que se trazó. Para "cuadrar" ese punto, se duplica el ángulo \(\alpha \) entre el radio y el diámetro para formar el ángulo \(\beta \), y cuadrar la longitud. Si se repite esta acción con varios puntos, podrás observar que todos los puntos del primer círculo se proyectan como puntos sobre un círculo concéntrico más grande, cuyo radio es el cuadrado del círculo original. Pero esto se vuelve más y más interesante. Puesto que doblas el ángulo cada vez que se cuadra un punto, el círculo original se proyectará en el círculo "cuadrado" dos veces. 
+	</p>
+    
+    
+      
+		<div class="course_extern_content">
+                    <img src="imgs/TFalgebra02.png"/><br>
+                    <span class='caption'>Cuadrando un número complejo. El principio general de "cuadrar" puede desarrollarse sobre un círculo. \(z^2\) se produce a partir de \(z\), al doblar el ángulo \(alfa\) y cuadra la distancia desde el centro del círculo hasta \(z\). </span>
+            	</div>
+        
+    <p>
+    
+Hay un ejemplo físico que ilustra este proceso. Si se toma un imán y se mueve una brújula a su alrededor, mientras la brújula se mueve del polo norte al sur del imán (\(pi\) radianes), la aguja de la brújula completará una vuelta (\(2\pi\) radianes). Y mientras se mueve del polo sur de regreso al norte, la aguja completará otra vuelta, ¡el imán "cuadra" la brújula!
+	</p>
+    <p>
+Gauss asoció los números complejos con este tipo de acción física compuesta (rotación combinada con extensión). Los hizo visibles, como una acción espiral proyectada sobre un plano. Cada punto sobre ese plano representa un número complejo. Cada número expresa una combinación de rotación y extensión. El punto de origen de la acción se refiere a la singularidad física, como la del punto inferior de la catenaria, o los polos de rotación de la Tierra, o el centro del imán.
+	</p>
+    <p>
+En el ejemplo anterior, si se considera al círculo original como una unidad de círculo en el dominio complejo, el centro del círculo es el origen, indicado por \(O\), los extremos del diámetro los denotan \(1\) y \(−1\). La raíz cuadrada de \(−1\) se encuentra al dividir en dos la rotación entre \(1\) y \(−1\), y reduciendo el radio por la raíz cuadrada. Piensa con cuidado y verás que los puntos sobre la circunferencia que se encuentran en medio de \(1\) y \(−1\) representan a \(\sqrt{−1}\) y \(−\sqrt{−1} \).
+	</p>
+    
+    <div class="course_extern_content"> 
+      <img src="imgs/TFalgebraFig03.png"></img><br>
+<span class='caption'>La unidad de acción en el dominio complejo de Gauss. </span>
+      </div>
+    
+    <p>
+Gauss demostró que todas las potencias, de cualquier grado, cuando se proyectan en su dominio complejo, podrían representarse por una acción parecida a la que acabamos de mencionar para la acción de cuadrar. Por ejemplo, la acción de "cubicar" un número complejo se logra triplicando el ángulo de rotación y cubicando la longitud. Esto hace que el círculo original se proyecte tres veces en un círculo cuyo radio es el cubo del círculo original. La acción asociada con la cuarta potencia implica cuadruplicar el ángulo de rotación y cuadrar el cuadrado de la longitud. Esto hará que el círculo original se proyecte cuatro veces en un círculo cuyo radio aumenta por el cuadrado del cuadrado, y así sucesivamente para todas las potencias mayores a uno.
+    </p>
+    
+     	
+</div>
+    <!------ TERMINA EL CONTENIDO DE LA PÁGINA --------->
+
+
+
+
+   <!------ INICIA LA INFO SOBRE LAS LICENCIAS Y LOS CRÉDITOS. ---------->
+    <a id="btCopyright" class="standardButton" title="Haz clic aquí para consultar los créditos y las condiciones de uso de este recurso." href="#" onclick="document.getElementById('copyright').className='visible';">&#169;</a>
+    <div id="copyright" class="oculto">
+      
+      <div class='innerCopyright'>
+      
+          <a id="btCloseCopyright" class="standardButton" title="Haz clic aquí para cerrar esta ventana." href="#" onclick="document.getElementById('copyright').className='oculto'">×</a>
+  
+          <!-- Créditos UAM  (siempre deben ir en primer lugar) -->
+			<div class="creditos">
+				<h1>
+					Créditos 
+				</h1>
+				<h2>
+					Escena original
+				</h2>
+				<table class="autores" 	>
+					<tr> <td  class="rol"> Diseño del contenido			</td>		<td class="nombre"> Elsa Sirenia Vega Camacho		</td></tr>
+					<tr> <td  class="rol"> Diseño funcional				</td>		<td class="nombre"> Elsa Sirenia Vega Camacho		</td></tr>
+					<tr> <td  class="rol"> Programación						</td>		<td class="nombre"> Elsa Sirenia Vega Camacho		</td></tr>
+					<!-- Varias personas en el mismo rubro, separar por <br> -->
+					<tr> <td  class="rol"> Asesoría de programación		</td>		<td class="nombre"> 
+																											Leticia Montserrat Vargas Rocha
+																										
+																									</td></tr>
+					<tr> <td  class="rol"> Diseño gráfico					</td>		<td class="nombre"> Ricardo López Gómez										</td></tr>
+					<tr> <td  class="rol" >Coordinación			</td>		<td class="nombre"> Leticia Montserrat Vargas Rocha</tr>
+				</table>
+	         <h2>
+					Adaptación 
+				</h2>
+				<table class="autores" 	>
+					<tr> <td  class="rol"> Diseño funcional				</td>		<td class="nombre"> Elsa Sirenia Vega Camacho </td></tr>
+					<tr> <td  class="rol"> Programación						</td>		<td class="nombre"> Elsa Sirenia Vega Camacho </td></tr>
+					<!-- Varias personas en el mismo rubro, separar por <br> -->
+					<tr> <td  class="rol"> Asesoría de programación		</td>		<td class="nombre"> Leticia Montserrat Vargas Rocha </td></tr>
+					<tr> <td  class="rol"> Diseño gráfico					</td>		<td class="nombre"> Francisco	Varela Fuentes						</td></tr>
+					<tr> <td  class="rol"> Ilustración					</td>		<td class="nombre"> Francisco	Varela Fuentes						</td></tr>
+					<tr> <td  class="rol" >Coordinación			</td>		<td class="nombre"> Leticia Montserrat Vargas Rocha						</td></tr>
+				</table>
+                
+	         <div class='logos'>
+	            <a href=''>
+	               <img src="../images/info/icns/logoLite.png">
+	            </a>
+	            <a href="http://www.unadmexico.mx/">
+	               <img src="../images/info/icns/logoUNADM.png">
+	            </a>
+	         </div>
+          </div>
+          
+          <!-- Linea separación créditos -->
+          <hr class="linea" />
+     
+          <!-- Aviso licencias -->
+          <div class="licencias">
+          
+				<p class="creativeCommons">Los contenidos de esta unidad didáctica interactiva están bajo una licencia <a href="http://creativecommons.org/licenses/by-nc-sa/2.5/es/" target="_blank">Creative Commons Reconocimiento-NoComercial-CompartirIgual</a>.</p>
+
+				<!--arquimedes (optativo)-->
+				<p>La unidad didáctica fue creada con <a href="http://arquimedes.matem.unam.mx/Descartes5/creditos/conCCL.html" target="_blank">Arquímedes</a>, una herramienta de código abierto.</p>
+
+				<!-- Descartes -->
+				<p>La unidad didáctica contiene escenas elaboradas con Descartes, una herramienta de código abierto.</p>
+
+
+          	<p style='text-align:center'> LITE - UnADM 2014</p>
+          </div>
+      </div>
+    </div> 
+   <!------ TERMINA LA INFO SOBRE LAS LICENCIAS Y LOS CRÉDITOS. ---------->
+  
+  
+  </div>
+  
+  
+</article>
+
+
+</body>
+
+</html>

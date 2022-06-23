@@ -1,0 +1,192 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+ 	<link href="../css/html5.css" rel="stylesheet" type="text/css" media="screen" />
+	<link href="../css/DescHTML5.css" rel="stylesheet" type="text/css" media="screen" />	
+	 <script type="text/javascript" src='../javascript/inject_functions_scorms_descartes.js'></script>
+	<script type='text/javascript' src='lib/descartes-min.js'></script>
+</head>
+
+<body>
+ <!-------- MathJax --- para fórmulas matemáticas ------>	
+	<script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script> 
+
+<article class="course_content_container">
+  
+  <div class="course_content">
+    
+    
+    <!------ INICIA EL CONTENIDO DE LA PÁGINA --------->
+    
+    
+    <!--- Título de la página --->
+    <h1>Coordenadas cilíndricas</h1>
+    
+    
+	<div class='text_panel'>
+		
+		<p>
+			Obtenemos coordenadas cilíndricas en el espacio combinando coordenadas polares en el \( plano-xy \) con el \( eje \ \ z \) usual. Esto asigna a todo punto en el espacio una o más triadas de la forma \( (r,\theta,z) \) como se muestra en la figura.
+          
+		</p>
+    <!--- Subtítulo (no necesario en introducción) --->
+		
+         </br>
+         
+         <p>
+	    	<span class="instrucciones">
+	    		En la figura de la izquierda se ilustran las coordenadas cilíndricas de un punto en el espacio \(P(r,\theta,z) \). En la figura de la derecha se ilustran las superficies obtenidas al hacer una de las coordenadas constante: cilindros o planos.
+	    	</span>
+	    </p>
+		<!--	
+			Ejemplo para incluir una escena de descartes, 
+			el div.Descartes_extern_content es necesario para acomadr bien los elementos  
+		-->
+		<div class="course_extern_content"> 
+			<div class="Descartes_extern_content">
+				<ajs name="Descartes" width=500 height=320 code="Descartes">
+   <param name="tamaño" value="500x320">
+   <param name="image_loader" value="">
+   <param name="expand" value="">
+   <param name="decimal_symbol" value=".">
+   <param name="antialias" value="sí">
+   <param name="deshacer" value="no">
+   <param name="nombre" value="Descartes">
+   <param name="Versión" value="5.356, 2016-05-03">
+   <param name="Idioma" value="español">
+   <param name="Botones" value="créditos=no config=no inicio=no limpiar=no">
+   <param name="E_01" value="tipo='R2' id='EspText01' x='EspText01.x' y='EspText01.y' dibujar-si='EspText01.visible' fijo='sí' despl_imagen='arr-izq' fondo='blanco' red='no' red10='no' ejes='no' texto='no'">
+   <param name="C_01" value="id='btnAceptar' tipo='numérico' interfaz='botón' región='interior' espacio='EspText01' nombre='[btnAceptar.txt]' expresión='(btnAceptar.x,btnAceptar.y,btnAceptar.w,btnAceptar.h)' fijo='sí' visible='sí' color='blanco' color-int='f7000000' negrita='sí' fuente puntos='16' imagen='[btnAceptar.img]' acción='calcular' dibujar-si='0'">
+   <param name="C_02" value="id='btnCua' tipo='numérico' interfaz='botón' región='interior' espacio='EspText01' nombre='?' expresión='(btnCua.x,btnCua.y,btnCua.w,btnCua.h)' fijo='sí' visible='sí' color='blanco' color-int='f7000000' negrita='sí' fuente puntos='16' imagen='[btnCua.img]' dibujar-si='0' pos_mensajes='centro'">
+   <param name="C_03" value="id='btnPeq' tipo='numérico' interfaz='botón' región='interior' espacio='EspText01' nombre='Botón' expresión='(btnPeq.x,btnPeq.y,btnPeq.w,btnPeq.h)' fijo='sí' visible='sí' color='blanco' color-int='f7000000' negrita='sí' fuente puntos='16' imagen='[btnPeq.img]' dibujar-si='0' pos_mensajes='centro'">
+   <param name="C_04" value="id='btnMed' tipo='numérico' interfaz='botón' región='interior' espacio='EspText01' nombre='Verificar' expresión='(btnMed.x,btnMed.y,btnMed.w,btnMed.h)' fijo='sí' visible='sí' color='blanco' color-int='f7000000' negrita='sí' fuente puntos='16' imagen='[btnMed.img]' dibujar-si='0' pos_mensajes='centro'">
+   <param name="C_05" value="id='btnGra' tipo='numérico' interfaz='botón' región='interior' espacio='EspText01' nombre='Haz clic aquí' expresión='(btnGra.x,btnGra.y,btnGra.w,btnGra.h)' fijo='sí' visible='sí' color='blanco' color-int='f7000000' negrita='sí' fuente puntos='16' imagen='[btnGra.img]' dibujar-si='0' pos_mensajes='centro'">
+   <param name="C_06" value="id='menu' tipo='numérico' interfaz='menú' región='interior' espacio='EspText01' expresión='(menu.x,menu.y,menu.w,menu.h)' decimales='0' fijo='sí' visible='no' dibujar-si='0' pos_mensajes='centro'">
+   <param name="C_07" value="id='spinA' tipo='numérico' región='interior' espacio='EspText01' nombre='a' expresión='(spinA.x,spinA.y,spinA.w,spinA.h)' valor='1' decimales='0' fijo='sí' visible='sí' dibujar-si='0' pos_mensajes='centro'">
+   <param name="C_08" value="id='txt01' tipo='numérico' interfaz='campo de texto' solo_texto='sí' región='interior' espacio='EspText01' expresión='(txt01.x,txt01.y,txt01.w,txt01.h)' valor='&squot;Texto de inicio&squot;' fijo='sí' visible='sí' dibujar-si='0' pos_mensajes='centro'">
+   <param name="A_01" value="id='initEsp()' algoritmo='sí' expresión='x' algoritmo='sí' hacer='EspText01.visible=1;EspText01.x=0;EspText01.y=0;;imgCil1.w=250;imgCil1.h=192;imgCil2.w=211;imgCil2.h=289;;aux_w=imgCil1.w+imgCil2.w;gap_x=(EspText01._w-aux_w)/3;;imgCil1.x=gap_x;imgCil1.y=(EspText01._h-imgCil1.h)/2;imgCil2.x=2*gap_x+imgCil1.w;imgCil2.y=(EspText01._h-imgCil2.h)/2'">
+   <param name="A_02" value="id='initBtns()' algoritmo='sí' algoritmo='sí' hacer='btnCua.x=340;btnCua.y=220;btnCua.w=40;btnCua.h=30;btnCua.img=&squot;imgs/tpl/btn040.png&squot;;;btnPeq.x=btnCua.x+btnCua.w+5;btnPeq.y=btnCua.y;btnPeq.w=80;btnPeq.h=30;btnPeq.img=&squot;imgs/tpl/btn080.png&squot;;;btnMed.x=btnPeq.x+btnPeq.w+5;btnMed.y=btnPeq.y;btnMed.w=100;btnMed.h=30;btnMed.img=&squot;imgs/tpl/btn100.png&squot;;;btnGra.x=btnMed.x+ btnMed.w+5;btnGra.y=btnMed.y;btnGra.w=140;btnGra.h=30;btnGra.img=&squot;imgs/tpl/btn140.png&squot;;;btnAceptar.w=120;btnAceptar.h=30;btnAceptar.x=btnCua.x;btnAceptar.y=btnCua.y+btnGra.h+5;btnAceptar.img=&squot;imgs/tpl/btn120.png&squot;;btnAceptar.txt=&squot;Aceptar&squot;;;;spinA.x=580;spinA.y=320;spinA.w=120;spinA.h=50;;menu.x=spinA.x;menu.y=spinA.y+spinA.h+15;menu.w=150;menu.h=35;;txt01.x=spinA.x;txt01.y=menu.y+menu.h+15;txt01.w=150;txt01.h=35;;;;'">
+   <param name="A_03" value="id='initEscena()' algoritmo='sí' algoritmo='sí' hacer='initBtns();initEsp();'">
+   <param name="A_04" value="id='INICIO' algoritmo='sí' evaluar='una-sola-vez' hacer='initEscena()'">
+   <param name="A_05" value="id='CALCULOS' algoritmo='sí' evaluar='siempre'">
+   <param name="G_01" value="espacio='EspText01' tipo='texto' fondo='sí' expresión='[_Texto_____,20]' fijo='sí'">
+   <param name="G_02" value="espacio='EspText01' tipo='texto' fondo='sí' dibujar-si='0' expresión='[320,btnCua.y-50]' texto='{\rtf1\uc0{\fonttbl\f0\fcharset0 Times New Roman;\f1\fcharset0 Arial;\f2\fcharset0 Arial;\f3\fcharset0 Arial;}\f1\fs36 Botones de \b 30px\b0  de alto, texto blanco \b 16px\b0 , \par en negritas y con borde negro con alfa \b\i f7\b0\i0 .}' fuente='SansSerif,PLAIN,18' fijo='sí' info='Texto de formato de botones'">
+   <param name="G_03" value="espacio='EspText01' tipo='texto' fondo='sí' dibujar-si='0' expresión='[320,310]' texto='{\rtf1\uc0{\fonttbl\f0\fcharset0 Times New Roman;\f1\fcharset0 Arial;\f2\fcharset0 Arial;\f3\fcharset0 Arial;\f4\fcharset0 Courier New;}\f1\fs36\b Pulsador : \b0 Alto minimo \par                   45px, 50px \par                   recomendado.\fs16\b\par \par \fs36 Men\u250        : \b0 35px de alto.\b\par \fs16\par \fs36 Campo\par de texto  : \b0 35px de alto. \f4\fs30}' fuente='SansSerif,BOLD,18' fijo='sí' info='Descripción de formatos para menús, pulsadores y campos de texto'">
+   <param name="G_04" value="espacio='EspText01' tipo='imagen' coord_abs='sí' expresión='(imgCil1.x,imgCil1.y)' archivo='imgs/coordCil.png'">
+   <param name="G_05" value="espacio='EspText01' tipo='imagen' coord_abs='sí' expresión='(imgCil2.x,imgCil2.y)' archivo='imgs/coordCil_2.png'">
+   <param name="G_06" value="espacio='EspText01' tipo='texto' dibujar-si='0' expresión='[20,20]' texto='[aux_w]' fijo='sí'">
+</ajs>
+			</div>
+		</div>
+	<!-- Fin bloque de descartes -->
+    
+   		</br>
+        <h2>Definición</h2>
+    
+    
+		<!--- Párrafo --->
+		
+        <p>
+		Las <strong><em>coordenadas cilíndricas</em></strong> representan un punto \( P \) en el espacio con las triadas ordenadas \(	(r,\theta,z) \) en las cuales 
+		</p>
+		<ul>
+			<li> \(r \) y \(\theta \) son coordenadas polares para la proyección vertical de \( P \) en el el \( plano-xy \).</li>
+			<li>\(z \) es la coordenada vertical rectangular.</li>
+		</ul>
+		
+		<!--- Párrafo --->
+	    
+		 <p>
+         Los valores de \(x \), \(y \), \(r \) y \( \theta \) y las coordenadas cilíndricas están relacionadas por las <strong><em>ecuaciones</strong></em> 
+         \[x=r \ \cos \theta, \ \ \ \ \ y=r \ \ sen \theta, \ \ \ \ \ z=z \]
+         </p>
+        
+    <!------ TERMINA EL CONTENIDO DE LA PÁGINA --------->
+</div>
+
+
+
+<!------ INICIA LA INFO SOBRE LAS LICENCIAS Y LOS CRÉDITOS. ---------->
+    <a id="btCopyright" class="standardButton" title="Haz clic aquí para consultar los créditos y las condiciones de uso de este recurso." href="#" onclick="document.getElementById('copyright').className='visible';">©</a>
+    <div id="copyright" class="oculto">
+      
+      <div class='innerCopyright'>
+      
+          <a id="btCloseCopyright" class="standardButton" title="Haz clic aquí para cerrar esta ventana." href="#" onclick="document.getElementById('copyright').className='oculto'">×</a>
+  
+          
+			<div class="creditos">
+				<h1>
+					Créditos 
+				</h1>
+				<h2>
+					Escena original
+				</h2>				<table class="autores" 	>
+					<tr> <td  class="rol"> Diseño del contenido			</td>		<td class="nombre"> Brenda Casandra Vargas Rocha (Instituto de Ciencia e Ingeniería de Materiales, UNAM)</td></tr>
+					<tr> <td  class="rol"> Diseño funcional				</td>		<td class="nombre">Brenda Casandra Vargas Rocha (Instituto de Ciencia e Ingeniería de Materiales, UNAM)</td></tr>
+					<tr> <td  class="rol"> Programación						</td>		<td class="nombre"> Brenda Casandra Vargas Rocha (Instituto de Ciencia e Ingeniería de Materiales, UNAM)		</td></tr>
+					<!-- Varias personas en el mismo rubro, separar por <br> -->
+					<tr> <td  class="rol"> Asesoría de programación		</td>		<td class="nombre"> 
+																											José Luis Abreu León (Instituto de Matemáticas, UNAM)<br>       																									Leticia Montserrat Vargas Rocha<br>		
+																									</td></tr>
+			<tr> <td  class="rol"> Diseño gráfico					</td>		<td class="nombre"> Ricardo López Gómez										</td></tr>
+					<tr> <td  class="rol" >Coordinación			</td>		<td class="nombre"> Leticia Montserrat Vargas Rocha						</td></tr>
+				</table>
+				<h2>
+					Adaptación 
+				</h2>
+				<table class="autores" 	>
+					<tr> <td  class="rol"> Diseño funcional				</td>		<td class="nombre"> Elsa Sirenia Vega Camacho</td></tr>
+					<tr> <td  class="rol"> Programación						</td>		<td class="nombre"> Elsa Sirenia Vega Camacho</td></tr>
+					<!-- Varias personas en el mismo rubro, separar por <br> -->
+					<tr> <td  class="rol"> Asesoría de programación		</td>		<td class="nombre"> 
+																											Leticia Montserrat Vargas Rocha<br>
+																												
+																									</td></tr>
+					<tr> <td  class="rol"> Diseño gráfico					</td>		<td class="nombre"> Francisco	Varela Fuentes						</td></tr>
+					<tr> <td  class="rol"> Ilustración					</td>		<td class="nombre"> Francisco	Varela Fuentes						</td></tr>
+					<tr> <td  class="rol" >Coordinación			</td>		<td class="nombre"> Leticia Montserrat Vargas Rocha						</td></tr>
+		<tr> <td  class="rol" >Desarrollo del contenedor			</td>		<td class="nombre"> Oscar Escamilla González</td></tr>
+				</table>
+	         
+	         <div class='logos'>
+	            <a href=''>
+	               <img src="../images/info/icns/logoLite.png">
+	            </a>
+	            <a href="http://www.unadmexico.mx/">
+	               <img src="../images/info/icns/logoUNADM.png">
+	            </a>
+	         </div>
+          </div>
+          
+          <!-- Linea separación créditos -->
+          <hr class="linea" />
+     
+          <!-- Aviso licencias -->
+          <div class="licencias">
+          
+				<p class="creativeCommons">Los contenidos de esta unidad didáctica interactiva están bajo una licencia <a href="http://creativecommons.org/licenses/by-nc-sa/2.5/es/" target="_blank">Creative Commons Reconocimiento-NoComercial-CompartirIgual</a>.</p>
+
+				<!--arquimedes (optativo)-->
+				<p>La unidad didáctica fue creada con <a href="http://arquimedes.matem.unam.mx/Descartes5/creditos/conCCL.html" target="_blank">Arquímedes</a>, una herramienta de código abierto.</p>
+
+				<!-- Descartes -->
+				<p>La unidad didáctica contiene escenas elaboradas con Descartes, una herramienta de código abierto.</p>
+
+
+          	<p style='text-align:center'> LITE - UnADM 2014</p>
+          </div>
+      </div>
+    </div> 
+   <!------ TERMINA LA INFO SOBRE LAS LICENCIAS Y LOS CRÉDITOS. ---------->
+  
+  
+  </div>
+  
+  
+
+</body>
+
+</html>

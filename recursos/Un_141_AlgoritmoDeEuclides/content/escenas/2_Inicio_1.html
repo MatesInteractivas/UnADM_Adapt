@@ -1,0 +1,144 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+ 	<link href="../css/html5.css" rel="stylesheet" type="text/css" media="screen" />
+	<link href="../css/DescHTML5.css" rel="stylesheet" type="text/css" media="screen" />	
+	 <script type="text/javascript" src='../javascript/inject_functions_scorms_descartes.js'></script>
+	<script type='text/javascript' src='lib/descartes-min.js'></script>
+</head>
+
+
+<body>
+ <!-------- MathJax --- para fórmulas matemáticas ------>	
+	<script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script> 
+
+<article class="course_content_container">
+  
+  <div class="course_content">
+    
+    
+    <!------ INICIA EL CONTENIDO DE LA PÁGINA --------->
+    
+    
+    <!--- Título de la página --->
+    <h1>Algoritmo de Euclides</h1>
+    
+    
+	<div class='text_panel'>
+		<!--- Subtítulo (no necesario en introducción) --->
+			<p>El algoritmo de Euclides es un método para calcular el máximo común divisor (MCD). Fue escrito por Euclides en su obra magna <em>Elementos</em>. </p>
+            <div class="course_extern_content">
+       			<img src="imgs/Euclides.png"></img>
+			</div>
+
+			<p>Dicho algoritmo funciona no sólo para los números naturales, sino para cualquier conjunto en el que exista una "división con residuo". A este tipo de divisiones en la que existe residuo se les nombra <em>divisiones euclidianas</em> y a los conjuntos donde se puede definir dicha división se les llama <em>dominios euclídeos.</em> Con lo anterior podemos decir que el algoritmo de Euclides extendido es una ligera modificación del Algoritmo de Euclides que permite además expresar al máximo común divisor como una combinación lineal. Este algoritmo tiene aplicaciones en diversas áreas como álgebra, teoría de números y ciencias de la computación, entre otras.</p>
+
+			<p>Por ejemplo, el conjunto de los números enteros y el de los polinomios con coeficientes racionales son dominios euclídeos porque podemos definir una división con residuo. </p>
+
+			<p>El algoritmo de Euclides se puede representar con la siguiente proposición:</p>
+
+			<p>Sean \(a \), \(b \) enteros no nulos. Entonces \(MCD(a,b) = MCD(b,r) \) donde \(r \) es el único \(0 &lt; r &lt; b \) tal que existe un entero \(q \) con \(a= bq + r \). Esto es, que \(r \) es el resto de la división de \(a \) por \(b \). </p>
+			<p>Esta proposición nos indica que es igual de válido calcular el \(MCD(a,b) \) que el \(MCD(b,r) \), con la ventaja de que \(r \) es un entero de menor tamaño que el original a. Esto es aprovechado por el algoritmo de Euclides para el cálculo del máximo común divisor de dos números enteros.</p>
+			<p>Para calcular el \(mcd \) de dos enteros \(a \) y \(b \) (ambos \(&gt;0 \), suponemos \(a &gt; b \)) se definen \(q_i \) y \(r_i \) recursivamente mediante las ecuaciones:</p> 
+			\[a = bq_1 + r_1 \ \   (0&lt;r_1&lt;b) \] 
+			\[b = r_1q_2 + r_2 \ \  (0&lt;r_2&lt;r_1) \]
+	\[r_1 =r _2q_3 + r_3 \ \  (0&lt;r_3&lt;r_2) \]
+		\[.... \]
+	\[r_{k-3} = r_{k-2}q_{k-1} + r_{k-1}  \ \ (0&lt;r_{k-1}&lt;r_{k-2}) \]
+		\[r_{k-2} = r_{k-1}q_k  \ \ (r_k=0) \]
+        
+				<p>Y de la proposición anterior, se sigue que:</p>
+				\[MCD(a,b) = MCD(b,r_1) = MCD(r_1,r_2) = ... = MCD(r_{k-2},r_{k-1}) = r_{k-1} \]</p>
+				<p>Además se puede demostrar que el número de pasos necesarios para calcular el mcd de dos números es menor que 5 veces el número de dígitos del menor de ellos.</p>
+	<!-- Fin bloque de descartes -->
+
+
+	<!--- Subtítulo (no necesario en introducción) --->
+ 
+    <!------ TERMINA EL CONTENIDO DE LA PÁGINA --------->
+</div>
+
+
+
+  <!------ INICIA LA INFO SOBRE LAS LICENCIAS Y LOS CRÉDITOS. ---------->
+    <a id="btCopyright" class="standardButton" title="Haz clic aquí para consultar los créditos y las condiciones de uso de este recurso." href="#" onclick="document.getElementById('copyright').className='visible';">©</a>
+    <div id="copyright" class="oculto">
+      
+      <div class='innerCopyright'>
+      
+          <a id="btCloseCopyright" class="standardButton" title="Haz clic aquí para cerrar esta ventana." href="#" onclick="document.getElementById('copyright').className='oculto'">×</a>
+  
+          <!-- Créditos UAM  (siempre deben ir en primer lugar) -->
+			<div class="creditos">
+				<h1>
+					Créditos 
+				</h1>
+				<h2>
+					Escena original
+				</h2>				
+                
+               <table class="autores" 	>
+					<tr> <td  class="rol"> Diseño del contenido			</td>		<td class="nombre"> Gustavo Magallanes Guijón</td></tr>
+					<tr> <td  class="rol"> Diseño funcional				</td>		<td class="nombre">Gustavo Magallanes Guijón</td></tr>
+					<tr> <td  class="rol"> Programación						</td>		<td class="nombre"> Gustavo Magallanes Guijón</td></tr>
+					<!-- Varias personas en el mismo rubro, separar por <br> -->
+							        
+					<tr> <td  class="rol"> Diseño gráfico					</td>		<td class="nombre"> Ricardo López Gómez										</td></tr>
+					<tr> <td  class="rol" >Coordinación			</td>		<td class="nombre"> Leticia Montserrat Vargas Rocha						</td></tr>
+				</table>
+				<h2>
+					Adaptación 
+				</h2>
+				<table class="autores" 	>
+					<tr> <td  class="rol"> Diseño funcional				</td>	<td class="nombre"> Julio Arnoldo Prado Saavedra<br>Victor Manuel Amezcua y Raz 
+                    </td></tr>
+					<tr> <td  class="rol"> Programación					</td>	<td class="nombre">Julio Arnoldo Prado Saavedra<br>Victor Manuel Amezcua y Raz</td></tr>
+					<tr> <td  class="rol"> Diseño gráfico				</td>	<td class="nombre"> Francisco	Varela Fuentes	        </td></tr>
+					<tr> <td  class="rol" >Coordinación			        </td>	<td class="nombre"> Leticia Montserrat Vargas Rocha		</td></tr>
+		            
+				</table>
+	         
+	         <div class='logos'>
+	            <a href=''>
+	               <img src="../images/info/icns/logoLite.png">
+	            </a>
+	            <a href="http://www.unadmexico.mx/">
+	               <img src="../images/info/icns/logoUNADM.png">
+	            </a>
+	         </div>
+          </div>
+          
+          <!-- Linea separación créditos -->
+
+          <hr class="linea" />
+     
+          <!-- Aviso licencias -->
+          <div class="licencias">
+          
+				<p class="creativeCommons">Los contenidos de esta unidad didáctica interactiva están bajo una licencia <a href="http://creativecommons.org/licenses/by-nc-sa/2.5/es/" target="_blank">Creative Commons Reconocimiento-NoComercial-CompartirIgual</a>.</p>
+
+				<!--arquimedes (optativo)-->
+				<p>La unidad didáctica fue creada con <a href="http://arquimedes.matem.unam.mx/Descartes5/creditos/conCCL.html" target="_blank">Arquímedes</a>, una herramienta de código abierto.</p>
+
+				<!-- Descartes -->
+				<p>La unidad didáctica contiene escenas elaboradas con Descartes, una herramienta de código abierto.</p>
+
+
+          	<p style='text-align:center'> LITE - UnADM 2014</p>
+          </div>
+      </div>
+    </div> 
+   <!------ TERMINA LA INFO SOBRE LAS LICENCIAS Y LOS CRÉDITOS. ---------->
+  
+  
+  </div>
+  
+  
+</article>
+
+
+</body>
+
+</html>

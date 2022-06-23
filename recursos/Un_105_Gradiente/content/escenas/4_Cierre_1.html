@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+ 	<link href="../css/html5.css" rel="stylesheet" type="text/css" media="screen" />
+	<link href="../css/DescHTML5.css" rel="stylesheet" type="text/css" media="screen" />
+    <script type="text/javascript" src='../javascript/inject_functions_scorms_descartes.js'></script>
+	<script type='text/javascript' src='../lib/descartes-min.js'></script>
+  
+  <!-------- MathJax --- para fórmulas matemáticas ------>
+  <script type="text/javascript"
+    src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+  </script>
+   <script type="text/javascript" src='../javascript/inject_functions_scorms_descartes.js'></script>
+
+</head>
+
+<body>
+  
+
+<article class="course_content_container">
+  
+  <div class="course_content">
+    
+    
+    <!------ INICIA EL CONTENIDO DE LA PÁGINA ------- -->
+    
+    
+   <!--- Título de la página - -->
+    <h1>Aplicaciones del gradiente</h1>
+    
+    <!--- Para poner un panel con fondo - -->
+    <div class='text_panel'>
+
+    
+    
+    <!--- Párrafo - -->
+    <p>Como hemos visto, el gradiente tiene un importante significado geométrico, pues nos dice la dirección en que una función \( f \) crece más rápido, y además, la dirección ortogonal a la superficies de nivel de \( f \). El hecho de que proporcione ambos datos al mismo tiempo es una herramienta muy útil en diversas áreas.</p>
+    
+    <p>Para ver ésto consideraremos un mapa topográfico de una colina representada por una función \( f(x,y) \). Sobre ésta podemos dibujar sus curvas de nivel. Si nos colocamos en un punto de una de estas curvas, al obtener su gradiente, éste nos indicará la dirección del máximo crecimiento. Si esta colina representa un mapa del clima, podremos saber en que dirección hay un máximo cambio en la temperatura.</p>
+
+	<p>A continuación se muestra la representación de una colina. Esta colina puede a su vez representar cualquier campo, por ejemplo, el campo de temperaturas que se mencionó anteriormente. Éste campo está determinado por la función \(f(x,y)\), que puedesmodificar escribiendo una ecuación en el campo de texto. \(a\), \(b\), y \(c\) son parámetros que se pueden utilizar para expresar la ecuación, y \(h\) es la altura de un plano paralelo al plano \(XY\). Cambia la altura del plano e identifica la curva que se genera al intersectar el plano con la superficie. Las curvas que se generan son las curvas de nivel.</p>
+	
+<div align="center" class="Descartes_extern_content">
+  <ajs name="Descartes" width=650 height=500 code="Descartes">
+    <param name="tamaño" value="650x500">
+   <param name="decimal_symbol" value=",">
+   <param name="antialias" value="sí">
+   <param name="deshacer" value="no">
+   <param name="nombre" value="Descartes">
+   <param name="Versión" value="5.3.12, 2014-07-09">
+   <param name="Idioma" value="español">
+   <param name="Botones" value="créditos=no config=no inicio=no limpiar=no ancho_este=150 ancho_oeste=150 alto=50">
+   <param name="E_01" value="tipo='R3' id='E1' escala='48' despl_imagen='arr-izq' fondo='negro' despliegue='pintor' cortar='sí' R3='sí'">
+   <param name="C_01" value="id='F' tipo='numérico' interfaz='campo de texto' solo_texto='sí' región='interior' espacio='E1' nombre='f(x,y)=' expresión='(50,415,550,40)' valor='&squot;(a*x+b*y+c)/(1+x^2+y^2)&squot;' fijo='sí' visible='sí'">
+   <param name="C_02" value="id='a' tipo='numérico' región='interior' espacio='E1' nombre='a' expresión='(5,458,148,40)' valor='4' decimales='1' fijo='sí' visible='sí' pos_mensajes='centro'">
+   <param name="C_03" value="id='b' tipo='numérico' región='interior' espacio='E1' nombre='b' expresión='(170,458,148,40)' valor='3' decimales='1' fijo='sí' visible='sí' pos_mensajes='centro'">
+   <param name="C_04" value="id='c' tipo='numérico' región='interior' espacio='E1' nombre='c' expresión='(335,458,148,40)' valor='2' decimales='1' fijo='sí' visible='sí' pos_mensajes='centro'">
+   <param name="C_05" value="id='h' tipo='numérico' región='interior' espacio='E1' nombre='h' expresión='(500,458,148,40)' decimales='1' fijo='sí' visible='sí' pos_mensajes='centro'">
+   <param name="A_01" value="id='INICIO' algoritmo='sí' evaluar='una-sola-vez' hacer='E1.rot.z=-40'">
+   <param name="A_02" value="id='CALCULOS' algoritmo='sí' evaluar='siempre'">
+   <param name="S_01" value="espacio='E1' tipo='superficie' color='8300d1e0' color_reverso='8300d1e0' expresión='x=5*(2*u-1) y=5*(2*v-1) z=h' aristas='sí' modelo='luz' Nu='2' Nv='2'">
+   <param name="S_02" value="espacio='E1' tipo='superficie' color='a0ffffff' color_reverso='a0ffffff' expresión='x=5*(2*u-1) y=5*(2*v-1) z=0' aristas='sí' modelo='luz' Nu='2' Nv='2'">
+   <param name="S_03" value="espacio='E1' tipo='superficie' color='60ffffff' color_reverso='60ffffff' expresión='x=5*(2*u-1) y=5*(2*v-1) z=_Eval_(F)' aristas='sí' modelo='luz' Nu='20' Nv='20'">
+   <param name="S_04" value="espacio='E1' tipo='segmento' color='gris' expresión='(0,0,0)(0,0,2)'">
+   <param name="S_05" value="espacio='E1' tipo='texto' color='negro' expresión='[20,E1._h-12]' texto='f(x,y)=' fuente='Serif,BOLD+ITALIC,26' fijo='sí'">
+</ajs>
+ 
+ 	
+</div>
+    <!------ TERMINA EL CONTENIDO DE LA PÁGINA --------->
+
+
+ 	<!------ INICIA LA INFO SOBRE LAS LICENCIAS Y LOS CRÉDITOS. ---------->
+    <a id="btCopyright" class="standardButton" title="Haz clic aquí para consultar los créditos y las condiciones de uso de este recurso." href="#" onClick="document.getElementById('copyright').className='visible';">&#169;</a>
+    <div id="copyright" class="oculto">
+      
+      <div class='innerCopyright'>
+      
+          <a id="btCloseCopyright" class="standardButton" title="Haz clic aquí para cerrar esta ventana." href="#" onClick="document.getElementById('copyright').className='oculto'">×</a>
+  
+          <!-- Créditos UAM  (siempre deben ir en primer lugar) -->
+			<div class="creditos">
+				<h1>
+					Créditos 
+				</h1>
+				<h2>
+					Escena original
+				</h2>				<table class="autores" 	>
+					<tr> <td  class="rol"> Diseño del contenido			</td>		<td class="nombre"> Elsa Sirenia Vega Camacho (LITE) </td></tr>
+
+					<tr> <td  class="rol"> Diseño funcional				</td>		<td class="nombre"> Elsa Sirenia Vega Camacho (LITE)</td></tr>
+
+					<tr> <td  class="rol"> Programación					</td>		<td class="nombre"> Elsa Sirenia Vega Camacho (LITE) </td></tr>
+                    
+					<tr> <td class="rol"> Asesoría de programación		</td>		<td class="nombre"> Victor Hugo García Jarillo (Facultad de                    Ciencias, UNAM)</td></tr>
+
+					<tr> <td  class="rol"> Diseño gráfico					</td>		<td class="nombre"> Ricardo López Gómez										</td></tr>
+					<tr> <td  class="rol" >Coordinación			</td>		<td class="nombre"> Leticia Montserrat Vargas Rocha						</td></tr>
+				</table>
+				<h2>
+					Adaptación 
+				</h2>
+				<table class="autores" 	>
+					<tr> <td  class="rol"> Diseño funcional				</td>		<td class="nombre"> Victor Hugo García Jarillo (Facultad de                    Ciencias, UNAM)		</td></tr>
+					<tr> <td  class="rol"> Programación						</td>		<td class="nombre"> Victor Hugo García Jarillo (Facultad de                    Ciencias, UNAM)</td></tr>
+
+					<tr> <td  class="rol"> Diseño gráfico					</td>		<td class="nombre"> Francisco	Varela Fuentes						</td></tr>
+					<tr> <td  class="rol" >Coordinación			</td>		<td class="nombre"> Leticia Montserrat Vargas Rocha						</td></tr>
+		<tr> <td  class="rol" >Desarrollo del contenedor			</td>		<td class="nombre"> Oscar Escamilla González</td></tr>
+				</table>
+	         
+	         <div class='logos'>
+	            <a href=''>
+	               <img src="../images/info/icns/logoLite.png">
+	            </a>
+	            <a href="http://www.unadmexico.mx/">
+	               <img src="../images/info/icns/logoUNADM.png">
+	            </a>
+	         </div>
+          </div>
+          
+          <!-- Linea separación créditos -->
+          <hr class="linea" />
+     
+          <!-- Aviso licencias -->
+          <div class="licencias">
+          
+				<p class="creativeCommons">Los contenidos de esta unidad didáctica interactiva están bajo una licencia <a href="http://creativecommons.org/licenses/by-nc-sa/2.5/es/" target="_blank">Creative Commons Reconocimiento-NoComercial-CompartirIgual</a>.</p>
+
+				<!--arquimedes (optativo)-->
+				<p>La unidad didáctica fue creada con <a href="http://arquimedes.matem.unam.mx/Descartes5/creditos/conCCL.html" target="_blank">Arquímedes</a>, una herramienta de código abierto.</p>
+
+				<!-- Descartes -->
+				<p>La unidad didáctica contiene escenas elaboradas con Descartes, una herramienta de código abierto.</p>
+
+
+          	<p style='text-align:center'> LITE - UnADM 2014</p>
+          </div>
+      </div>
+    </div> 
+   <!------ TERMINA LA INFO SOBRE LAS LICENCIAS Y LOS CRÉDITOS. ---------->
+  
+  
+  </div>
+  
+  
+</article>
+
+
+</body>
+
+</html>

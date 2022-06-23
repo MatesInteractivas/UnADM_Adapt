@@ -1,0 +1,81 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<recurso 
+	id="_Un_126_EcuacionGeneralDeLasConicasEnfoqueVectorial" 
+	nivel="Licenciatura" 
+	area="Matemáticas, Geometría analítica, &Aacute;lgebra lineal" 
+	plataforma="HTML 5" 
+	>
+	<titulo><![CDATA[
+		Ecuación general de las cónicas, enfoque vectorial 
+	]]></titulo>
+	
+	<Descripcion><![CDATA[
+		En esta unidad didáctica se demostrará que la ecuación general de segundo grado puede convertirse, mediante una rotación y una traslación, en una ecuación de segundo grado sin términos cruzados ni lineales, o en una ecuación con sólo un término cuadrático, sin términos cruzados y un término lineal, o en una ecuación lineal y que además las formas cuadráticas pueden identificarse con matrices simétricas y por lo tanto, al operar con matrices, se obtiene alguna de las tres ecuaciones mencionadas anteriormente.
+	]]></Descripcion>
+</recurso>
+
+<!--
+********************************************************************************
+                               **** Áreas **** 
+Matemáticas 
+	Aritmética
+		Fracciones
+	Álgebra
+		Combinatoria
+		Ecuaciones lineales
+		Ecuaciones polinomiales
+		Polinomios
+		Álgebra lineal
+		Teoría de grupos
+		Álgebra abstracta
+	Geometría
+		Geometría elemental
+		Geometría clásica
+		Geometría analítica
+	Trigonometría 
+	Probabilidad 
+		Cálculo de probabilidades
+		Eventos
+		Variables aleatorias
+		Ley de los grandes números
+		Teorema del límite central
+	Estadística
+		Medidas de tendencia central
+		Muestreo
+		Distribuciones
+		Inferencia
+	Cálculo
+		Funciones 
+		Límites
+		Continuidad
+		Derivadas 
+		Integrales 
+	Teoría de números
+	Teoría de gráficas
+Física
+	Mecánica
+	Electromagnetismo
+	Óptica
+	Físico-química 
+	Termodinámica
+	Mecánica estadística
+	Mecánica cuántica
+	Relatividad
+
+********************************************************************************
+
+********************************************************************************
+                             **** Niveles ****
+
+	Primaria
+	Preescolar
+	Secundaria
+	Bachillerato
+	Licenciatura
+	Posgrado 
+	Maestria
+	Doctorado
+
+********************************************************************************
+
+-->

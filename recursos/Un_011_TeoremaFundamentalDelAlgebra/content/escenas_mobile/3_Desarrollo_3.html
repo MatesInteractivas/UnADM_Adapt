@@ -1,0 +1,236 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<title>Desarrollo</title>	
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<link href="../css/DescHTML5.css" rel="stylesheet" type="text/css" media="screen" />
+	<link href="../css/html5_mobile.css" rel="stylesheet" type="text/css" media="screen" />
+    <script type="text/javascript" src='../javascript/inject_functions_scorms_descartes.js'></script>
+	<script type='text/javascript' src='../lib/descartes-min.js'></script>
+</head>
+
+<body>
+
+<!-------- MathJax --- para fórmulas matemáticas ------>	
+	<script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script> 
+
+<article class="course_content_container">
+  
+  <div class="course_content">
+    
+    
+    <!------ INICIA EL CONTENIDO DE LA PÁGINA --------->
+    
+    
+    <!--- Título de la página --->
+    <h1>Ceros de polinomios</h1>	
+    <div class='text_panel'>
+		<!--- Subtítulo (no necesario en introducción) --->
+		<h2>Los ceros de un polinomio</h2>
+  
+  <p>
+ Así como en la escena interactiva de la sección anterior, en esta escena se muestran las gráficas de la
+parte real del polinomio, dada por \(u(x,y)\) en azul, y su parte imaginaria \(v(x,y)\)
+en rojo. Pero a diferencia de la escena anterior, en donde están dadas las raíces
+del polinomio (de grado \(n\) con \(1\leq n \leq 5\) y \(n\in \mathbb{N}\)),  
+en esta escena las raíces no son conocidas, por lo que no podemos expresar al
+polinomio en su forma factorizada, sino que lo expresamos como 
+
+\[p(z)=c_0+c_1z+c_2z^2+c_3z^3+c_4z^4+c_5z^5\] 
+
+donde, \(c_n=a_ne^{2\pi ib_n}\) y \(a_n\geq 0\) \(\forall n\).<br><br>
+
+Verás que el comportamiento de las gráficas de \(u(x,y)\) y de \(v(x,y)\) en este 
+caso tienen el mismo comportamiento que cuando las raíces son conocidas, es
+decir que si disminuyes la escala lo suficiente, verás rectas que se alternan entre 
+azul y roja que parecen intersectarse en un mismo punto. Además hay el mismo 
+de número de rectas que el grado del polinomio, y si se modifica el valor del 
+argumento del término con el exponente mayor (con el control bi, con \(i\) el grado 
+del polinomio), estas rectas simplemente rotan.<br><br>
+ 
+Así como en la escena anterior, esto quiere decir que al "alejarse", el polinomio de 
+grado \(n\) se comporta como \(z^n\), que como habíamos visto en la sección Inicio, tiene 
+\(n\) raíces. O sea que, aunque el número de raíces del polinomio de grado \(n\) sea
+desconocido, vemos que las gráficas de la parte real y de la parte imaginaria del
+
+polinomio de grado \(n\) se comportan como las de un polinomio con \(n\) raíces conocidas,
+que a su vez se comporta como \( z^n\).   
+</p>
+
+  <br><p class='instruccion'>
+    <span class="instrucciones">
+  	El pulsador n indica el grado del polinomio. Gira los 
+controles gráficos bi (con i=0, 1, 2, 3, 4, 5) (puntos 
+rojos) de \(0\) a \(2\pi\)radianes y observa qué efecto tiene 
+en la gráfica. ¿Cuál de estos controles tiene un efecto
+mayor en la gráfica? ¿A qué crees que se deba? 
+¿Cuál de ellos corresponde al exponente mayor? Presiona los pulsadores ai (con i=0, 1, 2, 3, 4, 5) 
+y observa cuál es su efecto en la gráfica 
+correspondiente.
+
+  	</span>
+	</p>      
+ 
+   		<ajs name="Descartes" width=495 height=300 code="Descartes">
+   <param name="tamaño" value="495x300">
+   <param name="image_loader" value="">
+   <param name="expand" value="">
+   <param name="decimal_symbol" value=".">
+   <param name="antialias" value="sí">
+   <param name="deshacer" value="no">
+   <param name="nombre" value="Descartes">
+   <param name="Versión" value="5.356, 2016-05-03">
+   <param name="Idioma" value="español">
+   <param name="Botones" value="créditos=no config=no inicio=no limpiar=no">
+   <param name="E_01" value="tipo='R2' id='E1' fijo='sí' escala='1' O.x='-50%' O.y='-50%' despl_imagen='arr-izq' fondo='c0d0d8' red='no' red10='no' ejes='no' texto='no'">
+   <param name="E_02" value="tipo='R2' id='E2_Graf' x='E2_Graf.x' y='E2_Graf.y' ancho='510' alto='310' dibujar-si='E2_Graf.visible' O.x='10%' despl_imagen='arr-izq' fondo='dcdbe1' red='b8c4c8' red10='889498' ejes='405860' texto='no'">
+   <param name="E_03" value="tipo='R2' id='CTRS' x='CTRS.x' y='CTRS.y' ancho='520' alto='240' fijo='sí' O.x='-36' O.y='-29' despl_imagen='arr-izq' fondo='88000000' red='no' red10='no' ejes='405860' texto='no'">
+   <param name="E_04" value="tipo='R2' id='CTRS_north' x='CTRSN.x' y='CTRSN.y' ancho='520' alto='160' fijo='sí' escala='-1' O.x='-50%' O.y='-50%' despl_imagen='arr-izq' fondo='42000000' red='no' red10='no' ejes='no' texto='no'">
+   <param name="E_05" value="tipo='R2' id='btnOpenClose' x='btnOpenClose.x' y='btnOpenClose.y' ancho='35' alto='30' fijo='sí' escala='1' O.x='-50%' O.y='-50%' despl_imagen='arr-izq' fondo='ff000000' red='no' red10='no' ejes='no' texto='no'">
+   <param name="E_06" value="tipo='R2' id='btnOpenCloseN' x='btnOpenCloseN.x' y='btnOpenCloseN.y' ancho='150' alto='30' fijo='sí' escala='1' O.x='-50%' O.y='-50%' despl_imagen='arr-izq' fondo='ff000000' red='no' red10='no' ejes='no' texto='no'">
+   <param name="E_07" value="tipo='R2' id='MASK' dibujar-si='INFO.visible' fijo='sí' imagen='imgs/tpl/backwindow.png' despl_imagen='mosaico' fondo='95000000' red='no' red10='no' ejes='no' texto='no'">
+   <param name="E_08" value="tipo='R2' id='INFO' x='INFO.x' y='INFO.y' ancho='510' alto='310' dibujar-si='INFO.visible' fijo='sí' imagen='imgs/tpl/retro_790x470.png' despl_imagen='mosaico' red='no' red10='no' ejes='no' texto='no'">
+   <param name="C_01" value="id='cerrarInfo' tipo='numérico' interfaz='botón' región='interior' espacio='INFO' expresión='(cerrarInfo.x,cerrarInfo.y,cerrarInfo.w,cerrarInfo.h)' fijo='sí' visible='sí' color='blanco' fuente puntos='26' imagen='_STYLE_|class=btnUNADM icon cerrar|shadowTextColor=rgba(0,0,0,0.2)|shadowTextOffsetY=2|shadowTextBlur=0|textBorder=0' acción='calcular' parámetro='INFO.visible=-1\naux=(CTRS.opened)?openPanelCtrs():closePanelCtrs()\nauxN=(CTRSN.opened)?closePanelCtrsNorth():openPanelCtrsNorth()' dibujar-si='cerrarInfo.visible'">
+   <param name="C_02" value="id='btn_i' tipo='numérico' interfaz='botón' región='interior' espacio='E2_Graf' expresión='(btn_i.x,btn_i.y,btn_i.w,btn_i.h)' fijo='sí' visible='sí' color='blanco' fuente puntos='20' imagen='_STYLE_|class=btnUNADM icon info|shadowTextColor=rgba(0,0,0,0.2)|shadowTextOffsetY=2|shadowTextBlur=0|textBorder=0 |' acción='calcular' parámetro='INFO.visible=1' pos_mensajes='centro'">
+   <param name="C_03" value="id='btnOpen' tipo='numérico' interfaz='botón' región='interior' espacio='btnOpenClose' expresión='(0,0,35,30)' fijo='sí' visible='sí' fuente puntos='16' imagen='_STYLE_|class=btnUNADM open|shadowTextColor=rgba(0,0,0,0.2)|shadowTextOffsetY=2|shadowTextBlur=0|textBorder=0' acción='calcular' parámetro='openPanelCtrs()' dibujar-si='!CTRS.opened' pos_mensajes='centro'">
+   <param name="C_04" value="id='btnClose' tipo='numérico' interfaz='botón' región='interior' espacio='btnOpenClose' expresión='(0,0,35,30)' fijo='sí' visible='sí' color='blanco' imagen='_STYLE_|class=btnUNADM close|shadowTextColor=rgba(0,0,0,0.2)|shadowTextOffsetY=2|shadowTextBlur=0|textBorder=0' acción='calcular' parámetro='closePanelCtrs()' dibujar-si='CTRS.opened' pos_mensajes='centro'">
+   <param name="C_05" value="id='btnOpenN' tipo='numérico' interfaz='botón' región='interior' espacio='btnOpenCloseN' nombre='Mostrar Ecuación' expresión='(0,0,150,30)' fijo='sí' visible='sí' color='blanco' negrita='sí' fuente puntos='16' imagen='_STYLE_|class=btnUNADM|shadowTextColor=rgba(0,0,0,0.2)|shadowTextOffsetY=2|shadowTextBlur=0|textBorder=0' acción='calcular' parámetro='openPanelCtrsNoth()' dibujar-si='!CTRSN.opened' pos_mensajes='centro'">
+   <param name="C_06" value="id='btnCloseN' tipo='numérico' interfaz='botón' región='interior' espacio='btnOpenCloseN' nombre='Ocultar Ecuación' expresión='(0,0,150,30)' fijo='sí' visible='sí' color='blanco' negrita='sí' fuente puntos='16' imagen='_STYLE_|class=btnUNADM|shadowTextColor=rgba(0,0,0,0.2)|shadowTextOffsetY=2|shadowTextBlur=0|textBorder=0' acción='calcular' parámetro='closePanelCtrsNorth()' dibujar-si='CTRSN.opened' pos_mensajes='centro'">
+   <param name="C_07" value="id='E2_Graf.escala' tipo='numérico' región='interior' espacio='E2_Graf' nombre='_nada_' expresión='(E2_Graf.escala.x,E2_Graf.escala.y,E2_Graf.escala.w,E2_Graf.escala.h)' valor='E2_Graf.escala' incr='0.25*E2_Graf.escala' fijo='sí' visible='no' acción='calcular' parámetro='defPerEsc()\ncalcPer()' parámetro.fuente='Monospaced,PLAIN,12'">
+   <param name="C_08" value="id='n' tipo='numérico' región='interior' espacio='CTRS' nombre='n' expresión='(n.x,n.y,n.w,n.h)' valor='n' incr='1' min='1' max='5' discreto='sí' decimales='0' fijo='sí' visible='sí' acción='calcular' parámetro='contN()\ncalcPer()' parámetro.fuente='Monospaced,PLAIN,12'">
+   <param name="C_09" value="id='a0' tipo='numérico' región='interior' espacio='CTRS' nombre='a0' expresión='(a0.x,a0.y,btn.w,btn.h)' valor='a0' incr='0.5' min='0' decimales='3' fijo='sí' visible='sí' acción='calcular' parámetro='cont.a0=cont.a0+1\ncalcPer.a()\ncalcPer()' parámetro.fuente='Monospaced,PLAIN,12'">
+   <param name="C_10" value="id='a1' tipo='numérico' región='interior' espacio='CTRS' nombre='a1' expresión='(a1.x,a1.y,a1.w,a1.h)' valor='a1' min='0' decimales='3' fijo='sí' visible='sí' acción='calcular' parámetro='cont.a1=cont.a1+1\ncalcPer.a()\ncalcPer()' parámetro.fuente='Monospaced,PLAIN,12' dibujar-si='n>=1'">
+   <param name="C_11" value="id='a2' tipo='numérico' región='interior' espacio='CTRS' nombre='a2' expresión='(a2.x,a2.y,a2.w,a2.h)' valor='a2' incr='0.05' min='0' decimales='3' fijo='sí' visible='sí' acción='calcular' parámetro='cont.a2=cont.a2+1\ncalcPer.a()\ncalcPer()' parámetro.fuente='Monospaced,PLAIN,12' dibujar-si='n>=2'">
+   <param name="C_12" value="id='a3' tipo='numérico' región='interior' espacio='CTRS' nombre='a3' expresión='(a3.x,a3.y,a3.w,a3.h)' valor='a3' incr='0.01' min='0' decimales='3' fijo='sí' visible='sí' acción='calcular' parámetro='cont.a3=cont.a3+1\ncalcPer.a()\ncalcPer()' parámetro.fuente='Monospaced,PLAIN,12' dibujar-si='n>=3'">
+   <param name="C_13" value="id='a4' tipo='numérico' región='interior' espacio='CTRS' nombre='a4' expresión='(a4.x,a4.y,a4.w,a4.h)' valor='a4' incr='0.005' min='0' decimales='3' fijo='sí' visible='sí' acción='calcular' parámetro='cont.a4=cont.a4+1\ncalcPer.a()\ncalcPer()' parámetro.fuente='Monospaced,PLAIN,12' dibujar-si='n>=4'">
+   <param name="C_14" value="id='a5' tipo='numérico' región='interior' espacio='CTRS' nombre='a5' expresión='(a5.x,a5.y,a5.w,a5.h)' valor='a5' incr='0.001' min='0' decimales='3' fijo='sí' visible='sí' acción='calcular' parámetro='cont.a5=cont.a5+1\ncalcPer.a()\ncalcPer()' parámetro.fuente='Monospaced,PLAIN,12' dibujar-si='n>=5'">
+   <param name="C_15" value="id='ang0' tipo='gráfico' espacio='CTRS' tamaño='8' expresión='(ang0.x,ang0.y)' constricción='(x/.5)^2+(y/.5)^2=1'">
+   <param name="C_16" value="id='ang1' tipo='gráfico' espacio='CTRS' tamaño='8' expresión='(ang1.x,ang1.y)' constricción='(x/.5)^2+((y+1.2)/.5)^2=1' dibujar-si='n>=1'">
+   <param name="C_17" value="id='ang2' tipo='gráfico' espacio='CTRS' tamaño='8' expresión='(ang2.x,ang2.y)' constricción='(x/.5)^2+((y+2*1.2)/.5)^2=1' dibujar-si='n>=2'">
+   <param name="C_18" value="id='ang3' tipo='gráfico' espacio='CTRS' tamaño='8' expresión='(ang3.x,ang3.y)' constricción='((x-5.15)/.5)^2+(y/.5)^2=1' dibujar-si='n>=3'">
+   <param name="C_19" value="id='ang4' tipo='gráfico' espacio='CTRS' tamaño='8' expresión='(ang4.x,ang4.y)' constricción='((x-5.15)/.5)^2+((y+1.2)/.5)^2=1' dibujar-si='n>=4'">
+   <param name="C_20" value="id='ang5' tipo='gráfico' espacio='CTRS' tamaño='8' expresión='(ang5.x,ang5.y)' constricción='((x-5.15)/.5)^2+((y+2*1.2)/.5)^2=1' dibujar-si='n>=5'">
+   <param name="A_01" value="id='irAEscena(idxEscena)' algoritmo='sí' algoritmo='sí' hacer='parent.set(&squot;scene&squot;,idxEscena);parent.update()'">
+   <param name="A_02" value="id='initBtns()' algoritmo='sí' algoritmo='sí' hacer='cerrarInfo.w=30;cerrarInfo.h=30;cerrarInfo.x=INFO._w-cerrarInfo.w-1;cerrarInfo.y=1;cerrarInfo.visible=1;;NC=6;CTRS.dy=50;btn.h=CTRS.dy;btn.w=140;gap_x=CTRS._w/2;gap_y=(CTRS._h-btn.h*4)/5;;E2_Graf.escala.x=0;E2_Graf.escala.y=E2_Graf._h-btn.h-18;E2_Graf.escala.w=27;E2_Graf.escala.h=btn.h;;btn_i.x=0;btn_i.y=0;btn_i.w=30;btn_i.h=30;;n.x=(CTRS._w-btn.w)/2;n.y=gap_y;n.w=btn.w;n.h=btn.h;;a0.x=0;a0.y=1*CTRS.dy+2*gap_y;a0.w=btn.w;a0.h=btn.h;;a1.x=0;a1.y=2*CTRS.dy+3*gap_y;a1.w=btn.w;a1.h=btn.h;;a2.x=0;a2.y=3*CTRS.dy+4*gap_y;a2.w=btn.w;a2.h=btn.h;;a3.x=gap_x;a3.y=1*CTRS.dy+2*gap_y;a3.w=btn.w;a3.h=btn.h;;a4.x=gap_x;a4.y=2*CTRS.dy+3*gap_y;a4.w=btn.w;a4.h=btn.h;;a5.x=gap_x;a5.y=3*CTRS.dy+4*gap_y;a5.w=btn.w;a5.h=btn.h'">
+   <param name="A_03" value="id='initEsp()' algoritmo='sí' algoritmo='sí' hacer='INFO.x=(E1._w-INFO._w)/2;INFO.y=(E1._h-INFO._h)/2;;E2_Graf.x=5;E2_Graf.y=5;E2_Graf.visible=1;;EspTxt.x=E1._w-EspTxt._w-10;EspTxt.y=E1._h-EspTxt._h-10;EspTxt.visible=1;;CTRS.x=(E1._w-CTRS_north._w)/2;CTRS.y=(E1._h-CTRS_north._h);;CTRS.x=0;CTRS.y=0;;btnOpenClose.y=(CTRS.y-btnOpenClose._h);btnOpenClose.x=(E1._w-btnOpenClose._w);'">
+   <param name="A_04" value="id='initEscena()' algoritmo='sí' algoritmo='sí' hacer='initBtns();initEsp();openPanelCtrs();;CTRSN.x=(E1._w-CTRS_north._w)/2;CTRSN.y=0;;pi2=pi/2'">
+   <param name="A_05" value="id='openPanelCtrs()' algoritmo='sí' expresión='x' algoritmo='sí' hacer='closePanelCtrsNorth();;CTRS.opened=1;;;CTRS.x=(E1._w-CTRS._w)/2;CTRS.y=(E1._h-CTRS._h);;btnOpenClose.y=(CTRS.y-btnOpenClose._h);btnOpenClose.x=(E1._w-btnOpenClose._w)'">
+   <param name="A_06" value="id='openPanelCtrsNoth()' algoritmo='sí' expresión='x' algoritmo='sí' hacer='closePanelCtrs();;CTRSN.opened=1;;CTRSN.x=(E1._w-CTRS_north._w)/2;CTRSN.y=0;;btnOpenCloseN.y=CTRSN.y+CTRS_north._h;btnOpenCloseN.x=(E1._w-btnOpenCloseN._w);;;_Trace_(&squot;Abriendo panel NORTE&squot;)'">
+   <param name="A_07" value="id='closePanelCtrsNorth()' algoritmo='sí' expresión='x' algoritmo='sí' hacer='CTRS.visible=1;;CTRSN.opened=0;CTRSN.y=-CTRS_north._h;;btnOpenCloseN.y=CTRSN.y+CTRS_north._h;btnOpenCloseN.x=(E1._w-btnOpenCloseN._w);;_Trace_(&squot;Cerrando panel NORTE&squot;)'">
+   <param name="A_08" value="id='closePanelCtrs()' algoritmo='sí' expresión='x' algoritmo='sí' hacer='CTRS.visible=1;;CTRS.opened=0;CTRS.y=E1._h-10;;btnOpenClose.y=(CTRS.y-btnOpenClose._h);btnOpenClose.x=(E1._w-btnOpenClose._w)'">
+   <param name="A_09" value="id='__FIN_TPL_()'">
+   <param name="A_10" value="id='n' vector='sí' evaluar='una-sola-vez' tamaño='5'">
+   <param name="A_11" value="id='a' vector='sí' evaluar='una-sola-vez' tamaño='6'">
+   <param name="A_12" value="id='perEsc' vector='sí' evaluar='una-sola-vez'">
+   <param name="A_13" value="id='initVcts()' algoritmo='sí' algoritmo='sí' inicio='k=0' hacer='res=res+&squot;D03.INFO_Oy[&squot;+k+&squot;]:&squot;+INFO_Oy[k]+c;res=res+&squot;D03.n[&squot;+k+&squot;]:&squot;+n[k]+c;res=res+&squot;D03.a[&squot;+k+&squot;]:&squot;+a[k]+c;res=res+&squot;D03.perEsc[&squot;+k+&squot;]:&squot;+perEsc[k]+c;;k=k+1' mientras='k<6'">
+   <param name="A_14" value="id='initStateVcts()' algoritmo='sí' algoritmo='sí' inicio='k=0' hacer='INFO_Oy[k]=getSCORMStateVar(&squot;D03.INFO_Oy[k]&squot;);n[k]=getSCORMStateVar(&squot;D03.n[k]&squot;);a[k]=getSCORMStateVar(&squot;D03.a[k]&squot;);perEsc[k]=getSCORMStateVar(&squot;D03.perEsc[k]&squot;);;k=k+1' mientras='k<6'">
+   <param name="A_15" value="id='contN()' algoritmo='sí' expresión='cont.n' algoritmo='sí' inicio='j=0;cont.n=0' hacer='n[j]=(n==j)?j:n[j];;cont.n=(n[j]==j)?cont.n+1:cont.n;;j=j+1;' mientras='j<5'">
+   <param name="A_16" value="id='defPerEsc()' algoritmo='sí' algoritmo='sí' inicio='per.E1.esc=0' hacer='perEsc[0]=(E1.escala!=25)&(E1.escala>0.5)?0:perEsc[0];perEsc[1]=(E1.escala<1.3)?1:perEsc[1];perEsc[2]=(E1.escala==0.02)?2:perEsc[2];;per.E1.esc=(perEsc[0]==0)?10:per.E1.esc;per.E1.esc=(perEsc[1]==1)?90:per.E1.esc;per.E1.esc=(perEsc[2]==2)?100:per.E1.esc;'">
+   <param name="A_17" value="id='contANG()' algoritmo='sí' expresión='cont.ang' algoritmo='sí' inicio='per.ang=0' hacer='cond.ang0=(ang0.x!=0);cond.ang1=(ang1.x!=0);cond.ang2=(ang2.x!=-0.5);cond.ang3=(ang3.x!=0);cond.ang4=(ang4.x!=0.5);cond.ang5=(ang5.x!=-0.5);;cont.ang=cond.ang0+cond.ang1+cond.ang2+cond.ang3+cond.ang4+cond.ang5;'">
+   <param name="A_18" value="id='calcPer.a()' algoritmo='sí' algoritmo='sí' inicio='per.a0=0;per.a1=0;per.a2=0;per.a3=0;per.a4=0;per.a5=0' hacer='a[0]=(cont.a0>3)?0:a[0];a[1]=(cont.a1>3)?1:a[1];a[2]=(cont.a2>3)?2:a[2];a[3]=(cont.a3>3)?3:a[3];a[4]=(cont.a4>3)?4:a[4];a[5]=(cont.a5>3)?5:a[5];;per.a0=(a[0]==0)?100:per.a0;per.a1=(a[1]==1)?100:per.a1;per.a2=(a[2]==2)?100:per.a2;per.a3=(a[3]==3)?100:per.a3;per.a4=(a[4]==4)?100:per.a4;per.a5=(a[5]==5)?100:per.a5;;per.a=(per.a0+per.a1+per.a2+per.a3+per.a4+per.a5)/6'">
+   <param name="A_19" value="id='calcPer()' algoritmo='sí' algoritmo='sí' hacer='numCtrs=4;per.n=cont.n*100/5;per.ang=(cont.ang>0)?cont.ang*100/6:per.ang;;perTotal=(per.E1.esc+per.n+per.ang+per.a)/numCtrs;setSCORMPercentage(perTotal)'">
+   <param name="A_20" value="id='getSCORMState()' algoritmo='sí' expresión='res' algoritmo='sí' Local='res,c' inicio='c=&squot;@&squot;' hacer='res=&squot;D03.INFO.visible:&squot;+INFO.visible+c;res=res+&squot;D03.CTRS.opened:&squot;+CTRS.opened+c;res=res+&squot;D03.CTRS.visible:&squot;+CTRS.visible+c;res=res+&squot;D03.CTRSN.opened:&squot;+CTRSN.opened+c;res=res+&squot;D03.CTRSN.visible:&squot;+CTRSN.visible+c;res=res+&squot;D03.E2_Graf.Ox:&squot;+E2_Graf.Ox+c;res=res+&squot;D03.E2_Graf.Oy:&squot;+E2_Graf.Oy+c;res=res+&squot;D03.E2_Graf.escala:&squot;+E2_Graf.escala+c;res=res+&squot;D03.perEsc[0]:&squot;+perEsc[0]+c;res=res+&squot;D03.perEsc[1]:&squot;+perEsc[1]+c;res=res+&squot;D03.perEsc[2]:&squot;+perEsc[2]+c;;res=res+&squot;D03.a0:&squot;+a0+c;res=res+&squot;D03.a1:&squot;+a1+c;res=res+&squot;D03.a2:&squot;+a2+c;res=res+&squot;D03.a3:&squot;+a3+c;res=res+&squot;D03.a4:&squot;+a4+c;res=res+&squot;D03.a5:&squot;+a5+c;res=res+&squot;D03.a[0]:&squot;+a[0]+c;res=res+&squot;D03.a[1]:&squot;+a[1]+c;res=res+&squot;D03.a[2]:&squot;+a[2]+c;res=res+&squot;D03.a[3]:&squot;+a[3]+c;res=res+&squot;D03.a[4]:&squot;+a[4]+c;res=res+&squot;D03.a[5]:&squot;+a[5]+c;res=res+&squot;D03.cont.a0:&squot;+cont.a0+c;res=res+&squot;D03.cont.a1:&squot;+cont.a1+c;res=res+&squot;D03.cont.a2:&squot;+cont.a2+c;res=res+&squot;D03.cont.a3:&squot;+cont.a3+c;res=res+&squot;D03.cont.a4:&squot;+cont.a4+c;res=res+&squot;D03.cont.a5:&squot;+cont.a5+c;;res=res+&squot;D03.ang0.x:&squot;+ang0.x+c;res=res+&squot;D03.ang0.y:&squot;+ang0.y+c;res=res+&squot;D03.ang1.x:&squot;+ang1.x+c;res=res+&squot;D03.ang1.y:&squot;+ang1.y+c;res=res+&squot;D03.ang2.x:&squot;+ang2.x+c;res=res+&squot;D03.ang2.y:&squot;+ang2.y+c;res=res+&squot;D03.ang3.x:&squot;+ang3.x+c;res=res+&squot;D03.ang3.y:&squot;+ang3.y+c;res=res+&squot;D03.ang4.x:&squot;+ang4.x+c;res=res+&squot;D03.ang4.y:&squot;+ang4.y+c;res=res+&squot;D03.ang5.x:&squot;+ang5.x+c;res=res+&squot;D03.ang5.y:&squot;+ang5.y+c;;res=res+&squot;D03.n:&squot;+n+c;res=res+&squot;D03.n[0]:&squot;+n[0]+c;res=res+&squot;D03.n[1]:&squot;+n[1]+c;res=res+&squot;D03.n[2]:&squot;+n[2]+c;res=res+&squot;D03.n[3]:&squot;+n[3]+c;res=res+&squot;D03.n[4]:&squot;+n[4]+c;;'">
+   <param name="A_21" value="id='initStateScorm()' algoritmo='sí' algoritmo='sí' hacer='tmp.INFO.visible=getSCORMStateVar(&squot;D03.INFO.visible&squot;);tmp.CTRS.opened=getSCORMStateVar(&squot;D03.CTRS.opened&squot;);tmp.CTRS.visible=getSCORMStateVar(&squot;D03.CTRS.visible&squot;);tmp.CTRSN.opened=getSCORMStateVar(&squot;D03.CTRSN.opened&squot;);tmp.CTRSN.visible=getSCORMStateVar(&squot;D03.CTRSN.visible&squot;);tmp.E2_Graf.Ox=getSCORMStateVar(&squot;D03.E2_Graf.Ox&squot;) ;tmp.E2_Graf.Oy=getSCORMStateVar(&squot;D03.E2_Graf.Oy&squot;) ;tmp.E2_Graf.escala=getSCORMStateVar(&squot;D03.E2_Graf.escala&squot;) ;tmp.perEsc[0]=getSCORMStateVar(&squot;D03.perEsc[0]&squot;);;tmp.n=getSCORMStateVar(&squot;D03.n&squot;);tmp.a0=getSCORMStateVar(&squot;D03.a0&squot;);tmp.a1=getSCORMStateVar(&squot;D03.a1&squot;);tmp.a2=getSCORMStateVar(&squot;D03.a2&squot;);tmp.a3=getSCORMStateVar(&squot;D03.a3&squot;);tmp.a4=getSCORMStateVar(&squot;D03.a4&squot;);tmp.a5=getSCORMStateVar(&squot;D03.a5&squot;);tmp.cont.a0=getSCORMStateVar(&squot;D03.cont.a0&squot;);tmp.cont.a1=getSCORMStateVar(&squot;D03.cont.a1&squot;);tmp.cont.a2=getSCORMStateVar(&squot;D03.cont.a2&squot;);tmp.cont.a3=getSCORMStateVar(&squot;D03.cont.a3&squot;);tmp.cont.a4=getSCORMStateVar(&squot;D03.cont.a4&squot;);tmp.cont.a5=getSCORMStateVar(&squot;D03.cont.a5&squot;);tmp.a[0]=getSCORMStateVar(&squot;D03.a[0]&squot;);;tmp.ang0.x=getSCORMStateVar(&squot;D03.ang0.x&squot;);tmp.ang0.y=getSCORMStateVar(&squot;D03.ang0.y&squot;);tmp.ang1.x=getSCORMStateVar(&squot;D03.ang1.x&squot;);tmp.ang1.y=getSCORMStateVar(&squot;D03.ang1.y&squot;);tmp.ang2.x=getSCORMStateVar(&squot;D03.ang2.x&squot;);tmp.ang2.y=getSCORMStateVar(&squot;D03.ang2.y&squot;);tmp.ang3.x=getSCORMStateVar(&squot;D03.ang3.x&squot;);tmp.ang3.y=getSCORMStateVar(&squot;D03.ang3.y&squot;);tmp.ang4.x=getSCORMStateVar(&squot;D03.ang4.x&squot;);tmp.ang4.y=getSCORMStateVar(&squot;D03.ang4.y&squot;);tmp.ang5.x=getSCORMStateVar(&squot;D03.ang5.x&squot;);tmp.ang5.y=getSCORMStateVar(&squot;D03.ang5.y&squot;); ;INFO.visible=(tmp.INFO.visible==-1)?tmp.INFO.visible:1;CTRS.opened=(tmp.CTRS.opened!=0)?tmp.CTRS.opened:0;CTRS.visible=(tmp.CTRS.visible!=0)?tmp.CTRS.visible:0;CTRSN.opened=(tmp.CTRSN.opened!=0)?tmp.CTRSN.opened:0;CTRSN.visible=(tmp.CTRSN.visible!=0)?tmp.CTRSN.visible:0;E2_Graf.Ox=(tmp.E2_Graf.Ox==0)?E2_Graf._w/10:tmp.E2_Graf.Ox;E2_Graf.Oy=(tmp.E2_Graf.Oy!=0)?tmp.E2_Graf.Oy:0;E2_Graf.escala=(tmp.E2_Graf.escala==0)?20:tmp.E2_Graf.escala;perEsc[0]=((tmp.perEsc[0]!=0)&(tmp.perEsc[0]!=-1))?tmp.perEsc[0]:-1;perEsc[1]=getSCORMStateVar(&squot;D03.perEsc[1]&squot;);perEsc[2]=getSCORMStateVar(&squot;D03.perEsc[2]&squot;);;n=(tmp.n==0)?2:tmp.n;n[0]=getSCORMStateVar(&squot;D03.n[0]&squot;);n[1]=getSCORMStateVar(&squot;D03.n[1]&squot;);n[2]=getSCORMStateVar(&squot;D03.n[2]&squot;);n[3]=getSCORMStateVar(&squot;D03.n[3]&squot;);n[4]=getSCORMStateVar(&squot;D03.n[4]&squot;);;a0=(tmp.a0==0)?1:tmp.a0;a1=(tmp.a1==0)?0.5:tmp.a1;a2=(tmp.a2==0)?0.1:tmp.a2;a3=(tmp.a3==0)?0.05:tmp.a3;a4=(tmp.a4==0)?0.01:tmp.a4;a5=(tmp.a5==0)?0.02:tmp.a5;cont.a0=(tmp.cont.a0!=0)?tmp.cont.a0:0;cont.a1=(tmp.cont.a1!=0)?tmp.cont.a1:0;cont.a2=(tmp.cont.a2!=0)?tmp.cont.a2:0;cont.a3=(tmp.cont.a3!=0)?tmp.cont.a3:0;cont.a4=(tmp.cont.a4!=0)?tmp.cont.a4:0;cont.a5=(tmp.cont.a5!=0)?tmp.cont.a5:0;a[0]=(tmp.a[0]!=0)&(tmp.a[0]!=-1)?tmp.a[0]:-1;a[1]=getSCORMStateVar(&squot;D03.a[1]&squot;);a[2]=getSCORMStateVar(&squot;D03.a[2]&squot;);a[3]=getSCORMStateVar(&squot;D03.a[3]&squot;);a[4]=getSCORMStateVar(&squot;D03.a[4]&squot;);a[5]=getSCORMStateVar(&squot;D03.a[5]&squot;);;ang0.x=(tmp.ang0.x==0)?0.5:tmp.ang0.x;ang0.y=(tmp.ang0.y==0)?0:tmp.ang0.y;ang1.x=(tmp.ang1.x==0)?-0.5:tmp.ang1.x;ang1.y=(tmp.ang1.y==0)?-1.2:tmp.ang1.y;ang2.x=(tmp.ang2.x==0)?0:tmp.ang2.x;ang2.y=(tmp.ang2.y==0)?-2*1.2-0.5/1.2:tmp.ang2.y;ang3.x=(tmp.ang3.x==0)?0.5+5.15:tmp.ang3.x;ang3.y=(tmp.ang3.y==0)?0:tmp.ang3.y;ang4.x=(tmp.ang4.x==0)?-0.5+5.15:tmp.ang4.x;ang4.y=(tmp.ang4.y==0)?-1.2:tmp.ang4.y;ang5.x=(tmp.ang5.x==0)?0.5+5.15:tmp.ang5.x;ang5.y=(tmp.ang5.y==0)?-2*1.2:tmp.ang5.y;;contN();defPerEsc();contANG();calcPer.a();calcPer()'">
+   <param name="A_22" value="id='__FIN_SCORM_()'">
+   <param name="A_23" value="id='ArcTan(x,y)' algoritmo='sí' expresión='at' algoritmo='sí' inicio='at=(abs(x)>0.000001)?atan(abs(y/x)):pi2' hacer='at=((x<0)&(y>=0))?pi-at:at;at=((x<0)&(y<0))?pi+at:at;at=((x>=0)&(y<0))?2*pi-at:at;'">
+   <param name="A_24" value="id='teta' expresión='ArcTan(x,y)'">
+   <param name="A_25" value="id='r' expresión='sqrt(x*x+y*y)'">
+   <param name="A_26" value="id='u(r,teta)' expresión='r*(r*(r*(r*(r*A5*cos(5*teta+B5)+A4*cos(4*teta+B4))+A3*cos(3*teta+B3))+A2*cos(2*teta+B2))+A1*cos(teta+B1))+c0'">
+   <param name="A_27" value="id='v(r,teta)' expresión='r*(r*(r*(r*(r*A5*sen(5*teta+B5)+A4*sen(4*teta+B4))+A3*sen(3*teta+B3))+A2*sen(2*teta+B2))+A1*sen(teta+B1))+d0'">
+   <param name="A_28" value="id='param()' algoritmo='sí' algoritmo='sí' hacer='b0=ArcTan(ang0.x,ang0.y+0*1.2)/(2*pi);b1=ArcTan(ang1.x,ang1.y+1*1.2)/(2*pi);b2=ArcTan(ang2.x,ang2.y+2*1.2)/(2*pi);b3=ArcTan(ang3.x,ang3.y+3*1.2)/(2*pi);b4=ArcTan(ang4.x,ang4.y+4*1.2)/(2*pi);b5=ArcTan(ang5.x,ang5.y+5*1.2)/(2*pi);c0=a0*cos(2*pi*b0);d0=a0*sen(2*pi*b0);B1=(n>0)?2*pi*b1:0;B2=(n>1)?2*pi*b2:0;B3=(n>2)?2*pi*b3:0;B4=(n>3)?2*pi*b4:0;B5=(n>4)?2*pi*b5:0;A1=(n>0)?a1:0;A2=(n>1)?a2:0;A3=(n>2)?a3:0;A4=(n>3)?a4:0;A5=(n>4)?a5:0'">
+   <param name="A_29" value="id='INICIO' algoritmo='sí' evaluar='una-sola-vez' hacer='initStateScorm();initEscena()'">
+   <param name="A_30" value="id='CALCULOS' algoritmo='sí' evaluar='siempre' hacer='param();contANG();aux_P=(cont.ang>0)?calcPer():0'">
+   <param name="G_01" value="espacio='INFO' tipo='texto' fondo='sí' color='blanco' expresión='[20,5]' texto='Instrucciones' fuente='SansSerif,PLAIN,24' fijo='sí'">
+   <param name="G_02" value="espacio='INFO' tipo='texto' expresión='[5,40]' texto='{\rtf1\uc0{\fonttbl\f0\fcharset0 Times New Roman;\f1\fcharset0 Arial;\f2\fcharset0 Times New Roman;}\f1\fs40 El pulsador n indica el grado del polinomio. Gira los \par controles gr\u225 ficos bi (con i=0, 1, 2, 3, 4, 5) (puntos \par rojos) de\f2\fs44\b\i{\*\mjaformula 0}\f1\fs40\b0\i0 a\f2\fs44\b\i{\*\mjaformula 2\u960 }\f1\fs40\b0\i0 radianes y observa qu\u233  efecto tiene \par en la gr\u225 fica. \u191 Cu\u225 l de estos controles tiene un efecto\par mayor en la gr\u225 fica? \u191 A qu\u233  crees que se deba? \par \u191 Cu\u225 l de ellos corresponde al exponente mayor?\par \par Presiona los pulsadores ai (con i=0, 1, 2, 3, 4, 5) \par y observa cu\u225 l es su efecto en la gr\u225 fica \par correspondiente.\par \par \par }' fuente='SansSerif,PLAIN,20' fijo='sí'">
+   <param name="G_03" value="espacio='E1' tipo='texto' fondo='sí' dibujar-si='0' expresión='[__GRAF__,20]' fijo='sí'">
+   <param name="G_04" value="espacio='E1' tipo='texto' fondo='sí' dibujar-si='0' expresión='[__INFO__,20]' fijo='sí'">
+   <param name="G_05" value="espacio='E1' tipo='imagen' fondo='sí' coord_abs='sí' expresión='(-50,-100)' archivo='imgs/tpl/fondo_01.jpg'">
+   <param name="G_06" value="espacio='E2_Graf' tipo='ecuación' color='2030ac' expresión='u(r,teta)=0' ancho='2'">
+   <param name="G_07" value="espacio='E2_Graf' tipo='ecuación' color='e50e2b' expresión='v(r,teta)=0' ancho='2'">
+   <param name="G_08" value="espacio='CTRS' tipo='curva' color='negro' dibujar-si='n>=s' expresión='(0.5*cos(t),0.5*sen(t)-s*1.2)' familia='s' s.intervalo='[0,2]' s.pasos='2' t.intervalo='[0,2*pi]' t.pasos='16' ancho='2'">
+   <param name="G_09" value="espacio='CTRS' tipo='texto' color='negro' dibujar-si='n>=s' expresión='[btn.w-5,75+s*56]' familia='s' s.intervalo='[0,2]' s.pasos='2' texto='{\rtf1\uc0{\fonttbl\f0\fcharset0 Times New Roman;\f1\fcharset0 Arial;\f2\fcharset0 Arial;}\f1\fs52{\*\mjaformula b{\expr s\decimals 0\fixed1}}\fs48}' fuente='SansSerif,PLAIN,26' fijo='sí'">
+   <param name="G_10" value="espacio='CTRS_north' tipo='texto' dibujar-si='n==1' expresión='[10,10]' texto='{\rtf1\uc0{\fonttbl\f0\fcharset0 Times New Roman;\f1\fcharset0 Times New Roman;\f2\fcharset0 Courier New;\f3\fcharset0 Times New Roman;\f4\fcharset0 Times New Roman;}{\colortbl\red255\green255\blue255;\red32\green48\blue172;\red32\green48\blue58;\red0\green0\blue0;\red238\green16\blue51;}\f1\fs48\b\i\cf0{\*\mjaformula p(z)=c{\subix 0}+c{\subix 1}z{\supix}} donde {\*\mjaformula c{\subix n}=a{\subix n}e{\supix 2\u960 ib{\subix n}} a{\subix n}\u8805 0 \u8704 n}\par Si p = u + iv  y  z = x + iy, entonces {\*\mjaformula p(z)=0} \par si y solo si  \cf1 u(x,y)=0\cf2   \cf0 y\cf3  \cf2  \cf4 v(x,y)=0\cf2\f2\fs56\b0 .  \f3\fs52 \fs28}' fuente='Serif,BOLD+ITALIC,24' fijo='sí'">
+   <param name="G_11" value="espacio='CTRS_north' tipo='texto' dibujar-si='n==2' expresión='[10,10]' texto='{\rtf1\uc0{\fonttbl\f0\fcharset0 Times New Roman;\f1\fcharset0 Times New Roman;\f2\fcharset0 Courier New;\f3\fcharset0 Times New Roman;\f4\fcharset0 Times New Roman;}{\colortbl\red255\green255\blue255;\red32\green48\blue58;\red32\green48\blue172;\red238\green16\blue51;}\f1\fs48\b\i\cf0{\*\mjaformula p(z)=c{\subix 0}+c{\subix 1}z{\supix}+c{\subix 2}z{\supix 2},}  {\*\mjaformula c{\subix n}=a{\subix n}e{\supix 2\u960 ib{\subix n}} a{\subix n}\u8805 0 \u8704 n}\par Si p = u + iv  y  z = x + iy, entonces {\*\mjaformula p(z)=0} \par si y solo si \cf1  \cf2 u(x,y)=0\cf1   \cf0 y\cf1   \cf3 v(x,y)=0\cf1\f2\fs56\b0 .  \f3\fs52 \fs28}' fuente='Serif,BOLD+ITALIC,24' fijo='sí'">
+   <param name="G_12" value="espacio='CTRS_north' tipo='texto' dibujar-si='n==3' expresión='[10,10]' texto='{\rtf1\uc0{\fonttbl\f0\fcharset0 Times New Roman;\f1\fcharset0 Times New Roman;\f2\fcharset0 Courier New;\f3\fcharset0 Times New Roman;\f4\fcharset0 Times New Roman;}{\colortbl\red255\green255\blue255;\red0\green0\blue0;\red32\green48\blue58;\red32\green48\blue172;\red238\green16\blue51;}\f1\fs48\b\i\cf0{\*\mjaformula p(z)=c{\subix 0}+c{\subix 1}z{\supix}+c{\subix 2}z{\supix 2}+c{\subix 3}z{\supix 3}} \par donde {\*\mjaformula c{\subix n}=a{\subix n}e{\supix 2\u960 ib{\subix n}} a{\subix n}\u8805 0 \u8704 n}\par Si p = u + iv  y  z = x + iy, entonces {\*\mjaformula p(z)=0} \par si y solo si\cf1  \cf2  \cf3 u(x,y)=0\cf2   \cf0 y \cf2  \cf4 v(x,y)=0\cf2\f2\fs56\b0 .  \f3\fs52 \fs28}' fuente='Serif,BOLD+ITALIC,24' fijo='sí'">
+   <param name="G_13" value="espacio='CTRS_north' tipo='texto' dibujar-si='n==4' expresión='[10,10]' texto='{\rtf1\uc0{\fonttbl\f0\fcharset0 Times New Roman;\f1\fcharset0 Times New Roman;\f2\fcharset0 Courier New;\f3\fcharset0 Times New Roman;\f4\fcharset0 Times New Roman;}{\colortbl\red255\green255\blue255;\red32\green48\blue58;\red32\green48\blue172;\red0\green0\blue0;\red238\green16\blue51;}\f1\fs48\b\i\cf0 Sea {\*\mjaformula p(z)=c{\subix 0}+c{\subix 1}z{\supix}+c{\subix 2}z{\supix 2}+c{\subix 3}z{\supix 3}+c{\subix 4}z{\supix 4}}  \par donde  {\*\mjaformula c{\subix n}=a{\subix n}e{\supix 2\u960 ib{\subix n}} a{\subix n}\u8805 0 \u8704 n}.\par Si p = u + iv  y  z = x + iy, entonces {\*\mjaformula p(z)=0} \par si y solo si \cf1  \cf2 u(x,y)=0\cf1  \cf3  \cf0 y\cf3  \cf1  \cf4 v(x,y)=0\cf1\f2\fs56\b0 .  \f3\fs52 \fs28}' fuente='Serif,BOLD+ITALIC,24' fijo='sí'">
+   <param name="G_14" value="espacio='CTRS_north' tipo='texto' dibujar-si='n==5' expresión='[10,10]' texto='{\rtf1\uc0{\fonttbl\f0\fcharset0 Times New Roman;\f1\fcharset0 Times New Roman;\f2\fcharset0 Courier New;\f3\fcharset0 Times New Roman;\f4\fcharset0 Times New Roman;}{\colortbl\red255\green255\blue255;\red0\green0\blue0;\red32\green48\blue172;\red32\green48\blue58;\red238\green16\blue51;}\f1\fs48\b\i\cf0 Sea {\*\mjaformula p(z)=c{\subix 0}+c{\subix 1}z{\supix}+c{\subix 2}z{\supix 2}+c{\subix 3}z{\supix 3}+c{\subix 4}z{\supix 4}+c{\subix 5}z{\supix 5}}  \par donde  {\*\mjaformula c{\subix n}=a{\subix n}e{\supix 2\u960 ib{\subix n}} a{\subix n}\u8805 0 \u8704 n}.\par Si p = u + iv  y  z = x + iy, entonces {\*\mjaformula p(z)=0} \par si y solo si \cf1  \cf2 u(x,y)=0 \cf3  \cf0 y\cf3   \cf4 v(x,y)=0\cf3\f2\fs56\b0 .  \f3\fs52 \fs28}' fuente='Serif,BOLD+ITALIC,24' fijo='sí'">
+   <param name="G_15" value="espacio='CTRS' tipo='curva' color='negro' dibujar-si='n>=s+3' expresión='(0.5*cos(t)+5.15,0.5*sen(t)-s*1.2)' familia='s' s.intervalo='[0,2]' s.pasos='2' t.intervalo='[0,2*pi]' t.pasos='16' ancho='2'">
+   <param name="G_16" value="espacio='CTRS' tipo='texto' color='negro' dibujar-si='n>=s+3' expresión='[btn.w+242,75+s*56]' familia='s' s.intervalo='[0,2]' s.pasos='2' texto='{\rtf1\uc0{\fonttbl\f0\fcharset0 Times New Roman;\f1\fcharset0 Arial;\f2\fcharset0 Arial;}\f1\fs52{\*\mjaformula b{\expr s+3\decimals 0\fixed1}}\fs48}' fuente='SansSerif,PLAIN,26' fijo='sí'">
+   <param name="Animación" value="controles='sí' auto='sí' hacer='aux=(CTRS.opened)?openPanelCtrs():closePanelCtrs();auxN=(CTRSN.opened)?closePanelCtrsNorth():openPanelCtrsNorth()'">
+</ajs>
+
+<!------ INICIA LA INFO SOBRE LAS LICENCIAS Y LOS CRÉDITOS. ---------->
+    <a id="btCopyright" class="standardButton" title="Haz clic aquí para consultar los créditos y las condiciones de uso de este recurso." href="#" onclick="document.getElementById('copyright').className='visible';">©</a>
+    <div id="copyright" class="oculto">
+      
+      <div class='innerCopyright'>
+      
+          <a id="btCloseCopyright" class="standardButton" title="Haz clic aquí para cerrar esta ventana." href="#" onclick="document.getElementById('copyright').className='oculto'">×</a>
+  
+          <!-- Créditos UAM  (siempre deben ir en primer lugar) -->
+			<div class="creditos">
+				<h1>
+					Créditos 
+				</h1>
+				<h2>
+					Escena original
+				</h2>
+				<table class="autores" 	>
+					<tr> <td  class="rol"> Diseño del contenido			</td>		<td class="nombre"> Elsa Sirenia Vega Camacho		<br>José Luis Abreu León					</td></tr>
+					<tr> <td  class="rol"> Diseño funcional				</td>		<td class="nombre"> Elsa Sirenia Vega Camacho		<br>José Luis Abreu León</td></tr>
+					<tr> <td  class="rol"> Programación						</td>		<td class="nombre"> Elsa Sirenia Vega Camacho		</td></tr>
+					<!-- Varias personas en el mismo rubro, separar por <br> -->
+					<tr> <td  class="rol"> Asesoría de programación		</td>		<td class="nombre"> 
+																											Leticia Montserrat Vargas Rocha<br>José Luis Abreu León 
+																										
+																									</td></tr>
+					<tr> <td  class="rol"> Diseño gráfico					</td>		<td class="nombre"> Ricardo López Gómez										</td></tr>
+					<tr> <td  class="rol" >Coordinación			</td>		<td class="nombre"> Leticia Montserrat Vargas Rocha</tr>
+				</table>
+	         <h2>
+					Adaptación 
+				</h2>
+				<table class="autores" 	>
+					<tr> <td  class="rol"> Diseño funcional				</td>		<td class="nombre"> Elsa Sirenia Vega Camacho </td></tr>
+					<tr> <td  class="rol"> Programación						</td>		<td class="nombre"> Elsa Sirenia Vega Camacho </td></tr>
+					<!-- Varias personas en el mismo rubro, separar por <br> -->
+					<tr> <td  class="rol"> Asesoría de programación		</td>		<td class="nombre"> Leticia Montserrat Vargas Rocha </td></tr>
+					<tr> <td  class="rol"> Diseño gráfico					</td>		<td class="nombre"> Francisco	Varela Fuentes						</td></tr>
+					<tr> <td  class="rol"> Ilustración					</td>		<td class="nombre"> Francisco	Varela Fuentes						</td></tr>
+					<tr> <td  class="rol" >Coordinación			</td>		<td class="nombre"> Leticia Montserrat Vargas Rocha						</td></tr>
+				</table>}<tr> 
+                
+	         <div class='logos'>
+	            <a href=''>
+	               <img src="../images/info/icns/logoLite.png">
+	            </a>
+	            <a href="http://www.unadmexico.mx/">
+	               <img src="../images/info/icns/logoUNADM.png">
+	            </a>
+	         </div>
+          </div>
+          
+          <!-- Linea separación créditos -->
+          <hr class="linea" />
+     
+          <!-- Aviso licencias -->
+          <div class="licencias">
+          
+				<p class="creativeCommons">Los contenidos de esta unidad didáctica interactiva están bajo una licencia <a href="http://creativecommons.org/licenses/by-nc-sa/2.5/es/" target="_blank">Creative Commons Reconocimiento-NoComercial-CompartirIgual</a>.</p>
+
+				<!--arquimedes (optativo)-->
+				<p>La unidad didáctica fue creada con <a href="http://arquimedes.matem.unam.mx/Descartes5/creditos/conCCL.html" target="_blank">Arquímedes</a>, una herramienta de código abierto.</p>
+
+				<!-- Descartes -->
+				<p>La unidad didáctica contiene escenas elaboradas con Descartes, una herramienta de código abierto.</p>
+
+
+          	<p style='text-align:center'> LITE - UnADM 2015</p>
+          </div>
+      </div>
+    </div> 
+   <!------ TERMINA LA INFO SOBRE LAS LICENCIAS Y LOS CRÉDITOS. ---------->
+ </div>
+</article>
+</body>
+</html>

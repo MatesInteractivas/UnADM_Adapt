@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<recurso 
+	id="_Un_118_TransformacionesLinealesRigidas" 
+	nivel="Licenciatura" 
+	area="Álgebra lineal" 
+	plataforma="HTML 5" 
+	>
+	<titulo><![CDATA[
+		Transformaciones Lineales Rígidas
+	]]></titulo>
+	
+	<Descripcion><![CDATA[
+		Se estudia la representación matricial de transformaciones lineales rígidas en dos dimensiones, es decir, Rotaciones, Proyecciones y Reflexiones. El estudiante puede variar el ángulo de rotación, la pendiente de una recta, elegir un punto, un segmento, o un triángulo y ver gráficamente el efecto que esta transformación tiene, su representación matricial  y las coordenadas de los puntos originales y sus transformados.
+	]]></Descripcion>
+	<tags>
+	<![CDATA[
+		Transformaciones lineales, Rotaciones, Proyecciones, Reflexiones
+	]]></tags>
+</recurso>
+
+<!--
+********************************************************************************
+                               **** Áreas **** 
+Matemáticas 
+	Aritmética
+		Fracciones
+	Álgebra
+		Combinatoria
+		Ecuaciones lineales
+		Ecuaciones polinomiales
+		Polinomios
+		Álgebra lineal
+		Teoría de grupos
+		Álgebra abstracta
+	Geometría
+		Geometría elemental
+		Geometría clásica
+		Geometría analítica
+	Trigonometría 
+	Probabilidad 
+		Cálculo de probabilidades
+		Eventos
+		Variables aleatorias
+		Ley de los grandes números
+		Teorema del límite central
+	Estadística
+		Medidas de tendencia central
+		Muestreo
+		Distribuciones
+		Inferencia
+	Cálculo
+		Funciones 
+		Límites
+		Continuidad
+		Derivadas 
+		Integrales 
+	Teoría de números
+	Teoría de gráficas
+Física
+	Mecánica
+	Electromagnetismo
+	Óptica
+	Físico-química 
+	Termodinámica
+	Mecánica estadística
+	Mecánica cuántica
+	Relatividad
+
+********************************************************************************
+
+********************************************************************************
+                             **** Niveles ****
+
+	Primaria
+	Preescolar
+	Secundaria
+	Bachillerato
+	Licenciatura
+	Posgrado 
+	Maestria
+	Doctorado
+
+********************************************************************************
+
+-->

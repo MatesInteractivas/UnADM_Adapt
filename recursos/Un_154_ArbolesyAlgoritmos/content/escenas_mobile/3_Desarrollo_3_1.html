@@ -1,0 +1,328 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+ 	<link href="../css/html5_mobile.css" rel="stylesheet" type="text/css" media="screen" />
+	<link href="../css/DescHTML5.css" rel="stylesheet" type="text/css" media="screen" />
+	<style>
+		.DescartesAppContainer .DescartesSpace2DContainer .DescartesMenuContainer .DescartesMenuLabel{
+			text-align		: left;
+			padding-left	: 5px;
+			width			: 220px !important;
+		}
+		
+		.DescartesAppContainer .DescartesSpace2DContainer .DescartesMenuContainer select.DescartesMenuSelect{
+			left	: auto !important;
+			right	: 0px !important;
+			width	: 50px !important;
+		}
+	</style>
+	 <script type="text/javascript" src='../javascript/inject_functions_scorms_descartes.js'></script>
+	<script type='text/javascript' src='../lib/descartes-min.js'></script>
+</head>
+
+<body>
+ <!-------- MathJax --- para fórmulas matemáticas ------>	
+	<script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script> 
+
+<article class="course_content_container">
+  
+  <div class="course_content">
+    
+    
+    <!------ INICIA EL CONTENIDO DE LA PÁGINA --------->
+    
+    
+    <!--- Título de la página --->
+    <center><h2>Algunos algoritmos importantes</h2></center>
+    
+    
+	<div class='text_panel'>
+		<!--- Subtítulo (no necesario en introducción) --->
+		<br><h2>Gráficas ponderadas y árboles recubridores</h2>
+    
+		<p>
+			Diremos que una gráfica (no dirigida y sin lazos)
+			es <b>ponderada</b> si cada una de sus aristas
+			tiene un valor numérico asignado. Este valor,
+			al que generalmente llamamos <b>peso</b>,
+			puede representar, por ejemplo, tiempos,
+			distancias, ganancias o costos de recorrido de
+			las propias aristas en el contexto del
+			problema que se está trabajando, entre muchas
+			otras posibilidades.  Como las asitas no
+			tienen orientación, el peso o costo es el
+			mismo en un sentido que en otro, y se considera
+			que el costo entre dos vértices sin arista es
+			infinito.
+		</p>
+
+		<p>
+		        Pensemos en una gráfica ponderada \(G(V_0,E_0)\)
+		        que sea conexa. Como ya hemos mencionado en
+		        secciones anteriores, los árboles son las
+		        gráficas mínimas que permiten que una gráfica
+		        conexa conserve esa propiedad y permiten
+		        recorridos entre cualquier par de vértices. De
+		        esta forma, diremos que un árbol
+		        \(T(V_1,E_1)\) es un <b>árbol recubridor</b>
+		        de \(G\) siempre que \(V_0=V_1\), es decir,
+		        siempre que ambos tengan los mismos vértices.
+		</p>
+		<p>
+		       Los árboles recubridores nos permiten eliminar
+		       redundancias y mantener la gráfica conexa con el
+		       mínimo número de aristas, sin embargo, dada una
+		       gráfica conexa pueden existir varios árboles
+		       recubridores.
+		</p>
+	
+		<p>
+		        Si nuestra gráfica conexa sin lazos no está
+		        ponderada, entonces cualquier árbol recubridor
+		        nos permite conectar todos los vértices de
+		        forma óptima. Sin embargo, si la gráfica está
+		        ponderada la solución no es tan simple, además
+		        de que podemos estar interesados en
+		        recubrimientos de costo mínimo, pero también
+		        de costo máximo.
+		</p>
+
+		<!--- Párrafo --->
+	    <p>
+	    	<span class="instrucciones">
+	    		En el siguiente espacio puedes experimentar
+	    		con gráficas ponderadas generadas aleatoriamente
+	    		y buscar sus árboles recubridores mínimos o
+	    		máximos. Los puntos rojos pueden desplazarse
+	    		de la misma forma que en la sección de
+	    		Inicio. Los pesos de las aristas aparecen como
+	    		números cercanos a ellas.  Una vez generada una
+	    		gráfica ponderada puedes ajustar el número de
+	    		vértices entre 0 y 11 y también es posible
+	    		cambiar la probabilidad de conexión entre
+	    		vértices. Si escojes 0 en este control, la
+	    		gráfica no tendrá vértices, mientras que el
+	    		valor de 1 conectará absolutamente todos los
+	    		vértices de la gráfica.  Para seleccionar o
+	    		eliminar una arista como parte del árbol
+	    		recubridor puedes presionar sobre el punto
+	    		gris que está en el punto medio del segmento
+	    		correspondiente. Si la gráfica resultante de la
+	    		generación aleatoria no es conexa entonces los
+	    		árboles tendrán peso mínimo infinito y no
+	    		serán realizables, si esto sucede aumenta la
+	    		probabilidad de conexión entre aristas y
+	    		oprime Reiniciar.
+	    	</span>
+	    </p>
+		
+		<!--	
+			Ejemplo para incluir una escena de descartes, 
+			el div.Descartes_extern_content es necesario para acomadr bien los elementos  
+		-->
+		<div class="course_extern_content"> 
+			<div class="Descartes_extern_content">
+				<ajs name="Descartes" width=485 height=300 code="Descartes">
+   <param name="tamaño" value="485x300">
+   <param name="image_loader" value="">
+   <param name="expand" value="">
+   <param name="decimal_symbol" value=".">
+   <param name="antialias" value="sí">
+   <param name="deshacer" value="no">
+   <param name="nombre" value="Descartes">
+   <param name="Versión" value="5.356, 2016-05-03">
+   <param name="Idioma" value="español">
+   <param name="Botones" value="créditos=no config=no inicio=no limpiar=no">
+   <param name="E_01" value="tipo='R2' id='E0' fijo='sí' escala='24' O.y='10%' despl_imagen='arr-izq' fondo='dcdbe1' red='no' red10='no' ejes='no' texto='no'">
+   <param name="E_02" value="tipo='R2' id='CTRS' x='CTRS.x' y='CTRS.y' ancho='495' alto='85' fijo='sí' escala='-1' O.x='-50%' O.y='-50%' despl_imagen='arr-izq' fondo='88000000' red='no' red10='no' ejes='no' texto='no'">
+   <param name="E_03" value="tipo='R2' id='CTRS_north' x='CTRSN.x' y='CTRSN.y' ancho='495' alto='70' fijo='sí' escala='-1' O.x='-50%' O.y='-50%' despl_imagen='arr-izq' fondo='88000000' red='no' red10='no' ejes='no' texto='no'">
+   <param name="E_04" value="tipo='R2' id='btnOpenClose' x='btnOpenClose.x' y='btnOpenClose.y' ancho='35' alto='30' fijo='sí' escala='1' O.x='-50%' O.y='-50%' despl_imagen='arr-izq' fondo='ff000000' red='no' red10='no' ejes='no' texto='no'">
+   <param name="E_05" value="tipo='R2' id='btnOpenCloseN' x='btnOpenCloseN.x' y='btnOpenCloseN.y' ancho='35' alto='30' fijo='sí' escala='1' O.x='-50%' O.y='-50%' despl_imagen='arr-izq' fondo='ff000000' red='no' red10='no' ejes='no' texto='no'">
+   <param name="C_01" value="id='btnOpen' tipo='numérico' interfaz='botón' región='interior' espacio='btnOpenClose' expresión='(0,0,35,30)' fijo='sí' visible='sí' fuente puntos='16' imagen='_STYLE_|class=btnUNADM open|shadowTextColor=rgba(0,0,0,0.2)|shadowTextOffsetY=2|shadowTextBlur=0|textBorder=0' acción='calcular' parámetro='openPanelCtrs()' dibujar-si='!CTRS.opened'">
+   <param name="C_02" value="id='btnClose' tipo='numérico' interfaz='botón' región='interior' espacio='btnOpenClose' expresión='(0,0,35,30)' fijo='sí' visible='sí' imagen='_STYLE_|class=btnUNADM close|shadowTextColor=rgba(0,0,0,0.2)|shadowTextOffsetY=2|shadowTextBlur=0|textBorder=0' acción='calcular' parámetro='closePanelCtrs()' dibujar-si='CTRS.opened' pos_mensajes='centro'">
+   <param name="C_03" value="id='btnOpenN' tipo='numérico' interfaz='botón' región='interior' espacio='btnOpenCloseN' expresión='(0,0,35,30)' fijo='sí' visible='sí' fuente puntos='16' imagen='_STYLE_|class=btnUNADM open north|shadowTextColor=rgba(0,0,0,0.2)|shadowTextOffsetY=2|shadowTextBlur=0|textBorder=0' acción='calcular' parámetro='openPanelCtrsNoth()' dibujar-si='!CTRSN.opened' pos_mensajes='centro'">
+   <param name="C_04" value="id='btnCloseN' tipo='numérico' interfaz='botón' región='interior' espacio='btnOpenCloseN' expresión='(0,0,35,30)' fijo='sí' visible='sí' imagen='_STYLE_|class=btnUNADM close north|shadowTextColor=rgba(0,0,0,0.2)|shadowTextOffsetY=2|shadowTextBlur=0|textBorder=0' acción='calcular' parámetro='closePanelCtrsNorth()' dibujar-si='CTRSN.opened' pos_mensajes='centro'">
+   <param name="C_05" value="id='ini' tipo='numérico' interfaz='botón' región='interior' espacio='CTRS' nombre='Reiniciar' expresión='(ini.x,ini.y,ini.w,ini.h)' fijo='sí' visible='sí' color='blanco' color-int='blanco' fuente puntos='20' imagen='_STYLE_|class=btnUNADM <icon> <ALIGNt> 	<IMG>|shadowTextColor=rgba(0,0,0,0.2)|shadowTextOffsetY=2|shadowTextBlur=0|textBorder=0' acción='calcular' parámetro='inipts()\nF=0\niniEdges()' pos_mensajes='centro'">
+   <param name="C_06" value="id='v00' tipo='gráfico' espacio='E0' tamaño='6' expresión='(-10+rnd*20,-5+rnd*10)' constricción='N>0' fijo='sí' dibujar-si='N>0' activo-si='N>0'">
+   <param name="C_07" value="id='v01' tipo='gráfico' espacio='E0' tamaño='6' expresión='(-10+rnd*20,-5+rnd*10)' fijo='sí' dibujar-si='N>1' activo-si='N>1'">
+   <param name="C_08" value="id='v02' tipo='gráfico' espacio='E0' tamaño='6' expresión='(-10+rnd*20,-5+rnd*10)' fijo='sí' dibujar-si='N>2' activo-si='N>2'">
+   <param name="C_09" value="id='v03' tipo='gráfico' espacio='E0' tamaño='6' expresión='(-10+rnd*20,-5+rnd*10)' fijo='sí' dibujar-si='N>3' activo-si='N>3'">
+   <param name="C_10" value="id='v04' tipo='gráfico' espacio='E0' tamaño='6' expresión='(-10+rnd*20,-5+rnd*10)' fijo='sí' dibujar-si='N>4' activo-si='N>4'">
+   <param name="C_11" value="id='v05' tipo='gráfico' espacio='E0' tamaño='6' expresión='(-10+rnd*20,-5+rnd*10)' fijo='sí' dibujar-si='N>5' activo-si='N>5'">
+   <param name="C_12" value="id='v06' tipo='gráfico' espacio='E0' tamaño='6' expresión='(-10+rnd*20,-5+rnd*10)' fijo='sí' dibujar-si='N>6' activo-si='N>6'">
+   <param name="C_13" value="id='v07' tipo='gráfico' espacio='E0' tamaño='6' expresión='(-10+rnd*20,-5+rnd*10)' fijo='sí' dibujar-si='N>7' activo-si='N>7'">
+   <param name="C_14" value="id='v08' tipo='gráfico' espacio='E0' tamaño='6' expresión='(-10+rnd*20,-5+rnd*10)' fijo='sí' dibujar-si='N>8' activo-si='N>8'">
+   <param name="C_15" value="id='v09' tipo='gráfico' espacio='E0' tamaño='6' expresión='(-10+rnd*20,-5+rnd*10)' fijo='sí' dibujar-si='N>9' activo-si='N>9'">
+   <param name="C_16" value="id='v10' tipo='gráfico' espacio='E0' tamaño='6' expresión='(-10+rnd*20,-5+rnd*10)' fijo='sí' dibujar-si='N>10' activo-si='N>10'">
+   <param name="C_17" value="id='N' tipo='numérico' interfaz='menú' región='interior' espacio='CTRS' nombre='Número de vértices' expresión='(N.x,N.y,N.w,N.h)' valor='4' discreto='sí' fijo='sí' visible='no' opciones='0,1,2,3,4,5,6,7,8,9,10,11' acción='calcular' parámetro='inipts()\nF=0\niniEdges()'">
+   <param name="C_18" value="id='P' tipo='numérico' interfaz='menú' región='interior' espacio='CTRS' nombre='Probabilidad de conexión' expresión='(P.x,P.y,P.w,P.h)' valor='4' discreto='sí' fijo='sí' visible='no' opciones='0,.2,.4,.6,.8,1' acción='calcular' parámetro='iniEdges()' pos_mensajes='centro'">
+   <param name="A_01" value="id='irAEscena(idxEscena)' algoritmo='sí' algoritmo='sí' hacer='parent.set(&squot;scene&squot;,idxEscena);parent.update()'">
+   <param name="A_02" value="id='initBtns()' algoritmo='sí' algoritmo='sí' hacer='ini.w=100;ini.h=35;N.w=210;N.h=35;P.w=240;P.h=35;;gap=(CTRS._w-N.w-ini.w)/3;;N.x=gap;N.y=5;P.x=(CTRS._w-P.w)/2;P.y=CTRS._h-N.h-5;ini.x=2*gap+N.w;ini.y=5;'">
+   <param name="A_03" value="id='initEsp()' algoritmo='sí' algoritmo='sí' hacer='CTRS.x=(E0._w-CTRS_north._w)/2;CTRS.y=(E0._h-CTRS_north._h);CTRS.visible=0;;CTRS.x=0;CTRS.y=0;;btnOpenClose.y=(CTRS.y-btnOpenClose._h);btnOpenClose.x=(E0._w-btnOpenClose._w);'">
+   <param name="A_04" value="id='initEscena()' algoritmo='sí' algoritmo='sí' hacer='initBtns();initEsp();openPanelCtrs();openPanelCtrsNoth();;CTRSN.x=(E0._w-CTRS_north._w)/2;CTRSN.y=0;;actpts();iniEdges();F=0;'">
+   <param name="A_05" value="id='openPanelCtrs()' algoritmo='sí' expresión='x' algoritmo='sí' hacer='CTRS.opened=1;;CTRS.x=(E0._w-CTRS._w)/2;CTRS.y=(E0._h-CTRS._h);;btnOpenClose.y=(CTRS.y-btnOpenClose._h);btnOpenClose.x=(E0._w-btnOpenClose._w)'">
+   <param name="A_06" value="id='openPanelCtrsNoth()' algoritmo='sí' expresión='x' algoritmo='sí' hacer='CTRSN.opened=1;;CTRSN.x=(E0._w-CTRS_north._w)/2;CTRSN.y=0;;btnOpenCloseN.y=CTRSN.y+CTRS_north._h;btnOpenCloseN.x=(E0._w-btnOpenCloseN._w);;;_Trace_(&squot;Abriendo panel NORTE&squot;)'">
+   <param name="A_07" value="id='closePanelCtrsNorth()' algoritmo='sí' expresión='x' algoritmo='sí' hacer='CTRS.visible=1;;CTRSN.opened=0;CTRSN.y=-CTRS_north._h;;btnOpenCloseN.y=CTRSN.y+CTRS_north._h;btnOpenCloseN.x=(E0._w-btnOpenCloseN._w);;_Trace_(&squot;Cerrando panel NORTE&squot;)'">
+   <param name="A_08" value="id='closePanelCtrs()' algoritmo='sí' expresión='x' algoritmo='sí' hacer='CTRS.visible=1;;CTRS.opened=0;CTRS.y=E0._h;;btnOpenClose.y=(CTRS.y-btnOpenClose._h);btnOpenClose.x=(E0._w-btnOpenClose._w)'">
+   <param name="A_09" value="id='__FIN_TPL_()'">
+   <param name="A_10" value="id='inipts()' algoritmo='sí' expresión='1' algoritmo='sí' hacer='v00.x=-10+rnd*20;v00.y=-5+rnd*10;v01.x=-10+rnd*20;v01.y=-5+rnd*10;v02.x=-10+rnd*20;v02.y=-5+rnd*10;v03.x=-10+rnd*20;v03.y=-5+rnd*10;v04.x=-10+rnd*20;v04.y=-5+rnd*10;v05.x=-10+rnd*20;v05.y=-5+rnd*10;v06.x=-10+rnd*20;v06.y=-5+rnd*10;v07.x=-10+rnd*20;v07.y=-5+rnd*10;v08.x=-10+rnd*20;v08.y=-5+rnd*10;v09.x=-10+rnd*20;v09.y=-5+rnd*10;v10.x=-10+rnd*20;v10.y=-5+rnd*10;'">
+   <param name="A_11" value="id='actpts()' algoritmo='sí' expresión='1' algoritmo='sí' hacer='Vx[0]=v00.x;Vy[0]=v00.y;Vx[1]=v01.x;Vy[1]=v01.y;Vx[2]=v02.x;Vy[2]=v02.y;Vx[3]=v03.x;Vy[3]=v03.y;Vx[4]=v04.x;Vy[4]=v04.y;Vx[5]=v05.x;Vy[5]=v05.y;Vx[6]=v06.x;Vy[6]=v06.y;Vx[7]=v07.x;Vy[7]=v07.y;Vx[8]=v08.x;Vy[8]=v08.y;Vx[9]=v09.x;Vy[9]=v09.y;Vx[10]=v10.x;Vy[10]=v10.y;;'">
+   <param name="A_12" value="id='Vx' vector='sí' evaluar='una-sola-vez' tamaño='12' expresión='Vx[0]=0;Vx[1]=0;Vx[2]=0'">
+   <param name="A_13" value="id='Vy' vector='sí' evaluar='una-sola-vez' tamaño='12' expresión='Vy[0]=0;Vy[1]=0;Vy[2]=0'">
+   <param name="A_14" value="id='M' vector='sí' matriz='sí' evaluar='una-sola-vez' columnas='12' filas='12' expresión=';'">
+   <param name="A_15" value="id='w' vector='sí' matriz='sí' evaluar='una-sola-vez' columnas='11' filas='11' expresión='w[0,0]=0;w[1,0]=0;w[2,0]=0;w[0,1]=0;w[1,1]=0;w[2,1]=0;w[0,2]=0;w[1,2]=0;w[2,2]=0;'">
+   <param name="A_16" value="id='tmin' vector='sí' evaluar='una-sola-vez' tamaño='12'">
+   <param name="A_17" value="id='tmax' vector='sí' evaluar='una-sola-vez' tamaño='12'">
+   <param name="A_18" value="id='tminw' vector='sí' evaluar='una-sola-vez' tamaño='12'">
+   <param name="A_19" value="id='tmaxw' vector='sí' evaluar='una-sola-vez' tamaño='12'">
+   <param name="A_20" value="id='actpts()' algoritmo='sí' expresión='1' algoritmo='sí' hacer='Vx[0]=v00.x;Vy[0]=v00.y;Vx[1]=v01.x;Vy[1]=v01.y;Vx[2]=v02.x;Vy[2]=v02.y;Vx[3]=v03.x;Vy[3]=v03.y;Vx[4]=v04.x;Vy[4]=v04.y;Vx[5]=v05.x;Vy[5]=v05.y;Vx[6]=v06.x;Vy[6]=v06.y;Vx[7]=v07.x;Vy[7]=v07.y;Vx[8]=v08.x;Vy[8]=v08.y;Vx[9]=v09.x;Vy[9]=v09.y;Vx[10]=v10.x;Vy[10]=v10.y;'">
+   <param name="A_21" value="id='f(x,y)' algoritmo='sí' expresión='z' algoritmo='sí' Local='z' hacer='z=M[x,y];'">
+   <param name="A_22" value="id='iniEdges()' algoritmo='sí' expresión='1' algoritmo='sí' Local='i' inicio='i=0' hacer='setM(i);i=i+1' mientras='i<11'">
+   <param name="A_23" value="id='setM(x)' algoritmo='sí' expresión='1' algoritmo='sí' Local='j' inicio='j=x+1' hacer='M[x,j]=ent(P*.2+rnd-.0001);w[x,j]=1+ent(rnd*21);j=j+1' mientras='j<11'">
+   <param name="A_24" value="id='belongs(w,z)' algoritmo='sí' expresión='2' algoritmo='sí' Local='i,x' inicio='i=0' hacer='x=check(i,w,z,.5);M[i,x]=(M[i,x]=1)?2:1;i=i+1' mientras='(i<N)&(x=11)'">
+   <param name="A_25" value="id='check(i,w,z,e)' algoritmo='sí' expresión='b' algoritmo='sí' Local='b,d,j' inicio='j=i+1;b=11' hacer='d=dist(Vx[j],Vx[i],w,Vy[j],Vy[i],z);b=((d<e)&(M[i,j]>0))?j:b;j=j+1' mientras='j<N'">
+   <param name="A_26" value="id='dist(ax,bx,cx,ay,by,cy)' algoritmo='sí' expresión='D' algoritmo='sí' Local='pmx,pmy,D' hacer='pmx=(ax+bx)/2;pmy=(ay+by)/2;D= sqrt(sqr(pmx-cx)+sqr(pmy-cy))'">
+   <param name="A_27" value="id='actsuma()' algoritmo='sí' expresión='1' algoritmo='sí' Local='i' inicio='i=0; F=0' hacer='F=F+suma(i);i=i+1' mientras='i<N'">
+   <param name="A_28" value="id='suma(x)' algoritmo='sí' expresión='Z' algoritmo='sí' Local='Z,s' inicio='s=x; Z=0' hacer='Z=(f(x,s)=2)?Z+w[x,s]:Z;s=s+1' mientras='s<N'">
+   <param name="A_29" value="id='cleanmin()' algoritmo='sí' expresión='1' algoritmo='sí' Local='i' inicio='i=0' hacer='tmin[i]=0;tminw[i]=0;i=i+1' mientras='i<12'">
+   <param name="A_30" value="id='cleanmax()' algoritmo='sí' expresión='1' algoritmo='sí' Local='i' inicio='i=0' hacer='tmax[i]=0;tmaxw[i]=0;i=i+1' mientras='i<12'">
+   <param name="A_31" value="id='calcmin()' algoritmo='sí' expresión='1' algoritmo='sí' Local='i' inicio='i=0;cleanmin();tmin[0]=0;tminw[0]=0' hacer='i=i+1;tmin[i]=11;tminw[i]=999999;setmins(i);' mientras='i<N-1'">
+   <param name="A_32" value="id='setmins(n)' algoritmo='sí' expresión='1' algoritmo='sí' Local='i' inicio='i=0' hacer='setmin(i,n);i=i+1' mientras='i<n'">
+   <param name="A_33" value="id='setmin(x,n)' algoritmo='sí' algoritmo='sí' Local='i,W,C' inicio='i=0' hacer='aux=&squot;x<n indice de tmin[0..n-1] y n la siguiente posición&squot;;W=(tmin[x]<i)?w[tmin[x],i]:w[i,tmin[x]];C=(tmin[x]<i)?M[tmin[x],i]:M[i,tmin[x]];tmin[n]=((W<tminw[n])&(nominT(i,n))&C>0)?i:tmin[n];tminw[n]=((W<tminw[n])&(nominT(i,n))&C>0)?W:tminw[n];i=i+1' mientras='i<N'">
+   <param name="A_34" value="id='sigmamin()' algoritmo='sí' expresión='1' algoritmo='sí' Local='i' inicio='i=0;pmin=0' hacer='pmin=pmin+tminw[i];i=i+1' mientras='i<11'">
+   <param name="A_35" value="id='nominT(x,n)' algoritmo='sí' expresión='noe' algoritmo='sí' Local='i,noe' inicio='i=0;noe=1' hacer='noe=(tmin[i]=x)?0:noe;i=i+1' mientras='i<n'">
+   <param name="A_36" value="id='calcmax()' algoritmo='sí' expresión='1' algoritmo='sí' Local='i' inicio='i=0;cleanmax();tmax[0]=0;tmaxw[0]=0' hacer='i=i+1;tmax[i]=11;tmaxw[i]=0;setmaxs(i);' mientras='i<N-1'">
+   <param name="A_37" value="id='setmaxs(n)' algoritmo='sí' expresión='1' algoritmo='sí' Local='i' inicio='i=0' hacer='setmax(i,n);i=i+1' mientras='i<n'">
+   <param name="A_38" value="id='setmax(x,n)' algoritmo='sí' algoritmo='sí' Local='i,W,C' inicio='i=0' hacer='aux=&squot;x<n indice de tmax[0..n-1] y n la siguiente posición&squot;;W=(tmax[x]<i)?w[tmax[x],i]:w[i,tmax[x]];C=(tmax[x]<i)?M[tmax[x],i]:M[i,tmax[x]];tmax[n]=((W>tmaxw[n])&(nomaxT(i,n))&C>0)?i:tmax[n];tmaxw[n]=((W>tmaxw[n])&(nomaxT(i,n))&C>0)?W:tmaxw[n];i=i+1' mientras='i<N'">
+   <param name="A_39" value="id='sigmamax()' algoritmo='sí' expresión='1' algoritmo='sí' Local='i' inicio='i=0;pmax=0' hacer='pmax=pmax+tmaxw[i];i=i+1' mientras='i<11'">
+   <param name="A_40" value="id='nomaxT(x,n)' algoritmo='sí' expresión='noe' algoritmo='sí' Local='i,noe' inicio='i=0;noe=1' hacer='noe=(tmax[i]=x)?0:noe;i=i+1' mientras='i<n'">
+   <param name="A_41" value="id='INICIO' algoritmo='sí' evaluar='una-sola-vez' hacer='initEscena()'">
+   <param name="A_42" value="id='CALCULOS' algoritmo='sí' evaluar='siempre' hacer='debug=((E0.mouse_clicked)?belongs(E0.mouse_x,E0.mouse_y):0);actpts();E0.mouse_clicked=0;actsuma();calcmin();calcmax();sigmamin();sigmamax()'">
+   <param name="G_01" value="espacio='CTRS_north' tipo='texto' color='blanco' expresión='[5,5]' texto='Suma de pesos: [F]\nPeso mínimo alcanzable: [(pmin>999998)?&squot;∞&squot;:pmin]\nPeso máximo alcanzable: [pmax]' fuente='SansSerif,BOLD,17' fijo='no'">
+   <param name="G_02" value="espacio='E0' tipo='punto' color='grisClaro' dibujar-si='(f(0,s)>0)&(s<N)' expresión='((Vx[0]+Vx[s])/2,(Vy[0]+Vy[s])/2)' familia='s' s.intervalo='[1,10]' s.pasos='9' fuente='SansSerif,BOLD,17' fijo='no' tamaño='8'">
+   <param name="G_03" value="espacio='E0' tipo='punto' color='grisClaro' dibujar-si='(f(1,s)>0)&(s<N)' expresión='((Vx[1]+Vx[s])/2,(Vy[1]+Vy[s])/2)' familia='s' s.intervalo='[2,10]' s.pasos='8' fijo='no' tamaño='8'">
+   <param name="G_04" value="espacio='E0' tipo='punto' color='grisClaro' dibujar-si='(f(2,s)>0)&(s<N)' expresión='((Vx[2]+Vx[s])/2,(Vy[2]+Vy[s])/2)' familia='s' s.intervalo='[3,10]' s.pasos='7' fijo='no' tamaño='8'">
+   <param name="G_05" value="espacio='E0' tipo='punto' color='grisClaro' dibujar-si='(f(3,s)>0)&(s<N)' expresión='((Vx[3]+Vx[s])/2,(Vy[3]+Vy[s])/2)' familia='s' s.intervalo='[4,10]' s.pasos='6' fijo='no' tamaño='8'">
+   <param name="G_06" value="espacio='E0' tipo='segmento' color='8888ff' dibujar-si='(f(0,s)=1)&(s<N)' expresión='(Vx[0],Vy[0])(Vx[s],Vy[s])' familia='s' s.intervalo='[1,10]' s.pasos='9' texto='[w[0,s]]' fuente='SansSerif,BOLD,17' fijo='no' ancho='3'">
+   <param name="G_07" value="espacio='E0' tipo='segmento' color='8888ff' dibujar-si='(f(1,s)=1)&(s<N)' expresión='(Vx[1],Vy[1])(Vx[s],Vy[s])' familia='s' s.intervalo='[2,10]' s.pasos='8' texto='[w[1,s]]' fuente='SansSerif,BOLD,17' fijo='no' ancho='3'">
+   <param name="G_08" value="espacio='E0' tipo='segmento' color='8888ff' dibujar-si='(f(2,s)=1)&(s<N)' expresión='(Vx[2],Vy[2])(Vx[s],Vy[s])' familia='s' s.intervalo='[3,10]' s.pasos='7' texto='[w[2,s]]' fuente='SansSerif,BOLD,17' fijo='no' ancho='3'">
+   <param name="G_09" value="espacio='E0' tipo='segmento' color='8888ff' dibujar-si='(f(3,s)=1)&(s<N)' expresión='(Vx[3],Vy[3])(Vx[s],Vy[s])' familia='s' s.intervalo='[4,10]' s.pasos='6' texto='[w[3,s]]' fuente='SansSerif,BOLD,17' fijo='no' ancho='3'">
+   <param name="G_10" value="espacio='E0' tipo='segmento' color='8888ff' dibujar-si='(f(4,s)=1)&(s<N)' expresión='(Vx[4],Vy[4])(Vx[s],Vy[s])' familia='s' s.intervalo='[5,10]' s.pasos='6' texto='[w[4,s]]' fuente='SansSerif,BOLD,17' fijo='no' ancho='3'">
+   <param name="G_11" value="espacio='E0' tipo='segmento' color='8888ff' dibujar-si='(f(5,s)=1)&(s<N)' expresión='(Vx[5],Vy[5])(Vx[s],Vy[s])' familia='s' s.intervalo='[6,10]' s.pasos='4' texto='[w[5,s]]' fuente='SansSerif,BOLD,17' fijo='no' ancho='3'">
+   <param name="G_12" value="espacio='E0' tipo='segmento' color='8888ff' dibujar-si='(f(6,s)=1)&(s<N)' expresión='(Vx[6],Vy[6])(Vx[s],Vy[s])' familia='s' s.intervalo='[7,10]' s.pasos='3' texto='[w[6,s]]' fuente='SansSerif,BOLD,17' fijo='no' ancho='3'">
+   <param name="G_13" value="espacio='E0' tipo='segmento' color='8888ff' dibujar-si='(f(7,s)=1)&(s<N)' expresión='(Vx[7],Vy[7])(Vx[s],Vy[s])' familia='s' s.intervalo='[8,10]' s.pasos='2' texto='[w[7,s]]' fuente='SansSerif,BOLD,17' fijo='no' ancho='3'">
+   <param name="G_14" value="espacio='E0' tipo='segmento' color='8888ff' dibujar-si='(f(8,s)=1)&(s<N)' expresión='(Vx[8],Vy[8])(Vx[s],Vy[s])' familia='s' s.intervalo='[9,10]' s.pasos='1' texto='[w[8,s]]' fuente='SansSerif,BOLD,17' fijo='no' ancho='3'">
+   <param name="G_15" value="espacio='E0' tipo='segmento' color='8888ff' dibujar-si='(f(9,s)=1)&(s<N)' expresión='(Vx[9],Vy[9])(Vx[s],Vy[s])' familia='s' s.intervalo='[10,10]' s.pasos='1' texto='[w[9,s]]' fuente='SansSerif,BOLD,17' fijo='no' ancho='3'">
+   <param name="G_16" value="espacio='E0' tipo='segmento' color='azul' dibujar-si='(f(0,s)=2)&(s<N)' expresión='(Vx[0],Vy[0])(Vx[s],Vy[s])' familia='s' s.intervalo='[1,10]' s.pasos='9' texto='[w[0,s]]' fuente='SansSerif,BOLD,17' fijo='no' ancho='5'">
+   <param name="G_17" value="espacio='E0' tipo='segmento' color='azul' dibujar-si='(f(1,s)=2)&(s<N)' expresión='(Vx[1],Vy[1])(Vx[s],Vy[s])' familia='s' s.intervalo='[2,10]' s.pasos='8' texto='[w[1,s]]' fuente='SansSerif,BOLD,17' fijo='no' ancho='5'">
+   <param name="G_18" value="espacio='E0' tipo='segmento' color='azul' dibujar-si='(f(2,s)=2)&(s<N)' expresión='(Vx[2],Vy[2])(Vx[s],Vy[s])' familia='s' s.intervalo='[3,10]' s.pasos='7' texto='[w[2,s]]' fuente='SansSerif,BOLD,17' fijo='no' ancho='5'">
+   <param name="G_19" value="espacio='E0' tipo='segmento' color='azul' dibujar-si='(f(3,s)=2)&(s<N)' expresión='(Vx[3],Vy[3])(Vx[s],Vy[s])' familia='s' s.intervalo='[4,10]' s.pasos='6' texto='[w[3,s]]' fuente='SansSerif,BOLD,17' fijo='no' ancho='5'">
+   <param name="G_20" value="espacio='E0' tipo='segmento' color='azul' dibujar-si='(f(4,s)=2)&(s<N)' expresión='(Vx[4],Vy[4])(Vx[s],Vy[s])' familia='s' s.intervalo='[5,10]' s.pasos='5' texto='[w[4,s]]' fuente='SansSerif,BOLD,17' fijo='no' ancho='5'">
+   <param name="G_21" value="espacio='E0' tipo='segmento' color='azul' dibujar-si='(f(5,s)=2)&(s<N)' expresión='(Vx[5],Vy[5])(Vx[s],Vy[s])' familia='s' s.intervalo='[6,10]' s.pasos='4' texto='[w[5,s]]' fuente='SansSerif,BOLD,17' fijo='no' ancho='5'">
+   <param name="G_22" value="espacio='E0' tipo='segmento' color='azul' dibujar-si='(f(6,s)=2)&(s<N)' expresión='(Vx[6],Vy[6])(Vx[s],Vy[s])' familia='s' s.intervalo='[7,10]' s.pasos='3' texto='[w[6,s]]' fuente='SansSerif,BOLD,17' fijo='no' ancho='5'">
+   <param name="G_23" value="espacio='E0' tipo='segmento' color='azul' dibujar-si='(f(7,s)=2)&(s<N)' expresión='(Vx[7],Vy[7])(Vx[s],Vy[s])' familia='s' s.intervalo='[8,10]' s.pasos='2' texto='[w[7,s]]' fuente='SansSerif,BOLD,17' fijo='no' ancho='5'">
+   <param name="G_24" value="espacio='E0' tipo='segmento' color='azul' dibujar-si='(f(8,s)=2)&(s<N)' expresión='(Vx[8],Vy[8])(Vx[s],Vy[s])' familia='s' s.intervalo='[9,10]' s.pasos='1' texto='[w[8,s]]' fuente='SansSerif,BOLD,17' fijo='no' ancho='5'">
+   <param name="G_25" value="espacio='E0' tipo='segmento' color='azul' dibujar-si='(f(9,s)=2)&(s<N)' expresión='(Vx[9],Vy[9])(Vx[s],Vy[s])' familia='s' s.intervalo='[10,10]' s.pasos='1' texto='[w[9,s]]' fuente='SansSerif,BOLD,17' fijo='no' ancho='3'">
+   <param name="G_26" value="espacio='E0' tipo='texto' dibujar-si='0' expresión='[230,10]' texto='Peso mínimo alcanzable: [(pmin>999998)?&squot;∞&squot;:pmin]' fuente='SansSerif,BOLD,21' fijo='no'">
+   <param name="G_27" value="espacio='E0' tipo='texto' dibujar-si='0' expresión='[230,30]' texto='Peso máximo alcanzable: [pmax]' fuente='SansSerif,BOLD,21' fijo='no'">
+</ajs>
+			</div>
+		</div>
+	<!-- Fin bloque de descartes -->
+
+		<p>
+		  Una vez que explores las formas de encontrar árboles
+		  recubridores minimos o máximos es conveniente que
+		  conozcas los algoritmos de Kruskal y Prim que se
+		  presentan a continuación. Entonces podrás regresar a
+		  la escena anterior y, realizando varios ejemplos,
+		  verificar que ambos algoritmos producen álboles
+		  recubridores con peso o costo óptimos.
+		</p>
+
+
+    <!------ TERMINA EL CONTENIDO DE LA PÁGINA --------->
+</div>
+
+
+
+  <!------ INICIA LA INFO SOBRE LAS LICENCIAS Y LOS CRÉDITOS. ---------->
+    <a id="btCopyright" class="standardButton" title="Haz clic aquí para consultar los créditos y las condiciones de uso de este recurso." href="#" onclick="document.getElementById('copyright').className='visible';">©</a>
+    <div id="copyright" class="oculto">
+      
+      <div class='innerCopyright'>
+      
+          <a id="btCloseCopyright" class="standardButton" title="Haz clic aquí para cerrar esta ventana." href="#" onclick="document.getElementById('copyright').className='oculto'">×</a>
+  
+          <!-- Créditos UAM  (siempre deben ir en primer lugar) -->
+			<div class="creditos">
+				<h1>
+					Créditos 
+				</h1>
+				<h2>
+					Escena original
+				</h2>				<table class="autores" 	>
+					<tr> <td  class="rol"> Diseño del contenido			</td>		<td class="nombre">Elsa Sirenia Vega Camacho</td></tr>
+					<tr> <td  class="rol"> Diseño funcional				</td>		<td class="nombre">Elsa Sirenia Vega Camacho</td></tr>
+					<tr> <td  class="rol"> Programación				</td>		<td class="nombre">Elsa Sirenia Vega Camacho</td></tr>
+					<!-- Varias personas en el mismo rubro, separar por <br> -->
+					<tr> <td  class="rol"> Asesoría de programación		</td>		<td class="nombre">Juan José Rivaud Gallardo</td></tr>		
+					<tr> <td  class="rol"> Diseño gráfico			</td>		<td class="nombre"> Ricardo López Gómez	</td></tr>
+					<tr> <td  class="rol" >Coordinación			</td>		<td class="nombre"> Leticia Montserrat Vargas Rocha</td></tr>
+				</table>
+				<h2>
+					Adaptación 
+				</h2>
+				<table class="autores" 	>
+					<tr> <td  class="rol"> Diseño funcional				</td>		<td class="nombre">Elsa Sirenia Vega Camacho</td></tr>
+					<tr> <td  class="rol"> Programación				</td>		<td class="nombre">Elsa Sirenia Vega Camacho</td></tr>
+					<!-- Varias personas en el mismo rubro, separar por <br> -->
+					<tr> <td  class="rol"> Asesoría de programación			</td>		<td class="nombre">Leticia Montserrat Vargas Rocha</td></tr>
+					<tr> <td  class="rol"> Diseño gráfico				</td>		<td class="nombre"> Francisco	Varela Fuentes						</td></tr>
+					<tr> <td  class="rol" >Coordinación				</td>		<td class="nombre"> Leticia Montserrat Vargas Rocha						</td></tr>
+		<tr> <td  class="rol" >Desarrollo del contenedor					</td>		<td class="nombre"> Oscar Escamilla González</td></tr>
+				</table>
+	         
+	         <div class='logos'>
+	            <a href=''>
+	               <img src="../images/info/icns/logoLite.png">
+	            </a>
+	            <a href="http://www.unadmexico.mx/">
+	               <img src="../images/info/icns/logoUNADM.png">
+	            </a>
+	         </div>
+          </div>
+          
+          <!-- Linea separación créditos -->
+          <hr class="linea" />
+     
+          <!-- Aviso licencias -->
+          <div class="licencias">
+          
+				<p class="creativeCommons">Los contenidos de esta unidad didáctica interactiva están bajo una licencia <a href="http://creativecommons.org/licenses/by-nc-sa/2.5/es/" target="_blank">Creative Commons Reconocimiento-NoComercial-CompartirIgual</a>.</p>
+
+				<!--arquimedes (optativo)-->
+				<p>La unidad didáctica fue creada con <a href="http://arquimedes.matem.unam.mx/Descartes5/creditos/conCCL.html" target="_blank">Arquímedes</a>, una herramienta de código abierto.</p>
+
+				<!-- Descartes -->
+				<p>La unidad didáctica contiene escenas elaboradas con Descartes, una herramienta de código abierto.</p>
+
+
+          	<p style='text-align:center'> LITE - UnADM 2014</p>
+          </div>
+      </div>
+    </div> 
+   <!------ TERMINA LA INFO SOBRE LAS LICENCIAS Y LOS CRÉDITOS. ---------->
+  
+  
+  </div>
+  
+  
+</article>
+
+
+</body>
+
+</html>

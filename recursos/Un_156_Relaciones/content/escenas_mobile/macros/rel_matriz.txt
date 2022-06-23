@@ -1,0 +1,16 @@
+tipo_de_macro=R2
+Idioma=español
+id='RELS' matriz='sí' evaluar='una-sola-vez' columnas='10' filas='2' expresión=';' 
+id='MATRIZ' matriz='sí' evaluar='una-sola-vez' columnas='10' filas='10' 
+id='setSelected(idxSel)' algoritmo='sí' local='isSel' hacer='isSel=(idxSel>=0)&(idxSel<RELS.n);selected=(isSel)?idxSel:-1;;sel.M.row=(isSel)?RELS[idxSel,0]:0;sel.M.col=(isSel)?RELS[idxSel,1]:0' 
+id='actualizaMatriz()' algoritmo='sí' expresión='x' local='i,row,col' inicio='actualizaMatriz_Aux();i=0' hacer='row=max(0,RELS[i,0]);col=max(0,RELS[i,1]);MATRIZ[row,col]=(RELS.n>0);i=i+1' mientras='i<RELS.n' 
+id='actualizaMatriz_Aux()' algoritmo='sí' expresión='x' local='i,maxI,ii,ij' inicio='i=0;maxI=(rows*cols);' hacer='ii=ent(i/cols);ij=i%cols;MATRIZ[ii,ij]=0;;i=i+1' mientras='i<maxI' 
+id='getElementoMatriz(idx)' algoritmo='sí' expresión='1' hacer='row=ent(idx/cols);col=idx%cols' 
+id='initDBG()' algoritmo='sí' expresión='0' hacer='cols=5;rows=5;;idxR=0;RELS[idxR,0]=0;RELS[idxR,1]=0;;idxR=idxR+1;RELS[idxR,0]=1;RELS[idxR,1]=1;;;idxR=idxR+1;RELS[idxR,0]=2;RELS[idxR,1]=4;;RELS.n=idxR+1;;actualizaMatriz();;;setSelected(ent(rnd*RELS.n))' 
+id='INICIO' algoritmo='sí' evaluar='una-sola-vez' hacer='mTxt.x=10;mTxt.y=10;selected=-1;;sel.M.col=-1;sel.M.col=-1;;col=0;row=0;;font_size=24;;init_DBG()' 
+id='CALCULOS' algoritmo='sí' evaluar='siempre' 
+espacio='E1' tipo='texto' fondo='sí' color='20303a' expresión='[mTxt.x+(s+1)*font_size,mTxt.y]' familia='s' s.intervalo='[0,cols-1]' s.pasos='cols-1' texto='[s+1]' decimales='3' fijo='no' ancho='1' fuente='Monospaced,BOLD,24' info='HEAD COLUMNAS' 
+espacio='E1' tipo='texto' fondo='sí' color='20303a' expresión='[mTxt.x,mTxt.y+(s+1)*font_size]' familia='s' s.intervalo='[0,rows-1]' s.pasos='rows-1' texto='[s+1]' decimales='3' fijo='no' ancho='1' fuente='Monospaced,BOLD,24' info='HEAD FILAS' 
+espacio='E1' tipo='texto' fondo='sí' color='808080' dibujar-si='getElementoMatriz(s)' expresión='[mTxt.x+(col+1)*font_size,mTxt.y+(row+1)*font_size]' familia='s' s.intervalo='[0,rows*cols-1]' s.pasos='rows*cols-1' texto='[MATRIZ[row,col]]' decimales='3' fijo='no' ancho='1' fuente='Monospaced,PLAIN,24' info='ELEMENTOS MATRIZ' 
+espacio='E1' tipo='texto' fondo='sí' color='ffffff' dibujar-si='(selected>=0)&(RELS.n>0)' expresión='[mTxt.x+(sel.M.col+1)*font_size,mTxt.y+(sel.M.row+1)*font_size]' texto='[MATRIZ[sel.M.row,sel.M.col]]' decimales='3' fijo='no' ancho='1' color_borde_texto='4f8694' fuente='Monospaced,BOLD,24' info='SEL MATRIZ' 
+

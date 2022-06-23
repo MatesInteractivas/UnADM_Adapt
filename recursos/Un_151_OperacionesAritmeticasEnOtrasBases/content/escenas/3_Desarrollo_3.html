@@ -1,0 +1,232 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+ 	<link href="../css/html5.css" rel="stylesheet" type="text/css" media="screen" />
+<link href="../css/estilo_creditos_imate.css" rel="stylesheet" type="text/css" media="screen" />
+	<link href="../css/DescHTML5.css" rel="stylesheet" type="text/css" media="screen" />	
+	 <script type="text/javascript" src='../javascript/inject_functions_scorms_descartes.js'></script>
+	<script type='text/javascript' src='lib/descartes-min.js'></script>
+</head>
+
+<body>
+ <!-------- MathJax --- para fórmulas matemáticas ------>	
+	<script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script> 
+
+<article class="course_content_container">
+  
+  <div class="course_content">
+    
+    
+    <!------ INICIA EL CONTENIDO DE LA PÁGINA --------->
+    
+    
+    <!--- Título de la página --->
+    <h1>Productos en hex (un ejemplo)</h1>
+    
+    
+	<div class='text_panel'>
+
+		<!--- Párrafo --->
+		<p>
+		Anteriormente se te hicieron algunas preguntas sobre el número de unidades máximo que se pueden acarrear en el caso de la multiplicación. Aprovechemos esta página para tratar de obtener la respuesta. Y además veamos el ejemplo de la multiplicación en una base mayor a la decimal, como lo es la hexadecimal.
+		</p>
+
+		<p>
+		Sólo se presenta un ejemplo. No hay ejercicios. Sin embargo, trata de entender cómo funciona. Y presta atención a que, finalmente, lo más importante que debes saber es cómo contar (que lo aprendiste en la unidad sobre Cambio de base). Cómo resuelvas las operaciones puede depender de preferencias personales (por ejemplo, el usar una recta numérica, o usar los dedos, etc.). Pero lo más importante es saber contar.
+		</p>
+
+		<p>
+		Para este ejemplo, recuerda cómo haces las multiplicaciones de números decimales de forma manual. Por ejemplo, \(387\times12\). Recuerda que primero multiplicas \(387\) por el \(2\) del \(12\). Eso te da un primer sumando. Después multiplicas el \(387\) por el \(1\) del \(12\), con lo que obtienes el segundo sumando, que va recorrido un lugar a la izquierda respecto del primero. Al final, sumas los sumandos tomando en cuenta sus posiciones y con eso obtienes el resultado del producto.
+		</p>
+
+		<div class="course_extern_content"> 
+			<img src="imgs/EjProd.png"></img>
+		</div>
+
+		<p>
+		En el ejemplo a continuación se construirá el primer sumando. Una vez construido, se construirá el segundo sumando. La parte de la suma de estos sumandos (que da el resultado final del producto) ya no se aborda, debido a que eso ya lo sabes hacer de los interactivos pasados de la unidad.
+		</p>
+		
+		<!--- Párrafo --->
+	    <p class="instrucciones">
+   		En el siguiente interactivo podrás ver ejemplos del producto de dos números hexadecimales dados al azar. Revisa cada ejemplo hasta el final y al final podrás generar otro ejemplo. Se consideran números hexadecimales de sólo tres dígitos, debido a que, al ser un producto, el resultado involucra más dígitos.
+	    </p>
+		
+		<div class="course_extern_content"> 
+			<div class="Descartes_extern_content">
+				<ajs name="Descartes" width=750 height=480 code="Descartes">
+   <param name="tamaño" value="750x480">
+   <param name="image_loader" value="">
+   <param name="expand" value="">
+   <param name="decimal_symbol" value=".">
+   <param name="antialias" value="sí">
+   <param name="deshacer" value="no">
+   <param name="nombre" value="Descartes">
+   <param name="Versión" value="5.4, 2016-05-18">
+   <param name="Idioma" value="español">
+   <param name="Botones" value="créditos=no config=no inicio=no limpiar=no">
+   <param name="E_01" value="tipo='R2' id='EspText01' x='EspText01.x' y='EspText01.y' dibujar-si='EspText01.visible' fijo='sí' escala='1' O.x='-50%' O.y='-50%' despl_imagen='arr-izq' fondo='e3e3e3' red='no' red10='no' ejes='no' texto='no'">
+   <param name="E_02" value="tipo='R2' id='MASK' dibujar-si='(INFO.visible==1)|(RETRO.visible==1)' fijo='sí' imagen='imgs/tpl/backwindow.png' despl_imagen='mosaico' fondo='95000000' red='no' red10='no' ejes='no' texto='no'">
+   <param name="E_03" value="tipo='R2' id='INFO' x='INFO.x' y='INFO.y' ancho='700' alto='400' dibujar-si='INFO.visible==1' fijo='sí' imagen='imgs/tpl/retro_490x470.png' despl_imagen='mosaico' red='no' red10='no' ejes='no' texto='no'">
+   <param name="E_04" value="tipo='R2' id='RETRO' x='RETRO.x' y='RETRO.y' ancho='700' alto='400' dibujar-si='RETRO.visible==1' fijo='sí' imagen='imgs/tpl/retro_490x470.png' despl_imagen='mosaico' red='no' red10='no' ejes='no' texto='no'">
+   <param name="C_01" value="id='cerrarInfo' tipo='numérico' interfaz='botón' región='interior' espacio='INFO' expresión='(cerrarInfo.x,cerrarInfo.y,cerrarInfo.w,cerrarInfo.h)' fijo='sí' visible='sí' color='blanco' fuente puntos='26' imagen='_STYLE_|class=btnUNADM icon cerrar|shadowTextColor=rgba(0,0,0,0.2)|shadowTextOffsetY=2|shadowTextBlur=0|textBorder=0' acción='calcular' parámetro='INFO.visible=-1' dibujar-si='cerrarInfo.visible'">
+   <param name="C_02" value="id='cerrarRetro' tipo='numérico' interfaz='botón' región='interior' espacio='RETRO' expresión='(cerrarRetro.x,cerrarRetro.y,cerrarRetro.w,cerrarRetro.h)' fijo='sí' visible='sí' color='blanco' fuente puntos='26' imagen='_STYLE_|class=btnUNADM icon cerrar|shadowTextColor=rgba(0,0,0,0.2)|shadowTextOffsetY=2|shadowTextBlur=0|textBorder=0' acción='calcular' parámetro='visitRetro=1\nDigS1=((Sumando==0)&(visitRetroMem!=visitRetro))?DigS1+1:DigS1\nDigS1=((Sumando==0)&((Step+1)%3==0))?3:DigS1\nDigS2=((Sumando==1)&(visitRetroMem!=visitRetro))?DigS2+1:DigS2\nDigS2=((Sumando==1)&((Step+1)%3==0))?3:DigS2\nDigAca=(visitRetroMem!=visitRetro)?DigAca+1:DigAca\nRETRO.visible=-1\n\nper=(visitRetroMem!=visitRetro)?per+100/6:per\nper=(per>100)?100:per\nsetSCORMPercentage(per)\nupdateSCORMState()\n\nvisitRetroMem=visitRetro' dibujar-si='cerrarRetro.visible' pos_mensajes='centro'">
+   <param name="C_03" value="id='btnShwInfo' tipo='numérico' interfaz='botón' región='interior' espacio='EspText01' nombre='_nada_' expresión='(btnShwInfo.x,btnShwInfo.y,btnShwInfo.w,btnShwInfo.h)' fijo='sí' visible='sí' negrita='sí' cursiva='sí' fuente puntos='18' imagen='_STYLE_|class=btnUNADM icon info|shadowTextColor=rgba(0,0,0,0.2)|shadowTextOffsetY=2|shadowTextBlur=0|textBorder=0 |' acción='calcular' parámetro='INFO.visible=1' pos_mensajes='centro'">
+   <param name="C_04" value="id='btnShwRetro' tipo='numérico' interfaz='botón' región='interior' espacio='EspText01' nombre='Producto' expresión='(btnShwRetro.x,btnShwRetro.y,btnShwRetro.w,btnShwRetro.h)' fijo='sí' visible='sí' color='blanco' color-int='ff000000' negrita='sí' fuente puntos='16' imagen='_STYLE_|class=btnUNADM|shadowTextColor=rgba(0,0,0,0.2)|shadowTextOffsetY=2|shadowTextBlur=0|textBorder=0' acción='calcular' parámetro='RETRO.visible=1' dibujar-si='Step>=0' pos_mensajes='centro'">
+   <param name="C_05" value="id='btnDisp' tipo='numérico' interfaz='botón' región='interior' espacio='RETRO' nombre='Reordenar' expresión='(btnDisp.x,btnDisp.y,btnDisp.w,btnDisp.h)' fijo='sí' visible='sí' color='blanco' color-int='ff000000' negrita='sí' fuente puntos='16' imagen='_STYLE_|class=btnUNADM|shadowTextColor=rgba(0,0,0,0.2)|shadowTextOffsetY=2|shadowTextBlur=0|textBorder=0' acción='calcular' parámetro='Disp=1-Disp' pos_mensajes='centro'">
+   <param name="C_06" value="id='btnSiguiente' tipo='numérico' interfaz='botón' región='interior' espacio='EspText01' nombre='Siguiente' expresión='(btnSiguiente.x,btnSiguiente.y,btnSiguiente.w,btnSiguiente.h)' fijo='sí' visible='sí' color='blanco' color-int='f7000000' negrita='sí' fuente puntos='16' imagen='_STYLE_|class=btnUNADM|shadowTextColor=rgba(0,0,0,0.2)|shadowTextOffsetY=2|shadowTextBlur=0|textBorder=0' acción='calcular' parámetro='SigFn()' activo-si='((visitRetro==1)|(empezo==0))&(!((Step==2)&(Sumando==1)&(visitRetro==1)))' pos_mensajes='centro'">
+   <param name="C_07" value="id='plPaso' tipo='numérico' región='interior' espacio='EspText01' nombre='_nada_' expresión='(plPaso.x,plPaso.y,plPaso.w,plPaso.h)' valor='AvMax' incr='1' min='0' max='AvMax' discreto='sí' decimales='0' fijo='sí' visible='no' parámetro='Av=AvMax-plPaso' dibujar-si='0' pos_mensajes='centro'">
+   <param name="C_08" value="id='btnOtroEj' tipo='numérico' interfaz='botón' región='interior' espacio='EspText01' nombre='Otro' expresión='(btnOtroEj.x,btnOtroEj.y,btnOtroEj.w,btnOtroEj.h)' fijo='sí' visible='sí' color='blanco' color-int='f7000000' negrita='sí' fuente puntos='16' imagen='_STYLE_|class=btnUNADM|shadowTextColor=rgba(0,0,0,0.2)|shadowTextOffsetY=2|shadowTextBlur=0|textBorder=0' acción='calcular' parámetro='reinNuevoEj()' dibujar-si='(Step==2)&(Sumando==1)&(visitRetro==1)' pos_mensajes='centro'">
+   <param name="A_01" value="id='Aca' vector='sí' matriz='sí' evaluar='una-sola-vez' columnas='9' filas='2' expresión=';'">
+   <param name="A_02" value="id='EntHex' vector='sí' matriz='sí' evaluar='una-sola-vez' columnas='5' filas='10' expresión=';'">
+   <param name="A_03" value="id='Etiqs' vector='sí' matriz='sí' evaluar='una-sola-vez' columnas='16' expresión='Etiqs[0,0]=&squot;1&squot;;Etiqs[1,0]=&squot;2&squot;;Etiqs[2,0]=&squot;3&squot;;Etiqs[3,0]=&squot;4&squot;;Etiqs[4,0]=&squot;5&squot;;Etiqs[5,0]=&squot;6&squot;;Etiqs[6,0]=&squot;7&squot;;Etiqs[7,0]=&squot;8&squot;;Etiqs[8,0]=&squot;9&squot;;Etiqs[9,0]=&squot;A&squot;;Etiqs[10,0]=&squot;B&squot;;Etiqs[11,0]=&squot;C&squot;;Etiqs[12,0]=&squot;D&squot;;Etiqs[13,0]=&squot;E&squot;;Etiqs[14,0]=&squot;F&squot;;;Etiqs[0,1]=&squot;1&squot;;Etiqs[1,1]=&squot;2&squot;;Etiqs[2,1]=&squot;3&squot;;Etiqs[3,1]=&squot;4&squot;;Etiqs[4,1]=&squot;5&squot;;Etiqs[5,1]=&squot;6&squot;;Etiqs[6,1]=&squot;7&squot;;Etiqs[7,1]=&squot;8&squot;;Etiqs[8,1]=&squot;9&squot;;Etiqs[9,1]=&squot;A&squot;;Etiqs[10,1]=&squot;B&squot;;Etiqs[11,1]=&squot;C&squot;;Etiqs[12,1]=&squot;D&squot;;Etiqs[13,1]=&squot;E&squot;;Etiqs[14,1]=&squot;F&squot;;;Etiqs[0,2]=&squot;1&squot;;Etiqs[1,2]=&squot;2&squot;;Etiqs[2,2]=&squot;3&squot;;Etiqs[3,2]=&squot;4&squot;;Etiqs[4,2]=&squot;5&squot;;Etiqs[5,2]=&squot;6&squot;;Etiqs[6,2]=&squot;7&squot;;Etiqs[7,2]=&squot;8&squot;;Etiqs[8,2]=&squot;9&squot;;Etiqs[9,2]=&squot;A&squot;;Etiqs[10,2]=&squot;B&squot;;Etiqs[11,2]=&squot;C&squot;;Etiqs[12,2]=&squot;D&squot;;Etiqs[13,2]=&squot;E&squot;;Etiqs[14,2]=&squot;F&squot;'">
+   <param name="A_04" value="id='initEsp()' algoritmo='sí' expresión='x' algoritmo='sí' hacer='EspText01.visible=1;EspText01.x=0;EspText01.y=0;;RETRO.x=(EspText01._w-RETRO._w)/2;RETRO.y=(EspText01._h-RETRO._h)/2;RETRO.visible=0;;INFO.x=(EspText01._w-INFO._w)/2;INFO.y=(EspText01._h-INFO._h)/2;INFO.visible=1'">
+   <param name="A_05" value="id='initBtns()' algoritmo='sí' algoritmo='sí' hacer='btnShwInfo.w=30;btnShwInfo.h=30;btnShwInfo.x=10;btnShwInfo.y=EspText01._h-10-btnShwInfo.h;btnShwInfo.img=&squot;imgs/tpl/btn120.png&squot;;btnShwInfo.txt=&squot;&squot;;;btnShwRetro.w=120;btnShwRetro.h=40;btnShwRetro.x=610;btnShwRetro.y=170;btnShwRetro.img=&squot;imgs/tpl/btn120.png&squot;;btnShwRetro.txt=&squot;&squot;;;btnDisp.w=120;btnDisp.h=40;btnDisp.x=RETRO._w-10-btnDisp.w;btnDisp.y=RETRO._h-10-btnDisp.h;btnDisp.img=&squot;imgs/tpl/btn120.png&squot;;btnDisp.txt=&squot;&squot;;;cerrarInfo.w=30;cerrarInfo.h=cerrarInfo.w;cerrarInfo.x=INFO._w-cerrarInfo.w-2;cerrarInfo.y=0;cerrarInfo.img=&squot;imgs/tpl/cerrar.png&squot;;cerrarInfo.visible=1;;cerrarRetro.w=30;cerrarRetro.h=cerrarRetro.w;cerrarRetro.x=RETRO._w-cerrarRetro.w-2;cerrarRetro.y=0;cerrarRetro.img=&squot;imgs/tpl/cerrar.png&squot;;cerrarRetro.visible=1;;btnEmpezar.x=EspText01._w/2-50;btnEmpezar.y=EspText01._h-10-40;btnEmpezar.w=100;btnEmpezar.h=40;btnEmpezar.img=&squot;imgs/tpl/btn100.png&squot;;;btnSiguiente.x=EspText01._w/2-50;btnSiguiente.y=EspText01._h-10-40;btnSiguiente.w=100;btnSiguiente.h=40;btnSiguiente.img=&squot;imgs/tpl/btn100.png&squot;;;plPaso.w=23;plPaso.h=40;plPaso.x=EspText01._w-20-plPaso.w;plPaso.y=20+10;;btnOtroEj.x=EspText01._w-10-100;btnOtroEj.y=EspText01._h-10-40;btnOtroEj.w=100;btnOtroEj.h=40;btnOtroEj.img=&squot;imgs/tpl/btn100.png&squot;'">
+   <param name="A_06" value="id='initEscena()' algoritmo='sí' algoritmo='sí' hacer='initBtns();initEsp();;genDec();'">
+   <param name="A_07" value="id='genDec()' algoritmo='sí' algoritmo='sí' inicio='Step=-1;Sumando=-1;DigAca=-1;DigS1=-1;DigS2=-1;DigRes=-1;DigAca=-1' hacer='nDec1=ent(rnd*4095.99999);nDec2=ent(rnd*255.99999);nRes=nDec1*nDec2;toHex(nDec1,0);toHex(nDec2,1);nSum1=EntHex[0,1]*nDec1;nSum2=EntHex[1,1]*nDec1;toHex(nSum1,2);toHex(nSum2,3);toHex(nRes,4)' mientras='(nRes<65536)|(EntHex[0,0]==0)|(EntHex[1,0]==0)|(EntHex[2,0]==0)|(EntHex[0,1]==0)|(EntHex[1,1]==0)'">
+   <param name="A_08" value="id='toHex(argtb1,argtb2)' algoritmo='sí' algoritmo='sí' Local='i,n1,nmem1' inicio='i=0;n1=argtb1;nmem1=n1' hacer='n1=nmem1;EntHex[i,argtb2]=n1%16;EntHex[i,argtb2+5]=_NumACadena_(EntHex[i,argtb2],0);EntHex[i,argtb2+5]=(EntHex[i,argtb2+5]==&squot;10&squot;)?&squot;A&squot;:EntHex[i,argtb2+5];EntHex[i,argtb2+5]=(EntHex[i,argtb2+5]==&squot;11&squot;)?&squot;B&squot;:EntHex[i,argtb2+5];EntHex[i,argtb2+5]=(EntHex[i,argtb2+5]==&squot;12&squot;)?&squot;C&squot;:EntHex[i,argtb2+5];EntHex[i,argtb2+5]=(EntHex[i,argtb2+5]==&squot;13&squot;)?&squot;D&squot;:EntHex[i,argtb2+5];EntHex[i,argtb2+5]=(EntHex[i,argtb2+5]==&squot;14&squot;)?&squot;E&squot;:EntHex[i,argtb2+5];EntHex[i,argtb2+5]=(EntHex[i,argtb2+5]==&squot;15&squot;)?&squot;F&squot;:EntHex[i,argtb2+5];;nmem1=ent(n1/16);i=i+1' mientras='i<5'">
+   <param name="A_09" value="id='SigFn()' algoritmo='sí' algoritmo='sí' inicio='empezo=1;visitRetro=0;visitRetroMem=0;Disp=0' hacer='Step=(Step<2)?Step+1:0;Sumando=(Step%3==0)?Sumando+1:Sumando;DigAca=(Step%3==0)?-1:DigAca;Prod=EntHex[Step,0]*EntHex[Sumando,1];Fact1=max(EntHex[Step,0],EntHex[Sumando,1]);Fact2=min(EntHex[Step,0],EntHex[Sumando,1]);Aca[Step,0]=(Step>0)?ent((Prod+Aca[Step-1,0])/16):ent(Prod/16);Aca[Step,1]=_NumACadena_(Aca[Step,0],0);Aca[Step,1]=(Aca[Step,1]==&squot;10&squot;)?&squot;A&squot;:Aca[Step,1];Aca[Step,1]=(Aca[Step,1]==&squot;11&squot;)?&squot;B&squot;:Aca[Step,1];Aca[Step,1]=(Aca[Step,1]==&squot;12&squot;)?&squot;C&squot;:Aca[Step,1];Aca[Step,1]=(Aca[Step,1]==&squot;13&squot;)?&squot;D&squot;:Aca[Step,1];Aca[Step,1]=(Aca[Step,1]==&squot;14&squot;)?&squot;E&squot;:Aca[Step,1];Aca[Step,1]=(Aca[Step,1]==&squot;15&squot;)?&squot;F&squot;:Aca[Step,1];AcaAnt=Aca[Step,1];ResAnt=_NumACadena_(Prod%16,0);ResAnt=(ResAnt==&squot;10&squot;)?&squot;A&squot;:ResAnt;ResAnt=(ResAnt==&squot;11&squot;)?&squot;B&squot;:ResAnt;ResAnt=(ResAnt==&squot;12&squot;)?&squot;C&squot;:ResAnt;ResAnt=(ResAnt==&squot;13&squot;)?&squot;D&squot;:ResAnt;ResAnt=(ResAnt==&squot;14&squot;)?&squot;E&squot;:ResAnt;ResAnt=(ResAnt==&squot;15&squot;)?&squot;F&squot;:ResAnt;Ac=(Step>0)?ent((Prod+Aca[Step-1,0])/16):ent(Prod/16);AcHex=_NumACadena_(Ac,0);AcHex=(AcHex==&squot;10&squot;)?&squot;A&squot;:AcHex;AcHex=(AcHex==&squot;11&squot;)?&squot;B&squot;:AcHex;AcHex=(AcHex==&squot;12&squot;)?&squot;C&squot;:AcHex;AcHex=(AcHex==&squot;13&squot;)?&squot;D&squot;:AcHex;AcHex=(AcHex==&squot;14&squot;)?&squot;E&squot;:AcHex;AcHex=(AcHex==&squot;15&squot;)?&squot;F&squot;:AcHex'">
+   <param name="A_10" value="id='reinNuevoEj()' algoritmo='sí' algoritmo='sí' inicio='empezo=0' hacer='genDec()'">
+   <param name="A_11" value="id='getSCORMState()' algoritmo='sí' expresión='res' algoritmo='sí' Local='res,c' inicio='c=&squot;@&squot;' hacer='ö=|Estandar ---- [MIDC]XX.<var>  SI SOLO EXISTE UNA ESCENA EN EL HTML|;ö=|Estandar ---- [MIDC]XX_YY.<var>  SI HAY MAS DE UNA ESCENA EN EL HTML|;;res=&squot;D03.INFO.visible:&squot;+INFO.visible+c;res=res+&squot;D03.RETRO.visible:&squot;+RETRO.visible+c;;res=res+&squot;D03.Aca00:&squot;+Aca[0,0]+c;res=res+&squot;D03.Aca10:&squot;+Aca[1,0]+c;res=res+&squot;D03.Aca20:&squot;+Aca[2,0]+c;res=res+&squot;D03.Aca30:&squot;+Aca[3,0]+c;res=res+&squot;D03.Aca40:&squot;+Aca[4,0]+c;res=res+&squot;D03.Aca50:&squot;+Aca[5,0]+c;res=res+&squot;D03.Aca60:&squot;+Aca[6,0]+c;res=res+&squot;D03.Aca70:&squot;+Aca[7,0]+c;res=res+&squot;D03.Aca80:&squot;+Aca[8,0]+c;;res=res+&squot;D03.Aca01:&squot;+Aca[0,1]+c;res=res+&squot;D03.Aca11:&squot;+Aca[1,1]+c;res=res+&squot;D03.Aca21:&squot;+Aca[2,1]+c;res=res+&squot;D03.Aca31:&squot;+Aca[3,1]+c;res=res+&squot;D03.Aca41:&squot;+Aca[4,1]+c;res=res+&squot;D03.Aca51:&squot;+Aca[5,1]+c;res=res+&squot;D03.Aca61:&squot;+Aca[6,1]+c;res=res+&squot;D03.Aca71:&squot;+Aca[7,1]+c;res=res+&squot;D03.Aca81:&squot;+Aca[8,1]+c;;res=res+&squot;D03.btnName:&squot;+btnName+c;res=res+&squot;D03.Step:&squot;+Step+c;res=res+&squot;D03.cont:&squot;+cont+c;res=res+&squot;D03.DigRes:&squot;+DigRes+c;res=res+&squot;D03.DigAca:&squot;+DigAca+c;res=res+&squot;D03.nDec1:&squot;+nDec1+c;res=res+&squot;D03.nDec2:&squot;+nDec2+c;res=res+&squot;D03.nSum1:&squot;+nSum1+c;res=res+&squot;D03.nSum2:&squot;+nSum2+c;res=res+&squot;D03.DigS1:&squot;+DigS1+c;res=res+&squot;D03.DigS2:&squot;+DigS2+c;res=res+&squot;D03.Sumando:&squot;+Sumando+c;res=res+&squot;D03.Prod:&squot;+Prod+c;res=res+&squot;D03.Fact1:&squot;+Fact1+c;res=res+&squot;D03.Fact2:&squot;+Fact2+c;res=res+&squot;D03.Disp:&squot;+Disp+c;res=res+&squot;D03.ResAnt:&squot;+ResAnt+c;res=res+&squot;D03.AcaAnt:&squot;+AcaAnt+c;res=res+&squot;D03.nRes:&squot;+nRes+c;res=res+&squot;D03.Ac:&squot;+Ac+c;res=res+&squot;D03.AcHex:&squot;+AcHex+c;res=res+&squot;D03.ResEnDec:&squot;+ResEnDec+c;res=res+&squot;D03.visitRetro:&squot;+visitRetro+c;res=res+&squot;D03.visitRetroMem:&squot;+visitRetroMem+c;res=res+&squot;D03.empezo:&squot;+empezo+c;;res=res+&squot;D03.per:&squot;+per+c'">
+   <param name="A_12" value="id='initStateScorm()' algoritmo='sí' expresión='x' algoritmo='sí' hacer='INFO.visible=(getSCORMStateVar(&squot;D03.INFO.visible&squot;)==0)?1:getSCORMStateVar(&squot;D03.INFO.visible&squot;);RETRO.visible=getSCORMStateVar(&squot;D03.RETRO.visible&squot;);nDec1=(getSCORMStateVar(&squot;D03.nDec1&squot;)==0)?nDec1:getSCORMStateVar(&squot;D03.nDec1&squot;);nDec2=(getSCORMStateVar(&squot;D03.nDec2&squot;)==0)?nDec2:getSCORMStateVar(&squot;D03.nDec2&squot;);nSum1=(getSCORMStateVar(&squot;D03.nSum1&squot;)==0)?nSum1:getSCORMStateVar(&squot;D03.nSum1&squot;);nSum2=(getSCORMStateVar(&squot;D03.nSum2&squot;)==0)?nSum2:getSCORMStateVar(&squot;D03.nSum2&squot;);Sumando=((getSCORMStateVar(&squot;D03.Sumando&squot;)==0)&(empezo==0))?Sumando:getSCORMStateVar(&squot;D03.Sumando&squot;);Prod=getSCORMStateVar(&squot;D03.Prod&squot;);Fact1=getSCORMStateVar(&squot;D03.Fact1&squot;);Fact2=getSCORMStateVar(&squot;D03.Fact2&squot;);Disp=getSCORMStateVar(&squot;D03.Disp&squot;);ResAnt=getSCORMStateVar(&squot;D03.ResAnt&squot;);AcaAnt=getSCORMStateVar(&squot;D03.AcaAnt&squot;);Ac=getSCORMStateVar(&squot;D03.Ac&squot;);AcHex=getSCORMStateVar(&squot;D03.AcHex&squot;);visitRetro=(empezo==0)?visitRetro:getSCORMStateVar(&squot;D03.visitRetro&squot;);visitRetroMem=(empezo==0)?visitRetroMem:getSCORMStateVar(&squot;D03.visitRetroMem&squot;);;nRes=(getSCORMStateVar(&squot;D03.nRes&squot;)==0)?nRes:getSCORMStateVar(&squot;D03.nRes&squot;);toHex(nDec1,0);toHex(nDec2,1);toHex(nSum1,2);toHex(nSum2,3);toHex(nRes,4);;Aca[0,0]=getSCORMStateVar(&squot;D03.Aca00&squot;);Aca[1,0]=getSCORMStateVar(&squot;D03.Aca10&squot;);Aca[2,0]=getSCORMStateVar(&squot;D03.Aca20&squot;);Aca[3,0]=getSCORMStateVar(&squot;D03.Aca30&squot;);Aca[4,0]=getSCORMStateVar(&squot;D03.Aca40&squot;);Aca[5,0]=getSCORMStateVar(&squot;D03.Aca50&squot;);Aca[6,0]=getSCORMStateVar(&squot;D03.Aca60&squot;);Aca[7,0]=getSCORMStateVar(&squot;D03.Aca70&squot;);Aca[8,0]=getSCORMStateVar(&squot;D03.Aca80&squot;);;Aca[0,1]=getSCORMStateVar(&squot;D03.Aca01&squot;);Aca[1,1]=getSCORMStateVar(&squot;D03.Aca11&squot;);Aca[2,1]=getSCORMStateVar(&squot;D03.Aca21&squot;);Aca[3,1]=getSCORMStateVar(&squot;D03.Aca31&squot;);Aca[4,1]=getSCORMStateVar(&squot;D03.Aca41&squot;);Aca[5,1]=getSCORMStateVar(&squot;D03.Aca51&squot;);Aca[6,1]=getSCORMStateVar(&squot;D03.Aca61&squot;);Aca[7,1]=getSCORMStateVar(&squot;D03.Aca71&squot;);Aca[8,1]=getSCORMStateVar(&squot;D03.Aca81&squot;);;empezo=getSCORMStateVar(&squot;D03.empezo&squot;);Step=(empezo==0)?-1:getSCORMStateVar(&squot;D03.Step&squot;);cont=(empezo==0)?-1:getSCORMStateVar(&squot;D03.cont&squot;);DigRes=(empezo==0)?-1:getSCORMStateVar(&squot;D03.DigRes&squot;);DigAca=(empezo==0)?-1:getSCORMStateVar(&squot;D03.DigAca&squot;);DigS1=(empezo==0)?-1:getSCORMStateVar(&squot;D03.DigS1&squot;);DigS2=(empezo==0)?-1:getSCORMStateVar(&squot;D03.DigS2&squot;);ResEnDec=getSCORMStateVar(&squot;D03.ResEnDec&squot;);;per=getSCORMStateVar(&squot;D03.per&squot;)'">
+   <param name="A_13" value="id='initCtrsAnim()' algoritmo='sí' algoritmo='sí' hacer='primeraVez=1'">
+   <param name="A_14" value="id='INICIO' algoritmo='sí' evaluar='una-sola-vez' hacer='primeraVez=0;initEscena();initStateScorm();'">
+   <param name="A_15" value="id='CALCULOS' algoritmo='sí' evaluar='siempre'">
+   <param name="G_01" value="espacio='EspText01' tipo='texto' fondo='sí' expresión='[_Texto_____,20]' fijo='sí'">
+   <param name="G_02" value="espacio='EspText01' tipo='texto' fondo='sí' dibujar-si='0' expresión='[10,10]' texto='{\rtf1\uc0{\fonttbl\f0\fcharset0 Times New Roman;\f1\fcharset0 Arial;\f2\fcharset0 Arial;\f3\fcharset0 Arial;\f4\fcharset0 Courier New;}\f1\fs36 Las dimensiones de las escenas de Descartes dentro de p\u225 ginas con texto html \par deben de ser 750px de ancho por 480px de alto.\par El texto en general debe de ser de 18 puntos en SanSerif de color negro. Solo \par utilizar\i  cursivas\i0 , \b negritas\b0  para resaltar texto.\f4\fs30}' fuente='SansSerif,PLAIN,18' fijo='sí' info='Primer texto de ejemplo de formato '">
+   <param name="G_03" value="espacio='EspText01' tipo='texto' fondo='sí' dibujar-si='0' expresión='[10,110]' texto='Texto simple también en SansSerif a 18 puntos. Este tipo de texto se puede ajustar en automatico a un ancho fijo.' fuente='SansSerif,PLAIN,18' fijo='sí' ancho='EspText01._w-20' info='Texto simple con auto salto de linea. Ver el campo ancho'">
+   <param name="G_04" value="espacio='EspText01' tipo='texto' fondo='sí' dibujar-si='0' expresión='[320,btnCua.y-50]' texto='{\rtf1\uc0{\fonttbl\f0\fcharset0 Times New Roman;\f1\fcharset0 Arial;\f2\fcharset0 Arial;\f3\fcharset0 Arial;}\f1\fs36 Botones de \b 30px\b0  de alto, texto blanco \b 16px\b0 , \par en negritas y con borde negro con alfa \b\i f7\b0\i0 .}' fuente='SansSerif,PLAIN,18' fijo='sí' info='Texto de formato de botones'">
+   <param name="G_05" value="espacio='EspText01' tipo='texto' fondo='sí' dibujar-si='0' expresión='[320,310]' texto='{\rtf1\uc0{\fonttbl\f0\fcharset0 Times New Roman;\f1\fcharset0 Arial;\f2\fcharset0 Arial;\f3\fcharset0 Arial;\f4\fcharset0 Courier New;}\f1\fs36\b Pulsador : \b0 Alto minimo \par                   45px, 50px \par                   recomendado.\fs16\b\par \par \fs36 Men\u250        : \b0 35px de alto.\b\par \fs16\par \fs36 Campo\par de texto  : \b0 35px de alto. \f4\fs30}' fuente='SansSerif,BOLD,18' fijo='sí' info='Descripción de formatos para menús, pulsadores y campos de texto'">
+   <param name="G_06" value="espacio='INFO' tipo='texto' fondo='sí' expresión='[_INFO_____,20]' fijo='sí'">
+   <param name="G_07" value="espacio='INFO' tipo='texto' fondo='sí' color='blanco' expresión='[10,5]' texto='Explicación e instrucciones' fuente='SansSerif,PLAIN,22' fijo='sí' info='Título del popup'">
+   <param name="G_08" value="espacio='INFO' tipo='texto' fondo='sí' expresión='[10,50]' texto='Aquí se presentan ejemplos de producto de dos números hex aleatorios. Por simplicidad, es un número de 3 dígitos por uno de 2.\n\nEl procedimiento es semejante al que conoces en base decimal. Con el botón “Siguiente” podrás avanzar multiplicando cada dígito del número de arriba por cada uno de los de abajo. Así se irán pintando los sumandos que finalmente darán el resultado del producto.\n\nCada vez que pases a un nuevo dígito deberás revisar el producto con el botón “Producto” para poder continuar. La notación mostrada es con puntitos, y conviene que los revises en sus dos opciones.\n\nTras revisar completamente un ejemplo dado, podrás generar otros.' fuente='SansSerif,PLAIN,20' fijo='sí' ancho='INFO._w-30' info='Texto de la ventana popup'">
+   <param name="G_09" value="espacio='EspText01' tipo='texto' fondo='sí' expresión='[_FIN_PLANTILLA__,20]' fijo='sí'">
+   <param name="G_10" value="espacio='EspText01' tipo='texto' expresión='[520-s*60,50,0,0]' familia='s' s.intervalo='[0,2]' s.pasos='2' texto='[EntHex[s,5]]' fuente='SansSerif,PLAIN,24' decimales='0' fijo='sí' info='símbolos dígitos primer número'">
+   <param name="G_11" value="espacio='EspText01' tipo='texto' expresión='[520-s*60,75,0,0]' familia='s' s.intervalo='[0,1]' s.pasos='1' texto='[EntHex[s,6]]' fuente='SansSerif,PLAIN,24' decimales='0' fijo='sí' info='símbolos dígitos segundo número'">
+   <param name="G_12" value="espacio='EspText01' tipo='texto' dibujar-si='DigS1>=0' expresión='[520-s*60,108,0,0]' familia='s' s.intervalo='[0,DigS1]' s.pasos='DigS1' texto='[EntHex[s,7]]' fuente='SansSerif,PLAIN,24' decimales='0' fijo='sí' info='símbolos dígitos primer sumando'">
+   <param name="G_13" value="espacio='EspText01' tipo='texto' dibujar-si='DigS2>=0' expresión='[460-s*60,133,0,0]' familia='s' s.intervalo='[0,DigS2]' s.pasos='DigS2' texto='[EntHex[s,8]]' fuente='SansSerif,PLAIN,24' decimales='0' fijo='sí' info='símbolos dígitos segundo sumando'">
+   <param name="G_14" value="espacio='EspText01' tipo='texto' dibujar-si='(Step==2)&(Sumando==1)&(visitRetro==1)' expresión='[520-s*60,165,0,0]' familia='s' s.intervalo='[0,4]' s.pasos='4' texto='[EntHex[s,9]]' fuente='SansSerif,PLAIN,24' decimales='0' fijo='sí' info='símbolos dígitos resultado'">
+   <param name="G_15" value="espacio='EspText01' tipo='texto' color='rojo' dibujar-si='Step>=0' expresión='[460-60*Sumando-s*60,25,0,0]' familia='s' s.intervalo='[0,DigAca]' s.pasos='DigAca' texto='[Aca[s,1]]' fuente='SansSerif,PLAIN,20' decimales='0' fijo='sí' info='Unidades acarreadas'">
+   <param name="G_16" value="espacio='EspText01' tipo='segmento' coord_abs='sí' expresión='(200,90)(540,90)' fijo='sí' tamaño='0' ancho='3' info='Raya horizontal del producto'">
+   <param name="G_17" value="espacio='EspText01' tipo='segmento' dibujar-si='(Step==2)&(Sumando==1)&(visitRetro==1)' coord_abs='sí' expresión='(200,145)(540,145)' fijo='sí' tamaño='0' ancho='3' info='Raya horizontal de la suma'">
+   <param name="G_18" value="espacio='EspText01' tipo='texto' expresión='[230,75,0,0]' texto='x' fuente='SansSerif,PLAIN,24' fijo='sí' info='símbolo operación'">
+   <param name="G_19" value="espacio='EspText01' tipo='texto' dibujar-si='(Step==2)&(Sumando==1)&(visitRetro==1)' expresión='[230,130,0,0]' texto='+' fuente='SansSerif,PLAIN,24' fijo='sí' info='símbolo suma'">
+   <param name="G_20" value="espacio='EspText01' tipo='texto' dibujar-si='Step>=0' expresión='[10,180]' texto='Veamos el producto de [EntHex[2,5]][EntHex[1,5]][EntHex[0,5]] con [EntHex[Sumando,6]]. Vamos con [EntHex[Step%3,5]]x[EntHex[Sumando,6]].' fuente='SansSerif,PLAIN,20' decimales='0' fijo='sí' info='Texto prod con primer dígito'">
+   <param name="G_21" value="espacio='EspText01' tipo='texto' dibujar-si='(visitRetro==1)&(Sumando==0)' expresión='[10,220]' texto='El residuo [EntHex[Step,7]] lo marcas en hexadecimal en el dígito del resultado de la columna en que estás. Y las unidades acarreadas son el número [AcaAnt] de filas que lograste llenar con 16 puntos.' fuente='SansSerif,PLAIN,20' decimales='0' fijo='sí' ancho='730' info='Av1 sin rebasar simb max'">
+   <param name="G_22" value="espacio='EspText01' tipo='texto' dibujar-si='(visitRetro==1)&(Sumando==1)' expresión='[10,220]' texto='El residuo [EntHex[Step,8]] lo marcas en hexadecimal en el dígito del resultado de la columna en que estás. Recuerda que como este sumando corresponde al producto del número de arriba por el segundo dígito del número de abajo, hay un factor extra de 16. Es decir, debes recorrer el resultado un orden de magnitud (un lugar) a la izquierda. Y las unidades acarreadas son el número [AcaAnt] de filas que lograste llenar con 16 puntos.' fuente='SansSerif,PLAIN,20' decimales='0' fijo='sí' ancho='730' info='Av1 sin rebasar simb max'">
+   <param name="G_23" value="espacio='EspText01' tipo='texto' dibujar-si='(Step==2)&(Sumando==1)&(visitRetro==1)' expresión='[10,380]' texto='La suma se realiza con el procedimiento que ya conoces. El resultado de la suma es, así pues, [EntHex[4,9]][EntHex[3,9]][EntHex[2,9]][EntHex[1,9]][EntHex[0,9]].' fuente='SansSerif,PLAIN,20' decimales='0' fijo='sí' ancho='730' info='Av2 rebasando simb max'">
+   <param name="G_24" value="espacio='RETRO' tipo='texto' fondo='sí' color='blanco' expresión='[10,5]' texto='La multiplicación' fuente='SansSerif,PLAIN,22' fijo='sí' info='Título del popup'">
+   <param name="G_25" value="espacio='RETRO' tipo='texto' dibujar-si='Disp==0' expresión='[10,50]' texto='Cuenta los puntitos que ves en este producto, que está dado en forma de tabla. Con el botón “Reordenar” puedes reacomodarlos de forma que cada fila tenga 16 puntitos.' fuente='SansSerif,PLAIN,20' fijo='sí' ancho='RETRO._w/2-20' info='Texto de la ventana popup'">
+   <param name="G_26" value="espacio='RETRO' tipo='texto' dibujar-si='(Disp==1)&(Sumando==0)' expresión='[10,50]' texto='Aquí máximo puedes poner 16 puntitos en cada fila. Observa que sobran [ResAnt] en hex.[(Step%3>0)?&squot; Sumándole el valor acarreado del paso anterior obtenemos &squot;:&squot;&squot;][(Step%3>0)?EntHex[Step,7]:&squot;&squot;][(Step%3>0)?&squot; de residuo.&squot;:&squot;&squot;] Dicho resultado se coloca en el dígito correspondiente del sumando. Completaste [AcHex] hileras, que es lo que se acarrea a la siguiente columna. Con el botón “Reordenar” puedes regresar a la otra configuración.' fuente='SansSerif,PLAIN,20' fijo='no' ancho='RETRO._w/2-20' info='Texto de la ventana popup'">
+   <param name="G_27" value="espacio='RETRO' tipo='texto' dibujar-si='(Disp==1)&(Sumando==1)' expresión='[10,50]' texto='Aquí máximo puedes poner 16 puntitos en cada fila. Observa que sobran [ResAnt] en hex.[(Step%3>0)?&squot; Sumándole el valor acarreado del paso anterior obtenemos &squot;:&squot;&squot;][(Step%3>0)?EntHex[Step,8]:&squot;&squot;][(Step%3>0)?&squot; de residuo.&squot;:&squot;&squot;] Dicho resultado se coloca en el dígito correspondiente del sumando. Completaste [AcHex] hileras, que es lo que se acarrea a la siguiente columna. Con el botón “Reordenar” puedes regresar a la otra configuración.' fuente='SansSerif,PLAIN,20' fijo='no' ancho='RETRO._w/2-20' info='Texto de la ventana popup'">
+   <param name="G_28" value="espacio='RETRO' tipo='punto' color='rojo' dibujar-si='Disp==0' coord_abs='sí' expresión='(RETRO._w/2+45+17*(s%Fact1),77+17*ent(s/Fact1))' familia='s' s.intervalo='[0,Prod-1]' s.pasos='Prod-1' fijo='sí' tamaño='3'">
+   <param name="G_29" value="espacio='RETRO' tipo='punto' color='rojo' dibujar-si='Disp==1' coord_abs='sí' expresión='(RETRO._w/2+45+17*(s%16),77+17*ent(s/16))' familia='s' s.intervalo='[0,Prod-1]' s.pasos='Prod-1' fijo='sí' tamaño='3'">
+   <param name="G_30" value="espacio='RETRO' tipo='punto' color='009200' dibujar-si='(Disp==1)&(Step>0)' coord_abs='sí' expresión='(RETRO._w/2+45+17*(s%16),77+17*ent(s/16))' familia='s' s.intervalo='[Prod,Prod+Aca[Step-1,0]-1]' s.pasos='Aca[Step-1,0]-1' fijo='sí' tamaño='3'">
+   <param name="G_31" value="espacio='RETRO' tipo='texto' dibujar-si='Disp==0' expresión='[387+s*17,50]' familia='s' s.intervalo='[0,Fact1-1]' s.pasos='Fact1-1' texto='[Etiqs[s,0]]' fuente='SansSerif,PLAIN,17' fijo='sí' info='horizontal Disp0'">
+   <param name="G_32" value="espacio='RETRO' tipo='texto' dibujar-si='Disp==0' expresión='[370,67+s*17]' familia='s' s.intervalo='[0,Fact2-1]' s.pasos='Fact2-1' texto='[Etiqs[s,0]]' fuente='SansSerif,PLAIN,17' fijo='sí' info='vertical Disp0'">
+   <param name="G_33" value="espacio='RETRO' tipo='texto' dibujar-si='(Disp==1)&0' expresión='[387+s*17,50]' familia='s' s.intervalo='[0,15]' s.pasos='15' texto='[Etiqs[s,0]]' fuente='SansSerif,PLAIN,17' fijo='sí' info='horizontal Disp1'">
+   <param name="G_34" value="espacio='RETRO' tipo='texto' dibujar-si='Disp==1' expresión='[370,67+17*s]' familia='s' s.intervalo='[0,Ac]' s.pasos='Ac' texto='[Etiqs[s,2]]' fuente='SansSerif,PLAIN,17' fijo='sí' info='vertical Disp1'">
+   <param name="G_35" value="espacio='EspText01' tipo='texto' dibujar-si='0' expresión='[10,300]' texto='DigS1=[DigS1]  Fact1=[Fact1]\nDigS2=[DigS2]  Fact2=[Fact2]\nnRes=[nRes]    Sumando=[Sumando]\nnSum1=[nSum1]  Step=[Step]\nnSum2=[nSum2]\nProd=[Prod]' fijo='no' info='debug'">
+   <param name="G_36" value="espacio='EspText01' tipo='texto' dibujar-si='0' expresión='[250,310+15*s]' familia='s' s.intervalo='[0,4]' s.pasos='4' texto='EH([s],4)=[EntHex[s,4]]  EH([s],9)=[EntHex[s,9]]' fijo='no' info='debug'">
+   <param name="Animación" value="pausa='200' controles='no' auto='sí' hacer='tt=(!primeraVez)?initStateScorm():0;tt=(!primeraVez)?initCtrsAnim():0' mientras='!primeraVez'">
+</ajs>
+			</div>
+		</div></br>
+
+	<!--- Párrafo --->
+
+	<p>
+    En este interactivo pudiste ver que para el caso de la multiplicación ya no es una regla que siempre se acarrea una unidad. Ello es válido para la suma de dos números, pero para el caso de la multiplicación se pueden acarrear valores mayores a una unidad. Ello tiene una razón sencilla: cuando multiplicas un número lo estás sumando varias veces. Puedes tener, así pues, más de dos sumandos (si, por ejemplo, lo multiplicas por \(9\), tendrás nueve veces el valor sumado consigo mismo).
+	</p>
+
+	<p>
+    Este comportamiento es también válido para el caso binario. Trata de hacer tus propios ejemplos de productos de números binarios siguiendo lo que aprendiste para el caso hexadecimal, que es considerablemente más complicado que el binario.
+	</p>
+
+	<p>
+    Algo que conviene mencionar también es una forma de valerte de la notación decimal cuando calculas un producto en hexadecimal. En este interactivo se hizo todo con puntitos. No obstante, nota que se puede resumir, usando la notación decimal, con los siguientes pasos:
+	<ul>
+		<li>El número de puntitos corresponde, en decimal, al producto de los valores puestos en decimal. Por ejemplo, \(A\times9\) corresponde a multiplicar \(10\times9=90\) en decimal.</li>
+		<li>Una vez que tienes dicho número, buscas cuál es el residuo del número en base dieciséis. Ello se logra dividiendo el número entre \(16\) y viendo cuántos puntitos sobraron. En el ejemplo, tendrías que \(16\) cabe en \(90\) un total de cinco veces y sobran diez puntitos (en decimal). Estos deiz puntitos en hexadecimal corresponden a \(A\), por lo que el residuo sería \(A\), y es lo que va como resultado del dígito del producto.</li>
+		<li>El dígito que acarreas a la siguiente columna es el número de veces enteras que cupo dieciséis en el producto que obtuviste. En este ejemplo, cupo completamente un total de cinco veces, por lo que acarreas \(5\) a la siguiente columna. Claro, puedes representar en el dígito el residuo, pero todo lo demás (el \(5\times16\) que falta debe ir como parte del acarreo de una columna de orden mayor.</li>
+		<li>El proceso continúa de esta forma con una salvedad: el resultado del producto del nuevo dígito debe añadirse al valor acarreado del producto de los dígitos de la columna anterior. Esto es muy similar al caso de la suma.</li>
+	</ul>
+	</p>
+
+    <!------ TERMINA EL CONTENIDO DE LA PÁGINA --------->
+</div>
+
+
+
+  <!------ INICIA LA INFO SOBRE LAS LICENCIAS Y LOS CRÉDITOS. ---------->
+    <a id="btCopyright" class="standardButton" title="Haz clic aquí para consultar los créditos y las condiciones de uso de este recurso." href="#" onclick="document.getElementById('copyright').className='visible';">©</a>
+    <div id="copyright" class="oculto">
+      
+      <div class='innerCopyright'>
+      
+          <a id="btCloseCopyright" class="standardButton" title="Haz clic aquí para cerrar esta ventana." href="#" onclick="document.getElementById('copyright').className='oculto'">×</a>
+  
+          <!-- Créditos UAM  (siempre deben ir en primer lugar) -->
+			<div class="creditos">
+				<h1>
+					Créditos 
+				</h1>
+				<h2>
+					Escena original
+				</h2>				<table class="autores" 	>
+					<tr> <td  class="rol"> Diseño del contenido			</td>		<td class="nombre"> Alejandro Radillo Díaz, LITE</td></tr>
+					<tr> <td  class="rol"> Diseño funcional				</td>		<td class="nombre"> Alejandro Radillo Díaz, LITE</td></tr>
+					<tr> <td  class="rol"> Programación					</td>		<td class="nombre"> Alejandro Radillo Díaz, LITE</td></tr>
+					<!-- Varias personas en el mismo rubro, separar por <br> -->
+					<tr> <td  class="rol"> Asesoría de programación		</td>		<td class="nombre">Oscar Escamilla González, LITE</td></tr>
+					<tr> <td  class="rol"> Diseño gráfico				</td>		<td class="nombre">Francisco Varela Fuentes</td></tr>
+					<tr> <td  class="rol" >Coordinación					</td>		<td class="nombre"> Leticia Montserrat Vargas Rocha, LITE</td></tr>
+					</table>
+	         
+	         <div class='agradecimientos'></div>
+<div class='logos'>
+	            <a href=''>
+	               <img src="../images/info/icns/logoLite.png">
+	            </a>
+	            <a href="http://www.unadmexico.mx/">
+	               <img src="../images/info/icns/logoUNADM.png">
+	            </a>
+	            <a href="http://www.matem.unam.mx/">
+	               <img src="../images/info/icns/logomatemP.png">
+	            </a>
+	         </div>
+          </div>
+          
+          <!-- Linea separación créditos -->
+          <hr class="linea" />
+     
+          <!-- Aviso licencias -->
+          <div class="licencias">
+          
+				<p class="creativeCommons">Los contenidos de esta unidad didáctica interactiva están bajo una licencia <a href="http://creativecommons.org/licenses/by-nc-sa/2.5/es/" target="_blank">Creative Commons Reconocimiento-NoComercial-CompartirIgual</a>.</p>
+
+				<!--arquimedes (optativo)-->
+				<p>La unidad didáctica fue creada con <a href="http://arquimedes.matem.unam.mx/Descartes5/creditos/conCCL.html" target="_blank">Arquímedes</a>, una herramienta de código abierto.</p>
+
+				<!-- Descartes -->
+				<p>La unidad didáctica contiene escenas elaboradas con Descartes, una herramienta de código abierto.</p>
+
+
+          	<p style='text-align:center'> LITE - UnADM 2014</p>
+          </div>
+      </div>
+    </div> 
+   <!------ TERMINA LA INFO SOBRE LAS LICENCIAS Y LOS CRÉDITOS. ---------->
+  
+  
+  </div>
+  
+  
+</article>
+
+
+</body>
+
+</html>

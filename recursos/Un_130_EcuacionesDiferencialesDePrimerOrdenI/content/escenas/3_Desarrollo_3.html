@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+ 	<link href="../css/html5_mobile.css" rel="stylesheet" type="text/css" media="screen" />
+	<link href="../css/DescHTML5.css" rel="stylesheet" type="text/css" media="screen" />
+	<script type="text/javascript" src='../javascript/inject_functions_scorms_descartes.js'></script>
+	<script type='text/javascript' src='../lib/descartes-min.js'></script>
+</head>
+
+<body BGCOLOR="c0c0c0" leftmargin="0" topmargin="0">
+
+
+
+<ajs name="Descartes" width=970 height=550 code="Descartes">
+   <param name="tamaño" value="970x550">
+   <param name="image_loader" value="">
+   <param name="expand" value="">
+   <param name="decimal_symbol" value=".">
+   <param name="antialias" value="sí">
+   <param name="deshacer" value="no">
+   <param name="nombre" value="Descartes">
+   <param name="Versión" value="5.336, 2015-02-13">
+   <param name="Idioma" value="español">
+   <param name="Botones" value="créditos=no config=no inicio=no limpiar=no">
+   <param name="E_01" value="tipo='R2' id='E1' fijo='sí' escala='1' O.x='-50%' O.y='-50%' imagen='imgs/tpl/fondo_02.jpg' despl_imagen='arr-izq' fondo='ffc0d0d8' red='no' red10='no' ejes='no' texto='no'">
+   <param name="E_02" value="tipo='R2' id='E2' x='E2.x' y='E2.y' ancho='426' alto='400' dibujar-si='E2.visible' escala='25' O.x='50' O.y='50' despl_imagen='arr-izq' fondo='dcdee1' red='b8c4c8' red10='no' ejes='405860' texto='no'">
+   <param name="E_03" value="tipo='R2' id='EspTxt' x='EspTxt.x' y='EspTxt.y' ancho='375' alto='400' dibujar-si='EspTxt.visible' fijo='sí' despl_imagen='arr-izq' fondo='fff8ffd9' red='no' red10='no' ejes='no' texto='no'">
+   <param name="C_01" value="id='paso' tipo='numérico' interfaz='botón' región='interior' espacio='EspTxt' nombre='Siguiente' expresión='(200,360,120,30)' valor='ctr_paso' fijo='sí' visible='sí' color='blanco' color-int='f7000000' negrita='sí' fuente puntos='16' imagen='imgs/tpl/btn100.png' acción='calcular' parámetro='paso=paso+1\nk=1' dibujar-si='paso=0'">
+   <param name="C_02" value="id='anterior' tipo='numérico' interfaz='botón' región='interior' espacio='EspTxt' nombre='Anterior' expresión='(50,360,120,30)' fijo='sí' visible='sí' color='blanco' color-int='f7000000' negrita='sí' fuente puntos='16' imagen='imgs/tpl/btn100.png' acción='calcular' parámetro='paso=paso-1\nk=1' dibujar-si='paso=1' pos_mensajes='centro'">
+   <param name="C_03" value="id='paso2' tipo='numérico' interfaz='botón' región='interior' espacio='EspTxt' nombre='Siguiente' expresión='(200,360,120,30)' fijo='sí' visible='sí' color='blanco' color-int='f7000000' negrita='sí' fuente puntos='16' imagen='imgs/tpl/btn100.png' acción='calcular' parámetro='paso=paso+1\nk=-1' dibujar-si='paso=1' pos_mensajes='centro'">
+   <param name="C_04" value="id='Anterior' tipo='numérico' interfaz='botón' región='interior' espacio='EspTxt' nombre='Anterior' expresión='(50,360,120,30)' fijo='sí' visible='sí' color='blanco' color-int='f7000000' negrita='sí' fuente puntos='16' imagen='imgs/tpl/btn100.png' acción='calcular' parámetro='paso=paso-1\nk=1' dibujar-si='paso=2' pos_mensajes='centro'">
+   <param name="C_05" value="id='paso3' tipo='numérico' interfaz='botón' región='interior' espacio='EspTxt' nombre='Siguiente' expresión='(200,360,120,30)' fijo='sí' visible='sí' color='blanco' color-int='f7000000' negrita='sí' fuente puntos='16' imagen='imgs/tpl/btn100.png' acción='calcular' parámetro='paso=paso+1\nk=0' dibujar-si='paso=2' pos_mensajes='centro'">
+   <param name="C_06" value="id='Anterior' tipo='numérico' interfaz='botón' región='interior' espacio='EspTxt' nombre='Anterior' expresión='(50,360,120,30)' fijo='sí' visible='sí' color='blanco' color-int='f7000000' negrita='sí' fuente puntos='16' imagen='imgs/tpl/btn100.png' acción='calcular' parámetro='paso=paso-1\nk=-1' dibujar-si='paso=3' pos_mensajes='centro'">
+   <param name="C_07" value="id='N' tipo='numérico' región='interior' espacio='EspTxt' nombre='N(0)' expresión='(ctr_a.x,ctr_a.y,ctr_a.w+25,ctr_a.h)' valor='ctr_N' incr='10' min='0' max='1000' decimales='0' fijo='sí' visible='sí' acción='calcular' parámetro='ValPer0=(paso=1)?1:ValPer0\nValPer1=(paso=2)?1:ValPer1\nValPer2=(paso=3)?1:ValPer2\ncalPer()' dibujar-si='paso>0' pos_mensajes='centro'">
+   <param name="C_08" value="id='t' tipo='numérico' región='interior' espacio='EspTxt' nombre='t' expresión='(ctr_c.x,ctr_c.y,ctr_c.w,ctr_c.h)' valor='ctr_t' incr='5' min='0' max='1000' decimales='0' fijo='sí' visible='sí' acción='calcular' parámetro='ValPer3=(paso=1)?1:ValPer3\nValPer4=(paso=2)?1:ValPer4\nValPer5=(paso=3)?1:ValPer5\ncalPer()' dibujar-si='paso>0' pos_mensajes='centro'">
+   <param name="C_09" value="id='k' tipo='numérico' región='escenario' espacio='E1' nombre='k' expresión='(0,0,0,0)' valor='ctr_k' fijo='sí' visible='sí'">
+   <param name="A_01" value="id='initEscena()' algoritmo='sí' algoritmo='sí' hacer='initBtns();;titulo=&squot;Soluciones gráficas del modelo poblacional&squot;;titulo.w=_AnchoDeCadena_(titulo,&squot;SansSerif&squot;,&squot;PLAIN&squot;,&squot;30&squot;);titulo.x=(E1._w-titulo.w)/2;titulo.y=30'">
+   <param name="A_02" value="id='initBtns()' algoritmo='sí' algoritmo='sí' hacer='ctr_a.w=120;ctr_a.h=40;ctr_a.x=(EspTxt._w-(ctr_a.w*3+5*2))/2+30;ctr_a.y=EspTxt._h-ctr_a.h-50;;ctr_c.x=ctr_a.x+180;ctr_c.y=ctr_a.y;ctr_c.w=ctr_a.w;ctr_c.h=ctr_a.h;;E2.x=54;E2.y=105;E2.visible=1;;EspTxt.x=540;EspTxt.y=105;EspTxt.visible=1'">
+   <param name="A_03" value="id='f(x)' expresión='N/100*exp(k*x)'">
+   <param name="A_04" value="id='ValPer' vector='sí' evaluar='una-sola-vez' tamaño='20'">
+   <param name="A_05" value="id='calPer()' algoritmo='sí' algoritmo='sí' hacer='ValPer[0]=(ValPer0)?1:ValPer[0];ValPer[1]=(ValPer1)?1:ValPer[1];ValPer[2]=(ValPer2)?1:ValPer[2];ValPer[3]=(ValPer3)?1:ValPer[3];ValPer[4]=(ValPer4)?1:ValPer[4];ValPer[5]=(ValPer5)?1:ValPer[5];ValPer[6]=(ValPer6)?1:ValPer[6];per=20*(ValPer[0]+ValPer[1]+ValPer[3]+ValPer[4])+(10*(ValPer[2]+ValPer[5]));setSCORMPercentage(per)'">
+   <param name="A_06" value="id='getSCORMState()' algoritmo='sí' expresión='res' algoritmo='sí' Local='res,arroba' inicio='arroba=&squot;@&squot;' hacer='ö=|Estandar ---- [MIDC]XX.<var>  SI SOLO EXISTE UNA ESCENA EN EL HTML|;ö=|Estandar ---- [MIDC]XX_YY.<var>  SI HAY MAS DE UNA ESCENA EN EL HTML|;res=&squot;D03.paso:&squot;+paso+arroba;res=res+&squot;D03.N:&squot;+N+arroba;res=res+&squot;D03.k:&squot;+k+arroba;res=res+&squot;D03.t:&squot;+t+arroba;res=res+&squot;D03.ValPer[0]:&squot;+ValPer[0]+arroba;res=res+&squot;D03.ValPer[1]:&squot;+ValPer[1]+arroba;res=res+&squot;D03.ValPer[2]:&squot;+ValPer[2]+arroba;res=res+&squot;D03.ValPer[3]:&squot;+ValPer[3]+arroba;res=res+&squot;D03.ValPer[4]:&squot;+ValPer[4]+arroba;res=res+&squot;D03.ValPer[5]:&squot;+ValPer[5]+arroba'">
+   <param name="A_07" value="id='initStateScorm()' algoritmo='sí' expresión='x' algoritmo='sí' hacer='paso=getSCORMStateVar(&squot;D03.paso&squot;);N=getSCORMStateVar(&squot;D03.N&squot;);k=getSCORMStateVar(&squot;D03.k&squot;);t=getSCORMStateVar(&squot;D03.t&squot;);;ValPer[0]=getSCORMStateVar(&squot;D03.ValPer[0]&squot;);ValPer[1]=getSCORMStateVar(&squot;D03.ValPer[1]&squot;);ValPer[2]=getSCORMStateVar(&squot;D03.ValPer[2]&squot;);ValPer[3]=getSCORMStateVar(&squot;D03.ValPer[3]&squot;);ValPer[4]=getSCORMStateVar(&squot;D03.ValPer[4]&squot;);ValPer[5]=getSCORMStateVar(&squot;D03.ValPer[5]&squot;);calPer();;ctr_paso=(paso!=0)?paso:0;ctr_N=(N!=0)?N:200;ctr_k=(k!=0)?k:1;ctr_t=(t!=0)?t:100'">
+   <param name="A_08" value="id='INICIO' algoritmo='sí' evaluar='una-sola-vez' hacer='initStateScorm();initEscena()'">
+   <param name="A_09" value="id='CALCULOS' algoritmo='sí' evaluar='siempre'">
+   <param name="G_01" value="espacio='E1' tipo='texto' fondo='sí' expresión='[titulo.x,titulo.y]' texto='[titulo]' fuente='SansSerif,PLAIN,30' fijo='sí'">
+   <param name="G_02" value="espacio='EspTxt' tipo='texto' dibujar-si='paso=0' expresión='[5,10]' texto='{\rtf1\uc0{\fonttbl\f0\fcharset0 Times New Roman;\f1\fcharset0 Arial;\f2\fcharset0 Times New Roman;}\f1\fs36 Como acabamos de ver, la soluci\u243 n\par a nuestro sistema est\u225  dado por\f2\fs40\i\par {\*\mjaformula N(t) = N{\subix 0}e{\supix kt}}\f1\fs36\i0 . \u201 sto implica que para cada\par \f2\fs40\i{\*\mjaformula N{\subix 0}\u8805 0}\f1\fs36\i0  tenemos una soluci\u243 n diferente,\par puesto que se espera que al tiempo \f2\fs40\i{\*\mjaformula t}\f1\fs36\i0   la \par poblaci\u243 n dependa de la poblaci\u243 n inicial.\par \par Si conocemos la poblaci\u243 n inicial s\u243 lo nos\par falta determinar el valor de \f2\fs40\i{\*\mjaformula k}\f1\fs36\i0 , pero este\par dato es caracter\u237 stico de cada sistema,\par aunque dependiendo del valor de \f2\fs40\i{\*\mjaformula k}\f1\fs36\i0 , s\u243 lo\par hay tres tipos de comportamiento para la\par funci\u243 n \f2\fs40\i{\*\mjaformula N(t)}\f1\fs36\i0 , \f2\fs40\i{\*\mjaformula k>0, k<0 y k=0}\f1\fs36\i0}' fuente='SansSerif,PLAIN,18' fijo='sí'">
+   <param name="G_03" value="espacio='EspTxt' tipo='texto' dibujar-si='paso=1' expresión='[5,10]' texto='{\rtf1\uc0{\fonttbl\f0\fcharset0 Times New Roman;\f1\fcharset0 Arial;\f2\fcharset0 Times New Roman;}\f1\fs36 Caso \f2\fs40\i{\*\mjaformula k>0}.\f1\fs36\i0  Como \f2\fs40\i{\*\mjaformula k=n-m}\f1\fs36\i0 , el valor de \f2\fs40\i\par {\*\mjaformula n}\f1\fs36\i0  es mayor a \f2\fs40\i{\*\mjaformula m}\f1\fs36\i0 , lo que muestra que la\par natalidad es mayor que la mortalidad y la\par poblaci\u243 n crece sin l\u237 mite (ver gr\u225 fica).\par \par La intersecci\u243 n de la gr\u225 fica con la recta Y\par representa el valor de la poblaci\u243 n inicial\f2\fs40\i{\*\mjaformula N{\subix 0}.}\f1\fs36\i0\par \par \f2\fs40\i{\*\mjaformula N(t)}\f1\fs36\i0  representa la poblaci\u243 n al tiempo \f2\fs40\i{\*\mjaformula t}\f1\fs36\i0 .\par \par Con los pulsadores puedes cambiar el valor\par tanto de \f2\fs40\i{\*\mjaformula N{\subix 0}}\f1\fs36\i0  como de \f2\fs40\i{\*\mjaformula t}.\par \f1\fs36\i0}' fuente='SansSerif,PLAIN,18' fijo='sí'">
+   <param name="G_04" value="espacio='EspTxt' tipo='texto' dibujar-si='paso=2' expresión='[5,10]' texto='{\rtf1\uc0{\fonttbl\f0\fcharset0 Times New Roman;\f1\fcharset0 Arial;\f2\fcharset0 Times New Roman;}\f1\fs36 Caso \f2\fs40\i{\*\mjaformula k<0}\f1\fs36\i0 . Como \f2\fs40\i{\*\mjaformula k=n-m}\f1\fs36\i0 , el valor de \f2\fs40\i{\*\mjaformula n}\f1\fs36\i0\par es menor a \f2\fs40\i{\*\mjaformula m}\f1\fs36\i0 , indicando que la natalidad\par es menor que la mortalidad y la poblaci\u243 n\par decrece hasta desaparecer (ver gr\u225 fica).\par \par La intersecci\u243 n de la gr\u225 fica con la recta Y\par representa el valor de la poblaci\u243 n inicial\f2\fs40\i{\*\mjaformula N{\subix 0}.}\f1\fs36\i0\par \par \f2\fs40\i{\*\mjaformula N(t)}\f1\fs36\i0  representa la poblaci\u243 n al tiempo \f2\fs40\i{\*\mjaformula t}\f1\fs36\i0 .\par \par Con los pulsadores puedes cambiar el valor\par de \f2\fs40\i{\*\mjaformula N{\subix 0}}\f1\fs36\i0  y de \f2\fs40\i{\*\mjaformula t}.\par \f1\fs36\i0}' fuente='SansSerif,PLAIN,18' fijo='sí'">
+   <param name="G_05" value="espacio='EspTxt' tipo='texto' dibujar-si='paso=3' expresión='[5,10]' texto='{\rtf1\uc0{\fonttbl\f0\fcharset0 Times New Roman;\f1\fcharset0 Arial;\f2\fcharset0 Times New Roman;}\f1\fs36 Caso \f2\fs40\i{\*\mjaformula k=0}\f1\fs36\i0 . Como \f2\fs40\i{\*\mjaformula k=n-m}\f1\fs36\i0 , el valor de \f2\fs40\i{\*\mjaformula n}\f1\fs36\i0\par es id\u233 ntico a \f2\fs40\i{\*\mjaformula m}\f1\fs36\i0 , indicando que la natalidad\par y la mortalidad son equivalentes, dando lugar\par a que la poblaci\u243 n se mantenga constante\par en cualquier instante \f2\fs40\i{\*\mjaformula t}\f1\fs36\i0  (ver gr\u225 fica).\par \par La intersecci\u243 n de la gr\u225 fica con la recta Y\par representa el valor de la poblaci\u243 n inicial\f2\fs40\i{\*\mjaformula N{\subix 0}.}\f1\fs36\i0\par \f2\fs40\i\par \f1\fs36\i0}' fuente='SansSerif,PLAIN,18' fijo='sí'">
+   <param name="G_06" value="espacio='E1' tipo='texto' fondo='sí' dibujar-si='0' expresión='[__GRAF__,20]' fijo='sí'">
+   <param name="G_07" value="espacio='E2' tipo='ecuación' color='0000b1' expresión='y=f(x)' ancho='2'">
+   <param name="G_08" value="espacio='E2' tipo='punto' color='ae0000' dibujar-si='paso<3' expresión='(t/100,f(t/100))' texto='N(t)=[f(t/100)*100]' fuente='Serif,BOLD+ITALIC,15' decimales='0' fijo='sí' tamaño='5'">
+   <param name="G_09" value="espacio='E2' tipo='punto' color='ae0000' expresión='(0,f(0))' texto='{\rtf1\uc0{\fonttbl\f0\fcharset0 Times New Roman;\f1\fcharset0 Times New Roman;\f2\fcharset0 Courier New;}\f1\fs30\b\i N(0)={\*\mjaformula{\expr f(0)*100}}\f2\fs30\b0}' fuente='Serif,BOLD+ITALIC,15' decimales='0' fijo='sí' tamaño='3'">
+   <param name="G_10" value="espacio='E2' tipo='punto' color='ae0000' expresión='(t/100,0)' texto='\nt=[t]' fuente='Serif,BOLD+ITALIC,15' decimales='0' fijo='sí'">
+   <param name="G_11" value="espacio='E2' tipo='texto' expresión='[30,355]' texto='La proporción del plano es 1 a 100 unidades' fuente='SansSerif,PLAIN,18' fijo='sí'">
+   <param name="G_12" value="espacio='E2' tipo='texto' dibujar-si='debug' expresión='[20,20]' texto='paso=[paso]   N=[N]\nk=[k]      t=[t]\nf(t)=[f(t/100)*100]    per=[per]\n' fijo='sí'">
+</ajs>
+
+
+
+
+
+	<!------ INICIA LA INFO SOBRE LAS LICENCIAS Y LOS CRÉDITOS. ---------->
+
+    <a id="btCopyright" class="standardButton" title="Haz clic aquí para consultar los créditos y las condiciones de uso de este recurso." href="#" onClick="document.getElementById('copyright').className='visible';">©</a>
+
+    <div id="copyright" class="oculto">
+
+      
+
+      <div class='innerCopyright'>
+
+      
+
+          <a id="btCloseCopyright" class="standardButton" title="Haz clic aquí para cerrar esta ventana." href="#" onClick="document.getElementById('copyright').className='oculto'">×</a>
+
+  
+
+          <!-- Créditos UAM  (siempre deben ir en primer lugar) -->
+
+			<div class="creditos">
+
+				<h1>
+
+					Créditos 
+
+				</h1>
+
+
+
+				<h2>
+
+					Escena original
+
+				</h2>				<table class="autores" 	>
+
+
+
+					<tr> <td  class="rol"> Diseño del contenido			</td>		<td class="nombre"> Víctor Hugo García Jarillo (Facultad de Ciencias UNAM, LITE)</td></tr>
+
+					<tr> <td  class="rol"> Diseño funcional				</td>		<td class="nombre"> Víctor Hugo García Jarillo (Facultad de Ciencias UNAM, LITE)</td></tr>
+
+					<tr> <td  class="rol"> Programación					</td>		<td class="nombre"> Víctor Hugo García Jarillo (Facultad de Ciencias UNAM, LITE)</td></tr>
+
+					<tr> <td  class="rol"> Diseño gráfico				</td>		<td class="nombre"> Ricardo López Gómez</td></tr>
+
+					<tr> <td  class="rol" >Coordinación			</td>		<td class="nombre"> Leticia Montserrat Vargas Rocha</td></tr>
+
+					</table>
+
+				<h2>
+
+					Adaptación 
+
+				</h2>
+
+				<table class="autores" 	>
+
+				<tr> <td  class="rol"> Diseño funcional				</td>		<td class="nombre"> Victor Hugo García Jarillo (Facultad de                    Ciencias, UNAM)		</td></tr>
+
+					<tr> <td  class="rol"> Programación				</td>		<td class="nombre"> Victor Hugo García Jarillo (Facultad de                    Ciencias, UNAM)</td></tr>
+
+
+
+					<tr> <td  class="rol"> Diseño gráfico			</td>		<td class="nombre"> Francisco	Varela Fuentes</td></tr>
+
+					<tr> <td  class="rol" >Coordinación			</td>		<td class="nombre"> Leticia Montserrat Vargas Rocha</td></tr>
+
+		
+
+				</table>
+
+
+
+ <div class='logos'>
+
+	            <a href=''>
+
+	               <img src="../images/info/icns/logoLite.png">
+
+	            </a>
+
+	            <a href="http://www.unadmexico.mx/">
+
+	               <img src="../images/info/icns/logoUNADM.png">
+
+	            </a>
+
+	         </div>
+
+          </div>
+
+          
+
+          <!-- Linea separación créditos -->
+
+          <hr class="linea" />
+
+     
+
+          <!-- Aviso licencias -->
+
+          <div class="licencias">
+
+          
+
+				<p class="creativeCommons">Los contenidos de esta unidad didáctica interactiva están bajo una licencia <a href="http://creativecommons.org/licenses/by-nc-sa/2.5/es/" target="_blank">Creative Commons Reconocimiento-NoComercial-CompartirIgual</a>.</p>
+
+
+
+				<!--arquimedes (optativo)-->
+
+				<p>La unidad didáctica fue creada con <a href="http://arquimedes.matem.unam.mx/Descartes5/creditos/conCCL.html" target="_blank">Arquímedes</a>, una herramienta de código abierto.</p>
+
+
+
+				<!-- Descartes -->
+
+				<p>La unidad didáctica contiene escenas elaboradas con Descartes, una herramienta de código abierto.</p>
+
+
+
+
+
+          	<p style='text-align:center'> LITE - UnADM 2014</p>
+
+          </div>
+
+      </div>
+
+    </div> 
+
+   <!------ TERMINA LA INFO SOBRE LAS LICENCIAS Y LOS CRÉDITOS. ---------->
+
+  
+
+  
+
+  </div>
+
+  
+
+  
+
+</article>
+
+
+
+
+
+</body>
+
+
+
+</html>

@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <link href="../css/html5.css" rel="stylesheet" type="text/css" media="screen" />
+  <!-------- MathJax --- para fórmulas matemáticas ------>
+  <script type="text/javascript"
+    src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+  </script>
+ 
+</head>
+
+<body>
+  
+
+<article class="course_content_container">
+  
+  <div class="course_content">
+
+    <!------ INICIA EL CONTENIDO DE LA PÁGINA --------->
+    
+    
+    <!--- Título de la página --->
+    <h1>Definición de una ecuación diferencial de segundo orden</h1>
+    
+    
+	<div class='text_panel'>
+		<!--- Subtítulo (no necesario en introducción) --->
+		<h2>Características</h2>
+    
+    <!--- Párrafo --->
+    <p>La forma general de una ecuación diferencial ordinaria de segundo orden es de la forma:</p>
+    
+    <p><div align="center"><strong>\( F(x,f(x),f'(x),f''(x)) = 0 \)</strong></div>
+    
+    <p>Otra forma de escribirla es:</p>
+    
+    <p><div align="center"><strong>\( \frac{d^2y}{dx^2}=f(x,y(x),\frac{dy}{dx}) \)</strong></div>
+    
+    <p>Un ejemplo es la ecuación:</p>
+    
+    <p><div align="center"><strong>\( \frac{d^2y}{dx^2}=sen(x) + 3y + (\frac{dy}{dx})^2 \)</strong></div>
+    
+    <p>La solución de una ecuación diferencial es una función \( y = y(x) \) que satisface la ecuación, es decir, si obtenemos \( y'(x) \) y \(y''(x) \) y las sustituimos en la ecuación, ésta se debe satisfacer. Así pues, la función \( y(x) = cos(x) \) es solución a la ecuación de segundo orden \( \frac{d^2y}{dx^2} = -y \), ya que \( \frac{d^2(cos(x))}{dx^2} = -cos(x)\).</p>
+    
+    <p>En las ciencias, las ecuaciones diferenciales de segundo orden surgen de manera natural. Quizás la ecuación más conocida  de este tipo es la segunda ley del movimiento de Newton, que se expresa como sigue:</p>
+    
+    <p><div align="center">\( m\frac{d^2y}{dt^2} = F(t, y, \frac{dy}{dt})\)</div></p>
+    
+    <p>En esta ecuación se describe el movimiento de una partícula de masa \(m\) cuyo movimiento depende de una fuerza \(F\). En dicha ecuación \( y = y(t) \) es la posición de la partícula en el tiempo \(t\), \( \frac{dy}{dt} \) es su velocidad, y \(F\) es la fuerza total que actúa sobre la partícula. Se puede notar que la fuerza \(F\) puede depender de la posición y de la velocidad de la partícula, así como también del tiempo.
+    
+    <p>Cuando tenemos una ecuación diferencial de la cual queremos encontrar su solución, por lo general se imponen condiciones iniciales sobre \( y(t) \) de la forma \( y(t_{0})=y_{0}, y'(t_{0})=y'_{0} \). La ecuación diferencial, junto con las condiciones iniciales, se conoce como problema de valor inicial. Por ejemplo, para la segunda ley de Newton, \( F(t,y'(t))=-g \), \(y_{0}\) indica la posición inicial de la partícula y \(y'_{0}\) es su velocidad inicial. Cabe mencionar que la solución general de la ecuación no depende de las condiciones iniciales, pero al introducir en ésta las condiciones iniciales, la solución se vuelve particular, y a cada tipo de condición inicial le corresponde una solución particular diferente.</p>
+    
+    <p>En la situación de la partícula que se mueve bajo la influencia de la gravedad se
+    puede ver claramente que si la velocidad inicial es cero, obtendremos una función que describe un movimiento muy diferente al de la función que describe el movimiento cuando la velocidad inicial es mayor a cero. Finalmente hacemos notar que las dos soluciones particulares junto con todas las soluciones particulares son la familia de soluciones descrita por la solución general.</p>
+
+</div>
+
+
+            <!------ TERMINA EL CONTENIDO DE LA PÁGINA --------->
+
+
+	<!------ INICIA LA INFO SOBRE LAS LICENCIAS Y LOS CRÉDITOS. ---------->
+    <a id="btCopyright" class="standardButton" title="Haz clic aquí para consultar los créditos y las condiciones de uso de este recurso." href="#" onClick="document.getElementById('copyright').className='visible';">&#169;</a>
+    <div id="copyright" class="oculto">
+      
+      <div class='innerCopyright'>
+      
+          <a id="btCloseCopyright" class="standardButton" title="Haz clic aquí para cerrar esta ventana." href="#" onClick="document.getElementById('copyright').className='oculto'">×</a>
+  
+          <!-- Créditos UAM  (siempre deben ir en primer lugar) -->
+			<div class="creditos">
+				<h1>
+					Créditos 
+				</h1>
+
+				<h2>
+					Escena original
+				</h2>				<table class="autores" 	>
+
+					<tr> <td  class="rol"> Diseño del contenido			</td>		<td class="nombre"> Víctor Hugo García Jarillo (Facultad de Ciencias UNAM, LITE)</td></tr>
+					<tr> <td  class="rol"> Diseño funcional				</td>		<td class="nombre"> Víctor Hugo García Jarillo (Facultad de Ciencias UNAM, LITE)</td></tr>
+					<tr> <td  class="rol"> Programación					</td>		<td class="nombre"> Víctor Hugo García Jarillo (Facultad de Ciencias UNAM, LITE)</td></tr>
+					<tr> <td  class="rol"> Diseño gráfico				</td>		<td class="nombre"> Ricardo López Gómez</td></tr>
+					<tr> <td  class="rol" >Coordinación			</td>		<td class="nombre"> Leticia Montserrat Vargas Rocha</td></tr>
+					</table>
+				<h2>
+					Adaptación 
+				</h2>
+				<table class="autores" 	>
+				<tr> <td  class="rol"> Diseño funcional				</td>		<td class="nombre"> Victor Hugo García Jarillo (Facultad de                    Ciencias, UNAM)		</td></tr>
+					<tr> <td  class="rol"> Programación				</td>		<td class="nombre"> Victor Hugo García Jarillo (Facultad de                    Ciencias, UNAM)</td></tr>
+
+					<tr> <td  class="rol"> Diseño gráfico			</td>		<td class="nombre"> Francisco	Varela Fuentes</td></tr>
+					<tr> <td  class="rol" >Coordinación			</td>		<td class="nombre"> Leticia Montserrat Vargas Rocha</td></tr>
+		
+				</table>
+
+ <div class='logos'>
+	            <a href=''>
+	               <img src="../images/info/icns/logoLite.png">
+	            </a>
+	            <a href="http://www.unadmexico.mx/">
+	               <img src="../images/info/icns/logoUNADM.png">
+	            </a>
+	         </div>
+          </div>
+          
+          <!-- Linea separación créditos -->
+          <hr class="linea" />
+     
+          <!-- Aviso licencias -->
+          <div class="licencias">
+          
+				<p class="creativeCommons">Los contenidos de esta unidad didáctica interactiva están bajo una licencia <a href="http://creativecommons.org/licenses/by-nc-sa/2.5/es/" target="_blank">Creative Commons Reconocimiento-NoComercial-CompartirIgual</a>.</p>
+
+				<!--arquimedes (optativo)-->
+				<p>La unidad didáctica fue creada con <a href="http://arquimedes.matem.unam.mx/Descartes5/creditos/conCCL.html" target="_blank">Arquímedes</a>, una herramienta de código abierto.</p>
+
+				<!-- Descartes -->
+				<p>La unidad didáctica contiene escenas elaboradas con Descartes, una herramienta de código abierto.</p>
+
+
+          	<p style='text-align:center'> LITE - UnADM 2014</p>
+          </div>
+      </div>
+    </div> 
+   <!------ TERMINA LA INFO SOBRE LAS LICENCIAS Y LOS CRÉDITOS. ---------->
+  
+  
+  </div>
+  
+  
+</article>
+
+
+</body>
+
+</html>

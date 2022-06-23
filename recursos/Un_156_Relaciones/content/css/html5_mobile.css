@@ -1,0 +1,97 @@
+@import "html5.css";
+
+
+
+/* contenedor del contenido, para estilar mejor como acomodar el contenido */
+.course_content_container {
+	padding: 6px;
+}
+
+.text_panel{
+	/* border: 2px solid #eaeaea; */
+	border: none;
+	background: none;
+	box-shadow: none;
+	padding-left: 0px;
+	padding-right: 0px;
+}
+
+h1{
+	display: none;
+}
+
+.creditos h1 {
+	display: block;
+}
+
+#copyright {
+    position: fixed;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    padding: 5px;
+}
+
+
+/* texto */
+p{
+	margin : 5px  0px 5px 0px;
+	margin-top:10px;		
+}
+
+/* Ordered list */
+ol{
+	padding-left: 30px;
+	padding-right: 30px;
+}
+/* contenedor para los elementos externos, como animaciones, interacciones y video */
+div .course_extern_content {
+	margin-top: 15px;	
+}
+
+/*********************************
+ BOT�N PARA CR�DITOS Y LICENCIAS
+ **********************************/
+#btCopyright,
+#btCloseCopyright{
+	display: none;
+}
+
+#btCloseCopyright{
+	display:block;
+}
+
+/*********************************
+ DIV CON CR�DITOS Y LICENCIAS
+ **********************************/
+.creditos h1 {
+		color: #bdd609;
+}
+
+#btnShowHeaderMenu{
+	position: absolute;
+	padding: 0px;
+	border: none;
+	
+	top: 0px;
+	left: 0px;
+	
+	width: 40px;
+	height: 40px;
+	background: #98AB0B;
+	z-index: 999999;
+	opacity: 0.7;
+	
+	cursor: pointer;
+	overflow: hidden;
+}
+
+#btnShowHeaderMenu:hover{
+	opacity: 1;
+}
+
+#btnShowHeaderMenu:after{
+	content:url('images/menu_sub.png');
+	
+}

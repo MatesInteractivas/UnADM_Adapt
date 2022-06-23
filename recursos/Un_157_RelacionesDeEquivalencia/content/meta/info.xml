@@ -1,0 +1,85 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<recurso 
+	id="_Un_157_RelacionesDeEquivalencia" 
+	nivel="Licenciatura" 
+	area="Matemáticas, Álgebra, Relaciones de Equivalencia" 
+	plataforma="HTML 5" 
+	>
+	<titulo><![CDATA[
+		Relaciones de Equivalencia 
+	]]></titulo>
+	
+	<Descripcion><![CDATA[
+		Analizar con un modelo interactivo el estudio de las propiedades de Relaciones de Equivalencia e ilustrarlas con ejemplos.  Se presenta una pequeña reseña de la importancia de las Relaciones de Equivalencia en las matemáticas. Se ilustran y definen los conceptos de reflexividad, simetría, transitividad. irreflexividad, antisimetría, y Relación de Equivalencia y se muestra como computarlas en términos de la identidad la relacione inversa y la composición de relaciones. Se ilustra en formas interactiva, con su representación gráfica, la cerradura reflexiva, la cerradura simétrica y la cerradura transitiva de una relación.  
+	]]></Descripcion>
+	<tags>
+	<![CDATA[
+		Relaciones de Equivalencia, Cerradura Reflexiva de una Relación, Cerradura Simétrica de una Relación, Cerradura Transitiva de una Relación, Relación idéntica, Relación inversa
+	]]></tags>
+</recurso>
+
+<!--
+********************************************************************************
+                               **** Áreas **** 
+Matemáticas 
+	Aritmética
+		Fracciones
+	Álgebra
+		Combinatoria
+		Ecuaciones lineales
+		Ecuaciones polinomiales
+		Polinomios
+		Álgebra lineal
+		Teoría de grupos
+		Álgebra abstracta
+	Geometría
+		Geometría elemental
+		Geometría clásica
+		Geometría analítica
+	Trigonometría 
+	Probabilidad 
+		Cálculo de probabilidades
+		Eventos
+		Variables aleatorias
+		Ley de los grandes números
+		Teorema del límite central
+	Estadística
+		Medidas de tendencia central
+		Muestreo
+		Distribuciones
+		Inferencia
+	Cálculo
+		Funciones 
+		Límites
+		Continuidad
+		Derivadas 
+		Integrales 
+	Teoría de números
+	Teoría de gráficas
+Física
+	Mecánica
+	Electromagnetismo
+	Óptica
+	Físico-química 
+	Termodinámica
+	Mecánica estadística
+	Mecánica cuántica
+	Relatividad
+
+********************************************************************************
+
+********************************************************************************
+                             **** Niveles ****
+
+	Primaria
+	Preescolar
+	Secundaria
+	Bachillerato
+	Licenciatura
+	Posgrado 
+	Maestria
+	Doctorado
+
+********************************************************************************
+
+-->

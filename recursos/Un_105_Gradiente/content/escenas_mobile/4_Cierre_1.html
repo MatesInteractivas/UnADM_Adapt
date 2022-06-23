@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+    <link href="../css/DescHTML5.css" rel="stylesheet" type="text/css" media="screen" />
+	<link href="../css/html5_mobile.css" rel="stylesheet" type="text/css" media="screen" />
+    <script type="text/javascript" src='../javascript/inject_functions_scorms_descartes.js'></script>
+	<script type='text/javascript' src='../lib/descartes-min.js'></script>
+  
+  <!-------- MathJax --- para fórmulas matemáticas ------>
+  <script type="text/javascript"
+    src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+  </script>
+
+</head>
+
+<body>
+  
+
+<article class="course_content_container">
+  
+  <div class="course_content">
+    
+    
+    <!------ INICIA EL CONTENIDO DE LA PÁGINA ------- -->
+    
+    
+    <!--- Título de la página - -->
+    <h1>Aplicaciones del gradiente</h1>
+    
+    <!--- Para poner un panel con fondo - -->
+    <div class='text_panel'>
+
+    
+    
+    <!--- Párrafo - -->
+    <p>Como hemos visto, el gradiente tiene un importante significado geométrico, pues nos dice la dirección en que una función \( f \) crece más rápido, y además, la dirección ortogonal a la superficies de nivel de \( f \). El hecho de que proporcione ambos datos al mismo tiempo es una herramienta muy útil en diversas áreas.</p>
+    
+    <p>Para ver ésto consideraremos un mapa topográfico de una colina representada por una función \( f(x,y) \). Sobre ésta podemos dibujar sus curvas de nivel. Si nos colocamos en un punto de una de estas curvas, al obtener su gradiente, éste nos indicará la dirección del máximo crecimiento. Si esta colina representa un mapa del clima, podremos saber en que dirección hay un máximo cambio en la temperatura.</p>
+
+	<p>A continuación se muestra la representación de una colina. Esta colina puede a su vez representar cualquier campo, por ejemplo, el campo de temperaturas que se mencionó anteriormente. Éste campo está determinado por la función \(f(x,y)\), que puedesmodificar escribiendo una ecuación en el campo de texto. \(a\), \(b\), y \(c\) son parámetros que se pueden utilizar para expresar la ecuación, y \(h\) es la altura de un plano paralelo al plano \(XY\). Cambia la altura del plano e identifica la curva que se genera al intersectar el plano con la superficie. Las curvas que se generan son las curvas de nivel.</p>
+<div class="Descartes_extern_content">
+  <ajs name="Descartes" width=495 height=320 code="Descartes">
+   <param name="jnlp_href" value="_jnlp_path_lib/Descartes5.jnlp">
+   <param name="tamaño" value="495x320">
+   <param name="image_loader" value="">
+   <param name="expand" value="">
+   <param name="decimal_symbol" value=".">
+   <param name="antialias" value="sí">
+   <param name="deshacer" value="no">
+   <param name="nombre" value="Descartes">
+   <param name="Versión" value="5.336, 2015-02-13">
+   <param name="Idioma" value="español">
+   <param name="Botones" value="créditos=no config=no inicio=no limpiar=no">
+   <param name="E_01" value="tipo='R2' id='E1' fijo='sí' escala='1' O.x='-50%' O.y='-50%' imagen='imgs/tpl/fondo_02.jpg' despl_imagen='arr-izq' fondo='c0d0d8' red='no' red10='no' ejes='no' texto='no'">
+   <param name="E_02" value="tipo='R3' id='E7' escala='30' despl_imagen='arr-izq' fondo='negro' R3='sí'">
+   <param name="E_03" value="tipo='R2' id='CTRS_north' x='CTRS.x' y='CTRS.y' ancho='520' alto='100' dibujar-si='1|CTRS.visible' fijo='sí' escala='-1' O.x='-50%' O.y='-50%' despl_imagen='arr-izq' fondo='88000000' red='no' red10='no' ejes='no' texto='no'">
+   <param name="E_04" value="tipo='R2' id='btnOpenClose' x='btnOpenClose.x' y='btnOpenClose.y' ancho='35' alto='30' fijo='sí' escala='1' O.x='-50%' O.y='-50%' despl_imagen='arr-izq' fondo='ff000000' red='no' red10='no' ejes='no' texto='no'">
+   <param name="E_05" value="tipo='R2' id='MASK' dibujar-si='INFO.visible' fijo='sí' imagen='imgs/tpl/backwindow.png' despl_imagen='mosaico' fondo='95000000' red='no' red10='no' ejes='no' texto='no'">
+   <param name="E_06" value="tipo='R2' id='INFO' x='INFO.x' y='INFO.y' ancho='510' alto='310' dibujar-si='INFO.visible' fijo='sí' imagen='imgs/tpl/retro_790x470.png' despl_imagen='mosaico' red='no' red10='no' ejes='no' texto='no'">
+   <param name="C_01" value="id='cerrarInfo' tipo='numérico' interfaz='botón' región='interior' espacio='INFO' nombre='×' expresión='(cerrarInfo.x,cerrarInfo.y,cerrarInfo.w,cerrarInfo.h)' fijo='sí' visible='sí' color='blanco' fuente puntos='26' imagen='_STYLE_|class=btnUNADM|shadowTextColor=rgba(0,0,0,0.2)|shadowTextOffsetY=2|shadowTextBlur=0|textBorder=0' acción='calcular' parámetro='INFO.visible=0' dibujar-si='cerrarInfo.visible'">
+   <param name="C_02" value="id='F' tipo='numérico' interfaz='campo de texto' solo_texto='sí' región='interior' espacio='E7' nombre='f(x,y)=' expresión='(90,277,350,ctrF.h)' valor='&squot;(a*x+b*y+c)/(1+x^2+y^2)&squot;' fijo='sí' visible='sí' pos_mensajes='centro'">
+   <param name="C_03" value="id='a' tipo='numérico' región='interior' espacio='CTRS_north' nombre='a' expresión='(ctr_a.x,ctr_a.y,ctr_a.w,ctr_a.h)' valor='4' decimales='1' fijo='sí' visible='sí' acción='calcular' pos_mensajes='centro'">
+   <param name="C_04" value="id='b' tipo='numérico' región='interior' espacio='CTRS_north' nombre='b' expresión='(ctr_b.x,ctr_b.y,ctr_b.w,ctr_b.h)' valor='3' decimales='1' fijo='sí' visible='sí' acción='calcular' pos_mensajes='centro'">
+   <param name="C_05" value="id='c' tipo='numérico' región='interior' espacio='CTRS_north' nombre='c' expresión='(ctr_c.x,ctr_c.y,ctr_c.w,ctr_c.h)' valor='2' decimales='1' fijo='sí' visible='sí' acción='calcular' pos_mensajes='centro'">
+   <param name="C_06" value="id='h' tipo='numérico' región='interior' espacio='CTRS_north' nombre='h' expresión='(ctr_h.x,ctr_h.y,ctr_c.w,ctr_c.h)' decimales='1' fijo='sí' visible='sí' acción='calcular' pos_mensajes='centro'">
+   <param name="C_07" value="id='btnOpen' tipo='numérico' interfaz='botón' región='interior' espacio='btnOpenClose' expresión='(0,0,35,30)' fijo='sí' visible='sí' fuente puntos='16' imagen='_STYLE_|class=btnUNADM open north|shadowTextColor=rgba(0,0,0,0.2)|shadowTextOffsetY=2|shadowTextBlur=0|textBorder=0' acción='calcular' parámetro='openPanelCtrs()' dibujar-si='!CTRS.opened' pos_mensajes='centro'">
+   <param name="C_08" value="id='btnClose' tipo='numérico' interfaz='botón' región='interior' espacio='btnOpenClose' expresión='(0,0,35,30)' fijo='sí' visible='sí' imagen='_STYLE_|class=btnUNADM close north|shadowTextColor=rgba(0,0,0,0.2)|shadowTextOffsetY=2|shadowTextBlur=0|textBorder=0' acción='calcular' parámetro='closePanelCtrs()' dibujar-si='CTRS.opened' pos_mensajes='centro'">
+   <param name="A_01" value="id='irAEscena(idxEscena)' algoritmo='sí' algoritmo='sí' hacer='parent.set(&squot;scene&squot;,idxEscena);parent.update()'">
+   <param name="A_02" value="id='initBtns()' algoritmo='sí' algoritmo='sí' hacer='cerrarInfo.w=40;cerrarInfo.h=30;cerrarInfo.x=INFO._w-cerrarInfo.w-2;cerrarInfo.y=1;cerrarInfo.img=&squot;imgs/tpl/cerrar.png&squot;;cerrarInfo.visible=1;;;ctrF.w=275;ctrF.h=40;ctrF.txt.w=60;ctrF.txt.h=18 ;;ctrF.txt.x=10;ctrF.txt.y=(E2_Graf._h-ctrF.h-5)+10;ctrF.x=ctrF.txt.x+ctrF.txt.w;ctrF.y=ctrF.txt.y-10;;;;ctr_a.w=120;ctr_a.h=50;ctr_b.w=ctr_a.w;ctr_b.h=ctr_a.h;ctr_c.w=ctr_b.w;ctr_c.h=ctr_b.h;ctr_h.w=ctr_b.w;ctr_h.h=ctr_b.h;_gapX=5;_allW=(ctr_a.w+ctr_b.w+ctr_c.w+ctr_h.w+_gapX*2);;ctr_a.x=(CTRS_north._w-_allW)/4;ctr_a.y=(CTRS_north._h-ctr_a.h)/5;;;ctr_b.x=ctr_a.x+ctr_a.w+_gapX;ctr_b.y=ctr_a.y;;ctr_c.x=ctr_b.x+ctr_b.w+_gapX;ctr_c.y=ctr_a.y;;ctr_h.x=ctr_c.x+ctr_c.w+_gapX;ctr_h.y=ctr_a.y;'">
+   <param name="A_03" value="id='initEsp()' algoritmo='sí' algoritmo='sí' hacer='INFO.x=(E1._w-INFO._w)/2;INFO.y=(E1._h-INFO._h)/2;INFO.visible=0;;E2_Graf.x=5;E2_Graf.y=5;E2_Graf.visible=1;;EspTxt.x=E1._w-EspTxt._w-10;EspTxt.y=E1._h-EspTxt._h-10;EspTxt.visible=1;;;;CTRS.x=(E1._w-CTRS_north._w)/2;CTRS.y=(E1._h-CTRS_north._h);CTRS.visible=0;;CTRS.x=0;CTRS.y=0;;btnOpenClose.y=(CTRS.y-btnOpenClose._h);btnOpenClose.x=(E1._w-btnOpenClose._w);'">
+   <param name="A_04" value="id='initEscena()' algoritmo='sí' algoritmo='sí' hacer='initBtns();initEsp();openPanelCtrs()'">
+   <param name="A_05" value="id='closePanelCtrs()' algoritmo='sí' expresión='x' algoritmo='sí' hacer='CTRS.visible=1;;CTRS.opened=0;CTRS.y=-CTRS_north._h;;btnOpenClose.y=CTRS.y+CTRS_north._h;btnOpenClose.x=(E1._w-btnOpenClose._w)'">
+   <param name="A_06" value="id='openPanelCtrs()' algoritmo='sí' expresión='x' algoritmo='sí' hacer='CTRS.visible=1;CTRS.opened=1;;CTRS.x=(E1._w-CTRS_north._w)/2;CTRS.y=0;;btnOpenClose.y=CTRS.y+CTRS_north._h;btnOpenClose.x=(E1._w-btnOpenClose._w)'">
+   <param name="A_07" value="id='__FIN_TPL_()'">
+   <param name="A_08" value="id='f(x)' expresión='_Eval_(ctrF)'">
+   <param name="A_09" value="id='INICIO' algoritmo='sí' evaluar='una-sola-vez' hacer='initEscena();E1.rot.z=-40'">
+   <param name="A_10" value="id='CALCULOS' algoritmo='sí' evaluar='siempre'">
+   <param name="G_01" value="espacio='E1' tipo='polígono' fondo='sí' color='5566aa' coord_abs='sí' expresión='(0,0)(E1._w-1,0)(E1._w-1,E1._h-1)(0,E1._h-1)(0,0)' relleno='f05566aa'">
+   <param name="G_02" value="espacio='E2_Graf' tipo='texto' expresión='[ctrF.txt.x,ctrF.txt.y]' texto='f(x) =' fuente='SansSerif,PLAIN,20' fijo='sí' color_borde_texto='blanco'">
+   <param name="G_03" value="espacio='E1' tipo='texto' fondo='sí' dibujar-si='0' expresión='[__GRAF__,20]' fijo='sí'">
+   <param name="G_04" value="espacio='E2_Graf' tipo='ecuación' color='negro' expresión='y=f(x)' ancho='2'">
+   <param name="G_05" value="espacio='E1' tipo='texto' fondo='sí' dibujar-si='0' expresión='[__INFO__,20]' fijo='sí'">
+   <param name="G_06" value="espacio='INFO' tipo='polígono' fondo='sí' color='5566aa' coord_abs='sí' expresión='(0,0)(INFO._w-1,0)(INFO._w-1,INFO._h-1)(0,INFO._h-1)(0,0)' relleno='f85566aa' ancho='2'">
+   <param name="G_07" value="espacio='INFO' tipo='texto' fondo='sí' color='blanco' expresión='[20,5]' texto='Explicación o instrucciones' fuente='SansSerif,PLAIN,24' fijo='sí'">
+   <param name="G_08" value="espacio='INFO' tipo='texto' expresión='[5,40]' texto='Esta escena muestra cómo utilizar uno de los fondos de pantalla que se sugieren al desarrollador.\n\nEl uso de estos fondos de pantalla no es obligatorio pero puede hacer que las unidades obtengan un tema común en el diseño y por ello hacemos larecomendación.\n\nEste fondo es útil para mostrar un espacio de dos o tres dimensiones y otro con textos fijos o variables.\n\nEn el ejemplo que ofrecemos va un espacio 2D con un objeto gráfico en el espacio de la izquierda y explicaciones y controles a la derecha.' fuente='SansSerif,PLAIN,20' fijo='sí' ancho='INFO._w-10'">
+   <param name="S_01" value="espacio='E7' tipo='superficie' color='8300d1e0' color_reverso='8300d1e0' expresión='x=5*(2*u-1) y=5*(2*v-1) z=h' aristas='sí' modelo='luz' Nu='2' Nv='2'">
+   <param name="S_02" value="espacio='E7' tipo='superficie' color='a0ffffff' color_reverso='a0ffffff' expresión='x=5*(2*u-1) y=5*(2*v-1) z=0' aristas='sí' modelo='luz' Nu='2' Nv='2'">
+   <param name="S_03" value="espacio='E7' tipo='superficie' color='60ffffff' color_reverso='60ffffff' expresión='x=5*(2*u-1) y=5*(2*v-1) z=_Eval_(F)' aristas='sí' modelo='luz' Nu='20' Nv='20'">
+   <param name="S_04" value="espacio='E7' tipo='segmento' color='gris' expresión='(0,0,0)(0,0,2)'">
+   <param name="S_05" value="espacio='E7' tipo='texto' color='negro' expresión='[20,E1._h-12]' texto='f(x,y)=' fuente='Serif,BOLD+ITALIC,26' fijo='sí'">
+</ajs>
+    
+ 	
+</div>
+    <!------ TERMINA EL CONTENIDO DE LA PÁGINA --------->
+
+
+
+  <!------ INICIA LA INFO SOBRE LAS LICENCIAS Y LOS CRÉDITOS. ---------->
+    <a id="btCopyright" class="standardButton" title="Haz clic aquí para consultar los créditos y las condiciones de uso de este recurso." href="#" onClick="document.getElementById('copyright').className='visible';">&#169;</a>
+    <div id="copyright" class="oculto">
+      
+      <div class='innerCopyright'>
+      
+          <a id="btCloseCopyright" class="standardButton" title="Haz clic aquí para cerrar esta ventana." href="#" onClick="document.getElementById('copyright').className='oculto'">×</a>
+  
+          <!-- Créditos UAM  (siempre deben ir en primer lugar) -->
+			<div class="creditos">
+				<h1>
+					Créditos 
+				</h1>
+				<h2>
+					Escena original
+				</h2>				<table class="autores" 	>
+					<tr> <td  class="rol"> Diseño del contenido			</td>		<td class="nombre"> Elsa Sirenia Vega Camacho (LITE) </td></tr>
+
+					<tr> <td  class="rol"> Diseño funcional				</td>		<td class="nombre"> Elsa Sirenia Vega Camacho (LITE)</td></tr>
+
+					<tr> <td  class="rol"> Programación					</td>		<td class="nombre"> Elsa Sirenia Vega Camacho (LITE) </td></tr>
+                    
+					<tr> <td class="rol"> Asesoría de programación		</td>		<td class="nombre"> Victor Hugo García Jarillo (Facultad de                    Ciencias, UNAM)</td></tr>
+
+					<tr> <td  class="rol"> Diseño gráfico					</td>		<td class="nombre"> Ricardo López Gómez										</td></tr>
+					<tr> <td  class="rol" >Coordinación			</td>		<td class="nombre"> Leticia Montserrat Vargas Rocha						</td></tr>
+				</table>
+				<h2>
+					Adaptación 
+				</h2>
+				<table class="autores" 	>
+					<tr> <td  class="rol"> Diseño funcional				</td>		<td class="nombre"> Victor Hugo García Jarillo (Facultad de                    Ciencias, UNAM)		</td></tr>
+					<tr> <td  class="rol"> Programación						</td>		<td class="nombre"> Victor Hugo García Jarillo (Facultad de                    Ciencias, UNAM)</td></tr>
+
+					<tr> <td  class="rol"> Diseño gráfico					</td>		<td class="nombre"> Francisco	Varela Fuentes						</td></tr>
+					<tr> <td  class="rol" >Coordinación			</td>		<td class="nombre"> Leticia Montserrat Vargas Rocha						</td></tr>
+		<tr> <td  class="rol" >Desarrollo del contenedor			</td>		<td class="nombre"> Oscar Escamilla González</td></tr>
+				</table>
+	         
+	         <div class='logos'>
+	            <a href=''>
+	               <img src="../images/info/icns/logoLite.png">
+	            </a>
+	            <a href="http://www.unadmexico.mx/">
+	               <img src="../images/info/icns/logoUNADM.png">
+	            </a>
+	         </div>
+          </div>
+          
+          <!-- Linea separación créditos -->
+          <hr class="linea" />
+     
+          <!-- Aviso licencias -->
+          <div class="licencias">
+          
+				<p class="creativeCommons">Los contenidos de esta unidad didáctica interactiva están bajo una licencia <a href="http://creativecommons.org/licenses/by-nc-sa/2.5/es/" target="_blank">Creative Commons Reconocimiento-NoComercial-CompartirIgual</a>.</p>
+
+				<!--arquimedes (optativo)-->
+				<p>La unidad didáctica fue creada con <a href="http://arquimedes.matem.unam.mx/Descartes5/creditos/conCCL.html" target="_blank">Arquímedes</a>, una herramienta de código abierto.</p>
+
+				<!-- Descartes -->
+				<p>La unidad didáctica contiene escenas elaboradas con Descartes, una herramienta de código abierto.</p>
+
+
+          	<p style='text-align:center'> LITE - UnADM 2014</p>
+          </div>
+      </div>
+    </div> 
+   <!------ TERMINA LA INFO SOBRE LAS LICENCIAS Y LOS CRÉDITOS. ---------->
+  
+  
+  </div>
+  
+  
+</article>
+
+
+</body>
+
+</html>

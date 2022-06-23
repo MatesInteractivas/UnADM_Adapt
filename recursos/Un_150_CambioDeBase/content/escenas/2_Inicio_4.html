@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+ 	<link href="../css/html5.css" rel="stylesheet" type="text/css" media="screen" />
+	<link href="../css/DescHTML5.css" rel="stylesheet" type="text/css" media="screen" />	
+	 <script type="text/javascript" src='../javascript/inject_functions_scorms_descartes.js'></script>
+	<script type='text/javascript' src='lib/descartes-min.js'></script>
+</head>
+
+<body>
+ <!-------- MathJax --- para fórmulas matemáticas ------>	
+	<script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script> 
+
+<article class="course_content_container">
+  
+  <div class="course_content">
+    
+    
+    <!------ INICIA EL CONTENIDO DE LA PÁGINA --------->
+    
+    
+    <!--- Título de la página --->
+    <h1>Puntos importantes a considerar</h1>
+    
+    
+	<div class='text_panel'>
+		
+		<p>
+		Aprovechemos para hacer hincapié en algunos puntos que seguro habrás notado al realizar el conteo con base binaria y hexadecimal.
+		<ul>
+			<li>Comenzamos a contar desde el número cero. Es decir, tanto en decimal, como binario, como hexadecimal usamos el cero para contar el primer palito o elemento a contar. Aunque el cero normalmente está asociado a ausencia de algo, aquí lo estamos usando como un símbolo más.</li>
+			<li>Aunque sean sólo símbolos, es necesario llevar un orden. Así, no podemos empezar contando un dígitos con el número 9, luego el 7, etc. El orden que siguen es 0, 1, 2, 3, 4, 5, 6, 7, 8 y 9 para el decimal; 0 y 1 para el binario; y 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, A, B, C, D, E y F para el hexadecimal. En este sentido, los símbolos de un determinado dígito crecen siguiendo el orden que les toca según la base que se usa.</li>
+			<li>En cualquier base (decimal, binaria o hexadecimal) se puede considerar que hay una infinidad de dígitos. Todos comienzan con el símbolo cero, y se van llenando de derecha a izquierda. Cuando se agotan los símbolos para el dígito del extremo derecho, el que le sigue a su izquierda cambia al siguiente símbolo. Cuando se agotan las combinaciones de símbolos de los primeros dos dígitos, el que sigue a la izquierda cambia al siguiente símbolo. Y así sucesivamente. En este sentido, aunque hayan una infinidad de dígitos disponibles, sólo importan aquellos que <em>no son ceros a la izquierda</em>.</li>
+			<li>En el binario, el cambio de símbolo sólo alterna entre 0 y 1. Pero en el hexadecimal y decimal puedes notar que van subiendo de 0 a 1, a 2, y así sucesivamente dependiendo de cuál de estas dos bases estás usando.</li>
+			<li>Para cualquier base, la relación entre el número de dígitos, el número de símbolos y el número de elementos que se puede contar está dada por \(s^d=n\), donde \(s\) es el número de símbolos (que coincide con la base), \(d\) es el número de dígitos y \(n\) es el número de elementos que se pueden contar como máximo. Por ejemplo, si se usan 3 dígitos para el hexadecimal, la fórmula sería \(16^3=4096\), lo que nos indica que hay 4096 elementos que se pueden contar como máximo con 3 dígitos. El 4096 corresponde a cuando están ya agotadas todas las opciones para los tres dígitos; es decir, al <em>FFF</em> en hexadecimal.</li>
+			<li>Las combinaciones de los dígitos se agotan más rápido cuando se usa una base menor para contar. La base binaria puede requerir muchos dígitos para representar un conteo, cuando la decimal requiere menos y la hexadecimal requiere aún menos. Por ejemplo, para contar 1000 elementos se requieren diez dígitos en base binaria (1111101000), cuatro en decimal (1000), y 3 en hexadecimal (3E8).</li>
+		</ul>
+		</p>
+	
+		<p>
+		Es importante tener en mente estos puntos antes de continuar a la siguiente parte, que consiste en encontrar una manera de convertir un número de una base a otra.
+		</p>
+	
+    <!------ TERMINA EL CONTENIDO DE LA PÁGINA --------->
+</div>
+
+
+
+  <!------ INICIA LA INFO SOBRE LAS LICENCIAS Y LOS CRÉDITOS. ---------->
+    <a id="btCopyright" class="standardButton" title="Haz clic aquí para consultar los créditos y las condiciones de uso de este recurso." href="#" onclick="document.getElementById('copyright').className='visible';">©</a>
+    <div id="copyright" class="oculto">
+      
+      <div class='innerCopyright'>
+      
+          <a id="btCloseCopyright" class="standardButton" title="Haz clic aquí para cerrar esta ventana." href="#" onclick="document.getElementById('copyright').className='oculto'">×</a>
+  
+          <!-- Créditos UAM  (siempre deben ir en primer lugar) -->
+			<div class="creditos">
+				<h1>
+					Créditos 
+				</h1>
+								<table class="autores" 	>
+					<tr> <td  class="rol"> Diseño del contenido			</td>		<td class="nombre"> Alejandro Radillo Díaz, LITE</td></tr>
+					<tr> <td  class="rol"> Diseño funcional				</td>		<td class="nombre"> Alejandro Radillo Díaz, LITE</td></tr>
+					<tr> <td  class="rol"> Programación					</td>		<td class="nombre"> Alejandro Radillo Díaz, LITE</td></tr>
+					<!-- Varias personas en el mismo rubro, separar por <br> -->
+					<tr> <td  class="rol"> Asesoría de programación		</td>		<td class="nombre">Oscar Escamilla González, LITE</td></tr>
+					<tr> <td  class="rol"> Diseño gráfico				</td>		<td class="nombre">Francisco Varela Fuentes</td></tr>
+					<tr> <td  class="rol" >Coordinación					</td>		<td class="nombre"> Leticia Montserrat Vargas Rocha</td></tr>
+					
+				</table>
+	         
+	         <div class='logos'>
+	            <a href=''>
+	               <img src="../images/info/icns/logoLite.png">
+	            </a>
+	            <a href="http://www.unadmexico.mx/">
+	               <img src="../images/info/icns/logoUNADM.png">
+	            </a>
+	         </div>
+          </div>
+          
+          <!-- Linea separación créditos -->
+          <hr class="linea" />
+     
+          <!-- Aviso licencias -->
+          <div class="licencias">
+          
+				<p class="creativeCommons">Los contenidos de esta unidad didáctica interactiva están bajo una licencia <a href="http://creativecommons.org/licenses/by-nc-sa/2.5/es/" target="_blank">Creative Commons Reconocimiento-NoComercial-CompartirIgual</a>.</p>
+
+				<!--arquimedes (optativo)-->
+				<p>La unidad didáctica fue creada con <a href="http://arquimedes.matem.unam.mx/Descartes5/creditos/conCCL.html" target="_blank">Arquímedes</a>, una herramienta de código abierto.</p>
+
+				<!-- Descartes -->
+				<p>La unidad didáctica contiene escenas elaboradas con Descartes, una herramienta de código abierto.</p>
+
+
+          	<p style='text-align:center'> LITE - UnADM 2014</p>
+          </div>
+      </div>
+    </div> 
+   <!------ TERMINA LA INFO SOBRE LAS LICENCIAS Y LOS CRÉDITOS. ---------->
+  
+  
+  </div>
+  
+  
+</article>
+
+
+</body>
+
+</html>

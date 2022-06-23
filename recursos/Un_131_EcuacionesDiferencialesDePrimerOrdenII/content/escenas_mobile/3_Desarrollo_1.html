@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Desarrollo</title>	
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<link href="../css/DescHTML5.css" rel="stylesheet" type="text/css" media="screen" />
+	<link href="../css/html5_mobile.css" rel="stylesheet" type="text/css" media="screen" />
+    <script type="text/javascript" src='../javascript/inject_functions_scorms_descartes.js'></script>
+	<script type='text/javascript' src='../lib/descartes-min.js'></script>
+</head>
+<body>
+	<!-------- MathJax --- para fórmulas matemáticas ------>	
+	<script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script> 
+
+
+  <article class="course_content_container">
+    <div class="course_content">
+  
+  
+    <!------ INICIA EL CONTENIDO DE LA PÁGINA ------- -->
+
+	<h2 align="center">Ecuación diferencial de Bernoulli</h2>
+	
+	<p>
+		Una E.D. (Ecuación diferencial) de la forma \( \frac{dy}{dx} + p(x) y = Q(x) y^n \) con \( n\neq0 \) y \( n\neq1 \), se le llama E.D. de Bernoulli y es una E.D. no lineal de primer orden. Si \( n=0 \) la ecuación quedaría como \( \frac{dy}{dx} + p(x) y = Q(x) \), que es una ecuación lineal no homogénea y sería fácil resolverla, pues si \( n=1 \) la ecuación quedaría como \( \frac{dy}{dx} + (p(x) - Q(x)) y = 0 \) ⇒ \( \frac{dy}{dx} + R(x) y = 0 \) que es una E.D. lineal homogénea, que es mucho más fácil de resolver que la ecuación anterior.</p>
+		<br>
+		
+<p>La ecuación de Bernoulli se puede convertir en una E.D. lineal de primer orden mediante la sustitución \( w = y^{1-n} \): </p>                               
+                                 <div align="center"> \( \frac{dw}{dx} + (1-n) p(x) w = (1-n) Q(x) \)</div><br>
+													 
+<p>Esto implica que nos podemos centrar simplemente en resolver E.D. lineales de primer orden. A continuación veremos un ejemplo de una ecuación de Bernoulli.
+		</p>
+		
+	<p>Ejemplo:<br><br>
+	
+	Sea la ecuación \( xy(1+xy^2) \frac{dy}{dx} = 1 \) con \( y(1) = 0 \).<br>
+	Solución:<br>
+	Despejamos \( \frac{dy}{dx} \) y obtenemos \( \frac{dy}{dx} = \frac{1}{xy(1+xy^2)} \), invertimos la ecuación</p>
+	
+	\[ \frac{dx}{dy} = xy(1+xy^2) = xy + x^2y^3  ⇒  \frac{dx}{dy} - xy = x^2y^3 \tag{1}\]
+
+<p>Ésta última tiene la forma de la ecuación de Bernoulli con variable dependiente \( x \), y con \( n=2 \). Hagamos \( w = x^{1-n} = x^{1-2} = x^{-1} \) ⇒ \( x = w^{-1} \), derivamos ésta última con respecto as \( y \) y obtenemos \( \frac {dx}{dy} = -w^{-2} \frac{dw}{dy} \). Sustituimos en (1) para obtener \( -w^{-2} \frac{dw}{dy} - yw^{-1} = y^3 w^{-2} \), multiplicamos por \( -w^{2} \) y finalmente nos queda \( \frac{dw}{dy} + yw = -y^3 \), una E.D. lineal de primer orden donde \( p(y) = y; Q(y) = -y^3 \)</p>
+	<br>
+
+	<p>La función solución a la ecuación diferencial se puede obtener mediante el método del factor integrante. La función es:<br>
+	<div align="center">\(  we^{ \frac {y^2}{2}} = -2 u e^u + 2e^u +c \) </div></p>
+	
+	<br>
+	<p>
+	Como hicimos un cambio de variable, tenemos que regresar a las variables originales utilizando el mismo cambio de variables:<br>
+	<div align="center">\( x^{-1}e^{ \frac{y^2}{2} } = -y^2 e^{ \frac{y^2}{2}} + 2e^{ \frac{y^2}{2} } + c \) ⇒ \( \frac{1}{x} = -y^2 + 2 + C e^{ \frac{y^2}{2} } \)</div><br>
+	<br>
+	
+	Como ya hemos visto, esta solución obtenida es la solución general, y a partir de ésta, junto con las condiciones iniciales, podemos obtener la ecuación particular. Como \( y(1) = 0 \) podemos evaluar estos valores, despejamos a c y obtenemos que \( c = -1 \), por lo tanto la solución particular es:<br>
+	<div align="center">\( \frac{1}{x} = -y^2 + 2 - e^{ \frac{-y^2}{2} } \)</div>
+	</p>
+
+  <div class="course_content">
+	<p class='instruccion'>
+    <span class="instrucciones">
+  		En el siguiente espacio se muestra la gráfica de la solución particular. Utiliza los pulsadores para cambiar el valor de c y nota cómo es el comportamiento de dicha gráfica para diferentes valores.
+    </span>
+	</p>
+	
+<div class="Descartes_extern_content">
+  <ajs name="Descartes" width=495 height=320 code="Descartes">
+    <param name="tamaño" value="495x320">
+   <param name="image_loader" value="">
+   <param name="expand" value="">
+   <param name="decimal_symbol" value=".">
+   <param name="antialias" value="sí">
+   <param name="deshacer" value="no">
+   <param name="nombre" value="Descartes">
+   <param name="Versión" value="5.336, 2015-02-13">
+   <param name="Idioma" value="español">
+   <param name="Botones" value="créditos=no config=no inicio=no limpiar=no">
+   <param name="E_01" value="tipo='R2' id='E1' fijo='sí' escala='20' O.y='50' imagen='imgs/tpl/fondo_suave.jpg' despl_imagen='arr-izq' fondo='c0d0d8' red='no' red10='no' ejes='405860' texto='no'">
+   <param name="E_02" value="tipo='R2' id='E2_Graf' x='0' y='222' ancho='485' alto='60' dibujar-si='0' despl_imagen='arr-izq' fondo='30f0f8fa' red='b8c4c8' red10='889498' ejes='405860' texto='no'">
+   <param name="E_03" value="tipo='R2' id='CTRS_north' x='CTRS.x' y='CTRS.y' ancho='485' alto='150' dibujar-si='1|CTRS.visible' fijo='sí' escala='-1' O.x='-50%' O.y='-50%' despl_imagen='arr-izq' fondo='88000000' red='no' red10='no' ejes='no' texto='no'">
+   <param name="E_04" value="tipo='R2' id='btnOpenClose' x='btnOpenClose.x' y='btnOpenClose.y' ancho='35' alto='30' fijo='sí' escala='1' O.x='-50%' O.y='-50%' despl_imagen='arr-izq' fondo='ff000000' red='no' red10='no' ejes='no' texto='no'">
+   <param name="E_05" value="tipo='R2' id='MASK' dibujar-si='INFO.visible' fijo='sí' imagen='imgs/tpl/backwindow.png' despl_imagen='mosaico' fondo='95000000' red='no' red10='no' ejes='no' texto='no'">
+   <param name="E_06" value="tipo='R2' id='INFO' x='INFO.x' y='INFO.y' ancho='485' alto='310' dibujar-si='INFO.visible' fijo='sí' imagen='imgs/tpl/retro_790x470.png' despl_imagen='mosaico' red='no' red10='no' ejes='no' texto='no'">
+   <param name="C_01" value="id='cerrarInfo' tipo='numérico' interfaz='botón' región='interior' espacio='INFO' nombre='×' expresión='(cerrarInfo.x,cerrarInfo.y,cerrarInfo.w,cerrarInfo.h)' fijo='sí' visible='sí' color='blanco' fuente puntos='26' imagen='_STYLE_|class=btnUNADM|shadowTextColor=rgba(0,0,0,0.2)|shadowTextOffsetY=2|shadowTextBlur=0|textBorder=0' acción='calcular' parámetro='INFO.visible=0' dibujar-si='cerrarInfo.visible'">
+   <param name="C_02" value="id='btnOpen' tipo='numérico' interfaz='botón' región='interior' espacio='btnOpenClose' expresión='(0,0,35,30)' fijo='sí' visible='sí' fuente puntos='16' imagen='_STYLE_|class=btnUNADM open north|shadowTextColor=rgba(0,0,0,0.2)|shadowTextOffsetY=2|shadowTextBlur=0|textBorder=0' acción='calcular' parámetro='openPanelCtrs()' dibujar-si='!CTRS.opened' pos_mensajes='centro'">
+   <param name="C_03" value="id='btnClose' tipo='numérico' interfaz='botón' región='interior' espacio='btnOpenClose' expresión='(0,0,35,30)' fijo='sí' visible='sí' imagen='_STYLE_|class=btnUNADM close north|shadowTextColor=rgba(0,0,0,0.2)|shadowTextOffsetY=2|shadowTextBlur=0|textBorder=0' acción='calcular' parámetro='closePanelCtrs()' dibujar-si='CTRS.opened' pos_mensajes='centro'">
+   <param name="C_04" value="id='c' tipo='numérico' región='interior' espacio='CTRS_north' nombre='c' expresión='(250,65,spinA.w,spinA.h)' valor='ctr_c' incr='.5' min='-15' max='30' decimales='1' fijo='no' visible='sí' acción='calcular' parámetro='ValPer0=1\ncalPer()'">
+   <param name="A_01" value="id='initEscena()' algoritmo='sí' algoritmo='sí' hacer='initBtns();initEsp();openPanelCtrs();titulo=&squot;Ejemplos de campos vectoriales&squot;;titulo.w=_AnchoDeCadena_(titulo,&squot;SansSerif&squot;,&squot;PLAIN&squot;,&squot;30&squot;);titulo.x=(E1._w-titulo.w)/2;titulo.y=30'">
+   <param name="A_02" value="id='irAEscena(idxEscena)' algoritmo='sí' algoritmo='sí' hacer='parent.set(&squot;scene&squot;,idxEscena);parent.update()'">
+   <param name="A_03" value="id='initBtns()' algoritmo='sí' algoritmo='sí' hacer='cerrarInfo.w=40;cerrarInfo.h=30;cerrarInfo.x=INFO._w-cerrarInfo.w-2;cerrarInfo.y=1;cerrarInfo.img=&squot;imgs/tpl/cerrar.png&squot;;cerrarInfo.visible=1;;;ctrF.w=275;ctrF.h=40;ctrF.txt.w=60;ctrF.txt.h=18 ;;ctrF.txt.x=10;ctrF.txt.y=(E2_Graf._h-ctrF.h-5)+10;ctrF.x=ctrF.txt.x+ctrF.txt.w;ctrF.y=ctrF.txt.y-10;;;;ctr_a.w=120;ctr_a.h=50;ctr_b.w=ctr_a.w;ctr_b.h=ctr_a.h;ctr_c.w=ctr_b.w;ctr_c.h=ctr_b.h;_gapX=30;_allW=(ctr_a.w+ctr_b.w+ctr_c.w+_gapX*2);;ctr_a.x=(CTRS_north._w-_allW)/2;ctr_a.y=(CTRS_north._h-ctr_a.h)/2;;;ctr_b.x=ctr_a.x+ctr_a.w+_gapX;ctr_b.y=ctr_a.y;;ctr_c.x=ctr_b.x+ctr_b.w+_gapX;ctr_c.y=ctr_a.y;'">
+   <param name="A_04" value="id='initEsp()' algoritmo='sí' algoritmo='sí' hacer='INFO.x=(E1._w-INFO._w)/2;INFO.y=(E1._h-INFO._h)/2;INFO.visible=0;;E2_Graf.x=5;E2_Graf.y=5;E2_Graf.visible=1;;EspTxt.x=E1._w-EspTxt._w-10;EspTxt.y=E1._h-EspTxt._h-10;EspTxt.visible=1;;;;CTRS.x=(E1._w-CTRS_north._w)/2;CTRS.y=(E1._h-CTRS_north._h);CTRS.visible=0;;CTRS.x=0;CTRS.y=0;;btnOpenClose.y=(CTRS.y-btnOpenClose._h);btnOpenClose.x=(E1._w-btnOpenClose._w);'">
+   <param name="A_05" value="id='closePanelCtrs()' algoritmo='sí' expresión='x' algoritmo='sí' hacer='CTRS.visible=1;;CTRS.opened=0;CTRS.y=-CTRS_north._h;;btnOpenClose.y=CTRS.y+CTRS_north._h;btnOpenClose.x=(E1._w-btnOpenClose._w)'">
+   <param name="A_06" value="id='openPanelCtrs()' algoritmo='sí' expresión='x' algoritmo='sí' hacer='CTRS.visible=1;CTRS.opened=1;;CTRS.x=(E1._w-CTRS_north._w)/2;CTRS.y=0;;btnOpenClose.y=CTRS.y+CTRS_north._h;btnOpenClose.x=(E1._w-btnOpenClose._w)'">
+   <param name="A_07" value="id='__FIN_TPL_()'">
+   <param name="A_08" value="id='init()' algoritmo='sí' algoritmo='sí' hacer='verGraf=0;c=0;paso=0;mosSig=0;initBtns()'">
+   <param name="A_09" value="id='initBtns()' algoritmo='sí' algoritmo='sí' hacer='titulo=&squot;Ecuación diferencial de Bernoulli&squot;;titulo.w=_AnchoDeCadena_(titulo,&squot;SansSerif&squot;,&squot;PLAIN&squot;,&squot;30&squot;);titulo.x=(E1._w-titulo.w)/2;titulo.y=20;;spinA.x=20;spinA.y=345;spinA.w=120;spinA.h=50'">
+   <param name="A_10" value="id='ValPer' vector='sí' evaluar='una-sola-vez' tamaño='20'">
+   <param name="A_11" value="id='calPer()' algoritmo='sí' algoritmo='sí' hacer='ValPer[0]=(ValPer0)?1:ValPer[0];per=100*ValPer[0];setSCORMPercentage(per)'">
+   <param name="A_12" value="id='getSCORMState()' algoritmo='sí' expresión='res' algoritmo='sí' Local='res,arroba' inicio='arroba=&squot;@&squot;' hacer='ö=|Estandar ---- [MIDC]XX.<var>  SI SOLO EXISTE UNA ESCENA EN  EL HTML|;ö=|Estandar ---- [MIDC]XX_YY.<var>  SI HAY MAS DE UNA ESCENA EN EL  HTML|;res=&squot;D01.c:&squot;+c+arroba;res=res+&squot;D01.ValPer[0]:&squot;+ValPer[0]+arroba'">
+   <param name="A_13" value="id='initStateScorm()' algoritmo='sí' expresión='x' algoritmo='sí' hacer='c=getSCORMStateVar (&squot;D01.c&squot;);;ValPer [0]=getSCORMStateVar(&squot;D01.ValPer[0]&squot;);calPer();;ctr_c=(c!=0)?c:0'">
+   <param name="A_14" value="id='INICIO' algoritmo='sí' evaluar='una-sola-vez' hacer='initStateScorm();initEscena();init()'">
+   <param name="A_15" value="id='CALCULOS' algoritmo='sí' evaluar='siempre'">
+   <param name="G_01" value="espacio='E1' tipo='texto' fondo='sí' dibujar-si='0' expresión='[__GRAF__,20]' fijo='sí'">
+   <param name="G_02" value="espacio='E1' tipo='texto' fondo='sí' dibujar-si='0' expresión='[__INFO__,20]' fijo='sí'">
+   <param name="G_03" value="espacio='INFO' tipo='texto' fondo='sí' color='blanco' expresión='[20,5]' texto='Explicación o instrucciones' fuente='SansSerif,PLAIN,24' fijo='sí'">
+   <param name="G_04" value="espacio='INFO' tipo='texto' expresión='[25,40]' texto='{\rtf1\uc0{\fonttbl\f0\fcharset0 Times New Roman;\f1\fcharset0 Arial;}\f1\fs40\par Para el primer ejemplo.....}' fuente='SansSerif,PLAIN,20' fijo='sí'">
+   <param name="G_05" value="espacio='E1' tipo='ecuación' color='ae0000' expresión='1/x=-y^2+2+c*exp(-(y^2)/2)'">
+</ajs>
+</div>
+
+	<p>Como pudimos notar, es importante centrarnos en el estudio de métodos que nos ayudan a resolver ecuaciones diferenciales lineales de primer orden. En algunos caso estos métodos son demasiado engorrosos, por lo que a continuación veremos la interpretación geométrica como una técnica de solucion en donde el punto de vista geométrico es particularmente útil.</p>
+	
+	<p>La siguiente imagen representa el campo vectorial de una ecuación diferencial, y en él se puede ver cómo son sus soluciones. En los siguientes apartados analizaremos cómo podemos generar este tipo de campos y de qué forma nos dan información de un fenómeno.
+	</p>
+	
+	    <!-- ejemplo para incluir una imagen -->
+
+    <div class="course_extern_content"> 
+
+      <img src="imgs/campoPendientes.jpg"></img>
+
+    </div>
+
+             <!------ TERMINA EL CONTENIDO DE LA PÁGINA --------->
+
+   <!------ INICIA LA INFO SOBRE LAS LICENCIAS Y LOS CRÉDITOS. ---------->
+    <a id="btCopyright" class="standardButton" title="Haz clic aquí para consultar los créditos y las condiciones de uso de este recurso." href="#" onClick="document.getElementById('copyright').className='visible';">&#169;</a>
+    <div id="copyright" class="oculto">
+      
+      <div class='innerCopyright'>
+      
+          <a id="btCloseCopyright" class="standardButton" title="Haz clic aquí para cerrar esta ventana." href="#" onClick="document.getElementById('copyright').className='oculto'">×</a>
+  
+          <!-- Créditos UAM  (siempre deben ir en primer lugar) -->
+			<div class="creditos">
+				<h1>
+					Créditos 
+				</h1>
+
+				<h2>
+					Escena original
+				</h2>				<table class="autores" 	>
+
+					<tr> <td  class="rol"> Diseño del contenido			</td>		<td class="nombre"> Víctor Hugo García Jarillo (Facultad de Ciencias UNAM, LITE)</td></tr>
+					<tr> <td  class="rol"> Diseño funcional				</td>		<td class="nombre"> Víctor Hugo García Jarillo (Facultad de Ciencias UNAM, LITE)</td></tr>
+					<tr> <td  class="rol"> Programación					</td>		<td class="nombre"> Víctor Hugo García Jarillo (Facultad de Ciencias UNAM, LITE)</td></tr>
+					<tr> <td  class="rol"> Diseño gráfico				</td>		<td class="nombre"> Ricardo López Gómez</td></tr>
+					<tr> <td  class="rol" >Coordinación			</td>		<td class="nombre"> Leticia Montserrat Vargas Rocha</td></tr>
+					</table>
+				<h2>
+					Adaptación 
+				</h2>
+				<table class="autores" 	>
+				<tr> <td  class="rol"> Diseño funcional				</td>		<td class="nombre"> Victor Hugo García Jarillo (Facultad de                    Ciencias, UNAM)		</td></tr>
+					<tr> <td  class="rol"> Programación				</td>		<td class="nombre"> Victor Hugo García Jarillo (Facultad de                    Ciencias, UNAM)</td></tr>
+
+					<tr> <td  class="rol"> Diseño gráfico			</td>		<td class="nombre"> Francisco	Varela Fuentes</td></tr>
+					<tr> <td  class="rol" >Coordinación			</td>		<td class="nombre"> Leticia Montserrat Vargas Rocha</td></tr>
+		
+				</table>
+	         
+	         <div class='logos'>
+	            <a href=''>
+	               <img src="../images/info/icns/logoLite.png">
+	            </a>
+	            <a href="http://www.unadmexico.mx/">
+	               <img src="../images/info/icns/logoUNADM.png">
+	            </a>
+	         </div>
+          </div>
+          
+          <!-- Linea separación créditos -->
+          <hr class="linea" />
+     
+          <!-- Aviso licencias -->
+          <div class="licencias">
+          
+				<p class="creativeCommons">Los contenidos de esta unidad didáctica interactiva están bajo una licencia <a href="http://creativecommons.org/licenses/by-nc-sa/2.5/es/" target="_blank">Creative Commons Reconocimiento-NoComercial-CompartirIgual</a>.</p>
+
+				<!--arquimedes (optativo)-->
+				<p>La unidad didáctica fue creada con <a href="http://arquimedes.matem.unam.mx/Descartes5/creditos/conCCL.html" target="_blank">Arquímedes</a>, una herramienta de código abierto.</p>
+
+				<!-- Descartes -->
+				<p>La unidad didáctica contiene escenas elaboradas con Descartes, una herramienta de código abierto.</p>
+
+
+          	<p style='text-align:center'> LITE - UnADM 2014</p>
+          </div>
+      </div>
+    </div> 
+   <!------ TERMINA LA INFO SOBRE LAS LICENCIAS Y LOS CRÉDITOS. ---------->
+  
+  
+  </div>
+  
+  
+</article>
+
+
+</body>
+
+</html>

@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+
+
+<head>
+	<title>Desarrollo 2</title>	
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<link href="../css/DescHTML5.css" rel="stylesheet" type="text/css" media="screen" />
+	<link href="../css/html5_mobile.css" rel="stylesheet" type="text/css" media="screen" />
+  <script type="text/javascript" src='../javascript/inject_functions_scorms_descartes.js'></script>
+	<script type='text/javascript' src='../lib/descartes-min.js'></script>
+</head>
+
+<body>
+  <ajs name="Descartes" width=520 height=320 code="Descartes">
+   <param name="tamaño" value="520x320">
+   <param name="image_loader" value="">
+   <param name="expand" value="">
+   <param name="decimal_symbol" value=".">
+   <param name="antialias" value="sí">
+   <param name="deshacer" value="no">
+   <param name="nombre" value="Descartes">
+   <param name="Versión" value="5.356, 2016-05-03">
+   <param name="Idioma" value="español">
+   <param name="Botones" value="créditos=no config=no inicio=no limpiar=no">
+   <param name="E_01" value="tipo='R2' id='E1' fijo='sí' escala='1' O.x='-50%' O.y='-50%' imagen='imgs/tpl/fondo_02.jpg' despl_imagen='arr-izq' fondo='c0d0d8' red='no' red10='no' ejes='no' texto='no'">
+   <param name="E_02" value="tipo='R2' id='E2_Graf' x='E2_Graf.x' y='E2_Graf.y' ancho='510' alto='310' dibujar-si='E2_Graf.visible' fijo='sí' despl_imagen='arr-izq' fondo='dcdbe1' red='no' red10='no' ejes='no' texto='no'">
+   <param name="E_03" value="tipo='R2' id='MASK' dibujar-si='INFO.visible&0' fijo='sí' imagen='imgs/tpl/backwindow.png' despl_imagen='mosaico' fondo='95000000' red='no' red10='no' ejes='no' texto='no'">
+   <param name="E_04" value="tipo='R2' id='INFO' x='INFO.x' y='INFO.y' ancho='520' alto='320' dibujar-si='INFO.visible' fijo='sí' imagen='imgs/tpl/retro_790x470.png' despl_imagen='mosaico' red='no' red10='no' ejes='no' texto='no'">
+   <param name="C_01" value="id='cerrarInfo' tipo='numérico' interfaz='botón' región='interior' espacio='INFO' expresión='(cerrarInfo.x,cerrarInfo.y,cerrarInfo.w,cerrarInfo.h)' fijo='sí' visible='sí' color='blanco' fuente puntos='26' imagen='_STYLE_|class=btnUNADM icon cerrar|shadowTextColor=rgba(0,0,0,0.2)|shadowTextOffsetY=2|shadowTextBlur=0|textBorder=0' acción='calcular' parámetro='INFO.visible=0' dibujar-si='cerrarInfo.visible'">
+   <param name="C_02" value="id='btnIniciar' tipo='numérico' interfaz='botón' región='interior' espacio='E2_Graf' nombre='Generar' expresión='(btnIniciar.x,btnIniciar.y,btn.w,btn.h)' fijo='sí' visible='sí' color='blanco' color-int='ff000000' negrita='sí' fuente puntos='16' imagen='_STYLE_|class=btnUNADM|shadowTextColor=rgba(0,0,0,0.2)|shadowTextOffsetY=2|shadowTextBlur=0|textBorder=0' acción='calcular' parámetro='aleatorio()' dibujar-si='1*(paso=0)' activo-si='paso=0' pos_mensajes='centro'">
+   <param name="C_03" value="id='btnCont' tipo='numérico' interfaz='botón' región='interior' espacio='E2_Graf' nombre='Continuar' expresión='(btnCont.x,btnCont.y,btn.w,btn.h)' fijo='sí' visible='sí' color='blanco' color-int='ff000000' negrita='sí' fuente puntos='16' imagen='_STYLE_|class=btnUNADM|shadowTextColor=rgba(0,0,0,0.2)|shadowTextOffsetY=2|shadowTextBlur=0|textBorder=0' acción='calcular' parámetro='paso=paso+1' dibujar-si='1*(paso=0)' pos_mensajes='centro'">
+   <param name="C_04" value="id='reinit' tipo='numérico' interfaz='botón' región='interior' espacio='E2_Graf' nombre='Reiniciar' expresión='(reinit.x,reinit.y,btn.w,btn.h)' fijo='sí' visible='sí' color='blanco' color-int='ff000000' negrita='sí' fuente puntos='16' imagen='_STYLE_|class=btnUNADM|shadowTextColor=rgba(0,0,0,0.2)|shadowTextOffsetY=2|shadowTextBlur=0|textBorder=0' acción='calcular' parámetro='paso=0\naleatorio()' dibujar-si='1*(paso=1)' pos_mensajes='centro'">
+   <param name="C_05" value="id='H' tipo='numérico' región='exterior' espacio='E1' nombre='H' expresión='(750,0)' incr='1' fijo='sí' visible='sí' acción='calcular' dibujar-si='0' pos_mensajes='centro'">
+   <param name="C_06" value="id='V' tipo='numérico' región='interior' espacio='E1' nombre='V' expresión='(850,0)' incr='1' fijo='sí' visible='sí' acción='calcular' dibujar-si='0' pos_mensajes='centro'">
+   <param name="A_01" value="id='irAEscena(idxEscena)' algoritmo='sí' algoritmo='sí' hacer='parent.set(&squot;scene&squot;,idxEscena);parent.update()'">
+   <param name="A_02" value="id='initBtns()' algoritmo='sí' algoritmo='sí' hacer='cerrarInfo.w=30;cerrarInfo.h=30;cerrarInfo.x=INFO._w-cerrarInfo.w-2;cerrarInfo.y=1;cerrarInfo.visible=1;;btn.w=120;btn.h=40;gap=(E2_Graf._w-2*btn.w)/3;btnIniciar.x=gap;btnIniciar.y=E2_Graf._h-5-btn.h;btnCont.x=2*gap+btn.w;btnCont.y=btnIniciar.y;reinit.x=(E2_Graf._w-btn.w)/2;reinit.y=btnIniciar.y'">
+   <param name="A_03" value="id='initEsp()' algoritmo='sí' algoritmo='sí' hacer='INFO.x=(E1._w-INFO._w)/2;INFO.y=(E1._h-INFO._h)/2;INFO.visible=1;;E2_Graf.x=5;E2_Graf.y=5;E2_Graf.visible=1'">
+   <param name="A_04" value="id='initEscena()' algoritmo='sí' algoritmo='sí' hacer='initBtns();initEsp()'">
+   <param name="A_05" value="id='__FIN_TPL_()'">
+   <param name="A_06" value="id='r' expresión='10*rnd'">
+   <param name="A_07" value="id='aleatorio()' algoritmo='sí' algoritmo='sí' hacer='num=(11*350)+(11*ent(rnd*350))+(ent(rnd*2));var1=ent(num/1000);var2=ent((num-var1*1000)/100);var3=ent((num-(var1*1000+var2*100))/10);var4=num-(var1*1000+var2*100+var3*10);;res1=(var1+var3)-(var2+var4);dig1=ent(res1/100);dig2=ent((res1-(dig1*100))/10);dig3=ent(res1-(dig1*100+dig2*10))'">
+   <param name="A_08" value="id='_SCORM__()'">
+   <param name="A_09" value="id='getSCORMState()' algoritmo='sí' expresión='res' algoritmo='sí' Local='res,c' inicio='c=&squot;@&squot;;res=&squot;&squot;' hacer='res=res+&squot;D02.nResueltos:&squot;+nResueltos+c;res=res+&squot;D02.ANT.per:&squot;+ANT.per+c;'">
+   <param name="A_10" value="id='initStateScorm()' algoritmo='sí' expresión='x' algoritmo='sí' hacer='nResueltos=getSCORMStateVar(&squot;D02.nResueltos&squot;);ANT.per=getSCORMStateVar(&squot;D02.ANT.per&squot;);;'">
+   <param name="A_11" value="id='regObjetivos()' algoritmo='sí' expresión='0' algoritmo='sí' Local='actRes,per,tt' hacer='isNew=(isNew)|((ANT.paso==0)&(paso>0));actRes=(paso>=1)&(isNew);nResueltos=nResueltos+actRes;isNew=(isNew)&(!actRes);;;ô=|*****************************************************|;ô=|*        Si ve 3 ejercicios tienen el 100%          *|;ô=|*****************************************************|;per=min(ent((100/3)*nResueltos),100);tt=(ANT.per<per);tt=(tt)?setSCORMPercentage(per):0;;;_Print_(&squot;******************************&squot;);_Print_(&squot;Paso :&squot;+paso+&squot; -ANT :&squot;+ANT.paso);_Print_(&squot;N Res : &squot;+nResueltos+&squot;. Es nuevo &squot;+isNew);_Print_(&squot;Porce : &squot;+per+&squot;%&squot;);_Print_(&squot;&squot;);ANT.paso=paso;ANT.per=per'">
+   <param name="A_12" value="id='INICIO' algoritmo='sí' evaluar='una-sola-vez' hacer='initStateScorm();initEscena();aleatorio()'">
+   <param name="A_13" value="id='CALCULOS' algoritmo='sí' evaluar='siempre' hacer='regObjetivos()'">
+   <param name="G_01" value="espacio='E1' tipo='texto' fondo='sí' dibujar-si='0' expresión='[__GRAF__,20]' fijo='sí'">
+   <param name="G_02" value="espacio='E1' tipo='texto' fondo='sí' dibujar-si='0' expresión='[__INFO__,20]' fijo='sí'">
+   <param name="G_03" value="espacio='E1' tipo='imagen' fondo='sí' coord_abs='sí' expresión='(-50,-100)' archivo='imgs/tpl/fondo_01.jpg'">
+   <param name="G_04" value="espacio='INFO' tipo='texto' fondo='sí' color='blanco' expresión='[140,5]' texto='Divisible entre 11' fuente='SansSerif,PLAIN,24' fijo='sí'">
+   <param name="G_05" value="espacio='INFO' tipo='texto' expresión='[5,40]' texto='Para ver si número es divisible entre 11, sumas las cifras en posición impar, luego las de posición par. Resta el resultado de ambas sumas obtenidas. Si el resultado es cero o un múltiplo de 11, el número es divisible por 11.  Si el número tiene sólo dos cifras y estas son iguales será múltiplo de 11.\n\nPulsa el botón Generar para mostrar un número aleatorio y el botón Continuar para ver el proceso y saber si el número es divisible entre 11.' fuente='SansSerif,PLAIN,20' fijo='sí' ancho='INFO._w-10'">
+   <param name="G_06" value="espacio='E2_Graf' tipo='texto' fondo='sí' dibujar-si='0' expresión='[_EspUp_____,20]' fijo='sí'">
+   <param name="G_07" value="espacio='E2_Graf' tipo='texto' expresión='[150+33,22-9]' texto='{\rtf1\uc0{\fonttbl\f0\fcharset0 Times New Roman;\f1\fcharset0 Arial;\f2\fcharset0 Times New Roman;}\f1\fs56\i{\*\mjaformula{\expr var1}}\f2\fs44}' fuente='SansSerif,ITALIC,28' decimales='0' fijo='sí' info='c'">
+   <param name="G_08" value="espacio='E2_Graf' tipo='texto' expresión='[166+33,22-9]' texto='{\rtf1\uc0{\fonttbl\f0\fcharset0 Times New Roman;\f1\fcharset0 Arial;\f2\fcharset0 Times New Roman;}\f1\fs56\i{\*\mjaformula{\expr var2}}\f2\fs44}' fuente='SansSerif,ITALIC,28' decimales='0' fijo='sí' info='b'">
+   <param name="G_09" value="espacio='E2_Graf' tipo='texto' expresión='[196-14+33,22-9]' texto='{\rtf1\uc0{\fonttbl\f0\fcharset0 Times New Roman;\f1\fcharset0 Arial;\f2\fcharset0 Times New Roman;}\f1\fs56\i{\*\mjaformula{\expr var3}}\f2\fs44}' fuente='SansSerif,ITALIC,28' decimales='0' fijo='sí' info='e'">
+   <param name="G_10" value="espacio='E2_Graf' tipo='texto' expresión='[210+20,22-9]' texto='{\rtf1\uc0{\fonttbl\f0\fcharset0 Times New Roman;\f1\fcharset0 Arial;\f2\fcharset0 Times New Roman;}\f1\fs56\i{\*\mjaformula{\expr var4}}\f2\fs44}' fuente='SansSerif,ITALIC,28' decimales='0' fijo='sí' info='f'">
+   <param name="G_11" value="tipo='texto' dibujar-si='(paso>0)&(num%11=0)' expresión='(10,120)' texto='{\rtf1\uc0{\fonttbl\f0\fcharset0 Times New Roman;\f1\fcharset0 Arial;\f2\fcharset0 Times New Roman;\f3\fcharset0 Times New Roman;}\f1\fs36 Sumando el primer y tercer d\u237 gito del n\u250 mero obtenemos\f2\fs36\i  \par {\*\mjaformula{\expr var1+var3\decimals 0\fixed0},}\f1\fs36\i0  sumando el segundo y cuarto d\u237 gito obtenemos\par \f3\fs40\i{\*\mjaformula{\expr var2+var4\decimals 0\fixed1},}\f1\fs36\i0  la resta de estos resultados es \f3\fs40\i{\*\mjaformula{\expr (var1+var3)-(var2+var4)\decimals 0\fixed1},}\f1\fs36\i0  este \par n\u250 mero es m\u250 ltiplo de \f3\fs40\i{\*\mjaformula 11,}\f1\fs36\i0  por lo tanto \f3\fs40\i{\*\mjaformula{\expr num\decimals 0\fixed1}}\f1\fs36\i0  es\par divisible por \f3\fs40\i{\*\mjaformula 11.}\f1\fs36\i0\par \par \f3\fs40\i{\*\mjaformula{\expr num\decimals 0\fixed1} = 11}\f1\fs36\i0 x\f3\fs40\i  {\*\mjaformula{\expr num/11\decimals 0\fixed1}}\f1\fs36\i0}' fuente='SansSerif,PLAIN,18' fijo='sí' info='¿Cumple la divisibilidad por 7?'">
+   <param name="G_12" value="espacio='E2_Graf' tipo='texto' dibujar-si='(paso>0)&(num%11=0)' expresión='(4,60)' texto='{\rtf1\uc0{\fonttbl\f0\fcharset0 Times New Roman;\f1\fcharset0 Arial;\f2\fcharset0 Times New Roman;\f3\fcharset0 Arial;}\f1\fs36 Sumando el primer y tercer d\u237 gito del n\u250 mero obtenemos\f2\fs36\i  \par \f3\fs44{\*\mjaformula{\expr var1+var3\decimals 0\fixed0},} \fs36\i0 sumando el segundo y cuarto d\u237 gito obtenemos\par \fs44\i{\*\mjaformula{\expr var2+var4\decimals 0\fixed1},} l\fs36\i0 a resta de estos resultados es \fs44\i{\*\mjaformula{\expr (var1+var3)-(var2+var4)\decimals 0\fixed1},}\fs36\i0  este \par n\u250 mero es m\u250 ltiplo de \fs44\i{\*\mjaformula 11,}\fs36\i0  por lo tanto \fs44\i{\*\mjaformula{\expr num\decimals 0\fixed1}}\fs36\i0  es \par divisible por \fs44\i{\*\mjaformula 11.}\fs36\i0}' fuente='SansSerif,PLAIN,18' fijo='sí' info='¿Cumple la divisibilidad por 11?'">
+   <param name="G_13" value="espacio='E2_Graf' tipo='texto' dibujar-si='(paso>0)&(num%11#0)' expresión='(4,60)' texto='{\rtf1\uc0{\fonttbl\f0\fcharset0 Times New Roman;\f1\fcharset0 Arial;\f2\fcharset0 Times New Roman;\f3\fcharset0 Arial;}\f1\fs36 Sumando el primer y tercer d\u237 gito del n\u250 mero obtenemos\f2\fs36\i  \par \f3\fs44{\*\mjaformula{\expr var1+var3\decimals 0\fixed0},}\fs36\i0  sumando el segundo y cuarto d\u237 gito obtenemos\par \fs44\i{\*\mjaformula{\expr var2+var4\decimals 0\fixed1},}\fs36\i0  la resta de estos resultados es \fs44\i{\*\mjaformula{\expr (var1+var3)-(var2+var4)\decimals 0\fixed1},}\fs36\i0  este \par n\u250 mero NO es m\u250 ltiplo de \fs44\i{\*\mjaformula 11,}\fs36\i0  por lo tanto \fs44\i{\*\mjaformula{\expr num\decimals 0\fixed1}}\fs36\i0  NO\par es divisible por \fs44\i{\*\mjaformula 11.}\fs36\i0}' fuente='SansSerif,PLAIN,18' fijo='sí' info='¿Cumple la divisibilidad por 11?'">
+</ajs>
+<!------ INICIA LA INFO SOBRE LAS LICENCIAS Y LOS CRÉDITOS. ---------->
+    <a id="btCopyright" class="standardButton" title="Haz clic aquí para consultar los créditos y las condiciones de uso de este recurso." href="#" onClick="document.getElementById('copyright').className='visible';">©</a>
+    <div id="copyright" class="oculto">
+      
+      <div class='innerCopyright'>
+      
+          <a id="btCloseCopyright" class="standardButton" title="Haz clic aquí para cerrar esta ventana." href="#" onClick="document.getElementById('copyright').className='oculto'">×</a>
+  
+          <!-- Créditos UAM  (siempre deben ir en primer lugar) -->
+			<div class="creditos">
+				<h1>
+					Créditos 
+				</h1>
+				<h2>
+					Escena original
+				</h2>				
+                <table class="autores" 	>
+					<tr> <td  class="rol"> Diseño del contenido			</td>		<td class="nombre"> Gustavo Magallanes Guijón</td></tr>
+					<tr> <td  class="rol"> Diseño funcional				</td>		<td class="nombre">Gustavo Magallanes Guijón</td></tr>
+					<tr> <td  class="rol"> Programación						</td>		<td class="nombre"> Gustavo Magallanes Guijón</td></tr>
+					<!-- Varias personas en el mismo rubro, separar por <br> -->
+							        
+					<tr> <td  class="rol"> Diseño gráfico					</td>		<td class="nombre"> Ricardo López Gómez										</td></tr>
+					<tr> <td  class="rol" >Coordinación			</td>		<td class="nombre"> Leticia Montserrat Vargas Rocha						</td></tr>
+				</table>
+				<h2>
+					Adaptación 
+				</h2>
+				<table class="autores" 	>
+					<tr> <td  class="rol"> Diseño funcional				</td>	<td class="nombre"> Julio Arnoldo Prado Saavedra<br>Victor Manuel Amezcua y Raz 
+                    </td></tr>
+					<tr> <td  class="rol"> Programación					</td>	<td class="nombre">Julio Arnoldo Prado Saavedra<br>Victor Manuel Amezcua y Raz</td></tr>
+					<tr> <td  class="rol"> Diseño gráfico				</td>	<td class="nombre"> Francisco	Varela Fuentes	        </td></tr>
+					<tr> <td  class="rol" >Coordinación			        </td>	<td class="nombre"> Leticia Montserrat Vargas Rocha		</td></tr>
+		            
+				</table>
+	         
+	         <div class='logos'>
+	            <a href=''>
+	               <img src="../images/info/icns/logoLite.png">
+	            </a>
+	            <a href="http://www.unadmexico.mx/">
+	               <img src="../images/info/icns/logoUNADM.png">
+	            </a>
+	         </div>
+          </div>
+          
+          <!-- Linea separación créditos -->
+          <hr class="linea" />
+     
+          <!-- Aviso licencias -->
+          <div class="licencias">
+          
+				<p class="creativeCommons">Los contenidos de esta unidad didáctica interactiva están bajo una licencia <a href="http://creativecommons.org/licenses/by-nc-sa/2.5/es/" target="_blank">Creative Commons Reconocimiento-NoComercial-CompartirIgual</a>.</p>
+
+				<!--arquimedes (optativo)-->
+				<p>La unidad didáctica fue creada con <a href="http://arquimedes.matem.unam.mx/Descartes5/creditos/conCCL.html" target="_blank">Arquímedes</a>, una herramienta de código abierto.</p>
+
+				<!-- Descartes -->
+				<p>La unidad didáctica contiene escenas elaboradas con Descartes, una herramienta de código abierto.</p>
+
+
+          	<p style='text-align:center'> LITE - UnADM 2014</p>
+          </div>
+      </div>
+    </div> 
+   <!------ TERMINA LA INFO SOBRE LAS LICENCIAS Y LOS CRÉDITOS. ---------->
+ </div>
+</article>
+</body>
+</html>

@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Desarrollo</title>	
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<link href="../css/DescHTML5.css" rel="stylesheet" type="text/css" media="screen" />
+	<link href="../css/html5_mobile.css" rel="stylesheet" type="text/css" media="screen" />
+  <script type="text/javascript" src='../javascript/inject_functions_scorms_descartes.js'></script>
+	<script type='text/javascript' src='lib/descartes-min.js'></script>
+</head>
+<body>
+  <ajs name="Descartes" width=520 height=320 code="Descartes">
+   <param name="tamaño" value="520x320">
+   <param name="image_loader" value="">
+   <param name="expand" value="">
+   <param name="decimal_symbol" value=".">
+   <param name="antialias" value="sí">
+   <param name="deshacer" value="no">
+   <param name="nombre" value="Descartes">
+   <param name="Versión" value="5.336, 2015-02-13">
+   <param name="Idioma" value="español">
+   <param name="Botones" value="créditos=no config=no inicio=no limpiar=no">
+   <param name="E_01" value="tipo='R2' id='E1' fijo='sí' escala='1' O.x='-50%' O.y='-50%' despl_imagen='arr-izq' fondo='c0d0d8' red='no' red10='no' ejes='no' texto='no'">
+   <param name="E_02" value="tipo='R2' id='E2_Graf' x='E2_Graf.x' y='E2_Graf.y' ancho='510' alto='310' dibujar-si='E2_Graf.visible' fijo='sí' despl_imagen='arr-izq' fondo='dcdbe1' red='no' red10='no' ejes='no' texto='no'">
+   <param name="E_03" value="tipo='R2' id='CTRS' x='CTRS.x' y='CTRS.y' ancho='520' alto='250' dibujar-si='0' fijo='sí' escala='-1' O.x='-50%' O.y='-50%' despl_imagen='arr-izq' fondo='88000000' red='no' red10='no' ejes='no' texto='no'">
+   <param name="E_04" value="tipo='R2' id='btnOpenClose' x='btnOpenClose.x' y='btnOpenClose.y' ancho='35' alto='30' fijo='sí' escala='1' O.x='-50%' O.y='-50%' despl_imagen='arr-izq' fondo='ff000000' red='no' red10='no' ejes='no' texto='no'">
+   <param name="E_05" value="tipo='R2' id='MASK' dibujar-si='INFO.visible' fijo='sí' imagen='imgs/tpl/backwindow.png' despl_imagen='mosaico' fondo='95000000' red='no' red10='no' ejes='no' texto='no'">
+   <param name="E_06" value="tipo='R2' id='INFO' x='INFO.x' y='INFO.y' ancho='510' alto='310' dibujar-si='INFO.visible' fijo='sí' imagen='imgs/tpl/retro_400x400.png' despl_imagen='mosaico' red='no' red10='no' ejes='no' texto='no'">
+   <param name="C_01" value="id='cerrarInfo' tipo='numérico' interfaz='botón' región='interior' espacio='INFO' nombre='×' expresión='(cerrarInfo.x,cerrarInfo.y,cerrarInfo.w,cerrarInfo.h)' fijo='sí' visible='sí' color='blanco' fuente puntos='26' imagen='_STYLE_|class=btnUNADM|shadowTextColor=rgba(0,0,0,0.2)|shadowTextOffsetY=2|shadowTextBlur=0|textBorder=0' acción='calcular' parámetro='INFO.visible=0' dibujar-si='cerrarInfo.visible'">
+   <param name="C_02" value="id='ctr_i' tipo='numérico' interfaz='botón' región='interior' espacio='E2_Graf' expresión='(E2_Graf._w-30,0,30,30)' valor='ctr_i' fijo='sí' visible='sí' color='blanco' cursiva='sí' fuente puntos='20' imagen='_STYLE_|class=btnUNADM icon info|shadowTextColor=rgba(0,0,0,0.2)|shadowTextOffsetY=2|shadowTextBlur=0|textBorder=0 |' acción='calcular' parámetro='INFO.visible=1' pos_mensajes='centro'">
+   <param name="C_03" value="id='verificar' tipo='numérico' interfaz='botón' región='interior' espacio='E2_Graf' nombre='Verificar' expresión='(405,270,100,35)' fijo='sí' visible='sí' color='blanco' color-int='fff0f8ff' fuente puntos='18' acción='calcular' parámetro='intentos=intentos+1\nverificar=1\ncalifica()\nopciones.enabled=0' parámetro.fuente='Monospaced,PLAIN,12' dibujar-si='(cuantosctr=2)&(verificar=0)' pos_mensajes='centro'">
+   <param name="C_04" value="id='otroint' tipo='numérico' interfaz='botón' región='interior' espacio='E2_Graf' nombre='Corregir' expresión='(405,270,100,35)' fijo='sí' visible='sí' color='blanco' color-int='fff0f8ff' fuente puntos='18' acción='calcular' parámetro='verificar=0\nopciones.limpiaRel()\nopciones.enabled=1' parámetro.fuente='Monospaced,PLAIN,12' dibujar-si='(verificar=1)&(!bien)&(intentos<3)' pos_mensajes='centro'">
+   <param name="C_05" value="id='solucion' tipo='numérico' interfaz='botón' región='interior' espacio='E2_Graf' nombre='Solución' expresión='(405,270,100,35)' fijo='sí' visible='sí' color='blanco' color-int='fff0f8ff' fuente puntos='18' acción='calcular' parámetro='mosresp=1\nopciones.limpiaRel()\nsolucion()' parámetro.fuente='Monospaced,PLAIN,12' dibujar-si='(verificar=1)&(!bien)&(intentos=3)&(mosresp=0)' pos_mensajes='centro'">
+   <param name="C_06" value="id='reinit' tipo='numérico' interfaz='botón' región='interior' espacio='E2_Graf' nombre='Siguiente' expresión='(405,270,100,35)' fijo='sí' visible='sí' color='blanco' color-int='fff0f8ff' fuente puntos='18' acción='calcular' parámetro='intentos=2\nverificar=0\nopciones.limpiaRel()\ninitEscena()\nopciones.enabled=1\nINFO.visible=0' parámetro.fuente='Monospaced,PLAIN,12' dibujar-si='((verificar=1)&(bien))|(mosresp=1)' pos_mensajes='centro'">
+   <param name="A_01" value="id='irAEscena(idxEscena)' algoritmo='sí' algoritmo='sí' hacer='parent.set(&squot;scene&squot;,idxEscena);parent.update()'">
+   <param name="A_02" value="id='initBtns()' algoritmo='sí' algoritmo='sí' hacer='cerrarInfo.w=40;cerrarInfo.h=30;cerrarInfo.x=INFO._w-cerrarInfo.w-2;cerrarInfo.y=1;cerrarInfo.img=&squot;imgs/tpl/cerrar.png&squot;;cerrarInfo.visible=1;;;ctrF.w=275;ctrF.h=40;ctrF.txt.w=60;ctrF.txt.h=18 ;;ctrF.txt.x=10;ctrF.txt.y=(E2_Graf._h-ctrF.h-5)+10;ctrF.x=ctrF.txt.x+ctrF.txt.w;ctrF.y=ctrF.txt.y-10;;;;ctr_a.w=120;ctr_a.h=50;ctr_b.w=ctr_a.w;ctr_b.h=ctr_a.h;ctr_c.w=ctr_b.w;ctr_c.h=ctr_b.h;_gapX=30;_allW=(ctr_a.w+ctr_b.w+ctr_c.w+_gapX*2);;ctr_a.x=(CTRS._w-_allW)/2;ctr_a.y=(CTRS._h-ctr_a.h)/2;;;ctr_b.x=ctr_a.x+ctr_a.w+_gapX;ctr_b.y=ctr_a.y;;ctr_c.x=ctr_b.x+ctr_b.w+_gapX;ctr_c.y=ctr_a.y;'">
+   <param name="A_03" value="id='initEsp()' algoritmo='sí' algoritmo='sí' hacer='INFO.x=(E1._w-INFO._w)/2;INFO.y=(E1._h-INFO._h)/2;INFO.visible=1;;E2_Graf.x=5;E2_Graf.y=5;E2_Graf.visible=1;;EspTxt.x=E1._w-EspTxt._w-10;EspTxt.y=E1._h-EspTxt._h-10;EspTxt.visible=1;;;;CTRS.x=(E1._w-CTRS._w)/2;CTRS.y=(E1._h-CTRS._h);CTRS.visible=0;;;btnOpenClose.y=(CTRS.y-btnOpenClose._h);btnOpenClose.x=(E1._w-btnOpenClose._w);'">
+   <param name="A_04" value="id='initEscena()' algoritmo='sí' algoritmo='sí' hacer='initBtns();initEsp();openPanelCtrs();;tt=tt+1;tipoejer=tt%6;opciones.enabled=1;permuta();posinit();intentos=0;mosresp=0;Dx=-110;Dy=-110'">
+   <param name="A_05" value="id='__FIN_TPL_()'">
+   <param name="A_06" value="id='opciones.puedeSoltarEn(_iLSol,_iGEn)' algoritmo='sí' expresión='_puedeRel' algoritmo='sí' hacer='_cuantosHay=opciones.golsProp[_iGEn,opciones.n_relaciones];_puedeRel=(_cuantosHay<1)'">
+   <param name="A_07" value="id='posy' vector='sí' evaluar='una-sola-vez' tamaño='10' expresión='posy[0]=140;posy[1]=205;posy[2]=140;posy[3]=205'">
+   <param name="A_08" value="id='posx' vector='sí' evaluar='una-sola-vez' tamaño='10' expresión='posx[0]=30;posx[1]=30;posx[2]=270;posx[3]=270'">
+   <param name="A_09" value="id='ind' vector='sí' evaluar='una-sola-vez' tamaño='4' expresión='ind[0]=0;ind[1]=1;ind[2]=2;ind[3]=3'">
+   <param name="A_10" value="id='datos' vector='sí' evaluar='una-sola-vez' tamaño='120' expresión='datos[0]=&squot;No es cierto que todo&squot;;datos[40]=&squot; hombre es honesto.&squot;;datos[80]=&squot;&squot;;datos[1]=&squot;Hay hombres que no&squot;;datos[41]=&squot; son honestos.&squot;;datos[81]=&squot;&squot;;datos[2]=&squot;No existen hombres&squot;;datos[42]=&squot; deshonestos.&squot;;datos[82]=&squot;&squot;;datos[3]=&squot;No es cierto que todo&squot;;datos[43]=&squot; hombre no es honesto&squot;;datos[83]=&squot;&squot;;;datos[4]=&squot;Los números naturales.&squot;;datos[44]=&squot;&squot;;datos[84]=&squot;&squot;;datos[5]=&squot;Los enteros positivos.&squot;;datos[45]=&squot;&squot;;datos[85]=&squot;&squot;;datos[6]=&squot;Los número reales&squot;;datos[46]=&squot;&squot;;datos[86]=&squot;&squot;;datos[7]=&squot;Los pares o los impares.&squot;;datos[47]=&squot;&squot;;datos[87]=&squot;&squot;;;datos[8]=&squot;Si obtengo 7, apruebo&squot;;datos[48]=&squot; el examen.&squot;;datos[88]=&squot;&squot;;datos[9]=&squot;Si mi calificación es&squot;;datos[49]=&squot; mayor o igual a 6,&squot;;datos[89]=&squot; apruebo el examen.&squot;;datos[10]=&squot;Si no obtengo mínimo 6,&squot;;datos[50]=&squot; no apruebo el examen.&squot;;datos[90]=&squot;&squot;;datos[11]=&squot;Si no apruebo el examen&squot;;datos[51]=&squot; entonces no obtuve&squot;;datos[91]=&squot; mínimo 6.&squot;;;datos[12]=&squot;Hoy es lunes&squot;;datos[52]=&squot;&squot;;datos[92]=&squot;&squot;;datos[13]=&squot;Ayer fue domingo&squot;;datos[53]=&squot;&squot;;datos[93]=&squot;&squot;;datos[14]=&squot;Mañana es lunes&squot;;datos[54]=&squot;&squot;;datos[94]=&squot;&squot;;datos[15]=&squot;Hoy es domingo&squot;;datos[55]=&squot;&squot;;datos[95]=&squot;&squot;;;datos[16]=&squot;T no es equilátero, si y sólo&squot;;datos[56]=&squot; si T no es equiángulo&squot;;datos[96]=&squot; &squot;;datos[17]=&squot;Los lados de un tríangulo&squot;;datos[57]=&squot; son iguales si y sólo si&squot;;datos[97]=&squot; lo son sus ángulos.&squot;;datos[18]=&squot;T es equilátero si&squot;;datos[58]=&squot;si T no es equiángulo&squot;;datos[98]=&squot;&squot;;datos[19]=&squot;T es equiángulo por que&squot;;datos[59]=&squot;sus lados son iguales.&squot;;datos[99]=&squot;&squot;;;datos[20]=&squot;n es divisible entre 3 y 6.&squot;;datos[60]=&squot;&squot;;datos[100]=&squot;&squot;;datos[21]=&squot;Si n no es divisible entre 3,&squot;;datos[61]=&squot; entonces n no es divisible&squot;;datos[101]=&squot; entre 6&squot;;datos[22]=&squot;n no es divisible entre 6&squot;;datos[62]=&squot; pero si entre 3.&squot;;datos[102]=&squot;&squot;;datos[23]=&squot;n es divisible entre 3&squot;;datos[63]=&squot; o entre 6.&squot;;datos[103]=&squot;&squot;;;datos[24]=&squot;Si n es impar, el&squot;;datos[64]=&squot; cuadrado de n es impar.&squot; ;datos[104]=&squot;&squot;;datos[25]=&squot;n por n es par porque&squot;;datos[65]=&squot; n es de la forma 2m&squot;;datos[105]=&squot;&squot;;datos[26]=&squot;n por n es par porque&squot;;datos[66]=&squot; n es de la forma 2m+1&squot;;datos[106]=&squot;&squot;;datos[27]=&squot;n por n es de la forma&squot;;datos[67]=&squot;  2m+1 porque n es de&squot;;datos[107]=&squot; la forma 2m+1.&squot;'">
+   <param name="A_11" value="id='posinit()' algoritmo='sí' algoritmo='sí' inicio='opciones.n_gols=2;opciones.n_ctr=4;Wctr=200;Hctr=60' hacer='_iGol=0;opciones.golsProp[_iGol,opciones.X]=30;opciones.golsProp[_iGol,opciones.Y]=70;opciones.golsProp[_iGol,opciones.W]=Wctr;opciones.golsProp[_iGol,opciones.H]=Hctr;opciones.golsProp[_iGol,opciones.TXT_Dx]=2;opciones.golsProp[_iGol,opciones.TXT_Dy]=3;opciones.golsProp[_iGol,opciones.IMG_Dx]=-5;opciones.golsProp[_iGol,opciones.IMG_Dy]=0;opciones.golsProp[_iGol,opciones.A]=1;opciones.golsProp[_iGol,opciones.R]=0;opciones.golsProp[_iGol,opciones.G]=0;opciones.golsProp[_iGol,opciones.B]=0;opciones.golsProp[_iGol,opciones.borde.W]=0;opciones.golsProp[_iGol,opciones.IMG]=&squot;imgs/panelresp.png&squot;;opciones.golsProp[_iGol,opciones.TXT]=&squot;&squot;;;_iGol=1;opciones.golsProp[_iGol,opciones.X]=270;opciones.golsProp[_iGol,opciones.Y]=70;opciones.golsProp[_iGol,opciones.W]=Wctr;opciones.golsProp[_iGol,opciones.H]=Hctr;opciones.golsProp[_iGol,opciones.TXT_Dx]=2;opciones.golsProp[_iGol,opciones.TXT_Dy]=3;opciones.golsProp[_iGol,opciones.IMG_Dx]=-5;opciones.golsProp[_iGol,opciones.IMG_Dy]=-0;opciones.golsProp[_iGol,opciones.A]=1;opciones.golsProp[_iGol,opciones.R]=0;opciones.golsProp[_iGol,opciones.G]=0;opciones.golsProp[_iGol,opciones.B]=0;opciones.golsProp[_iGol,opciones.borde.W]=0;opciones.golsProp[_iGol,opciones.IMG]=&squot;imgs/panelresp.png&squot;;opciones.golsProp[_iGol,opciones.TXT]=&squot;&squot;;;_i=0;opciones.ctrProp[_i,opciones.X]=posx[ind[0]];opciones.ctrProp[_i,opciones.Y]=posy[ind[0]];opciones.ctrProp[_i,opciones.initX]=posx[ind[0]];opciones.ctrProp[_i,opciones.initY]=posy[ind[0]];opciones.ctrProp[_i,opciones.TXT_Dx]=5;opciones.ctrProp[_i,opciones.TXT_Dy]=5;opciones.ctrProp[_i,opciones.IMG_Dx]=-6;opciones.ctrProp[_i,opciones.IMG_Dy]=0;opciones.ctrProp[_i,opciones.W]=Wctr;opciones.ctrProp[_i,opciones.H]=Hctr;opciones.ctrProp[_i,opciones.A]=1;opciones.ctrProp[_i,opciones.R]=0;opciones.ctrProp[_i,opciones.G]=.5;opciones.ctrProp[_i,opciones.B]=1;opciones.ctrProp[_i,opciones.borde.W]=0;opciones.ctrProp[_i,opciones.IMG]=&squot;imgs/panelpreg.png&squot;;opciones.ctrProp[_i,opciones.TXT]=&squot;&squot;;;_i=1;opciones.ctrProp[_i,opciones.X]=posx[ind[1]];opciones.ctrProp[_i,opciones.Y]=posy[ind[1]];opciones.ctrProp[_i,opciones.initX]=posx[ind[1]];opciones.ctrProp[_i,opciones.initY]=posy[ind[1]];opciones.ctrProp[_i,opciones.TXT_Dx]=5;opciones.ctrProp[_i,opciones.TXT_Dy]=5;opciones.ctrProp[_i,opciones.IMG_Dx]=-6;opciones.ctrProp[_i,opciones.IMG_Dy]=0;opciones.ctrProp[_i,opciones.W]=Wctr;opciones.ctrProp[_i,opciones.H]=Hctr;opciones.ctrProp[_i,opciones.A]=1;opciones.ctrProp[_i,opciones.R]=0;opciones.ctrProp[_i,opciones.G]=.5;opciones.ctrProp[_i,opciones.B]=1;opciones.ctrProp[_i,opciones.borde.W]=0;opciones.ctrProp[_i,opciones.IMG]=&squot;imgs/panelpreg.png&squot;;opciones.ctrProp[_i,opciones.TXT]=&squot;&squot;;;_i=2;opciones.ctrProp[_i,opciones.X]=posx[ind[2]];opciones.ctrProp[_i,opciones.Y]=posy[ind[2]];opciones.ctrProp[_i,opciones.initX]=posx[ind[2]];opciones.ctrProp[_i,opciones.initY]=posy[ind[2]];opciones.ctrProp[_i,opciones.TXT_Dx]=5;opciones.ctrProp[_i,opciones.TXT_Dy]=5;opciones.ctrProp[_i,opciones.IMG_Dx]=-6;opciones.ctrProp[_i,opciones.IMG_Dy]=0;opciones.ctrProp[_i,opciones.W]=Wctr;opciones.ctrProp[_i,opciones.H]=Hctr;opciones.ctrProp[_i,opciones.A]=1;opciones.ctrProp[_i,opciones.R]=0;opciones.ctrProp[_i,opciones.G]=.5;opciones.ctrProp[_i,opciones.B]=1;opciones.ctrProp[_i,opciones.borde.W]=0;opciones.ctrProp[_i,opciones.IMG]=&squot;imgs/panelpreg.png&squot;;opciones.ctrProp[_i,opciones.TXT]=&squot;&squot;;;_i=3;opciones.ctrProp[_i,opciones.X]=posx[ind[3]];opciones.ctrProp[_i,opciones.Y]=posy[ind[3]];opciones.ctrProp[_i,opciones.initX]=posx[ind[3]];opciones.ctrProp[_i,opciones.initY]=posy[ind[3]];opciones.ctrProp[_i,opciones.TXT_Dx]=5;opciones.ctrProp[_i,opciones.TXT_Dy]=5;opciones.ctrProp[_i,opciones.IMG_Dx]=-6;opciones.ctrProp[_i,opciones.IMG_Dy]=0;opciones.ctrProp[_i,opciones.W]=Wctr;opciones.ctrProp[_i,opciones.H]=Hctr;opciones.ctrProp[_i,opciones.A]=1;opciones.ctrProp[_i,opciones.R]=0;opciones.ctrProp[_i,opciones.G]=.5;opciones.ctrProp[_i,opciones.B]=1;opciones.ctrProp[_i,opciones.borde.W]=0;opciones.ctrProp[_i,opciones.IMG]=&squot;imgs/panelpreg.png&squot;;opciones.ctrProp[_i,opciones.TXT]=&squot;&squot;'">
+   <param name="A_12" value="id='permuta()' algoritmo='sí' algoritmo='sí' inicio='_ind=0' hacer='primer=ind[_ind];_ind1=ent(rnd*4);segundo=ind[_ind1];;ind[_ind]=segundo;ind[_ind1]=primer;;_ind=_ind+1' mientras='_ind<4'">
+   <param name="A_13" value="id='califica()' algoritmo='sí' algoritmo='sí' inicio='bien1=0;bien2=0' hacer='bien1=((opciones.golsRel[0,0]=0)|(opciones.golsRel[0,0]=1))?1:0;bien2=((opciones.golsRel[1,0]=0)|(opciones.golsRel[1,0]=1))?1:0;;bien=((bien1)&(bien2))?1:0;calif1=(bien1)?&squot;imgs/bien.png&squot;:&squot;imgs/mal.png&squot;;calif2=(bien2)?&squot;imgs/bien.png&squot;:&squot;imgs/mal.png&squot;;calPer()'">
+   <param name="A_14" value="id='solucion()' algoritmo='sí' algoritmo='sí' hacer='opciones.pegaAGol(0,0);opciones.pegaAGol(1,1)'">
+   <param name="A_15" value="id='ValPer' vector='sí' evaluar='una-sola-vez' tamaño='20'">
+   <param name="A_16" value="id='calPer()' algoritmo='sí' algoritmo='sí' hacer='ValPer[0]=((bien)&(tipoejer=1))?1:ValPer[0];ValPer[1]=((bien)&(tipoejer=2))?1:ValPer[1];ValPer[2]=((bien)&(tipoejer=3))?1:ValPer[2];ValPer[3]=((bien)&(tipoejer=4))?1:ValPer[3];ValPer[4]=((bien)&(tipoejer=5))?1:ValPer[4];ValPer[5]=((bien)&(tipoejer=0))?1:ValPer[5];per=10*(ValPer[1]+ValPer[2])+20*(ValPer[3]+ValPer[4]+ValPer[5]+ValPer[0]);setSCORMPercentage(per)'">
+   <param name="A_17" value="id='getSCORMState()' algoritmo='sí' expresión='res' algoritmo='sí' Local='res,arroba' inicio='arroba=&squot;@&squot;' hacer='ö=|Estandar ---- [MIDC]XX.<var>  SI SOLO EXISTE UNA ESCENA EN EL HTML|;ö=|Estandar ---- [MIDC]XX_YY.<var>  SI HAY MAS DE UNA ESCENA EN EL HTML|;res=&squot;D04.ValPer[0]:&squot;+ValPer[0]+arroba;res=res+&squot;D04.ValPer[1]:&squot;+ValPer[1]+arroba;res=res+&squot;D04.ValPer[2]:&squot;+ValPer[2]+arroba;res=res+&squot;D04.ValPer[3]:&squot;+ValPer[3]+arroba;res=res+&squot;D04.ValPer[4]:&squot;+ValPer[4]+arroba;res=res+&squot;D04.ValPer[5]:&squot;+ValPer[5]+arroba'">
+   <param name="A_18" value="id='initStateScorm()' algoritmo='sí' expresión='x' algoritmo='sí' hacer='ValPer[0]=getSCORMStateVar(&squot;D04.ValPer[0]&squot;);ValPer[1]=getSCORMStateVar(&squot;D04.ValPer[1]&squot;);ValPer[2]=getSCORMStateVar(&squot;D04.ValPer[2]&squot;);ValPer[3]=getSCORMStateVar(&squot;D04.ValPer[3]&squot;);ValPer[4]=getSCORMStateVar(&squot;D04.ValPer[4]&squot;);ValPer[5]=getSCORMStateVar(&squot;D04.ValPer[5]&squot;);calPer()'">
+   <param name="A_19" value="id='INICIO' algoritmo='sí' evaluar='una-sola-vez' hacer='initStateScorm();initEscena()'">
+   <param name="A_20" value="id='CALCULOS' algoritmo='sí' evaluar='siempre' hacer='opciones.Esp.Ox=E2_Graf.Ox;opciones.Esp.Oy=E2_Graf.Oy;opciones.Esp.escala=E2_Graf.escala;opciones.Esp.mousePressed=E2_Graf.mouse_pressed&opciones.enabled;opciones.Esp.mouse_x=E2_Graf.mouse_x;opciones.Esp.mouse_y=E2_Graf.mouse_y;opciones.Esp.w=E2_Graf._w;opciones.Esp.h=E2_Graf._h;opciones.update();;cuantosctr=opciones.golsProp[0,opciones.n_relaciones]+opciones.golsProp[1,opciones.n_relaciones]'">
+   <param name="G_01" value="espacio='E1' tipo='imagen' fondo='sí' coord_abs='sí' expresión='(-50,-100)' archivo='imgs/tpl/fondo_01.jpg'">
+   <param name="G_02" value="espacio='E1' tipo='texto' fondo='sí' dibujar-si='0' expresión='[__INFO__,20]' fijo='sí'">
+   <param name="G_03" value="espacio='INFO' tipo='texto' color='blanco' expresión='[10,6]' texto='Introducción' fuente='SansSerif,PLAIN,24' fijo='sí'">
+   <param name="G_04" value="espacio='INFO' tipo='texto' expresión='[10,40]' texto='Lee el enunciado que se presenta en el espacio de la izquierda en la siguiente escena. En él hay una o dos proposiciones, “p”, o “p y q”. Dependiendo de lo que se te pida, arrastra los enunciados del espacio de la izquierda al espacio de la derecha.\n\nPulsa el botón verificar.\n\nSi tu respuesta no es correcta intenta nuevamente.' fuente='SansSerif,PLAIN,20' fijo='sí' ancho='480'">
+   <param name="G_05" value="espacio='E1' tipo='texto' fondo='sí' dibujar-si='0' expresión='[__GRAF__,20]' fijo='sí'">
+   <param name="G_06" value="espacio='E2_Graf' tipo='texto' dibujar-si='tipoejer=0' expresión='[5,7]' texto='{\rtf1\uc0{\fonttbl\f0\fcharset0 Times New Roman;\f1\fcharset0 Arial;\f2\fcharset0 Courier New;}\f1\fs32        Si p es, &quote;todo hombre es honesto&quote;, \u191 Qu\u233  proposiciones \par        describen \u172 p?\f2\fs30}' fuente='SansSerif,PLAIN,16' fijo='sí'">
+   <param name="G_07" value="espacio='E2_Graf' tipo='texto' dibujar-si='tipoejer=1' expresión='[5,7]' texto='{\rtf1\uc0{\fonttbl\f0\fcharset0 Times New Roman;\f1\fcharset0 Arial;}\f1\fs32          Si p es &quote;Los impares positivos&quote; y q es &quote;Los pares positivos&quote;\par                            \u191 Qu\u233  enunciados decriben p\u8896 q?\par }' fuente='SansSerif,PLAIN,16' fijo='sí'">
+   <param name="G_08" value="espacio='E2_Graf' tipo='texto' dibujar-si='tipoejer=2' expresión='[5,7]' texto='{\rtf1\uc0{\fonttbl\f0\fcharset0 Times New Roman;\f1\fcharset0 Arial;\f2\fcharset0 Arial;}\f1\fs32             Si p es &quote;apruebo el examen&quote; y q es &quote;no obtengo m\u237 nimo 6&quote;\par                              \u191 Qu\u233  proposici\u243 n muestra (\u172 q \u8658  p)?\fs38}' fuente='SansSerif,PLAIN,16' fijo='sí'">
+   <param name="G_09" value="espacio='E2_Graf' tipo='texto' dibujar-si='tipoejer=3' expresión='[5,7]' texto='{\rtf1\uc0{\fonttbl\f0\fcharset0 Times New Roman;\f1\fcharset0 Arial;\f2\fcharset0 Arial;}\f1\fs32                                       Si p es, &quote;ma\u241 ana es martes&quote;,\par                         \u191 Qu\u233  proposiciones son sus equivalentes?\fs38}' fuente='SansSerif,PLAIN,16' fijo='sí'">
+   <param name="G_10" value="espacio='E2_Graf' tipo='texto' dibujar-si='tipoejer=4' expresión='[5,7]' texto='{\rtf1\uc0{\fonttbl\f0\fcharset0 Times New Roman;\f1\fcharset0 Arial;}\f1\fs32                 Si p es, &quote;T es equil\u225 tero si y s\u243 lo si T es equi\u225 ngulo&quote;\par                           \u191 Qu\u233  proposiciones son equivalentes?\par }' fuente='SansSerif,PLAIN,16' fijo='sí'">
+   <param name="G_11" value="espacio='E2_Graf' tipo='texto' dibujar-si='tipoejer=5' expresión='[5,7]' texto='                ¿Qué proposiciones son equivalentes a p? si p es\n                “Si n es divisible entre 6, n es divisble entre 3”.\n' fuente='SansSerif,PLAIN,16' fijo='sí'">
+   <param name="G_12" value="espacio='E2_Graf' tipo='texto' dibujar-si='tipoejer=6' expresión='[5,-1]' texto='{\rtf1\uc0{\fonttbl\f0\fcharset0 Times New Roman;\f1\fcharset0 Arial;\f2\fcharset0 Arial;}\f1\fs32               Si p es, &quote;si n es un entero par, entonces {\*\mjaformula n{\supix 2}} es par&quote;\par                      \u191 Qu\u233  proposiciones son equivalentes a p?\fs38\par \par }' fuente='SansSerif,PLAIN,16' fijo='sí'">
+   <param name="G_13" value="espacio='E2_Graf' tipo='macro' expresión='macros/clasificar.txt' nombre='opciones'">
+   <param name="G_14" value="espacio='E2_Graf' tipo='texto' expresión='[opciones.ctrProp[s,opciones.X]+2,opciones.ctrProp[s,opciones.Y]+6]' familia='s' s.intervalo='[0,3]' s.pasos='3' texto='[datos[(tipoejer*4)+s]]' fuente='SansSerif,PLAIN,16' decimales='0' fijo='sí'">
+   <param name="G_15" value="espacio='E2_Graf' tipo='texto' expresión='[opciones.ctrProp[s,opciones.X]+2,opciones.ctrProp[s,opciones.Y]+24]' familia='s' s.intervalo='[0,3]' s.pasos='3' texto='[datos[(40+tipoejer*4)+s]]' fuente='SansSerif,PLAIN,16' decimales='0' fijo='sí'">
+   <param name="G_16" value="espacio='E2_Graf' tipo='texto' expresión='[opciones.ctrProp[s,opciones.X]+2,opciones.ctrProp[s,opciones.Y]+40]' familia='s' s.intervalo='[0,3]' s.pasos='3' texto='[datos[(80+tipoejer*4)+s]]' fuente='SansSerif,PLAIN,16' decimales='0' fijo='sí'">
+   <param name="G_17" value="espacio='E2_Graf' tipo='imagen' dibujar-si='(verificar=1)&(mosresp=0)' coord_abs='sí' expresión='(opciones.golsProp[0,opciones.X]+180,opciones.golsProp[0,opciones.Y]+20)' archivo='calif1'">
+   <param name="G_18" value="espacio='E2_Graf' tipo='imagen' dibujar-si='(verificar=1)&(mosresp=0)' coord_abs='sí' expresión='(opciones.golsProp[1,opciones.X]+180,opciones.golsProp[1,opciones.Y]+20)' archivo='calif2'">
+   <param name="G_19" value="espacio='E2_Graf' tipo='texto' dibujar-si='(verificar=1)&(bien)&(mosresp=0)' expresión='[40,280]' texto='Muy bien, intenta con otras proposiciones.' fuente='SansSerif,BOLD,16' decimales='0' fijo='sí'">
+   <param name="G_20" value="espacio='E2_Graf' tipo='texto' dibujar-si='(verificar=1)&(!bien)&(intentos<=3)&(mosresp=0)' expresión='[80,280]' texto='Tus opciones son incorrectas.' fuente='SansSerif,BOLD,16' fijo='sí'">
+   <param name="G_21" value="espacio='E2_Graf' tipo='texto' dibujar-si='0' expresión='[20,20]' texto='[tipoejer]' fijo='sí'">
+</ajs>
+<!------ INICIA LA INFO SOBRE LAS LICENCIAS Y LOS CRÉDITOS. ---------->
+    <a id="btCopyright" class="standardButton" title="Haz clic aquí para consultar los créditos y las condiciones de uso de este recurso." href="#" onClick="document.getElementById('copyright').className='visible';">©</a>
+    <div id="copyright" class="oculto">
+      
+      <div class='innerCopyright'>
+      
+          <a id="btCloseCopyright" class="standardButton" title="Haz clic aquí para cerrar esta ventana." href="#" onClick="document.getElementById('copyright').className='oculto'">×</a>
+  
+          <!-- Créditos UAM  (siempre deben ir en primer lugar) -->
+			<div class="creditos">
+				<h1>
+					Créditos 
+				</h1>
+
+				<h2>
+					Escena original
+				</h2>				<table class="autores" 	>
+
+					<tr> <td  class="rol"> Diseño del contenido			</td>		<td class="nombre"> Víctor Hugo García Jarillo (Facultad de Ciencias UNAM, LITE)</td></tr>
+					<tr> <td  class="rol"> Diseño funcional				</td>		<td class="nombre"> Víctor Hugo García Jarillo (Facultad de Ciencias UNAM, LITE)</td></tr>
+					<tr> <td  class="rol"> Programación					</td>		<td class="nombre"> Víctor Hugo García Jarillo (Facultad de Ciencias UNAM, LITE)</td></tr>
+					<tr> <td  class="rol"> Diseño gráfico				</td>		<td class="nombre"> Ricardo López Gómez</td></tr>
+					<tr> <td  class="rol" >Coordinación			</td>		<td class="nombre"> Leticia Montserrat Vargas Rocha</td></tr>
+					</table>
+				<h2>
+					Adaptación 
+				</h2>
+				<table class="autores" 	>
+				<tr> <td  class="rol"> Diseño funcional				</td>		<td class="nombre"> Victor Hugo García Jarillo (Facultad de                    Ciencias, UNAM)		</td></tr>
+					<tr> <td  class="rol"> Programación				</td>		<td class="nombre"> Victor Hugo García Jarillo (Facultad de                    Ciencias, UNAM)</td></tr>
+
+					<tr> <td  class="rol"> Diseño gráfico			</td>		<td class="nombre"> Francisco	Varela Fuentes</td></tr>
+					<tr> <td  class="rol" >Coordinación			</td>		<td class="nombre"> Leticia Montserrat Vargas Rocha</td></tr>
+		
+				</table>
+				
+	         <div class='logos'>
+	            <a href=''>
+	               <img src="../images/info/icns/logoLite.png">
+	            </a>
+	            <a href="http://www.unadmexico.mx/">
+	               <img src="../images/info/icns/logoUNADM.png">
+	            </a>
+	         </div>
+          </div>
+          
+          <!-- Linea separación créditos -->
+          <hr class="linea" />
+     
+          <!-- Aviso licencias -->
+          <div class="licencias">
+          
+				<p class="creativeCommons">Los contenidos de esta unidad didáctica interactiva están bajo una licencia <a href="http://creativecommons.org/licenses/by-nc-sa/2.5/es/" target="_blank">Creative Commons Reconocimiento-NoComercial-CompartirIgual</a>.</p>
+
+				<!--arquimedes (optativo)-->
+				<p>La unidad didáctica fue creada con <a href="http://arquimedes.matem.unam.mx/Descartes5/creditos/conCCL.html" target="_blank">Arquímedes</a>, una herramienta de código abierto.</p>
+
+				<!-- Descartes -->
+				<p>La unidad didáctica contiene escenas elaboradas con Descartes, una herramienta de código abierto.</p>
+
+
+          	<p style='text-align:center'> LITE - UnADM 2014</p>
+          </div>
+      </div>
+    </div> 
+   <!------ TERMINA LA INFO SOBRE LAS LICENCIAS Y LOS CRÉDITOS. ---------->
+ </div>
+</article>
+</body>
+</html>

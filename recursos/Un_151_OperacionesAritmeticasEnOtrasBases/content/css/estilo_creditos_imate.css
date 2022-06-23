@@ -1,0 +1,16 @@
+.agradecimientos{
+	font-family: Arial, sans-serif;
+	font-size: 14px;
+	font-style: italic;	
+	color: #183152;
+	width:70%;
+	margin-left:auto;
+	margin-right:auto;
+	margin-bottom: 10px
+}
+
+.agradecimientos:after {
+	content: '"Agradecemos al Instituto de Matemáticas de la UNAM por su colaboración en el desarrollo de esta unidad didáctica interactiva"';
+}
+
+

@@ -1,0 +1,144 @@
+﻿
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+ 	<link href="../css/html5_mobile.css" rel="stylesheet" type="text/css" media="screen" />
+	<link href="../css/DescHTML5.css" rel="stylesheet" type="text/css" media="screen" />
+	<script type="text/javascript" src='../javascript/inject_functions_scorms_descartes.js'></script>
+	<script type='text/javascript' src='../lib/descartes-min.js'></script>
+</head>
+
+<body>
+ <!------ MathJax -- para fórmulas matemáticas ---->	
+	<script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script> 
+
+<article class="course_content_container">
+  
+  <div class="course_content">
+    
+    
+    <!---- INICIA EL CONTENIDO DE LA PÁGINA ------>
+    
+    
+    <!-- Título de la página -->
+    <h1>Algoritmo de Euclides y Congruencias Modulares</h1>
+   
+    
+	<div class='text_panel'>
+		<!-- Subtítulo (no necesario en introducción) -->
+		<h2 style="text-align:center;">Algoritmo de Euclides y Congruencias Modulares</h2>
+
+    
+  		<!-- Párrafo -->
+	<p>Decimos que dos números enteros <strong>\(a\)</strong> y <strong>\(b\)</strong> son congruentes módulo \(m \) si \(m \) divide a su diferencia \(a-b\), esto lo podemos escribir algebraicamente como \(a ≡ b (mod \) \( m) \). Escribimos \(a % m \) para denotar al residuo que resulta de dividir \(a \) entre \(m\). En particular resulta que \(a ≡ b (mod \) \( m) \) si y solo si los residuos de las divisiones \( \frac{a}{m} \) y \( \frac{b}{m} \) coinciden.</p><br>
+          
+
+	<p>Observa que, si \(d = MCD(a,b) \), entonces \(a ≡ b \ (mod \ d) \), puesto que si \(d \) es divisor de \(a, b \), entonces \(d \) divide a su diferencia.  También, si \(d \) divide a \(a-b \) y divide a uno de estos números, entonces \(d \) va a dividir al otro y por lo tanto va a ser un divisor común. </p><br>
+    
+    <p>Si \( a ≡b \ (mod \ n) \) entonces \(n \) no es un divisor común de \(a \) y de \(b \), para ver esto, basta encontrar un contraejemplo o utilizar el algoritmo de Euclides auxiliándonos con la Pizarra Euclidea.  </p><br>
+
+	<p>Si escribes \(d \), el MCD de \(a,b \), en el campo de texto \(n \), podrás verificar que \(a≡b \ (mod \ d) \).  Sin embargo, si consideras divisores de \(a-b \) diferentes de \(d=MCD(a, b) \), puedes encontrar \(n \) tal que \(a≡b \ (mod \ n) \) donde \(n \) no es divisor común de \(a \) y \(b \).  Unas \(n \) pueden ser divisores comunes de \(a \) y \(b \) pero hay otras \(n \) que no lo son.  Para encontrarlas:
+<ol>
+<li>Encuentra \(a,b \) tal que \(MCD(a,b) > 1\).</li>
+<li>Escribe el MCD en el campo de texto \(d \).  Empieza de nuevo si \((a-b)/d = 1 \).</li>
+<li>Si \(n=(a-b)/d>1 \), escríbelo en el campo de texto \(d \).</li>
+<li>Si los residuos \(a \% m\),  \(b \% m, \) son iguales, i.e., \(a \% m = b \% m, \), pero diferentes de \(0 \), tenemos 2 números congruentes módulo \(n \), donde \(n \) NO es divisor común porque los residuos son diferentes de \(0 \).</li>
+</ol>
+
+Entonces \(n \) NO es el MCD y hemos encontrado el contraejemplo que buscábamos.</p><br>
+
+<p>Para ver que con el procedimiento anterior unas \(n \) pueden ser divisores comunes de \(a, b \) y otras no, considera primero
+\(a = 8*3*5*7, b=2*3*5*7*19\). Puedes checar que \(MCD(a,b) = 2*3*5*7\), \( n = \frac{b-a}{d} = 3*5 \), así que \(n \) es, claramente, divisor común de \(a, b \).  Sin embargo, el procedimiento anterior nos ayuda a encontrar \(n \) que no es divisor común.  Considera \(a = 2*3*5*7, b=2*7*7*11\). Puedes checar que \(MCD(a,b) = 2*7, n = (b-a)/d = 2*31\) y por lo tanto \(n \) no es divisor común de \(a, b \).</p><br>
+
+
+<p>Nota 1, si tenemos una implicación \(a ⇒ b\), el converso de ésta es la implicación \(b ⇒ a\).</p>
+
+    <!---- TERMINA EL CONTENIDO DE LA PÁGINA ------>
+</div>
+
+
+
+  <!---- INICIA LA INFO SOBRE LAS LICENCIAS Y LOS CRÉDITOS. ------->
+    <a id="btCopyright" class="standardButton" title="Haz clic aquí para consultar los créditos y las condiciones de uso de este recurso." href="#" onClick="document.getElementById('copyright').className='visible';">©</a>
+    <div id="copyright" class="oculto">
+      
+      <div class='innerCopyright'>
+      
+          <a id="btCloseCopyright" class="standardButton" title="Haz clic aquí para cerrar esta ventana." href="#" onClick="document.getElementById('copyright').className='oculto'">×</a>
+  
+          
+<!-- Créditos UAM  (siempre deben ir en primer lugar) -->
+			<div class="creditos">
+				<h1>
+					Créditos 
+				</h1>
+				<h2>
+					Escena original
+				</h2>				
+                
+               <table class="autores" 	>
+					<tr> <td  class="rol"> Diseño del contenido			</td>		<td class="nombre"> Gustavo Magallanes Guijón</td></tr>
+					<tr> <td  class="rol"> Diseño funcional				</td>		<td class="nombre">Gustavo Magallanes Guijón</td></tr>
+					<tr> <td  class="rol"> Programación						</td>		<td class="nombre"> Gustavo Magallanes Guijón</td></tr>
+					<!-- Varias personas en el mismo rubro, separar por <br> -->
+							        
+					<tr> <td  class="rol"> Diseño gráfico					</td>		<td class="nombre"> Ricardo López Gómez										</td></tr>
+					<tr> <td  class="rol" >Coordinación			</td>		<td class="nombre"> Leticia Montserrat Vargas Rocha						</td></tr>
+				</table>
+				<h2>
+					Adaptación 
+				</h2>
+				<table class="autores" 	>
+					<tr> <td  class="rol"> Diseño funcional				</td>	<td class="nombre"> Julio Arnoldo Prado Saavedra<br>Victor Manuel Amezcua y Raz 
+                    </td></tr>
+					<tr> <td  class="rol"> Programación					</td>	<td class="nombre">Julio Arnoldo Prado Saavedra<br>Victor Manuel Amezcua y Raz</td></tr>
+					<tr> <td  class="rol"> Diseño gráfico				</td>	<td class="nombre"> Francisco	Varela Fuentes	        </td></tr>
+					<tr> <td  class="rol" >Coordinación			        </td>	<td class="nombre"> Leticia Montserrat Vargas Rocha		</td></tr>
+		            
+				</table>
+	         
+	         <div class='logos'>
+	            <a href=''>
+	               <img src="../images/info/icns/logoLite.png">
+	            </a>
+	            <a href="http://www.unadmexico.mx/">
+	               <img src="../images/info/icns/logoUNADM.png">
+	            </a>
+	         </div>
+          </div>
+          
+          <!-- Linea separación créditos -->
+
+
+          <hr class="linea" />
+     
+          <!-- Aviso licencias -->
+          <div class="licencias">
+          
+				<p class="creativeCommons">Los contenidos de esta unidad didáctica interactiva están bajo una licencia <a href="http://creativecommons.org/licenses/by-nc-sa/2.5/es/" target="_blank">Creative Commons Reconocimiento-NoComercial-CompartirIgual</a>.</p>
+
+				<!--arquimedes (optativo)-->
+				<p>La unidad didáctica fue creada con <a href="http://arquimedes.matem.unam.mx/Descartes5/creditos/conCCL.html" target="_blank">Arquímedes</a>, una herramienta de código abierto.</p>
+
+				<!-- Descartes -->
+				<p>La unidad didáctica contiene escenas elaboradas con Descartes, una herramienta de código abierto.</p>
+
+
+          	<p style='text-align:center'> LITE - UnADM 2014</p>
+          </div>
+      </div>
+    </div> 
+   <!---- TERMINA LA INFO SOBRE LAS LICENCIAS Y LOS CRÉDITOS. ------->
+  
+  
+  </div>
+  
+  
+</article>
+
+
+</body>
+
+</html>

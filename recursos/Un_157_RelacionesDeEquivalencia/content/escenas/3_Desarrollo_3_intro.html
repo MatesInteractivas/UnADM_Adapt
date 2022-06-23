@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+ <meta charset="utf-8" />
+ <link href="../css/html5.css" rel="stylesheet" type="text/css" media="screen" />
+ 
+ <!-------- MathJax --- para fórmulas matemáticas ------>
+ <script type="text/javascript"
+ src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+ </script>
+<style>
+body,p{
+	font-size: 18px;
+	text-align:left;
+}
+</style>
+</head>
+
+<body>
+<article class="course_content_container">
+	<div class="course_content">
+	<!------ INICIA EL CONTENIDO DE LA PÁGINA ------- -->
+		<!--- Párrafo - -->
+		<p>
+			La cerradura transitiva de una relación es la mínima relación transitiva 
+			que la contiene. Dada una relación <b>\(R\)</b> en un conjunto <b>\(C\)</b> igual a:
+			<b>$$ C = \{ a_0 , a_1 , a_2 , \ldots , a_n\}$$</b>
+			 su cerradura transitiva denotada por <b>\( t(R) \)</b> es: 
+			<b>$$ t(R)=R ∪ R^2 ∪ \cdots ∪ R ^n . $$</b>
+		</p>
+		
+		<p>
+			 Puesto que \(t(R)\) siempre contiene a \(R\) por definición, hay que ver que \(t(R)\) es la mínima
+			relación transitiva que contiene a \( R\) 
+			 <sup><a href='#libroREL'>1</a></sup> . <br>
+			Observando que <b>\(t(R) ^2 ⊆ t(R) \)</b> podemos corroborar que efectivamente su cerradura es transitiva.
+		
+			<center>
+				<img src='imgs/SymmetricClosure.png'>
+			</center>
+		</p>
+		<p>
+			 En esta escena es suficiente tomar <b>\(n = 4 \)</b> dado que <b>\(C = \{1,2,3,4,5\}\)</b>. 
+		</p>
+		<p><br></p>
+ 	<p>
+		<span class="instrucciones">
+			Para construir un elemento de la relación arrastra un elemento de la columna 
+			izquierda a los elementos de la derecha.
+		</span>
+			<center>
+				<img src="imgs/tutorial_small.gif">
+			</center>
+ 	</p>
+
+		<p style='font-size:small;'>
+			 <a id='libroREL'>[1]</a> Para ver las definiciones y demostraciones de los conceptos y resultados 
+			mencionados, véase por ejemplo: <br>
+			Rosen K. Discrete Mathematics and its Applications . (6ed. McGraw-Hill, 2007).
+		</p> 	
+	</div>
+ <!------ TERMINA EL CONTENIDO DE LA PÁGINA ---------> 
+ </div>
+</article>
+</body>
+</html>

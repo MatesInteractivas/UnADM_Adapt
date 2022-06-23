@@ -1,0 +1,160 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+ 	<link href="../css/html5_mobile.css" rel="stylesheet" type="text/css" media="screen" />
+	<link href="../css/DescHTML5.css" rel="stylesheet" type="text/css" media="screen" />
+	<script type="text/javascript" src='../javascript/inject_functions_scorms_descartes.js'></script>
+	<script type='text/javascript' src='../lib/descartes-min.js'></script>
+</head>
+
+<body>
+ <!------ MathJax -- para fórmulas matemáticas ---->	
+	<script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script> 
+
+<article class="course_content_container">
+  
+  <div class="course_content">
+    
+    
+    <!---- INICIA EL CONTENIDO DE LA PÁGINA ------>
+    
+    
+    <!-- Título de la página -->
+   <h1>Relaciones de Equivalencia</h1>
+   
+         <div class="text_panel">
+ <h2>Definición y algunas propiedades de relaciones </h2>
+          <p>Recordemos que una relación entre los elementos de dos conjuntos dados \(A\) y \(B\) va a ser
+              simplemente un subconjunto del producto cartesiano \(A \times B\). Los conjuntos \(A\) y
+              \(B\) son dos conjuntos arbitrarios. Es frecuente que los dos conjuntos coincidan, en cuyo
+              caso simplemente decimos que \(R\) es una relación en \(A\).
+</p>
+
+<p>En este caso podemos definir ciertas propiedades de las relaciones en
+              el conjunto \(A\). Decimos que una relación \(A\) es:
+</p>
+
+<p>1. <strong>Reflexiva </strong> si para todo elemento \(a \in A\) tenemos que \((a,a) \in A\).
+</p>
+
+<p>2. <strong> Simétrica</strong> si para todo par \((a,b) \in A\) tenemos que \((b,a) \in A\).
+</p>
+
+<p>3. <strong>Transitiva</strong> si para \((a,b) \in A\) y \((b,c) \in A\) tenemos que \((a,c) \in A\).
+</p>
+    <br>
+<p>En general, una relación arbitraria en \(A\), i.e. la relación es un subconjunto de \(A \times A\), no tiene conjuntamente estas propiedades. Cuando una relación tiene estas tres propiedades, decimos que tenemos una relación de equivalencia.</p>
+            
+<p>Para contrastar, vamos a definir propiedades de una relación \(R\) en \(A\) que son opuestas a las que acabamos de definir.<br>
+     Decimos que una relación \(R\) en \(A\) es:<br>
+<p>1. <strong>Irreflexiva </strong> si para todo elemento \(a \in A\) tenemos que \((a,a) \notin A\).</p>
+<p>2. <strong>Antisimétrica</strong> si dados \((a,b) \in A\) y \((b,a) \in A\) tenemos que \(a=b\) para todo \(a, b \in A\).</p>
+          
+<h2>La relación idéntica</h2>
+
+<p>Una relación muy simple pero importante es la relación de identidad  \( \Delta_A\), que consiste de la diagonal
+              de \(A \times A\), i.e., todas las parejas \( (a, a)\) con \(a\) un elemento de \(A\).
+</p>
+<p>Es fácil de ver que si componemos \( \Delta_A\) con \(R\), obtenemos que \(R \circ \Delta_A = R\) y \( \Delta_A \circ Q = Q\), donde \(Q\) es una relación en \(A \times A\).<br>
+<h2>La relación inversa</h2>
+
+<p>Dada una relación \(R\) en \(A\), podemos construir una nueva relación \(R^{-1}\) llamada la relación inversa de \(R\), definida como:<br>
+\(R^{-1} = \lbrace (b,a)|(a,b) \in R \rbrace \) <br>
+</p>
+
+<p>Podemos ahora expresar las propiedes reflexiva, simétrica, transitiva, irreflexiva y antisimétrica en términos de la identidad \( \Delta_A\), \(R\) y \(R^{-1}\):<br>
+        
+<p>1. Una relación \(R\) en \(A \times A\) es <b>reflexiva</b>, si y sólo si \(\Delta_A \subseteq R\).</p>
+<p>2. Una relación \(R\) en \(A \times A\) es <b>simétrica</b>, si y sólo si \(R^{-1} = R\).</p>
+<p>3. Una relación \(R\) en \(A \times A\) es <b>transitiva</b>, si y sólo si \(R \circ R \subseteq R\).</p>
+<p>4. Una relación \(R\) en \(A \times A\) es <b>irreflexiva</b>, si y sólo si \(R\ \cap \Delta_A = \emptyset \).</p>
+<p>5. Una relación \(R\) en \(A \times A\) es <b>antisimétrica</b>, si y sólo si \( R\ \cap R^{-1} \subseteq \Delta_A \).</p>
+         
+    <!---- TERMINA EL CONTENIDO DE LA PÁGINA ------>
+</div>
+
+
+
+  <!------ INICIA LA INFO SOBRE LAS LICENCIAS Y LOS CRÉDITOS. ---------->
+    <a id="btCopyright" class="standardButton" title="Haz clic aquí para consultar los créditos y las condiciones de uso de este recurso." href="#" onclick="document.getElementById('copyright').className='visible';">©</a>
+    <div id="copyright" class="oculto">
+      
+      <div class='innerCopyright'>
+      
+          <a id="btCloseCopyright" class="standardButton" title="Haz clic aquí para cerrar esta ventana." href="#" onclick="document.getElementById('copyright').className='oculto'">×</a>
+  
+          <!-- Créditos UAM  (siempre deben ir en primer lugar) -->
+			<div class="creditos">
+				<h1>
+					Créditos 
+				</h1>
+				<h2>
+					Escena original
+				</h2>				
+                <table class="autores" 	>
+					<tr> <td  class="rol"> Diseño del contenido			</td>		<td class="nombre"> Julio Arnoldo Prado Saavedra<br>Víctor Manuel Amezcua Y Raz</td></tr>
+					<tr> <td  class="rol"> Diseño funcional				</td>		<td class="nombre">Julio Arnoldo Prado Saavedra<br>Víctor Manuel Amezcua Y Raz</td></tr>
+					<tr> <td  class="rol"> Programación						</td>		<td class="nombre"> Julio Arnoldo Prado Saavedra</td></tr>
+<tr> <td class="rol"> Asesoría de programación		</td>		<td class="nombre"> 
+																								Víctor Manuel Amezcua Y Raz
+					<!-- Varias personas en el mismo rubro, separar por <br> -->
+					
+					<tr> <td  class="rol"> Diseño gráfico					</td>		<td class="nombre"> Ricardo López Gómez										</td></tr>
+					<tr> <td  class="rol" >Coordinación		</td>		<td class="nombre"> Leticia Montserrat Vargas Rocha						</td></tr>
+				</table>
+				<h2>
+					Adaptación 
+				</h2>
+				<table class='autores	'>
+		<tr> <td class="rol"> Diseño funcional					</td>		<td class="nombre">Julio Arnoldo Prado Saavedra	<br>Oscar Escamilla González		</td></tr>
+		<tr> <td class="rol"> Programación						</td>		<td class="nombre">Julio Arnoldo Prado Saavedra</td></tr>
+		<!-- Varias personas en el mismo rubro, separar por <br> -->
+		<tr> <td class="rol"> Asesoría de programación		</td>		<td class="nombre">Oscar Escamilla González <br>
+																								Leticia Montserrat Vargas Rocha
+		<tr> <td class="rol"> Diseño gráfico					</td>		<td class="nombre"> Francisco Varela Fuentes										</td></tr>
+		<tr> <td  class="rol" >Coordinación			</td>		<td class="nombre"> Leticia Montserrat Vargas Rocha						</td></tr>
+	</table>
+	         
+	         <div class='logos'>
+	            <a href=''>
+	               <img src="../images/info/icns/logoLite.png">
+	            </a>
+	            <a href="http://www.unadmexico.mx/">
+	               <img src="../images/info/icns/logoUNADM.png">
+	            </a>
+	         </div>
+          </div>
+          
+          <!-- Linea separación créditos -->
+          <hr class="linea" />
+     
+          <!-- Aviso licencias -->
+          <div class="licencias">
+          
+				<p class="creativeCommons">Los contenidos de esta unidad didáctica interactiva están bajo una licencia <a href="http://creativecommons.org/licenses/by-nc-sa/2.5/es/" target="_blank">Creative Commons Reconocimiento-NoComercial-CompartirIgual</a>.</p>
+
+				<!--arquimedes (optativo)-->
+				<p>La unidad didáctica fue creada con <a href="http://arquimedes.matem.unam.mx/Descartes5/creditos/conCCL.html" target="_blank">Arquímedes</a>, una herramienta de código abierto.</p>
+
+				<!-- Descartes -->
+				<p>La unidad didáctica contiene escenas elaboradas con Descartes, una herramienta de código abierto.</p>
+
+
+          	<p style='text-align:center'> LITE - UnADM 2014</p>
+          </div>
+      </div>
+    </div> 
+   <!------ TERMINA LA INFO SOBRE LAS LICENCIAS Y LOS CRÉDITOS. ---------->
+  
+  
+  </div>
+  
+  
+</article>
+
+
+</body>
+
+</html>

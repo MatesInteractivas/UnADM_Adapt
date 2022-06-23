@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Desarrollo</title>	
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<link href="../css/DescHTML5.css" rel="stylesheet" type="text/css" media="screen" />
+	<link href="../css/html5_mobile.css" rel="stylesheet" type="text/css" media="screen" />
+    <script type="text/javascript" src='../javascript/inject_functions_scorms_descartes.js'></script>
+	<script type='text/javascript' src='../lib/descartes-min.js'></script>
+</head>
+<body>
+	<!-------- MathJax --- para fórmulas matemáticas ------>	
+	<script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script> 
+
+
+  <article class="course_content_container">
+    <div class="course_content">
+  
+  
+    <!------ INICIA EL CONTENIDO DE LA PÁGINA ------- -->
+
+	<h2 align="center">Demostraciones con tablas de verdad</h2>
+	
+	<p>
+		A continuación se mostrará la utilidad de las tablas de verdad demostrando un teorema de las leyes de De Morgan.<br><br>
+		
+		El teorema que se demostrará dice que "el complemento de la unión de dos conjuntos, es igual a la intersección de sus complementos". Algebraicamente esto se expresa como \( (  A \cup B )^c =  A^c \cap B ^c \).<br><br>
+		
+		La demostración, usando propiedades de conjuntos, es la siguiente:<br><br>
+		
+		<i>Hipótesis</i>: \( xϵ (  A \cup B )^c \) <i>Por demostrar que</i>: \( xϵ A^c \cap B^c \)<br><br>
+		
+		<i>Dem</i>: \( xϵ (  A \cup B )^c ⇔  x \notin (A \cap B) ⇔ ¬ (x ϵ A \cup B) ⇔ ¬((xϵA)∨(xϵB)) \)<br>
+		     \( ⇔ (x \notin A)∧(x \notin B) ⇔ (xϵ A^c)∧(xϵB^c) ⇔ xϵA^c \cap B^c \)<br><br>
+		
+		</p>
+					
+	<p>
+		
+	</p>
+
+  <div class="course_content">
+	<p class='instruccion'>
+    <span class="instrucciones">
+  		En el siguiente espacio se muestra cómo se hace la demostración del teorema anterior paso a paso usando tablas de verdad.
+    </span>
+	</p>
+	
+<div  align="center" class="Descartes_extern_content">
+  <ajs name="Descartes" width=495 height=370 code="Descartes">
+   <param name="tamaño" value="495x370">
+   <param name="image_loader" value="">
+   <param name="expand" value="">
+   <param name="decimal_symbol" value=".">
+   <param name="antialias" value="sí">
+   <param name="deshacer" value="no">
+   <param name="nombre" value="Descartes">
+   <param name="Versión" value="5.336, 2015-02-13">
+   <param name="Idioma" value="español">
+   <param name="Botones" value="créditos=no config=no inicio=no limpiar=no">
+   <param name="E_01" value="tipo='R2' id='E1' fijo='sí' escala='1' O.x='-50%' O.y='-50%' despl_imagen='arr-izq' fondo='c0d0d8' red='no' red10='no' ejes='no' texto='no'">
+   <param name="E_02" value="tipo='R2' id='E2_Graf' x='E2_Graf.x' y='E2_Graf.y' ancho='510' alto='360' dibujar-si='E2_Graf.visible' fijo='sí' escala='55' O.x='20' despl_imagen='arr-izq' fondo='dcdbe1' red='no' red10='no' ejes='no' texto='no'">
+   <param name="E_03" value="tipo='R2' id='CTRS' x='CTRS.x' y='CTRS.y' ancho='520' alto='200' dibujar-si='1|CTRS.visible' fijo='sí' escala='-1' O.x='-50%' O.y='-50%' despl_imagen='arr-izq' fondo='88000000' red='no' red10='no' ejes='no' texto='no'">
+   <param name="E_04" value="tipo='R2' id='btnOpenClose' x='btnOpenClose.x' y='btnOpenClose.y' ancho='35' alto='30' fijo='sí' escala='1' O.x='-50%' O.y='-50%' despl_imagen='arr-izq' fondo='ff000000' red='no' red10='no' ejes='no' texto='no'">
+   <param name="E_05" value="tipo='R2' id='MASK' dibujar-si='INFO.visible' fijo='sí' imagen='imgs/tpl/backwindow.png' despl_imagen='mosaico' fondo='95000000' red='no' red10='no' ejes='no' texto='no'">
+   <param name="E_06" value="tipo='R2' id='INFO' x='INFO.x' y='INFO.y' ancho='485' alto='360' dibujar-si='INFO.visible' fijo='sí' imagen='imgs/tpl/retro_400x400.png' despl_imagen='mosaico' red='no' red10='no' ejes='no' texto='no'">
+   <param name="C_01" value="id='cerrarInfo' tipo='numérico' interfaz='botón' región='interior' espacio='INFO' nombre='×' expresión='(cerrarInfo.x,cerrarInfo.y,cerrarInfo.w,cerrarInfo.h)' fijo='sí' visible='sí' color='blanco' fuente puntos='26' imagen='_STYLE_|class=btnUNADM| shadowTextColor=rgba(0,0,0,0.2)| shadowTextOffsetY=2| shadowTextBlur=0| textBorder=0 ' acción='calcular' parámetro='INFO.visible=0\nValPer0=1\ncalPer()' dibujar-si='cerrarInfo.visible'">
+   <param name="C_02" value="id='ctr_i' tipo='numérico' interfaz='botón' región='interior' espacio='E2_Graf' expresión='(0,0,30,30)' valor='ctr_i' fijo='sí' visible='sí' color='blanco' cursiva='sí' fuente puntos='20' imagen='_STYLE_|class=btnUNADM icon info|shadowTextColor=rgba(0,0,0,0.2)|shadowTextOffsetY=2|shadowTextBlur=0|textBorder=0 |' acción='calcular' parámetro='INFO.visible=1'">
+   <param name="C_03" value="id='btnOpen' tipo='numérico' interfaz='botón' región='interior' espacio='btnOpenClose' expresión='(0,0,35,30)' fijo='sí' visible='sí' fuente puntos='16' imagen='_STYLE_|class=btnUNADM open|shadowTextColor=rgba(0,0,0,0.2)|shadowTextOffsetY=2|shadowTextBlur=0|textBorder=0' acción='calcular' parámetro='openPanelCtrs()' dibujar-si='!CTRS.opened'">
+   <param name="C_04" value="id='btnClose' tipo='numérico' interfaz='botón' región='interior' espacio='btnOpenClose' expresión='(0,0,35,30)' fijo='sí' visible='sí' imagen='_STYLE_|class=btnUNADM close|shadowTextColor=rgba(0,0,0,0.2)|shadowTextOffsetY=2|shadowTextBlur=0|textBorder=0' acción='calcular' parámetro='closePanelCtrs()' dibujar-si='CTRS.opened'">
+   <param name="C_05" value="id='sig' tipo='numérico' interfaz='botón' región='interior' espacio='CTRS' expresión='(464,168,30,30)' fijo='sí' visible='sí' color='blanco' color-int='fff0f8ff' fuente puntos='18' imagen='_STYLE_|class=btnUNADM icon avanzar|shadowTextColor=rgba(0,0,0,0.2)|shadowTextOffsetY=2|shadowTextBlur=0|textBorder=0 |' acción='calcular' parámetro='paso=paso+1\ncalPer()' dibujar-si='paso<5'">
+   <param name="C_06" value="id='ant' tipo='numérico' interfaz='botón' región='interior' espacio='CTRS' expresión='(2,168,30,30)' fijo='sí' visible='sí' color='blanco' color-int='fff0f8ff' fuente puntos='18' imagen='_STYLE_|class=btnUNADM icon retroceder|shadowTextColor=rgba(0,0,0,0.2)|shadowTextOffsetY=2|shadowTextBlur=0|textBorder=0 |' acción='calcular' parámetro='paso=paso-1' dibujar-si='paso>0'">
+   <param name="C_07" value="id='reinit' tipo='numérico' interfaz='botón' región='interior' espacio='CTRS' nombre='Reiniciar' expresión='(374,168,120,30)' fijo='sí' visible='sí' color='blanco' color-int='fff0f8ff' fuente puntos='18' imagen='imgs/tpl/btn100.png' acción='calcular' parámetro='paso=0' dibujar-si='paso=5'">
+   <param name="C_08" value="id='paso' tipo='numérico' región='escenario' espacio='E1' nombre='paso' expresión='(0,0,0,0)' valor='ctr_paso' fijo='sí' visible='sí'">
+   <param name="C_09" value="id='INFO.visible' tipo='numérico' región='escenario' espacio='E1' nombre='INFO.visible' expresión='(0,0,0,0)' valor='ctr_INFO.visible' fijo='sí' visible='sí'">
+   <param name="A_01" value="id='irAEscena(idxEscena)' algoritmo='sí' algoritmo='sí' hacer='parent.set(&squot;scene&squot;,idxEscena);parent.update()'">
+   <param name="A_02" value="id='initBtns()' algoritmo='sí' algoritmo='sí' hacer='cerrarInfo.w=40;cerrarInfo.h=30;cerrarInfo.x=INFO._w-cerrarInfo.w-2;cerrarInfo.y=1;cerrarInfo.img=&squot;imgs/tpl/cerrar.png&squot;;cerrarInfo.visible=1;;;ctrF.w=275;ctrF.h=40;ctrF.txt.w=60;ctrF.txt.h=18 ;;ctrF.txt.x=10;ctrF.txt.y=(E2_Graf._h-ctrF.h-5)+10;ctrF.x=ctrF.txt.x+ctrF.txt.w;ctrF.y=ctrF.txt.y-10;;;;ctr_a.w=120;ctr_a.h=50;ctr_b.w=ctr_a.w;ctr_b.h=ctr_a.h;ctr_c.w=ctr_b.w;ctr_c.h=ctr_b.h;_gapX=30;_allW=(ctr_a.w+ctr_b.w+ctr_c.w+_gapX*2);;ctr_a.x=(CTRS._w-_allW)/2;ctr_a.y=(CTRS._h-ctr_a.h)/2;;;ctr_b.x=ctr_a.x+ctr_a.w+_gapX;ctr_b.y=ctr_a.y;;ctr_c.x=ctr_b.x+ctr_b.w+_gapX;ctr_c.y=ctr_a.y;'">
+   <param name="A_03" value="id='initEsp()' algoritmo='sí' algoritmo='sí' hacer='INFO.x=(E1._w-INFO._w)/2;INFO.y=(E1._h-INFO._h)/2;INFO.visible=1;;E2_Graf.x=5;E2_Graf.y=5;E2_Graf.visible=1;;EspTxt.x=E1._w-EspTxt._w-10;EspTxt.y=E1._h-EspTxt._h-10;EspTxt.visible=1;;;;CTRS.x=(E1._w-CTRS._w)/2;CTRS.y=(E1._h-CTRS._h);CTRS.visible=0;;;btnOpenClose.y=(CTRS.y-btnOpenClose._h);btnOpenClose.x=(E1._w-btnOpenClose._w);'">
+   <param name="A_04" value="id='initEscena()' algoritmo='sí' algoritmo='sí' hacer='initBtns();initEsp();openPanelCtrs();paso=0;Dx=35;Dy=-20;Dx1=80;Dy1=-35'">
+   <param name="A_05" value="id='__FIN_TPL_()'">
+   <param name="A_06" value="id='closePanelCtrs()' algoritmo='sí' expresión='x' algoritmo='sí' hacer='CTRS.visible=1;;CTRS.opened=0;CTRS.y=(E1._h);;btnOpenClose.y=(CTRS.y-btnOpenClose._h);btnOpenClose.x=(E1._w-btnOpenClose._w-5)'">
+   <param name="A_07" value="id='openPanelCtrs()' algoritmo='sí' expresión='x' algoritmo='sí' hacer='CTRS.visible=1;CTRS.opened=1;CTRS.x=(E1._w-CTRS._w)/2;CTRS.y=(E1._h-CTRS._h);;btnOpenClose.y=(CTRS.y-btnOpenClose._h);btnOpenClose.x=(E1._w-btnOpenClose._w-5)'">
+   <param name="A_08" value="id='ValPer' vector='sí' evaluar='una-sola-vez' tamaño='20'">
+   <param name="A_09" value="id='calPer()' algoritmo='sí' algoritmo='sí' hacer='ValPer[0]=(ValPer0=1)?1:ValPer[0];ValPer[1]=(paso=1)?1:ValPer[1];ValPer[2]=(paso=2)?1:ValPer[2];ValPer[3]=(paso=3)?1:ValPer[3];ValPer[4]=(paso=4)?1:ValPer[4];ValPer[5]=(paso=5)?1:ValPer[5];per=10*(ValPer[0]+ValPer[1])+20*(ValPer[2]+ValPer[3]+ValPer[4]+ValPer[5]);setSCORMPercentage(per)'">
+   <param name="A_10" value="id='getSCORMState()' algoritmo='sí' expresión='res' algoritmo='sí' Local='res,arroba' inicio='arroba=&squot;@&squot;' hacer='ö=|Estandar ---- [MIDC]XX.<var>  SI SOLO EXISTE UNA ESCENA EN EL HTML|;ö=|Estandar ---- [MIDC]XX_YY.<var>  SI HAY MAS DE UNA ESCENA EN EL HTML|;res=&squot;D02.ValPer[0]:&squot;+ValPer[0]+arroba;res=res+&squot;D02.ValPer[1]:&squot;+ValPer[1]+arroba;res=res+&squot;D02.ValPer[2]:&squot;+ValPer[2]+arroba;res=res+&squot;D02.ValPer[3]:&squot;+ValPer[3]+arroba;res=res+&squot;D02.ValPer[4]:&squot;+ValPer[4]+arroba;res=res+&squot;D02.ValPer[5]:&squot;+ValPer[5]+arroba;res=res+&squot;D02.paso:&squot;+paso+arroba;res=res+&squot;D02.INFO.visible:&squot;+INFO.visible+arroba;'">
+   <param name="A_11" value="id='initStateScorm()' algoritmo='sí' expresión='x' algoritmo='sí' hacer='ValPer[0]=getSCORMStateVar(&squot;D02.ValPer[0]&squot;);ValPer[1]=getSCORMStateVar(&squot;D02.ValPer[1]&squot;);ValPer[2]=getSCORMStateVar(&squot;D02.ValPer[2]&squot;);ValPer[3]=getSCORMStateVar(&squot;D02.ValPer[3]&squot;);ValPer[4]=getSCORMStateVar(&squot;D02.ValPer[4]&squot;);ValPer[5]=getSCORMStateVar(&squot;D02.ValPer[5]&squot;);paso=getSCORMStateVar(&squot;D02.paso&squot;);INFO.visible=getSCORMStateVar(&squot;D02.INFO.visible&squot;);calPer();ctr_paso=(paso!=0)?paso:0;ctr_INFO.visible=(INFO.visible!=0)?INFO.visible:1;;'">
+   <param name="A_12" value="id='INICIO' algoritmo='sí' evaluar='una-sola-vez' hacer='initStateScorm();initEscena()'">
+   <param name="A_13" value="id='CALCULOS' algoritmo='sí' evaluar='siempre'">
+   <param name="G_01" value="espacio='E1' tipo='imagen' fondo='sí' coord_abs='sí' expresión='(-50,-100)' archivo='imgs/tpl/fondo_01.jpg'">
+   <param name="G_02" value="espacio='E1' tipo='texto' fondo='sí' dibujar-si='0' expresión='[__GRAF__,20]' fijo='sí'">
+   <param name="G_03" value="espacio='INFO' tipo='texto' fondo='sí' color='blanco' expresión='[20,5]' texto='Introducción' fuente='SansSerif,PLAIN,24' fijo='sí'">
+   <param name="G_04" value="espacio='INFO' tipo='texto' expresión='[20,45]' texto='{\rtf1\uc0{\fonttbl\f0\fcharset0 Times New Roman;\f1\fcharset0 Arial;\f2\fcharset0 Times New Roman;\f3\fcharset0 Arial;}\f1\fs40 Lo primero a hacer es traducir\f2\fs44\i{\*\mjaformula (A\u8899 B){\supix c}=A{\supix c}\u8745 B{\supix c}}\f1\fs40\i0  \par a un lenguaje que se pueda usar en las tablas de\par verdad. A continuaci\u243 n aplicamos los condicionales.\par Si en el resultado final todo es verdadero, se dice\par que la proposici\u243 n es una \i tautolog\u237 a \i0 y se cumple el\par teorema. El complemento se puede interpretar\par como una negaci\u243 n, la uni\u243 n como una disyunci\u243 n,\par la intersecci\u243 n como una conjunci\u243 n y finalmente la\par igualdad como un bicondicional. La expresi\u243 n\par quedar\u237 a como\f2\fs44\i{\*\mjaformula\u172 (A \u8744  B)  \u8660   \u172 A \u8743  \u172 B}\f1\fs40\i0}' fuente='SansSerif,PLAIN,20' fijo='sí'">
+   <param name="G_05" value="espacio='E2_Graf' tipo='segmento' coord_abs='sí' expresión='(20+Dx,20+35*s+Dy)(390+Dx,20+35*s+Dy)' familia='s' s.intervalo='[0,5]' s.pasos='5' fijo='sí' tamaño='0' ancho='2'">
+   <param name="G_06" value="espacio='E2_Graf' tipo='segmento' coord_abs='sí' expresión='(20+45*s+Dx,20+Dy)(20+45*s+Dx,195+Dy)' familia='s' s.intervalo='[0,2]' s.pasos='2' fijo='sí' tamaño='0' ancho='2'">
+   <param name="G_07" value="espacio='E2_Graf' tipo='texto' expresión='[35+Dx,28+Dy]' texto='A     B' fuente='SansSerif,PLAIN,20' fijo='sí'">
+   <param name="G_08" value="espacio='E2_Graf' tipo='texto' expresión='[35+Dx,65+Dy]' texto='V     V' fuente='SansSerif,PLAIN,20' fijo='sí'">
+   <param name="G_09" value="espacio='E2_Graf' tipo='texto' expresión='[35+Dx,98+Dy]' texto='V     F' fuente='SansSerif,PLAIN,20' fijo='sí'">
+   <param name="G_10" value="espacio='E2_Graf' tipo='texto' expresión='[35+Dx,131+Dy]' texto='F     V' fuente='SansSerif,PLAIN,20' fijo='sí'">
+   <param name="G_11" value="espacio='E2_Graf' tipo='texto' expresión='[35+Dx,169+Dy]' texto='F     F' fuente='SansSerif,PLAIN,20' fijo='sí'">
+   <param name="G_12" value="espacio='E2_Graf' tipo='segmento' coord_abs='sí' expresión='(172+Dx,20+Dy)(172+Dx,195+Dy)' familia='s' s.intervalo='[0,2]' s.pasos='2' fijo='sí' tamaño='0' ancho='2'">
+   <param name="G_13" value="espacio='E2_Graf' tipo='texto' dibujar-si='paso>0' expresión='[120+Dx,28+Dy]' texto='A∨B' fuente='SansSerif,PLAIN,20' fijo='sí'">
+   <param name="G_14" value="espacio='E2_Graf' tipo='texto' dibujar-si='paso>0' expresión='[130+Dx,65+Dy]' texto='V' fuente='SansSerif,PLAIN,20' fijo='sí'">
+   <param name="G_15" value="espacio='E2_Graf' tipo='texto' dibujar-si='paso>0' expresión='[130+Dx,98+Dy]' texto='V' fuente='SansSerif,PLAIN,20' fijo='sí'">
+   <param name="G_16" value="espacio='E2_Graf' tipo='texto' dibujar-si='paso>0' expresión='[130+Dx,131+Dy]' texto='V' fuente='SansSerif,PLAIN,20' fijo='sí'">
+   <param name="G_17" value="espacio='E2_Graf' tipo='texto' dibujar-si='paso>0' expresión='[130+Dx,169+Dy]' texto='F' fuente='SansSerif,PLAIN,20' fijo='sí'">
+   <param name="G_18" value="espacio='E2_Graf' tipo='segmento' coord_abs='sí' expresión='(265+Dx,20+Dy)(265+Dx,195+Dy)' familia='s' s.intervalo='[0,2]' s.pasos='2' fijo='sí' tamaño='0' ancho='2'">
+   <param name="G_19" value="espacio='E2_Graf' tipo='texto' dibujar-si='paso>1' expresión='[182+Dx,28+Dy]' texto='¬(A∨B)' fuente='SansSerif,PLAIN,20' fijo='sí'">
+   <param name="G_20" value="espacio='E2_Graf' tipo='texto' dibujar-si='paso>1' expresión='[212+Dx,65+Dy]' texto='F' fuente='SansSerif,PLAIN,20' fijo='sí'">
+   <param name="G_21" value="espacio='E2_Graf' tipo='texto' dibujar-si='paso>1' expresión='[212+Dx,98+Dy]' texto='F' fuente='SansSerif,PLAIN,20' fijo='sí'">
+   <param name="G_22" value="espacio='E2_Graf' tipo='texto' dibujar-si='paso>1' expresión='[212+Dx,131+Dy]' texto='F' fuente='SansSerif,PLAIN,20' fijo='sí'">
+   <param name="G_23" value="espacio='E2_Graf' tipo='texto' dibujar-si='paso>1' expresión='[212+Dx,169+Dy]' texto='V' fuente='SansSerif,PLAIN,20' fijo='sí'">
+   <param name="G_24" value="espacio='E2_Graf' tipo='segmento' coord_abs='sí' expresión='(330+Dx,20+Dy)(330+Dx,195+Dy)' familia='s' s.intervalo='[0,2]' s.pasos='2' fijo='sí' tamaño='0' ancho='2'">
+   <param name="G_25" value="espacio='E2_Graf' tipo='texto' dibujar-si='paso>2' expresión='[280+Dx,28+Dy]' texto='¬A' fuente='SansSerif,PLAIN,20' fijo='sí'">
+   <param name="G_26" value="espacio='E2_Graf' tipo='texto' dibujar-si='paso>2' expresión='[288+Dx,65+Dy]' texto='F' fuente='SansSerif,PLAIN,20' fijo='sí'">
+   <param name="G_27" value="espacio='E2_Graf' tipo='texto' dibujar-si='paso>2' expresión='[288+Dx,98+Dy]' texto='F' fuente='SansSerif,PLAIN,20' fijo='sí'">
+   <param name="G_28" value="espacio='E2_Graf' tipo='texto' dibujar-si='paso>2' expresión='[288+Dx,131+Dy]' texto='V' fuente='SansSerif,PLAIN,20' fijo='sí'">
+   <param name="G_29" value="espacio='E2_Graf' tipo='texto' dibujar-si='paso>2' expresión='[288+Dx,169+Dy]' texto='V' fuente='SansSerif,PLAIN,20' fijo='sí'">
+   <param name="G_30" value="espacio='E2_Graf' tipo='segmento' coord_abs='sí' expresión='(390+Dx,20+Dy)(390+Dx,195+Dy)' familia='s' s.intervalo='[0,2]' s.pasos='2' fijo='sí' tamaño='0' ancho='2'">
+   <param name="G_31" value="espacio='E2_Graf' tipo='texto' dibujar-si='paso>2' expresión='[342+Dx,28+Dy]' texto='¬B' fuente='SansSerif,PLAIN,20' fijo='sí'">
+   <param name="G_32" value="espacio='E2_Graf' tipo='texto' dibujar-si='paso>2' expresión='[352+Dx,65+Dy]' texto='F' fuente='SansSerif,PLAIN,20' fijo='sí'">
+   <param name="G_33" value="espacio='E2_Graf' tipo='texto' dibujar-si='paso>2' expresión='[352+Dx,98+Dy]' texto='V' fuente='SansSerif,PLAIN,20' fijo='sí'">
+   <param name="G_34" value="espacio='E2_Graf' tipo='texto' dibujar-si='paso>2' expresión='[352+Dx,131+Dy]' texto='F' fuente='SansSerif,PLAIN,20' fijo='sí'">
+   <param name="G_35" value="espacio='E2_Graf' tipo='texto' dibujar-si='paso>2' expresión='[352+Dx,169+Dy]' texto='V' fuente='SansSerif,PLAIN,20' fijo='sí'">
+   <param name="G_36" value="espacio='E2_Graf' tipo='segmento' coord_abs='sí' expresión='(20+Dx1,215+35*s+Dy1)(300+Dx1,215+35*s+Dy1)' familia='s' s.intervalo='[0,5]' s.pasos='5' fijo='sí' tamaño='0' ancho='2'">
+   <param name="G_37" value="espacio='E2_Graf' tipo='segmento' coord_abs='sí' expresión='(20+95*s+Dx1,215+Dy1)(20+95*s+Dx1,388+Dy1)' familia='s' s.intervalo='[0,1]' s.pasos='1' fijo='sí' tamaño='0' ancho='2'">
+   <param name="G_38" value="espacio='E2_Graf' tipo='texto' dibujar-si='paso>3' expresión='[30+Dx1,223+Dy1]' texto='¬A∧¬B' fuente='SansSerif,PLAIN,20' fijo='sí'">
+   <param name="G_39" value="espacio='E2_Graf' tipo='texto' dibujar-si='paso>3' expresión='[60+Dx1,256+Dy1]' texto='F' fuente='SansSerif,PLAIN,20' fijo='sí'">
+   <param name="G_40" value="espacio='E2_Graf' tipo='texto' dibujar-si='paso>3' expresión='[60+Dx1,292+Dy1]' texto='F' fuente='SansSerif,PLAIN,20' fijo='sí'">
+   <param name="G_41" value="espacio='E2_Graf' tipo='texto' dibujar-si='paso>3' expresión='[60+Dx1,326+Dy1]' texto='F' fuente='SansSerif,PLAIN,20' fijo='sí'">
+   <param name="G_42" value="espacio='E2_Graf' tipo='texto' dibujar-si='paso>3' expresión='[60+Dx1,362+Dy1]' texto='V' fuente='SansSerif,PLAIN,20' fijo='sí'">
+   <param name="G_43" value="espacio='E2_Graf' tipo='segmento' coord_abs='sí' expresión='(300+Dx1,215+Dy1)(300+Dx1,388+Dy1)' familia='s' s.intervalo='[0,1]' s.pasos='1' fijo='sí' tamaño='0' ancho='2'">
+   <param name="G_44" value="espacio='E2_Graf' tipo='texto' expresión='[123+Dx1,220+Dy1]' texto='{\rtf1\uc0{\fonttbl\f0\fcharset0 Times New Roman;\f1\fcharset0 Arial;\f2\fcharset0 Times New Roman;}\f1\fs40\u172 (A\u8744 B) \f2\fs44\i\u8596 \f1\fs40\i0  \u172 A\u8743 \u172 B}' fuente='SansSerif,PLAIN,20' fijo='sí'">
+   <param name="G_45" value="espacio='E2_Graf' tipo='texto' dibujar-si='paso>4' expresión='[195+Dx1,256+Dy1]' texto='V' fuente='SansSerif,PLAIN,20' fijo='sí'">
+   <param name="G_46" value="espacio='E2_Graf' tipo='texto' dibujar-si='paso>4' expresión='[195+Dx1,292+Dy1]' texto='V' fuente='SansSerif,PLAIN,20' fijo='sí'">
+   <param name="G_47" value="espacio='E2_Graf' tipo='texto' dibujar-si='paso>4' expresión='[195+Dx1,326+Dy1]' texto='V' fuente='SansSerif,PLAIN,20' fijo='sí'">
+   <param name="G_48" value="espacio='E2_Graf' tipo='texto' dibujar-si='paso>4' expresión='[195+Dx1,362+Dy1]' texto='V' fuente='SansSerif,PLAIN,20' fijo='sí'">
+   <param name="G_49" value="espacio='E2_Graf' tipo='polígono' color='ff20303a' dibujar-si='(paso=1)|(paso=3)' coord_abs='sí' expresión='(20+Dx,20+Dy)(64+Dx,20+Dy)(64+Dx,196+Dy)(20+Dx,196+Dy)(20+Dx,20+Dy)' relleno='a6ffff80'">
+   <param name="G_50" value="espacio='E2_Graf' tipo='polígono' color='ff20303a' dibujar-si='(paso=1)|(paso=3)' coord_abs='sí' expresión='(65+Dx,20+Dy)(109+Dx,20+Dy)(109+Dx,196+Dy)(65+Dx,196+Dy)(65+Dx,20+Dy)' relleno='a6ffff80'">
+   <param name="G_51" value="espacio='E2_Graf' tipo='polígono' color='ff20303a' dibujar-si='(paso=1)|(paso=2)' coord_abs='sí' expresión='(110+Dx,20+Dy)(170+Dx,20+Dy)(170+Dx,196+Dy)(110+Dx,196+Dy)(110+Dx,20+Dy)' relleno='a6ffff80'">
+   <param name="G_52" value="espacio='E2_Graf' tipo='polígono' color='ff20303a' dibujar-si='(paso=2)|(paso=5)' coord_abs='sí' expresión='(171+Dx,20+Dy)(265+Dx,20+Dy)(265+Dx,196+Dy)(171+Dx,196+Dy)(171+Dx,20+Dy)' relleno='a6ffff80'">
+   <param name="G_53" value="espacio='E2_Graf' tipo='polígono' color='ff20303a' dibujar-si='(paso=3)|(paso=4)' coord_abs='sí' expresión='(266+Dx,20+Dy)(330+Dx,20+Dy)(330+Dx,196+Dy)(266+Dx,196+Dy)(266+Dx,20+Dy)' relleno='a6ffff80'">
+   <param name="G_54" value="espacio='E2_Graf' tipo='polígono' color='ff20303a' dibujar-si='(paso=3)|(paso=4)' coord_abs='sí' expresión='(331+Dx,20+Dy)(390+Dx,20+Dy)(390+Dx,196+Dy)(331+Dx,196+Dy)(331+Dx,20+Dy)' relleno='a6ffff80'">
+   <param name="G_55" value="espacio='E2_Graf' tipo='polígono' color='ff20303a' dibujar-si='(paso=4)|(paso=5)' coord_abs='sí' expresión='(20+Dx1,215+Dy1)(115+Dx1,215+Dy1)(115+Dx1,390+Dy1)(20+Dx1,390+Dy1)(20+Dx1,215+Dy1)' relleno='a6ffff80'">
+   <param name="G_56" value="espacio='E2_Graf' tipo='polígono' color='ff20303a' dibujar-si='(paso=5)' coord_abs='sí' expresión='(116+Dx1,215+Dy1)(300+Dx1,215+Dy1)(300+Dx1,390+Dy1)(116+Dx1,390+Dy1)(116+Dx1,215+Dy1)' relleno='a6ffff80'">
+   <param name="G_57" value="espacio='CTRS' tipo='texto' color='blanco' dibujar-si='paso=0' expresión='[20,10]' texto='{\rtf1\uc0{\fonttbl\f0\fcharset0 Times New Roman;\f1\fcharset0 Arial;}\f1\fs40 Pulsa los botones con las flechas para avanzar y\par retroceder entre las explicaciones de la\par demostraci\u243 n.\par \par En cualquier momento puedes ocultar la\par informaci\u243 n con el bot\u243 n que se muestra en la\par parte superior.}' fuente='SansSerif,PLAIN,20' fijo='sí' color_borde_texto='negro'">
+   <param name="G_58" value="espacio='CTRS' tipo='texto' color='blanco' dibujar-si='paso=1' expresión='[20,10]' texto='{\rtf1\uc0{\fonttbl\f0\fcharset0 Times New Roman;\f1\fcharset0 Arial;}\f1\fs40 Realizamos la disyunci\u243 n sobre las proposiciones\par A y B. El resultado es verdadero s\u243 lo si alguna de\par las dos proposiciones es verdadera. El \u250 nico valor\par falso es el del cuarto rengl\u243 n, donde las\par proposiciones A y B son ambas falsas.}' fuente='SansSerif,PLAIN,20' fijo='sí' color_borde_texto='negro'">
+   <param name="G_59" value="espacio='CTRS' tipo='texto' color='blanco' dibujar-si='paso=2' expresión='[20,10]' texto='{\rtf1\uc0{\fonttbl\f0\fcharset0 Times New Roman;\f1\fcharset0 Arial;}\f1\fs40 Ya teniendo el valor de la disyunci\u243 n, ahora\par hacemos su negaci\u243 n. Los valores a los que se\par aplicar\u225  la negaci\u243 n son los que se encuentran en\par la tercer columna. Los tres primeros valores son\par ahora falsos y el \u250 ltimo es ahora verdadero.}' fuente='SansSerif,PLAIN,20' fijo='sí' color_borde_texto='negro'">
+   <param name="G_60" value="espacio='CTRS' tipo='texto' color='blanco' dibujar-si='paso=3' expresión='[20,10]' texto='{\rtf1\uc0{\fonttbl\f0\fcharset0 Times New Roman;\f1\fcharset0 Arial;}\f1\fs40 Ahora comenzaremos con la segunda parte del\par teorema. Se hace la negaci\u243 n de las dos\par proposiciones, es decir que cada valor de cada\par una de una de las proposiciones toma el valor\par contrario, si es falso se vuelve verdadero y si es \par verdadero se vuelve falso.}' fuente='SansSerif,PLAIN,20' fijo='sí' color_borde_texto='negro'">
+   <param name="G_61" value="espacio='CTRS' tipo='texto' color='blanco' dibujar-si='paso=4' expresión='[20,10]' texto='{\rtf1\uc0{\fonttbl\f0\fcharset0 Times New Roman;\f1\fcharset0 Arial;}\f1\fs40 En este paso se hace la conjunci\u243 n de las\par negaciones anteriores.\par \par El resultado de la conjunci\u243 n es verdadero s\u243 lo si\par ambas proposiciones son verdaderas, por lo tanto\par s\u243 lo el \u250 ltimo rengl\u243 n es verdadero.}' fuente='SansSerif,PLAIN,20' fijo='sí' color_borde_texto='negro'">
+   <param name="G_62" value="espacio='CTRS' tipo='texto' color='blanco' dibujar-si='paso=5' expresión='[20,10]' texto='{\rtf1\uc0{\fonttbl\f0\fcharset0 Times New Roman;\f1\fcharset0 Arial;}\f1\fs40 Finalmente se hace la bicondicional con ambas\par partes del teorema. La bicondicional s\u243 lo es\par verdadera si ambas proposiciones tienen el mismo\par valor de verdad.\par En este caso todos los resultados son verdaderos,\par por lo tanto es una tautolog\u237 a, con lo que se\par demuestra que el teorema se cumple.}' fuente='SansSerif,PLAIN,20' fijo='sí' color_borde_texto='negro'">
+</ajs>
+</div>
+
+
+
+             <!------ TERMINA EL CONTENIDO DE LA PÁGINA --------->
+
+    <!------ INICIA LA INFO SOBRE LAS LICENCIAS Y LOS CRÉDITOS. ---------->
+    <a id="btCopyright" class="standardButton" title="Haz clic aquí para consultar los créditos y las condiciones de uso de este recurso." href="#" onClick="document.getElementById('copyright').className='visible';">©</a>
+    <div id="copyright" class="oculto">
+      
+      <div class='innerCopyright'>
+      
+          <a id="btCloseCopyright" class="standardButton" title="Haz clic aquí para cerrar esta ventana." href="#" onClick="document.getElementById('copyright').className='oculto'">×</a>
+  
+          <!-- Créditos UAM  (siempre deben ir en primer lugar) -->
+			<div class="creditos">
+				<h1>
+					Créditos 
+				</h1>
+
+				<h2>
+					Escena original
+				</h2>				<table class="autores" 	>
+
+					<tr> <td  class="rol"> Diseño del contenido			</td>		<td class="nombre"> Víctor Hugo García Jarillo (Facultad de Ciencias UNAM, LITE)</td></tr>
+					<tr> <td  class="rol"> Diseño funcional				</td>		<td class="nombre"> Víctor Hugo García Jarillo (Facultad de Ciencias UNAM, LITE)</td></tr>
+					<tr> <td  class="rol"> Programación					</td>		<td class="nombre"> Víctor Hugo García Jarillo (Facultad de Ciencias UNAM, LITE)</td></tr>
+					<tr> <td  class="rol"> Diseño gráfico				</td>		<td class="nombre"> Ricardo López Gómez</td></tr>
+					<tr> <td  class="rol" >Coordinación			</td>		<td class="nombre"> Leticia Montserrat Vargas Rocha</td></tr>
+					</table>
+				<h2>
+					Adaptación 
+				</h2>
+				<table class="autores" 	>
+				<tr> <td  class="rol"> Diseño funcional				</td>		<td class="nombre"> Victor Hugo García Jarillo (Facultad de                    Ciencias, UNAM)		</td></tr>
+					<tr> <td  class="rol"> Programación				</td>		<td class="nombre"> Victor Hugo García Jarillo (Facultad de                    Ciencias, UNAM)</td></tr>
+
+					<tr> <td  class="rol"> Diseño gráfico			</td>		<td class="nombre"> Francisco	Varela Fuentes</td></tr>
+					<tr> <td  class="rol" >Coordinación			</td>		<td class="nombre"> Leticia Montserrat Vargas Rocha</td></tr>
+		
+				</table>
+	          <div class='logos'>
+	            <a href=''>
+	               <img src="../images/info/icns/logoLite.png">
+	            </a>
+	            <a href="http://www.unadmexico.mx/">
+	               <img src="../images/info/icns/logoUNADM.png">
+	            </a>
+	         </div>
+          </div>
+          
+          <!-- Linea separación créditos -->
+          <hr class="linea" />
+     
+          <!-- Aviso licencias -->
+          <div class="licencias">
+          
+				<p class="creativeCommons">Los contenidos de esta unidad didáctica interactiva están bajo una licencia <a href="http://creativecommons.org/licenses/by-nc-sa/2.5/es/" target="_blank">Creative Commons Reconocimiento-NoComercial-CompartirIgual</a>.</p>
+
+				<!--arquimedes (optativo)-->
+				<p>La unidad didáctica fue creada con <a href="http://arquimedes.matem.unam.mx/Descartes5/creditos/conCCL.html" target="_blank">Arquímedes</a>, una herramienta de código abierto.</p>
+
+				<!-- Descartes -->
+				<p>La unidad didáctica contiene escenas elaboradas con Descartes, una herramienta de código abierto.</p>
+
+
+          	<p style='text-align:center'> LITE - UnADM 2014</p>
+          </div>
+      </div>
+    </div> 
+   <!------ TERMINA LA INFO SOBRE LAS LICENCIAS Y LOS CRÉDITOS. ---------->
+  
+  
+  </div>
+  
+  
+</article>
+
+
+</body>
+
+</html>

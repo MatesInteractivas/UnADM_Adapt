@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<head>
+<title>Inicio</title>
+	<link href="../css/html5.css" rel="stylesheet" type="text/css" media="screen" />
+	<link href="../css/DescHTML5.css" rel="stylesheet" type="text/css" media="screen" />	
+	 <script type="text/javascript" src='../javascript/inject_functions_scorms_descartes.js'></script>
+	<script type='text/javascript' src='lib/descartes-min.js'></script>
+</head>
+<body BGCOLOR="c0c0c0" leftmargin="0" topmargin="0">
+<ajs name="Descartes" width=970 height=550 code="Descartes">
+   <param name="tamaño" value="970x550">
+   <param name="image_loader" value="">
+   <param name="expand" value="">
+   <param name="decimal_symbol" value=".">
+   <param name="antialias" value="sí">
+   <param name="deshacer" value="no">
+   <param name="nombre" value="Descartes">
+   <param name="Versión" value="5.4, 2016-05-18">
+   <param name="Idioma" value="español">
+   <param name="Botones" value="créditos=no config=no inicio=no limpiar=no">
+   <param name="E_01" value="tipo='R2' id='E1' fijo='sí' escala='1' O.x='-50%' O.y='-50%' imagen='imgs/tpl/fondo_04.jpg' despl_imagen='arr-izq' fondo='c0d0d8' red='no' red10='no' ejes='no' texto='no'">
+   <param name="E_02" value="tipo='R2' id='MASK' dibujar-si='(INFO.visible==1)|(RETRO.visible==1)' fijo='sí' imagen='imgs/tpl/backwindow.png' despl_imagen='mosaico' fondo='95000000' red='no' red10='no' ejes='no' texto='no'">
+   <param name="E_03" value="tipo='R2' id='INFO' x='INFO.x' y='INFO.y' ancho='700' alto='400' dibujar-si='INFO.visible==1' fijo='sí' imagen='imgs/tpl/retro_490x470.png' despl_imagen='mosaico' red='no' red10='no' ejes='no' texto='no'">
+   <param name="E_04" value="tipo='R2' id='RETRO' x='RETRO.x' y='RETRO.y' ancho='700' alto='400' dibujar-si='RETRO.visible==1' fijo='sí' imagen='imgs/tpl/retro_490x470.png' despl_imagen='mosaico' red='no' red10='no' ejes='no' texto='no'">
+   <param name="C_01" value="id='cerrarInfo' tipo='numérico' interfaz='botón' región='interior' espacio='INFO' expresión='(cerrarInfo.x,cerrarInfo.y,cerrarInfo.w,cerrarInfo.h)' fijo='sí' visible='sí' imagen='_STYLE_|class=btnUNADM icon cerrar|shadowTextColor=rgba(0,0,0,0.2)|shadowTextOffsetY=2|shadowTextBlur=0|textBorder=0 |' acción='calcular' parámetro='INFO.visible=-1' dibujar-si='cerrarInfo.visible'">
+   <param name="C_02" value="id='btnAumentar' tipo='numérico' interfaz='botón' región='interior' espacio='E1' nombre='[btnAumentar.txt]' expresión='(btnAumentar.x,btnAumentar.y,btnAumentar.w,btnAumentar.h)' fijo='sí' visible='sí' color='blanco' color-int='da000000' negrita='sí' fuente puntos='16' imagen='_STYLE_|class=btnUNADM|shadowTextColor=rgba(0,0,0,0.2)|shadowTextOffsetY=2|shadowTextBlur=0|textBorder=0 |' acción='calcular' parámetro='conteo=conteo+1\ncontSCORM=conteo+1\nbla=(conteo>=0)?calcDatos():bla' activo-si='conteo<439' pos_mensajes='centro'">
+   <param name="C_03" value="id='btnReiniciar' tipo='numérico' interfaz='botón' región='interior' espacio='E1' nombre='[btnReiniciar.txt]' expresión='(btnReiniciar.x,btnReiniciar.y,btnReiniciar.w,btnReiniciar.h)' fijo='sí' visible='sí' color='blanco' color-int='da000000' negrita='sí' fuente puntos='16' imagen='_STYLE_|class=btnUNADM|shadowTextColor=rgba(0,0,0,0.2)|shadowTextOffsetY=2|shadowTextBlur=0|textBorder=0 |' acción='calcular' parámetro='ReInit()' activo-si='conteo>=0' pos_mensajes='centro'">
+   <param name="C_04" value="id='btnShwInfo' tipo='numérico' interfaz='botón' región='interior' espacio='E1' nombre='[btnShwInfo.txt]' expresión='(btnShwInfo.x,btnShwInfo.y,btnShwInfo.w,btnShwInfo.h)' fijo='sí' visible='sí' color='blanco' color-int='da000000' negrita='sí' cursiva='sí' fuente puntos='18' imagen='_STYLE_|class=btnUNADM icon info|shadowTextColor=rgba(0,0,0,0.2)|shadowTextOffsetY=2|shadowTextBlur=0|textBorder=0 |' acción='calcular' parámetro='INFO.visible=1' pos_mensajes='centro'">
+   <param name="C_05" value="id='btnShwRetro' tipo='numérico' interfaz='botón' región='interior' espacio='E1' nombre='[btnShwRetro.txt]' expresión='(btnShwRetro.x,btnShwRetro.y,btnShwRetro.w,btnShwRetro.h)' fijo='sí' visible='sí' color='blanco' color-int='da000000' negrita='sí' fuente puntos='16' imagen='_STYLE_|class=btnUNADM|shadowTextColor=rgba(0,0,0,0.2)|shadowTextOffsetY=2|shadowTextBlur=0|textBorder=0 |' acción='calcular' parámetro='RETRO.visible=1' dibujar-si='displayBtnRetro' pos_mensajes='centro'">
+   <param name="C_06" value="id='cerrarRetro' tipo='numérico' interfaz='botón' región='interior' espacio='RETRO' expresión='(cerrarRetro.x,cerrarRetro.y,cerrarRetro.w,cerrarRetro.h)' fijo='sí' visible='sí' imagen='_STYLE_|class=btnUNADM icon cerrar|shadowTextColor=rgba(0,0,0,0.2)|shadowTextOffsetY=2|shadowTextBlur=0|textBorder=0 |' acción='calcular' parámetro='RETRO.visible=-1' dibujar-si='cerrarInfo.visible' pos_mensajes='centro'">
+   <param name="A_01" value="id='EntHex' vector='sí' matriz='sí' evaluar='una-sola-vez' columnas='9' filas='2' expresión=';'">
+   <param name="A_02" value="id='EntDec' vector='sí' evaluar='una-sola-vez' tamaño='9'">
+   <param name="A_03" value="id='initEsp()' algoritmo='sí' algoritmo='sí' hacer='INFO.x=(E1._w-INFO._w)/2;INFO.y=(E1._h-INFO._h)/2+20;INFO.visible=1;;RETRO.x=(E1._w-RETRO._w)/2;RETRO.y=(E1._h-RETRO._h)/2+20;RETRO.visible=0'">
+   <param name="A_04" value="id='initBtns()' algoritmo='sí' algoritmo='sí' hacer='cerrarInfo.w=30;cerrarInfo.h=cerrarInfo.w;cerrarInfo.x=INFO._w-cerrarInfo.w-0;cerrarInfo.y=0;cerrarInfo.img=&squot;imgs/tpl/cerrar.png&squot;;cerrarInfo.visible=1;;btnAceptar.w=120;btnAceptar.h=30;btnAceptar.x=(E1._w-btnAceptar.w)/2;btnAceptar.y=(E1._h-btnAceptar.h-20);btnAceptar.img=&squot;imgs/tpl/btn120.png&squot;;btnAceptar.txt=&squot;Aceptar&squot;;;btnAumentar.w=120;btnAumentar.h=40;btnAumentar.x=50+20;btnAumentar.y=E1._h-40-btnAumentar.h-15;btnAumentar.img=&squot;imgs/tpl/btn120.png&squot;;btnAumentar.txt=&squot;Aumentar&squot;;;btnReiniciar.w=120;btnReiniciar.h=40;btnReiniciar.x=50+20+btnAumentar.w+15;btnReiniciar.y=E1._h-40-btnReiniciar.h-15;btnReiniciar.img=&squot;imgs/tpl/btn120.png&squot;;btnReiniciar.txt=&squot;Reiniciar&squot;;;btnShwInfo.w=30;btnShwInfo.h=30;btnShwInfo.x=10;btnShwInfo.y=10;btnShwInfo.img=&squot;imgs/tpl/btn120.png&squot;;btnShwInfo.txt=&squot;&squot;;;btnShwRetro.w=120;btnShwRetro.h=40;btnShwRetro.x=50+20+btnAumentar.w+15+btnReiniciar.w+15;btnShwRetro.y=E1._h-40-btnShwRetro.h-15;btnShwRetro.img=&squot;imgs/tpl/btn120.png&squot;;btnShwRetro.txt=&squot;Explicación&squot;;;cerrarRetro.w=30;cerrarRetro.h=cerrarRetro.w;cerrarRetro.x=INFO._w-cerrarRetro.w-0;cerrarRetro.y=0;cerrarRetro.img=&squot;imgs/tpl/cerrar.png&squot;;cerrarRetro.visible=1'">
+   <param name="A_05" value="id='initEscena()' algoritmo='sí' algoritmo='sí' hacer='initBtns();initEsp();;ô=|***************************************|;ô=|*  Si el botón de para cerrar la info *|;ô=|*  esta VISIBLE                       *|;ô=|***************************************|;INFO.visible=1;;ô=|***************************************|;ô=|*  Calculamos la posicion del titulo  *|;ô=|***************************************|;titulo=&squot;Base hexadecimal vs base decimal&squot;;titulo.w=_AnchoDeCadena_(titulo,&squot;SansSerif&squot;,&squot;PLAIN&squot;,&squot;30&squot;);titulo.x=(E1._w-titulo.w)/2;titulo.y=20;;displayBtnRetro=0;conteo=-1;ntaches=0;'">
+   <param name="A_06" value="id='calcDatos()' algoritmo='sí' algoritmo='sí' inicio='ntaches=ent((conteo+1)/5);nDigHex=ent(log16(conteo+1));nDigDec=ent(log10(conteo+1))' hacer='EntHex[0,0]=ent(conteo)%16;EntHex[0,1]=ToHex(ent(conteo)%16);EntHex[1,0]=ent(conteo/16)%16;EntHex[1,1]=ToHex(ent(conteo/16)%16);EntHex[2,0]=ent(conteo/(16^2))%16;EntHex[2,1]=ToHex(ent(conteo/(16^2))%16);EntHex[3,0]=ent(conteo/(16^3))%16;EntHex[3,1]=ToHex(ent(conteo/(16^3))%16);;EntDec[0]=ent(conteo)%10;EntDec[1]=ent(conteo/10)%10;EntDec[2]=ent(conteo/100)%10;EntDec[3]=ent(conteo/1000)%10;;displayBtnRetro=(conteo>=256)?1:displayBtnRetro;per=(conteo<=256)?max(100*conteo/256,per):per;setSCORMPercentage(per)'">
+   <param name="A_07" value="id='ReInit()' algoritmo='sí' algoritmo='sí' Local='i' inicio='conteo=-1;ntaches=0;nDigHex=0;nDigDec=0;i=0' hacer='EntHex[i,0]=0;EntHex[i,1]=&squot;&squot;;EntDec[i]=0;i=i+1' mientras='i<9'">
+   <param name="A_08" value="id='log16(l16arg)' expresión='log(l16arg)/log(16)'">
+   <param name="A_09" value="id='ToHex(argTH)' algoritmo='sí' expresión='resTH' algoritmo='sí' Local='resTH' inicio='resTH=&squot;extravagante&squot;' hacer='resTH=(argTH==0)?&squot;0&squot;:resTH;resTH=(argTH==1)?&squot;1&squot;:resTH;resTH=(argTH==2)?&squot;2&squot;:resTH;resTH=(argTH==3)?&squot;3&squot;:resTH;resTH=(argTH==4)?&squot;4&squot;:resTH;resTH=(argTH==5)?&squot;5&squot;:resTH;resTH=(argTH==6)?&squot;6&squot;:resTH;resTH=(argTH==7)?&squot;7&squot;:resTH;resTH=(argTH==8)?&squot;8&squot;:resTH;resTH=(argTH==9)?&squot;9&squot;:resTH;resTH=(argTH==10)?&squot;A&squot;:resTH;resTH=(argTH==11)?&squot;B&squot;:resTH;resTH=(argTH==12)?&squot;C&squot;:resTH;resTH=(argTH==13)?&squot;D&squot;:resTH;resTH=(argTH==14)?&squot;E&squot;:resTH;resTH=(argTH==15)?&squot;F&squot;:resTH'">
+   <param name="A_10" value="id='getSCORMState()' algoritmo='sí' expresión='res' algoritmo='sí' Local='res,c' inicio='c=&squot;@&squot;' hacer='ö=|Estandar ---- [MIDC]XX.<var>  SI SOLO EXISTE UNA ESCENA EN EL HTML|;ö=|Estandar ---- [MIDC]XX_YY.<var>  SI HAY MAS DE UNA ESCENA EN EL HTML|;;res=&squot;I03.dispRetro:&squot;+displayBtnRetro+c;res=res+&squot;I03.conteo:&squot;+conteo+c;res=res+&squot;I03.contSCORM:&squot;+contSCORM+c;res=res+&squot;I03.ntaches:&squot;+ntaches+c;;res=res+&squot;I03.INFO.visible:&squot;+INFO.visible+c;res=res+&squot;I03.RETRO.visible:&squot;+RETRO.visible+c;;res=res+&squot;I03.eh0:&squot;+EntHex[0,0]+c;res=res+&squot;I03.eh1:&squot;+EntHex[1,0]+c;res=res+&squot;I03.eh2:&squot;+EntHex[2,0]+c;res=res+&squot;I03.eh3:&squot;+EntHex[3,0]+c;res=res+&squot;I03.eh4:&squot;+EntHex[4,0]+c;res=res+&squot;I03.eh5:&squot;+EntHex[5,0]+c;res=res+&squot;I03.eh6:&squot;+EntHex[6,0]+c;res=res+&squot;I03.eh7:&squot;+EntHex[7,0]+c;res=res+&squot;I03.eh8:&squot;+EntHex[8,0]+c;;res=res+&squot;I03.ed0:&squot;+EntDec[0]+c;res=res+&squot;I03.ed1:&squot;+EntDec[1]+c;res=res+&squot;I03.ed2:&squot;+EntDec[2]+c;res=res+&squot;I03.ed3:&squot;+EntDec[3]+c;;res=res+&squot;I03.ndh:&squot;+nDigHex+c;res=res+&squot;I03.ndd:&squot;+nDigDec+c;;res=res+&squot;I03.per:&squot;+per+c'">
+   <param name="A_11" value="id='initStateScorm()' algoritmo='sí' expresión='x' algoritmo='sí' hacer='displayBtnRetro=getSCORMStateVar(&squot;I03.dispRetro&squot;);ntaches=getSCORMStateVar(&squot;I03.ntaches&squot;);contSCORM=getSCORMStateVar(&squot;I03.contSCORM&squot;);conteo=(contSCORM!=0)?getSCORMStateVar(&squot;I03.conteo&squot;):-1;;INFO.visible=(getSCORMStateVar(&squot;I03.INFO.visible&squot;)==0)?1:getSCORMStateVar(&squot;I03.INFO.visible&squot;);RETRO.visible=getSCORMStateVar(&squot;I03.RETRO.visible&squot;);;EntHex[0,0]=getSCORMStateVar(&squot;I03.eh0&squot;);EntHex[1,0]=getSCORMStateVar(&squot;I03.eh1&squot;);EntHex[2,0]=getSCORMStateVar(&squot;I03.eh2&squot;);EntHex[3,0]=getSCORMStateVar(&squot;I03.eh3&squot;);EntHex[4,0]=getSCORMStateVar(&squot;I03.eh4&squot;);EntHex[5,0]=getSCORMStateVar(&squot;I03.eh5&squot;);EntHex[6,0]=getSCORMStateVar(&squot;I03.eh6&squot;);EntHex[7,0]=getSCORMStateVar(&squot;I03.eh7&squot;);EntHex[8,0]=getSCORMStateVar(&squot;I03.eh8&squot;);;EntHex[0,1]=ToHex(EntHex[0,0]);EntHex[1,1]=ToHex(EntHex[1,0]);EntHex[2,1]=ToHex(EntHex[2,0]);EntHex[3,1]=ToHex(EntHex[3,0]);EntHex[4,1]=ToHex(EntHex[4,0]);EntHex[5,1]=ToHex(EntHex[5,0]);EntHex[6,1]=ToHex(EntHex[6,0]);EntHex[7,1]=ToHex(EntHex[7,0]);EntHex[8,1]=ToHex(EntHex[8,0]);;EntDec[0]=getSCORMStateVar(&squot;I03.ed0&squot;);EntDec[1]=getSCORMStateVar(&squot;I03.ed1&squot;);EntDec[2]=getSCORMStateVar(&squot;I03.ed2&squot;);EntDec[3]=getSCORMStateVar(&squot;I03.ed3&squot;);;nDigHex=getSCORMStateVar(&squot;I03.ndh&squot;);nDigDec=getSCORMStateVar(&squot;I03.ndd&squot;);;per=getSCORMStateVar(&squot;I03.per&squot;)'">
+   <param name="A_12" value="id='initCtrsAnim()' algoritmo='sí' algoritmo='sí' hacer='primeraVez=1'">
+   <param name="A_13" value="id='INICIO' algoritmo='sí' evaluar='una-sola-vez' hacer='primeraVez=0;initEscena();initStateScorm();initCtrsAnim()'">
+   <param name="A_14" value="id='CALCULOS' algoritmo='sí' evaluar='siempre'">
+   <param name="G_01" value="espacio='E1' tipo='texto' fondo='sí' expresión='[titulo.x,titulo.y]' texto='[titulo]' fuente='SansSerif,PLAIN,30' fijo='sí'">
+   <param name="G_02" value="espacio='E1' tipo='texto' fondo='sí' expresión='[_INFO_____,20]' fijo='sí'">
+   <param name="G_03" value="espacio='INFO' tipo='texto' fondo='sí' color='blanco' expresión='[10,5]' texto='¿Cómo contamos en base hexadecimal?' fuente='SansSerif,PLAIN,22' fijo='sí'">
+   <param name="G_04" value="espacio='INFO' tipo='texto' fondo='sí' expresión='[10,50]' texto='Aquí podrás observar cómo se cuenta en base hexadecimal (hex) y comparar con la base decimal que ya conoces. En particular, nota cada cuando en la base hex es necesario agregar un dígito para poder seguir contando.\nAgrega un objeto a contar con el botón “Aumentar”. Reinicia todo en ceros con el botón “Reiniciar”.\nEl número de elementos contados se presenta como líneas y taches.\nPresta atención al conteo, que se hace del dígito de la derecha y hacia la izquierda. Observa cómo cambian los símbolos en cada dígito y qué ocurre cuando te has gastado todos los símbolos tanto en el caso hexadecimal como en el decimal.\n¿Puedes encontrar una fórmula que te permita saber cuántos palitos puedes contar usando un cierto número de dígitos en hexadecimal?\nIntenta contar un gran número de palitos para poder acceder a una retroalimentación sobre el conteo.' fuente='SansSerif,PLAIN,19' fijo='sí' ancho='INFO._w-20'">
+   <param name="G_05" value="espacio='E1' tipo='texto' fondo='sí' expresión='[_FIN_PLANTILLA__,20]' fijo='sí'">
+   <param name="G_06" value="espacio='E1' tipo='segmento' color='rojo' dibujar-si='(conteo>=0)&(s%5!=0)' coord_abs='sí' expresión='(60+(s%40)*10,110+30*ent(s/40))(60+(s%40)*10,130+30*ent(s/40))' familia='s' s.intervalo='[0,conteo+1]' s.pasos='conteo+1' fijo='sí' tamaño='0' ancho='2'">
+   <param name="G_07" value="espacio='E1' tipo='segmento' color='rojo' dibujar-si='ntaches>0' coord_abs='sí' expresión='(60+(s%8)*50,130+30*ent(s/8))(110+(s%8)*50,110+30*ent(s/8))' familia='s' s.intervalo='[0,ntaches-1]' s.pasos='ntaches-1' fijo='sí' tamaño='0' ancho='2'">
+   <param name="G_08" value="espacio='E1' tipo='texto' dibujar-si='conteo==-1' expresión='[50+10,100+10]' texto='Aumenta el conteo de elementos con el botón “Aumentar”. Pon atención en los páneles la derecha a cómo se cuentan elementos en hexadecimal y decimal. Siempre podrás empezar a contar de inicio con el botón “Reiniciar”.' fuente='SansSerif,PLAIN,17' fijo='sí' ancho='433-20' info='Instrucciones pantalla inicial'">
+   <param name="G_09" value="espacio='E1' tipo='texto' dibujar-si='conteo==-1' expresión='[540,100+53]' texto='En este panel verás el conteo de elementos en base hexadecimal.' fuente='SansSerif,PLAIN,17' fijo='sí' ancho='385-20' info='Info inicial panel superior derecho'">
+   <param name="G_10" value="espacio='E1' tipo='texto' dibujar-si='conteo==-1' expresión='[540,309+53]' texto='En este panel verás el conteo de elementos en base decimal.' fuente='SansSerif,PLAIN,17' fijo='sí' ancho='385-20' info='Info inicial panel inferior derecho'">
+   <param name="G_11" value="espacio='E1' tipo='segmento' color='(20,((s==nDigHex)&(ent(log16(conteo+1))==log16(conteo+1)))?0.75:0.1875,3a,00)' coord_abs='sí' expresión='(E1._w-50-20-s*40,140)(E1._w-50-50-s*40,140)' familia='s' s.intervalo='[0,nDigHex]' s.pasos='nDigHex' fijo='sí' tamaño='0' info='Subraya dígitos binario'">
+   <param name="G_12" value="espacio='E1' tipo='texto' color='(20,((s==nDigHex)&(ent(log16(conteo+1))==log16(conteo+1)))?0.75:0.1875,3a,00)' dibujar-si='conteo>=0' expresión='[E1._w-50-30-s*40,125,0,0]' familia='s' s.intervalo='[0,nDigHex]' s.pasos='nDigHex' texto='[EntHex[s,1]]' fuente='SansSerif,PLAIN,17' decimales='5' fijo='no' info='texto dígitos hexadecimal'">
+   <param name="G_13" value="espacio='E1' tipo='texto' dibujar-si='(conteo>=1)&(ent(log16(conteo+1))==log16(conteo+1))' expresión='[540,150]' texto='{\rtf1\uc0{\fonttbl\f0\fcharset0 Times New Roman;\f1\fcharset0 Arial;}{\colortbl\red32\green192\blue58;\red32\green48\blue58;}\f1\fs34 Se han agotado todas las opciones de los\par d\u237 gitos presentes (todos tienen ahora su \u250 ltimo\par s\u237 mbolo de F). Es necesario \cf0 abrir un d\u237 gito\par adicional\cf1  a la izquierda para continuar\par contando. Tras agregar el nuevo s\u237 mbolo en el\par d\u237 gito, se repetir\u225 n todas las combinaciones\par hasta ahora logradas.}' fuente='SansSerif,PLAIN,17' fijo='sí' info='Explicación binario nuevo dígito'">
+   <param name="G_14" value="espacio='E1' tipo='texto' dibujar-si='(conteo==0)|(ent(log16(conteo+1))!=log16(conteo+1))' expresión='[540,150]' texto='Aún quedan disponibles combinaciones de símbolos en los dígitos para seguir contando antes de agregar un nuevo dígito. Puedes continuar agregando.' fuente='SansSerif,PLAIN,17' fijo='sí' ancho='360' info='Explicación binario no nuevo dígito'">
+   <param name="G_15" value="espacio='E1' tipo='segmento' color='(20,((s==nDigDec)&(ent(log10(conteo+1))==log10(conteo+1)))?0.75:0.1875,3a,00)' coord_abs='sí' expresión='(E1._w-50-20-s*40,345)(E1._w-50-50-s*40,345)' familia='s' s.intervalo='[0,nDigDec]' s.pasos='nDigDec' fijo='sí' tamaño='0' info='Subraya dígitos decimal'">
+   <param name="G_16" value="espacio='E1' tipo='texto' color='(20,((s==nDigDec)&(ent(log10(conteo+1))==log10(conteo+1)))?0.75:0.1875,3a,00)' dibujar-si='conteo>=0' expresión='[E1._w-50-30-s*40,330,0,0]' familia='s' s.intervalo='[0,nDigDec]' s.pasos='nDigDec' texto='[EntDec[s]]' fuente='SansSerif,PLAIN,17' decimales='5' fijo='no' info='texto dígitos decimal'">
+   <param name="G_17" value="espacio='E1' tipo='texto' dibujar-si='(conteo>=1)&(ent(log10(conteo+1))==log10(conteo+1))' expresión='[540,355]' texto='{\rtf1\uc0{\fonttbl\f0\fcharset0 Times New Roman;\f1\fcharset0 Arial;}{\colortbl\red32\green192\blue58;\red32\green48\blue58;}\f1\fs34 Se han agotado todas las opciones de los\par d\u237 gitos presentes (todos tienen ahora su \u250 ltimo\par s\u237 mbolo de 9). Es necesario \cf0 abrir un d\u237 gito\par adicional\cf1  a la izquierda para continuar\par contando. Tras agregar el nuevo s\u237 mbolo en el\par d\u237 gito, se repetir\u225 n todas las combinaciones\par hasta ahora logradas.}' fuente='SansSerif,PLAIN,17' fijo='sí' info='Explicación decimal nuevo dígito'">
+   <param name="G_18" value="espacio='E1' tipo='texto' dibujar-si='(conteo==0)|(ent(log10(conteo+1))!=log10(conteo+1))' expresión='[540,355]' texto='Aún quedan disponibles combinaciones de símbolos en los dígitos para seguir contando antes de agregar un nuevo dígito. Puedes continuar agregando.' fuente='SansSerif,PLAIN,17' fijo='sí' ancho='360' info='Explicación decimal no nuevo dígito'">
+   <param name="G_19" value="espacio='E1' tipo='texto' dibujar-si='(conteo>=0)&(conteo<240)' expresión='[60,290]' texto='Para el hexadecimal (hex) ahora cuentas con [(conteo>0)?ent(log16(conteo))+1:1] [(ent(log16(conteo))+1<2)?&squot;dígito&squot;:&squot;dígitos&squot;]. Para el primer dígito cuentas con dieciséis símbolos (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, A, B, C, D, E y F). Una vez que consideras el segundo dígito, éste también tiene dieciséis opciones. Así que en total puedes contar 16 x 16 = 256 palitos. ¿Cuántos palitos podrás contar si tienes 3 dígitos en hexadecimal?' fuente='SansSerif,PLAIN,17' decimales='0' fijo='sí' ancho='400' info='Explicación número de palitos que se pueden contar.'">
+   <param name="G_20" value="espacio='RETRO' tipo='texto' fondo='sí' color='blanco' expresión='[10,5]' texto='Fórmula para saber cuántos palitos se pueden contar' fuente='SansSerif,PLAIN,22' fijo='sí' info='Título Retro.'">
+   <param name="G_21" value="espacio='RETRO' tipo='texto' fondo='sí' color='20203a' expresión='[10,50]' texto='{\rtf1\uc0{\fonttbl\f0\fcharset0 Times New Roman;\f1\fcharset0 Arial;}\f1\fs40 Ahora que ya has practicado hasta contar bastantes palitos en base\par hexadecimal, habr\u225 s notado que cada d\u237 gito cuenta 16 s\u237 mbolos (del 0 al\par F). Por cada  d\u237 gito que se agrega, se multiplica el n\u250 mero de opciones\par pasadas por 16 (el n\u250 mero de s\u237 mbolos).\par \par As\u237  pues, si tienes 3 d\u237 gitos, el n\u250 mero de opciones de conteo que tienes \par es 16 x 16 x 16 = {\*\mjaformula 16{\supix 3}} = 8. De forma general, si tienes n d\u237 gitos, puedes\par contar {\*\mjaformula 16{\supix n}} palitos en hexadecimal.\par \par Observa que algo parecido pasa cuando usas base decimal. \u191 Se te ocurre\par una f\u243 rmula para cu\u225 ntos palitos puedes contar dado un n\u250 mero de d\u237 gitos\par n en la base decimal?}' fuente='SansSerif,PLAIN,20' fijo='sí' info='Texto Retro.'">
+   <param name="G_22" value="espacio='E1' tipo='texto' dibujar-si='0' expresión='[20,60]' texto='per=[per]\nantes=[antes]\ndespues=[despues]\n' decimales='5' fijo='no' info='debug'">
+</ajs>
+
+
+<!------ INICIA LA INFO SOBRE LAS LICENCIAS Y LOS CRÉDITOS. ---------->
+    <a id="btCopyright" class="standardButton" title="Haz clic aquí para consultar los créditos y las condiciones de uso de este recurso." href="#" onclick="document.getElementById('copyright').className='visible';">©</a>
+    <div id="copyright" class="oculto">
+      
+      <div class='innerCopyright'>
+      
+          <a id="btCloseCopyright" class="standardButton" title="Haz clic aquí para cerrar esta ventana." href="#" onclick="document.getElementById('copyright').className='oculto'">×</a>
+  
+          <!-- Créditos UAM  (siempre deben ir en primer lugar) -->
+			<div class="creditos">
+				<h1>
+					Créditos 
+				</h1>
+								<table class="autores" 	>
+					<tr> <td  class="rol"> Diseño del contenido			</td>		<td class="nombre"> Alejandro Radillo Díaz, LITE</td></tr>
+					<tr> <td  class="rol"> Diseño funcional				</td>		<td class="nombre"> Alejandro Radillo Díaz, LITE</td></tr>
+					<tr> <td  class="rol"> Programación					</td>		<td class="nombre"> Alejandro Radillo Díaz, LITE</td></tr>
+					<!-- Varias personas en el mismo rubro, separar por <br> -->
+					<tr> <td  class="rol"> Asesoría de programación		</td>		<td class="nombre">Oscar Escamilla González, LITE</td></tr>
+					<tr> <td  class="rol"> Diseño gráfico				</td>		<td class="nombre">Francisco Varela Fuentes</td></tr>
+					<tr> <td  class="rol" >Coordinación					</td>		<td class="nombre"> Leticia Montserrat Vargas Rocha</td></tr>
+					
+				</table>
+	         
+	         <div class='logos'>
+	            <a href=''>
+	               <img src="../images/info/icns/logoLite.png">
+	            </a>
+	            <a href="http://www.unadmexico.mx/">
+	               <img src="../images/info/icns/logoUNADM.png">
+	            </a>
+	         </div>
+          </div>
+          
+          <!-- Linea separación créditos -->
+          <hr class="linea" />
+     
+          <!-- Aviso licencias -->
+          <div class="licencias">
+          
+				<p class="creativeCommons">Los contenidos de esta unidad didáctica interactiva están bajo una licencia <a href="http://creativecommons.org/licenses/by-nc-sa/2.5/es/" target="_blank">Creative Commons Reconocimiento-NoComercial-CompartirIgual</a>.</p>
+
+				<!--arquimedes (optativo)-->
+				<p>La unidad didáctica fue creada con <a href="http://arquimedes.matem.unam.mx/Descartes5/creditos/conCCL.html" target="_blank">Arquímedes</a>, una herramienta de código abierto.</p>
+
+				<!-- Descartes -->
+				<p>La unidad didáctica contiene escenas elaboradas con Descartes, una herramienta de código abierto.</p>
+
+
+          	<p style='text-align:center'> LITE - UnADM 2014</p>
+          </div>
+      </div>
+    </div> 
+   <!------ TERMINA LA INFO SOBRE LAS LICENCIAS Y LOS CRÉDITOS. ---------->
+   
+</body>
+</html>

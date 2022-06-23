@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <link href="../css/html5.css" rel="stylesheet" type="text/css" media="screen">
+  <link href="../css/DescHTML5.css" rel="stylesheet" type="text/css" media="screen">
+  <script type="text/javascript" src="../javascript/inject_functions_scorms_descartes.js"></script>
+  
+  <script type='text/javascript' src='lib/descartes-min.js'></script>
+</head>
+
+<body>
+  <!-------- MathJax --- para fórmulas matemáticas ------>
+  <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+  <article class="course_content_container">
+
+    <div class="course_content">
+      <!------ INICIA EL CONTENIDO DE LA PÁGINA --------->
+      <!--- Título de la página --->
+      <h1>Árboles</h1>
+
+      <div class="text_panel">
+        <!--- Párrafo --->
+
+        <p>
+          Decimos que una gráfica \(T(V,E)\) sin lazos es un
+          <b>árbol</b> cuando se presenta alguna de la siguientes situaciones:
+        </p>
+        <ul>
+          <li>\(T \) es conexo y no contiene ciclos.
+          </li>
+          <li>\(T \) es conexo, pero al eliminar cualquier arista quedará desconectado en dos subgráficas.
+          </li>
+          <li>\(T \) no contiene ciclos y el número de vértices excede en uno al número de aristas, es decir, \(|V|=|E|+1\).
+          </li>
+          <li>\(T \) es conexo y además \(|V|=|E|+1\).
+          </li>
+          <li>\(T \) no contiene ciclos pero si se añade una nueva arista entonces \(T \) contendrá un ciclo y solo uno.
+          </li>
+        </ul>
+
+        <p>
+          Hemos cambiado la \(G\) usual de gráfica por una \(T\) (del inglés
+          <i>tree</i>, árbol).
+        </p>
+
+        <p>
+          Independientemente de si son o no dirigidas, podemos ver que las condiciones anteriores se cumplen para la gráfica derecha de la escena del
+          <i>Inicio</i> pero no así para la izquierda.
+        </p>
+
+        <p>
+          Notemos que si tenemos un conjunto \(V \) de puntos y queremos formar una gráfica conexa, vamos a necesitar al menos \( |V|-1\) aristas. No tenemos forma de conectar \(n\) nodos si no empleamos al menos \(n-1\) aristas.
+        </p>
+
+        <p>
+          Similarmente, si tenemos una gráfica conexa sin lazos, de la cual queremos eliminar el mayor número de aristas posible, pero manteniéndola conectada, necesariamente obtendremos un árbol.
+        </p>
+
+        <p>
+          Los dos párrafos anteriores nos dicen algo muy importante:
+        </p>
+
+        <p>
+        </p>
+
+        <div align="center">
+          <strong>los árboles son gráficas mínimas y óptimas</strong>.
+        </div>
+
+        <p></p>
+
+        <p>
+          Podríamos considerar a los árboles como el esqueleto de las gráficas conexas, lo que las mantiene unidas con el menor número de aristas.
+        </p>
+
+        <p>
+          <span class="instrucciones">
+A continuación ilustramos un algoritmo de búsqueda binario que encontrará una posición desconocida en una lista ordenada de 1,023 elementos en a lo más \(\hbox{log}_2(1024)=10\) iteraciones. Te pedimos que pienses un número al azar en el rango de valores mencionado y observes cómo el algoritmo lo va aproximando. Sólo tendrás que responder si la propuesta es mayor, menor o igual. El algoritmo concluye cuando indiques que es igual.
+</span>
+        </p>
+        <!--	
+			Ejemplo para incluir una escena de descartes, 
+			el div.Descartes_extern_content es necesario para acomadr bien los elementos  
+		-->
+
+        <div class="course_extern_content">
+
+          <div class="Descartes_extern_content">
+            <ajs name="Descartes" width="750" height="480" code="Descartes">
+              <param name="tamaño" value="750x480">
+              <param name="decimal_symbol" value=".">
+              <param name="image_loader" value="">
+              <param name="expand" value="">
+              <param name="nombre" value="Descartes">
+              <param name="Versión" value="5.5">
+              <param name="antialias" value="sí">
+              <param name="deshacer" value="no">
+              <param name="editable" value="sí">
+              <param name="Idioma" value="español">
+              <param name="Botones" value="créditos=no config=no inicio=no limpiar=no filas_norte=0 filas_sur=0 ancho_este=150 ancho_oeste=150 alto=23 ">
+              <param name="E_01" value="tipo='R2' id='EspText01' x='EspText01.x' y='EspText01.y' ancho='100%' alto='100%' dibujar-si='EspText01.visible' fijo='sí' escala='1' O.x='-50%' O.y='-50%' despl_imagen='arr-izq' fondo='fbfadc' red='no' red10='no' ejes='no' texto='no' números='no' sensible_a_los_movimientos_del_ratón='no' ">
+              <param name="E_02" value="tipo='R2' id='EspGraf' x='EspGraf.x' y='EspGraf.y' ancho='730' alto='340' dibujar-si='EspGraf.visible' fijo='sí' escala='.65' O.x='-360' O.y='157' despl_imagen='arr-izq' fondo='dcdbe1' red='no' red10='no' ejes='no' texto='no' números='no' sensible_a_los_movimientos_del_ratón='no' ">
+              <param name="C_01" value="id='btnPeq' interfaz='botón' tipo='numérico' región='interior' espacio='EspText01' nombre='aquí' expresión='(btnPeq.x,btnPeq.y,btnPeq.w,btnPeq.h)' valor='0' visible='sí' color='ffffff' color-int='f7000000' negrita='sí' cursiva='no' subrayada='no' fuente puntos='16' imagen='_STYLE_|class=btnUNADM|shadowTextColor=rgba(0,0,0,0.2)|shadowTextOffsetY=2|shadowTextBlur=0|textBorder=0' acción='calcular' parámetro='ini()' ">
+              <param name="C_02" value="id='btnCua' interfaz='botón' tipo='numérico' región='interior' espacio='EspText01' expresión='(btnCua.x,btnCua.y,btnCua.w,btnCua.h)' valor='0' visible='sí' color='ffffff' color-int='f7000000' negrita='sí' cursiva='no' subrayada='no' fuente puntos='16' imagen='_STYLE_|class=btnUNADM icon retroceder|shadowTextColor=rgba(0,0,0,0.2)|shadowTextOffsetY=2|shadowTextBlur=0|textBorder=0' acción='calcular' parámetro='guess(0)' dibujar-si='run=1' activo-si='i<9' ">
+              <param name="C_03" value="id='btnAceptar' interfaz='botón' tipo='numérico' región='interior' espacio='EspText01' nombre='=' expresión='(btnAceptar.x,btnAceptar.y,btnAceptar.w,btnAceptar.h)' valor='0' visible='sí' color='ffffff' color-int='f7000000' negrita='sí' cursiva='no' subrayada='no' fuente puntos='24' imagen='_STYLE_|class=btnUNADM|shadowTextColor=rgba(0,0,0,0.2)|shadowTextOffsetY=2|shadowTextBlur=0|textBorder=0' acción='calcular' parámetro='pressEquals()' dibujar-si='(run>0)&(run<2)' ">
+              <param name="C_04" value="id='btnMed' interfaz='botón' tipo='numérico' región='interior' espacio='EspText01' expresión='(btnMed.x,btnMed.y,btnMed.w,btnMed.h)' valor='0' visible='sí' color='ffffff' color-int='f7000000' negrita='sí' cursiva='no' subrayada='no' fuente puntos='16' imagen='_STYLE_|class=btnUNADM icon avanzar|shadowTextColor=rgba(0,0,0,0.2)|shadowTextOffsetY=2|shadowTextBlur=0|textBorder=0' acción='calcular' parámetro='guess(1)' dibujar-si='run=1' activo-si='i<9' ">
+              <param name="A_01" value="id='initEsp()' algoritmo='sí' expresión='x' hacer='EspText01.visible=1;EspText01.x=0;EspText01.y=0;;EspGraf.x=EspText01.x+10;EspGraf.y=EspText01.y+EspText01._h-EspGraf._h-10;EspGraf.visible=1 ' ">
+              <param name="A_02" value="id='initBtns()' algoritmo='sí' expresión='x' hacer='btnPeq.x=625;btnPeq.y=20;btnPeq.w=80;btnPeq.h=30;;btnCua.w=40;btnCua.h=30;btnAceptar.w=40;btnAceptar.h=30;btnMed.w=40;btnMed.h=30;;gap=(EspText01._w-btnCua.w-btnAceptar.w-btnMed.w-2*10)/2;;btnCua.x=gap;btnCua.y=90;btnAceptar.x=btnCua.x+btnCua.w+10;btnAceptar.y=btnCua.y;btnMed.x=btnAceptar.x+btnAceptar.w+10;btnMed.y=btnCua.y;;' ">
+              <param name="A_03" value="id='initEscena()' algoritmo='sí' expresión='x' hacer='initBtns();initEsp();;p=(a+b)/2;Vx[i]=p;Vy[i]=i*50;' ">
+              <param name="A_04" value="id='__FIN_TPL_()' algoritmo='no' expresión='x' ">
+              <param name="A_05" value="id='calcPer()' algoritmo='sí' expresión='x' hacer='perTotal=min(100,max(perTotal,(run/2)*100));setSCORMPercentage(perTotal)' ">
+              <param name="A_06" value="id='getSCORMState()' algoritmo='sí' expresión='res' local='res,arr' inicio='arr=&squot;@&squot;' hacer='ö=|Estandar ---- [MIDC]XX.<var>  SI SOLO EXISTE UNA ESCENA EN EL HTML|;ö=|Estandar ---- [MIDC]XX_YY.<var>  SI HAY MAS DE UNA ESCENA EN EL HTML|;;res=&squot;D01.run:&squot;+run+arr;res=res+&squot;D01.a:&squot;+a+arr;res=res+&squot;D01.b:&squot;+b+arr;res=res+&squot;D01.p:&squot;+p+arr;res=res+&squot;D01.i:&squot;+i+arr;res=res+&squot;D01.perTotal:&squot;+perTotal+arr;;res=res+&squot;D01.Vx[0]:&squot;+Vx[0]+arr;res=res+&squot;D01.Vx[1]:&squot;+Vx[1]+arr;res=res+&squot;D01.Vx[2]:&squot;+Vx[2]+arr;res=res+&squot;D01.Vx[3]:&squot;+Vx[3]+arr;res=res+&squot;D01.Vx[4]:&squot;+Vx[4]+arr;res=res+&squot;D01.Vx[5]:&squot;+Vx[5]+arr;res=res+&squot;D01.Vx[6]:&squot;+Vx[6]+arr;res=res+&squot;D01.Vx[7]:&squot;+Vx[7]+arr;res=res+&squot;D01.Vx[8]:&squot;+Vx[8]+arr;res=res+&squot;D01.Vx[9]:&squot;+Vx[9]+arr;;res=res+&squot;D01.Vy[0]:&squot;+Vy[0]+arr;res=res+&squot;D01.Vy[1]:&squot;+Vy[1]+arr;res=res+&squot;D01.Vy[2]:&squot;+Vy[2]+arr;res=res+&squot;D01.Vy[3]:&squot;+Vy[3]+arr;res=res+&squot;D01.Vy[4]:&squot;+Vy[4]+arr;res=res+&squot;D01.Vy[5]:&squot;+Vy[5]+arr;res=res+&squot;D01.Vy[6]:&squot;+Vy[6]+arr;res=res+&squot;D01.Vy[7]:&squot;+Vy[7]+arr;res=res+&squot;D01.Vy[8]:&squot;+Vy[8]+arr;res=res+&squot;D01.Vy[9]:&squot;+Vy[9]+arr;' ">
+              <param name="A_07" value="id='initStateScorm()' algoritmo='sí' expresión='x' hacer='tmp.a=getSCORMStateVar(&squot;D01.a&squot;);tmp.b=getSCORMStateVar(&squot;D01.b&squot;);tmp.p=getSCORMStateVar(&squot;D01.p&squot;);tmp.i=getSCORMStateVar(&squot;D01.i&squot;);;perTotal=getSCORMStateVar(&squot;D01.perTotal&squot;);;run=getSCORMStateVar(&squot;D01.run&squot;);a=(tmp.a==0)?0:tmp.a;b=(tmp.b==0)?1024:tmp.b;p=(tmp.p==0)?(a+b)/2:tmp.p;i=(tmp.i==0)?0:tmp.i;;Vx[0]=getSCORMStateVar(&squot;D01.Vx[0]&squot;);Vx[1]=getSCORMStateVar(&squot;D01.Vx[1]&squot;);Vx[2]=getSCORMStateVar(&squot;D01.Vx[2]&squot;);Vx[3]=getSCORMStateVar(&squot;D01.Vx[3]&squot;);Vx[4]=getSCORMStateVar(&squot;D01.Vx[4]&squot;);Vx[5]=getSCORMStateVar(&squot;D01.Vx[5]&squot;);Vx[6]=getSCORMStateVar(&squot;D01.Vx[6]&squot;);Vx[7]=getSCORMStateVar(&squot;D01.Vx[7]&squot;);Vx[8]=getSCORMStateVar(&squot;D01.Vx[8]&squot;);Vx[9]=getSCORMStateVar(&squot;D01.Vx[9]&squot;);;Vy[0]=getSCORMStateVar(&squot;D01.Vy[0]&squot;);Vy[1]=getSCORMStateVar(&squot;D01.Vy[1]&squot;);Vy[2]=getSCORMStateVar(&squot;D01.Vy[2]&squot;);Vy[3]=getSCORMStateVar(&squot;D01.Vy[3]&squot;);Vy[4]=getSCORMStateVar(&squot;D01.Vy[4]&squot;);Vy[5]=getSCORMStateVar(&squot;D01.Vy[5]&squot;);Vy[6]=getSCORMStateVar(&squot;D01.Vy[6]&squot;);Vy[7]=getSCORMStateVar(&squot;D01.Vy[7]&squot;);Vy[8]=getSCORMStateVar(&squot;D01.Vy[8]&squot;);Vy[9]=getSCORMStateVar(&squot;D01.Vy[9]&squot;);;calcPer();' ">
+              <param name="A_08" value="id='__FIN_SCORM_()' algoritmo='no' expresión='x' ">
+              <param name="A_09" value="id='Vx' vector='sí' evaluar='una-sola-vez' tamaño='10' expresión='Vx[0]=0;Vx[1]=0;Vx[2]=0' ">
+              <param name="A_10" value="id='Vy' vector='sí' evaluar='una-sola-vez' tamaño='10' expresión='Vy[0]=0;Vy[1]=0;Vy[2]=0' ">
+              <param name="A_11" value="id='guess(x)' algoritmo='sí' expresión='1' hacer='a=(x=1)?p:a;b=(x=1)?b:p;p=(a+b)/2;i=i+1;Vx[i]=p;Vy[i]=i*48;tt=(i>=9)?pressEquals():0;' ">
+              <param name="A_12" value="id='ini()' algoritmo='sí' expresión='1' inicio='run=1' hacer='i=0;a=0;b=1024;p=(a+b)/2;i=0;Vx[i]=p;Vy[i]=i*50;' ">
+              <param name="A_13" value="id='pressEquals()' algoritmo='sí' expresión='0' hacer='run=2;calcPer()' ">
+              <param name="A_14" value="id='INICIO' algoritmo='sí' evaluar='una-sola-vez' hacer='initStateScorm();initEscena();;' ">
+              <param name="A_15" value="id='CALCULOS' algoritmo='sí' evaluar='siempre' ">
+              <param name="G_01" value="espacio='EspText01' tipo='texto' fondo='no' color='20303a' dibujar-si='run>0' expresión='[150,50]' texto='{\rtf1\uc0{\fonttbl\f0\fcharset0 Times New Roman;\f1\fcharset0 Arial;\f2\fcharset0 Arial;\f3\fcharset0 Arial;\f4\fcharset0 Arial;}{\colortbl\red0\green0\blue0;\red0\green0\blue255;\red32\green48\blue58;}\f1\fs40 Con respecto a \fs36  \cf0\fs48\i{\*\mjaformula\cf1{\expr p\decimals 0\fixed0}}\fs36\i0  \cf2  \fs40 el n\u250 mero buscado es\fs30}' decimales='2' fijo='sí' ancho='1' fuente='SansSerif,PLAIN,20' align='a_left' anchor='a_top_left' info='Primer texto de ejemplo de formato ' ">
+              <param name="G_02" value="espacio='EspText01' tipo='texto' fondo='sí' color='20303a' expresión='[20,25]' texto='Para buscar un número entre 1 y 1023 que vamos a buscar oprime' decimales='2' fijo='sí' ancho='EspText01._w-20' fuente='SansSerif,PLAIN,20' align='left' anchor='top_left' info='Texto simple con auto salto de linea. Ver el campo ancho' ">
+              <param name="G_03" value="espacio='EspText01' tipo='texto' fondo='no' color='20303a' dibujar-si='debug=1' expresión='[5,5]' texto='a=[a],b=[b],p=[p],i=[i]' decimales='0' fijo='no' ancho='1' fuente='SansSerif,PLAIN,18' align='a_left' anchor='a_top_left' ">
+              <param name="G_04" value="espacio='EspText01' tipo='texto' fondo='no' color='20303a' expresión='[8,110]' texto='0' decimales='2' fijo='no' ancho='1' fuente='SansSerif,BOLD,20' align='a_left' anchor='a_top_left' ">
+              <param name="G_05" value="espacio='EspText01' tipo='texto' fondo='no' color='20303a' expresión='[720,32]' texto='1 0 2 3' decimales='2' fijo='no' ancho='20' fuente='SansSerif,BOLD,20' align='a_left' anchor='a_top_left' ">
+              <param name="G_06" value="espacio='EspGraf' tipo='polígono' fondo='sí' color='1a3497' coord_abs='sí' expresión='(0,0)(EspGraf._w-1,0)(EspGraf._w-1,EspGraf._h-1)(0,EspGraf._h-1)(0,0)' ancho='3' lineDash='solid' info='Para dar el efecto de un marco en la gráfica' ">
+              <param name="G_07" value="espacio='EspGraf' tipo='segmento' fondo='no' color='c0c0c0' coord_abs='no' expresión='(-2,48*s)(1100,48*s)' familia='s' s.intervalo='[0,10]' s.pasos='10' decimales='2' fijo='sí' tamaño='1' ancho='1' fuente='SansSerif,PLAIN,18' lineDash='solid' ">
+              <param name="G_08" value="espacio='EspGraf' tipo='curva' fondo='no' color='ff0000' coord_abs='no' expresión='(Vx[t],Vy[t])' parámetro='t' t.intervalo='[0,i]' t.pasos='i' ancho='2' visible='no' editable='no' lineDash='solid' ">
+              <param name="G_09" value="espacio='EspGraf' tipo='punto' fondo='no' color='0000ff' dibujar-si='run>0' coord_abs='no' expresión='(Vx[s],Vy[s])' familia='s' s.intervalo='[0,i]' s.pasos='i' texto='{\rtf1\uc0{\fonttbl\f0\fcharset0 Arial;}{\colortbl\red0\green0\blue0;}\f0\cf0\fs32\b\i \i0\b0\b\i{\*\mjaformula{\expr Vx[s]\decimals 2\fixed0}}\i0\b0}' decimales='0' fijo='no' tamaño='6' fuente='SansSerif,BOLD+ITALIC,16' ">
+              <param name="G_10" value="espacio='EspText01' tipo='texto' fondo='no' color='20303a' dibujar-si='0' expresión='[20,50]' texto='perTotal=[perTotal]\na=[a]\nb=[b]    run=[run]\np=[p]    i=[i]' decimales='2' fijo='sí' ancho='1' fuente='SansSerif,PLAIN,18' align='a_left' anchor='a_top_left' ">
+            </ajs>
+          </div>
+        </div>
+        <!-- Fin bloque de descartes -->
+
+        <p>
+          El árbol que utilizamos en este algoritmo de búsqueda es un árbol con 1,023 nodos y, por tanto, con 1,022 aristas, además 512 nodos son de grado 1 (conocidos como
+          <b>hojas</b> o
+          <b>vértices colgantes</b>).
+        </p>
+
+        <p>
+          Sin embargo, dos características importantes de este árbol son que está dirigido y que siempre lo recorremos comenzando por el mismo nodo. Iniciamos la búsqueda con 512 como propuesta, y avanzamos hasta llegar a los vértices colgantes, si es que ocupamos las 10 iteraciones de la búsqueda, o nos detenemos en un número par, cuando terminamos la búsqueda antes de completar las 10 iteraciones. Los vértices colgantes corresponden a todos los números impares desde el 1 hasta el 1,023.
+        </p>
+
+        <p>
+          La gráfica de la escena muestra el camino entre el vértice correspondiente a la primera propuesta y el del número buscado. Si buscásemos todos los números impares del 1 al 1,023 y no borrásemos estos caminos, entonces tendríamos la gráfica completa del árbol de búsqueda.
+        </p>
+        <!------ TERMINA EL CONTENIDO DE LA PÁGINA --------->
+      </div>
+      <!------ INICIA LA INFO SOBRE LAS LICENCIAS Y LOS CRÉDITOS. ---------->
+      <a id="btCopyright" class="standardButton" title="Haz clic aquí para consultar los créditos y las condiciones de uso de este recurso." href="#" onclick="document.getElementById('copyright').className='visible';">©</a>
+
+      <div id="copyright" class="oculto">
+
+        <div class="innerCopyright">
+          <a id="btCloseCopyright" class="standardButton" title="Haz clic aquí para cerrar esta ventana." href="#" onclick="document.getElementById('copyright').className='oculto'">×</a>
+          <!-- Créditos UAM  (siempre deben ir en primer lugar) -->
+
+          <div class="creditos">
+            <h1>
+Créditos
+</h1>
+            <h2>
+Escena original
+</h2>
+            <table class="autores">
+              <tbody>
+                <tr>
+                  <td class="rol"> Diseño del contenido </td>
+                  <td class="nombre">Elsa Sirenia Vega Camacho</td>
+                </tr>
+                <tr>
+                  <td class="rol"> Diseño funcional </td>
+                  <td class="nombre">Elsa Sirenia Vega Camacho</td>
+                </tr>
+                <tr>
+                  <td class="rol"> Programación </td>
+                  <td class="nombre">Elsa Sirenia Vega Camacho</td>
+                </tr>
+                <!-- Varias personas en el mismo rubro, separar por <br> -->
+                <tr>
+                  <td class="rol"> Asesoría de programación </td>
+                  <td class="nombre">Juan José Rivaud Gallardo</td>
+                </tr>
+                <tr>
+                  <td class="rol"> Diseño gráfico </td>
+                  <td class="nombre"> Ricardo López Gómez </td>
+                </tr>
+                <tr>
+                  <td class="rol">Coordinación </td>
+                  <td class="nombre"> Leticia Montserrat Vargas Rocha</td>
+                </tr>
+              </tbody>
+            </table>
+            <h2>
+Adaptación
+</h2>
+            <table class="autores">
+              <tbody>
+                <tr>
+                  <td class="rol"> Diseño funcional </td>
+                  <td class="nombre">Elsa Sirenia Vega Camacho</td>
+                </tr>
+                <tr>
+                  <td class="rol"> Programación </td>
+                  <td class="nombre">Elsa Sirenia Vega Camacho</td>
+                </tr>
+                <!-- Varias personas en el mismo rubro, separar por <br> -->
+                <tr>
+                  <td class="rol"> Asesoría de programación </td>
+                  <td class="nombre">
+                    Leticia Montserrat Vargas Rocha <br>
+                    Oscar Escamilla González
+                  </td>
+                </tr>
+                <tr>
+                  <td class="rol"> Diseño gráfico </td>
+                  <td class="nombre"> Francisco Varela Fuentes </td>
+                </tr>
+                <tr>
+                  <td class="rol">Coordinación </td>
+                  <td class="nombre"> Leticia Montserrat Vargas Rocha </td>
+                </tr>
+                <tr>
+                  <td class="rol">Desarrollo del contenedor </td>
+                  <td class="nombre"> Oscar Escamilla González</td>
+                </tr>
+              </tbody>
+            </table>
+
+            <div class="logos">
+              <a href="">
+                <img src="../images/info/icns/logoLite.png">
+              </a>
+              <a href="http://www.unadmexico.mx/">
+                <img src="../images/info/icns/logoUNADM.png">
+              </a>
+            </div>
+          </div>
+          <!-- Linea separación créditos -->
+          <hr class="linea">
+          <!-- Aviso licencias -->
+
+          <div class="licencias">
+
+            <p class="creativeCommons">Los contenidos de esta unidad didáctica interactiva están bajo una licencia
+              <a href="http://creativecommons.org/licenses/by-nc-sa/2.5/es/" target="_blank">Creative Commons Reconocimiento-NoComercial-CompartirIgual</a>.</p>
+            <!--arquimedes (optativo)-->
+
+            <p>La unidad didáctica fue creada con
+              <a href="http://arquimedes.matem.unam.mx/Descartes5/creditos/conCCL.html" target="_blank">Arquímedes</a>, una herramienta de código abierto.</p>
+            <!-- Descartes -->
+
+            <p>La unidad didáctica contiene escenas elaboradas con Descartes, una herramienta de código abierto.</p>
+
+            <p style="text-align:center"> LITE - UnADM 2014</p>
+          </div>
+        </div>
+      </div>
+      <!------ TERMINA LA INFO SOBRE LAS LICENCIAS Y LOS CRÉDITOS. ---------->
+    </div>
+  </article>
+
+
+
+</body>
+</html>

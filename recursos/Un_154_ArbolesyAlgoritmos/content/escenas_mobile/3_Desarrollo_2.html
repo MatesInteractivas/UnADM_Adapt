@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <link href="../css/html5_mobile.css" rel="stylesheet" type="text/css" media="screen">
+  <link href="../css/DescHTML5.css" rel="stylesheet" type="text/css" media="screen">
+  <style>
+    .DescartesAppContainer .DescartesSpace2DContainer .DescartesMenuContainer .DescartesMenuLabel {
+      text-align: left;
+      padding-left: 5px;
+      width: 220px !important;
+    }
+    
+    .DescartesAppContainer .DescartesSpace2DContainer .DescartesMenuContainer select.DescartesMenuSelect {
+      left: auto !important;
+      right: 0px !important;
+      width: 50px !important;
+    }
+  </style>
+  <script type="text/javascript" src="../javascript/inject_functions_scorms_descartes.js"></script>
+  
+  <script type='text/javascript' src='../lib/descartes-min.js'></script>
+</head>
+
+<body>
+  <!-------- MathJax --- para fórmulas matemáticas ------>
+  <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+  <article class="course_content_container">
+
+    <div class="course_content">
+      <!------ INICIA EL CONTENIDO DE LA PÁGINA --------->
+      <!--- Título de la página --->
+      <center>
+        <h2>Árboles con raíz</h2>
+      </center>
+
+      <div class="text_panel">
+        <!--- Párrafo --->
+
+        <p>
+          Una digráfica \(T(V,E)\) es un
+          <b>árbol dirigido
+</b> siempre que la gráfica no dirigida asociada a \(T\) sea un árbol.
+        </p>
+
+        <p>
+          Lo anterior nos dice también que si tenemos un árbol (no dirigido) y orientamos sus aristas, sin importar la forma en que lo hagamos, lo que obtendremos será un árbol dirigido.
+        </p>
+
+        <p>
+          Para los vértices de digráficas, en particular los de árboles dirigidos, podemos descomponer el grado en
+          <b>grado de entrada</b>, que denotamos por \(\hbox{ge}(v)\) y
+          <b>grado de salida</b>, que denotamos por \(\hbox{gs}(v)\). Así, el número total de aristas que concurren en un vértice será la suma de las aristas que entran mas las que salen, es decir, para todo \(v\in V\) tendremos que \(\hbox{grad}(v)=\hbox{ge}(v)+\hbox{gs}(v)\). Estos dos atributos nos permiten definir con precisión un nuevo tipo de árbol dirigido que de hecho incluye al árbol de búsqueda binario que utilizamos recientemente.
+        </p>
+
+        <p>
+          Así pues, un
+          <b>árbol con raíz</b> es un árbol dirigido \(T(V,E)\) que tiene un vértice especial \(r\in V\), que llamaremos
+          <b>raíz</b>, tal que \(\hbox{ge}(r)=0\), mientras que el resto de los vértices \(v\in V, v\neq r\), son tales que \(\hbox {ge}(v)=1\).
+        </p>
+
+        <p>
+          La siguiente figura muestra tres árboles dirigidos.
+        </p>
+
+        <div class="course_extern_content">
+          <img width="600" align="center" src="imgs/grafos1.jpg">
+        </div>
+
+        <p>
+          El arbol de nodos azules corresponde a la parte inicial del árbol binario de búsqueda, que ya hemos referido, en el que se encuentran marcados algunos vértices con los valores numéricos correspondientes a la búsqueda. La raíz de este árbol es el vértice superior. En todos los vértices restantes el grado de entrada es uno. Se trata de un árbol con raíz.
+        </p>
+
+        <p>
+          El árbol cuyos vértices están etiquetados con letras mayúsculas es un árbol con raíz, misma que está en el vértice \(C\).
+        </p>
+
+        <p>
+          Sin embargo, en el árbol de la parte inferior, con vértices etiquetados usando letras minúsculas, los vértices \(a,c,f,i,l\) y \(m\) son todos ellos candidatos a ser raíz, en tanto su grado de entrada es cero. Lo anterior es suficiente para descartarlo como árbol con raíz, ya que ésta no es única.
+        </p>
+
+        <p>
+          Los árboles con raíz son la base para generar las estructuras de datos de sistemas de archivos digitales y de sistemas de directorio de acceso rápido como LDAP (siglas del inglés
+          <i>Lightweight Directory Access Protocol</i>). Son también una herramienta indispensable para la taxonomía y la genética.
+        </p>
+
+        <p>
+          En los árboles con raíz es posible cosiderar
+          <b>niveles</b>, mismos que vienen dados por la distancia entre la raíz y los vértices, medida en número de aristas. Pertenecerán al mismo nivel los vértices que estén a la misma distancia de la raíz. También podemos interpretar a las aristas como
+          <b>relaciones de parentezco</b>. No nos debe costar trabajo identificar a los vértices que son
+          <b>padres</b> de otros, que serán los
+          <b>hijos</b> de los primeros. Podemos hablar de
+          <b>hermanos</b>,
+          <b>abuelos</b>,
+          <b>nietos</b>,
+          <b>tíos</b>,
+          <b>primos</b> y así sucesivamente. En general, dado un vértice \(v\) podemos asociarle los conjuntos de
+          <b>descendientes</b> y
+          <b>ascendentes</b>, donde los primeros componen el
+          <b>sub-árbol</b> cuya raíz es \(v\), y los segundos el camino desde \(v\) hasta la raíz del árbol.
+        </p>
+        <h2>Árboles
+<i>m</i>-arios</h2>
+
+        <p>
+          Ya hemos ejemplificado un árbol binario que hemos referido en varias ocasiones. Este tipo de árboles está caracterizado por una acotación sobre el grado de salida de sus vértices. En un
+          <b>árbol binario</b> \(T(V,E)\) tendremos siempre que \(\hbox{gs}(v)\leq2\) para todo \(v\in V\).
+        </p>
+
+        <p>
+        </p>
+
+        <p>
+          Los vértices del árbol binario en la parte derecha de la figura de arriba cumplen con la restricción \(\hbox{gs}(v)\leq2\), de hecho \(\hbox{gs}(v)=2\). Cuando se da esta igualdad decimos que el árbol está
+          <b>completo</b>.
+        </p>
+
+        <p>
+          Como una generalización de lo anterior, dado un entero \(m\geq2\), un
+          <b>árbol \(m\)-ario</b> \(T(V,E)\) es aquel en el que \(\hbox{gs}(v)\leq m\) para todo \(v\in V\). Si se da la igualdad el árbol será además completo.
+        </p>
+
+        <p>
+        </p>
+
+        <p>
+          Es importante no confundir el caso particular en el que todos los niveles están completos con que el árbol esté completo. Por ejemplo, si en el árbol derecho de la figura de arriba eliminamos una pareja de hermanos del último nivel, entonces el árbol permanece completo aunque el último nivel no lo esté.
+        </p>
+
+        <p>
+          En la misma figura de arriba el árbol cuyos vértices están etiquetados con letras mayúsculas es un árbol 7-ario (o heptal) incompleto con tres niveles (incluyendo el nivel de la raíz).
+        </p>
+        <!--- Párrafo --->
+
+        <p>
+          <span class="instrucciones">
+En el siguiente espacio puedes experimentar con árboles dirigidos hasta de 30 vértices generados aleatoriamente y modificarlos para obtener un árbol con raíz. Los puntos rojos pueden desplazarse de la misma forma que en la sección de Inicio y oprimiendo sobre los puntos grises se cambia el sentido de la arista. Recuerda que lo que define a este tipo de árboles es que hay un vértice, y solo uno, que tiene grado de entrada cero y el resto tienen todos grado de entrada uno. Puedes seleccionar el número de vértices en la parte inferior izquierda del espacio y también redibujar la gráfica presionando el botón correspondiente.
+</span>
+        </p>
+        <!--	
+			Ejemplo para incluir una escena de descartes, 
+			el div.Descartes_extern_content es necesario para acomadr bien los elementos  
+		-->
+
+        <div class="course_extern_content">
+
+          <div class="Descartes_extern_content">
+            <ajs name="Descartes" width="485" height="300" code="Descartes">
+              <param name="tamaño" value="485x300">
+              <param name="decimal_symbol" value=".">
+              <param name="image_loader" value="">
+              <param name="expand" value="">
+              <param name="nombre" value="Descartes">
+              <param name="Versión" value="5.5">
+              <param name="antialias" value="sí">
+              <param name="deshacer" value="no">
+              <param name="editable" value="sí">
+              <param name="Idioma" value="español">
+              <param name="Botones" value="créditos=no config=no inicio=no limpiar=no filas_norte=0 filas_sur=0 ancho_este=150 ancho_oeste=150 alto=23 ">
+              <param name="E_01" value="tipo='R2' id='E1' x='0' y='0' ancho='100%' alto='100%' dibujar-si='1' fijo='sí' escala='20' O.x='0' O.y='0' despl_imagen='arr-izq' fondo='dcdbe1' red='no' red10='no' ejes='no' texto='no' números='no' sensible_a_los_movimientos_del_ratón='no' ">
+              <param name="C_01" value="id='Esp.min.x' tipo='numérico' interfaz='pulsador' región='exterior' espacio='E1' nombre='Esp.min.x' expresión='(0,0,150,23)' valor='-11' incr='0.1' discreto='no' decimales='5' fijo='sí' visible='sí' ">
+              <param name="C_02" value="id='Esp.min.y' tipo='numérico' interfaz='pulsador' región='exterior' espacio='E1' nombre='Esp.min.y' expresión='(0,0,150,23)' valor='-5' incr='0.1' discreto='no' decimales='5' fijo='sí' visible='sí' ">
+              <param name="C_03" value="id='Esp.max.x' tipo='numérico' interfaz='pulsador' región='exterior' espacio='E1' nombre='Esp.max.x' expresión='(0,0,150,23)' valor='11' incr='0.1' discreto='no' decimales='5' fijo='sí' visible='sí' ">
+              <param name="C_04" value="id='Esp.max.y' tipo='numérico' interfaz='pulsador' región='exterior' espacio='E1' nombre='Esp.max.y' expresión='(0,0,150,23)' valor='7' incr='0.1' discreto='no' decimales='5' fijo='sí' visible='sí' ">
+              <param name="C_05" value="id='N' tipo='numérico' interfaz='menú' región='interior' espacio='E1' nombre='Número de vértices' expresión='(N.x,N.y,N.w,N.h)' valor='7' decimales='2' fijo='sí' visible='no' opciones='0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30' acción='calcular' parámetro='reinit()' ">
+              <param name="C_06" value="id='ini' interfaz='botón' tipo='numérico' región='interior' espacio='E1' nombre='Redidujar' expresión='(ini.x,ini.y,ini.w,ini.h)' valor='0' visible='sí' color='ffffff' color-int='ffffff' negrita='sí' cursiva='no' subrayada='no' fuente puntos='16' imagen='_STYLE_|class=btnUNADM|shadowTextColor=rgba(0,0,0,0.2)|shadowTextOffsetY=2|shadowTextBlur=0|textBorder=0' acción='calcular' parámetro='reinit()' ">
+              <param name="C_07" value="id='v00' tipo='gráfico' espacio='E1' color='222222' color-int='ff0000' tamaño='6' expresión='(-10+rnd*20,-5+rnd*10)' dibujar-si='N>0' ">
+              <param name="C_08" value="id='v01' tipo='gráfico' espacio='E1' color='222222' color-int='ff0000' tamaño='6' expresión='(-10+rnd*20,-5+rnd*10)' dibujar-si='N>1' ">
+              <param name="C_09" value="id='v02' tipo='gráfico' espacio='E1' color='222222' color-int='ff0000' tamaño='6' expresión='(-10+rnd*20,-5+rnd*10)' dibujar-si='N>2' ">
+              <param name="C_10" value="id='v03' tipo='gráfico' espacio='E1' color='222222' color-int='ff0000' tamaño='6' expresión='(-10+rnd*20,-5+rnd*10)' dibujar-si='N>3' ">
+              <param name="C_11" value="id='v04' tipo='gráfico' espacio='E1' color='222222' color-int='ff0000' tamaño='6' expresión='(-10+rnd*20,-5+rnd*10)' dibujar-si='N>4' ">
+              <param name="C_12" value="id='v05' tipo='gráfico' espacio='E1' color='222222' color-int='ff0000' tamaño='6' expresión='(-10+rnd*20,-5+rnd*10)' dibujar-si='N>5' ">
+              <param name="C_13" value="id='v06' tipo='gráfico' espacio='E1' color='222222' color-int='ff0000' tamaño='6' expresión='(-10+rnd*20,-5+rnd*10)' dibujar-si='N>6' ">
+              <param name="C_14" value="id='v07' tipo='gráfico' espacio='E1' color='222222' color-int='ff0000' tamaño='6' expresión='(-10+rnd*20,-5+rnd*10)' dibujar-si='N>7' ">
+              <param name="C_15" value="id='v08' tipo='gráfico' espacio='E1' color='222222' color-int='ff0000' tamaño='6' expresión='(-10+rnd*20,-5+rnd*10)' dibujar-si='N>8' ">
+              <param name="C_16" value="id='v09' tipo='gráfico' espacio='E1' color='222222' color-int='ff0000' tamaño='6' expresión='(-10+rnd*20,-5+rnd*10)' dibujar-si='N>9' ">
+              <param name="C_17" value="id='v10' tipo='gráfico' espacio='E1' color='222222' color-int='ff0000' tamaño='6' expresión='(-10+rnd*20,-5+rnd*10)' dibujar-si='N>10' ">
+              <param name="C_18" value="id='v11' tipo='gráfico' espacio='E1' color='222222' color-int='ff0000' tamaño='6' expresión='(-10+rnd*20,-5+rnd*10)' dibujar-si='N>11' ">
+              <param name="C_19" value="id='v12' tipo='gráfico' espacio='E1' color='222222' color-int='ff0000' tamaño='6' expresión='(-10+rnd*20,-5+rnd*10)' dibujar-si='N>12' ">
+              <param name="C_20" value="id='v13' tipo='gráfico' espacio='E1' color='222222' color-int='ff0000' tamaño='6' expresión='(-10+rnd*20,-5+rnd*10)' dibujar-si='N>13' ">
+              <param name="C_21" value="id='v14' tipo='gráfico' espacio='E1' color='222222' color-int='ff0000' tamaño='6' expresión='(-10+rnd*20,-5+rnd*10)' dibujar-si='N>14' ">
+              <param name="C_22" value="id='v15' tipo='gráfico' espacio='E1' color='222222' color-int='ff0000' tamaño='6' expresión='(-10+rnd*20,-5+rnd*10)' dibujar-si='N>15' ">
+              <param name="C_23" value="id='v16' tipo='gráfico' espacio='E1' color='222222' color-int='ff0000' tamaño='6' expresión='(-10+rnd*20,-5+rnd*10)' dibujar-si='N>16' ">
+              <param name="C_24" value="id='v17' tipo='gráfico' espacio='E1' color='222222' color-int='ff0000' tamaño='6' expresión='(-10+rnd*20,-5+rnd*10)' dibujar-si='N>17' ">
+              <param name="C_25" value="id='v18' tipo='gráfico' espacio='E1' color='222222' color-int='ff0000' tamaño='6' expresión='(-10+rnd*20,-5+rnd*10)' dibujar-si='N>18' ">
+              <param name="C_26" value="id='v19' tipo='gráfico' espacio='E1' color='222222' color-int='ff0000' tamaño='6' expresión='(-10+rnd*20,-5+rnd*10)' dibujar-si='N>19' ">
+              <param name="C_27" value="id='v20' tipo='gráfico' espacio='E1' color='222222' color-int='ff0000' tamaño='6' expresión='(-10+rnd*20,-5+rnd*10)' dibujar-si='N>20' ">
+              <param name="C_28" value="id='v21' tipo='gráfico' espacio='E1' color='222222' color-int='ff0000' tamaño='6' expresión='(-10+rnd*20,-5+rnd*10)' dibujar-si='N>21' ">
+              <param name="C_29" value="id='v22' tipo='gráfico' espacio='E1' color='222222' color-int='ff0000' tamaño='6' expresión='(-10+rnd*20,-5+rnd*10)' dibujar-si='N>22' ">
+              <param name="C_30" value="id='v23' tipo='gráfico' espacio='E1' color='222222' color-int='ff0000' tamaño='6' expresión='(-10+rnd*20,-5+rnd*10)' dibujar-si='N>23' ">
+              <param name="C_31" value="id='v24' tipo='gráfico' espacio='E1' color='222222' color-int='ff0000' tamaño='6' expresión='(-10+rnd*20,-5+rnd*10)' dibujar-si='N>24' ">
+              <param name="C_32" value="id='v25' tipo='gráfico' espacio='E1' color='222222' color-int='ff0000' tamaño='6' expresión='(-10+rnd*20,-5+rnd*10)' dibujar-si='N>25' ">
+              <param name="C_33" value="id='v26' tipo='gráfico' espacio='E1' color='222222' color-int='ff0000' tamaño='6' expresión='(-10+rnd*20,-5+rnd*10)' dibujar-si='N>26' ">
+              <param name="C_34" value="id='v27' tipo='gráfico' espacio='E1' color='222222' color-int='ff0000' tamaño='6' expresión='(-10+rnd*20,-5+rnd*10)' dibujar-si='N>27' ">
+              <param name="C_35" value="id='v28' tipo='gráfico' espacio='E1' color='222222' color-int='ff0000' tamaño='6' expresión='(-10+rnd*20,-5+rnd*10)' dibujar-si='N>28' ">
+              <param name="C_36" value="id='v29' tipo='gráfico' espacio='E1' color='222222' color-int='ff0000' tamaño='6' expresión='(-10+rnd*20,-5+rnd*10)' dibujar-si='N>29' ">
+              <param name="C_37" value="id='v00.x' tipo='numérico' interfaz='pulsador' región='exterior' espacio='E1' nombre='v00.x' expresión='(0,0,150,23)' valor='v00.x' incr='0.1' min='Esp.min.x' max='Esp.max.x' discreto='no' decimales='5' fijo='no' visible='sí' dibujar-si='0' ">
+              <param name="C_38" value="id='v00.y' tipo='numérico' interfaz='pulsador' región='exterior' espacio='E1' nombre='v00.y' expresión='(0,0,150,23)' valor='v00.y' incr='0.1' min='Esp.min.y' max='Esp.max.y' discreto='no' decimales='5' fijo='no' visible='sí' dibujar-si='0' ">
+              <param name="C_39" value="id='v01.x' tipo='numérico' interfaz='pulsador' región='exterior' espacio='E1' nombre='v01.x' expresión='(0,0,150,23)' valor='v01.x' incr='0.1' min='Esp.min.x' max='Esp.max.x' discreto='no' decimales='5' fijo='no' visible='sí' dibujar-si='0' ">
+              <param name="C_40" value="id='v01.y' tipo='numérico' interfaz='pulsador' región='exterior' espacio='E1' nombre='v01.y' expresión='(0,0,150,23)' valor='v01.y' incr='0.1' min='Esp.min.y' max='Esp.max.y' discreto='no' decimales='5' fijo='no' visible='sí' dibujar-si='0' ">
+              <param name="C_41" value="id='v02.x' tipo='numérico' interfaz='pulsador' región='exterior' espacio='E1' nombre='v02.x' expresión='(0,0,150,23)' valor='v02.x' incr='0.1' min='Esp.min.x' max='Esp.max.x' discreto='no' decimales='5' fijo='no' visible='sí' dibujar-si='0' ">
+              <param name="C_42" value="id='v02.y' tipo='numérico' interfaz='pulsador' región='exterior' espacio='E1' nombre='v02.y' expresión='(0,0,150,23)' valor='v02.y' incr='0.1' min='Esp.min.y' max='Esp.max.y' discreto='no' decimales='5' fijo='no' visible='sí' dibujar-si='0' ">
+              <param name="C_43" value="id='v03.x' tipo='numérico' interfaz='pulsador' región='exterior' espacio='E1' nombre='v03.x' expresión='(0,0,150,23)' valor='v03.x' incr='0.1' min='Esp.min.x' max='Esp.max.x' discreto='no' decimales='5' fijo='no' visible='sí' dibujar-si='0' ">
+              <param name="C_44" value="id='v03.y' tipo='numérico' interfaz='pulsador' región='exterior' espacio='E1' nombre='v03.y' expresión='(0,0,150,23)' valor='v03.y' incr='0.1' min='Esp.min.y' max='Esp.max.y' discreto='no' decimales='5' fijo='no' visible='sí' dibujar-si='0' ">
+              <param name="C_45" value="id='v04.x' tipo='numérico' interfaz='pulsador' región='exterior' espacio='E1' nombre='v04.x' expresión='(0,0,150,23)' valor='v04.x' incr='0.1' min='Esp.min.x' max='Esp.max.x' discreto='no' decimales='5' fijo='no' visible='sí' dibujar-si='0' ">
+              <param name="C_46" value="id='v04.y' tipo='numérico' interfaz='pulsador' región='exterior' espacio='E1' nombre='v04.y' expresión='(0,0,150,23)' valor='v04.y' incr='0.1' min='Esp.min.y' max='Esp.max.y' discreto='no' decimales='5' fijo='no' visible='sí' dibujar-si='0' ">
+              <param name="C_47" value="id='v05.x' tipo='numérico' interfaz='pulsador' región='exterior' espacio='E1' nombre='v05.x' expresión='(0,0,150,23)' valor='v05.x' incr='0.1' min='Esp.min.x' max='Esp.max.x' discreto='no' decimales='5' fijo='no' visible='sí' dibujar-si='0' ">
+              <param name="C_48" value="id='v05.y' tipo='numérico' interfaz='pulsador' región='exterior' espacio='E1' nombre='v05.y' expresión='(0,0,150,23)' valor='v05.y' incr='0.1' min='Esp.min.y' max='Esp.max.y' discreto='no' decimales='5' fijo='no' visible='sí' dibujar-si='0' ">
+              <param name="C_49" value="id='v06.x' tipo='numérico' interfaz='pulsador' región='exterior' espacio='E1' nombre='v06.x' expresión='(0,0,150,23)' valor='v06.x' incr='0.1' min='Esp.min.x' max='Esp.max.x' discreto='no' decimales='5' fijo='no' visible='sí' dibujar-si='0' ">
+              <param name="C_50" value="id='v06.y' tipo='numérico' interfaz='pulsador' región='exterior' espacio='E1' nombre='v06.y' expresión='(0,0,150,23)' valor='v06.y' incr='0.1' min='Esp.min.y' max='Esp.max.y' discreto='no' decimales='5' fijo='no' visible='sí' dibujar-si='0' ">
+              <param name="C_51" value="id='v07.x' tipo='numérico' interfaz='pulsador' región='exterior' espacio='E1' nombre='v07.x' expresión='(0,0,150,23)' valor='v07.x' incr='0.1' min='Esp.min.x' max='Esp.max.x' discreto='no' decimales='5' fijo='no' visible='sí' dibujar-si='0' ">
+              <param name="C_52" value="id='v07.y' tipo='numérico' interfaz='pulsador' región='exterior' espacio='E1' nombre='v07.y' expresión='(0,0,150,23)' valor='v07.y' incr='0.1' min='Esp.min.y' max='Esp.max.y' discreto='no' decimales='5' fijo='no' visible='sí' dibujar-si='0' ">
+              <param name="C_53" value="id='v08.x' tipo='numérico' interfaz='pulsador' región='exterior' espacio='E1' nombre='v08.x' expresión='(0,0,150,23)' valor='v08.x' incr='0.1' min='Esp.min.x' max='Esp.max.x' discreto='no' decimales='5' fijo='no' visible='sí' dibujar-si='0' ">
+              <param name="C_54" value="id='v08.y' tipo='numérico' interfaz='pulsador' región='exterior' espacio='E1' nombre='v08.y' expresión='(0,0,150,23)' valor='v08.y' incr='0.1' min='Esp.min.y' max='Esp.max.y' discreto='no' decimales='5' fijo='no' visible='sí' dibujar-si='0' ">
+              <param name="C_55" value="id='v09.x' tipo='numérico' interfaz='pulsador' región='exterior' espacio='E1' nombre='v09.x' expresión='(0,0,150,23)' valor='v09.x' incr='0.1' min='Esp.min.x' max='Esp.max.x' discreto='no' decimales='5' fijo='no' visible='sí' dibujar-si='0' ">
+              <param name="C_56" value="id='v09.y' tipo='numérico' interfaz='pulsador' región='exterior' espacio='E1' nombre='v09.y' expresión='(0,0,150,23)' valor='v09.y' incr='0.1' min='Esp.min.y' max='Esp.max.y' discreto='no' decimales='5' fijo='no' visible='sí' dibujar-si='0' ">
+              <param name="C_57" value="id='v10.x' tipo='numérico' interfaz='pulsador' región='exterior' espacio='E1' nombre='v10.x' expresión='(0,0,150,23)' valor='v10.x' incr='0.1' min='Esp.min.x' max='Esp.max.x' discreto='no' decimales='5' fijo='no' visible='sí' dibujar-si='0' ">
+              <param name="C_58" value="id='v10.y' tipo='numérico' interfaz='pulsador' región='exterior' espacio='E1' nombre='v10.y' expresión='(0,0,150,23)' valor='v10.y' incr='0.1' min='Esp.min.y' max='Esp.max.y' discreto='no' decimales='5' fijo='no' visible='sí' dibujar-si='0' ">
+              <param name="C_59" value="id='v11.x' tipo='numérico' interfaz='pulsador' región='exterior' espacio='E1' nombre='v11.x' expresión='(0,0,150,23)' valor='v11.x' incr='0.1' min='Esp.min.x' max='Esp.max.x' discreto='no' decimales='5' fijo='no' visible='sí' dibujar-si='0' ">
+              <param name="C_60" value="id='v11.y' tipo='numérico' interfaz='pulsador' región='exterior' espacio='E1' nombre='v11.y' expresión='(0,0,150,23)' valor='v11.y' incr='0.1' min='Esp.min.y' max='Esp.max.y' discreto='no' decimales='5' fijo='no' visible='sí' dibujar-si='0' ">
+              <param name="C_61" value="id='v12.x' tipo='numérico' interfaz='pulsador' región='exterior' espacio='E1' nombre='v12.x' expresión='(0,0,150,23)' valor='v12.x' incr='0.1' min='Esp.min.x' max='Esp.max.x' discreto='no' decimales='5' fijo='no' visible='sí' dibujar-si='0' ">
+              <param name="C_62" value="id='v12.y' tipo='numérico' interfaz='pulsador' región='exterior' espacio='E1' nombre='v12.y' expresión='(0,0,150,23)' valor='v12.y' incr='0.1' min='Esp.min.y' max='Esp.max.y' discreto='no' decimales='5' fijo='no' visible='sí' dibujar-si='0' ">
+              <param name="C_63" value="id='v13.x' tipo='numérico' interfaz='pulsador' región='exterior' espacio='E1' nombre='v13.x' expresión='(0,0,150,23)' valor='v13.x' incr='0.1' min='Esp.min.x' max='Esp.max.x' discreto='no' decimales='5' fijo='no' visible='sí' dibujar-si='0' ">
+              <param name="C_64" value="id='v13.y' tipo='numérico' interfaz='pulsador' región='exterior' espacio='E1' nombre='v13.y' expresión='(0,0,150,23)' valor='v13.y' incr='0.1' min='Esp.min.y' max='Esp.max.y' discreto='no' decimales='5' fijo='no' visible='sí' dibujar-si='0' ">
+              <param name="C_65" value="id='v14.x' tipo='numérico' interfaz='pulsador' región='exterior' espacio='E1' nombre='v14.x' expresión='(0,0,150,23)' valor='v14.x' incr='0.1' min='Esp.min.x' max='Esp.max.x' discreto='no' decimales='5' fijo='no' visible='sí' dibujar-si='0' ">
+              <param name="C_66" value="id='v14.y' tipo='numérico' interfaz='pulsador' región='exterior' espacio='E1' nombre='v14.y' expresión='(0,0,150,23)' valor='v14.y' incr='0.1' min='Esp.min.y' max='Esp.max.y' discreto='no' decimales='5' fijo='no' visible='sí' dibujar-si='0' ">
+              <param name="C_67" value="id='v15.x' tipo='numérico' interfaz='pulsador' región='exterior' espacio='E1' nombre='v15.x' expresión='(0,0,150,23)' valor='v15.x' incr='0.1' min='Esp.min.x' max='Esp.max.x' discreto='no' decimales='5' fijo='no' visible='sí' dibujar-si='0' ">
+              <param name="C_68" value="id='v15.y' tipo='numérico' interfaz='pulsador' región='exterior' espacio='E1' nombre='v15.y' expresión='(0,0,150,23)' valor='v15.y' incr='0.1' min='Esp.min.y' max='Esp.max.y' discreto='no' decimales='5' fijo='no' visible='sí' dibujar-si='0' ">
+              <param name="C_69" value="id='v16.x' tipo='numérico' interfaz='pulsador' región='exterior' espacio='E1' nombre='v16.x' expresión='(0,0,150,23)' valor='v16.x' incr='0.1' min='Esp.min.x' max='Esp.max.x' discreto='no' decimales='5' fijo='no' visible='sí' dibujar-si='0' ">
+              <param name="C_70" value="id='v16.y' tipo='numérico' interfaz='pulsador' región='exterior' espacio='E1' nombre='v16.y' expresión='(0,0,150,23)' valor='v16.y' incr='0.1' min='Esp.min.y' max='Esp.max.y' discreto='no' decimales='5' fijo='no' visible='sí' dibujar-si='0' ">
+              <param name="C_71" value="id='v17.x' tipo='numérico' interfaz='pulsador' región='exterior' espacio='E1' nombre='v17.x' expresión='(0,0,150,23)' valor='v17.x' incr='0.1' min='Esp.min.x' max='Esp.max.x' discreto='no' decimales='5' fijo='no' visible='sí' dibujar-si='0' ">
+              <param name="C_72" value="id='v17.y' tipo='numérico' interfaz='pulsador' región='exterior' espacio='E1' nombre='v17.y' expresión='(0,0,150,23)' valor='v17.y' incr='0.1' min='Esp.min.y' max='Esp.max.y' discreto='no' decimales='5' fijo='no' visible='sí' dibujar-si='0' ">
+              <param name="C_73" value="id='v18.x' tipo='numérico' interfaz='pulsador' región='exterior' espacio='E1' nombre='v18.x' expresión='(0,0,150,23)' valor='v18.x' incr='0.1' min='Esp.min.x' max='Esp.max.x' discreto='no' decimales='5' fijo='no' visible='sí' dibujar-si='0' ">
+              <param name="C_74" value="id='v18.y' tipo='numérico' interfaz='pulsador' región='exterior' espacio='E1' nombre='v18.y' expresión='(0,0,150,23)' valor='v18.y' incr='0.1' min='Esp.min.y' max='Esp.max.y' discreto='no' decimales='5' fijo='no' visible='sí' dibujar-si='0' ">
+              <param name="C_75" value="id='v19.x' tipo='numérico' interfaz='pulsador' región='exterior' espacio='E1' nombre='v19.x' expresión='(0,0,150,23)' valor='v19.x' incr='0.1' min='Esp.min.x' max='Esp.max.x' discreto='no' decimales='5' fijo='no' visible='sí' dibujar-si='0' ">
+              <param name="C_76" value="id='v19.y' tipo='numérico' interfaz='pulsador' región='exterior' espacio='E1' nombre='v19.y' expresión='(0,0,150,23)' valor='v19.y' incr='0.1' min='Esp.min.y' max='Esp.max.y' discreto='no' decimales='5' fijo='no' visible='sí' dibujar-si='0' ">
+              <param name="C_77" value="id='v20.x' tipo='numérico' interfaz='pulsador' región='exterior' espacio='E1' nombre='v20.x' expresión='(0,0,150,23)' valor='v20.x' incr='0.1' min='Esp.min.x' max='Esp.max.x' discreto='no' decimales='5' fijo='no' visible='sí' dibujar-si='0' ">
+              <param name="C_78" value="id='v20.y' tipo='numérico' interfaz='pulsador' región='exterior' espacio='E1' nombre='v20.y' expresión='(0,0,150,23)' valor='v20.y' incr='0.1' min='Esp.min.y' max='Esp.max.y' discreto='no' decimales='5' fijo='no' visible='sí' dibujar-si='0' ">
+              <param name="C_79" value="id='v21.x' tipo='numérico' interfaz='pulsador' región='exterior' espacio='E1' nombre='v21.x' expresión='(0,0,150,23)' valor='v21.x' incr='0.1' min='Esp.min.x' max='Esp.max.x' discreto='no' decimales='5' fijo='no' visible='sí' dibujar-si='0' ">
+              <param name="C_80" value="id='v21.y' tipo='numérico' interfaz='pulsador' región='exterior' espacio='E1' nombre='v21.y' expresión='(0,0,150,23)' valor='v21.y' incr='0.1' min='Esp.min.y' max='Esp.max.y' discreto='no' decimales='5' fijo='no' visible='sí' dibujar-si='0' ">
+              <param name="C_81" value="id='v22.x' tipo='numérico' interfaz='pulsador' región='exterior' espacio='E1' nombre='v22.x' expresión='(0,0,150,23)' valor='v22.x' incr='0.1' min='Esp.min.x' max='Esp.max.x' discreto='no' decimales='5' fijo='no' visible='sí' dibujar-si='0' ">
+              <param name="C_82" value="id='v22.y' tipo='numérico' interfaz='pulsador' región='exterior' espacio='E1' nombre='v22.y' expresión='(0,0,150,23)' valor='v22.y' incr='0.1' min='Esp.min.y' max='Esp.max.y' discreto='no' decimales='5' fijo='no' visible='sí' dibujar-si='0' ">
+              <param name="C_83" value="id='v23.x' tipo='numérico' interfaz='pulsador' región='exterior' espacio='E1' nombre='v23.x' expresión='(0,0,150,23)' valor='v23.x' incr='0.1' min='Esp.min.x' max='Esp.max.x' discreto='no' decimales='5' fijo='no' visible='sí' dibujar-si='0' ">
+              <param name="C_84" value="id='v23.y' tipo='numérico' interfaz='pulsador' región='exterior' espacio='E1' nombre='v23.y' expresión='(0,0,150,23)' valor='v23.y' incr='0.1' min='Esp.min.y' max='Esp.max.y' discreto='no' decimales='5' fijo='no' visible='sí' dibujar-si='0' ">
+              <param name="C_85" value="id='v24.x' tipo='numérico' interfaz='pulsador' región='exterior' espacio='E1' nombre='v24.x' expresión='(0,0,150,23)' valor='v24.x' incr='0.1' min='Esp.min.x' max='Esp.max.x' discreto='no' decimales='5' fijo='no' visible='sí' dibujar-si='0' ">
+              <param name="C_86" value="id='v24.y' tipo='numérico' interfaz='pulsador' región='exterior' espacio='E1' nombre='v24.y' expresión='(0,0,150,23)' valor='v24.y' incr='0.1' min='Esp.min.y' max='Esp.max.y' discreto='no' decimales='5' fijo='no' visible='sí' dibujar-si='0' ">
+              <param name="C_87" value="id='v25.x' tipo='numérico' interfaz='pulsador' región='exterior' espacio='E1' nombre='v25.x' expresión='(0,0,150,23)' valor='v25.x' incr='0.1' min='Esp.min.x' max='Esp.max.x' discreto='no' decimales='5' fijo='no' visible='sí' dibujar-si='0' ">
+              <param name="C_88" value="id='v25.y' tipo='numérico' interfaz='pulsador' región='exterior' espacio='E1' nombre='v25.y' expresión='(0,0,150,23)' valor='v25.y' incr='0.1' min='Esp.min.y' max='Esp.max.y' discreto='no' decimales='5' fijo='no' visible='sí' dibujar-si='0' ">
+              <param name="C_89" value="id='v26.x' tipo='numérico' interfaz='pulsador' región='exterior' espacio='E1' nombre='v26.x' expresión='(0,0,150,23)' valor='v26.x' incr='0.1' min='Esp.min.x' max='Esp.max.x' discreto='no' decimales='5' fijo='no' visible='sí' dibujar-si='0' ">
+              <param name="C_90" value="id='v26.y' tipo='numérico' interfaz='pulsador' región='exterior' espacio='E1' nombre='v26.y' expresión='(0,0,150,23)' valor='v26.y' incr='0.1' min='Esp.min.y' max='Esp.max.y' discreto='no' decimales='5' fijo='no' visible='sí' dibujar-si='0' ">
+              <param name="C_91" value="id='v27.x' tipo='numérico' interfaz='pulsador' región='exterior' espacio='E1' nombre='v27.x' expresión='(0,0,150,23)' valor='v27.x' incr='0.1' min='Esp.min.x' max='Esp.max.x' discreto='no' decimales='5' fijo='no' visible='sí' dibujar-si='0' ">
+              <param name="C_92" value="id='v27.y' tipo='numérico' interfaz='pulsador' región='exterior' espacio='E1' nombre='v27.y' expresión='(0,0,150,23)' valor='v27.y' incr='0.1' min='Esp.min.y' max='Esp.max.y' discreto='no' decimales='5' fijo='no' visible='sí' dibujar-si='0' ">
+              <param name="C_93" value="id='v28.x' tipo='numérico' interfaz='pulsador' región='exterior' espacio='E1' nombre='v28.x' expresión='(0,0,150,23)' valor='v28.x' incr='0.1' min='Esp.min.x' max='Esp.max.x' discreto='no' decimales='5' fijo='no' visible='sí' dibujar-si='0' ">
+              <param name="C_94" value="id='v28.y' tipo='numérico' interfaz='pulsador' región='exterior' espacio='E1' nombre='v28.y' expresión='(0,0,150,23)' valor='v28.y' incr='0.1' min='Esp.min.y' max='Esp.max.y' discreto='no' decimales='5' fijo='no' visible='sí' dibujar-si='0' ">
+              <param name="C_95" value="id='v29.x' tipo='numérico' interfaz='pulsador' región='exterior' espacio='E1' nombre='v29.x' expresión='(0,0,150,23)' valor='v29.x' incr='0.1' min='Esp.min.x' max='Esp.max.x' discreto='no' decimales='5' fijo='no' visible='sí' dibujar-si='0' ">
+              <param name="C_96" value="id='v29.y' tipo='numérico' interfaz='pulsador' región='exterior' espacio='E1' nombre='v29.y' expresión='(0,0,150,23)' valor='v29.y' incr='0.1' min='Esp.min.y' max='Esp.max.y' discreto='no' decimales='5' fijo='no' visible='sí' dibujar-si='0' ">
+              <param name="A_01" value="id='initBtns()' algoritmo='sí' expresión='x' hacer='ini.w=100;ini.h=30;N.w=230;N.h=35;;gap.x=(E1._w-ini.w-N.w)/3;gap.y=5;;N.x=gap.x;N.y=E1._h-N.h-gap.y;ini.x=N.x+N.w+gap.x;ini.y=E1._h-ini.h-gap.y;' ">
+              <param name="A_02" value="id='initEscena()' algoritmo='sí' expresión='x' hacer='initBtns();cleanodos();actpts();inodos();;reinit()' ">
+              <param name="A_03" value="id='Vx' vector='sí' evaluar='una-sola-vez' tamaño='31' expresión='Vx[0]=0;Vx[1]=0;Vx[2]=0' ">
+              <param name="A_04" value="id='Vy' vector='sí' evaluar='una-sola-vez' tamaño='31' expresión='Vy[0]=0;Vy[1]=0;Vy[2]=0' ">
+              <param name="A_05" value="id='inipts()' algoritmo='sí' expresión='1' hacer='v00.x=-10+rnd*20;v00.y=-5+rnd*10;v01.x=-10+rnd*20;v01.y=-5+rnd*10;v02.x=-10+rnd*20;v02.y=-5+rnd*10;v03.x=-10+rnd*20;v03.y=-5+rnd*10;v04.x=-10+rnd*20;v04.y=-5+rnd*10;v05.x=-10+rnd*20;v05.y=-5+rnd*10;v06.x=-10+rnd*20;v06.y=-5+rnd*10;v07.x=-10+rnd*20;v07.y=-5+rnd*10;v08.x=-10+rnd*20;v08.y=-5+rnd*10;v09.x=-10+rnd*20;v09.y=-5+rnd*10;v10.x=-10+rnd*20;v10.y=-5+rnd*10;v11.x=-10+rnd*20;v11.y=-5+rnd*10;v12.x=-10+rnd*20;v12.y=-5+rnd*10;v13.x=-10+rnd*20;v13.y=-5+rnd*10;v14.x=-10+rnd*20;v14.y=-5+rnd*10;v15.x=-10+rnd*20;v15.y=-5+rnd*10;v16.x=-10+rnd*20;v16.y=-5+rnd*10;v17.x=-10+rnd*20;v17.y=-5+rnd*10;v18.x=-10+rnd*20;v18.y=-5+rnd*10;v19.x=-10+rnd*20;v19.y=-5+rnd*10;v20.x=-10+rnd*20;v20.y=-5+rnd*10;v21.x=-10+rnd*20;v21.y=-5+rnd*10;v22.x=-10+rnd*20;v22.y=-5+rnd*10;v23.x=-10+rnd*20;v23.y=-5+rnd*10;v24.x=-10+rnd*20;v24.y=-5+rnd*10;v25.x=-10+rnd*20;v25.y=-5+rnd*10;v26.x=-10+rnd*20;v26.y=-5+rnd*10;v27.x=-10+rnd*20;v27.y=-5+rnd*10;v28.x=-10+rnd*20;v28.y=-5+rnd*10;v29.x=-10+rnd*20;v29.y=-5+rnd*10;' ">
+              <param name="A_06" value="id='actpts()' algoritmo='sí' expresión='1' hacer='Vx[0]=v00.x;Vy[0]=v00.y;Vx[1]=v01.x;Vy[1]=v01.y;Vx[2]=v02.x;Vy[2]=v02.y;Vx[3]=v03.x;Vy[3]=v03.y;Vx[4]=v04.x;Vy[4]=v04.y;Vx[5]=v05.x;Vy[5]=v05.y;Vx[6]=v06.x;Vy[6]=v06.y;Vx[7]=v07.x;Vy[7]=v07.y;Vx[8]=v08.x;Vy[8]=v08.y;Vx[9]=v09.x;Vy[9]=v09.y;Vx[10]=v10.x;Vy[10]=v10.y;Vx[11]=v11.x;Vy[11]=v11.y;Vx[12]=v12.x;Vy[12]=v12.y;Vx[13]=v13.x;Vy[13]=v13.y;Vx[14]=v14.x;Vy[14]=v14.y;Vx[15]=v15.x;Vy[15]=v15.y;Vx[16]=v16.x;Vy[16]=v16.y;Vx[17]=v17.x;Vy[17]=v17.y;Vx[18]=v18.x;Vy[18]=v18.y;Vx[19]=v19.x;Vy[19]=v19.y;Vx[20]=v20.x;Vy[20]=v20.y;Vx[21]=v21.x;Vy[21]=v21.y;Vx[22]=v22.x;Vy[22]=v22.y;Vx[23]=v23.x;Vy[23]=v23.y;Vx[24]=v24.x;Vy[24]=v24.y;Vx[25]=v25.x;Vy[25]=v25.y;Vx[26]=v26.x;Vy[26]=v26.y;Vx[27]=v27.x;Vy[27]=v27.y;Vx[28]=v28.x;Vy[28]=v28.y;Vx[29]=v29.x;Vy[29]=v29.y;' ">
+              <param name="A_07" value="id='M' matriz='sí' evaluar='una-sola-vez' columnas='31' filas='31' expresión='M[0,0]=0' ">
+              <param name="A_08" value="id='f(x,y)' algoritmo='sí' expresión='z' local='z' hacer='z=M[x,y];' ">
+              <param name="A_09" value="id='belongs(w,z)' algoritmo='sí' expresión='2' local='i,x' inicio='i=0' hacer='x=check(i,w,z,.4);M[i,x]=(M[i,x]=1)?2:1;i=i+1' mientras='(i<N)&(x=31)' ">
+              <param name="A_10" value="id='check(i,w,z,e)' algoritmo='sí' expresión='b' local='b,d,j' inicio='j=i+1;b=31' hacer='d=dist(Vx[j],Vx[i],w,Vy[j],Vy[i],z);b=((d<e)&(M[i,j]>0))?j:b;j=j+1' mientras='j<N' ">
+              <param name="A_11" value="id='dist(ax,bx,cx,ay,by,cy)' algoritmo='sí' expresión='D' local='pmx,pmy,D' hacer='pmx=(ax+bx)/2;pmy=(ay+by)/2;D= sqrt(sqr(pmx-cx)+sqr(pmy-cy))' ">
+              <param name="A_12" value="id='maxe()' algoritmo='sí' expresión='e' local='i,e' inicio='i=0;e=0' hacer='e=(ge[i]>e)?ge[i]:e;i=i+1' mientras='i<N' ">
+              <param name="A_13" value="id='nr()' algoritmo='sí' expresión='n' local='i,n' inicio='i=0;n=0' hacer='n=(ge[i]=0)?n+1:n;i=i+1' mientras='i<N' ">
+              <param name="A_14" value="id='chk(x)' algoritmo='sí' expresión='1' local='i' inicio='i=0' hacer='ge[x]=(M[x,i]=2)?ge[x]+1:ge[x];ge[i]=(M[x,i]=1)?ge[i]+1:ge[i];i=i+1' mientras='i<N' ">
+              <param name="A_15" value="id='ge' vector='sí' evaluar='una-sola-vez' tamaño='15' expresión='ge[0]=0;ge[1]=0;ge[2]=0' ">
+              <param name="A_16" value="id='cleange()' algoritmo='sí' expresión='1' local='i' inicio='i=0' hacer='ge[i]=0;i=i+1' mientras='i<N' ">
+              <param name="A_17" value="id='calcg()' algoritmo='sí' expresión='1' local='i' inicio='i=0;cleange()' hacer='chk(i);i=i+1' mientras='i<N' ">
+              <param name="A_18" value="id='inodos()' algoritmo='sí' expresión='x' local='i,t' inicio='i=2; M[0,1]=ent(1.5+rnd)' hacer='t=ent(rnd*i+.5);t=(t=i)?t-1:t;M[t,i]=ent(1.5+rnd);i=i+1' mientras='i<N' ">
+              <param name="A_19" value="id='cleanodos()' algoritmo='sí' expresión='x' local='i,j' inicio='i=0;j=1' hacer='M[i,j]=0;j=(j<N)?j+1:i+1;i=(j<N)?i:i+1' mientras='i<N' ">
+              <param name="A_20" value="id='reinit()' algoritmo='sí' expresión='x' hacer='cleanodos();inodos();inipts();nuevo=1' ">
+              <param name="A_21" value="id='___SCORM___()' algoritmo='no' expresión='x' ">
+              <param name="A_22" value="id='initStateScorm()' algoritmo='sí' expresión='x' hacer='SCORM.per=getSCORMStateVar(&squot;D02.SCORM.per&squot;);SCORM.nResueltos=getSCORMStateVar(&squot;D02.SCORM.nResueltos&squot;);;' ">
+              <param name="A_23" value="id='getSCORMState()' algoritmo='sí' expresión='res' local='res,c,tmpRes' inicio='c=&squot;@&squot;;res=&squot;&squot;' hacer='ö=|Estandar ---- [MIDC]XX.<var>  SI SOLO EXISTE UNA ESCENA EN EL HTML|;ö=|Estandar ---- [MIDC]XX_YY.<var>  SI HAY MAS DE UNA ESCENA EN EL HTML|;;res=res+&squot;D02.SCORM.per:&squot;+SCORM.per+c;res=res+&squot;D02.SCORM.nResueltos:&squot;+SCORM.nResueltos+c;;' ">
+              <param name="A_24" value="id='doReportSCORM()' algoritmo='sí' expresión='0' local='antPer,doSet,tt' hacer='antPer=SCORM.per;SCORM.per=min(100,max(SCORM.per,100*(SCORM.nResueltos/3)));doSet=(SCORM.per!=antPer);tt=(doSet)?setSCORMPercentage(SCORM.per):0' ">
+              <param name="A_25" value="id='INICIO' algoritmo='sí' evaluar='una-sola-vez' hacer='initStateScorm();initEscena()' ">
+              <param name="A_26" value="id='CALCULOS' algoritmo='sí' evaluar='siempre' hacer='debug=((E1.mouse_clicked)?belongs(E1.mouse_x,E1.mouse_y):0);actpts();E1.mouse_clicked=0;calcg();;done=(maxe()=1)&(nr()=1);;newRes=(nuevo)&(done);nuevo=nuevo&(!newRes);;SCORM.nResueltos=SCORM.nResueltos+newRes;tt=(newRes)?doReportSCORM():0' ">
+              <param name="G_01" value="espacio='E1' tipo='polígono' fondo='sí' color='5566aa' dibujar-si='0' coord_abs='sí' expresión='(0,0)(E1._w-1,0)(E1._w-1,E1._h-1)(0,E1._h-1)(0,0)' relleno='f05566aa' ancho='1' lineDash='solid' info='Marco general de la escena, para que se vea integrado al contenedor' ">
+              <param name="G_02" value="espacio='E1' tipo='punto' fondo='no' color='grisClaro' dibujar-si='(f(0,s)>0)&(s<N)' coord_abs='no' expresión='((Vx[0]+Vx[s])/2,(Vy[0]+Vy[s])/2)' familia='s' s.intervalo='[1,N-1]' s.pasos='N-2' decimales='2' fijo='no' tamaño='8' fuente='SansSerif,PLAIN,18' ">
+              <param name="G_03" value="espacio='E1' tipo='punto' fondo='no' color='grisClaro' dibujar-si='(f(1,s)>0)&(s<N)' coord_abs='no' expresión='((Vx[1]+Vx[s])/2,(Vy[1]+Vy[s])/2)' familia='s' s.intervalo='[2,N-1]' s.pasos='N-3' decimales='2' fijo='no' tamaño='8' fuente='SansSerif,PLAIN,18' ">
+              <param name="G_04" value="espacio='E1' tipo='punto' fondo='no' color='grisClaro' dibujar-si='(f(2,s)>0)&(s<N)' coord_abs='no' expresión='((Vx[2]+Vx[s])/2,(Vy[2]+Vy[s])/2)' familia='s' s.intervalo='[3,N-1]' s.pasos='N-4' decimales='2' fijo='no' tamaño='8' fuente='SansSerif,PLAIN,18' ">
+              <param name="G_05" value="espacio='E1' tipo='punto' fondo='no' color='grisClaro' dibujar-si='(f(3,s)>0)&(s<N)' coord_abs='no' expresión='((Vx[3]+Vx[s])/2,(Vy[3]+Vy[s])/2)' familia='s' s.intervalo='[4,N-1]' s.pasos='N-5' decimales='2' fijo='no' tamaño='8' fuente='SansSerif,PLAIN,18' ">
+              <param name="G_06" value="espacio='E1' tipo='punto' fondo='no' color='grisClaro' dibujar-si='(f(4,s)>0)&(s<N)' coord_abs='no' expresión='((Vx[4]+Vx[s])/2,(Vy[4]+Vy[s])/2)' familia='s' s.intervalo='[5,N-1]' s.pasos='N-6' decimales='2' fijo='no' tamaño='8' fuente='SansSerif,PLAIN,18' ">
+              <param name="G_07" value="espacio='E1' tipo='punto' fondo='no' color='grisClaro' dibujar-si='(f(5,s)>0)&(s<N)' coord_abs='no' expresión='((Vx[5]+Vx[s])/2,(Vy[5]+Vy[s])/2)' familia='s' s.intervalo='[6,N-1]' s.pasos='N-7' decimales='2' fijo='no' tamaño='8' fuente='SansSerif,PLAIN,18' ">
+              <param name="G_08" value="espacio='E1' tipo='punto' fondo='no' color='grisClaro' dibujar-si='(f(6,s)>0)&(s<N)' coord_abs='no' expresión='((Vx[6]+Vx[s])/2,(Vy[6]+Vy[s])/2)' familia='s' s.intervalo='[7,N-1]' s.pasos='N-8' decimales='2' fijo='no' tamaño='8' fuente='SansSerif,PLAIN,18' ">
+              <param name="G_09" value="espacio='E1' tipo='punto' fondo='no' color='grisClaro' dibujar-si='(f(7,s)>0)&(s<N)' coord_abs='no' expresión='((Vx[7]+Vx[s])/2,(Vy[7]+Vy[s])/2)' familia='s' s.intervalo='[8,N-1]' s.pasos='N-9' decimales='2' fijo='no' tamaño='8' fuente='SansSerif,PLAIN,18' ">
+              <param name="G_10" value="espacio='E1' tipo='punto' fondo='no' color='grisClaro' dibujar-si='(f(8,s)>0)&(s<N)' coord_abs='no' expresión='((Vx[8]+Vx[s])/2,(Vy[8]+Vy[s])/2)' familia='s' s.intervalo='[9,N-1]' s.pasos='N-10' decimales='2' fijo='no' tamaño='8' fuente='SansSerif,PLAIN,18' ">
+              <param name="G_11" value="espacio='E1' tipo='punto' fondo='no' color='grisClaro' dibujar-si='(f(9,s)>0)&(s<N)' coord_abs='no' expresión='((Vx[9]+Vx[s])/2,(Vy[9]+Vy[s])/2)' familia='s' s.intervalo='[10,N-1]' s.pasos='N-11' decimales='2' fijo='no' tamaño='8' fuente='SansSerif,PLAIN,18' ">
+              <param name="G_12" value="espacio='E1' tipo='punto' fondo='no' color='grisClaro' dibujar-si='(f(10,s)>0)&(s<N)' coord_abs='no' expresión='((Vx[10]+Vx[s])/2,(Vy[10]+Vy[s])/2)' familia='s' s.intervalo='[11,N-1]' s.pasos='N-12' decimales='2' fijo='no' tamaño='8' fuente='SansSerif,PLAIN,18' ">
+              <param name="G_13" value="espacio='E1' tipo='punto' fondo='no' color='grisClaro' dibujar-si='(f(11,s)>0)&(s<N)' coord_abs='no' expresión='((Vx[11]+Vx[s])/2,(Vy[11]+Vy[s])/2)' familia='s' s.intervalo='[12,N-1]' s.pasos='N-13' decimales='2' fijo='no' tamaño='8' fuente='SansSerif,PLAIN,18' ">
+              <param name="G_14" value="espacio='E1' tipo='punto' fondo='no' color='grisClaro' dibujar-si='(f(12,s)>0)&(s<N)' coord_abs='no' expresión='((Vx[12]+Vx[s])/2,(Vy[12]+Vy[s])/2)' familia='s' s.intervalo='[13,N-1]' s.pasos='N-14' decimales='2' fijo='no' tamaño='8' fuente='SansSerif,PLAIN,18' ">
+              <param name="G_15" value="espacio='E1' tipo='punto' fondo='no' color='grisClaro' dibujar-si='(f(13,s)>0)&(s<N)' coord_abs='no' expresión='((Vx[13]+Vx[s])/2,(Vy[13]+Vy[s])/2)' familia='s' s.intervalo='[14,N-1]' s.pasos='N-15' decimales='2' fijo='no' tamaño='8' fuente='SansSerif,PLAIN,18' ">
+              <param name="G_16" value="espacio='E1' tipo='punto' fondo='no' color='grisClaro' dibujar-si='(f(14,s)>0)&(s<N)' coord_abs='no' expresión='((Vx[14]+Vx[s])/2,(Vy[14]+Vy[s])/2)' familia='s' s.intervalo='[15,N-1]' s.pasos='N-16' decimales='2' fijo='no' tamaño='8' fuente='SansSerif,PLAIN,18' ">
+              <param name="G_17" value="espacio='E1' tipo='punto' fondo='no' color='grisClaro' dibujar-si='(f(15,s)>0)&(s<N)' coord_abs='no' expresión='((Vx[15]+Vx[s])/2,(Vy[15]+Vy[s])/2)' familia='s' s.intervalo='[16,N-1]' s.pasos='N-17' decimales='2' fijo='no' tamaño='8' fuente='SansSerif,PLAIN,18' ">
+              <param name="G_18" value="espacio='E1' tipo='punto' fondo='no' color='grisClaro' dibujar-si='(f(16,s)>0)&(s<N)' coord_abs='no' expresión='((Vx[16]+Vx[s])/2,(Vy[16]+Vy[s])/2)' familia='s' s.intervalo='[17,N-1]' s.pasos='N-18' decimales='2' fijo='no' tamaño='8' fuente='SansSerif,PLAIN,18' ">
+              <param name="G_19" value="espacio='E1' tipo='punto' fondo='no' color='grisClaro' dibujar-si='(f(17,s)>0)&(s<N)' coord_abs='no' expresión='((Vx[17]+Vx[s])/2,(Vy[17]+Vy[s])/2)' familia='s' s.intervalo='[18,N-1]' s.pasos='N-19' decimales='2' fijo='no' tamaño='8' fuente='SansSerif,PLAIN,18' ">
+              <param name="G_20" value="espacio='E1' tipo='punto' fondo='no' color='grisClaro' dibujar-si='(f(18,s)>0)&(s<N)' coord_abs='no' expresión='((Vx[18]+Vx[s])/2,(Vy[18]+Vy[s])/2)' familia='s' s.intervalo='[19,N-1]' s.pasos='N-20' decimales='2' fijo='no' tamaño='8' fuente='SansSerif,PLAIN,18' ">
+              <param name="G_21" value="espacio='E1' tipo='punto' fondo='no' color='grisClaro' dibujar-si='(f(19,s)>0)&(s<N)' coord_abs='no' expresión='((Vx[19]+Vx[s])/2,(Vy[19]+Vy[s])/2)' familia='s' s.intervalo='[20,N-1]' s.pasos='N-21' decimales='2' fijo='no' tamaño='8' fuente='SansSerif,PLAIN,18' ">
+              <param name="G_22" value="espacio='E1' tipo='punto' fondo='no' color='grisClaro' dibujar-si='(f(20,s)>0)&(s<N)' coord_abs='no' expresión='((Vx[20]+Vx[s])/2,(Vy[20]+Vy[s])/2)' familia='s' s.intervalo='[21,N-1]' s.pasos='N-22' decimales='2' fijo='no' tamaño='8' fuente='SansSerif,PLAIN,18' ">
+              <param name="G_23" value="espacio='E1' tipo='punto' fondo='no' color='grisClaro' dibujar-si='(f(21,s)>0)&(s<N)' coord_abs='no' expresión='((Vx[21]+Vx[s])/2,(Vy[21]+Vy[s])/2)' familia='s' s.intervalo='[22,N-1]' s.pasos='N-23' decimales='2' fijo='no' tamaño='8' fuente='SansSerif,PLAIN,18' ">
+              <param name="G_24" value="espacio='E1' tipo='punto' fondo='no' color='grisClaro' dibujar-si='(f(22,s)>0)&(s<N)' coord_abs='no' expresión='((Vx[22]+Vx[s])/2,(Vy[22]+Vy[s])/2)' familia='s' s.intervalo='[23,N-1]' s.pasos='N-24' decimales='2' fijo='no' tamaño='8' fuente='SansSerif,PLAIN,18' ">
+              <param name="G_25" value="espacio='E1' tipo='punto' fondo='no' color='grisClaro' dibujar-si='(f(23,s)>0)&(s<N)' coord_abs='no' expresión='((Vx[23]+Vx[s])/2,(Vy[23]+Vy[s])/2)' familia='s' s.intervalo='[24,N-1]' s.pasos='N-25' decimales='2' fijo='no' tamaño='8' fuente='SansSerif,PLAIN,18' ">
+              <param name="G_26" value="espacio='E1' tipo='punto' fondo='no' color='grisClaro' dibujar-si='(f(24,s)>0)&(s<N)' coord_abs='no' expresión='((Vx[24]+Vx[s])/2,(Vy[24]+Vy[s])/2)' familia='s' s.intervalo='[25,N-1]' s.pasos='N-26' decimales='2' fijo='no' tamaño='8' fuente='SansSerif,PLAIN,18' ">
+              <param name="G_27" value="espacio='E1' tipo='punto' fondo='no' color='grisClaro' dibujar-si='(f(25,s)>0)&(s<N)' coord_abs='no' expresión='((Vx[25]+Vx[s])/2,(Vy[25]+Vy[s])/2)' familia='s' s.intervalo='[26,N-1]' s.pasos='N-27' decimales='2' fijo='no' tamaño='8' fuente='SansSerif,PLAIN,18' ">
+              <param name="G_28" value="espacio='E1' tipo='punto' fondo='no' color='grisClaro' dibujar-si='(f(26,s)>0)&(s<N)' coord_abs='no' expresión='((Vx[26]+Vx[s])/2,(Vy[26]+Vy[s])/2)' familia='s' s.intervalo='[27,N-1]' s.pasos='N-28' decimales='2' fijo='no' tamaño='8' fuente='SansSerif,PLAIN,18' ">
+              <param name="G_29" value="espacio='E1' tipo='punto' fondo='no' color='grisClaro' dibujar-si='(f(27,s)>0)&(s<N)' coord_abs='no' expresión='((Vx[27]+Vx[s])/2,(Vy[27]+Vy[s])/2)' familia='s' s.intervalo='[28,N-1]' s.pasos='N-29' decimales='2' fijo='no' tamaño='8' fuente='SansSerif,PLAIN,18' ">
+              <param name="G_30" value="espacio='E1' tipo='punto' fondo='no' color='grisClaro' dibujar-si='(f(28,s)>0)&(s<N)' coord_abs='no' expresión='((Vx[28]+Vx[s])/2,(Vy[28]+Vy[s])/2)' familia='s' s.intervalo='[29,N-1]' s.pasos='N-30' decimales='2' fijo='no' tamaño='8' fuente='SansSerif,PLAIN,18' ">
+              <param name="G_31" value="espacio='E1' tipo='punto' fondo='no' color='grisClaro' dibujar-si='(f(29,s)>0)&(s<N)' coord_abs='no' expresión='((Vx[29]+Vx[s])/2,(Vy[29]+Vy[s])/2)' familia='s' s.intervalo='[30,N-1]' s.pasos='N-30' decimales='2' fijo='no' tamaño='8' fuente='SansSerif,PLAIN,18' ">
+              <param name="G_32" value="espacio='E1' tipo='flecha' fondo='no' color='azul' dibujar-si='(f(0,s)=1)&(s<N)' coord_abs='no' expresión='(Vx[0],Vy[0])(Vx[s],Vy[s])' familia='s' s.intervalo='[1,N-1]' s.pasos='N-2' decimales='2' fijo='no' ancho='3' punta='8' flecha='azul' fuente='SansSerif,PLAIN,18' ">
+              <param name="G_33" value="espacio='E1' tipo='flecha' fondo='no' color='azul' dibujar-si='(f(1,s)=1)&(s<N)' coord_abs='no' expresión='(Vx[1],Vy[1])(Vx[s],Vy[s])' familia='s' s.intervalo='[2,N-1]' s.pasos='N-3' decimales='2' fijo='no' ancho='3' punta='8' flecha='azul' fuente='SansSerif,PLAIN,18' ">
+              <param name="G_34" value="espacio='E1' tipo='flecha' fondo='no' color='azul' dibujar-si='(f(2,s)=1)&(s<N)' coord_abs='no' expresión='(Vx[2],Vy[2])(Vx[s],Vy[s])' familia='s' s.intervalo='[3,N-1]' s.pasos='N-4' decimales='2' fijo='no' ancho='3' punta='8' flecha='azul' fuente='SansSerif,PLAIN,18' ">
+              <param name="G_35" value="espacio='E1' tipo='flecha' fondo='no' color='azul' dibujar-si='(f(3,s)=1)&(s<N)' coord_abs='no' expresión='(Vx[3],Vy[3])(Vx[s],Vy[s])' familia='s' s.intervalo='[4,N-1]' s.pasos='N-5' decimales='2' fijo='no' ancho='3' punta='8' flecha='azul' fuente='SansSerif,PLAIN,18' ">
+              <param name="G_36" value="espacio='E1' tipo='flecha' fondo='no' color='azul' dibujar-si='(f(4,s)=1)&(s<N)' coord_abs='no' expresión='(Vx[4],Vy[4])(Vx[s],Vy[s])' familia='s' s.intervalo='[5,N-1]' s.pasos='N-6' decimales='2' fijo='no' ancho='3' punta='8' flecha='azul' fuente='SansSerif,PLAIN,18' ">
+              <param name="G_37" value="espacio='E1' tipo='flecha' fondo='no' color='azul' dibujar-si='(f(5,s)=1)&(s<N)' coord_abs='no' expresión='(Vx[5],Vy[5])(Vx[s],Vy[s])' familia='s' s.intervalo='[6,N-1]' s.pasos='N-7' decimales='2' fijo='no' ancho='3' punta='8' flecha='azul' fuente='SansSerif,PLAIN,18' ">
+              <param name="G_38" value="espacio='E1' tipo='flecha' fondo='no' color='azul' dibujar-si='(f(6,s)=1)&(s<N)' coord_abs='no' expresión='(Vx[6],Vy[6])(Vx[s],Vy[s])' familia='s' s.intervalo='[7,N-1]' s.pasos='N-8' decimales='2' fijo='no' ancho='3' punta='8' flecha='azul' fuente='SansSerif,PLAIN,18' ">
+              <param name="G_39" value="espacio='E1' tipo='flecha' fondo='no' color='azul' dibujar-si='(f(7,s)=1)&(s<N)' coord_abs='no' expresión='(Vx[7],Vy[7])(Vx[s],Vy[s])' familia='s' s.intervalo='[8,N-1]' s.pasos='N-9' decimales='2' fijo='no' ancho='3' punta='8' flecha='azul' fuente='SansSerif,PLAIN,18' ">
+              <param name="G_40" value="espacio='E1' tipo='flecha' fondo='no' color='azul' dibujar-si='(f(8,s)=1)&(s<N)' coord_abs='no' expresión='(Vx[8],Vy[8])(Vx[s],Vy[s])' familia='s' s.intervalo='[9,N-1]' s.pasos='N-10' decimales='2' fijo='no' ancho='3' punta='8' flecha='azul' fuente='SansSerif,PLAIN,18' ">
+              <param name="G_41" value="espacio='E1' tipo='flecha' fondo='no' color='azul' dibujar-si='(f(9,s)=1)&(s<N)' coord_abs='no' expresión='(Vx[9],Vy[9])(Vx[s],Vy[s])' familia='s' s.intervalo='[10,N-1]' s.pasos='N-11' decimales='2' fijo='no' ancho='3' punta='8' flecha='azul' fuente='SansSerif,PLAIN,18' ">
+              <param name="G_42" value="espacio='E1' tipo='flecha' fondo='no' color='azul' dibujar-si='(f(10,s)=1)&(s<N)' coord_abs='no' expresión='(Vx[10],Vy[10])(Vx[s],Vy[s])' familia='s' s.intervalo='[11,N-1]' s.pasos='N-12' decimales='2' fijo='no' ancho='3' punta='8' flecha='azul' fuente='SansSerif,PLAIN,18' ">
+              <param name="G_43" value="espacio='E1' tipo='flecha' fondo='no' color='azul' dibujar-si='(f(11,s)=1)&(s<N)' coord_abs='no' expresión='(Vx[11],Vy[11])(Vx[s],Vy[s])' familia='s' s.intervalo='[12,N-1]' s.pasos='N-13' decimales='2' fijo='no' ancho='3' punta='8' flecha='azul' fuente='SansSerif,PLAIN,18' ">
+              <param name="G_44" value="espacio='E1' tipo='flecha' fondo='no' color='azul' dibujar-si='(f(12,s)=1)&(s<N)' coord_abs='no' expresión='(Vx[12],Vy[12])(Vx[s],Vy[s])' familia='s' s.intervalo='[13,N-1]' s.pasos='N-14' decimales='2' fijo='no' ancho='3' punta='8' flecha='azul' fuente='SansSerif,PLAIN,18' ">
+              <param name="G_45" value="espacio='E1' tipo='flecha' fondo='no' color='azul' dibujar-si='(f(13,s)=1)&(s<N)' coord_abs='no' expresión='(Vx[13],Vy[13])(Vx[s],Vy[s])' familia='s' s.intervalo='[14,N-1]' s.pasos='N-15' decimales='2' fijo='no' ancho='3' punta='8' flecha='azul' fuente='SansSerif,PLAIN,18' ">
+              <param name="G_46" value="espacio='E1' tipo='flecha' fondo='no' color='azul' dibujar-si='(f(14,s)=1)&(s<N)' coord_abs='no' expresión='(Vx[14],Vy[14])(Vx[s],Vy[s])' familia='s' s.intervalo='[15,N-1]' s.pasos='N-16' decimales='2' fijo='no' ancho='3' punta='8' flecha='azul' fuente='SansSerif,PLAIN,18' ">
+              <param name="G_47" value="espacio='E1' tipo='flecha' fondo='no' color='azul' dibujar-si='(f(15,s)=1)&(s<N)' coord_abs='no' expresión='(Vx[15],Vy[15])(Vx[s],Vy[s])' familia='s' s.intervalo='[16,N-1]' s.pasos='N-17' decimales='2' fijo='no' ancho='3' punta='8' flecha='azul' fuente='SansSerif,PLAIN,18' ">
+              <param name="G_48" value="espacio='E1' tipo='flecha' fondo='no' color='azul' dibujar-si='(f(16,s)=1)&(s<N)' coord_abs='no' expresión='(Vx[16],Vy[16])(Vx[s],Vy[s])' familia='s' s.intervalo='[17,N-1]' s.pasos='N-18' decimales='2' fijo='no' ancho='3' punta='8' flecha='azul' fuente='SansSerif,PLAIN,18' ">
+              <param name="G_49" value="espacio='E1' tipo='flecha' fondo='no' color='azul' dibujar-si='(f(17,s)=1)&(s<N)' coord_abs='no' expresión='(Vx[17],Vy[17])(Vx[s],Vy[s])' familia='s' s.intervalo='[18,N-1]' s.pasos='N-19' decimales='2' fijo='no' ancho='3' punta='8' flecha='azul' fuente='SansSerif,PLAIN,18' ">
+              <param name="G_50" value="espacio='E1' tipo='flecha' fondo='no' color='azul' dibujar-si='(f(18,s)=1)&(s<N)' coord_abs='no' expresión='(Vx[18],Vy[18])(Vx[s],Vy[s])' familia='s' s.intervalo='[19,N-1]' s.pasos='N-20' decimales='2' fijo='no' ancho='3' punta='8' flecha='azul' fuente='SansSerif,PLAIN,18' ">
+              <param name="G_51" value="espacio='E1' tipo='flecha' fondo='no' color='azul' dibujar-si='(f(19,s)=1)&(s<N)' coord_abs='no' expresión='(Vx[19],Vy[19])(Vx[s],Vy[s])' familia='s' s.intervalo='[20,N-1]' s.pasos='N-21' decimales='2' fijo='no' ancho='3' punta='8' flecha='azul' fuente='SansSerif,PLAIN,18' ">
+              <param name="G_52" value="espacio='E1' tipo='flecha' fondo='no' color='azul' dibujar-si='(f(20,s)=1)&(s<N)' coord_abs='no' expresión='(Vx[20],Vy[20])(Vx[s],Vy[s])' familia='s' s.intervalo='[21,N-1]' s.pasos='N-22' decimales='2' fijo='no' ancho='3' punta='8' flecha='azul' fuente='SansSerif,PLAIN,18' ">
+              <param name="G_53" value="espacio='E1' tipo='flecha' fondo='no' color='azul' dibujar-si='(f(21,s)=1)&(s<N)' coord_abs='no' expresión='(Vx[21],Vy[21])(Vx[s],Vy[s])' familia='s' s.intervalo='[22,N-1]' s.pasos='N-23' decimales='2' fijo='no' ancho='3' punta='8' flecha='azul' fuente='SansSerif,PLAIN,18' ">
+              <param name="G_54" value="espacio='E1' tipo='flecha' fondo='no' color='azul' dibujar-si='(f(22,s)=1)&(s<N)' coord_abs='no' expresión='(Vx[22],Vy[22])(Vx[s],Vy[s])' familia='s' s.intervalo='[23,N-1]' s.pasos='N-24' decimales='2' fijo='no' ancho='3' punta='8' flecha='azul' fuente='SansSerif,PLAIN,18' ">
+              <param name="G_55" value="espacio='E1' tipo='flecha' fondo='no' color='azul' dibujar-si='(f(23,s)=1)&(s<N)' coord_abs='no' expresión='(Vx[23],Vy[23])(Vx[s],Vy[s])' familia='s' s.intervalo='[24,N-1]' s.pasos='N-25' decimales='2' fijo='no' ancho='3' punta='8' flecha='azul' fuente='SansSerif,PLAIN,18' ">
+              <param name="G_56" value="espacio='E1' tipo='flecha' fondo='no' color='azul' dibujar-si='(f(24,s)=1)&(s<N)' coord_abs='no' expresión='(Vx[24],Vy[24])(Vx[s],Vy[s])' familia='s' s.intervalo='[25,N-1]' s.pasos='N-26' decimales='2' fijo='no' ancho='3' punta='8' flecha='azul' fuente='SansSerif,PLAIN,18' ">
+              <param name="G_57" value="espacio='E1' tipo='flecha' fondo='no' color='azul' dibujar-si='(f(25,s)=1)&(s<N)' coord_abs='no' expresión='(Vx[25],Vy[25])(Vx[s],Vy[s])' familia='s' s.intervalo='[26,N-1]' s.pasos='N-27' decimales='2' fijo='no' ancho='3' punta='8' flecha='azul' fuente='SansSerif,PLAIN,18' ">
+              <param name="G_58" value="espacio='E1' tipo='flecha' fondo='no' color='azul' dibujar-si='(f(26,s)=1)&(s<N)' coord_abs='no' expresión='(Vx[26],Vy[26])(Vx[s],Vy[s])' familia='s' s.intervalo='[27,N-1]' s.pasos='N-28' decimales='2' fijo='no' ancho='3' punta='8' flecha='azul' fuente='SansSerif,PLAIN,18' ">
+              <param name="G_59" value="espacio='E1' tipo='flecha' fondo='no' color='azul' dibujar-si='(f(27,s)=1)&(s<N)' coord_abs='no' expresión='(Vx[27],Vy[27])(Vx[s],Vy[s])' familia='s' s.intervalo='[28,N-1]' s.pasos='N-29' decimales='2' fijo='no' ancho='3' punta='8' flecha='azul' fuente='SansSerif,PLAIN,18' ">
+              <param name="G_60" value="espacio='E1' tipo='flecha' fondo='no' color='azul' dibujar-si='(f(28,s)=1)&(s<N)' coord_abs='no' expresión='(Vx[28],Vy[28])(Vx[s],Vy[s])' familia='s' s.intervalo='[29,N-1]' s.pasos='N-30' decimales='2' fijo='no' ancho='3' punta='8' flecha='azul' fuente='SansSerif,PLAIN,18' ">
+              <param name="G_61" value="espacio='E1' tipo='flecha' fondo='no' color='azul' dibujar-si='(f(29,s)=1)&(s<N)' coord_abs='no' expresión='(Vx[29],Vy[29])(Vx[s],Vy[s])' familia='s' s.intervalo='[30,N-1]' s.pasos='N-30' decimales='2' fijo='no' ancho='3' punta='8' flecha='azul' fuente='SansSerif,PLAIN,18' ">
+              <param name="G_62" value="espacio='E1' tipo='flecha' fondo='no' color='azul' dibujar-si='(f(0,s)=2)&(s<N)' coord_abs='no' expresión='(Vx[s],Vy[s])(Vx[0],Vy[0])' familia='s' s.intervalo='[1,N-1]' s.pasos='N-2' decimales='2' fijo='no' ancho='3' punta='8' flecha='azul' fuente='SansSerif,PLAIN,18' ">
+              <param name="G_63" value="espacio='E1' tipo='flecha' fondo='no' color='azul' dibujar-si='(f(1,s)=2)&(s<N)' coord_abs='no' expresión='(Vx[s],Vy[s])(Vx[1],Vy[1])' familia='s' s.intervalo='[2,N-1]' s.pasos='N-3' decimales='2' fijo='no' ancho='3' punta='8' flecha='azul' fuente='SansSerif,PLAIN,18' ">
+              <param name="G_64" value="espacio='E1' tipo='flecha' fondo='no' color='azul' dibujar-si='(f(2,s)=2)&(s<N)' coord_abs='no' expresión='(Vx[s],Vy[s])(Vx[2],Vy[2])' familia='s' s.intervalo='[3,N-1]' s.pasos='N-4' decimales='2' fijo='no' ancho='3' punta='8' flecha='azul' fuente='SansSerif,PLAIN,18' ">
+              <param name="G_65" value="espacio='E1' tipo='flecha' fondo='no' color='azul' dibujar-si='(f(3,s)=2)&(s<N)' coord_abs='no' expresión='(Vx[s],Vy[s])(Vx[3],Vy[3])' familia='s' s.intervalo='[4,N-1]' s.pasos='N-5' decimales='2' fijo='no' ancho='3' punta='8' flecha='azul' fuente='SansSerif,PLAIN,18' ">
+              <param name="G_66" value="espacio='E1' tipo='flecha' fondo='no' color='azul' dibujar-si='(f(4,s)=2)&(s<N)' coord_abs='no' expresión='(Vx[s],Vy[s])(Vx[4],Vy[4])' familia='s' s.intervalo='[5,N-1]' s.pasos='N-6' decimales='2' fijo='no' ancho='3' punta='8' flecha='azul' fuente='SansSerif,PLAIN,18' ">
+              <param name="G_67" value="espacio='E1' tipo='flecha' fondo='no' color='azul' dibujar-si='(f(5,s)=2)&(s<N)' coord_abs='no' expresión='(Vx[s],Vy[s])(Vx[5],Vy[5])' familia='s' s.intervalo='[6,N-1]' s.pasos='N-7' decimales='2' fijo='no' ancho='3' punta='8' flecha='azul' fuente='SansSerif,PLAIN,18' ">
+              <param name="G_68" value="espacio='E1' tipo='flecha' fondo='no' color='azul' dibujar-si='(f(6,s)=2)&(s<N)' coord_abs='no' expresión='(Vx[s],Vy[s])(Vx[6],Vy[6])' familia='s' s.intervalo='[7,N-1]' s.pasos='N-8' decimales='2' fijo='no' ancho='3' punta='8' flecha='azul' fuente='SansSerif,PLAIN,18' ">
+              <param name="G_69" value="espacio='E1' tipo='flecha' fondo='no' color='azul' dibujar-si='(f(7,s)=2)&(s<N)' coord_abs='no' expresión='(Vx[s],Vy[s])(Vx[7],Vy[7])' familia='s' s.intervalo='[8,N-1]' s.pasos='N-9' decimales='2' fijo='no' ancho='3' punta='8' flecha='azul' fuente='SansSerif,PLAIN,18' ">
+              <param name="G_70" value="espacio='E1' tipo='flecha' fondo='no' color='azul' dibujar-si='(f(8,s)=2)&(s<N)' coord_abs='no' expresión='(Vx[s],Vy[s])(Vx[8],Vy[8])' familia='s' s.intervalo='[9,N-1]' s.pasos='N-10' decimales='2' fijo='no' ancho='3' punta='8' flecha='azul' fuente='SansSerif,PLAIN,18' ">
+              <param name="G_71" value="espacio='E1' tipo='flecha' fondo='no' color='azul' dibujar-si='(f(9,s)=2)&(s<N)' coord_abs='no' expresión='(Vx[s],Vy[s])(Vx[9],Vy[9])' familia='s' s.intervalo='[10,N-1]' s.pasos='N-11' decimales='2' fijo='no' ancho='3' punta='8' flecha='azul' fuente='SansSerif,PLAIN,18' ">
+              <param name="G_72" value="espacio='E1' tipo='flecha' fondo='no' color='azul' dibujar-si='(f(10,s)=2)&(s<N)' coord_abs='no' expresión='(Vx[s],Vy[s])(Vx[10],Vy[10])' familia='s' s.intervalo='[11,N-1]' s.pasos='N-12' decimales='2' fijo='no' ancho='3' punta='8' flecha='azul' fuente='SansSerif,PLAIN,18' ">
+              <param name="G_73" value="espacio='E1' tipo='flecha' fondo='no' color='azul' dibujar-si='(f(11,s)=2)&(s<N)' coord_abs='no' expresión='(Vx[s],Vy[s])(Vx[11],Vy[11])' familia='s' s.intervalo='[12,N-1]' s.pasos='N-13' decimales='2' fijo='no' ancho='3' punta='8' flecha='azul' fuente='SansSerif,PLAIN,18' ">
+              <param name="G_74" value="espacio='E1' tipo='flecha' fondo='no' color='azul' dibujar-si='(f(12,s)=2)&(s<N)' coord_abs='no' expresión='(Vx[s],Vy[s])(Vx[12],Vy[12])' familia='s' s.intervalo='[13,N-1]' s.pasos='N-14' decimales='2' fijo='no' ancho='3' punta='8' flecha='azul' fuente='SansSerif,PLAIN,18' ">
+              <param name="G_75" value="espacio='E1' tipo='flecha' fondo='no' color='azul' dibujar-si='(f(13,s)=2)&(s<N)' coord_abs='no' expresión='(Vx[s],Vy[s])(Vx[13],Vy[13])' familia='s' s.intervalo='[14,N-1]' s.pasos='N-15' decimales='2' fijo='no' ancho='3' punta='8' flecha='azul' fuente='SansSerif,PLAIN,18' ">
+              <param name="G_76" value="espacio='E1' tipo='flecha' fondo='no' color='azul' dibujar-si='(f(14,s)=2)&(s<N)' coord_abs='no' expresión='(Vx[s],Vy[s])(Vx[14],Vy[14])' familia='s' s.intervalo='[15,N-1]' s.pasos='N-16' decimales='2' fijo='no' ancho='3' punta='8' flecha='azul' fuente='SansSerif,PLAIN,18' ">
+              <param name="G_77" value="espacio='E1' tipo='flecha' fondo='no' color='azul' dibujar-si='(f(15,s)=2)&(s<N)' coord_abs='no' expresión='(Vx[s],Vy[s])(Vx[15],Vy[15])' familia='s' s.intervalo='[16,N-1]' s.pasos='N-17' decimales='2' fijo='no' ancho='3' punta='8' flecha='azul' fuente='SansSerif,PLAIN,18' ">
+              <param name="G_78" value="espacio='E1' tipo='flecha' fondo='no' color='azul' dibujar-si='(f(16,s)=2)&(s<N)' coord_abs='no' expresión='(Vx[s],Vy[s])(Vx[16],Vy[16])' familia='s' s.intervalo='[17,N-1]' s.pasos='N-18' decimales='2' fijo='no' ancho='3' punta='8' flecha='azul' fuente='SansSerif,PLAIN,18' ">
+              <param name="G_79" value="espacio='E1' tipo='flecha' fondo='no' color='azul' dibujar-si='(f(17,s)=2)&(s<N)' coord_abs='no' expresión='(Vx[s],Vy[s])(Vx[17],Vy[17])' familia='s' s.intervalo='[18,N-1]' s.pasos='N-19' decimales='2' fijo='no' ancho='3' punta='8' flecha='azul' fuente='SansSerif,PLAIN,18' ">
+              <param name="G_80" value="espacio='E1' tipo='flecha' fondo='no' color='azul' dibujar-si='(f(18,s)=2)&(s<N)' coord_abs='no' expresión='(Vx[s],Vy[s])(Vx[18],Vy[18])' familia='s' s.intervalo='[19,N-1]' s.pasos='N-20' decimales='2' fijo='no' ancho='3' punta='8' flecha='azul' fuente='SansSerif,PLAIN,18' ">
+              <param name="G_81" value="espacio='E1' tipo='flecha' fondo='no' color='azul' dibujar-si='(f(19,s)=2)&(s<N)' coord_abs='no' expresión='(Vx[s],Vy[s])(Vx[19],Vy[19])' familia='s' s.intervalo='[20,N-1]' s.pasos='N-21' decimales='2' fijo='no' ancho='3' punta='8' flecha='azul' fuente='SansSerif,PLAIN,18' ">
+              <param name="G_82" value="espacio='E1' tipo='flecha' fondo='no' color='azul' dibujar-si='(f(20,s)=2)&(s<N)' coord_abs='no' expresión='(Vx[s],Vy[s])(Vx[20],Vy[20])' familia='s' s.intervalo='[21,N-1]' s.pasos='N-22' decimales='2' fijo='no' ancho='3' punta='8' flecha='azul' fuente='SansSerif,PLAIN,18' ">
+              <param name="G_83" value="espacio='E1' tipo='flecha' fondo='no' color='azul' dibujar-si='(f(21,s)=2)&(s<N)' coord_abs='no' expresión='(Vx[s],Vy[s])(Vx[21],Vy[21])' familia='s' s.intervalo='[22,N-1]' s.pasos='N-23' decimales='2' fijo='no' ancho='3' punta='8' flecha='azul' fuente='SansSerif,PLAIN,18' ">
+              <param name="G_84" value="espacio='E1' tipo='flecha' fondo='no' color='azul' dibujar-si='(f(22,s)=2)&(s<N)' coord_abs='no' expresión='(Vx[s],Vy[s])(Vx[22],Vy[22])' familia='s' s.intervalo='[23,N-1]' s.pasos='N-24' decimales='2' fijo='no' ancho='3' punta='8' flecha='azul' fuente='SansSerif,PLAIN,18' ">
+              <param name="G_85" value="espacio='E1' tipo='flecha' fondo='no' color='azul' dibujar-si='(f(23,s)=2)&(s<N)' coord_abs='no' expresión='(Vx[s],Vy[s])(Vx[23],Vy[23])' familia='s' s.intervalo='[24,N-1]' s.pasos='N-25' decimales='2' fijo='no' ancho='3' punta='8' flecha='azul' fuente='SansSerif,PLAIN,18' ">
+              <param name="G_86" value="espacio='E1' tipo='flecha' fondo='no' color='azul' dibujar-si='(f(24,s)=2)&(s<N)' coord_abs='no' expresión='(Vx[s],Vy[s])(Vx[24],Vy[24])' familia='s' s.intervalo='[25,N-1]' s.pasos='N-26' decimales='2' fijo='no' ancho='3' punta='8' flecha='azul' fuente='SansSerif,PLAIN,18' ">
+              <param name="G_87" value="espacio='E1' tipo='flecha' fondo='no' color='azul' dibujar-si='(f(25,s)=2)&(s<N)' coord_abs='no' expresión='(Vx[s],Vy[s])(Vx[25],Vy[25])' familia='s' s.intervalo='[26,N-1]' s.pasos='N-27' decimales='2' fijo='no' ancho='3' punta='8' flecha='azul' fuente='SansSerif,PLAIN,18' ">
+              <param name="G_88" value="espacio='E1' tipo='flecha' fondo='no' color='azul' dibujar-si='(f(26,s)=2)&(s<N)' coord_abs='no' expresión='(Vx[s],Vy[s])(Vx[26],Vy[26])' familia='s' s.intervalo='[27,N-1]' s.pasos='N-28' decimales='2' fijo='no' ancho='3' punta='8' flecha='azul' fuente='SansSerif,PLAIN,18' ">
+              <param name="G_89" value="espacio='E1' tipo='flecha' fondo='no' color='azul' dibujar-si='(f(27,s)=2)&(s<N)' coord_abs='no' expresión='(Vx[s],Vy[s])(Vx[27],Vy[27])' familia='s' s.intervalo='[28,N-1]' s.pasos='N-29' decimales='2' fijo='no' ancho='3' punta='8' flecha='azul' fuente='SansSerif,PLAIN,18' ">
+              <param name="G_90" value="espacio='E1' tipo='flecha' fondo='no' color='azul' dibujar-si='(f(28,s)=2)&(s<N)' coord_abs='no' expresión='(Vx[s],Vy[s])(Vx[28],Vy[28])' familia='s' s.intervalo='[29,N-1]' s.pasos='N-30' decimales='2' fijo='no' ancho='3' punta='8' flecha='azul' fuente='SansSerif,PLAIN,18' ">
+              <param name="G_91" value="espacio='E1' tipo='flecha' fondo='no' color='azul' dibujar-si='(f(29,s)=2)&(s<N)' coord_abs='no' expresión='(Vx[s],Vy[s])(Vx[29],Vy[29])' familia='s' s.intervalo='[30,N-1]' s.pasos='N-30' decimales='2' fijo='no' ancho='3' punta='8' flecha='azul' fuente='SansSerif,PLAIN,18' ">
+              <param name="G_92" value="espacio='E1' tipo='texto' fondo='no' color='20303a' dibujar-si='(debug=1)' expresión='[500,20]' texto='[N],maxe=[maxe()], nr=[nr()]' decimales='2' fijo='no' ancho='1' fuente='SansSerif,PLAIN,18' align='a_left' anchor='a_top_left' ">
+              <param name="G_93" value="espacio='E1' tipo='texto' fondo='no' color='000000' dibujar-si='done' expresión='[10,10]' texto='Árbol con raíz terminado' decimales='2' fijo='no' ancho='1' color_borde_texto='ffffff' fuente='SansSerif,BOLD,21' align='a_left' anchor='a_top_left' ">
+            </ajs>
+          </div>
+        </div>
+        <!-- Fin bloque de descartes -->
+
+        <p>
+          Al trabajar algunos ejemplos en la escena anterior, podemos notar que es posible escoger cualquiera de los vértices como raíz y entonces reorientar las aristas para obtener el árbol con la raíz escogida inicialmente.
+        </p>
+        <!------ TERMINA EL CONTENIDO DE LA PÁGINA --------->
+      </div>
+      <!------ INICIA LA INFO SOBRE LAS LICENCIAS Y LOS CRÉDITOS. ---------->
+      <a id="btCopyright" class="standardButton" title="Haz clic aquí para consultar los créditos y las condiciones de uso de este recurso." href="#" onclick="document.getElementById('copyright').className='visible';">©</a>
+
+      <div id="copyright" class="oculto">
+
+        <div class="innerCopyright">
+          <a id="btCloseCopyright" class="standardButton" title="Haz clic aquí para cerrar esta ventana." href="#" onclick="document.getElementById('copyright').className='oculto'">×</a>
+          <!-- Créditos UAM  (siempre deben ir en primer lugar) -->
+
+          <div class="creditos">
+            <h1>
+Créditos
+</h1>
+            <h2>
+Escena original
+</h2>
+            <table class="autores">
+              <tbody>
+                <tr>
+                  <td class="rol"> Diseño del contenido </td>
+                  <td class="nombre">Elsa Sirenia Vega Camacho</td>
+                </tr>
+                <tr>
+                  <td class="rol"> Diseño funcional </td>
+                  <td class="nombre">Elsa Sirenia Vega Camacho</td>
+                </tr>
+                <tr>
+                  <td class="rol"> Programación </td>
+                  <td class="nombre">Elsa Sirenia Vega Camacho</td>
+                </tr>
+                <!-- Varias personas en el mismo rubro, separar por <br> -->
+                <tr>
+                  <td class="rol"> Asesoría de programación </td>
+                  <td class="nombre">Juan José Rivaud Gallardo</td>
+                </tr>
+                <tr>
+                  <td class="rol"> Diseño gráfico </td>
+                  <td class="nombre"> Ricardo López Gómez </td>
+                </tr>
+                <tr>
+                  <td class="rol">Coordinación </td>
+                  <td class="nombre"> Leticia Montserrat Vargas Rocha</td>
+                </tr>
+              </tbody>
+            </table>
+            <h2>
+Adaptación
+</h2>
+            <table class="autores">
+              <tbody>
+                <tr>
+                  <td class="rol"> Diseño funcional </td>
+                  <td class="nombre">Elsa Sirenia Vega Camacho</td>
+                </tr>
+                <tr>
+                  <td class="rol"> Programación </td>
+                  <td class="nombre">Elsa Sirenia Vega Camacho</td>
+                </tr>
+                <!-- Varias personas en el mismo rubro, separar por <br> -->
+                <tr>
+                  <td class="rol"> Asesoría de programación </td>
+                   <td class="nombre">
+                      Leticia Montserrat Vargas Rocha <br>
+                      Oscar Escamilla González
+                    </td>
+                </tr>
+                <tr>
+                  <td class="rol"> Diseño gráfico </td>
+                  <td class="nombre"> Francisco Varela Fuentes </td>
+                </tr>
+                <tr>
+                  <td class="rol">Coordinación </td>
+                  <td class="nombre"> Leticia Montserrat Vargas Rocha </td>
+                </tr>
+                <tr>
+                  <td class="rol">Desarrollo del contenedor </td>
+                  <td class="nombre"> Oscar Escamilla González</td>
+                </tr>
+              </tbody>
+            </table>
+
+            <div class="logos">
+              <a href="">
+                <img src="../images/info/icns/logoLite.png">
+              </a>
+              <a href="http://www.unadmexico.mx/">
+                <img src="../images/info/icns/logoUNADM.png">
+              </a>
+            </div>
+          </div>
+          <!-- Linea separación créditos -->
+          <hr class="linea">
+          <!-- Aviso licencias -->
+
+          <div class="licencias">
+
+            <p class="creativeCommons">Los contenidos de esta unidad didáctica interactiva están bajo una licencia
+              <a href="http://creativecommons.org/licenses/by-nc-sa/2.5/es/" target="_blank">Creative Commons Reconocimiento-NoComercial-CompartirIgual</a>.</p>
+            <!--arquimedes (optativo)-->
+
+            <p>La unidad didáctica fue creada con
+              <a href="http://arquimedes.matem.unam.mx/Descartes5/creditos/conCCL.html" target="_blank">Arquímedes</a>, una herramienta de código abierto.</p>
+            <!-- Descartes -->
+
+            <p>La unidad didáctica contiene escenas elaboradas con Descartes, una herramienta de código abierto.</p>
+
+            <p style="text-align:center"> LITE - UnADM 2014</p>
+          </div>
+        </div>
+      </div>
+      <!------ TERMINA LA INFO SOBRE LAS LICENCIAS Y LOS CRÉDITOS. ---------->
+    </div>
+  </article>
+
+
+
+</body>
+</html>

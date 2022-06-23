@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <title>TITULO</title>
+  
+  <script type='text/javascript' src='lib/descartes-min.js'></script>
+</head>
+
+<body style="margin:0; background:#eff0f1;">
+
+  <div align="center">
+    <ajs name="Descartes" width="970" height="550" code="Descartes">
+      <param name="Versión" value="6">
+      <param name="tamaño" value="970x550">
+      <param name="decimal_symbol" value=".">
+      <param name="image_loader" value="">
+      <param name="expand" value="">
+      <param name="nombre" value="Descartes">
+      <param name="antialias" value="sí">
+      <param name="deshacer" value="no">
+      <param name="editable" value="sí">
+      <param name="Idioma" value="español">
+      <param name="Botones" value="créditos=no config=no inicio=no limpiar=no filas_norte=0 filas_sur=0 ancho_este=150 ancho_oeste=150 alto=40 ">
+      <param name="E_01" value="tipo='R2' id='E1' x='0' y='0' ancho='100%' alto='100%' dibujar-si='1' fijo='no' E0.escala='48' O.x='0' O.y='0' despl_imagen='arr-izq' fondo='ffffff' red='c0c0c0' red10='808080' ejes='404040' texto='no' números='no' sensible_a_los_movimientos_del_ratón='no' ">
+      <param name="A_01" value="id='nums' vector='sí' evaluar='una-sola-vez' tamaño='50' ">
+      <param name="A_02" value="id='initNums(nP)' algoritmo='sí' expresión='0' local='i' inicio='i=0' hacer='nums[i]=i;i=i+1' mientras='i<nP' ">
+      <param name="A_03" value="id='creaAleatorios(nP)' algoritmo='sí' expresión='0' local='i,idx1,idx2,tmpN1,tmpN2' inicio='n=nP;initNums(n);i=0;' hacer='idx1=ent(rnd*n);idx2=ent(rnd*n);;tmpN1=nums[idx1];tmpN2=nums[idx2];;nums[idx1]=tmpN2;nums[idx2]=tmpN1;i=i+1' mientras='i<n*2' ">
+      <param name="A_04" value="id='INICIO' algoritmo='sí' evaluar='una-sola-vez' hacer='debug=1;n=10;creaAleatorios(n)' ">
+      <param name="A_05" value="id='CALCULOS' algoritmo='sí' evaluar='siempre' ">
+      <param name="G_01" value="espacio='E1' tipo='texto' fondo='no' color='20303a' dibujar-si='debug' expresión='[20,20]' texto='n = [n]' decimales='2' fijo='no' ancho='1' fuente='SansSerif,PLAIN,18' ">
+      <param name="G_02" value="espacio='E1' tipo='texto' fondo='no' color='20303a' dibujar-si='debug' expresión='[20,40+s*16]' familia='s' s.intervalo='[0,n-1]' s.pasos='n-1' texto='[s] : [nums[s]]' decimales='2' fijo='no' ancho='1' fuente='SansSerif,PLAIN,18' ">
+    </ajs>
+  </div>
+
+  <div align="center">
+    <ajs name="Descartes" width="970" height="550" code="Descartes">
+      <param name="Versión" value="6">
+      <param name="tamaño" value="970x550">
+      <param name="decimal_symbol" value=".">
+      <param name="image_loader" value="">
+      <param name="expand" value="">
+      <param name="nombre" value="Descartes">
+      <param name="antialias" value="sí">
+      <param name="deshacer" value="no">
+      <param name="editable" value="sí">
+      <param name="Idioma" value="español">
+      <param name="Botones" value="créditos=no config=no inicio=no limpiar=no filas_norte=0 filas_sur=0 ancho_este=150 ancho_oeste=150 alto=40 ">
+      <param name="E_01" value="tipo='R2' id='E1' x='0' y='0' ancho='100%' alto='100%' dibujar-si='1' fijo='no' escala='48' O.x='0' O.y='0' despl_imagen='arr-izq' fondo='ffffff' red='c0c0c0' red10='808080' ejes='404040' texto='no' números='no' sensible_a_los_movimientos_del_ratón='no' ">
+      <param name="C_01" value="id='random.debug' tipo='numérico' interfaz='pulsador' región='sur' espacio='E1' nombre='random.debug' expresión='(0,0,150,40)' valor='random.debug' incr='1' min='0' max='1' discreto='no' decimales='2' fijo='sí' visible='sí' acción='calcular' ">
+      <param name="C_02" value="id='random.n' tipo='numérico' interfaz='pulsador' región='sur' espacio='E1' nombre='random.n' expresión='(0,0,150,40)' valor='random.n' incr='1' min='2' max='50' discreto='no' decimales='2' fijo='no' visible='sí' acción='calcular' parámetro='random.creaAleatorios(random.n)' ">
+      <param name="A_01" value="id='INICIO' algoritmo='sí' evaluar='una-sola-vez' hacer='random.debug=0;random.creaAleatorios(30)' ">
+      <param name="A_02" value="id='CALCULOS' algoritmo='sí' evaluar='siempre' ">
+      <param name="G_01" value="espacio='E1' tipo='macro' fondo='no' coord_abs='no' nombre='random' expresión='random.txt' rotini='0' posini='[0,0]' ">
+    </ajs>
+  </div>
+
+
+</body>
+</html>

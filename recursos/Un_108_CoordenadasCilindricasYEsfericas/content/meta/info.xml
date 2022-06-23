@@ -1,0 +1,81 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<recurso 
+	id="_Un_108_CoordenadasCilindricasYEsfericas" 
+	nivel="Licenciatura" 
+	area="Matemáticas, Cálculo, Cálculo de varias variables, Geometría analítica" 
+	plataforma="HTML 5" 
+	>
+	<titulo><![CDATA[
+		Coordenadas cilíndricas y esféricas 
+	]]></titulo>
+	
+	<Descripcion><![CDATA[
+		Las coordenadas cilíndricas son una extensión de las coordenadas polares a un espacio tridimensional. Estas se usan, entre otras cosas, para describir el movimiento de partículas en una superficie cilíndrica. El objetivo de esta unidad didáctica es que el alumno conozca los sistemas de coordenadas cilíndricas y esféricas, que visualice la gráfica de la ecuación de algunas superficies dadas en estos sistemas de coordenadas en un espacio tridimensional y la manipule. 
+	]]></Descripcion>
+</recurso>
+
+<!--
+********************************************************************************
+                               **** Áreas **** 
+Matemáticas 
+	Aritmética
+		Fracciones
+	Álgebra
+		Combinatoria
+		Ecuaciones lineales
+		Ecuaciones polinomiales
+		Polinomios
+		Álgebra lineal
+		Teoría de grupos
+		Álgebra abstracta
+	Geometría
+		Geometría elemental
+		Geometría clásica
+		Geometría analítica
+	Trigonometría 
+	Probabilidad 
+		Cálculo de probabilidades
+		Eventos
+		Variables aleatorias
+		Ley de los grandes números
+		Teorema del límite central
+	Estadística
+		Medidas de tendencia central
+		Muestreo
+		Distribuciones
+		Inferencia
+	Cálculo
+		Funciones 
+		Límites
+		Continuidad
+		Derivadas 
+		Integrales 
+	Teoría de números
+	Teoría de gráficas
+Física
+	Mecánica
+	Electromagnetismo
+	Óptica
+	Físico-química 
+	Termodinámica
+	Mecánica estadística
+	Mecánica cuántica
+	Relatividad
+
+********************************************************************************
+
+********************************************************************************
+                             **** Niveles ****
+
+	Primaria
+	Preescolar
+	Secundaria
+	Bachillerato
+	Licenciatura
+	Posgrado 
+	Maestria
+	Doctorado
+
+********************************************************************************
+
+-->

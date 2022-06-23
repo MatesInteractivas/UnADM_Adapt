@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+ 	<link href="../css/html5_mobile.css" rel="stylesheet" type="text/css" media="screen" />
+	<link href="../css/DescHTML5.css" rel="stylesheet" type="text/css" media="screen" />
+	<script type="text/javascript" src='../javascript/inject_functions_scorms_descartes.js'></script>
+	<script type='text/javascript' src='../lib/descartes-min.js'></script>
+</head>
+
+<body>
+ <!-------- MathJax --- para fórmulas matemáticas ------>	
+	<script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script> 
+
+<article class="course_content_container">
+  
+  <div class="course_content">
+    
+    
+    <!------ INICIA EL CONTENIDO DE LA PÁGINA --------->
+    
+    
+    <!--- Título de la página --->
+    <h1>Razón de las bases y su utilidad</h1>
+    
+    
+	<div class='text_panel'>
+		<!--- Subtítulo (no necesario en introducción) --->
+		<h2 align="center">¿Para qué otras bases?</h2>
+
+	<p>
+	Desde niños nos enfrentamos a la base decimal. Ello responde muy probablemente a que tenemos 10 dedos y los usamos para contar. Cuando usamos todos los dedos de la mano, conviene incluir un dígito adicional (las decenas) para seguir contando, tal como pudiste notar a lo largo de la unidad. Parece entonces que con una base sería suficiente. Es entonces cuando nos compete preguntarnos, ¿para qué nos sirven otras bases?
+	</p>
+
+	<p>
+	Es importante conocer la base binaria puesto que es la que representa muchos fenómenos en la naturaleza, que responden a dos estados: prendido o apagado. Una neurona por sí sola puede descargar o no hacerlo (ésos son sus dos estados). Un circuito puede estar abierto o cerrado. Cuando se programa un procesador, inicialmente se tiene que trabajar en base binaria. Posteriormente se pueden ir implementando funciones que permitan representar bases más grandes. Pero en el inicio no nos salvamos de trabajar en dicha base.
+	</p>
+
+	<p>
+	Las bases mayores a 10 permiten resumir datos. Veamos un ejemplo. Un color determinado en una pantalla está dado por una combinación de tres contribuciones: el rojo, verde y azul. Cada contribución va de 0 a 255, donde 0 implica que dicho color no contribuye y 255 implica que contribuye totalmente. Por ejemplo, el color lavanda tiene una contribución de 181 para el rojo, 126 para el verde y 220 para el azul. Esto lo podemos poner como 181126220. Pero si usamos hexadecimal para representarlo, tendría una contribución B5 para el rojo, 7E para el verde y DC para el azul. Así que su código en hexadecimal es B57EDC. Nota que se usaron menos dígitos para representarlo en hexadecimal (6 dígitos) que en decimal (9 dígitos). Esto es un ejemplo de que una base mayor nos puede permitir resumir información.
+	</p>
+
+	<p>
+	Además de las bases binaria, decimal y hexadecimal hay otras como la octal con un total de 8 símbolos por dígito (con dígitos del 0 al 7). También existen otras como la base 20 y la sexagesimal (o base 60). La mayoría de las calculadoras científicas permiten convertir números entre estas bases. Intenta usar una para practicar con otras bases más allá de las estudiadas en esta unidad.
+	</p>
+
+	<p>
+	Básicamente es posible tener cualquier número de símbolos por base para contar. Lo importante, como pudiste notar a lo largo de la unidad, es tener un orden de valor para los símbolos, y usar apropiadamente los dígitos en que ellos se encuentran. A pesar de la existencia de otras bases, la decimal es por mucho a la que todos estamos más acostumbrados.
+	</p>
+
+	<p>
+	En algunas ocasiones es útil convertir números entre bases no decimales (por ejemplo de la binaria a la hexadecimal). Esto siempre se puede lograr, por ejemplo, convirtiendo de la base binaria a la decimal, y luego de la decimal a la hexadecimal. Es decir, siempre se puede usar la base decimal como puente para pasar de la binaria a la hexadecimal o viceversa. Como un ejercicio para que extiendas por tu cuenta tu habilidad para convertir entre bases, considera lo siguiente: <em>¿Es posible pasar de la base binaria a la hexadecimal de forma directa?</em> La respuesta es sí. Como ayuda, considera que involucrar cuatro dígitos en la base binaria corresponde a contar hasta dieciséis elementos. Y eso es justo lo que se puede contar con un dígito de la base hexadecimal. Tomando de cuatro en cuatro dígitos en la base binaria por cada uno en la hexadecimal puedes convertir directamente de la base binaria a la decimal. ¡Inténtalo!
+	</p>
+
+	<h2 align="center">Concepción de otras bases</h2>
+
+	<p>
+	Como se comentó antes, la base que hace funcionar las computadoras y nuestros cerebros es binaria. ¿Cómo es posible que podamos entonces entender bases mayores? ¿Cómo es posible que las computadoras puedan manejar otras bases mayores también?
+	</p>
+
+	<p>
+	En una computadora no hay sólo un circuito, sino una gran cantidad de circuitos. Aunque cada uno es binario, el conjunto de varios circuitos se puede usar para representar bases mayores. Algo similar ocurre en el cerebro. Y es por eso que podemos desde niños entender la base decimal que es mayor que la binaria. Más recientemente se ha observado que algunas neuronas se comportan de forma análoga. Esto se puede ver como que tienen grados de <em>prendido</em>. En este sentido, dichas neuronas no se comportan completamente siguiendo una base binaria. Sin embargo, la mayor parte del comportamiento de las neuronas individuales se puede representar con una base binaria.
+	</p>
+
+	<p>
+	Ahora ya sabes para qué sirve conocer otras bases. Y lo más importante, cuentas con las herramientas necesarias para abordar otros tipos de bases.
+	</p>
+
+    <!------ TERMINA EL CONTENIDO DE LA PÁGINA --------->
+</div>
+
+
+
+  <!------ INICIA LA INFO SOBRE LAS LICENCIAS Y LOS CRÉDITOS. ---------->
+    <a id="btCopyright" class="standardButton" title="Haz clic aquí para consultar los créditos y las condiciones de uso de este recurso." href="#" onclick="document.getElementById('copyright').className='visible';">©</a>
+    <div id="copyright" class="oculto">
+      
+      <div class='innerCopyright'>
+      
+          <a id="btCloseCopyright" class="standardButton" title="Haz clic aquí para cerrar esta ventana." href="#" onclick="document.getElementById('copyright').className='oculto'">×</a>
+  
+          <!-- Créditos UAM  (siempre deben ir en primer lugar) -->
+			<div class="creditos">
+				<h1>
+					Créditos 
+				</h1>
+								<table class="autores" 	>
+					<tr> <td  class="rol"> Diseño del contenido			</td>		<td class="nombre"> Alejandro Radillo Díaz, LITE</td></tr>
+					<tr> <td  class="rol"> Diseño funcional				</td>		<td class="nombre"> Alejandro Radillo Díaz, LITE</td></tr>
+					<tr> <td  class="rol"> Programación					</td>		<td class="nombre"> Alejandro Radillo Díaz, LITE</td></tr>
+					<!-- Varias personas en el mismo rubro, separar por <br> -->
+					<tr> <td  class="rol"> Asesoría de programación		</td>		<td class="nombre">Oscar Escamilla González, LITE</td></tr>
+					<tr> <td  class="rol"> Diseño gráfico				</td>		<td class="nombre">Francisco Varela Fuentes</td></tr>
+					<tr> <td  class="rol" >Coordinación					</td>		<td class="nombre"> Leticia Montserrat Vargas Rocha</td></tr>
+					
+				</table>
+	         
+	         <div class='logos'>
+	            <a href=''>
+	               <img src="../images/info/icns/logoLite.png">
+	            </a>
+	            <a href="http://www.unadmexico.mx/">
+	               <img src="../images/info/icns/logoUNADM.png">
+	            </a>
+	         </div>
+          </div>
+          
+          <!-- Linea separación créditos -->
+          <hr class="linea" />
+     
+          <!-- Aviso licencias -->
+          <div class="licencias">
+          
+				<p class="creativeCommons">Los contenidos de esta unidad didáctica interactiva están bajo una licencia <a href="http://creativecommons.org/licenses/by-nc-sa/2.5/es/" target="_blank">Creative Commons Reconocimiento-NoComercial-CompartirIgual</a>.</p>
+
+				<!--arquimedes (optativo)-->
+				<p>La unidad didáctica fue creada con <a href="http://arquimedes.matem.unam.mx/Descartes5/creditos/conCCL.html" target="_blank">Arquímedes</a>, una herramienta de código abierto.</p>
+
+				<!-- Descartes -->
+				<p>La unidad didáctica contiene escenas elaboradas con Descartes, una herramienta de código abierto.</p>
+
+
+          	<p style='text-align:center'> LITE - UnADM 2014</p>
+          </div>
+      </div>
+    </div> 
+   <!------ TERMINA LA INFO SOBRE LAS LICENCIAS Y LOS CRÉDITOS. ---------->
+  
+  
+  </div>
+  
+  
+</article>
+
+
+</body>
+
+</html>

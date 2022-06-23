@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Desarrollo</title>	
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<link href="../css/DescHTML5.css" rel="stylesheet" type="text/css" media="screen" />
+	<link href="../css/html5_mobile.css" rel="stylesheet" type="text/css" media="screen" />
+  <script type="text/javascript" src='../javascript/inject_functions_scorms_descartes.js'></script>
+	<script type='text/javascript' src='../lib/descartes-min.js'></script>
+</head>
+<body>
+ <!-------- MathJax --- para fórmulas matemáticas ------>	
+	<script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+  <article class="course_content_container">
+  <div class="course_content">
+		<h2 align="center">De hexadecimal a decimal</h2>
+
+		<h2>Usando el conteo en decimal para entender mejor</h2>
+    
+		<!--- Párrafo --->
+	<p>
+	Anteriormente viste la forma de cambiar un número de binario a decimal. Ahora verás cómo cambiar de hexadecimal (o hex para abreviar) a decimal.
+	</p>
+
+	<p>
+	En la conversión de binario a decimal notaste que cada dígito puede ya sea contribuir (si el símbolo en el dígito es 1) o no (si el símbolo en el dígito es 0) a la suma que da el número en decimal. Ello sólo ocurre en el binario, pues sólo acepta esas dos opciones. No obstante, bases con más de dos símbolos, como la hexadecimal, la contribución al número es gradual (no es sólo que haya o no haya contribución). El grado de la contribución depende del símbolo en cada dígito.
+	</p>
+
+	<p>
+	Seguramente recuerdas que cada dígito en hexadecimal tiene 16 opciones (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, A, B, C, D, E y F). Cuando el dígito del extremo derecho gastó todas sus opciones, regresa a la primera (0) y el segundo dígito de la derecha cambia a su siguiente opción (de 0 a 1). El dígito del extremo derecho entonces gasta todas sus opciones y regresa al cero, y el de a su izquierda, que estaba en 1, ahora cambia a 2. Y así sucesivamente hasta que el segundo dígito de la derecha gasta todas sus opciones, con lo que el tercero desde la derecha cambia a su siguiente dígito.
+	</p>
+
+	<p>
+	Así, hay 16 opciones para el dígito del extremo derecho e, independientemente, hay 16 opciones para el que le sigue, y así en adelante. De forma semejante al caso de la base binaria, ahora dejaremos el 0 (cuando todos los dígitos tienen valor de 0) para la ausencia de elementos contados. Haciendo esto, nota que cuando el primer dígito gasta todas sus opciones (y el segundo dígito cambia al valor 1), se han contado 16 elementos (o bien, \(16^1\) elementos). De forma análoga al caso binario, cuando el tercer dígito cambia de 0 a 1, se habrán contado \(16^2=256\) elementos.
+	</p>
+
+	<p>
+	Notamos entonces algunos puntos:
+	<ul>
+		<li>La base de la potencia en este caso es 16, pues es el número de símbolos que cada dígito puede ocupar.</li>
+		<li>Los dígitos van ordenados del 0 al F de la siguiente forma: 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, A, B, C, D, E, F.</li>
+		<li>Para saber cuántos elementos se han contado para un dígito dado se puede echar mano de la fórmula \(d\times16^n\), con \(n\) el número de dígito, contado de la derecha a la izquierda y asociando el dígito del extremo derecho a \(n=0\). \(d\) es el valor de dígito en cuestión. Si vale entre 0 y 9, su valor es el que tiene. Si el dígito es A vale 10, si es B vale 11, si es C vale 12 y así sucesivamente hasta que si es F vale 15.</li>
+		<li>Cuando hay varios dígitos con sus distintos valores, cada uno contribuye a una suma que constituirá el número de elementos contados.</li>
+	</ul>
+	</p>
+	
+	<p class='instruccion'>
+    <span class="instrucciones">
+  		En el siguiente interactivo podrás practicar transformando números en base hex a base decimal. Al principio del interactivo se presenta una pantalla con información de cómo usar el interactivo. Revísalo con calma antes de empezar.
+    </span>
+	</p>
+	
+<div class="Descartes_extern_content">
+  <ajs name="Descartes" width=485 height=300 code="Descartes">
+   <param name="tamaño" value="485x300">
+   <param name="image_loader" value="">
+   <param name="expand" value="">
+   <param name="decimal_symbol" value=".">
+   <param name="antialias" value="sí">
+   <param name="deshacer" value="no">
+   <param name="nombre" value="Descartes">
+   <param name="Versión" value="5.4, 2016-05-18">
+   <param name="Idioma" value="español">
+   <param name="Botones" value="créditos=no config=no inicio=no limpiar=no">
+   <param name="E_01" value="tipo='R2' id='E1' fijo='sí' escala='1' O.x='-50%' O.y='-50%' despl_imagen='arr-izq' fondo='dcdbe1' red='no' red10='no' ejes='no' texto='no'">
+   <param name="E_02" value="tipo='R2' id='MASK' dibujar-si='(INFO.visible==1)|(RETRO.visible==1)' fijo='sí' imagen='imgs/tpl/backwindow.png' despl_imagen='mosaico' fondo='95000000' red='no' red10='no' ejes='no' texto='no'">
+   <param name="E_03" value="tipo='R2' id='INFO' x='INFO.x' y='INFO.y' ancho='INFO.w' alto='INFO.h' dibujar-si='INFO.visible==1' fijo='sí' imagen='imgs/tpl/retro_790x470.png' despl_imagen='mosaico' red='no' red10='no' ejes='no' texto='no'">
+   <param name="E_04" value="tipo='R2' id='RETRO' x='RETRO.x' y='RETRO.y' ancho='RETRO.w' alto='RETRO.h' dibujar-si='RETRO.visible==1' fijo='sí' imagen='imgs/tpl/retro_790x470.png' despl_imagen='mosaico' red='no' red10='no' ejes='no' texto='no'">
+   <param name="C_01" value="id='cerrarInfo' tipo='numérico' interfaz='botón' región='interior' espacio='INFO' expresión='(cerrarInfo.x,cerrarInfo.y,cerrarInfo.w,cerrarInfo.h)' fijo='sí' visible='sí' color='blanco' fuente puntos='26' imagen='_STYLE_|class=btnUNADM icon cerrar| shadowTextColor=rgba(0,0,0,0.2)| shadowTextOffsetY=2| shadowTextBlur=0| textBorder=0 ' acción='calcular' parámetro='INFO.visible=-1' dibujar-si='cerrarInfo.visible'">
+   <param name="C_02" value="id='btnShwInfo' tipo='numérico' interfaz='botón' región='interior' espacio='E1' nombre='_nada_' expresión='(btnShwInfo.x,btnShwInfo.y,btnShwInfo.w,btnShwInfo.h)' fijo='sí' visible='sí' color='blanco' negrita='sí' cursiva='sí' fuente puntos='18' imagen='_STYLE_|class=btnUNADM icon info|shadowTextColor=rgba(0,0,0,0.2)|shadowTextOffsetY=2|shadowTextBlur=0|textBorder=0 |' acción='calcular' parámetro='INFO.visible=1' pos_mensajes='centro'">
+   <param name="C_03" value="id='txtCoef' tipo='numérico' interfaz='campo de texto' solo_texto='sí' región='interior' espacio='E1' expresión='(txtCoef.x,txtCoef.y,txtCoef.w,txtCoef.h)' valor='&squot;&squot;' fijo='sí' visible='sí' dibujar-si='LnchInd!=-1' activo-si='VrfCoef!=1' pos_mensajes='centro'">
+   <param name="C_04" value="id='txtExp' tipo='numérico' interfaz='campo de texto' solo_texto='sí' región='interior' espacio='E1' expresión='(txtExp.x,txtExp.y,txtExp.w,txtExp.h)' valor='&squot;&squot;' fijo='sí' visible='sí' dibujar-si='LnchInd!=-1' activo-si='VrfExp!=1' pos_mensajes='centro'">
+   <param name="C_05" value="id='txtPot' tipo='numérico' interfaz='campo de texto' solo_texto='sí' región='interior' espacio='E1' expresión='(txtPot.x,txtPot.y,txtPot.w,txtPot.h)' valor='&squot;&squot;' fijo='sí' visible='sí' dibujar-si='LnchInd!=-1' activo-si='VrfPot!=1' pos_mensajes='centro'">
+   <param name="C_06" value="id='btnVerif' tipo='numérico' interfaz='botón' región='interior' espacio='E1' nombre='Verificar' expresión='(btnVerif.x,btnVerif.y,btnVerif.w,btnVerif.h)' fijo='sí' visible='sí' color='blanco' color-int='f7000000' negrita='sí' fuente puntos='16' imagen='_STYLE_|class=btnUNADM|shadowTextColor=rgba(0,0,0,0.2)|shadowTextOffsetY=2|shadowTextBlur=0|textBorder=0' acción='calcular' parámetro='Verif()' dibujar-si='LnchInd!=-1' pos_mensajes='centro'">
+   <param name="C_07" value="id='btnOtroEj' tipo='numérico' interfaz='botón' región='interior' espacio='E1' nombre='Otro' expresión='(btnOtroEj.x,btnOtroEj.y,btnOtroEj.w,btnOtroEj.h)' fijo='sí' visible='sí' color='blanco' color-int='f7000000' negrita='sí' fuente puntos='16' imagen='_STYLE_|class=btnUNADM|shadowTextColor=rgba(0,0,0,0.2)|shadowTextOffsetY=2|shadowTextBlur=0|textBorder=0' acción='calcular' parámetro='reinNuevoEj()' dibujar-si='IndSumando==5' pos_mensajes='centro'">
+   <param name="C_08" value="id='cerrarRetro' tipo='numérico' interfaz='botón' región='interior' espacio='RETRO' expresión='(cerrarRetro.x,cerrarRetro.y,cerrarRetro.w,cerrarRetro.h)' fijo='sí' visible='sí' color='blanco' fuente puntos='26' imagen='_STYLE_|class=btnUNADM icon cerrar| shadowTextColor=rgba(0,0,0,0.2)| shadowTextOffsetY=2| shadowTextBlur=0| textBorder=0 ' acción='calcular' parámetro='RETRO.visible=-1' dibujar-si='cerrarRetro.visible' pos_mensajes='centro'">
+   <param name="A_01" value="id='Sumandos' vector='sí' evaluar='una-sola-vez' tamaño='5'">
+   <param name="A_02" value="id='Palomas' vector='sí' evaluar='una-sola-vez' tamaño='5'">
+   <param name="A_03" value="id='EntHex' vector='sí' matriz='sí' evaluar='una-sola-vez' columnas='8' expresión=';'">
+   <param name="A_04" value="id='irAEscena(idxEscena)' algoritmo='sí' algoritmo='sí' hacer='parent.set(&squot;scene&squot;,idxEscena);parent.update()'">
+   <param name="A_05" value="id='initBtns()' algoritmo='sí' algoritmo='sí' hacer='cerrarInfo.w=30;cerrarInfo.h=30;cerrarInfo.x=INFO._w-cerrarInfo.w-1;cerrarInfo.y=1;cerrarInfo.visible=1;;btnShwInfo.w=30;btnShwInfo.h=30;btnShwInfo.x=E1._w-5-30;btnShwInfo.y=E1._h-5-30;;cerrarRetro.w=30;cerrarRetro.h=30;cerrarRetro.x=RETRO._w-cerrarRetro.w-1;cerrarRetro.y=1;cerrarRetro.visible=1;;btnVerif.x=265;btnVerif.y=190;btnVerif.w=100;btnVerif.h=40;;btnOtroEj.x=E1._w/2-50;btnOtroEj.y=190;btnOtroEj.w=100;btnOtroEj.h=40;;txtCoef.w=40;txtCoef.h=40;txtCoef.x=10;txtCoef.y=205;;txtExp.w=40;txtExp.h=40;txtExp.x=85;txtExp.y=185;;txtPot.w=100;txtPot.h=40;txtPot.x=155;txtPot.y=205'">
+   <param name="A_06" value="id='initEsp()' algoritmo='sí' algoritmo='sí' hacer='INFO.w=485;INFO.h=290;INFO.x=(E1._w-INFO._w)/2;INFO.y=(E1._h-INFO._h)/2;INFO.visible=1;;RETRO.w=485;RETRO.h=290;RETRO.x=(E1._w-RETRO._w)/2;RETRO.y=(E1._h-RETRO._h)/2;RETRO.visible=0;;EspTxt.x=E1._w-EspTxt._w-10;EspTxt.y=E1._h-EspTxt._h-10;EspTxt.visible=1'">
+   <param name="A_07" value="id='initEscena()' algoritmo='sí' algoritmo='sí' hacer='initBtns();initEsp();;genDec();ReInitPalomas();LnchInd=-1;'">
+   <param name="A_08" value="id='ReInitPalomas()' algoritmo='sí' algoritmo='sí' Local='i' inicio='i=0' hacer='Palomas[i]=0;i=i+1' mientras='i<5'">
+   <param name="A_09" value="id='genDec()' algoritmo='sí' algoritmo='sí' inicio='nDec=ent(rnd*((16^5-1)+0.99999));Suma=0;IndSumando=0' hacer='toHex()'">
+   <param name="A_10" value="id='toHex()' algoritmo='sí' algoritmo='sí' Local='i,n,nmem,res' inicio='i=0;n=nDec;nmem=n' hacer='n=nmem;res=n%16;EntHex[i,0]=res;EntHex[i,2]=(res<10)?res:EntHex[i,2];EntHex[i,2]=(res==10)?&squot;A&squot;:EntHex[i,2];EntHex[i,2]=(res==11)?&squot;B&squot;:EntHex[i,2];EntHex[i,2]=(res==12)?&squot;C&squot;:EntHex[i,2];EntHex[i,2]=(res==13)?&squot;D&squot;:EntHex[i,2];EntHex[i,2]=(res==14)?&squot;E&squot;:EntHex[i,2];EntHex[i,2]=(res==15)?&squot;F&squot;:EntHex[i,2];;nmem=ent(n/16);i=i+1' mientras='i<5'">
+   <param name="A_11" value="id='Verif()' algoritmo='sí' algoritmo='sí' hacer='VrfCoef=(_Num_(txtCoef)==EntHex[LnchInd,0])?1:2;VrfExp=(_Num_(txtExp)==LnchInd)?1:2;Sumando=EntHex[LnchInd,0]*(16^LnchInd);VrfPot=(_Num_(txtPot)==Sumando)?1:2;Vrf=((VrfCoef==1)&(VrfExp==1)&(VrfPot==1))?1:2;bla=(Vrf==1)?stepDigit():bla;RETRO.visible=(Vrf==2)?1:-1;CoefFill=(txtCoef!=&squot;&squot;)?1:0;ExpFill=(txtExp!=&squot;&squot;)?1:0;PotFill=(txtPot!=&squot;&squot;)?1:0'">
+   <param name="A_12" value="id='stepDigit()' algoritmo='sí' algoritmo='sí' hacer='EntHex[LnchInd,1]=(Vrf==1)?1:0;Palomas[LnchInd]=(Vrf==1)?1:Palomas[LnchInd];LnchInd=(Vrf==1)?-1:LnchInd;txtCoef=&squot;&squot;;txtExp=&squot;&squot;;txtPot=&squot;&squot;;VrfCoef=0;VrfExp=0;VrfPot=0;Suma=Suma+Sumando;Sumandos[IndSumando]=Sumando;IndSumando=IndSumando+1;;per=max(100*IndSumando/5,per);setSCORMPercentage(per)'">
+   <param name="A_13" value="id='selecInd()' algoritmo='sí' algoritmo='sí' hacer='Lnch=MReleased&(My>-70)&(My<-50)&((Mx-130)%50<=25);LnchInd=(Lnch)?4-ent((Mx-130)/50):LnchInd'">
+   <param name="A_14" value="id='reinNuevoEj()' algoritmo='sí' algoritmo='sí' Local='i' inicio='i=0;genDec();ReInitPalomas();LnchInd=-1;IndSumando=0' hacer='EntHex[i,1]=0;i=i+1' mientras='i<5'">
+   <param name="A_15" value="id='__FIN_TPL_()'">
+   <param name="A_16" value="id='getSCORMState()' algoritmo='sí' expresión='res' algoritmo='sí' Local='res,c' inicio='c=&squot;@&squot;' hacer='ö=|Estandar ---- [MIDC]XX.<var>  SI SOLO EXISTE UNA ESCENA EN EL HTML|;ö=|Estandar ---- [MIDC]XX_YY.<var>  SI HAY MAS DE UNA ESCENA EN EL HTML|;;res=&squot;D03.INFO.visible:&squot;+INFO.visible+c;res=res+&squot;D03.RETRO.visible:&squot;+RETRO.visible+c;;res=res+&squot;D03.Sumandos0:&squot;+Sumandos[0]+c;res=res+&squot;D03.Sumandos1:&squot;+Sumandos[1]+c;res=res+&squot;D03.Sumandos2:&squot;+Sumandos[2]+c;res=res+&squot;D03.Sumandos3:&squot;+Sumandos[3]+c;res=res+&squot;D03.Sumandos4:&squot;+Sumandos[4]+c;res=res+&squot;D03.Sumandos5:&squot;+Sumandos[5]+c;res=res+&squot;D03.Sumandos6:&squot;+Sumandos[6]+c;res=res+&squot;D03.Sumandos7:&squot;+Sumandos[7]+c;res=res+&squot;D03.Sumandos8:&squot;+Sumandos[8]+c;;res=res+&squot;D03.Palomas0:&squot;+Palomas[0]+c;res=res+&squot;D03.Palomas1:&squot;+Palomas[1]+c;res=res+&squot;D03.Palomas2:&squot;+Palomas[2]+c;res=res+&squot;D03.Palomas3:&squot;+Palomas[3]+c;res=res+&squot;D03.Palomas4:&squot;+Palomas[4]+c;res=res+&squot;D03.Palomas5:&squot;+Palomas[5]+c;res=res+&squot;D03.Palomas6:&squot;+Palomas[6]+c;res=res+&squot;D03.Palomas7:&squot;+Palomas[7]+c;res=res+&squot;D03.Palomas8:&squot;+Palomas[8]+c;;res=res+&squot;D03.EntHex00:&squot;+EntHex[0,0]+c;res=res+&squot;D03.EntHex10:&squot;+EntHex[1,0]+c;res=res+&squot;D03.EntHex20:&squot;+EntHex[2,0]+c;res=res+&squot;D03.EntHex30:&squot;+EntHex[3,0]+c;res=res+&squot;D03.EntHex40:&squot;+EntHex[4,0]+c;res=res+&squot;D03.EntHex50:&squot;+EntHex[5,0]+c;res=res+&squot;D03.EntHex60:&squot;+EntHex[6,0]+c;res=res+&squot;D03.EntHex70:&squot;+EntHex[7,0]+c;res=res+&squot;D03.EntHex80:&squot;+EntHex[8,0]+c;res=res+&squot;D03.EntHex90:&squot;+EntHex[9,0]+c;;res=res+&squot;D03.EntHex01:&squot;+EntHex[0,1]+c;res=res+&squot;D03.EntHex11:&squot;+EntHex[1,1]+c;res=res+&squot;D03.EntHex21:&squot;+EntHex[2,1]+c;res=res+&squot;D03.EntHex31:&squot;+EntHex[3,1]+c;res=res+&squot;D03.EntHex41:&squot;+EntHex[4,1]+c;res=res+&squot;D03.EntHex51:&squot;+EntHex[5,1]+c;res=res+&squot;D03.EntHex61:&squot;+EntHex[6,1]+c;res=res+&squot;D03.EntHex71:&squot;+EntHex[7,1]+c;res=res+&squot;D03.EntHex81:&squot;+EntHex[8,1]+c;res=res+&squot;D03.EntHex91:&squot;+EntHex[9,1]+c;;res=res+&squot;D03.EntHex02:&squot;+EntHex[0,2]+c;res=res+&squot;D03.EntHex12:&squot;+EntHex[1,2]+c;res=res+&squot;D03.EntHex22:&squot;+EntHex[2,2]+c;res=res+&squot;D03.EntHex32:&squot;+EntHex[3,2]+c;res=res+&squot;D03.EntHex42:&squot;+EntHex[4,2]+c;res=res+&squot;D03.EntHex52:&squot;+EntHex[5,2]+c;res=res+&squot;D03.EntHex62:&squot;+EntHex[6,2]+c;res=res+&squot;D03.EntHex72:&squot;+EntHex[7,2]+c;res=res+&squot;D03.EntHex82:&squot;+EntHex[8,2]+c;res=res+&squot;D03.EntHex92:&squot;+EntHex[9,2]+c;;res=res+&squot;D03.nDec:&squot;+nDec+c;res=res+&squot;D03.Suma:&squot;+Suma+c;res=res+&squot;D03.Lnch:&squot;+Lnch+c;res=res+&squot;D03.LnchInd:&squot;+LnchInd+c;res=res+&squot;D03.IndSumando:&squot;+IndSumando+c;res=res+&squot;D03.VrfCoef:&squot;+VrfCoef+c;res=res+&squot;D03.VrfExp:&squot;+VrfExp+c;res=res+&squot;D03.VrfPot:&squot;+VrfPot+c;res=res+&squot;D03.Vrf:&squot;+Vrf+c;res=res+&squot;D03.CoefFill:&squot;+CoefFill+c;res=res+&squot;D03.ExpFill:&squot;+ExpFill+c;res=res+&squot;D03.PotFill:&squot;+PotFill+c;res=res+&squot;D03.txtCoef:&squot;+txtCoef+c;res=res+&squot;D03.txtExp:&squot;+txtExp+c;res=res+&squot;D03.txtPot:&squot;+txtPot+c;;res=res+&squot;D03.per:&squot;+per+c'">
+   <param name="A_17" value="id='initStateScorm()' algoritmo='sí' expresión='x' algoritmo='sí' hacer='INFO.visible=(getSCORMStateVar(&squot;D03.INFO.visible&squot;)==0)?1:getSCORMStateVar(&squot;D03.INFO.visible&squot;);RETRO.visible=getSCORMStateVar(&squot;D03.RETRO.visible&squot;);;Sumandos[0]=getSCORMStateVar(&squot;D03.Sumandos0&squot;);Sumandos[1]=getSCORMStateVar(&squot;D03.Sumandos1&squot;);Sumandos[2]=getSCORMStateVar(&squot;D03.Sumandos2&squot;);Sumandos[3]=getSCORMStateVar(&squot;D03.Sumandos3&squot;);Sumandos[4]=getSCORMStateVar(&squot;D03.Sumandos4&squot;);Sumandos[5]=getSCORMStateVar(&squot;D03.Sumandos5&squot;);Sumandos[6]=getSCORMStateVar(&squot;D03.Sumandos6&squot;);Sumandos[7]=getSCORMStateVar(&squot;D03.Sumandos7&squot;);Sumandos[8]=getSCORMStateVar(&squot;D03.Sumandos8&squot;);;Palomas[0]=getSCORMStateVar(&squot;D03.Palomas0&squot;);Palomas[1]=getSCORMStateVar(&squot;D03.Palomas1&squot;);Palomas[2]=getSCORMStateVar(&squot;D03.Palomas2&squot;);Palomas[3]=getSCORMStateVar(&squot;D03.Palomas3&squot;);Palomas[4]=getSCORMStateVar(&squot;D03.Palomas4&squot;);Palomas[5]=getSCORMStateVar(&squot;D03.Palomas5&squot;);Palomas[6]=getSCORMStateVar(&squot;D03.Palomas6&squot;);Palomas[7]=getSCORMStateVar(&squot;D03.Palomas7&squot;);Palomas[8]=getSCORMStateVar(&squot;D03.Palomas8&squot;);;EntHex[0,1]=getSCORMStateVar(&squot;D03.EntHex01&squot;);EntHex[1,1]=getSCORMStateVar(&squot;D03.EntHex11&squot;);EntHex[2,1]=getSCORMStateVar(&squot;D03.EntHex21&squot;);EntHex[3,1]=getSCORMStateVar(&squot;D03.EntHex31&squot;);EntHex[4,1]=getSCORMStateVar(&squot;D03.EntHex41&squot;);EntHex[5,1]=getSCORMStateVar(&squot;D03.EntHex51&squot;);EntHex[6,1]=getSCORMStateVar(&squot;D03.EntHex61&squot;);EntHex[7,1]=getSCORMStateVar(&squot;D03.EntHex71&squot;);EntHex[8,1]=getSCORMStateVar(&squot;D03.EntHex81&squot;);;nDec=(getSCORMStateVar(&squot;D03.nDec&squot;)==0)?nDec:getSCORMStateVar(&squot;D03.nDec&squot;);toHex();Suma=getSCORMStateVar(&squot;D03.Suma&squot;);Lnch=getSCORMStateVar(&squot;D03.Lnch&squot;);LnchInd=(getSCORMStateVar(&squot;D03.LnchInd&squot;)==0)?-1:getSCORMStateVar(&squot;D03.LnchInd&squot;);IndSumando=getSCORMStateVar(&squot;D03.IndSumando&squot;);VrfCoef=getSCORMStateVar(&squot;D03.VrfCoef&squot;);VrfExp=getSCORMStateVar(&squot;D03.VrfExp&squot;);VrfPot=getSCORMStateVar(&squot;D03.VrfPot&squot;);Vrf=getSCORMStateVar(&squot;D03.Vrf&squot;);CoefFill=getSCORMStateVar(&squot;D03.CoefFill&squot;);ExpFill=getSCORMStateVar(&squot;D03.ExpFill&squot;);PotFill=getSCORMStateVar(&squot;D03.PotFill&squot;);txtCoef=(CoefFill==1)?getSCORMStateVar(&squot;D03.txtCoef&squot;):&squot;&squot;;txtExp=(ExpFill==1)?getSCORMStateVar(&squot;D03.txtExp&squot;):&squot;&squot;;txtPot=(PotFill==1)?getSCORMStateVar(&squot;D03.txtPot&squot;):&squot;&squot;;;per=getSCORMStateVar(&squot;D03.per&squot;)'">
+   <param name="A_18" value="id='initCtrsAnim()' algoritmo='sí' algoritmo='sí' hacer='primeraVez=1'">
+   <param name="A_19" value="id='INICIO' algoritmo='sí' evaluar='una-sola-vez' hacer='primeraVez=0;initEscena();initStateScorm();'">
+   <param name="A_20" value="id='CALCULOS' algoritmo='sí' evaluar='siempre' hacer='MC=E1.mouse_clicked;MP=E1.mouse_pressed;MDown=MP&(!MPA);MDragged=MP&MPA;MReleased=MPA&(!MP);Mx=E1.mouse_x;My=E1.mouse_y;;Ind=4-ent((Mx-130)/50);;bla=((LnchInd==-1)&(EntHex[Ind,1]!=1)&(Ind<=4)&(Ind>=0))?selecInd():bla;;MPA=MP'">
+   <param name="G_01" value="espacio='E1' tipo='texto' dibujar-si='0' expresión='[ctrF.txt.x,ctrF.txt.y]' texto='f(x) =' fuente='SansSerif,PLAIN,20' fijo='sí' color_borde_texto='blanco'">
+   <param name="G_02" value="espacio='E1' tipo='texto' fondo='sí' dibujar-si='0' expresión='[__GRAF__,20]' fijo='sí'">
+   <param name="G_03" value="espacio='E1' tipo='texto' fondo='sí' dibujar-si='0' expresión='[__INFO__,20]' fijo='sí'">
+   <param name="G_04" value="espacio='INFO' tipo='texto' fondo='sí' color='blanco' expresión='[20,5]' texto='Explicación e instrucciones' fuente='SansSerif,PLAIN,24' fijo='sí'">
+   <param name="G_05" value="espacio='INFO' tipo='texto' expresión='[5,40]' texto='Haz clic en un dígito en hex. Entonces llenarás unos campos de texto para determinar cuál es la contribución de dicho dígito hex en decimal.\nTras verificar, los campos de texto con respuesta correcta se volverán inactivos. Cuando todas las respuestas para el dígito que escogiste estén bien, aparecerá la contribución de dicho dígito en la suma.\nLos dígitos para los que has dado una respuesta correcta mostrarán una paloma de “correcto” sobre ellos. Entonces debes hacer clic en algún otro dígito para continuar.' fuente='SansSerif,PLAIN,20' fijo='sí' ancho='INFO._w-10'">
+   <param name="G_06" value="espacio='E1' tipo='imagen' dibujar-si='Palomas[s]==1' coord_abs='sí' expresión='(330-s*50,15)' familia='s' s.intervalo='[0,4]' s.pasos='4' archivo='imgs/bien.png' info='palomitas sobre dígitos'">
+   <param name="G_07" value="espacio='E1' tipo='segmento' coord_abs='sí' expresión='(E1._w/2-25*4.5+s*50,70)(E1._w/2-25*4.5+s*50+25,70)' familia='s' s.intervalo='[0,4]' s.pasos='4' fijo='sí' tamaño='0' ancho='2' info='subraya dígitos'">
+   <param name="G_08" value="espacio='E1' tipo='texto' expresión='[E1._w/2-25*4.5+s*50+15,60,0,0]' familia='s' s.intervalo='[0,4]' s.pasos='4' texto='[EntHex[4-s,2]]' fuente='SansSerif,PLAIN,19' decimales='0' fijo='sí' info='símbolos dígitos'">
+   <param name="G_09" value="espacio='E1' tipo='polígono' color='rojo' dibujar-si='LnchInd!=-1' coord_abs='sí' expresión='(345-25-LnchInd*50,55-25)(345+25-LnchInd*50,55-25)(345+25-LnchInd*50,55+25)(345-25-LnchInd*50,55+25)(345-25-LnchInd*50,55-25)' ancho='2'">
+   <param name="G_10" value="espacio='E1' tipo='texto' dibujar-si='LnchInd!=-1' expresión='[10,85]' texto='{\rtf1\uc0{\fonttbl\f0\fcharset0 Times New Roman;\f1\fcharset0 Arial;\f2\fcharset0 Times New Roman;}\f1\fs38 Qu\u233  d\u237 gito, de derecha a izquierda, es el seleccio-\par nado? \u191 Qu\u233  s\u237 mbolo tiene? Usa bien estos datos\par para calcular la contribuci\u243 n de este d\u237 gito. Para\par la potencia introduce s\u243 lo el resultado.\par \par \par        \f2\fs42\i{\*\mjaformula 16}         =\f1\fs38\i0}' fuente='SansSerif,PLAIN,19' decimales='0' fijo='sí' info='texto tras oprimir dígito'">
+   <param name="G_11" value="espacio='E1' tipo='texto' dibujar-si='IndSumando==5' expresión='[10,85]' texto='¡Muy bien!\n\nObserva que la suma es [nDec]. Ése es el valor en decimal del número hexadecimal mostrado arriba.' fuente='SansSerif,PLAIN,19' decimales='0' fijo='sí' ancho='E1._w-20' info='texto tras ejercicio correcto'">
+   <param name="G_12" value="espacio='RETRO' tipo='texto' fondo='sí' color='blanco' expresión='[20,5]' texto='Respuesta incorrecta' fuente='SansSerif,PLAIN,24' fijo='sí' info='título retro'">
+   <param name="G_13" value="espacio='RETRO' tipo='texto' expresión='[5,40]' texto='Conviene que recuerdes algunos puntos:\n\n- ¿El número de dígito se cuenta de izquierda a derecha o al revés?\n- ¿Hay que corregir el número de dígito sumándole o restándole una unidad?\n- ¿Qué papel juega el símbolo entre 0 y F que se encuentra en dicho dígito en la fórmula?\n\nCierra esta ventana e intenta otra respuesta.' fuente='SansSerif,PLAIN,20' fijo='sí' ancho='RETRO._w-10'">
+   <param name="G_14" value="espacio='E1' tipo='texto' dibujar-si='IndSumando>0' expresión='[10+90*s,255]' familia='s' s.intervalo='[0,min(IndSumando-1,5)]' s.pasos='min(IndSumando-1,5)' texto='[Sumandos[s]] [(s<4)?&squot;+&squot;:&squot;=&squot;]' fuente='SansSerif,PLAIN,19' decimales='0' fijo='sí' info='texto suma renglon superior'">
+   <param name="G_15" value="espacio='E1' tipo='texto' dibujar-si='IndSumando==5' expresión='[10,275]' texto='[Suma]' fuente='SansSerif,PLAIN,19' decimales='0' fijo='sí' info='texto suma renglon inferior'">
+   <param name="G_16" value="espacio='E1' tipo='texto' dibujar-si='0' expresión='[20,80]' texto='Sumando=[Sumando]\nnDec=[nDec]\nLnch=[Lnch]\nLnchInd=[LnchInd]\nVrfCoef=[VrfCoef]\nVrfExp=[VrfExp]\nIndSumando=[IndSumando]' decimales='0' fijo='sí' info='debug'">
+   <param name="Animación" value="pausa='200' controles='no' auto='sí' hacer='tt=(!primeraVez)?initStateScorm():0;tt=(!primeraVez)?initCtrsAnim():0' mientras='!primeraVez'">
+</ajs>
+</div></br>
+
+	<p>
+    Seguramente notaste que en este caso, a diferencia de lo que pasa con los símbolos en la base binaria, los dígitos ya no sólo tienen dos opciones. Las opciones en el binario eran 0 (con lo que no contribuyen nada al valor) o 1 (donde sí contribuyen). En el caso hexadecimal, los dígitos tienen muchas más opciones, y el coeficiente que tiene el dígito indica qué tanto contribuye al valor. Este comportamiento es parecido al de la base decimal, que tiene 10 diferentes opciones para cada dígito.
+	</p>
+
+	<p>
+    Igual que con la base binaria, en la base hex puedes abordar los dígitos en el orden que quieras. Ello se debe a que cada dígito brinda una contribución a la suma. El orden en que hiciste clic en los dígitos determina el orden en que aparecen las contribuciones a la suma (los sumandos). Como la suma es conmutativa, el orden no importa, pues no altera el resultado. Sin embargo, es útil usar mantener un orden cuando se hace la conversión de binario a decimal. El sugerido es empezar por el dígito del extremo derecho e ir hacia la izquierda. Así es más fácil recordar que, cada vez que se avanza un dígito, el exponente del \(16\) aumenta en una unidad.
+	</p>
+	
+	<p>
+    Más aún, nota que los dígitos que tengan 0 como símbolo pueden ser ignorados directamente debido a que no contribuirán al valor de la representación decimal. Así, sólo tendrás que enfocarte en aquellos dígitos con símbolo distinto de 0.
+	</p>
+</div>
+
+<!------ INICIA LA INFO SOBRE LAS LICENCIAS Y LOS CRÉDITOS. ---------->
+    <a id="btCopyright" class="standardButton" title="Haz clic aquí para consultar los créditos y las condiciones de uso de este recurso." href="#" onclick="document.getElementById('copyright').className='visible';">©</a>
+    <div id="copyright" class="oculto">
+      
+      <div class='innerCopyright'>
+      
+          <a id="btCloseCopyright" class="standardButton" title="Haz clic aquí para cerrar esta ventana." href="#" onclick="document.getElementById('copyright').className='oculto'">×</a>
+  
+          <!-- Créditos UAM  (siempre deben ir en primer lugar) -->
+			<div class="creditos">
+				<h1>
+					Créditos 
+				</h1>
+								<table class="autores" 	>
+					<tr> <td  class="rol"> Diseño del contenido			</td>		<td class="nombre"> Alejandro Radillo Díaz, LITE</td></tr>
+					<tr> <td  class="rol"> Diseño funcional				</td>		<td class="nombre"> Alejandro Radillo Díaz, LITE</td></tr>
+					<tr> <td  class="rol"> Programación					</td>		<td class="nombre"> Alejandro Radillo Díaz, LITE</td></tr>
+					<!-- Varias personas en el mismo rubro, separar por <br> -->
+					<tr> <td  class="rol"> Asesoría de programación		</td>		<td class="nombre">Oscar Escamilla González, LITE</td></tr>
+					<tr> <td  class="rol"> Diseño gráfico				</td>		<td class="nombre">Francisco Varela Fuentes</td></tr>
+					<tr> <td  class="rol" >Coordinación					</td>		<td class="nombre"> Leticia Montserrat Vargas Rocha</td></tr>
+					
+				</table>
+	         
+	         <div class='logos'>
+	            <a href=''>
+	               <img src="../images/info/icns/logoLite.png">
+	            </a>
+	            <a href="http://www.unadmexico.mx/">
+	               <img src="../images/info/icns/logoUNADM.png">
+	            </a>
+	         </div>
+          </div>
+          
+          <!-- Linea separación créditos -->
+          <hr class="linea" />
+     
+          <!-- Aviso licencias -->
+          <div class="licencias">
+          
+				<p class="creativeCommons">Los contenidos de esta unidad didáctica interactiva están bajo una licencia <a href="http://creativecommons.org/licenses/by-nc-sa/2.5/es/" target="_blank">Creative Commons Reconocimiento-NoComercial-CompartirIgual</a>.</p>
+
+				<!--arquimedes (optativo)-->
+				<p>La unidad didáctica fue creada con <a href="http://arquimedes.matem.unam.mx/Descartes5/creditos/conCCL.html" target="_blank">Arquímedes</a>, una herramienta de código abierto.</p>
+
+				<!-- Descartes -->
+				<p>La unidad didáctica contiene escenas elaboradas con Descartes, una herramienta de código abierto.</p>
+
+
+          	<p style='text-align:center'> LITE - UnADM 2014</p>
+          </div>
+      </div>
+    </div> 
+   <!------ TERMINA LA INFO SOBRE LAS LICENCIAS Y LOS CRÉDITOS. ---------->
+ </div>
+</article>
+</body>
+</html>

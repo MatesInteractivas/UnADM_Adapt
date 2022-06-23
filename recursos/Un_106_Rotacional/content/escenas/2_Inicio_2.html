@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+ 	<link href="../css/html5.css" rel="stylesheet" type="text/css" media="screen" />
+	<link href="../css/DescHTML5.css" rel="stylesheet" type="text/css" media="screen" />	
+	<script type='text/javascript' src='../lib/descartes-min.js'></script>
+</head>
+
+<body>
+ <!-------- MathJax --- para fórmulas matemáticas ------>	
+	<script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script> 
+
+<article class="course_content_container">
+  
+  <div class="course_content">
+    
+    
+    <!------ INICIA EL CONTENIDO DE LA PÁGINA --------->
+    
+    
+    <!--- Título de la página --->
+   <h1>Definición de rotacional</h1>
+    
+    
+	<div class='text_panel'>
+    
+    <p>Definiremos de forma algebraica el <b>rotacional de un campo vectorial</b>. Éste asocia a un campo vectorial en \( \mathbb{R}^3 \), \( \bar{F}= F_1\bar{i} + F_2\bar{j} + F_3\bar{k} = (F_1,F_2,F_3)\), otro campo vectorial rot \( \bar{F} \), definido como:</p>
+    
+    <p><div align="center">\( rot \bar{F} = (\frac{\partial F_3}{\partial y}-\frac{\partial F_2}{\partial z}) \bar{i} + (\frac{\partial F_1}{\partial z}-\frac{\partial F_3}{\partial x}) \bar{j} + (\frac{\partial F_2}{\partial x}-\frac{\partial F_1}{\partial y}) \bar{k} \)</div></p>
+    
+    <p>Para saber cómo se obtiene esta larga ecuación, podemos utilzar la notación de "operadores", los cuales actúan u operan a funciones con valores reales, un operador muy conocido, es el operador \( \nabla \), definido como:</p>
+    
+    <p><div align="center"> \( \nabla = \bar{i} \frac{\partial}{\partial x} + \bar{j} \frac{\partial}{\partial y} + \bar{k} \frac{\partial}{\partial z} \) </div></p>
+    
+    <p>Entonces, si este operador actúa en una función \( f \), se obtiene:</p>
+    
+    <p><div align="center"> \( \nabla = \bar{i} \frac{\partial f}{\partial x} + \bar{j} \frac{\partial f}{\partial y} + \bar{k} \frac{\partial f}{\partial z} \) </div></p>
+    
+    <p>Esto se conoce como el <b>gradiente de \( f \)</b>. Ahora si consideramos \( \nabla \) como un vector de componentes \( \partial/\partial x,\partial/\partial y,\partial/\partial z \), entonces podemos tomar el producto cruz \( \nabla \times \bar{F} \):</p>
+    
+    <p><div align="center"> \( \nabla \times \bar{F} = \begin{vmatrix} \bar{i} &\bar{j}  &\bar{k} \\ \frac{\partial}{\partial x} &\frac{\partial}{\partial y}  &\frac{\partial}{\partial z} \\ F_1 &F_2  &F_3 \end{vmatrix} = (\frac{\partial F_3}{\partial y}-\frac{\partial F_2}{\partial z}) \bar{i} + (\frac{\partial F_1}{\partial z}-\frac{\partial F_3}{\partial x}) \bar{j} + (\frac{\partial F_2}{\partial x}-\frac{\partial F_1}{\partial y}) \bar{k} = rot \bar{F} \)</div></p>
+    
+    <p>Así, el <b>rotacional</b> rot \( \bar{F} \) es igual que \( \nabla \times \bar{F} \), y a menudo se usa esta última expresión.</p>
+    
+    <p>Explicar el significado físico del rotacional es bastante complicado, sin embargo a continuación consideraremos una situación simple que muestra cómo el rotacional está asociado a giros.</p>
+	
+	<p>Como el rotacional se aplica a campos vectoriales veamos un ejemplo de estos, la fuerza de atracción gravitatoria entre dos objetos de masas M y m:</p>
+	
+	<p><div align="center">\( |\bar{F}| = \frac{GMm}{r^2} \)
+	</div></p>
+	
+	<p>Podemos escribir el campo de fuerza gravitatoria en términos de sus funciones componentes como:</p>
+	
+		<p><div align="center">\( \bar{F}(x,y,z) = -\frac{GMm x}{(x^2+y^2+z^2)^{3/2}}\hat{i} -\frac{GMm x}{(x^2+y^2+z^2)^{3/2}}\hat{j} -\frac{GMm x}{(x^2+y^2+z^2)^{3/2}}\hat{k} \)
+	</div></p>
+	
+	<p>Este campo se representa gráficamente mediante flechas en dirección radial apuntando hacia el origen de coordenadas,
+de longitud cada vez menor a medida que el objeto m se aleja del objeto M.</p>
+
+	    <div class="course_extern_content"> 
+      <img src="imgs/campo_gravitacional.png"></img>
+    </div>
+
+	
+
+   
+   
+        
+     <!------ TERMINA EL CONTENIDO DE LA PÁGINA --------->
+</div>
+
+
+
+	<!------ INICIA LA INFO SOBRE LAS LICENCIAS Y LOS CRÉDITOS. ---------->
+    <a id="btCopyright" class="standardButton" title="Haz clic aquí para consultar los créditos y las condiciones de uso de este recurso." href="#" onClick="document.getElementById('copyright').className='visible';">&#169;</a>
+    <div id="copyright" class="oculto">
+      
+      <div class='innerCopyright'>
+      
+          <a id="btCloseCopyright" class="standardButton" title="Haz clic aquí para cerrar esta ventana." href="#" onClick="document.getElementById('copyright').className='oculto'">×</a>
+  
+          <!-- Créditos UAM  (siempre deben ir en primer lugar) -->
+			<div class="creditos">
+				<h1>
+					Créditos 
+				</h1>
+
+				<h2>
+					Escena original
+				</h2>				<table class="autores" 	>
+
+					<tr> <td  class="rol"> Diseño del contenido			</td>		<td class="nombre"> Víctor Hugo García Jarillo (Facultad de Ciencias UNAM, LITE)</td></tr>
+					<tr> <td  class="rol"> Diseño funcional				</td>		<td class="nombre"> Víctor Hugo García Jarillo (Facultad de Ciencias UNAM, LITE)</td></tr>
+					<tr> <td  class="rol"> Programación					</td>		<td class="nombre"> Víctor Hugo García Jarillo (Facultad de Ciencias UNAM, LITE)</td></tr>
+					<tr> <td  class="rol"> Diseño gráfico				</td>		<td class="nombre"> Ricardo López Gómez</td></tr>
+					<tr> <td  class="rol" >Coordinación			</td>		<td class="nombre"> Leticia Montserrat Vargas Rocha</td></tr>
+					</table>
+				<h2>
+					Adaptación 
+				</h2>
+				<table class="autores" 	>
+				<tr> <td  class="rol"> Diseño funcional				</td>		<td class="nombre"> Victor Hugo García Jarillo (Facultad de                    Ciencias, UNAM)		</td></tr>
+					<tr> <td  class="rol"> Programación				</td>		<td class="nombre"> Victor Hugo García Jarillo (Facultad de                    Ciencias, UNAM)</td></tr>
+
+					<tr> <td  class="rol"> Diseño gráfico			</td>		<td class="nombre"> Francisco	Varela Fuentes</td></tr>
+					<tr> <td  class="rol" >Coordinación			</td>		<td class="nombre"> Leticia Montserrat Vargas Rocha</td></tr>
+		<tr> <td  class="rol" >Desarrollo del contenedor			</td>		<td class="nombre"> Oscar Escamilla González</td></tr>
+
+				</table>
+
+ <div class='logos'>
+	            <a href=''>
+	               <img src="../images/info/icns/logoLite.png">
+	            </a>
+	            <a href="http://www.unadmexico.mx/">
+	               <img src="../images/info/icns/logoUNADM.png">
+	            </a>
+	         </div>
+          </div>
+          
+          <!-- Linea separación créditos -->
+          <hr class="linea" />
+     
+          <!-- Aviso licencias -->
+          <div class="licencias">
+          
+				<p class="creativeCommons">Los contenidos de esta unidad didáctica interactiva están bajo una licencia <a href="http://creativecommons.org/licenses/by-nc-sa/2.5/es/" target="_blank">Creative Commons Reconocimiento-NoComercial-CompartirIgual</a>.</p>
+
+				<!--arquimedes (optativo)-->
+				<p>La unidad didáctica fue creada con <a href="http://arquimedes.matem.unam.mx/Descartes5/creditos/conCCL.html" target="_blank">Arquímedes</a>, una herramienta de código abierto.</p>
+
+				<!-- Descartes -->
+				<p>La unidad didáctica contiene escenas elaboradas con Descartes, una herramienta de código abierto.</p>
+
+
+          	<p style='text-align:center'> LITE - UnADM 2014</p>
+          </div>
+      </div>
+    </div> 
+   <!------ TERMINA LA INFO SOBRE LAS LICENCIAS Y LOS CRÉDITOS. ---------->
+  
+  
+  </div>
+  
+  
+</article>
+
+
+</body>
+
+</html>

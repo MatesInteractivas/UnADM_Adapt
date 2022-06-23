@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<head>
+<title>Inicio</title>
+	<link href="../css/html5.css" rel="stylesheet" type="text/css" media="screen" />
+	<link href="../css/DescHTML5.css" rel="stylesheet" type="text/css" media="screen" />	
+	 <script type="text/javascript" src='../javascript/inject_functions_scorms_descartes.js'></script>
+	<script type='text/javascript' src='lib/descartes-min.js'></script>
+</head>
+
+
+<body BGCOLOR="c0c0c0" leftmargin="0" topmargin="0">
+<ajs name="Descartes" width=970 height=550 code="Descartes">
+   <param name="tamaño" value="970x550">
+   <param name="image_loader" value="">
+   <param name="expand" value="">
+   <param name="decimal_symbol" value=".">
+   <param name="antialias" value="sí">
+   <param name="deshacer" value="no">
+   <param name="nombre" value="Descartes">
+   <param name="Versión" value="5.356, 2016-05-03">
+   <param name="Idioma" value="español">
+   <param name="Botones" value="créditos=no config=no inicio=no limpiar=no">
+   <param name="E_01" value="tipo='R2' id='E1' fijo='sí' escala='1' O.x='-50%' O.y='-50%' imagen='imgs/tpl/fondo_suave.jpg' despl_imagen='arr-izq' fondo='c0d0d8' red='no' red10='no' ejes='no' texto='405860'">
+   <param name="E_02" value="tipo='R2' id='MASK' dibujar-si='INFO.visible' fijo='sí' imagen='imgs/tpl/backwindow.png' despl_imagen='mosaico' fondo='95000000' red='no' red10='no' ejes='no' texto='no'">
+   <param name="E_03" value="tipo='R2' id='INFO' x='INFO.x' y='INFO.y' ancho='700' alto='400' dibujar-si='INFO.visible' fijo='sí' imagen='imgs/tpl/retro_490x470.png' despl_imagen='mosaico' red='no' red10='no' ejes='no' texto='no'">
+   <param name="E_04" value="tipo='R2' id='INFO_2' x='15' y='92' ancho='462' alto='400' dibujar-si='INFO.visible=0' despl_imagen='arr-izq' fondo='83f0f8fa' red='no' red10='no' ejes='no' texto='no'">
+   <param name="C_01" value="id='cerrarInfo' tipo='numérico' interfaz='botón' región='interior' espacio='INFO' expresión='(cerrarInfo.x,cerrarInfo.y,cerrarInfo.w,cerrarInfo.h)' fijo='sí' visible='sí' imagen='_STYLE_|class=btnUNADM icon cerrar|shadowTextColor=rgba(0,0,0,0.2)|shadowTextOffsetY=2|shadowTextBlur=0|textBorder=0 |' acción='calcular' parámetro='INFO.visible=0'">
+   <param name="C_02" value="id='dasX' tipo='numérico' región='exterior' espacio='E1' nombre='dasX' incr='1' discreto='sí' fijo='sí' visible='sí' pos_mensajes='centro'">
+   <param name="C_03" value="id='dasY' tipo='numérico' región='exterior' espacio='E1' nombre='dasY' incr='1' discreto='sí' fijo='sí' visible='sí' pos_mensajes='centro'">
+   <param name="A_01" value="id='initEsp()' algoritmo='sí' algoritmo='sí' hacer='INFO.x=(E1._w-INFO._w)/2;INFO.y=(E1._h-INFO._h)/2+20;INFO.visible=1'">
+   <param name="A_02" value="id='initBtns()' algoritmo='sí' algoritmo='sí' hacer='cerrarInfo.w=30;cerrarInfo.h=cerrarInfo.w;cerrarInfo.x=INFO._w-cerrarInfo.w-1;cerrarInfo.y=1;;btnAceptar.w=120;btnAceptar.h=30;btnAceptar.x=(E1._w-btnAceptar.w)/2;btnAceptar.y=(E1._h-btnAceptar.h-20);btnAceptar.img=&squot;imgs/tpl/btn120.png&squot;;btnAceptar.txt=&squot;Aceptar&squot;'">
+   <param name="A_03" value="id='initEscena()' algoritmo='sí' algoritmo='sí' hacer='initBtns();initEsp();;ô=|***************************************|;ô=|*  Si el botón de para cerrar la info *|;ô=|*  esta VISIBLE                       *|;ô=|***************************************|;INFO.visible=1;;ô=|***************************************|;ô=|*  Calculamos la posicion del titulo  *|;ô=|***************************************|;titulo=&squot;¿Qué es el Álgebra lineal?&squot;;titulo.w=_AnchoDeCadena_(titulo,&squot;SansSerif&squot;,&squot;PLAIN&squot;,&squot;30&squot;);titulo.x=(E1._w-titulo.w)/2;titulo.y=30;'">
+   <param name="A_04" value="id='INICIO' algoritmo='sí' evaluar='una-sola-vez' hacer='initEscena()'">
+   <param name="A_05" value="id='CALCULOS' algoritmo='sí' evaluar='siempre'">
+   <param name="G_01" value="espacio='INFO_2' tipo='polígono' fondo='sí' color='5566aa' dibujar-si='INFO.visible=0' coord_abs='sí' expresión='(0,0)(INFO_2._w-1,0)(INFO_2._w-1,INFO_2._h-1)(0,INFO_2._h-1)(0,0)' relleno='f85566aa'">
+   <param name="G_02" value="espacio='E1' tipo='texto' fondo='sí' expresión='[titulo.x,titulo.y]' texto='[titulo]' fuente='SansSerif,PLAIN,30' fijo='sí'">
+   <param name="G_03" value="espacio='E1' tipo='texto' fondo='sí' expresión='[_INFO_____,20]' fijo='sí'">
+   <param name="G_04" value="espacio='INFO' tipo='texto' fondo='sí' color='blanco' expresión='[10,5]' texto='Introducción' fuente='SansSerif,PLAIN,22' fijo='sí'">
+   <param name="G_05" value="espacio='E1' tipo='texto' fondo='sí' expresión='[_FIN_PLANTILLA__,20]' fijo='sí'">
+   <param name="G_06" value="espacio='INFO' tipo='texto' fondo='sí' color='negro' expresión='[292,85]' texto='«La geometría es el estudio de un espacio junto con un grupo de transformaciones y de las estructuras que permanecen invariantes bajo el grupo.» \n\nFelix Klein (1849 - 1925)' fuente='SansSerif,PLAIN,19' fijo='sí' ancho='INFO._w-300'">
+   <param name="G_07" value="espacio='INFO' tipo='imagen' fondo='sí' coord_abs='sí' expresión='(10,60)' archivo='imgs/Felix_Klein.png'">
+   <param name="G_08" value="espacio='E1' tipo='imagen' dibujar-si='INFO.visible=0' coord_abs='sí' expresión='(475+15,92)' archivo='imgs/AlgebraLineal.png'">
+   <param name="G_09" value="espacio='INFO_2' tipo='texto' color='negro' dibujar-si='INFO.visible=0' expresión='[10,10]' texto='El Algebra Lineal, es el estudio de los espacios vectoriales y de las transformaciones lineales entre ellos. \n\nCuando los espacios son de dimensión finita, las transformaciones lineales tienen matrices asociadas. \n\nAsí, el Álgebra Lineal trata con vectores y transformaciones lineales y también con matrices y formas cuadráticas. Estos objetos están presentes en variadas y numerosas situaciones, tanto aplicadas como teóricas.' fuente='SansSerif,PLAIN,19' fijo='sí' ancho='E1._w-520'">
+</ajs>
+
+
+	<!------ INICIA LA INFO SOBRE LAS LICENCIAS Y LOS CRÉDITOS. ---------->
+    <a id="btCopyright" class="standardButton" title="Haz clic aquí para consultar los créditos y las condiciones de uso de este recurso." href="#" onClick="document.getElementById('copyright').className='visible';">©</a>
+    <div id="copyright" class="oculto">
+      
+      <div class='innerCopyright'>
+      
+          <a id="btCloseCopyright" class="standardButton" title="Haz clic aquí para cerrar esta ventana." href="#" onClick="document.getElementById('copyright').className='oculto'">×</a>
+  
+          <!-- Créditos UAM  (siempre deben ir en primer lugar) -->
+			<div class="creditos">
+				<h1>
+					Créditos 
+				</h1>
+				<h2>
+					Escena original
+				</h2>				
+                  <table class="autores" 	>
+					<tr> <td  class="rol"> Diseño del contenido			</td>		<td class="nombre"> Julio Arnoldo Prado Saavedra</td></tr>
+					<tr> <td  class="rol"> Diseño funcional				</td>		<td class="nombre">Julio Arnoldo Prado Saavedra</td></tr>
+					<tr> <td  class="rol"> Programación						</td>		<td class="nombre"> Julio Arnoldo Prado Saavedra</td></tr>
+					<!-- Varias personas en el mismo rubro, separar por <br> -->
+				
+					          
+					<tr> <td  class="rol"> Diseño gráfico					</td>		<td class="nombre"> Ricardo López Gómez										</td></tr>
+					<tr> <td  class="rol" >Coordinación			</td>		<td class="nombre"> Leticia Montserrat Vargas Rocha						</td></tr>
+				</table>
+				<h2>
+					Adaptación 
+				</h2>
+				<table class="autores" 	>
+					<tr> <td  class="rol"> Diseño funcional				</td>	<td class="nombre"> Victor Manuel Amezcua y Raz</td></tr>
+					<tr> <td  class="rol"> Programación					</td>	<td class="nombre">Victor Manuel Amezcua y Raz</td></tr>
+					<tr> <td  class="rol"> Asesoría de rogramación					</td>	<td class="nombre">Víctor Hugo García Jarillo  (LITE)</td></tr>
+                    <tr> <td  class="rol"> Diseño gráfico				</td>	<td class="nombre"> Francisco	Varela Fuentes	        </td></tr>
+					<tr> <td  class="rol" >Coordinación			        </td>	<td class="nombre"> Leticia Montserrat Vargas Rocha		</td></tr>
+		            
+				</table>
+
+	         <div class='logos'>
+	            <a href=''>
+	               <img src="../images/info/icns/logoLite.png">
+	            </a>
+	            <a href="http://www.unadmexico.mx/">
+	               <img src="../images/info/icns/logoUNADM.png">
+	            </a>
+	         </div>
+          </div>
+          
+          <!-- Linea separación créditos -->
+          <hr class="linea" />
+     
+          <!-- Aviso licencias -->
+          <div class="licencias">
+          
+				<p class="creativeCommons">Los contenidos de esta unidad didáctica interactiva están bajo una licencia <a href="http://creativecommons.org/licenses/by-nc-sa/2.5/es/" target="_blank">Creative Commons Reconocimiento-NoComercial-CompartirIgual</a>.</p>
+
+				<!--arquimedes (optativo)-->
+				<p>La unidad didáctica fue creada con <a href="http://arquimedes.matem.unam.mx/Descartes5/creditos/conCCL.html" target="_blank">Arquímedes</a>, una herramienta de código abierto.</p>
+
+				<!-- Descartes -->
+				<p>La unidad didáctica contiene escenas elaboradas con Descartes, una herramienta de código abierto.</p>
+
+
+          	<p style='text-align:center'> LITE - UnADM 2014</p>
+          </div>
+      </div>
+    </div> 
+   <!------ TERMINA LA INFO SOBRE LAS LICENCIAS Y LOS CRÉDITOS. ---------->
+  
+  
+  </div>
+  
+  
+</article>
+
+
+</body>
+
+</html>

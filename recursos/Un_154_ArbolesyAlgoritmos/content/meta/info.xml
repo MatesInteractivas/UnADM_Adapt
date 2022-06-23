@@ -1,0 +1,81 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<recurso 
+	id="_Un_154_ArbolesYAlgoritmos" 
+	nivel="Licenciatura" 
+	area="Matemáticas discretas, Teoría de gráficas" 
+	plataforma="HTML 5" 
+	>
+	<titulo><![CDATA[
+		Árboles y algoritmos 
+	]]></titulo>
+	
+	<Descripcion><![CDATA[
+		Dentro de la teoría de gráficas, los árboles juegan un papel muy importante ya que, por sus características particulares, resultan ser herramientas que permiten atacar una gran cantidad de problemas, sobre todo de optimización. El objetivo de esta unidad es repasar conceptos básicos y mencionar algunas aplicaciones de la teoría de gráficas, introducir los árboles, trabajar algunos ejemplos y conocer algoritmos para determinar árboles recubridores de peso máximo y peso mínimo asociados a gráficas conexas sin lazos.
+	]]></Descripcion>
+</recurso>
+
+<!--
+********************************************************************************
+                               **** Áreas **** 
+Matemáticas 
+	Aritmética
+		Fracciones
+	Álgebra
+		Combinatoria
+		Ecuaciones lineales
+		Ecuaciones polinomiales
+		Polinomios
+		Álgebra lineal
+		Teoría de grupos
+		Álgebra abstracta
+	Geometría
+		Geometría elemental
+		Geometría clásica
+		Geometría analítica
+	Trigonometría 
+	Probabilidad 
+		Cálculo de probabilidades
+		Eventos
+		Variables aleatorias
+		Ley de los grandes números
+		Teorema del límite central
+	Estadística
+		Medidas de tendencia central
+		Muestreo
+		Distribuciones
+		Inferencia
+	Cálculo
+		Funciones 
+		Límites
+		Continuidad
+		Derivadas 
+		Integrales 
+	Teoría de números
+	Teoría de gráficas
+Física
+	Mecánica
+	Electromagnetismo
+	Óptica
+	Físico-química 
+	Termodinámica
+	Mecánica estadística
+	Mecánica cuántica
+	Relatividad
+
+********************************************************************************
+
+********************************************************************************
+                             **** Niveles ****
+
+	Primaria
+	Preescolar
+	Secundaria
+	Bachillerato
+	Licenciatura
+	Posgrado 
+	Maestria
+	Doctorado
+
+********************************************************************************
+
+-->

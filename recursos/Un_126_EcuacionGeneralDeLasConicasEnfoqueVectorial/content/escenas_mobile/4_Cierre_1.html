@@ -1,0 +1,158 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+ 	<link href="../css/html5_mobile.css" rel="stylesheet" type="text/css" media="screen" />
+	<link href="../css/DescHTML5.css" rel="stylesheet" type="text/css" media="screen" />	
+	 <script type="text/javascript" src='../javascript/inject_functions_scorms_descartes.js'></script>
+	<script type='text/javascript' src='../javascript/lib/descartes-min.js'></script>
+</head>
+
+<body>
+ <!-------- MathJax --- para fórmulas matemáticas ------>	
+	<script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script> 
+
+<article class="course_content_container">
+  
+  <div class="course_content">
+    
+    
+    <!------ INICIA EL CONTENIDO DE LA PÁGINA ------- -->
+    
+    
+    <!--- Título de la página - -->
+    <center><h2>¿Qué hemos aprendido?</h2></center>
+    
+    <!--- Para poner un panel con fondo - -->
+    <div class='text_panel'>
+    
+    
+    
+    
+    <!--- Párrafo - -->
+    <p>
+		Dada una cónica cualquiera en a partir de su ecuación general \(ax^2+bxy+cy^2+dx+ey+f=0\), ésta se puede representar a
+		través de operaciones matriciales como \(\mathbf{x}·A\mathbf{x}+\mathbf{k}·\mathbf{x}+f=0\). </br>
+		\[
+		A=
+		\left[
+		\begin{array}{cc}
+		a & \frac{b}{2}\\
+		\frac{b}{2} & c
+		\end{array}
+		\right]
+		\], 
+		\[\mathbf{k}=
+		\left(
+		\begin{array}{c}
+		d\\
+		e
+		\end{array}
+		\right)
+		\]
+    </p>
+
+    
+    <!--- Párrafo - -->
+    <p>
+    	Encontrar el centro de la cónica significa eliminar el término lineal de la ecuación, para esto se debe calcular la
+    	matriz \(A^{-1}\) que es la inversa de la matriz \(A\). El centro de la cónica está dado entonces por:
+    	 \(\mathbf{c}:=-\frac{1}{2}A^{-1}·\mathbf{k}\)
+    </p>  
+    <p>
+    
+    </p>
+		Una vez encontrado el centro, la nueva ecuación de la cónica se transforma en 
+		\(P_{1}(x)=\mathbf{x}·A\mathbf{x}+P(\mathbf{c})=0\).
+ <p>
+    	Para rotar los ejes se debe encontrar una matriz \(B\) que diagonalice a la matriz \(A\):
+    	 \(B^{T}AB=\left[\begin{array}{cc}\lambda_{1} & 0 \\ 0 & \lambda_{2} \end{array}\right]\). 
+    	 Donde \(\lambda_{1,2}\) son los valores propios de \(A\).
+    </p>
+ <p>
+    	La matriz \(B^{T}AB\) es la nueva matriz que corresponde a la ecuación de la cónica. Quedando entonces el polinomio
+    	centrado y rotado como:</br>
+    	\[P_{2}(x)=P_{1}(B\mathbf{x})=\mathbf{x}·B^{T}AB\mathbf{x}+P(c) \]
+    	
+    </p>
+ 	
+</div>
+    <!------ TERMINA EL CONTENIDO DE LA PÁGINA --------->
+
+
+   <!------ INICIA LA INFO SOBRE LAS LICENCIAS Y LOS CRÉDITOS. ---------->
+    <a id="btCopyright" class="standardButton" title="Haz clic aquí para consultar los créditos y las condiciones de uso de este recurso." href="#" onclick="document.getElementById('copyright').className='visible';">&#169;</a>
+    <div id="copyright" class="oculto">
+      
+      <div class='innerCopyright'>
+      
+          <a id="btCloseCopyright" class="standardButton" title="Haz clic aquí para cerrar esta ventana." href="#" onclick="document.getElementById('copyright').className='oculto'">×</a>
+  
+          <!-- Créditos UAM  (siempre deben ir en primer lugar) -->
+			<div class="creditos">
+				<h1>
+					Créditos 
+				</h1>
+				<h2>
+					Escena original
+				</h2>				
+				<table class="autores" 	>
+					<tr> <td  class="rol"> Diseño del contenido		</td>		<td class="nombre">José Luis Abreu León</td></tr>
+					<tr> <td  class="rol"> Diseño funcional			</td>		<td class="nombre">José Luis Abreu León</td></tr>
+					<tr> <td  class="rol"> Programación			</td>		<td class="nombre">José Luis Abreu León<br>Leticia Montserrat Vargas Rocha</td></tr>
+					<tr> <td  class="rol"> Diseño gráfico			</td>		<td class="nombre">Ricardo López Gómez</td></tr>
+					<tr> <td  class="rol"> Coordinación			</td>		<td class="nombre">Leticia Montserrat Vargas Rocha</td></tr>
+				</table>
+				<h2>
+					Adaptación 
+				</h2>
+				<table class="autores" 	>
+					<tr> <td  class="rol"> Diseño funcional			</td>		<td class="nombre">Elsa Sirenia Vega Camacho</td></tr>
+					<tr> <td  class="rol"> Programación			</td>		<td class="nombre">Elsa Sirenia Vega Camacho</td></tr>
+					<tr> <td  class="rol"> Asesoría de programación		</td>		<td class="nombre">Leticia Montserrat Vargas Rocha</td></tr>		
+					<tr> <td  class="rol"> Diseño gráfico			</td>		<td class="nombre">Francisco Varela Fuentes</td></tr>
+					<tr> <td  class="rol" >Coordinación			</td>		<td class="nombre">Leticia Montserrat Vargas Rocha</td></tr>
+				</table>
+	         
+	         <div class='logos'>
+	            <a href=''>
+	               <img src="../images/info/icns/logoLite.png">
+	            </a>
+	            <a href="http://www.unadmexico.mx/">
+	               <img src="../images/info/icns/logoUNADM.png">
+	            </a>
+	         </div>
+          </div>
+          
+          <!-- Linea separación créditos -->
+          <hr class="linea" />
+     
+          <!-- Aviso licencias -->
+          <div class="licencias">
+          
+				<p class="creativeCommons">Los contenidos de esta unidad didáctica interactiva están bajo una licencia <a href="http://creativecommons.org/licenses/by-nc-sa/2.5/es/" target="_blank">Creative Commons Reconocimiento-NoComercial-CompartirIgual</a>.</p>
+
+				<!--arquimedes (optativo)-->
+				<p>La unidad didáctica fue creada con <a href="http://arquimedes.matem.unam.mx/Descartes5/creditos/conCCL.html" target="_blank">Arquímedes</a>, una herramienta de código abierto.</p>
+
+				<!-- Descartes -->
+				<p>La unidad didáctica contiene escenas elaboradas con Descartes, una herramienta de código abierto.</p>
+
+
+          	<p style='text-align:center'> LITE - UnADM 2014</p>
+          </div>
+      </div>
+    </div> 
+   <!------ TERMINA LA INFO SOBRE LAS LICENCIAS Y LOS CRÉDITOS. ---------->
+  
+  
+  </div>
+  
+  
+</article>
+
+
+</body>
+
+</html>

@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <title>Desarrollo</title>
+  <link href="../css/DescHTML5.css" rel="stylesheet" type="text/css" media="screen">
+  <link href="../css/html5_mobile.css" rel="stylesheet" type="text/css" media="screen">
+  <script type="text/javascript" src="../javascript/inject_functions_scorms_descartes.js"></script>
+  
+  <script type='text/javascript' src='lib/descartes-min.js'></script>
+</head>
+
+<body>
+  <!-------- MathJax --- para fórmulas matemáticas ------>
+  <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+  <article class="course_content_container">
+    <!------ INICIA EL CONTENIDO DE LA PÁGINA --------->
+    <!--- Título de la página --->
+    <h1>Cómo encontrar \(\delta \) dado \(\varepsilon \)</h1>
+
+    <div class="text_panel">
+      <!--- Subtítulo (no necesario en introducción) --->
+      <h2 style="text-align:center">Composición de relaciones</h2>
+
+      <p>
+        Recordemos que si﻿ \(R\) ﻿﻿es una relación contenida en﻿ \(A\times B\) ﻿﻿y﻿ \(S\) ﻿﻿es una relación contenida en﻿ \(B\times C\)﻿﻿, entonces la composición de \(R\) con \(S\) es una relación contenida en﻿ \(A\times C\)﻿﻿ denotada por \( ﻿R\circ S \)﻿﻿, que consiste de todos los pares \(﻿(a, c)\) ﻿﻿﻿tales que existe una \(﻿b\)﻿ en ﻿\(B\) ﻿﻿tal que﻿ \((a, b)\)﻿﻿ pertenece a﻿ \(R ⊆ A\times B\)﻿﻿ y \(﻿(b, c)\)﻿﻿ pertenece a﻿ \(S ⊆ B\times C\)﻿﻿.
+      </p>
+
+      <p>
+        En la siguiente escena se proporcionan las relaciones \(R \circ S\)﻿﻿. Para crear un elemento de la relación, arrastra los elementos de la columna izquierda a los de la derecha. Una vez que termines presiona el boton ﻿"
+        <i>Verificar</i>" ﻿y si es correcto explora con el menú "
+        <i>Resaltar</i>﻿" como se generan los elementos de la composición.
+      </p>
+
+      <div class="course_extern_content">
+        <img src="imgs/tutorial.gif">
+      </div>
+
+      <p class="instruccion">
+        <span class="instrucciones">
+Construye la relación correspondiente a \(R \circ S\)﻿﻿ arrastrando los elementos de la columna izquierda a la derecha.
+</span>
+      </p>
+      <ajs name="Descartes" width="495" height="300" code="Descartes">
+        <param name="tamaño" value="495x300">
+        <param name="decimal_symbol" value=".">
+        <param name="image_loader" value="">
+        <param name="expand" value="">
+        <param name="nombre" value="Descartes">
+        <param name="Versión" value="5.5">
+        <param name="antialias" value="sí">
+        <param name="deshacer" value="no">
+        <param name="editable" value="sí">
+        <param name="Idioma" value="español">
+        <param name="Botones" value="créditos=no config=no inicio=no limpiar=no filas_norte=0 filas_sur=0 ancho_este=150 ancho_oeste=150 alto=23 ">
+        <param name="E_01" value="tipo='R2' id='E1' x='0' y='0' ancho='100%' alto='100%' dibujar-si='1' fijo='sí' escala='1' O.x='0' O.y='0' despl_imagen='arr-izq' fondo='ffffff' red='no' red10='no' ejes='no' texto='405860' números='no' sensible_a_los_movimientos_del_ratón='no' ">
+        <param name="E_02" value="tipo='R2' id='EspText01' x='EspText01.x' y='EspText01.y' ancho='100%' alto='100%' dibujar-si='EspText01.visible' fijo='sí' escala='1' O.x='-50%' O.y='-50%' despl_imagen='arr-izq' fondo='e3e3e3' red='no' red10='no' ejes='no' texto='no' números='no' sensible_a_los_movimientos_del_ratón='no' ">
+        <param name="E_03" value="tipo='R2' id='EspGraf' x='EspGraf.x' y='EspGraf.y' ancho='485' alto='200' dibujar-si='EspGraf.visible' fijo='sí' escala='48' O.x='-55' O.y='10' despl_imagen='arr-izq' fondo='ffffff' red='no' red10='no' ejes='no' texto='no' números='no' sensible_a_los_movimientos_del_ratón='no' ">
+        <param name="E_04" value="tipo='R2' id='MATRIZ' x='MATRIZ.x' y='MATRIZ.y' ancho='485' alto='200' dibujar-si='MATRIZ.visible' fijo='sí' escala='48' O.x='0' O.y='0' despl_imagen='arr-izq' fondo='ffffff' red='no' red10='no' ejes='no' texto='000000' números='sí' sensible_a_los_movimientos_del_ratón='no' ">
+        <param name="E_05" value="tipo='R2' id='CTRS_north' x='CTRS.x' y='CTRS.y' ancho='520' alto='60' dibujar-si='1|CTRS.visible' fijo='sí' escala='-1' O.x='-50%' O.y='-50%' despl_imagen='arr-izq' fondo='88000000' red='no' red10='no' ejes='no' texto='no' números='no' sensible_a_los_movimientos_del_ratón='no' ">
+        <param name="E_06" value="tipo='R2' id='btnOpenClose' x='btnOpenClose.x' y='btnOpenClose.y' ancho='35' alto='30' dibujar-si='1' fijo='sí' escala='1' O.x='-50%' O.y='-50%' despl_imagen='arr-izq' fondo='ff000000' red='no' red10='no' ejes='no' texto='no' números='no' sensible_a_los_movimientos_del_ratón='no' ">
+        <param name="E_07" value="tipo='R2' id='MASK' x='0' y='0' ancho='100%' alto='100%' dibujar-si='(INFO.visible)|(RETRO.visible)' fijo='sí' escala='48' O.x='0' O.y='0' despl_imagen='mosaico' fondo='95000000' red='no' red10='no' ejes='no' texto='no' números='no' sensible_a_los_movimientos_del_ratón='no' ">
+        <param name="E_08" value="tipo='R2' id='RETRO' x='RETRO.x' y='RETRO.y' ancho='400' alto='250' dibujar-si='RETRO.visible' fijo='sí' escala='1' O.x='-50' O.y='-50' imagen='imgs/tpl/retro_790x470.png' despl_imagen='mosaico' fondo='f0f8fa' red='no' red10='no' ejes='no' texto='no' números='no' sensible_a_los_movimientos_del_ratón='no' ">
+        <param name="C_01" value="id='cerrarRETRO' interfaz='botón' tipo='numérico' región='interior' espacio='RETRO' expresión='(cerrarRETRO.x,cerrarRETRO.y,cerrarRETRO.w,cerrarRETRO.h)' valor='0' visible='sí' color='222222' color-int='f0f8ff' negrita='no' cursiva='no' subrayada='no' fuente puntos='19' imagen='_STYLE_|class=btnUNADM icon cerrar|shadowTextColor=rgba(0,0,0,0.2)|shadowTextOffsetY=2|shadowTextBlur=0|textBorder=0 |' acción='calcular' parámetro='RETRO.visible=0\nverificado=(!correcto)?0:verificado' dibujar-si='1' ">
+        <param name="C_02" value="id='btnUndo' interfaz='botón' tipo='numérico' región='interior' espacio='CTRS_north' nombre='[btnUndo.txt]' expresión='(btnUndo.x,btnUndo.y,btnUndo.w,btnUndo.h)' valor='0' visible='sí' color='ffffff' color-int='57b762' negrita='sí' cursiva='no' subrayada='no' fuente puntos='38' imagen='_STYLE_|class=btnUNADM|shadowTextColor=rgba(0,0,0,0.2)|shadowTextOffsetY=2|shadowTextBlur=0|textBorder=0 |' acción='calcular' parámetro='relRS.G.delLastRel()\nrelRS.G.relationAdded(-1,-1)\nselected=min(selected,relacion.RELS.n-1)\nupdateSelected()' dibujar-si='(!verificado)' activo-si='relRS.G.RELS.n>0' ">
+        <param name="C_03" value="id='btnVerif' interfaz='botón' tipo='numérico' región='interior' espacio='CTRS_north' nombre='[btnVerif.txt]' expresión='(btnVerif.x,btnVerif.y,btnVerif.w,btnVerif.h)' valor='0' visible='sí' color='ffffff' color-int='57b762' negrita='sí' cursiva='no' subrayada='no' fuente puntos='18' imagen='_STYLE_|class=btnUNADM|shadowTextColor=rgba(0,0,0,0.2)|shadowTextOffsetY=2|shadowTextBlur=0|textBorder=0 |' acción='calcular' parámetro='verificar()' dibujar-si='(intentos<=maxIntentos)&((!verificado)|(!correcto))' ">
+        <param name="C_04" value="id='btnRespuesta' interfaz='botón' tipo='numérico' región='interior' espacio='CTRS_north' nombre='Ver respuesta' expresión='(btnVerif.x,btnVerif.y,btnVerif.w,btnVerif.h)' valor='0' visible='sí' color='ffffff' color-int='57b762' negrita='sí' cursiva='no' subrayada='no' fuente puntos='18' imagen='_STYLE_|class=btnUNADM|shadowTextColor=rgba(0,0,0,0.2)|shadowTextOffsetY=2|shadowTextBlur=0|textBorder=0 |' acción='calcular' parámetro='verRespuesta();verificar();RETRO.visible=0;' dibujar-si='(!verificado)&(intentos>maxIntentos)' ">
+        <param name="C_05" value="id='btnReinit' interfaz='botón' tipo='numérico' región='interior' espacio='CTRS_north' nombre='[btnReinit.txt]' expresión='(btnReinit.x,btnReinit.y,btnReinit.w,btnReinit.h)' valor='0' visible='sí' color='ffffff' color-int='57b762' negrita='sí' cursiva='no' subrayada='no' fuente puntos='18' imagen='_STYLE_|class=btnUNADM|shadowTextColor=rgba(0,0,0,0.2)|shadowTextOffsetY=2|shadowTextBlur=0|textBorder=0 |' acción='calcular' parámetro='initEjercicio()' dibujar-si='(verificado)&(correcto)' ">
+        <param name="C_06" value="id='selected' tipo='numérico' interfaz='menú' región='interior' espacio='CTRS_north' nombre=' Resaltar ' expresión='(selected.x,selected.y,selected.w,selected.h)' valor='selected' decimales='2' fijo='no' visible='no' opciones='No[-1],1,2,3' acción='calcular' parámetro='selected=(selected>-1)?(selected%relR.G.RELS.n):selected\nupdateSelected()' dibujar-si='(verificado)&(correcto)' activo-si='(EJER_RELRS.n>0)' info='Elemento seleccionado' ">
+        <param name="C_07" value="id='verM' tipo='numérico' interfaz='menú' región='interior' espacio='MATRIZ' nombre='Cómo matriz :   ' expresión='(verM.x,verM.y,verM.w,verM.h)' valor='verM' decimales='0' fijo='no' visible='no' opciones='R,S,R∘S' acción='calcular' parámetro='limpiarEscena=1' dibujar-si='0' ">
+        <param name="C_08" value="id='btnOpen' interfaz='botón' tipo='numérico' región='interior' espacio='btnOpenClose' expresión='(0,0,35,30)' valor='0' visible='sí' color='222222' color-int='f0f8ff' negrita='no' cursiva='no' subrayada='no' fuente puntos='16' imagen='_STYLE_|class=btnUNADM open north|shadowTextColor=rgba(0,0,0,0.2)|shadowTextOffsetY=2|shadowTextBlur=0|textBorder=0' acción='calcular' parámetro='openPanelCtrs()' dibujar-si='!CTRS.opened' ">
+        <param name="C_09" value="id='btnClose' interfaz='botón' tipo='numérico' región='interior' espacio='btnOpenClose' expresión='(0,0,35,30)' valor='0' visible='sí' color='222222' color-int='f0f8ff' negrita='no' cursiva='no' subrayada='no' fuente puntos='19' imagen='_STYLE_|class=btnUNADM close north|shadowTextColor=rgba(0,0,0,0.2)|shadowTextOffsetY=2|shadowTextBlur=0|textBorder=0' acción='calcular' parámetro='closePanelCtrs()' dibujar-si='CTRS.opened' ">
+        <param name="C_10" value="id='verComo' tipo='numérico' interfaz='menú' región='interior' espacio='CTRS_north' nombre=' Ver como: ' expresión='(verComo.x,verComo.y,verComo.w,verComo.h)' valor='verComo' decimales='2' fijo='no' visible='no' opciones='Gráfica,Matriz' acción='calcular' parámetro='MATRIZ.visible=(verComo==1)\nEspGraf.visible=(verComo==0)' ">
+        <param name="A_01" value="id='EJER_RELRS' matriz='sí' evaluar='una-sola-vez' columnas='20' filas='20' ">
+        <param name="A_02" value="id='initEsp()' algoritmo='sí' expresión='x' local='allW,margenX' hacer='EspText01.visible=1;EspText01.x=0;EspText01.y=0;;;margenX=20;allW=(EspGraf._w+MATRIZ._w+margenX);EspGraf.x=5;EspGraf.y=EspText01.y+EspText01._h-EspGraf._h-5;EspGraf.visible=1 ;;MATRIZ.x=EspGraf.x;MATRIZ.y=EspGraf.y;;RETRO.x=(E1._w-RETRO._w)/2;RETRO.y=(E1._h-RETRO._h)/2;;CTRS.x=(E1._w-CTRS_north._w)/2;CTRS.y=(E1._h-CTRS_north._h);CTRS.visible=0;;CTRS.x=0;CTRS.y=0;;btnOpenClose.y=(CTRS.y-btnOpenClose._h);btnOpenClose.x=(E1._w-btnOpenClose._w)' ">
+        <param name="A_03" value="id='initBtns()' algoritmo='sí' expresión='x' local='allH,allW' hacer='cerrarInfo.w=21;cerrarInfo.h=cerrarInfo.w;cerrarInfo.x=INFO._w-cerrarInfo.w-10;cerrarInfo.y=8;cerrarInfo.visible=1;;cerrarRETRO.w=21;cerrarRETRO.h=cerrarRETRO.w;cerrarRETRO.x=RETRO._w-cerrarRETRO.w-10;cerrarRETRO.y=8;;;;;ctr_i.w=30;ctr_i.h=30;ctr_i.x=10;ctr_i.y=10;;btnAceptar.w=40;btnAceptar.h=40;btnAceptar.txt=&squot;?&squot;;;btnInfoCont.w=120;btnInfoCont.h=30;btnInfoCont.x=(INFO._w-btnInfoCont.w)/2;btnInfoCont.y=(INFO._h-btnInfoCont.h-10);;btnVerif.w=130;btnVerif.h=40;btnUndo.w=60;btnUndo.h=40;;allW=btnUndo.w+btnVerif.w+10+10;allH=btnUndo.h+btnVerif.h+10+5;btnUndo.txt=&squot;⟲&squot;;btnUndo.x=(CTRS_north._w-allW);btnUndo.y=(CTRS_north._h-btnUndo.h-10);;;btnVerif.txt=&squot;Verificar&squot;;btnVerif.x=btnUndo.x+btnUndo.w+10;btnVerif.y=btnUndo.y;;;selected.w=150;selected.h=40;btnReinit.w=80;btnReinit.h=40;;allW=(selected.w+btnReinit.w+10);selected.x=(CTRS_north._w-allW-5);selected.y=btnUndo.y;;btnReinit.txt=&squot;Otro&squot;;btnReinit.x=selected.x+selected.w+10;btnReinit.y=selected.y;;btnAceptar.x=(selected.x+selected.w-btnAceptar.w);btnAceptar.y=(selected.y+selected.h+10);;;;verM.w=180;verM.h=30;verM.x=10;verM.y=10;;verComo.w=220;verComo.h=40;verComo.x=5;verComo.y=btnVerif.y;' ">
+        <param name="A_04" value="id='initEscena()' algoritmo='sí' expresión='x' hacer='initBtns();initEsp();;ô=|***************************************|;ô=|*  Calculamos la posicion del titulo  *|;ô=|***************************************|;titulo=&squot;Composición de relaciones&squot;;titulo.w=_AnchoDeCadena_(titulo,&squot;SansSerif&squot;,&squot;PLAIN&squot;,&squot;30&squot;);titulo.x=(E1._w-titulo.w)/2;titulo.y=30;;initMacrosR();initMacrosS();initMacrosRS();;random.debug=0;INFO.visible=0;;maxIntentos=3;initEjercicio()' ">
+        <param name="A_05" value="id='initEjercicio()' algoritmo='sí' expresión='0' hacer='intentos=0;correcto=0;verificado=0;selected=-1;;creaRelR();creaRelS();updateRelRS();;updateSelected();updateMenuSelected();;verComo=0;MATRIZ.visible=0;EspGraf.visible=1;animPanelCTR=1' ">
+        <param name="A_06" value="id='COMMENT___()' algoritmo='no' expresión='0' info='*** MACRO REL R ***' ">
+        <param name="A_07" value="id='initMacroR_Graf()' algoritmo='sí' expresión='0' local='i,radio,radio2,tmpX,tmpY' inicio='i=0;relR.G.C1.n=5;relR.G.C2.n=5;relR.G.RELS.n=0;radio=(15/EspGraf.escala);radio2=2*radio+(5/EspGraf.escala);relR.G.selected=selected' hacer='iC1=min(relR.G.C1.n,i);iC2=min(relR.G.C2.n,i);;tmpX=-3.5;tmpX2=tmpX+(100/EspGraf.escala);tmpY=(2-iC1)*radio2;relR.G.C1[iC1,0]=tmpX;relR.G.C1[iC1,1]=tmpY;relR.G.C1[iC1,2]=radio;relR.G.C1[iC1,3]=iC1+1;;;relR.G.C2[iC2,0]=tmpX2;relR.G.C2[iC2,1]=tmpY;relR.G.C2[iC2,2]=radio;relR.G.C2[iC2,3]=iC2+1;;i=i+1' mientras='i<max(relR.G.C1.n,relR.G.C2.n)' ">
+        <param name="A_08" value="id='initMacroR_Conjunto()' algoritmo='sí' expresión='0' hacer='relR.C.initDBG();relR.C.RELS.n=relR.G.RELS.n;;relR.C.debug=0;relR.C.pos.x=5;relR.C.pos.y=5;relR.C.maxWidth=485;relS.C.idConjunto=&squot;R&squot;;relR.C.update()' ">
+        <param name="A_09" value="id='initMacroR_Matriz()' algoritmo='sí' expresión='x' hacer='relR.M.mTxt.x=5;relR.M.mTxt.y=45;;relR.M.cols=relR.G.C2.n;relR.M.rows=relR.G.C1.n;;relR.M.RELS.n=relR.G.RELS.n;relR.M.actualizaMatriz();;relR.M.setSelected(selected)' ">
+        <param name="A_10" value="id='initMacrosR()' algoritmo='sí' expresión='0' hacer=';initMacroR_Graf();initMacroR_Conjunto();initMacroR_Matriz();;relR.G.Esp.escala=EspGraf.escala' ">
+        <param name="A_11" value="id='relR.G.relationAdded(iC1,iC2)' algoritmo='sí' expresión='x' hacer='updateR_C();updateR_M();updateMenuSelected();limpiarEscena=1;;' ">
+        <param name="A_12" value="id='updateR_C()' algoritmo='sí' expresión='&squot;qqq&squot;' local='i,tC1,tC2' inicio='i=0;relR.C.RELS.n=relR.G.RELS.n;limpiarEscena=1' hacer='tC1=relR.G.RELS[i,0];tC2=relR.G.RELS[i,1];;tC1=relR.G.C1[tC1,3];tC2=relR.G.C2[tC2,3];relR.C.RELS[i,0]=tC1;relR.C.RELS[i,1]=tC2;i=i+1;cont=(i<relR.C.RELS.n);relR.C.update()' mientras='cont' ">
+        <param name="A_13" value="id='updateR_M()' algoritmo='sí' expresión='x' local='i,iC1,iC2,cont,tt' inicio='i=0;relR.M.RELS.n=relR.G.RELS.n;limpiarEscena=1' hacer='relR.M.RELS[i,0]=max(0,relR.G.RELS[i,0]);relR.M.RELS[i,1]=max(0,relR.G.RELS[i,1]);i=i+1;cont=(i<relR.G.RELS.n);tt=(cont)?0:relR.M.actualizaMatriz()' mientras='cont' ">
+        <param name="A_14" value="id='COMMENT___()' algoritmo='no' expresión='0' info='-----------------------------' ">
+        <param name="A_15" value="id='COMMENT___()' algoritmo='no' expresión='0' info='*** MACRO REL S ***' ">
+        <param name="A_16" value="id='initMacroS_Graf()' algoritmo='sí' expresión='0' local='i,radio,tmpX,tmpX2,tmpY' inicio='i=0;relS.G.C1.n=5;relS.G.C2.n=5;relS.G.RELS.n=0;radio=(15/EspGraf.escala);radio2=2*radio+(5/EspGraf.escala);relS.G.selected=selected' hacer='iC1=min(relS.G.C1.n,i);iC2=min(relS.G.C2.n,i);;tmpX=-0.6;tmpX2=tmpX+(100/EspGraf.escala);tmpY=(2-iC1)*radio2;relS.G.C1[iC1,0]=tmpX;relS.G.C1[iC1,1]=tmpY;relS.G.C1[iC1,2]=radio;relS.G.C1[iC1,3]=iC1+1;;;relS.G.C2[iC2,0]=tmpX2;relS.G.C2[iC2,1]=tmpY;relS.G.C2[iC2,2]=radio;relS.G.C2[iC2,3]=iC2+1;;i=i+1' mientras='i<max(relS.G.C1.n,relS.G.C2.n)' ">
+        <param name="A_17" value="id='initMacroS_Conjunto()' algoritmo='sí' expresión='0' hacer='relS.C.initDBG();relS.C.RELS.n=relS.G.RELS.n;;relS.C.debug=0;relS.C.pos.x=5;relS.C.pos.y=25;relS.C.maxWidth=485;relS.C.idConjunto=&squot;S&squot;;relS.C.update()' ">
+        <param name="A_18" value="id='initMacroS_Matriz()' algoritmo='sí' expresión='x' hacer='relS.M.mTxt.x=170;relS.M.mTxt.y=45;;relS.M.cols=relS.G.C2.n;relS.M.rows=relS.G.C1.n;;relS.M.RELS.n=relS.G.RELS.n;relS.M.actualizaMatriz();;relS.M.setSelected(selected)' ">
+        <param name="A_19" value="id='initMacrosS()' algoritmo='sí' expresión='0' hacer='initMacroS_Graf();initMacroS_Conjunto();initMacroS_Matriz();;relS.G.Esp.escala=EspGraf.escala;' ">
+        <param name="A_20" value="id='relS.G.relationAdded(iC1,iC2)' algoritmo='sí' expresión='x' hacer='updateS_C();updateS_M();limpiarEscena=1;;' ">
+        <param name="A_21" value="id='updateS_C()' algoritmo='sí' expresión='&squot;qqq&squot;' local='i,tC1,tC2' inicio='i=0;relS.C.RELS.n=relS.G.RELS.n;limpiarEscena=1' hacer='tC1=relS.G.RELS[i,0];tC2=relS.G.RELS[i,1];;tC1=relS.G.C1[tC1,3];tC2=relS.G.C2[tC2,3];relS.C.RELS[i,0]=tC1;relS.C.RELS[i,1]=tC2;i=i+1;cont=(i<relS.C.RELS.n);relS.C.update()' mientras='cont' ">
+        <param name="A_22" value="id='updateS_M()' algoritmo='sí' expresión='x' local='i,iC1,iC2,cont,tt' inicio='i=0;relS.M.RELS.n=relS.G.RELS.n;limpiarEscena=1' hacer='relS.M.RELS[i,0]=max(0,relS.G.RELS[i,0]);relS.M.RELS[i,1]=max(0,relS.G.RELS[i,1]);i=i+1;cont=(i<relS.G.RELS.n);tt=(cont)?0:relS.M.actualizaMatriz()' mientras='cont' ">
+        <param name="A_23" value="id='COMMENT___()' algoritmo='no' expresión='0' info='-----------------------------' ">
+        <param name="A_24" value="id='COMMENT___()' algoritmo='no' expresión='0' info='*** MACRO REL RS ***' ">
+        <param name="A_25" value="id='initMacroRS_Graf()' algoritmo='sí' expresión='0' local='i,radio,radio2,tmpX,tmpY,tmpX2' inicio='i=0;relRS.G.C1.n=5;relRS.G.C2.n=5;relRS.G.RELS.n=0;radio=(15/EspGraf.escala);radio2=2*radio+(5/EspGraf.escala);relRS.G.selected=selected' hacer='iC1=min(relRS.G.C1.n,i);iC2=min(relRS.G.C2.n,i);;tmpX=3.5;tmpX2=tmpX+(100/EspGraf.escala);tmpY=(2-iC1)*radio2;relRS.G.C1[iC1,0]=tmpX;relRS.G.C1[iC1,1]=tmpY;relRS.G.C1[iC1,2]=radio;relRS.G.C1[iC1,3]=iC1+1;;;relRS.G.C2[iC2,0]=tmpX2;relRS.G.C2[iC2,1]=tmpY;relRS.G.C2[iC2,2]=radio;relRS.G.C2[iC2,3]=iC2+1;;i=i+1' mientras='i<max(relRS.G.C1.n,relRS.G.C2.n)' ">
+        <param name="A_26" value="id='initMacroRS_Conjunto()' algoritmo='sí' expresión='0' hacer='relRS.C.initDBG();relRS.C.RELS.n=relRS.G.RELS.n;;relRS.C.debug=0;relRS.C.pos.x=5;relRS.C.pos.y=45;relRS.C.maxWidth=485;relRS.C.idConjunto=&squot;R∘S&squot;;relRS.C.update()' ">
+        <param name="A_27" value="id='initMacroRS_Matriz()' algoritmo='sí' expresión='x' hacer='relRS.M.mTxt.x=335;relRS.M.mTxt.y=45;;relRS.M.cols=relRS.G.C2.n;relRS.M.rows=relRS.G.C1.n;;relRS.M.RELS.n=relRS.G.RELS.n;relRS.M.actualizaMatriz();;relRS.M.setSelected(selected)' ">
+        <param name="A_28" value="id='initMacrosRS()' algoritmo='sí' expresión='0' hacer='initMacroRS_Graf();initMacroRS_Conjunto();initMacroRS_Matriz();;relRS.G.Esp.escala=EspGraf.escala;' ">
+        <param name="A_29" value="id='relRS.G.relationAdded(iC1,iC2)' algoritmo='sí' expresión='x' hacer='tt=(relRS.G.RELS.n>12)?relRS.G.delLastRel():0;updateRS_C();updateRS_M();;limpiarEscena=1;;' ">
+        <param name="A_30" value="id='updateRS_C()' algoritmo='sí' expresión='&squot;qqq&squot;' local='i,tC1,tC2' inicio='i=0;relRS.C.RELS.n=relRS.G.RELS.n;limpiarEscena=1' hacer='tC1=relRS.G.RELS[i,0];tC2=relRS.G.RELS[i,1];;tC1=relRS.G.C1[tC1,3];tC2=relRS.G.C2[tC2,3];relRS.C.RELS[i,0]=tC1;relRS.C.RELS[i,1]=tC2;i=i+1;cont=(i<relRS.C.RELS.n);relRS.C.update()' mientras='cont' ">
+        <param name="A_31" value="id='updateRS_M()' algoritmo='sí' expresión='x' local='i,iC1,iC2,cont,tt' inicio='i=0;relRS.M.RELS.n=relRS.G.RELS.n;limpiarEscena=1' hacer='relRS.M.RELS[i,0]=max(0,relRS.G.RELS[i,0]);relRS.M.RELS[i,1]=max(0,relRS.G.RELS[i,1]);i=i+1;cont=(i<relRS.G.RELS.n);tt=(cont)?0:relRS.M.actualizaMatriz()' mientras='cont' ">
+        <param name="A_32" value="id='COMMENT___()' algoritmo='no' expresión='0' info='-----------------------------' ">
+        <param name="A_33" value="id='updateSelected()' algoritmo='sí' expresión='0' hacer='idxR=(selected<0)?-1:EJER_RELRS[selected,2];idxS=(selected<0)?-1:EJER_RELRS[selected,3];idxRS=(selected<0)?-1:EJER_RELRS[selected,4];;relR.C.selected=idxR;relR.G.selected=idxR;relR.M.setSelected(idxR);updateR_C();;relS.C.selected=idxS;relS.G.selected=idxS;relS.M.setSelected(idxS);updateS_C();;relRS.C.selected=idxRS;relRS.G.selected=idxRS;relRS.M.setSelected(idxRS);updateRS_C();;limpiarEscena=1' ">
+        <param name="A_34" value="id='updateMenuSelected()' algoritmo='sí' expresión='0' local='i,cont,tt,res' inicio='i=0;res=&squot;No[-1]&squot; ' hacer='res=(relR.G.RELS.n<=0)?&squot;&squot;:(res+&squot;,&squot;+(i+1)+&squot;[&squot;+i+&squot;]&squot;);i=i+1;cont=(i<EJER_RELRS.n);tt=(!cont)?selected.setOptions(res):0' mientras='cont' ">
+        <param name="A_35" value="id='creaRelR()' algoritmo='sí' expresión='0' local='i,iC1,iC2,iRnd' inicio='n=ent(rnd*5+1);random.creaAleatorios(relR.G.C1.n*relR.G.C2.n);i=0;relR.G.RELS.n=0' hacer='iRnd=random.nums[i];;iC1=ent(iRnd/relR.G.C2.n);iC2=ent(iRnd%relR.G.C2.n);relR.G.addRel(iC1,iC2);i=i+1' mientras='i<n' ">
+        <param name="A_36" value="id='creaRelS()' algoritmo='sí' expresión='0' local='i,iC1,iC2,iRnd' inicio='n=ent(rnd*5+1);random.creaAleatorios(relS.G.C1.n*relS.G.C2.n);i=0;relS.G.RELS.n=0' hacer='iRnd=random.nums[i];;iC1=ent(iRnd/relS.G.C2.n);iC2=ent(iRnd%relS.G.C2.n);relS.G.addRel(iC1,iC2);i=i+1' mientras='i<n' ">
+        <param name="A_37" value="id='updateRelRS()' algoritmo='sí' expresión='0' local='i,iC1,iC2,tmpS,cont' inicio='i=0;tmpS=&squot;&squot;;relRS.G.RELS.n=0' hacer='iC1=relR.G.RELS[i,0];iC2=relR.G.RELS[i,1];updateRelRS_Aux(i,iC1,iC2);i=i+1;cont=(i<relR.G.RELS.n);ö=|**************************************************|;ö=|* Lo pasamos a la matriz para la evaluación   ****|;ö=|**************************************************|;tt=(cont)?0:updateREL_Ejer()' mientras='cont' ">
+        <param name="A_38" value="id='updateRelRS_Aux(idxR,R_iC1,R_iC2)' algoritmo='sí' expresión='0' local='j,iC1,iC2,cond,idxS,nAnt,s,tt,tt2' inicio='j=0;' hacer='iC1=relS.G.RELS[j,0];iC2=relS.G.RELS[j,1];;tt=(R_iC2==iC1);;nAnt=relRS.G.RELS.n;;ö=|**************************************************|;ö=|* Lo construimos temporalmente en relRS **********|;ö=|**************************************************|;tt2=(tt)?relRS.G.addRel(R_iC1,iC2):0;cond=(relRS.G.RELS.n>nAnt);s=nAnt;ö=|***************************************************|;ö=|* Guardamos temporalmente los indices en relRS ****|;ö=|***************************************************|;relRS.G.RELS[s,10]=(cond)?idxR:relRS.G.RELS[s,10];relRS.G.RELS[s,11]=(cond)?j:relRS.G.RELS[s,11];;j=j+1' mientras='j<relS.G.RELS.n' ">
+        <param name="A_39" value="id='updateREL_Ejer()' algoritmo='sí' expresión='0' local='k,cont' inicio='k=0;EJER_RELRS.n=relRS.G.RELS.n;relRS.G.RELS.n=0' hacer='EJER_RELRS[k,0]=relRS.G.RELS[k,0];EJER_RELRS[k,1]=relRS.G.RELS[k,1];EJER_RELRS[k,2]=relRS.G.RELS[k,10];EJER_RELRS[k,3]=relRS.G.RELS[k,11];k=k+1;cont=(k<EJER_RELRS.n);;ö=|** Limpiamos relRS ***************|;tt=(!cont)?relRS.G.relationAdded(-1,-1):0;tt=(!cont)?updateMenuSelected():0;' mientras='cont' ">
+        <param name="A_40" value="id='printDBGEjer()' algoritmo='sí' expresión='0' local='k,str,a,b,c,d' inicio='k=0;str=&squot;&squot;;_Print_(&squot;&squot;);_Print_(&squot;****EJERCICIO*************&squot;+EJER_RELRS.n);' hacer='a=EJER_RELRS[k,0];b=EJER_RELRS[k,1];c=EJER_RELRS[k,2];d=EJER_RELRS[k,3];str=k+&squot;:(&squot;+a+&squot;,&squot;+b+&squot;) [&squot;+c+&squot;,&squot;+d+&squot;]&squot;;_Print_(str);;k=k+1' mientras='k<EJER_RELRS.n' ">
+        <param name="A_41" value="id='verificar()' algoritmo='sí' expresión='0' local='type' hacer='verificado=1;correcto=verificarAux();intentos=intentos+1;RETRO.visible=1;;type=(correcto)?0:1;type=(EJER_RELRS.n>relRS.G.RELS.n)?2:type;type=(EJER_RELRS.n<relRS.G.RELS.n)?3:type;RETRO.type=type' ">
+        <param name="A_42" value="id='verificarAux()' algoritmo='sí' expresión='correcto' local='k,iC2,iC3,iC1,exist' inicio='k=0;correcto=(EJER_RELRS.n==relRS.G.RELS.n);nErrores=0' hacer='iC1=EJER_RELRS[k,0];iC2=EJER_RELRS[k,1];iC3=relRS.G.existeRel(iC1,iC2);exist=(iC3>-1)|(EJER_RELRS.n<1);correcto=correcto&(exist);;EJER_RELRS[k,4]=(exist)?iC3:EJER_RELRS[k,4];;nErrores=nErrores+(!exist);k=k+1' mientras='(k<EJER_RELRS.n)' ">
+        <param name="A_43" value="id='verRespuesta()' algoritmo='sí' expresión='0' local='i,iC1,iC2' inicio='i=0;relRS.G.RELS.n=0' hacer='iC1=EJER_RELRS[i,0];iC2=EJER_RELRS[i,1];relRS.G.addRel(iC1,iC2);i=i+1' mientras='i<EJER_RELRS.n' ">
+        <param name="A_44" value="id='__SCORM__()' algoritmo='no' expresión='0' info='*** SCORM ***' ">
+        <param name="A_45" value="id='getSCORMState()' algoritmo='sí' expresión='res' local='res,c' inicio='c=&squot;@&squot;;res=&squot;&squot;' hacer='res=res+&squot;D02.nResueltos:&squot;+nResueltos+c;res=res+&squot;D02.explorado:&squot;+explorado+c;res=res+&squot;D02.ANT.per:&squot;+ANT.per+c;;;;' ">
+        <param name="A_46" value="id='initStateScorm()' algoritmo='sí' expresión='x' hacer='nResueltos=getSCORMStateVar(&squot;D02.nResueltos&squot;);explorado=getSCORMStateVar(&squot;D02.explorado&squot;);ANT.per=getSCORMStateVar(&squot;D02.ANT.per&squot;);;' ">
+        <param name="A_47" value="id='regObjetivos()' algoritmo='sí' expresión='0' local='actRes,per,tt' hacer='otroRes=(!ANT.verificado)&(verificado)&(correcto);explorado=explorado|((ANT.sel!=selected)&(selected>-1));nResueltos=min(nResueltos+otroRes,2);;ô=|*****************************************************|;ô=|* Si ve 2 ejercicios tienen el 80% +20% por explorar*|;ô=|*****************************************************|;per=ent(20*explorado+(80/2)*nResueltos);per=min(per,100);tt=(ANT.per<per);tt=(tt)?setSCORMPercentage(per):0;;;_Print_(&squot;******************************&squot;);_Print_(&squot;selected :&squot;+selected+&squot; -ANT.sel :&squot;+ANT.sel);_Print_(&squot;Explorado :&squot;+explorado);_Print_(&squot;N Res :&squot;+nResueltos+&squot; otroRes: &squot;+otroRes );_Print_(&squot;Porce :&squot;+per+&squot;%&squot;);_Print_(&squot;&squot;);ANT.per=per;ANT.sel=selected;ANT.verificado=verificado' ">
+        <param name="A_48" value="id='__SCORM__()' algoritmo='no' expresión='0' info='*** PANELS ***' ">
+        <param name="A_49" value="id='closePanelCtrs()' algoritmo='sí' expresión='x' hacer='CTRS.visible=1;;CTRS.opened=0;CTRS.y=-CTRS_north._h;;btnOpenClose.y=CTRS.y+CTRS_north._h;btnOpenClose.x=(E1._w-btnOpenClose._w)' ">
+        <param name="A_50" value="id='openPanelCtrs()' algoritmo='sí' expresión='x' hacer='CTRS.visible=1;CTRS.opened=1;;CTRS.x=(E1._w-CTRS_north._w)/2;CTRS.y=0;;btnOpenClose.y=CTRS.y+CTRS_north._h;btnOpenClose.x=(E1._w-btnOpenClose._w)' ">
+        <param name="A_51" value="id='INICIO' algoritmo='sí' evaluar='una-sola-vez' hacer='initStateScorm();initEscena();openPanelCtrs();animPanelCTR=0' ">
+        <param name="A_52" value="id='CALCULOS' algoritmo='sí' evaluar='siempre' hacer='relR.G.Esp.mx=EspGraf.mouse_x;relR.G.Esp.my=EspGraf.mouse_y;relR.G.Esp.press=EspGraf.mouse_pressed;relR.G.Esp.escala=EspGraf.escala;_relR.G.update();;relS.G.Esp.mx=EspGraf.mouse_x;relS.G.Esp.my=EspGraf.mouse_y;relS.G.Esp.press=EspGraf.mouse_pressed;relS.G.Esp.escala=EspGraf.escala;_relS.G.update();;relRS.G.Esp.mx=EspGraf.mouse_x;relRS.G.Esp.my=EspGraf.mouse_y;relRS.G.Esp.press=EspGraf.mouse_pressed;relRS.G.Esp.escala=EspGraf.escala;tt=(!verificado)?relRS.G.update():0;;regObjetivos();' ">
+        <param name="A_53" value="id='limpiar' evento='sí' condición='limpiarEscena' acción='clear' ejecución='siempre' ">
+        <param name="A_54" value="id='limpiar' evento='sí' condición='limpiarEscena' acción='calculate' parámetro='limpiarEscena=0' ejecución='siempre' ">
+        <param name="A_55" value="id='animPanelCTR' evento='sí' condición='animPanelCTR' acción='animate' ejecución='siempre' info='animPanelCTR' ">
+        <param name="A_56" value="id='animPanelCTR' evento='sí' condición='animPanelCTR' acción='calculate' parámetro='animPanelCTR=0' ejecución='siempre' info='animPanelCTR' ">
+        <param name="G_01" value="espacio='EspText01' tipo='macro' fondo='sí' coord_abs='no' nombre='random' expresión='macros/random.txt' rotini='0' posini='[5000,0]' ">
+        <param name="G_02" value="espacio='EspText01' tipo='macro' fondo='no' coord_abs='no' nombre='relR.C' expresión='macros/rel_conjunto.txt' rotini='0' posini='[0,0]' ">
+        <param name="G_03" value="espacio='EspText01' tipo='macro' fondo='no' coord_abs='no' nombre='relS.C' expresión='macros/rel_conjunto.txt' rotini='0' posini='[0,0]' ">
+        <param name="G_04" value="espacio='EspText01' tipo='macro' fondo='no' coord_abs='no' nombre='relRS.C' expresión='macros/rel_conjunto.txt' rotini='0' posini='[0,0]' ">
+        <param name="G_05" value="espacio='EspGraf' tipo='texto' fondo='sí' color='20303a' expresión='[_Grafica_____,20]' decimales='2' fijo='sí' ancho='1' fuente='SansSerif,PLAIN,18' align='a_left' anchor='a_top_left' info='***GRAFICA**' ">
+        <param name="G_06" value="espacio='EspGraf' tipo='texto' fondo='sí' color='20303a' expresión='[60,5]' texto='{\rtf1\uc0{\fonttbl\f0\fcharset0 Arial;\f1\fcharset0 Courier New;}\f0\fs50\b R\b0\f1\fs16\b                          \b0\f0\fs50\b S\b0\f1\fs16\b                                 \b0\f0\fs40\b  \b0\fs50\b R∘S\b0}' decimales='2' fijo='sí' ancho='1' fuente='SansSerif,BOLD,20' align='a_left' anchor='a_top_left' info='HEADER -R, S RS-' ">
+        <param name="G_07" value="espacio='EspGraf' tipo='macro' fondo='no' coord_abs='no' nombre='relR.G' expresión='macros/relaciones.txt' rotini='0' posini='[0,0]' ">
+        <param name="G_08" value="espacio='EspGraf' tipo='macro' fondo='no' coord_abs='no' nombre='relS.G' expresión='macros/relaciones.txt' rotini='0' posini='[0,0]' ">
+        <param name="G_09" value="espacio='EspGraf' tipo='segmento' fondo='no' color='20303a' coord_abs='no' expresión='(2.5,-2)(2.5,2)' decimales='2' fijo='no' tamaño='0' ancho='3' fuente='SansSerif,PLAIN,18' lineDash='solid' ">
+        <param name="G_10" value="espacio='EspGraf' tipo='macro' fondo='no' coord_abs='no' nombre='relRS.G' expresión='macros/relaciones.txt' rotini='0' posini='[0,0]' ">
+        <param name="G_11" value="espacio='MATRIZ' tipo='texto' fondo='sí' color='20303a' expresión='[_MATRIZ__,20]' decimales='2' fijo='sí' ancho='1' fuente='SansSerif,PLAIN,18' align='left' anchor='top_left' info='***Matriz***' ">
+        <param name="G_12" value="espacio='MATRIZ' tipo='texto' fondo='sí' color='20303a' expresión='[80,5]' texto='R                    S                  R∘S' decimales='2' fijo='sí' ancho='1' fuente='SansSerif,BOLD,26' align='left' anchor='top_left' info='HEADER -Como matriz-' ">
+        <param name="G_13" value="espacio='MATRIZ' tipo='segmento' fondo='sí' color='20303a' coord_abs='no' expresión='(-4.9,1.40)(4.9,1.4)' decimales='2' fijo='sí' tamaño='0' ancho='3' fuente='SansSerif,PLAIN,18' lineDash='solid' ">
+        <param name="G_14" value="espacio='MATRIZ' tipo='macro' fondo='no' coord_abs='no' nombre='relR.M' expresión='macros/rel_matriz.txt' rotini='0' posini='[0,0]' ">
+        <param name="G_15" value="espacio='MATRIZ' tipo='segmento' fondo='sí' color='20303a' coord_abs='no' expresión='(-1.74,1.40)(-1.74,-1.8)' decimales='2' fijo='sí' tamaño='0' ancho='3' fuente='SansSerif,PLAIN,18' lineDash='solid' ">
+        <param name="G_16" value="espacio='RETRO' tipo='texto' fondo='no' color='20303a' dibujar-si='RETRO.type==0' expresión='[10,40]' texto='{\rtf1\uc0{\fonttbl\f0\fcharset0 Arial;\f1\fcharset0 Courier New;}{\colortbl\red32\green183\blue58;\red32\green48\blue58;}\f0\cf0\fs36              \cf0\fs48\b\i  \i0\b0\cf0\fs60\b\i ¡ CORRECTO !\i0\b0\par\f0\cf1\fs36\b        Has construido la relación \b0\cf1\b\i R∘S\i0\b0\cf1 .\par\par\f0\cf1\fs36  Ahora puedes explorar como corresponde \par\f0\cf1\fs36 cada elemento \cf1 de \cf1\b\i  R∘S\i0\b0\cf1   con  los  elementos\par\f0\cf1\fs36   de \cf1\b\i R \i0\b0\cf1 y \cf1\b\i S. \i0\b0\cf1 Utiliza el menú \cf1 &quot;\cf1\i Resaltar\i0\cf1 &quot;﻿\cf1  para\par\f0\cf1\fs36   resaltar el elemento de \cf1\b\i R∘S \i0\b0\cf1 que desees\par\f0\cf1\fs36  y observa cuales se resaltan en\cf1\b\i  R \i0\b0\cf1 y en\cf1\b\i  S.\i0\b0\par\par\f1\cf1\fs36  }' decimales='2' fijo='sí' ancho='1' fuente='Monospaced,PLAIN,18' align='a_left' anchor='a_top_left' info='** RETRO BIEN **** ' ">
+        <param name="G_17" value="espacio='RETRO' tipo='texto' fondo='no' color='20303a' dibujar-si='RETRO.type==1' expresión='[20,60]' texto='{\rtf1\uc0{\fonttbl\f0\fcharset0 Arial;\f1\fcharset0 Courier New;}{\colortbl\red32\green183\blue58;\red157\green0\blue0;\red32\green48\blue58;}\f0\cf0\fs36  \cf1             \cf1\fs48\b\i  \i0\b0\cf1\fs60\b\i INCORRECTO\i0\b0\par\par\f0\cf2\fs36 Algunos de los elementos que pusiste para \par\f0\cf2\fs36        la relación \cf2\b\i R∘S\i0\b0\cf2  no son correctos.\par\par\par\f1\cf2\fs36  }' decimales='2' fijo='sí' ancho='1' fuente='Monospaced,PLAIN,18' align='left' anchor='top_left' info='** RETRO MAL 1**** ' ">
+        <param name="G_18" value="espacio='RETRO' tipo='texto' fondo='no' color='20303a' dibujar-si='RETRO.type==2' expresión='[20,60]' texto='{\rtf1\uc0{\fonttbl\f0\fcharset0 Arial;\f1\fcharset0 Courier New;}{\colortbl\red32\green183\blue58;\red157\green0\blue0;\red32\green48\blue58;}\f0\cf0\fs36  \cf1          \cf1\fs48\b\i  \i0\b0\cf1\fs60\b\i INCORRECTO\i0\b0\cf1\fs36\b\i  \i0\b0\par\par\f0\cf2\fs36 T\cf2 e hacen falta elementos en la relación \par\f0\cf2\fs36            correspondiente \cf2 a \cf2\b\i R∘S.\i0\b0\par\par\par\f1\cf2\fs36  }' decimales='2' fijo='sí' ancho='1' fuente='Monospaced,PLAIN,18' align='a_left' anchor='a_top_left' info='** RETRO MAL 2**** ' ">
+        <param name="G_19" value="espacio='RETRO' tipo='texto' fondo='no' color='20303a' dibujar-si='RETRO.type==3' expresión='[20,60]' texto='{\rtf1\uc0{\fonttbl\f0\fcharset0 Arial;\f1\fcharset0 Courier New;}{\colortbl\red32\green183\blue58;\red157\green0\blue0;\red32\green48\blue58;}\f0\cf0\fs36  \cf1            \cf1\fs48\b\i  \i0\b0\cf1\fs60\b\i INCORRECTO\i0\b0\par\par\f0\cf2\fs36 Tienes más elementos en \cf2\b\i R∘S\i0\b0\cf2  y algunos de\par\f0\cf2\fs36   los \cf2 elementos que pusiste para la relación  \par\f0\cf2\fs36                        no son correctos.\par\par\par\f1\cf2\fs36  }' decimales='2' fijo='sí' ancho='1' fuente='Monospaced,PLAIN,18' align='a_left' anchor='a_top_left' info='** RETRO MAL 3**** ' ">
+        <param name="G_20" value="espacio='MATRIZ' tipo='macro' fondo='no' coord_abs='no' nombre='relS.M' expresión='macros/rel_matriz.txt' rotini='0' posini='[0,0]' ">
+        <param name="G_21" value="espacio='MATRIZ' tipo='segmento' fondo='sí' color='20303a' coord_abs='no' expresión='(1.74,1.40)(1.74,-1.8)' decimales='2' fijo='sí' tamaño='0' ancho='3' fuente='SansSerif,PLAIN,18' lineDash='solid' ">
+        <param name="G_22" value="espacio='MATRIZ' tipo='macro' fondo='no' coord_abs='no' nombre='relRS.M' expresión='macros/rel_matriz.txt' rotini='0' posini='[0,0]' ">
+        <param name="Animación" value="pausa='2000' controles='sí' auto='sí' repetir='no' hacer='closePanelCtrs()' ">
+      </ajs>
+      <!------ INICIA LA INFO SOBRE LAS LICENCIAS Y LOS CRÉDITOS. ---------->
+      <a id="btCopyright" class="standardButton" title="Haz clic aquí para consultar los créditos y las condiciones de uso de este recurso." href="#" onclick="document.getElementById('copyright').className='visible';">©</a>
+
+      <div id="copyright" class="oculto">
+
+        <div class="innerCopyright">
+          <a id="btCloseCopyright" class="standardButton" title="Haz clic aquí para cerrar esta ventana." href="#" onclick="document.getElementById('copyright').className='oculto'">×</a>
+          <!-- Créditos UAM  (siempre deben ir en primer lugar) -->
+
+          <div class="creditos">
+            <h1>
+Créditos
+</h1>
+            <h2>
+Escena original
+</h2>
+            <table class="autores">
+              <tbody>
+                <tr>
+                  <td class="rol"> Diseño del contenido </td>
+                  <td class="nombre"> Julio Arnoldo Prado Saavedra
+                    <br>Víctor Manuel Amezcua Y Raz</td>
+                </tr>
+                <tr>
+                  <td class="rol"> Diseño funcional </td>
+                  <td class="nombre">Julio Arnoldo Prado Saavedra
+                    <br>Víctor Manuel Amezcua Y Raz</td>
+                </tr>
+                <tr>
+                  <td class="rol"> Programación </td>
+                  <td class="nombre"> Julio Arnoldo Prado Saavedra</td>
+                </tr>
+                <tr>
+                  <td class="rol"> Asesoría de programación </td>
+                  <td class="nombre">
+                    Víctor Manuel Amezcua Y Raz
+                    <!-- Varias personas en el mismo rubro, separar por <br> -->
+                  </td>
+                </tr>
+                <tr>
+                  <td class="rol"> Diseño gráfico </td>
+                  <td class="nombre"> Ricardo López Gómez </td>
+                </tr>
+                <tr>
+                  <td class="rol">Coordinación </td>
+                  <td class="nombre"> Leticia Montserrat Vargas Rocha </td>
+                </tr>
+              </tbody>
+            </table>
+            <h2>
+Adaptación
+</h2>
+            <table class="autores	">
+              <tbody>
+                <tr>
+                  <td class="rol"> Diseño funcional </td>
+                  <td class="nombre">Julio Arnoldo Prado Saavedra
+                    <br>Oscar Escamilla González </td>
+                </tr>
+                <tr>
+                  <td class="rol"> Programación </td>
+                  <td class="nombre">Julio Arnoldo Prado Saavedra</td>
+                </tr>
+                <!-- Varias personas en el mismo rubro, separar por <br> -->
+                <tr>
+                  <td class="rol"> Asesoría de programación </td>
+                  <td class="nombre">Oscar Escamilla González
+                    <br> Leticia Montserrat Vargas Rocha
+                  </td>
+                </tr>
+                <tr>
+                  <td class="rol"> Diseño gráfico </td>
+                  <td class="nombre"> Francisco Varela Fuentes </td>
+                </tr>
+                <tr>
+                  <td class="rol">Coordinación </td>
+                  <td class="nombre"> Leticia Montserrat Vargas Rocha </td>
+                </tr>
+              </tbody>
+            </table>
+
+            <div class="logos">
+              <a href="">
+                <img src="../images/info/icns/logoLite.png">
+              </a>
+              <a href="http://www.unadmexico.mx/">
+                <img src="../images/info/icns/logoUNADM.png">
+              </a>
+            </div>
+          </div>
+          <!-- Linea separación créditos -->
+          <hr class="linea">
+          <!-- Aviso licencias -->
+
+          <div class="licencias">
+
+            <p class="creativeCommons">Los contenidos de esta unidad didáctica interactiva están bajo una licencia
+              <a href="http://creativecommons.org/licenses/by-nc-sa/2.5/es/" target="_blank">Creative Commons Reconocimiento-NoComercial-CompartirIgual</a>.</p>
+            <!--arquimedes (optativo)-->
+
+            <p>La unidad didáctica fue creada con
+              <a href="http://arquimedes.matem.unam.mx/Descartes5/creditos/conCCL.html" target="_blank">Arquímedes</a>, una herramienta de código abierto.</p>
+            <!-- Descartes -->
+
+            <p>La unidad didáctica contiene escenas elaboradas con Descartes, una herramienta de código abierto.</p>
+
+            <p style="text-align:center"> LITE - UnADM 2014</p>
+          </div>
+        </div>
+      </div>
+      <!------ TERMINA LA INFO SOBRE LAS LICENCIAS Y LOS CRÉDITOS. ---------->
+    </div>
+  </article>
+
+<script type="descartes/macro" id="macros/random.txt">
+tipo_de_macro=R2
+Idioma=español
+id='nums' vector='sí' evaluar='una-sola-vez' tamaño='50' 
+id='initNums(nP)' algoritmo='sí' expresión='0' local='i' inicio='i=0' hacer='nums[i]=i;i=i+1' mientras='i&lt;nP' 
+id='creaAleatorios(nP)' algoritmo='sí' expresión='0' local='i,idx1,idx2,tmpN1,tmpN2' inicio='n=nP;initNums(n);i=0;' hacer='idx1=ent(rnd*n);idx2=ent(rnd*n);;tmpN1=nums[idx1];tmpN2=nums[idx2];;nums[idx1]=tmpN2;nums[idx2]=tmpN1;i=i+1' mientras='i&lt;n*2' 
+id='INICIO' algoritmo='sí' evaluar='una-sola-vez' hacer='debug=1;n=10;creaAleatorios(n)' 
+id='CALCULOS' algoritmo='sí' evaluar='siempre' 
+espacio='E1' tipo='texto' fondo='no' color='20303a' expresión='[20,20]' texto='n = [n]' decimales='2' fijo='no' ancho='1' fuente='SansSerif,PLAIN,18' 
+espacio='E1' tipo='texto' fondo='no' color='20303a' expresión='[20,40+s*16]' familia='s' s.intervalo='[0,n-1]' s.pasos='n-1' texto='[s] : [nums[s]]' decimales='2' fijo='no' ancho='1' fuente='SansSerif,PLAIN,18' 
+</script>
+
+<script type="descartes/macro" id="macros/rel_conjunto.txt">
+tipo_de_macro=R2
+Idioma=español
+id='RELS' matriz='sí' evaluar='una-sola-vez' columnas='20' filas='20' expresión=';' 
+id='update_iniT()' algoritmo='sí' expresión='0' hacer='txtConjunto=&squot;&squot;;tmpS=&squot;&squot;;currNL=0;prefix=idConjunto+&squot;={&squot;;;tmpL=_length_(prefix);txtSelected=getWhiteSpaces(tmpL);;_Print_(&squot;oooooooooooooooooooooo&squot;);_Print_(&squot;[&squot;+prefix+&squot;]&squot;);_Print_(&squot;[&squot;+txtSelected+&squot;]&squot;);_Print_(&squot;oooooooooooooooooooooo&squot;)' 
+id='update()' algoritmo='sí' expresión='txtConjunto' local='i,tmpT,tmpS,tC1,tC2,iAnt,wB,idxSel,cont,dbg,currNL,extraS,ctW,nNL,toAdd' inicio='update_iniT();i=0;line=prefix;nLine=&squot;\&squot;+&squot;n&squot;;' hacer='tC1=RELS[i,0];tC2=RELS[i,1];;tmpT=&squot;(&squot;+tC1+&squot;,&squot;+tC2+&squot;)&squot;;tmpS=(selected==i)?tmpT:&squot;     &squot;;;tmpT=(RELS.n&gt;0)?tmpT:&squot;&squot;;tmpS=(RELS.n&gt;0)?tmpS:&squot;&squot;;;cont=(i+1)&lt;RELS.n;;ctW=line+tmpT+((0*cont)?&squot;&squot;:&squot;}&squot;);ctW=getWCadena(ctW);;cambioL=(ctW&gt;maxWidth);currNL=currNL+(cambioL);;;extS=(!cont)?&squot;&squot;:&squot; &squot;;tmpT=tmpT+extS;tmpS=tmpS+extS;tmpS=(selected&lt;i)?&squot;&squot;:tmpS;;;addL=(cambioL)|(!cont);toAdd=(!cambioL)?tmpT:(nLine+(cont?&squot;&squot;:tmpT));line=line+toAdd;txtConjunto=txtConjunto+((addL)?line:&squot;&squot;);line=(cambioL)?tmpT:line;;dbg=1|(i&lt;=selected);;doNL=(cambioL)&(i&lt;=selected);txtSelected=(doNL)?getNNewLines(currNL):txtSelected;txtSelected=txtSelected+tmpS;;tt=(dbg)?_Print_(&squot;****************************************&squot;):0;tt=(dbg)?_Print_(&squot;[&squot;+ctW+&squot;,&squot;+maxWidth+&squot;]-[&squot;+nNL+&squot;,&squot;+currNL+&squot;] cambio: &squot; +cambioL+&squot; (&squot;+i+&squot;,&squot;+idxSel+&squot;)&squot;):0;tt=(dbg)?_Print_(&squot;[&squot;+line+&squot;]&squot;):0;tt=(dbg)?_Print_(&squot;[&squot;+txtSelected+&squot;]&squot;):0;tt=(dbg)?_Print_(&squot;*****************************************&squot;):0;tt=(dbg)?_Print_(&squot;&squot;):0;;i=i+1' mientras='i&lt;RELS.n' 
+id='getWCadena(str)' algoritmo='sí' expresión='wRes' local='wRes' hacer='wRes=_AnchoDeCadena_(&squot;&squot;+str,&squot;Monospaced&squot;,&squot;BOLD&squot;,&squot;18&squot;)' 
+id='getWhiteSpaces(n)' algoritmo='sí' expresión='(n&lt;=0)?&squot;&squot;:res' local='res,i' inicio='res=&squot;&squot;;i=0' hacer='res=res+&squot; &squot;;i=i+1' mientras='i&lt;n' 
+id='getNNewLines(n)' algoritmo='sí' expresión='(n&lt;=0)?&squot;&squot;:res' local='i,res' inicio='i=0;res=&squot;&squot;;' hacer='res=res+&squot;\&squot;+&squot;n&squot;;i=i+1' mientras='(i&lt;n)&(i&lt;100)' 
+id='initDBG(nElem)' algoritmo='sí' expresión='0' hacer='initDBG_aux(nElem);selected=1;update()' 
+id='initDBG_aux(nElem)' algoritmo='sí' expresión='0' local='i' inicio='i=0;RELS.n=nElem' hacer='RELS[i,0]=ent(rnd*10);RELS[i,1]=ent(rnd*10);;i=i+1;;;;;;' mientras='i&lt;RELS.n' 
+id='INICIO' algoritmo='sí' evaluar='una-sola-vez' hacer='pos.x=10;pos.y=10;selected=-1;txtSelected=&squot;&squot;;txtConjunto=&squot;&squot;;idConjunto=&squot;R&squot;;debug=1;maxWidth=250;n2=0;initDBG(n2)' 
+id='CALCULOS' algoritmo='sí' evaluar='siempre' 
+id='limpiar' evento='sí' condición='limpiar' acción='limpiar' ejecución='siempre' 
+id='limpiar' evento='sí' condición='limpiar' acción='calcular' parámetro='limpiar=0' ejecución='siempre' 
+espacio='E1' tipo='polígono' fondo='sí' color='20303a' dibujar-si='debug' coord_abs='sí' expresión='(pos.x,pos.y)(pos.x+maxWidth,pos.y)(pos.x+maxWidth,pos.y+200)(pos.x,pos.y+200)(pos.x,pos.y)' relleno='ffaf00' ancho='1' lineDash='solid' 
+espacio='E1' tipo='texto' fondo='sí' color='20303a' expresión='[pos.x,pos.y]' familia='s' s.intervalo='[0,1]' s.pasos='8' texto='[txtConjunto]}' decimales='2' fijo='sí' ancho='1' fuente='Monospaced,BOLD,18' align='a_left' anchor='a_top_left' info='RELACION como conjunto' 
+espacio='E1' tipo='texto' fondo='sí' color='ffffff' expresión='[pos.x,pos.y]' texto='[txtSelected]' decimales='2' fijo='no' ancho='1' color_borde_texto='4f8694' fuente='Monospaced,BOLD,18' align='a_left' anchor='a_top_left' info='SELECTED RELACION como conjunto' 
+espacio='E1' tipo='segmento' fondo='sí' color='20303a' dibujar-si='debug' coord_abs='sí' expresión='(pos.x,pos.y+18)(pos.x+maxWidth,pos.y+18)' decimales='2' fijo='sí' tamaño='0' ancho='3' fuente='SansSerif,PLAIN,18' lineDash='solid' info='Para Checar el tamaño del texto ' 
+</script>
+
+<script type="descartes/macro" id="macros/relaciones.txt">
+tipo_de_macro=R2
+Idioma=español
+id='development' expresión='0' 
+id='debug' expresión='0' 
+id='C1' matriz='sí' evaluar='una-sola-vez' columnas='20' filas='20' expresión=';' 
+id='C2' matriz='sí' evaluar='una-sola-vez' columnas='20' filas='20' expresión=';' 
+id='RELS' matriz='sí' evaluar='una-sola-vez' columnas='20' filas='20' expresión=';' 
+id='FLECHAS' matriz='sí' evaluar='una-sola-vez' columnas='20' filas='20' expresión=';' 
+id='_DEVELOP__()' algoritmo='no' expresión='x' 
+id='initCs()' algoritmo='sí' expresión='x' local='i,iC1,iC2' inicio='i=0;' hacer='iC1=min(i,C1.n);iC2=min(i,C2.n);;;;C1[iC1,0]=-3;C1[iC1,1]=3-iC1;C1[iC1,2]=0.25;C1[iC1,3]=&squot;&squot;+iC1;;;;C2[iC1,0]=3;C2[iC2,1]=3-iC2;C2[iC2,2]=0.30;C2[iC2,3]=&squot;&squot;+iC2;;i=i+1' mientras='i&lt;max(C1.n,C2.n)' 
+id='updateEspTest()' algoritmo='sí' expresión='x' hacer='Esp.mx=E1.mouse_x;Esp.my=E1.mouse_y;Esp.press=E1.mouse_pressed;Esp.escala=E1.escala' 
+id='relationAdded(iC1,iC2)' algoritmo='no' expresión='0' 
+id='_NORMAL__()' algoritmo='no' expresión='x' 
+id='getArcC1(idx)' algoritmo='sí' expresión='idx&lt;C1.n' hacer='obj.x=C1[idx,0];obj.y=C1[idx,1];obj.r=C1[idx,2];obj.arc.init=0;obj.arc.end=360;obj.txt=C1[idx,3];;' 
+id='getArcC2(idx)' algoritmo='sí' expresión='idx&lt;C2.n' hacer='obj.x=C2[idx,0];obj.y=C2[idx,1];obj.r=C2[idx,2];obj.arc.init=0;obj.arc.end=360;obj.txt=C2[idx,3]' 
+id='sobreCualC1(mx,my)' algoritmo='sí' expresión='res' local='i,px,px,pr,res' inicio='i=0;res=-1' hacer='dist=sqrt((C1[i,0]-mx)^2+(C1[i,1]-my)^2);res=(dist&lt;=(C1[i,2]))?i:res;i=i+1' mientras='(res&lt;0)&(i&lt;C1.n)' 
+id='sobreCualC2(mx,my)' algoritmo='sí' expresión='res' local='i,px,px,pr,res' inicio='i=0;res=-1' hacer='dist=sqrt((C2[i,0]-mx)^2+(C2[i,1]-my)^2);res=(dist&lt;=(C2[i,2]))?i:res;i=i+1' mientras='(res&lt;0)&(i&lt;C2.n)' 
+id='getAng(x1,y1,x2,y2)' algoritmo='sí' expresión='theta' local='theta,pPunto,normA,normB' hacer='normA=sqrt(x1^2+y1^2);normB=sqrt(x2^2+y2^2);pPunto=(x1*x2+y1*y2);theta=acos(pPunto/(normA*normB));;' 
+id='getFlechaRel(idx)' algoritmo='sí' expresión='(idx&lt;RELS.n)' local='iC1,iC2,ang,dir.x,dir.y.mPix' hacer='iC1=RELS[idx,0];iC2=RELS[idx,1];;mPix=(5/Esp.escala);f.p1.x=C1[iC1,0];f.p1.y=C1[iC1,1];f.p1.r=C1[iC1,2]+mPix;;f.p2.x=C2[iC2,0];f.p2.y=C2[iC2,1];f.p2.r=C2[iC2,2]+mPix;;dir.x=(f.p2.x-f.p1.x) ;dir.y=(f.p2.y-f.p1.y);;ang=getAng(dir.x,dir,y);ang=ent(ang/(2*pi)+0.45);ang=2*pi*ang;;dir.x=cos(ang);dir.y=sen(ang);;f.p1.x=f.p1.x+dir.x*f.p1.r;f.p1.y=f.p1.y+dir.y*f.p1.r;;f.p2.x=f.p2.x-dir.x*f.p2.r;f.p2.y=f.p2.y-dir.y*f.p2.r;' 
+id='getPosTxtGC1(idx)' algoritmo='sí' expresión='1' hacer='txt=C1[idx,3]+&squot;&squot;;txt.h=24;txt.w=_AnchoDeCadena_(txt,&squot;SansSerif&squot;,&squot;PLAIN&squot;,txt.h+&squot;&squot;);;txt.w=(txt.w)/Esp.escala;txt.h=20/Esp.escala;;txt.x=C1[idx,0]-txt.w/2;txt.y=C1[idx,1]-txt.h/2' 
+id='getPosTxtGC2(idx)' algoritmo='sí' expresión='1' hacer='txt=C2[idx,3]+&squot;&squot;;txt.h=24;txt.w=_AnchoDeCadena_(txt,&squot;SansSerif&squot;,&squot;PLAIN&squot;,txt.h+&squot;&squot;);;txt.w=(txt.w)/Esp.escala;txt.h=20/Esp.escala;;txt.x=C2[idx,0]-txt.w/2;txt.y=C2[idx,1]-txt.h/2' 
+id='existeRel(iC1,iC2)' algoritmo='sí' expresión='res' local='i,res,isRel' inicio='i=0;res=-1' hacer='isRes=(RELS[i,0]==iC1)&(RELS[i,1]==iC2)&(RELS.n&gt;i);res=(isRes)?i:res;i=i+1' mientras='(i&lt;RELS.n)&(res&lt;0)' 
+id='addRel(iC1,iC2)' algoritmo='sí' expresión='x' local='idxRes,doAdd,tt' hacer='RELS.n=max(RELS.n,0);idxRes=existeRel(iC1,iC2);doAdd=(idxRes&lt;0);;idxRes=(doAdd)?RELS.n:idxRes;RELS[idxRes,0]=iC1;RELS[idxRes,1]=iC2;;RELS.n=RELS.n+doAdd;tt=(doAdd)?updateFlechas():0;tt=(doAdd)?relationAdded(iC1,iC2):0' 
+id='delLastRel()' algoritmo='sí' expresión='x' hacer='RELS.n=max(0,RELS.n-1)' 
+id='updateFlechas()' algoritmo='sí' expresión='0' local='j' inicio='_Print_(&squot;Vamos a agregar flechas :&squot;+RELS.n);j=0;' hacer='getFlechaRel(j);FLECHAS[j,0]=1;FLECHAS[j,1]=f.p1.x;FLECHAS[j,2]=f.p1.y;FLECHAS[j,3]=f.p2.x;FLECHAS[j,4]=f.p2.y;;j=j+1' mientras='j&lt;RELS.n' 
+id='update()' algoritmo='sí' expresión='x' local='doCalcC2,doAddRel,tt' hacer='recienPress=(!ANT.press)&(Esp.press);recienSol=(ANT.press)&(!Esp.press);;doCalcC1=(actC1&lt;0)&(recienPress);;actC1=(doCalcC1)?sobreCualC1(Esp.mx,Esp.my):actC1;;doCalcC2=((recienSol)|(Esp.press))&(actC1&gt;=0);actC2=(doCalcC2)?sobreCualC2(Esp.mx,Esp.my):actC2;doAddRel=(recienSol)&(actC1&gt;=0)&(actC2&gt;=0);tt=(doAddRel)?addRel(actC1,actC2):0;;actC1=(!Esp.press)?-1:actC1;actC2=(!Esp.press)?-1:actC2;ANT.press=Esp.press'
+id='INICIO' algoritmo='sí' evaluar='una-sola-vez' hacer='_Print_(&squot;Iniciamos el macro !!!1&squot;);Esp.mx=E1.mouse_x;Esp.my=E1.mouse_y;Esp.press=E1.mouse_pressed;Esp.escala=E1.escala;;actC2=-1;actC1=-1;;C1.n=3;C2.n=3;RELS.n=0;ANT.press=0;verFlechas=1;selected=-1;initCs();'
+id='CALCULOS' algoritmo='sí' evaluar='siempre' hacer='tt=(development)?(updateEspTest()+update()):0;;'
+tipo='arco' fondo='sí' dibujar-si='getArcC1(s)' centro='(obj.x,obj.y)' radio='obj.r' inicio='obj.arc.init' fin='obj.arc.end' familia='s' s.intervalo='[0,C1.n-1]' s.pasos='C1.n-1' fuente='SansSerif,PLAIN,18' fijo='sí' relleno='f68b00' 
+tipo='punto' dibujar-si='getPosTxtGC1(s)' expresión='(txt.x,txt.y)' familia='s' s.intervalo='[0,C1.n-1]' s.pasos='C1.n-1' texto='[txt]' fuente='SansSerif,PLAIN,24' fijo='no' tamaño='0' 
+tipo='arco' fondo='sí' dibujar-si='getArcC2(s)' centro='(obj.x,obj.y)' radio='obj.r' inicio='obj.arc.init' fin='obj.arc.end' familia='s' s.intervalo='[0,C2.n-1]' s.pasos='C2.n-1' fuente='SansSerif,PLAIN,18' fijo='sí' relleno='4f8694' 
+tipo='punto' dibujar-si='getPosTxtGC2(s)' expresión='(txt.x,txt.y)' familia='s' s.intervalo='[0,C2.n-1]' s.pasos='C2.n-1' texto='[txt]' fuente='SansSerif,PLAIN,24' fijo='no' tamaño='0' 
+tipo='arco' dibujar-si='(actC1&gt;=0)&(getArcC1(actC1))' centro='(obj.x,obj.y)' radio='obj.r' inicio='obj.arc.init' fin='obj.arc.end' fuente='SansSerif,PLAIN,18' fijo='sí' relleno='verde' ancho='2' 
+tipo='punto' dibujar-si='(actC1&gt;=0)&(getPosTxtGC1(actC1))' expresión='(txt.x,txt.y)' texto='[txt]' fuente='SansSerif,PLAIN,24' fijo='no' tamaño='0' 
+tipo='arco' dibujar-si='(actC2&gt;=0)&(getArcC2(actC2))' centro='(obj.x,obj.y)' radio='obj.r' inicio='obj.arc.init' fin='obj.arc.end' fuente='SansSerif,PLAIN,18' fijo='sí' relleno='6800ee00' 
+tipo='punto' dibujar-si='(actC2&gt;=0)&(getPosTxtGC2(actC2))' expresión='(txt.x,txt.y)' texto='[txt]' fuente='SansSerif,PLAIN,24' fijo='no' tamaño='0' 
+tipo='flecha' color='blanco' dibujar-si='(verFlechas)&(FLECHAS[s,0])' expresión='(FLECHAS[s,1],FLECHAS[s,2])(FLECHAS[s,3],FLECHAS[s,4])' familia='s' s.intervalo='[0,RELS.n-1]' s.pasos='RELS.n-1' fuente='SansSerif,PLAIN,18' fijo='sí' ancho='3' ancho='3' punta='4' flecha='20303a' 
+tipo='flecha' dibujar-si='(actC1&gt;=0)&(Esp.press)&(getArcC1(actC1))' expresión='(obj.x,obj.y)(Esp.mx,Esp.my)' fuente='SansSerif,PLAIN,18' fijo='sí' ancho='3' ancho='3' punta='4' flecha='b6cd89' info='Flecha Actual' 
+tipo='flecha' color='blanco' dibujar-si='(selected&gt;=0)&(getFlechaRel(selected))' expresión='(f.p1.x,f.p1.y)(f.p2.x,f.p2.y)' familia='s' s.intervalo='[0,RELS.n-1]' s.pasos='RELS.n-1' fuente='SansSerif,PLAIN,18' fijo='sí' ancho='3' ancho='3' punta='4' flecha='c13030' 
+tipo='texto' dibujar-si='debug' expresión='[20,20]' texto='Esp.mouse = ([Esp.mx],[Esp.my])\nANT.press=[ANT.press]\nEsp.press=[Esp.press]\n\nRELS.n = [RELS.n]\nactCX=[actC1] [actC2]' fuente='SansSerif,PLAIN,18' fijo='no' ancho='700' 
+</script>
+
+<script type="descartes/macro" id="macros/rel_matriz.txt">
+tipo_de_macro=R2
+Idioma=español
+id='RELS' matriz='sí' evaluar='una-sola-vez' columnas='10' filas='2' expresión=';' 
+id='MATRIZ' matriz='sí' evaluar='una-sola-vez' columnas='10' filas='10' 
+id='setSelected(idxSel)' algoritmo='sí' local='isSel' hacer='isSel=(idxSel&gt;=0)&(idxSel&lt;RELS.n);selected=(isSel)?idxSel:-1;;sel.M.row=(isSel)?RELS[idxSel,0]:0;sel.M.col=(isSel)?RELS[idxSel,1]:0' 
+id='actualizaMatriz()' algoritmo='sí' expresión='x' local='i,row,col' inicio='actualizaMatriz_Aux();i=0' hacer='row=max(0,RELS[i,0]);col=max(0,RELS[i,1]);MATRIZ[row,col]=(RELS.n&gt;0);i=i+1' mientras='i&lt;RELS.n' 
+id='actualizaMatriz_Aux()' algoritmo='sí' expresión='x' local='i,maxI,ii,ij' inicio='i=0;maxI=(rows*cols);' hacer='ii=ent(i/cols);ij=i%cols;MATRIZ[ii,ij]=0;;i=i+1' mientras='i&lt;maxI' 
+id='getElementoMatriz(idx)' algoritmo='sí' expresión='1' hacer='row=ent(idx/cols);col=idx%cols' 
+id='initDBG()' algoritmo='sí' expresión='0' hacer='cols=5;rows=5;;idxR=0;RELS[idxR,0]=0;RELS[idxR,1]=0;;idxR=idxR+1;RELS[idxR,0]=1;RELS[idxR,1]=1;;;idxR=idxR+1;RELS[idxR,0]=2;RELS[idxR,1]=4;;RELS.n=idxR+1;;actualizaMatriz();;;setSelected(ent(rnd*RELS.n))' 
+id='INICIO' algoritmo='sí' evaluar='una-sola-vez' hacer='mTxt.x=10;mTxt.y=10;selected=-1;;sel.M.col=-1;sel.M.col=-1;;col=0;row=0;;font_size=24;;init_DBG()' 
+id='CALCULOS' algoritmo='sí' evaluar='siempre' 
+espacio='E1' tipo='texto' fondo='sí' color='20303a' expresión='[mTxt.x+(s+1)*font_size,mTxt.y]' familia='s' s.intervalo='[0,cols-1]' s.pasos='cols-1' texto='[s+1]' decimales='3' fijo='no' ancho='1' fuente='Monospaced,BOLD,24' info='HEAD COLUMNAS' 
+espacio='E1' tipo='texto' fondo='sí' color='20303a' expresión='[mTxt.x,mTxt.y+(s+1)*font_size]' familia='s' s.intervalo='[0,rows-1]' s.pasos='rows-1' texto='[s+1]' decimales='3' fijo='no' ancho='1' fuente='Monospaced,BOLD,24' info='HEAD FILAS' 
+espacio='E1' tipo='texto' fondo='sí' color='808080' dibujar-si='getElementoMatriz(s)' expresión='[mTxt.x+(col+1)*font_size,mTxt.y+(row+1)*font_size]' familia='s' s.intervalo='[0,rows*cols-1]' s.pasos='rows*cols-1' texto='[MATRIZ[row,col]]' decimales='3' fijo='no' ancho='1' fuente='Monospaced,PLAIN,24' info='ELEMENTOS MATRIZ' 
+espacio='E1' tipo='texto' fondo='sí' color='ffffff' dibujar-si='(selected&gt;=0)&(RELS.n&gt;0)' expresión='[mTxt.x+(sel.M.col+1)*font_size,mTxt.y+(sel.M.row+1)*font_size]' texto='[MATRIZ[sel.M.row,sel.M.col]]' decimales='3' fijo='no' ancho='1' color_borde_texto='4f8694' fuente='Monospaced,BOLD,24' info='SEL MATRIZ' 
+</script>
+
+</body>
+</html>

@@ -1,0 +1,86 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<recurso 
+	id="_Un_150_CambioDeBase" 
+	nivel="Licenciatura" 
+	area="Matemáticas, Matemáticas discretas" 
+	plataforma="HTML 5" 
+	>
+	<titulo><![CDATA[
+		Cambio de base
+	]]></titulo>
+	
+	<Descripcion><![CDATA[
+		Se realiza una comparación entre la base binaria y la base decimal para notar cómo se cuentan elementos con ambas y la necesidad de agregar nuevos dígitos cuando se agotan las combinaciones posibles de los símbolos dados. Se aborda también la base hexadecimal (con su correspondiente comparación con la base) decimal. Se enfatiza que el conteo del número de elementos sigue una fórmula de potencia donde la base es el número de símbolos usados en cada dígito y el exponente es el número de dígitos. Se estudia la naturaleza de la fórmula de la conversión de binario a decimal. A partir de ella se abordan dos formas de conversión de base decimal a binaria (una forma intuitiva y la otra, no tan intuitiva, pero que es la fórmula típica). Lo mismo se hace con la base hexadecimal. Se hace referencia a la utilidad de la base binaria y sus áreas de uso (computación y circuitos). También se hace referencia a la utilidad de la base hexadecimal, como una base que permite resumir información más efectivamente y que se usa en herramientas como controles de color.
+	]]></Descripcion>
+	<tags>
+	<![CDATA[
+		Cambio de base, base binaria, base hexadecimal, base decimal, base 2, base 16,
+		base 10
+	]]></tags>
+</recurso>
+
+<!--
+********************************************************************************
+                               **** Áreas **** 
+Matemáticas 
+	Aritmética
+		Fracciones
+	Álgebra
+		Combinatoria
+		Ecuaciones lineales
+		Ecuaciones polinomiales
+		Polinomios
+		Álgebra lineal
+		Teoría de grupos
+		Álgebra abstracta
+	Geometría
+		Geometría elemental
+		Geometría clásica
+		Geometría analítica
+	Trigonometría 
+	Probabilidad 
+		Cálculo de probabilidades
+		Eventos
+		Variables aleatorias
+		Ley de los grandes números
+		Teorema del límite central
+	Estadística
+		Medidas de tendencia central
+		Muestreo
+		Distribuciones
+		Inferencia
+	Cálculo
+		Funciones 
+		Límites
+		Continuidad
+		Derivadas 
+		Integrales 
+	Teoría de números
+	Teoría de gráficas
+Física
+	Mecánica
+	Electromagnetismo
+	Óptica
+	Físico-química 
+	Termodinámica
+	Mecánica estadística
+	Mecánica cuántica
+	Relatividad
+
+********************************************************************************
+
+********************************************************************************
+                             **** Niveles ****
+
+	Primaria
+	Preescolar
+	Secundaria
+	Bachillerato
+	Licenciatura
+	Posgrado 
+	Maestria
+	Doctorado
+
+********************************************************************************
+
+-->

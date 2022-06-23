@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <title>TITULO</title>
+  
+  <script type='text/javascript' src='lib/descartes-min.js'></script>
+</head>
+
+<body style="margin:0; background:#eff0f1;">
+
+  <div align="center">
+    <ajs name="Descartes" width="970" height="550" code="Descartes">
+      <param name="tamaño" value="970x550">
+      <param name="decimal_symbol" value=".">
+      <param name="image_loader" value="">
+      <param name="expand" value="">
+      <param name="nombre" value="Descartes">
+      <param name="antialias" value="sí">
+      <param name="deshacer" value="no">
+      <param name="editable" value="sí">
+      <param name="Idioma" value="español">
+      <param name="Botones" value="créditos=no config=no inicio=no limpiar=no filas_norte=0 filas_sur=0 ancho_este=150 ancho_oeste=150 alto=40 ">
+      <param name="E_01" value="tipo='R2' id='E1' x='0' y='0' ancho='100%' alto='100%' dibujar-si='1' fijo='no' escala='48' O.x='0' O.y='0' despl_imagen='arr-izq' fondo='ffffff' red='c0c0c0' red10='808080' ejes='404040' texto='no' números='no' sensible_a_los_movimientos_del_ratón='no' ">
+      <param name="A_01" value="id='RELS' matriz='sí' evaluar='una-sola-vez' columnas='10' filas='2' expresión=';' ">
+      <param name="A_02" value="id='MATRIZ' matriz='sí' evaluar='una-sola-vez' columnas='10' filas='10' ">
+      <param name="A_03" value="id='setSelected(idxSel)' algoritmo='sí' local='isSel' hacer='isSel=(idxSel>=0)&(idxSel<RELS.n);selected=(isSel)?idxSel:-1;;sel.M.row=(isSel)?RELS[idxSel,0]:0;sel.M.col=(isSel)?RELS[idxSel,1]:0' ">
+      <param name="A_04" value="id='actualizaMatriz()' algoritmo='sí' expresión='x' local='i,row,col' inicio='actualizaMatriz_Aux();i=0' hacer='row=max(0,RELS[i,0]);col=max(0,RELS[i,1]);MATRIZ[row,col]=(RELS.n>0);i=i+1' mientras='i<RELS.n' ">
+      <param name="A_05" value="id='actualizaMatriz_Aux()' algoritmo='sí' expresión='x' local='i,maxI,ii,ij' inicio='i=0;maxI=(rows*cols);' hacer='ii=ent(i/cols);ij=i%cols;MATRIZ[ii,ij]=0;;i=i+1' mientras='i<maxI' ">
+      <param name="A_06" value="id='getElementoMatriz(idx)' algoritmo='sí' expresión='1' hacer='row=ent(idx/cols);col=idx%cols' ">
+      <param name="A_07" value="id='initDBG()' algoritmo='sí' expresión='0' hacer='cols=5;rows=5;;idxR=0;RELS[idxR,0]=0;RELS[idxR,1]=0;;idxR=idxR+1;RELS[idxR,0]=1;RELS[idxR,1]=1;;;idxR=idxR+1;RELS[idxR,0]=2;RELS[idxR,1]=4;;RELS.n=idxR+1;;actualizaMatriz();;;setSelected(ent(rnd*RELS.n))' ">
+      <param name="A_08" value="id='INICIO' algoritmo='sí' evaluar='una-sola-vez' hacer='mTxt.x=10;mTxt.y=10;selected=-1;;sel.M.col=-1;sel.M.col=-1;;col=0;row=0;;font_size=24;;initDBG()' ">
+      <param name="A_09" value="id='CALCULOS' algoritmo='sí' evaluar='siempre' ">
+      <param name="G_01" value="espacio='E1' tipo='texto' fondo='sí' color='20303a' expresión='[mTxt.x+(s+1)*font_size,mTxt.y]' familia='s' s.intervalo='[0,cols-1]' s.pasos='cols-1' texto='[s+1]' decimales='3' fijo='no' ancho='1' fuente='Monospaced,BOLD,24' info='HEAD COLUMNAS' ">
+      <param name="G_02" value="espacio='E1' tipo='texto' fondo='sí' color='20303a' expresión='[mTxt.x,mTxt.y+(s+1)*font_size]' familia='s' s.intervalo='[0,rows-1]' s.pasos='rows-1' texto='[s+1]' decimales='3' fijo='no' ancho='1' fuente='Monospaced,BOLD,24' info='HEAD FILAS' ">
+      <param name="G_03" value="espacio='E1' tipo='texto' fondo='sí' color='808080' dibujar-si='getElementoMatriz(s)' expresión='[mTxt.x+(col+1)*font_size,mTxt.y+(row+1)*font_size]' familia='s' s.intervalo='[0,rows*cols-1]' s.pasos='rows*cols-1' texto='[MATRIZ[row,col]]' decimales='3' fijo='no' ancho='1' fuente='Monospaced,PLAIN,24' info='ELEMENTOS MATRIZ' ">
+      <param name="G_04" value="espacio='E1' tipo='texto' fondo='sí' color='ffffff' dibujar-si='(selected>=0)&(RELS.n>0)' expresión='[mTxt.x+(sel.M.col+1)*font_size,mTxt.y+(sel.M.row+1)*font_size]' texto='[MATRIZ[sel.M.row,sel.M.col]]' decimales='3' fijo='no' ancho='1' color_borde_texto='4f8694' fuente='Monospaced,BOLD,24' info='SEL MATRIZ' ">
+    </ajs>
+  </div>
+
+  <div align="center">
+    <ajs name="Descartes" width="970" height="550" code="Descartes">
+      <param name="tamaño" value="970x550">
+      <param name="decimal_symbol" value=".">
+      <param name="image_loader" value="">
+      <param name="expand" value="">
+      <param name="nombre" value="Descartes">
+      <param name="Versión" value="6">
+      <param name="antialias" value="sí">
+      <param name="deshacer" value="no">
+      <param name="editable" value="sí">
+      <param name="Idioma" value="español">
+      <param name="Botones" value="créditos=no config=no inicio=no limpiar=no filas_norte=0 filas_sur=0 ancho_este=150 ancho_oeste=150 alto=40 ">
+      <param name="E_01" value="tipo='R2' id='E1' x='0' y='0' ancho='100%' alto='100%' dibujar-si='1' fijo='no' escala='48' O.x='0' O.y='0' despl_imagen='arr-izq' fondo='ffffff' red='c0c0c0' red10='808080' ejes='404040' texto='no' números='no' sensible_a_los_movimientos_del_ratón='no' ">
+      <param name="A_01" value="id='initMacro()' algoritmo='sí' expresión='x' hacer='rel_matriz.mTxt.x=100;rel_matriz.mTxt.y=100;;rel_matriz.cols=5;rel_matriz.rows=5;;idxR=0;rel_matriz.RELS[idxR,0]=0;rel_matriz.RELS[idxR,1]=0;;idxR=idxR+1;rel_matriz.RELS[idxR,0]=1;rel_matriz.RELS[idxR,1]=1;;;idxR=idxR+1;rel_matriz.RELS[idxR,0]=2;rel_matriz.RELS[idxR,1]=4;;rel_matriz.RELS.n=idxR+1;rel_matriz.actualizaMatriz();;;idxSel=ent(rnd*rel_matriz.RELS.n);rel_matriz.setSelected(idxSel)' ">
+      <param name="A_02" value="id='INICIO' algoritmo='sí' evaluar='una-sola-vez' hacer='initMacro()' ">
+      <param name="A_03" value="id='CALCULOS' algoritmo='sí' evaluar='siempre' ">
+      <param name="G_01" value="espacio='E1' tipo='macro' fondo='no' coord_abs='no' nombre='rel_matriz' expresión='rel_matriz.txt' rotini='0' posini='[0,0]' ">
+    </ajs>
+  </div>
+
+
+</body>
+</html>

@@ -1,0 +1,232 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+ 	<link href="../css/html5_mobile.css" rel="stylesheet" type="text/css" media="screen" />
+	<link href="../css/DescHTML5.css" rel="stylesheet" type="text/css" media="screen" />	
+	 <script type="text/javascript" src='../javascript/inject_functions_scorms_descartes.js'></script>
+	<script type='text/javascript' src='lib/descartes-min.js'></script>
+</head>
+
+<body>
+ <!-------- MathJax --- para fórmulas matemáticas ------>	
+	<script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script> 
+
+<article class="course_content_container">
+  
+  <div class="course_content">
+    
+    
+    <!------ INICIA EL CONTENIDO DE LA PÁGINA --------->
+    
+    
+    <!--- Título de la página --->
+    <center><h2>Análisis de la ecuación de segundo grado en dos variables. <br>Parte 2: Encontrar los ejes de simetría</h2></center>
+    
+    
+	<div class='text_panel'>
+		<!--- Subtítulo (no necesario en introducción) --->
+		  <h2>Ejes de simetría del lugar geométrico definido por una ecuación general de segundo grado</h2>
+    
+		<!--- Párrafo --->
+		<p>
+
+		La rotación por un ángulo  \( \theta \)  se obtiene cambiando la  coordenada  \(x\)  por  
+                \[x cos \theta − y sen \theta \]  
+y la coordenada  y  por 
+                \[x sen \theta + y cos \theta \]  
+
+Estos cambios llevan la ecuación con centro en el origen:
+
+\[a x^2+b xy+c y^2+F=0 \tag{1} \]                    
+
+a la forma 
+
+\[a(x cos\theta −y sen \theta )^2+b(x cos \theta −y sen \theta )(x sen \theta +y cos \theta)+c(x sen \theta +y sen \theta )^2+F=0 \tag{2} \]
+
+y puede escribirse así:
+
+\[Ax^2+Bxy+Cy^2+F=0 \tag{3} \]  
+
+donde: 
+      \[A=a cos^2 \theta +b cos \theta sen \theta +c sen^2 \theta \]
+      \[B=a(2cos\theta sen\theta )+b(cos^2 \theta −sen^2 \theta )−c(2cos \theta sen \theta )\]
+      \[C=asen^2 \theta −bsen \theta cos \theta +c cos^2\theta \]
+
+Usando las fórmulas del \(seno\) y el \(coseno\) del doble de un ángulo:
+
+      \[sen2\theta =2sen \theta cos\theta \] 
+      \[cos2\theta =cos^2\theta -sen^2\theta \]
+
+el nuevo coeficiente del término cruzado puede escribirse como:
+
+      \[B=(a-c)sen(2\theta )-bcos(2\theta )\]
+
+y éste coeficiente se anula si \(\theta =\frac{atan(\frac{b}{a-c})}{2} \), esto cuando \(a \neq c \). Cuando \(a=c\)
+podemos anularlo tomando \( \theta =\frac{\pi }{4}\) (es decir, \(45°\)). 	
+		</p>
+	
+		<p>
+Tomando este valor de \(\theta \)  la ecuación toma la forma simple 
+	\[Ax^2+Cy^2+F=0 \tag{4} \]
+
+Ésta puede reescribirse como   \( \pm \frac{x^2}{\alpha ^2} \pm \frac{y^2}{\beta ^2}=1\)  mediante las siguientes definiciones:
+
+            <center>\( \alpha =\sqrt{|{\frac{F}{A}}|}\)  y  \( \beta=\sqrt{|{ \frac{F}{C}}|} \)</center> 
+
+</p>
+
+<p>
+<ul >
+<li type="H">
+(E) Caso elíptico:  \(AC>0\),  es decir,  \(A\) y \(C\) tienen el mismo signo.
+Ambos signos serán positivos si  \(A\) y \(C\) tienen el mismo signo y \(F\) tiene el contrario. Entonces 
+la ecuación es la de una elipse. Si \(A\) y \(C\) tiene el mismo signo y \(F=0\) entonces la ecuación es
+la de un solo punto, concretamente, el origen.  Si \(A\), \(C\) y \(F\) tienen el mismo signo entonces la 
+ecuación no tiene soluciones, es decir, el lugar geométrico que define es vacío.
+
+<br><br><li type="E">
+(H) Caso hiperbólico:  \(AC<0\),  es decir,  \(A\) y \(C\) tienen signos opuestos.
+En este caso uno de los dos signos será positivo y el otro negativo. Concretamente, el signo
+negativo va en el primer sitio si  \(F\)  tiene el mismo signo que \(A\) y en el segundo sitio si \(F\) tiene
+el mismo signo que \(C\). Cuando \(F\) es cero la ecuación se reduce a
+	\[ \frac{x^2}{\alpha ^2}=\frac{y^2}{\beta ^2} \] 
+o, equivalentemente,     
+	\[ \pm \frac{x}{\alpha}= \pm \frac{y}{\beta} \]
+que representa a dos rectas.
+</ul>
+</p>
+
+<p>
+Se puede demostrar que  \( \Delta =ac-\frac{b^2}{4}=AC\) con lo que antes de hacer el análisis completo
+se puede saber si la ecuación es de tipo elíptico o hiperbólico según el signo de \( \Delta \). 
+</p>  
+
+<br><p>
+La forma cuadrática:
+	\[ax^2+bxy+cy^2 \tag{5} \]
+
+puede identificarse con la matriz simétrica:
+
+         \[M= \begin{bmatrix}
+    a       	& \frac{b}{2} \\
+    \frac{b}{2} & c  \\
+ \end{bmatrix} \]
+
+mediante el producto  \(r^tMr\)   donde  \(\begin{bmatrix} x   \\ y	\\ \end{bmatrix}\)
+es el vector columna cuyas coordenadas son 
+\(x\)  y  \(y\)  y   \(r^t=[x \quad y]\) es el vector transpuesto de  \(r\).
+</p>
+
+<p>
+Es fácil comprobar que con estas definiciones, 
+	\[r^tMr=ax^2+bxy+cy^2\]
+
+La transformación del plano correspondientes a esta matriz deja unos vectores invariantes. 
+Para encontrarlos encontramos primero los valores propios o eigenvalores de M,  que son los
+números reales \(λ_1\) y \(λ_2\),  que son las soluciones de la ecuación cuadrática:
+	\[(a-λ)(c-λ)-\frac{b^2}{4}=0\]
+
+Esta ecuación cuadrática tiene siempre dos soluciones reales:
+	\[λ_i=\frac{a+c \pm \sqrt{(a-c)^2+b^2} } {2} \]
+</p>
+
+<p>
+Los eigenvalores \({λ_i}\) tienen la propiedad de hacer que los sistemas de ecuaciones:
+	\[(a-λ_i)x+\frac{b}{2}y=0\] 
+	\[ \frac{b}{2}x+(c-λ_i)y=0\]
+con \(i = 1, 2\), tienen soluciones no triviales que son dos vectores \(e_1=\begin{bmatrix}x_1 \\ y_1 \\ \end{bmatrix} \),
+  \(e_2=\begin{bmatrix}x_2 \\ y_2 \\ \end{bmatrix} \), 
+los cuales elegiremos de magnitud \(1\). En efecto, podemos tomar para \(i = 1, 2\): 
+	<center>\(x_i=\frac{b}{2}\), \(y_i=λ_i-a\), \(r_i=\sqrt{x_i^2+y_i^2}\)</center> 
+y finalmente tomamos  \(x_i=\frac{x_i}{r_i}\) y  \(y_i=\frac{y_i}{r_i} \)  para normalizar los vectores. 
+</p>  
+    
+<p>
+Estos vectores \(e_1\)  y  \(e_2\) se llaman eigenvectores o vectores propios de la matriz  \(M\)  y son 
+casi invariantes ante \(M\), pues  \(Me_i=λ_ie_i\).  Además, coinciden con las direcciones de los 
+ejes principales de nuestro lugar geométrico.
+
+<br><br>Las flechas rojas que aparecen en la escena son los eigenvectores de la matriz  \(M\)  y se 
+calculan precisamente como acabamos de describir.  Es importante notar que los eigenvectores 
+son ortogonales entre sí y de hecho la matriz cuadrada que forman es una rotación. Más aún:
+
+	\[\begin{bmatrix} x_1 & x_2 \\ y_1 & y_2 \\ \end{bmatrix}=
+	\begin{bmatrix} cos \theta & sen\theta \\ -sen\theta & cos\theta \\\end{bmatrix}\]
+
+La gran ventaja del método de eigenvalores y eigenvectores es que puede aplicarse también a 
+formas cuadráticas en tres o más variables. De hecho la idea de diagonalizar matrices simétricas 
+puede generalizarse a operadores en espacios de dimensión infinita y tiene aplicaciones 
+importantes en la Física. Por ejemplo, los eigenvalores de cierto operador son los niveles de energía 
+de los átomos. 
+</p>    
+   
+    
+   <!------ INICIA LA INFO SOBRE LAS LICENCIAS Y LOS CRÉDITOS. ---------->
+    <a id="btCopyright" class="standardButton" title="Haz clic aquí para consultar los créditos y las condiciones de uso de este recurso." href="#" onclick="document.getElementById('copyright').className='visible';">&#169;</a>
+    <div id="copyright" class="oculto">
+      
+      <div class='innerCopyright'>
+      
+          <a id="btCloseCopyright" class="standardButton" title="Haz clic aquí para cerrar esta ventana." href="#" onclick="document.getElementById('copyright').className='oculto'">×</a>
+  
+          <!-- Créditos UAM  (siempre deben ir en primer lugar) -->
+			<div class="creditos">
+				<h1>
+					Créditos 
+				</h1>
+				<h2>
+					Escena original
+				</h2>				
+				<table class="autores" 	>
+					<tr> <td  class="rol"> Diseño del contenido		</td>		<td class="nombre">José Luis Abreu León</td></tr>
+					<tr> <td  class="rol"> Diseño funcional			</td>		<td class="nombre">José Luis Abreu León</td></tr>
+					<tr> <td  class="rol"> Programación			</td>		<td class="nombre">José Luis Abreu León<br>Leticia Montserrat Vargas Rocha</td></tr>
+					<tr> <td  class="rol"> Diseño gráfico			</td>		<td class="nombre">Ricardo López Gómez</td></tr>
+					<tr> <td  class="rol"> Coordinación			</td>		<td class="nombre">Leticia Montserrat Vargas Rocha</td></tr>
+				</table>
+				<h2>
+					Adaptación 
+				</h2>
+				<table class="autores" 	>
+					<tr> <td  class="rol"> Diseño funcional			</td>		<td class="nombre">Elsa Sirenia Vega Camacho</td></tr>
+					<tr> <td  class="rol"> Programación			</td>		<td class="nombre">Elsa Sirenia Vega Camacho</td></tr>
+					<tr> <td  class="rol"> Asesoría de programación		</td>		<td class="nombre">Leticia Montserrat Vargas Rocha</td></tr>		
+					<tr> <td  class="rol"> Diseño gráfico			</td>		<td class="nombre">Francisco Varela Fuentes</td></tr>
+					<tr> <td  class="rol" >Coordinación			</td>		<td class="nombre">Leticia Montserrat Vargas Rocha</td></tr>
+				</table>
+	         
+	         <div class='logos'>
+	            <a href=''>
+	               <img src="../images/info/icns/logoLite.png">
+	            </a>
+	            <a href="http://www.unadmexico.mx/">
+	               <img src="../images/info/icns/logoUNADM.png">
+	            </a>
+	         </div>
+          </div>
+          
+          <!-- Linea separación créditos -->
+          <hr class="linea" />
+     
+          <!-- Aviso licencias -->
+          <div class="licencias">
+          
+				<p class="creativeCommons">Los contenidos de esta unidad didáctica interactiva están bajo una licencia <a href="http://creativecommons.org/licenses/by-nc-sa/2.5/es/" target="_blank">Creative Commons Reconocimiento-NoComercial-CompartirIgual</a>.</p>
+
+				<!--arquimedes (optativo)-->
+				<p>La unidad didáctica fue creada con <a href="http://arquimedes.matem.unam.mx/Descartes5/creditos/conCCL.html" target="_blank">Arquímedes</a>, una herramienta de código abierto.</p>
+
+				<!-- Descartes -->
+				<p>La unidad didáctica contiene escenas elaboradas con Descartes, una herramienta de código abierto.</p>
+
+
+          	<p style='text-align:center'> LITE - UnADM 2014</p>
+          </div>
+      </div>
+    </div> 
+   <!------ TERMINA LA INFO SOBRE LAS LICENCIAS Y LOS CRÉDITOS. ---------->
+
+</body>
+</html>

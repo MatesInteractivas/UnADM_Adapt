@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Desarrollo</title>	
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<link href="../css/DescHTML5.css" rel="stylesheet" type="text/css" media="screen" />
+		<link href="../css/html5.css" rel="stylesheet" type="text/css" media="screen" />
+		<script type="text/javascript" src='../javascript/inject_functions_scorms_descartes.js'></script>
+	<script type='text/javascript' src='../lib/descartes-min.js'></script>
+</head>
+
+<body>
+ <!-------- MathJax --- para fórmulas matemáticas ------>	
+	<script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script> 
+
+<article class="course_content_container">
+  
+  <div class="course_content">
+    
+    
+    <!------ INICIA EL CONTENIDO DE LA PÁGINA --------->
+    
+    
+    <!--- Título de la página --->
+   <h1>Campos vectoriales</h1>
+    
+    
+	<div class='text_panel'>
+    
+    <p>Existen diversos campos vectoriales en la naturaleza, por ejemplo campos magnéticos, campos eléctricos, campos de fuerzas, de velocidades, de aceleraciones, etc. Para entender cómo actúan estos campos en los cuerpos que afectan, es necesario estudiar sus propiedades y sus características. Los campos vectoriales tienen propiedades que los clasifican y hacen su estudio práctico mucho más comprensible. Todo campo vectorial tiene una dirección en la cual su cambio es máximo. Esta propiedad recibe el nombre de <em>gradiente del campo vectorial</em>. Así mismo, el campo vectorial al actuar sobre un cuerpo, provoca sobre él deformaciones, alargamientos y giros, los cuales definen a su vez conceptos como la <em>divergencia</em> y el <em>rotacional</em>. Cada concepto es distinto al otro, aunque estén relacionados entre sí.</p>
+
+	<p>Un campo vectorial en \( \mathbb{R}^n \) es una función que asigna a cada punto de su dominio, un vector \( \vec{F}(x) \)</p>
+     <p><span class="instrucciones">A continuación se muestra un campo vectorial \( \vec{F} \) en \( \mathbb{R}^3 \). A cada punto del dominio, se le asocia un vector (flecha). Puedes rotar el espacio.</span></p>
+     
+    <div align="center" class="Descartes_extern_content">
+	<ajs name="Descartes" width=500 height=420 code="Descartes">
+   <param name="tamaño" value="500x420">
+   <param name="image_loader" value="">
+   <param name="expand" value="">
+   <param name="decimal_symbol" value=",">
+   <param name="antialias" value="sí">
+   <param name="deshacer" value="no">
+   <param name="nombre" value="Descartes">
+   <param name="Versión" value="5.336, 2015-02-13">
+   <param name="Idioma" value="español">
+   <param name="Botones" value="créditos=no config=no inicio=no limpiar=no ancho_este=150 ancho_oeste=150 alto=50">
+   <param name="E_01" value="tipo='R3' id='E1' escala='48' despl_imagen='arr-izq' fondo='negro' despliegue='pintor' cortar='sí' R3='sí'">
+   <param name="A_01" value="id='calPer()' algoritmo='sí' algoritmo='sí' hacer='yaMov=(E1.rot.z#0)?1:yaMov;per=50+50*yaMov;setSCORMPercentage(per)'">
+   <param name="A_02" value="id='getSCORMState()' algoritmo='sí' expresión='res' algoritmo='sí' Local='res,arroba' inicio='arroba=&squot;@&squot;' hacer='ö=|Estandar ---- [MIDC]XX.<var>  SI SOLO EXISTE UNA ESCENA EN EL HTML|;ö=|Estandar ---- [MIDC]XX_YY.<var>  SI HAY MAS DE UNA ESCENA EN EL HTML|;res=&squot;D03.yaMov:&squot;+yaMov+arroba'">
+   <param name="A_03" value="id='initStateScorm()' algoritmo='sí' expresión='x' algoritmo='sí' hacer='yaMov=getSCORMStateVar(&squot;D03.yaMov&squot;);calPer();;ctr_yaMov=(yaMov!=0)?yaMov:0'">
+   <param name="A_04" value="id='INICIO' algoritmo='sí' evaluar='una-sola-vez'">
+   <param name="A_05" value="id='CALCULOS' algoritmo='sí' evaluar='siempre' hacer='initStateScorm();calPer()'">
+   <param name="S_01" value="espacio='E1' tipo='segmento' color='gris' expresión='(0,0,0)(0,0,4)' ancho='3' Nu='1'">
+   <param name="S_02" value="espacio='E1' tipo='segmento' color='gris' expresión='(0,0,0)(0,4,0)' ancho='3' Nu='1'">
+   <param name="S_03" value="espacio='E1' tipo='segmento' color='gris' expresión='(0,0,0)(4,0,0)' ancho='3' Nu='1'">
+   <param name="S_04" value="espacio='E1' tipo='punto' expresión='(0,0,4)' texto='Z' fijo='sí' ancho='0'">
+   <param name="S_05" value="espacio='E1' tipo='punto' expresión='(0,4,0)' texto='Y' fijo='sí' ancho='0'">
+   <param name="S_06" value="espacio='E1' tipo='punto' expresión='(4,0,0)' texto='X' fijo='sí' ancho='0'">
+   <param name="S_07" value="espacio='E1' tipo='segmento' expresión='(1,1,2)(1,3,2)' ancho='2'">
+   <param name="S_08" value="espacio='E1' tipo='punto' expresión='(1,1,2)' fijo='sí' ancho='3'">
+   <param name="S_09" value="espacio='E1' tipo='cono' expresión='Cono' rotini='(90,180,0)' posfin='(1,3,2)' modelo='metal' ancho='.2' largo='.2' alto='.2'">
+   <param name="S_10" value="espacio='E1' tipo='segmento' expresión='(2,-2,2)(2,3,2)' ancho='2'">
+   <param name="S_11" value="espacio='E1' tipo='punto' expresión='(2,-2,2)' fijo='sí' ancho='3'">
+   <param name="S_12" value="espacio='E1' tipo='cono' expresión='Cono' rotini='(90,180,0)' posfin='(2,3,2)' modelo='metal' ancho='.2' largo='.2' alto='.2'">
+   <param name="S_13" value="espacio='E1' tipo='segmento' expresión='(1,2,1)(1,3,1)' ancho='2'">
+   <param name="S_14" value="espacio='E1' tipo='punto' expresión='(1,2,1)' fijo='sí' ancho='3'">
+   <param name="S_15" value="espacio='E1' tipo='cono' expresión='Cono' rotini='(90,180,0)' posfin='(1,3,1)' modelo='metal' ancho='.2' largo='.2' alto='.2'">
+   <param name="S_16" value="espacio='E1' tipo='segmento' expresión='(2,2.5,1)(2,3,1)' ancho='2'">
+   <param name="S_17" value="espacio='E1' tipo='punto' expresión='(2,2.5,1)' fijo='sí' ancho='3'">
+   <param name="S_18" value="espacio='E1' tipo='cono' expresión='Cono' rotini='(90,180,0)' posfin='(2,3,1)' modelo='metal' ancho='.2' largo='.2' alto='.2'">
+   <param name="S_19" value="espacio='E1' tipo='punto' dibujar-si='DEBUG' expresión='(-10,0,0)' texto='[E1.rot.z]' fijo='sí'">
+</ajs>
+	
+	</div>
+    
+    <p>En el resto de la unidad trataremos principalmente con campos vectoriales en \( \mathbb{R}^2 \) y \( \mathbb{R}^3 \), de tal modo que cuando se ocupe el término campo vectorial, debe entenderse como un campo vectorial en \( \mathbb{R}^2 \) o \( \mathbb{R}^3 \).</p>
+
+   
+   
+        
+     <!------ TERMINA EL CONTENIDO DE LA PÁGINA --------->
+</div>
+
+
+
+	<!------ INICIA LA INFO SOBRE LAS LICENCIAS Y LOS CRÉDITOS. ---------->
+    <a id="btCopyright" class="standardButton" title="Haz clic aquí para consultar los créditos y las condiciones de uso de este recurso." href="#" onClick="document.getElementById('copyright').className='visible';">©</a>
+    <div id="copyright" class="oculto">
+      
+      <div class='innerCopyright'>
+      
+          <a id="btCloseCopyright" class="standardButton" title="Haz clic aquí para cerrar esta ventana." href="#" onClick="document.getElementById('copyright').className='oculto'">×</a>
+  
+          <!-- Créditos UAM  (siempre deben ir en primer lugar) -->
+			<div class="creditos">
+				<h1>
+					Créditos 
+				</h1>
+
+				<h2>
+					Escena original
+				</h2>				<table class="autores" 	>
+
+					<tr> <td  class="rol"> Diseño del contenido			</td>		<td class="nombre"> Víctor Hugo García Jarillo (Facultad de Ciencias UNAM, LITE)</td></tr>
+					<tr> <td  class="rol"> Diseño funcional				</td>		<td class="nombre"> Víctor Hugo García Jarillo (Facultad de Ciencias UNAM, LITE)</td></tr>
+					<tr> <td  class="rol"> Programación					</td>		<td class="nombre"> Víctor Hugo García Jarillo (Facultad de Ciencias UNAM, LITE)</td></tr>
+					<tr> <td  class="rol"> Diseño gráfico				</td>		<td class="nombre"> Ricardo López Gómez</td></tr>
+					<tr> <td  class="rol" >Coordinación			</td>		<td class="nombre"> Leticia Montserrat Vargas Rocha</td></tr>
+					</table>
+				<h2>
+					Adaptación 
+				</h2>
+				<table class="autores" 	>
+				<tr> <td  class="rol"> Diseño funcional				</td>		<td class="nombre"> Victor Hugo García Jarillo (Facultad de                    Ciencias, UNAM)		</td></tr>
+					<tr> <td  class="rol"> Programación				</td>		<td class="nombre"> Victor Hugo García Jarillo (Facultad de                    Ciencias, UNAM)</td></tr>
+
+					<tr> <td  class="rol"> Diseño gráfico			</td>		<td class="nombre"> Francisco	Varela Fuentes</td></tr>
+					<tr> <td  class="rol" >Coordinación			</td>		<td class="nombre"> Leticia Montserrat Vargas Rocha</td></tr>
+		<tr> <td  class="rol" >Desarrollo del contenedor			</td>		<td class="nombre"> Oscar Escamilla González</td></tr>
+
+				</table>
+
+ <div class='logos'>
+	            <a href=''>
+	               <img src="../images/info/icns/logoLite.png">
+	            </a>
+	            <a href="http://www.unadmexico.mx/">
+	               <img src="../images/info/icns/logoUNADM.png">
+	            </a>
+	         </div>
+          </div>
+          
+          <!-- Linea separación créditos -->
+          <hr class="linea" />
+     
+          <!-- Aviso licencias -->
+          <div class="licencias">
+          
+				<p class="creativeCommons">Los contenidos de esta unidad didáctica interactiva están bajo una licencia <a href="http://creativecommons.org/licenses/by-nc-sa/2.5/es/" target="_blank">Creative Commons Reconocimiento-NoComercial-CompartirIgual</a>.</p>
+
+				<!--arquimedes (optativo)-->
+				<p>La unidad didáctica fue creada con <a href="http://arquimedes.matem.unam.mx/Descartes5/creditos/conCCL.html" target="_blank">Arquímedes</a>, una herramienta de código abierto.</p>
+
+				<!-- Descartes -->
+				<p>La unidad didáctica contiene escenas elaboradas con Descartes, una herramienta de código abierto.</p>
+
+
+          	<p style='text-align:center'> LITE - UnADM 2014</p>
+          </div>
+      </div>
+    </div> 
+   <!------ TERMINA LA INFO SOBRE LAS LICENCIAS Y LOS CRÉDITOS. ---------->
+  
+  
+  </div>
+  
+  
+</article>
+
+
+</body>
+
+</html>

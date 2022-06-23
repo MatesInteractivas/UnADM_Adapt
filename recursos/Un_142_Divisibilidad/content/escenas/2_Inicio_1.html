@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+ 	<link href="../css/html5.css" rel="stylesheet" type="text/css" media="screen" />
+	<link href="../css/DescHTML5.css" rel="stylesheet" type="text/css" media="screen" />	
+	 <script type="text/javascript" src='../javascript/inject_functions_scorms_descartes.js'></script>
+	<script type='text/javascript' src='lib/descartes-min.js'></script>
+</head>
+
+
+<body>
+ <!-------- MathJax --- para fórmulas matemáticas ------>	
+	<script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script> 
+
+<article class="course_content_container">
+  
+   <div class="course_content">
+    
+    
+    <!------ INICIA EL CONTENIDO DE LA PÁGINA --------->
+    
+    
+    <!--- Título de la página --->
+    <h1>Algoritmo de la división</h1>
+    
+    
+	<div class='text_panel'>
+		<!--- Subtítulo (no necesario en introducción) --->
+
+
+	<p>En esta sección estableceremos que bajo el algoritmo de la división de dos números, el cociente y el	resto de la división son únicos. Y para esto estipularemos la existencia y unicidad de cociente y resto. Veamos.</p>
+
+	<p><strong>Teorema:</strong> <em>Si \(a\) y \(b\)	son números enteros con \(b > 0\), entonces existen dos enteros, \(q\) y \(r\), únicos, tales que \(a = bq + r \), con \(0 \leq r < b\). A los números \(a, b, q\) y \(r\)	se les suele llamar, respectivamente, dividendo, divisor, cociente y resto.</em></p>
+
+	<p><u>Demostración</u></p>
+
+			<p>Existencia de \(q\) y \(r\).</p>
+
+			<p>Bastaría con tomar un número entero tal que \(bq\) sea el mayor de los múltiplos de \(b\) menor o igual que \(a\), es decir tal que \(bq \leq a\).</p>
+			<p>Una vez obtenido el cociente q, podemos calcular el resto \(r\):</p>
+			<p style='text-align:center'>	\(r = a -bq\)</p>
+			<p>Por otro lado, si \( bq \leq a < b(q + 1) \)</p>
+			
+           	 <p>Entonces</p>
+			<p style='text-align:center'>\( bq \leq a < b(q + 1)\) &rarr; \(bq - bq\leq a - bq < b(q + 1) - bq  \)</p>
+			<p style='text-align:center'>	&rarr; \(0 \leq a - bq < b\)</p>
+			<p style='text-align:center'>	&rarr; \(0 \leq r < b\)</p>
+			<p>Por lo que existen enteros tales que,</p>
+			<p style='text-align:center'>	\(a = bq + r\), con \(0 \leq r < b\)</p>
+
+			<br />
+
+			<p><em>Unicidad de \(q\) y \(r\).</em></p>
+
+			<p>		Ahora supongamos que no son únicos. Supongamos que existen \(r_1\), \(r_2\), \(q_1\) y \(q_2\) enteros tales que, </p>
+			
+            <p style='text-align:center'>	\( a = bq_1 + r_1 : 0 \leq r_1 < b \)</p>
+			<p style='text-align:center'>	\( a = bq_2 + r_2 : 0 \leq r_2 < b \)</p>
+			
+            <p>Entonces,</p>
+			<p style='text-align:center'>	\( bq _1 + r _1 = bq_2 + r_2 &rarr; r_2 - r_1 &rarr; b|q _1 - q_2| = |r_2 - r_1| \)</p>
+			<p style='text-align:center'>	\( 0 \leq r_1, r_2 < b \)</p>
+			<p style='text-align:center'>	\( 0 \leq |r_2 - r_1| < b \)</p>
+
+			<p>luego</p>
+
+			<p style='text-align:center'>	\( b|q_1 - q_2| = |r_2 - r_1| \)</p>
+			
+            <p>y</p>
+			<p style='text-align:center'>	\( r_2 - r_1 < b \)</>
+
+			<p style='text-align:center'>	&rarr; \( b|q_1 - q_2| < b \)</p>
+			<p style='text-align:center'>	&rarr; \( b(1 - |q_1 - q_2|) > 0 \)</p>
+		
+        <p>y al ser \( b > 0\), se tiene que </p>
+			
+            <p style='text-align:center'>	\( 1 - |q_1 - q_2| > 0 \)</p>
+		<p>de donde se sigue que</p>
+			<p style='text-align:center'>	\( 0 \leq |q_1 - q_2| < 1 \)</p>
+		<p>y como \(q_1\) y \(q_2\) son enteros,</p>
+			<p style='text-align:center'>	\( |q_1 - q_2| = 0 \)</p>
+		<p>por tanto</p>
+			<p style='text-align:center'>	\( q_1 = q_2 \)</p>
+		<p>de donde se sigue que </p>
+			<p style='text-align:center'>	\( r_1 = r_2 \) </p>
+     
+      
+    <!------ TERMINA EL CONTENIDO DE LA PÁGINA --------->
+</div>
+
+
+
+  <!------ INICIA LA INFO SOBRE LAS LICENCIAS Y LOS CRÉDITOS. ---------->
+    <a id="btCopyright" class="standardButton" title="Haz clic aquí para consultar los créditos y las condiciones de uso de este recurso." href="#" onClick="document.getElementById('copyright').className='visible';">©</a>
+    <div id="copyright" class="oculto">
+      
+      <div class='innerCopyright'>
+      
+          <a id="btCloseCopyright" class="standardButton" title="Haz clic aquí para cerrar esta ventana." href="#" onClick="document.getElementById('copyright').className='oculto'">×</a>
+  
+          <!-- Créditos UAM  (siempre deben ir en primer lugar) -->
+			<div class="creditos">
+				<h1>
+					Créditos 
+				</h1>
+				<h2>
+					Escena original
+				</h2>				
+                
+               <table class="autores" 	>
+					<tr> <td  class="rol"> Diseño del contenido			</td>		<td class="nombre"> Gustavo Magallanes Guijón</td></tr>
+					<tr> <td  class="rol"> Diseño funcional				</td>		<td class="nombre">Gustavo Magallanes Guijón</td></tr>
+					<tr> <td  class="rol"> Programación						</td>		<td class="nombre"> Gustavo Magallanes Guijón</td></tr>
+					<!-- Varias personas en el mismo rubro, separar por <br> -->
+							        
+					<tr> <td  class="rol"> Diseño gráfico					</td>		<td class="nombre"> Ricardo López Gómez										</td></tr>
+					<tr> <td  class="rol" >Coordinación			</td>		<td class="nombre"> Leticia Montserrat Vargas Rocha						</td></tr>
+				</table>
+				<h2>
+					Adaptación 
+				</h2>
+				<table class="autores" 	>
+					<tr> <td  class="rol"> Diseño funcional				</td>	<td class="nombre"> Julio Arnoldo Prado Saavedra<br>Victor Manuel Amezcua y Raz 
+                    </td></tr>
+					<tr> <td  class="rol"> Programación					</td>	<td class="nombre">Julio Arnoldo Prado Saavedra<br>Victor Manuel Amezcua y Raz</td></tr>
+					<tr> <td  class="rol"> Diseño gráfico				</td>	<td class="nombre"> Francisco	Varela Fuentes	        </td></tr>
+					<tr> <td  class="rol" >Coordinación			        </td>	<td class="nombre"> Leticia Montserrat Vargas Rocha		</td></tr>
+		            
+				</table>
+	         
+	         <div class='logos'>
+	            <a href=''>
+	               <img src="../images/info/icns/logoLite.png">
+	            </a>
+	            <a href="http://www.unadmexico.mx/">
+	               <img src="../images/info/icns/logoUNADM.png">
+	            </a>
+	         </div>
+          </div>
+          
+          <!-- Linea separación créditos -->
+          <hr class="linea" />
+     
+          <!-- Aviso licencias -->
+          <div class="licencias">
+          
+				<p class="creativeCommons">Los contenidos de esta unidad didáctica interactiva están bajo una licencia <a href="http://creativecommons.org/licenses/by-nc-sa/2.5/es/" target="_blank">Creative Commons Reconocimiento-NoComercial-CompartirIgual</a>.</p>
+
+				<!--arquimedes (optativo)-->
+				<p>La unidad didáctica fue creada con <a href="http://arquimedes.matem.unam.mx/Descartes5/creditos/conCCL.html" target="_blank">Arquímedes</a>, una herramienta de código abierto.</p>
+
+				<!-- Descartes -->
+				<p>La unidad didáctica contiene escenas elaboradas con Descartes, una herramienta de código abierto.</p>
+
+
+          	<p style='text-align:center'> LITE - UnADM 2014</p>
+          </div>
+      </div>
+    </div> 
+   <!------ TERMINA LA INFO SOBRE LAS LICENCIAS Y LOS CRÉDITOS. ---------->
+  
+  
+  </div>
+  
+  
+</article>
+
+
+</body>
+
+</html>

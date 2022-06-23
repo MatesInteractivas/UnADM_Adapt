@@ -1,0 +1,216 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+ 	<link href="../css/html5_mobile.css" rel="stylesheet" type="text/css" media="screen" />
+	<link href="../css/DescHTML5.css" rel="stylesheet" type="text/css" media="screen" />	
+	 <script type="text/javascript" src='../javascript/inject_functions_scorms_descartes.js'></script>
+	<script type='text/javascript' src='lib/descartes-min.js'></script>
+</head>
+
+<body>
+ <!-------- MathJax --- para fórmulas matemáticas ------>	
+	<script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script> 
+
+<article class="course_content_container">
+  
+  <div class="course_content">
+    
+    
+    <!------ INICIA EL CONTENIDO DE LA PÁGINA --------->
+    
+    
+    <!--- Título de la página --->
+    <center><h2>Las curvas cónicas, la ecuación de segundo grado en dos variables y las matrices simétricas</h2></center>
+    
+    
+	<div class='text_panel'>
+		<!--- Subtítulo (no necesario en introducción) --->
+		  
+    
+		<!--- Párrafo --->
+		<p>
+
+		Los lugares geométricos de las ecuaciones de segundo grado en dos variables:
+
+		\[ ax^2+bxy+cy^2+dx+ey+f=0 \tag{1} \]
+
+son precisamente las curvas cónicas, incluyendo los casos degenerados: el vacío, un punto, 
+una recta, o dos rectas. 
+
+<br><br>La demostración de este hecho puede hacerse mediante un cambio de coordenadas, 
+específicamente, una rotación, cuyo efecto es hacer desaparecer el término mixto en \(xy\).  
+Luego, si sigue habiendo términos en \(x^2\) y en \(y^2\), completando cuadrados se encuentra una 
+traslación que hace desaparecer los términos en \(x\) y en \(y\), con lo cual se llega a una ecuación 
+de la forma:
+
+                         \[ax^2+cy^2+f=0\tag{2} \]
+					
+		</p> 	
+		
+		<p>
+		Si uno de los términos cuadráticos no existe, una traslación lleva a una de estas dos formas:
+
+\[\begin{equation}ax^2+ey+f=0\end{equation}\]           o             \[cy^2+dx+f=0\tag{3} \]
+ 
+Finalmente, si no hay términos cuadráticos, la ecuación tiene la forma 
+
+\[dx+ey+f=0\tag{4} \] 
+
+Es evidente que si la forma \( (4) \), representa una <b>recta</b> y que las formas \( (3) \) representan <b>parábolas</b>,
+la primera con eje vertical y la segunda con eje horizontal. Finalmente la forma \( (2)\) conviene 
+separarla en dos casos: 	
+		</p>
+	
+		<p>
+<ul >
+<li type="H">
+(H) Cuando los coeficientes  \(a\)  y  \(c\)  tiene <b>signos opuestos</b> se dice que <b>la ecuación es hiperbólica</b> 
+y, en efecto, representa una <b>hipérbola</b>, siempre y cuando \(f\) no se anule. Cuando \(f=0\), entonces 
+se obtiene la ecuación de <b>dos rectas</b> que se cruzan en el origen.
+
+<li type="E">
+(E) Cuando  \(a\)  y  \(c\)  tienen el <b>mismo signo</b>, se dice que <b>la ecuación es elíptica</b>. Si  \(f\)  tiene el mismo 
+signo que  \(a\)  y  \(c\), la solición es el <b>conjunto vacío</b>. Si  \(f=0\), la solución es un <b>punto</b>, 
+específicamente, el origen y, finalmente, \(f\) tiene signo contrario al de  \(a\)  y  \(c\), la solución es una 
+<b>elipse</b> (un <b>círculo</b> cuando  \(a=c\)).
+</ul> 
+En esta unidad didáctica demostraremos que efectivamente la ecuación (1) puede convertirse
+en una de las formas (2), (3) o (4) mediante una rotación y una traslación. Pero además veremos que las formas cuadráticas:
+
+                                                       \[ax^2+bxy+cy^2\tag{5} \]
+
+pueden identificarse con las matrices simétricas:
+
+ \[ M=  \begin{bmatrix}
+    a       		& \frac{b}{2}   \\
+    \frac{b}{2}      	& a 		\\
+    
+    
+ \end{bmatrix} \]
+
+mediante el producto  \(r^tMr\)  donde  \(r=\begin{bmatrix}
+    x      \\
+    y      \\ 
+\end{bmatrix} \) es el vector columna cuyas coordenadas son 
+\(x\)  y  \(y\),  y   \(r^t=[x\quad y]\)  es el vector transpuesto de  \(r\).
+</p>
+
+<p>
+Es fácil comprobar que con estas definiciones, 
+
+                                           \[r^tMr=ax^2+bxy+cy^2\]
+
+Estudiaremos las transformaciones del plano que corresponden a estas matrices simétricas 
+y demostraremos que la rotación que elimina el término  \(xy\)  en la forma cuadrática es la misma
+que diagonaliza la matriz  \(A\), es decir, la lleva a la forma diagonal:
+
+           \[\begin{bmatrix}
+    λ_1       		& 0   \\
+    0      	& λ_2 		\\
+    
+    
+ \end{bmatrix} \]
+                                                 
+
+Veremos que el proceso de diagonalizar la matriz simétrica  \(A\)  puede hacerse con un método 
+general consistente en encontrar los ceros del llamado polinomio característico:
+\[(a-λ)(c-λ)-\frac{b^2}{4}=0\]
+
+cuyas soluciones  \(λ_1\)  y  \(λ_2\)  se denominan <b>eigenvalores</b> o <b>valores propios</b> de la matriz.
+</p>
+
+<p>
+Los eigenvalores \({λ_i}\) tienen la propiedad de hacer que los sistemas de ecuaciones:
+
+                                      \[(a-λ_i)x+\frac{b}{2} y=0\] 
+                                       \[\frac{b}{2} x+ (c-λ_i)y=0\]
+
+tengan soluciones no triviales, que son dos vectores \(\begin{bmatrix}    x_1     \\    y_1      \\ \end{bmatrix} \),   
+\(\begin{bmatrix}    x_2      \\    y  _2    \\ \end{bmatrix} \), los cuales pueden
+elegirse de magnitud  \(1\). Estos vectores se llaman <b>eigenvectores</b> o <b>vectores propios</b> de 
+la matriz \(A\) y coinciden con las direcciones de los ejes principales de la curva cónica. 
+</p>  
+
+<br><p>
+Todo esto lo demostraremos en el <i>Desarrollo</i> de esta unidad didáctica.
+
+<br><br>La gran ventaja del método de eigenvalores y eigenvectores es que puede aplicarse también a 
+formas cuadráticas en tres o más variables. De hecho la idea de diagonalizar matrices simétricas 
+puede generalizarse a operadores en espacios de dimensión infinita y tiene aplicaciones 
+importantes en la Física. Por ejemplo, los eigenvalores de cierto operador son los niveles de energía 
+de los átomos. 
+</p>
+  
+    
+    
+   
+    
+   <!------ INICIA LA INFO SOBRE LAS LICENCIAS Y LOS CRÉDITOS. ---------->
+    <a id="btCopyright" class="standardButton" title="Haz clic aquí para consultar los créditos y las condiciones de uso de este recurso." href="#" onclick="document.getElementById('copyright').className='visible';">&#169;</a>
+    <div id="copyright" class="oculto">
+      
+      <div class='innerCopyright'>
+      
+          <a id="btCloseCopyright" class="standardButton" title="Haz clic aquí para cerrar esta ventana." href="#" onclick="document.getElementById('copyright').className='oculto'">×</a>
+  
+          <!-- Créditos UAM  (siempre deben ir en primer lugar) -->
+			<div class="creditos">
+				<h1>
+					Créditos 
+				</h1>
+				<h2>
+					Escena original
+				</h2>				
+				<table class="autores" 	>
+					<tr> <td  class="rol"> Diseño del contenido		</td>		<td class="nombre">José Luis Abreu León</td></tr>
+					<tr> <td  class="rol"> Diseño funcional			</td>		<td class="nombre">José Luis Abreu León</td></tr>
+					<tr> <td  class="rol"> Programación			</td>		<td class="nombre">José Luis Abreu León<br>Leticia Montserrat Vargas Rocha</td></tr>
+					<tr> <td  class="rol"> Diseño gráfico			</td>		<td class="nombre">Ricardo López Gómez</td></tr>
+					<tr> <td  class="rol"> Coordinación			</td>		<td class="nombre">Leticia Montserrat Vargas Rocha</td></tr>
+				</table>
+				<h2>
+					Adaptación 
+				</h2>
+				<table class="autores" 	>
+					<tr> <td  class="rol"> Diseño funcional			</td>		<td class="nombre">Elsa Sirenia Vega Camacho</td></tr>
+					<tr> <td  class="rol"> Programación			</td>		<td class="nombre">Elsa Sirenia Vega Camacho</td></tr>
+					<tr> <td  class="rol"> Asesoría de programación		</td>		<td class="nombre">Leticia Montserrat Vargas Rocha</td></tr>		
+					<tr> <td  class="rol"> Diseño gráfico			</td>		<td class="nombre">Francisco Varela Fuentes</td></tr>
+					<tr> <td  class="rol" >Coordinación			</td>		<td class="nombre">Leticia Montserrat Vargas Rocha</td></tr>
+				</table>
+	         
+	         <div class='logos'>
+	            <a href=''>
+	               <img src="../images/info/icns/logoLite.png">
+	            </a>
+	            <a href="http://www.unadmexico.mx/">
+	               <img src="../images/info/icns/logoUNADM.png">
+	            </a>
+	         </div>
+          </div>
+          
+          <!-- Linea separación créditos -->
+          <hr class="linea" />
+     
+          <!-- Aviso licencias -->
+          <div class="licencias">
+          
+				<p class="creativeCommons">Los contenidos de esta unidad didáctica interactiva están bajo una licencia <a href="http://creativecommons.org/licenses/by-nc-sa/2.5/es/" target="_blank">Creative Commons Reconocimiento-NoComercial-CompartirIgual</a>.</p>
+
+				<!--arquimedes (optativo)-->
+				<p>La unidad didáctica fue creada con <a href="http://arquimedes.matem.unam.mx/Descartes5/creditos/conCCL.html" target="_blank">Arquímedes</a>, una herramienta de código abierto.</p>
+
+				<!-- Descartes -->
+				<p>La unidad didáctica contiene escenas elaboradas con Descartes, una herramienta de código abierto.</p>
+
+
+          	<p style='text-align:center'> LITE - UnADM 2014</p>
+          </div>
+      </div>
+    </div> 
+   <!------ TERMINA LA INFO SOBRE LAS LICENCIAS Y LOS CRÉDITOS. ---------->
+
+</body>
+</html>

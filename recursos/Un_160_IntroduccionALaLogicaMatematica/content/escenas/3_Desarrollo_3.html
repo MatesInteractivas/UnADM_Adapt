@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+ 	<link href="../css/html5_mobile.css" rel="stylesheet" type="text/css" media="screen" />
+	<link href="../css/DescHTML5.css" rel="stylesheet" type="text/css" media="screen" />
+	<script type="text/javascript" src='../javascript/inject_functions_scorms_descartes.js'></script>
+	<script type='text/javascript' src='../lib/descartes-min.js'></script>
+</head>
+
+<body BGCOLOR="c0c0c0" leftmargin="0" topmargin="0">
+<ajs name="Descartes" width=970 height=550 code="Descartes">
+   <param name="tamaño" value="970x550">
+   <param name="image_loader" value="">
+   <param name="expand" value="">
+   <param name="decimal_symbol" value=".">
+   <param name="antialias" value="sí">
+   <param name="deshacer" value="no">
+   <param name="nombre" value="Descartes">
+   <param name="Versión" value="5.336, 2015-02-13">
+   <param name="Idioma" value="español">
+   <param name="Botones" value="créditos=no config=no inicio=no limpiar=no">
+   <param name="E_01" value="tipo='R2' id='E1' fijo='sí' escala='1' O.x='-50%' O.y='-50%' imagen='imgs/tpl/fondo_02.jpg' despl_imagen='arr-izq' fondo='c0d0d8' red='no' red10='no' ejes='no' texto='no'">
+   <param name="E_02" value="tipo='R2' id='E2' x='E2.x' y='E2.y' ancho='426' alto='400' dibujar-si='E2.visible' fijo='sí' despl_imagen='arr-izq' fondo='fff0f8fa' red='no' red10='no' ejes='no' texto='no'">
+   <param name="E_03" value="tipo='R2' id='EspTxt' x='EspTxt.x' y='EspTxt.y' ancho='375' alto='400' dibujar-si='EspTxt.visible' fijo='sí' despl_imagen='arr-izq' fondo='fff8ffd9' red='no' red10='no' ejes='no' texto='no'">
+   <param name="E_04" value="tipo='R2' id='MASK' dibujar-si='INFO.visible' fijo='sí' imagen='imgs/tpl/backwindow.png' despl_imagen='mosaico' fondo='95000000' red='no' red10='no' ejes='no' texto='no'">
+   <param name="E_05" value="tipo='R2' id='INFO' x='INFO.x' y='INFO.y+5' ancho='790' alto='500' dibujar-si='INFO.visible' fijo='sí' imagen='imgs/tpl/retro_790x470.png' despl_imagen='expand.' red='no' red10='no' ejes='no' texto='no'">
+   <param name="C_01" value="id='cerrarInfo' tipo='numérico' interfaz='botón' región='interior' espacio='INFO' expresión='(cerrarInfo.x,cerrarInfo.y,cerrarInfo.w,cerrarInfo.h)' fijo='sí' visible='sí' imagen='_STYLE_|class=btnUNADM icon cerrar|shadowTextColor=rgba(0,0,0,0.2)|shadowTextOffsetY=2|shadowTextBlur=0|textBorder=0 |' acción='calcular' parámetro='INFO.visible=0' dibujar-si='cerrarInfo.visible'">
+   <param name="C_02" value="id='ctr_i' tipo='numérico' interfaz='botón' región='interior' espacio='E1' expresión='(10,10,30,30)' valor='ctr_i' fijo='sí' visible='sí' color='blanco' cursiva='sí' fuente puntos='20' imagen='_STYLE_|class=btnUNADM icon info|shadowTextColor=rgba(0,0,0,0.2)|shadowTextOffsetY=2|shadowTextBlur=0|textBorder=0 |' acción='calcular' parámetro='INFO.visible=1' pos_mensajes='centro'">
+   <param name="C_03" value="id='R11' tipo='numérico' interfaz='menú' región='interior' espacio='E2' expresión='(116,60,51,24)' valor='R11' decimales='0' fijo='sí' visible='no' opciones=' ,V,F' acción='calcular' parámetro='numResp()\nponResp()' dibujar-si='verificar=0' pos_mensajes='centro'">
+   <param name="C_04" value="id='R12' tipo='numérico' interfaz='menú' región='interior' espacio='E2' expresión='(116,95,51,24)' valor='R12' decimales='0' fijo='sí' visible='no' opciones=' ,V,F' acción='calcular' parámetro='numResp()\nponResp()' dibujar-si='verificar=0' pos_mensajes='centro'">
+   <param name="C_05" value="id='R13' tipo='numérico' interfaz='menú' región='interior' espacio='E2' expresión='(116,130,51,24)' valor='R13' decimales='0' fijo='sí' visible='no' opciones=' ,V,F' acción='calcular' parámetro='numResp()\nponResp()' dibujar-si='verificar=0' pos_mensajes='centro'">
+   <param name="C_06" value="id='R14' tipo='numérico' interfaz='menú' región='interior' espacio='E2' expresión='(116,165,51,24)' valor='R14' decimales='0' fijo='sí' visible='no' opciones=' ,V,F' acción='calcular' parámetro='numResp()\nponResp()' dibujar-si='verificar=0' pos_mensajes='centro'">
+   <param name="C_07" value="id='R21' tipo='numérico' interfaz='menú' región='interior' espacio='E2' expresión='(195,60,51,24)' valor='R21' decimales='0' fijo='sí' visible='no' opciones=' ,V,F' acción='calcular' parámetro='numResp()\nponResp()' dibujar-si='verificar=0' pos_mensajes='centro'">
+   <param name="C_08" value="id='R22' tipo='numérico' interfaz='menú' región='interior' espacio='E2' expresión='(195,95,51,24)' valor='R22' decimales='0' fijo='sí' visible='no' opciones=' ,V,F' acción='calcular' parámetro='numResp()\nponResp()' dibujar-si='verificar=0' pos_mensajes='centro'">
+   <param name="C_09" value="id='R23' tipo='numérico' interfaz='menú' región='interior' espacio='E2' expresión='(195,130,51,24)' valor='R23' decimales='0' fijo='sí' visible='no' opciones=' ,V,F' acción='calcular' parámetro='numResp()\nponResp()' dibujar-si='verificar=0' pos_mensajes='centro'">
+   <param name="C_10" value="id='R24' tipo='numérico' interfaz='menú' región='interior' espacio='E2' expresión='(195,165,51,24)' valor='R24' decimales='0' fijo='sí' visible='no' opciones=' ,V,F' acción='calcular' parámetro='numResp()\nponResp()' dibujar-si='verificar=0' pos_mensajes='centro'">
+   <param name="C_11" value="id='R31' tipo='numérico' interfaz='menú' región='interior' espacio='E2' expresión='(272,60,51,24)' valor='R31' decimales='0' fijo='sí' visible='no' opciones=' ,V,F' acción='calcular' parámetro='numResp()\nponResp()' dibujar-si='verificar=0' pos_mensajes='centro'">
+   <param name="C_12" value="id='R32' tipo='numérico' interfaz='menú' región='interior' espacio='E2' expresión='(272,95,51,24)' valor='R32' decimales='0' fijo='sí' visible='no' opciones=' ,V,F' acción='calcular' parámetro='numResp()\nponResp()' dibujar-si='verificar=0' pos_mensajes='centro'">
+   <param name="C_13" value="id='R33' tipo='numérico' interfaz='menú' región='interior' espacio='E2' expresión='(272,130,51,24)' valor='R33' decimales='0' fijo='sí' visible='no' opciones=' ,V,F' acción='calcular' parámetro='numResp()\nponResp()' dibujar-si='verificar=0' pos_mensajes='centro'">
+   <param name="C_14" value="id='R34' tipo='numérico' interfaz='menú' región='interior' espacio='E2' expresión='(272,165,51,24)' valor='R34' decimales='0' fijo='sí' visible='no' opciones=' ,V,F' acción='calcular' parámetro='numResp()\nponResp()' dibujar-si='verificar=0' pos_mensajes='centro'">
+   <param name="C_15" value="id='R41' tipo='numérico' interfaz='menú' región='interior' espacio='E2' expresión='(335,60,51,24)' valor='R41' decimales='0' fijo='sí' visible='no' opciones=' ,V,F' acción='calcular' parámetro='numResp()\nponResp()' dibujar-si='verificar=0' pos_mensajes='centro'">
+   <param name="C_16" value="id='R42' tipo='numérico' interfaz='menú' región='interior' espacio='E2' expresión='(335,95,51,24)' valor='R42' decimales='0' fijo='sí' visible='no' opciones=' ,V,F' acción='calcular' parámetro='numResp()\nponResp()' dibujar-si='verificar=0' pos_mensajes='centro'">
+   <param name="C_17" value="id='R43' tipo='numérico' interfaz='menú' región='interior' espacio='E2' expresión='(335,130,51,24)' valor='R43' decimales='0' fijo='sí' visible='no' opciones=' ,V,F' acción='calcular' parámetro='numResp()\nponResp()' dibujar-si='verificar=0' pos_mensajes='centro'">
+   <param name="C_18" value="id='R44' tipo='numérico' interfaz='menú' región='interior' espacio='E2' expresión='(335,165,51,24)' valor='R44' decimales='0' fijo='sí' visible='no' opciones=' ,V,F' acción='calcular' parámetro='numResp()\nponResp()' dibujar-si='verificar=0' pos_mensajes='centro'">
+   <param name="C_19" value="id='R51' tipo='numérico' interfaz='menú' región='interior' espacio='E2' expresión='(42,255,51,24)' valor='R51' decimales='0' fijo='sí' visible='no' opciones=' ,V,F' acción='calcular' parámetro='numResp()\nponResp()' dibujar-si='verificar=0' pos_mensajes='centro'">
+   <param name="C_20" value="id='R52' tipo='numérico' interfaz='menú' región='interior' espacio='E2' expresión='(42,290,51,24)' valor='R52' decimales='0' fijo='sí' visible='no' opciones=' ,V,F' acción='calcular' parámetro='numResp()\nponResp()' dibujar-si='verificar=0' pos_mensajes='centro'">
+   <param name="C_21" value="id='R53' tipo='numérico' interfaz='menú' región='interior' espacio='E2' expresión='(42,325,51,24)' valor='R53' decimales='0' fijo='sí' visible='no' opciones=' ,V,F' acción='calcular' parámetro='numResp()\nponResp()' dibujar-si='verificar=0' pos_mensajes='centro'">
+   <param name="C_22" value="id='R54' tipo='numérico' interfaz='menú' región='interior' espacio='E2' expresión='(42,360,51,24)' valor='R54' decimales='0' fijo='sí' visible='no' opciones=' ,V,F' acción='calcular' parámetro='numResp()\nponResp()' dibujar-si='verificar=0' pos_mensajes='centro'">
+   <param name="C_23" value="id='R61' tipo='numérico' interfaz='menú' región='interior' espacio='E2' expresión='(180,255,51,24)' valor='R61' decimales='0' fijo='sí' visible='no' opciones=' ,V,F' acción='calcular' parámetro='numResp()\nponResp()' dibujar-si='verificar=0' pos_mensajes='centro'">
+   <param name="C_24" value="id='R62' tipo='numérico' interfaz='menú' región='interior' espacio='E2' expresión='(180,290,51,24)' valor='R62' decimales='0' fijo='sí' visible='no' opciones=' ,V,F' acción='calcular' parámetro='numResp()\nponResp()' dibujar-si='verificar=0' pos_mensajes='centro'">
+   <param name="C_25" value="id='R63' tipo='numérico' interfaz='menú' región='interior' espacio='E2' expresión='(180,325,51,24)' valor='R63' decimales='0' fijo='sí' visible='no' opciones=' ,V,F' acción='calcular' parámetro='numResp()\nponResp()' dibujar-si='verificar=0' pos_mensajes='centro'">
+   <param name="C_26" value="id='R64' tipo='numérico' interfaz='menú' región='interior' espacio='E2' expresión='(180,360,51,24)' valor='R64' decimales='0' fijo='sí' visible='no' opciones=' ,V,F' acción='calcular' parámetro='numResp()\nponResp()' dibujar-si='verificar=0' pos_mensajes='centro'">
+   <param name="C_27" value="id='verif' tipo='numérico' interfaz='botón' región='interior' espacio='EspTxt' nombre='Verificar' expresión='(255,370,120,30)' fijo='sí' visible='sí' color='blanco' color-int='fff0f8ff' fuente puntos='18' acción='calcular' parámetro='verificar=1\nintentos=intentos+1\ncalifica()' dibujar-si='(verificar=0)&(intentos<3)&(numR=24)' pos_mensajes='centro'">
+   <param name="C_28" value="id='reinte' tipo='numérico' interfaz='botón' región='interior' espacio='EspTxt' nombre='Reintentar' expresión='(255,370,120,30)' fijo='sí' visible='sí' color='blanco' color-int='fff0f8ff' fuente puntos='18' acción='calcular' parámetro='verificar=0\nR11=0\nR12=0\nR13=0\nR14=0\nR21=0\nR22=0\nR23=0\nR24=0\nR31=0\nR32=0\nR33=0\nR34=0\nR41=0\nR42=0\nR43=0\nR44=0\nR51=0\nR52=0\nR53=0\nR54=0\nR61=0\nR62=0\nR63=0\nR64=0' dibujar-si='(verificar=1)&(intentos<3)&(calif>0)' pos_mensajes='centro'">
+   <param name="C_29" value="id='mosResp' tipo='numérico' interfaz='botón' región='interior' espacio='EspTxt' nombre='Respuestas' expresión='(255,370,120,30)' fijo='sí' visible='sí' color='blanco' color-int='fff0f8ff' fuente puntos='18' acción='calcular' parámetro='verificar=1\nR11=1\nR12=2\nR13=2\nR14=2\nR21=2\nR22=1\nR23=1\nR24=1\nR31=2\nR32=2\nR33=1\nR34=1\nR41=2\nR42=1\nR43=2\nR44=1\nR51=2\nR52=1\nR53=1\nR54=1\nR61=1\nR62=1\nR63=1\nR64=1\ncalifica()\nponResp()' dibujar-si='(verificar=1)&(intentos=3)&(calif>0)' pos_mensajes='centro'">
+   <param name="C_30" value="id='Reinit' tipo='numérico' interfaz='botón' región='interior' espacio='EspTxt' nombre='Reiniciar' expresión='(255,370,120,30)' fijo='sí' visible='sí' color='blanco' color-int='fff0f8ff' fuente puntos='18' acción='inicio' dibujar-si='(verificar=1)&(calif=0)' pos_mensajes='centro'">
+   <param name="A_01" value="id='resp' vector='sí' evaluar='una-sola-vez' tamaño='24' expresión='resp[0]=0;resp[1]=0;resp[2]=0;resp[3]=0;resp[4]=0;resp[5]=0;resp[6]=0;resp[7]=0;resp[8]=0;resp[9]=0;resp[10]=0;resp[11]=0;resp[12]=0;resp[13]=0;resp[14]=0;resp[15]=0;resp[16]=0;resp[17]=0;resp[18]=0;resp[19]=0;resp[20]=0;resp[21]=0;resp[22]=0;resp[23]=0'">
+   <param name="A_02" value="id='initBtns()' algoritmo='sí' algoritmo='sí' hacer='cerrarInfo.w=21;cerrarInfo.h=cerrarInfo.w;cerrarInfo.x=INFO._w-cerrarInfo.w-10;cerrarInfo.y=8;cerrarInfo.img=&squot;imgs/tpl/cerrar.png&squot;;cerrarInfo.visible=1'">
+   <param name="A_03" value="id='initEsp()' algoritmo='sí' algoritmo='sí' hacer='INFO.x=(E1._w-INFO._w)/2;INFO.y=(E1._h-INFO._h)/2;INFO.visible=1;;E2.x=54;E2.y=105;E2.visible=1;;EspTxt.x=540;EspTxt.y=105;EspTxt.visible=1'">
+   <param name="A_04" value="id='initEscena()' algoritmo='sí' algoritmo='sí' hacer='initBtns();initEsp();;ô=|***************************************|;ô=|*  Calculamos la posicion del titulo  *|;ô=|***************************************|;titulo=&squot;Tablas de verdad&squot;;titulo.w=_AnchoDeCadena_(titulo,&squot;SansSerif&squot;,&squot;PLAIN&squot;,&squot;30&squot;);titulo.x=(E1._w-titulo.w)/2;titulo.y=30;;verificar=0;intentos=0;ponResp()'">
+   <param name="A_05" value="id='numResp()' algoritmo='sí' algoritmo='sí' inicio='numR=0' hacer='numR=(R11>0)?numR+1:numR;numR=(R12>0)?numR+1:numR;numR=(R13>0)?numR+1:numR;numR=(R14>0)?numR+1:numR;numR=(R21>0)?numR+1:numR;numR=(R22>0)?numR+1:numR;numR=(R23>0)?numR+1:numR;numR=(R24>0)?numR+1:numR;numR=(R31>0)?numR+1:numR;numR=(R32>0)?numR+1:numR;numR=(R33>0)?numR+1:numR;numR=(R34>0)?numR+1:numR;numR=(R41>0)?numR+1:numR;numR=(R42>0)?numR+1:numR;numR=(R43>0)?numR+1:numR;numR=(R44>0)?numR+1:numR;numR=(R51>0)?numR+1:numR;numR=(R52>0)?numR+1:numR;numR=(R53>0)?numR+1:numR;numR=(R54>0)?numR+1:numR;numR=(R61>0)?numR+1:numR;numR=(R62>0)?numR+1:numR;numR=(R63>0)?numR+1:numR;numR=(R64>0)?numR+1:numR'">
+   <param name="A_06" value="id='ponResp()' algoritmo='sí' algoritmo='sí' hacer='resp[0]=R11;img0=(R11=1)?&squot;imgs/bien.png&squot;:&squot;imgs/mal.png&squot;;resp[1]=R12;img1=(R12=2)?&squot;imgs/bien.png&squot;:&squot;imgs/mal.png&squot;;resp[2]=R13;img2=(R13=2)?&squot;imgs/bien.png&squot;:&squot;imgs/mal.png&squot;;resp[3]=R14;img3=(R14=2)?&squot;imgs/bien.png&squot;:&squot;imgs/mal.png&squot;;resp[4]=R21;img4=(R21=2)?&squot;imgs/bien.png&squot;:&squot;imgs/mal.png&squot;;resp[5]=R22;img5=(R22=1)?&squot;imgs/bien.png&squot;:&squot;imgs/mal.png&squot;;resp[6]=R23;img6=(R23=1)?&squot;imgs/bien.png&squot;:&squot;imgs/mal.png&squot;;resp[7]=R24;img7=(R24=1)?&squot;imgs/bien.png&squot;:&squot;imgs/mal.png&squot;;resp[8]=R31;img8=(R31=2)?&squot;imgs/bien.png&squot;:&squot;imgs/mal.png&squot;;resp[9]=R32;img9=(R32=2)?&squot;imgs/bien.png&squot;:&squot;imgs/mal.png&squot;;resp[10]=R33;img10=(R33=1)?&squot;imgs/bien.png&squot;:&squot;imgs/mal.png&squot;;resp[11]=R34;img11=(R34=1)?&squot;imgs/bien.png&squot;:&squot;imgs/mal.png&squot;;resp[12]=R41;img12=(R41=2)?&squot;imgs/bien.png&squot;:&squot;imgs/mal.png&squot;;resp[13]=R42;img13=(R42=1)?&squot;imgs/bien.png&squot;:&squot;imgs/mal.png&squot;;resp[14]=R43;img14=(R43=2)?&squot;imgs/bien.png&squot;:&squot;imgs/mal.png&squot;;resp[15]=R44;img15=(R44=1)?&squot;imgs/bien.png&squot;:&squot;imgs/mal.png&squot;;resp[16]=R51;img16=(R51=2)?&squot;imgs/bien.png&squot;:&squot;imgs/mal.png&squot;;resp[17]=R52;img17=(R52=1)?&squot;imgs/bien.png&squot;:&squot;imgs/mal.png&squot;;resp[18]=R53;img18=(R53=1)?&squot;imgs/bien.png&squot;:&squot;imgs/mal.png&squot;;resp[19]=R54;img19=(R54=1)?&squot;imgs/bien.png&squot;:&squot;imgs/mal.png&squot;;resp[20]=R61;img20=(R61=1)?&squot;imgs/bien.png&squot;:&squot;imgs/mal.png&squot;;resp[21]=R62;img21=(R62=1)?&squot;imgs/bien.png&squot;:&squot;imgs/mal.png&squot;;resp[22]=R63;img22=(R63=1)?&squot;imgs/bien.png&squot;:&squot;imgs/mal.png&squot;;resp[23]=R64;img23=(R64=1)?&squot;imgs/bien.png&squot;:&squot;imgs/mal.png&squot;'">
+   <param name="A_07" value="id='califica()' algoritmo='sí' algoritmo='sí' inicio='calif=0' hacer='calif=(R11=1)?calif:calif+1;calif=(R12=2)?calif:calif+1;calif=(R13=2)?calif:calif+1;calif=(R14=2)?calif:calif+1;calif=(R21=2)?calif:calif+1;calif=(R22=1)?calif:calif+1;calif=(R23=1)?calif:calif+1;calif=(R24=1)?calif:calif+1;calif=(R31=2)?calif:calif+1;calif=(R32=2)?calif:calif+1;calif=(R33=1)?calif:calif+1;calif=(R34=1)?calif:calif+1;calif=(R41=2)?calif:calif+1;calif=(R42=1)?calif:calif+1;calif=(R43=2)?calif:calif+1;calif=(R44=1)?calif:calif+1;calif=(R51=2)?calif:calif+1;calif=(R52=1)?calif:calif+1;calif=(R53=1)?calif:calif+1;calif=(R54=1)?calif:calif+1;calif=(R61=1)?calif:calif+1;calif=(R62=1)?calif:calif+1;calif=(R63=1)?calif:calif+1;calif=(R64=1)?calif:calif+1;ValPer[0]=24-calif;calPer()'">
+   <param name="A_08" value="id='ValPer' vector='sí' evaluar='una-sola-vez' tamaño='20'">
+   <param name="A_09" value="id='calPer()' algoritmo='sí' algoritmo='sí' hacer='per=ent(100*(ValPer[0]/24));setSCORMPercentage(per)'">
+   <param name="A_10" value="id='getSCORMState()' algoritmo='sí' expresión='res' algoritmo='sí' Local='res,arroba' inicio='arroba=&squot;@&squot;' hacer='ö=|Estandar ---- [MIDC]XX.<var>  SI SOLO EXISTE UNA ESCENA EN EL HTML|;ö=|Estandar ---- [MIDC]XX_YY.<var>  SI HAY MAS DE UNA ESCENA EN EL HTML|;res=&squot;D03.ValPer[0]:&squot;+ValPer[0]+arroba;'">
+   <param name="A_11" value="id='initStateScorm()' algoritmo='sí' expresión='x' algoritmo='sí' hacer='ValPer[0]=getSCORMStateVar(&squot;D03.ValPer[0]&squot;);calPer();'">
+   <param name="A_12" value="id='INICIO' algoritmo='sí' evaluar='una-sola-vez' hacer='initStateScorm();initEscena()'">
+   <param name="A_13" value="id='CALCULOS' algoritmo='sí' evaluar='siempre'">
+   <param name="G_01" value="espacio='E1' tipo='texto' fondo='sí' dibujar-si='0' expresión='[__INFO__,20]' fijo='sí'">
+   <param name="G_02" value="espacio='INFO' tipo='texto' fondo='sí' color='blanco' expresión='[20,5]' texto='Demostraciones con tablas de verdad' fuente='SansSerif,PLAIN,24' fijo='sí'">
+   <param name="G_03" value="espacio='INFO' tipo='texto' expresión='[40,60]' texto='{\rtf1\uc0{\fonttbl\f0\fcharset0 Times New Roman;\f1\fcharset0 Arial;\f2\fcharset0 Times New Roman;\f3\fcharset0 Arial;}\f1\fs40 En esta escena se mostrar\u225  la utilidad de las tablas de verdad demostrando un\par teorema de las leyes de De Morgan.\par \par El teorema que se demostrar\u225  dice que &quote;el complemento de la intersecci\u243 n\par de dos conjuntos, es igual a la uni\u243 n de sus complementos&quote;. Algebraicamente\par esto se expresa como \f2\fs44\i{\*\mjaformula\f2\fs44\i (A\u8898 B){\supix c}=A{\supix c}\u8899 B{\supix c}}\f1\fs40\i0 .\par \par La demostraci\u243 n usando propiedades de conjuntos es la siguiente:\par \par \i Hip\u243 tesis:\i0  \f2\fs44\i{\*\mjaformula x \u1013  (A\f2\fs44\i\u8898 B){\supix c}.{\supix}}\f1\fs40\i0  \i Por demostrar que:\i0  \f2\fs44\i{\*\mjaformula\f2\fs44\i x \u1013  A{\supix c}\u8899 B{\supix c}}\f1\fs40\i0\par \par \i Dem:\i0  \f2\fs44\i{\*\mjaformula x \u1013  (A\u8898 B){\supix c}  \u8660    x \u8713  (A\u8898 B)  \u8660   \u172 (x \u1013  A\u8898 B)  \u8660   \u172 ((x \u1013  A) \u8743  (x \u1013  B))}\f1\fs40\i0\par \f2\fs44\i         {\*\mjaformula\f2\fs44\i\u8660  (x \u8713  A) \u8744  (x \u8713  B)  \u8660  ( x \u1013  A{\supix c}) \u8744  (x \u1013  B{\supix c})  \u8660   x \u1013  A{\supix c}\u8899 B{\supix c}}\f1\fs40\i0\par \par En la escena puedes hacer la demostraci\u243 n de este teorema usando una tabla \par de verdad.}' fuente='SansSerif,PLAIN,20' fijo='sí'">
+   <param name="G_04" value="espacio='E1' tipo='texto' fondo='sí' dibujar-si='0' expresión='[__E1__,20]' fijo='sí'">
+   <param name="G_05" value="espacio='E1' tipo='texto' fondo='sí' expresión='[titulo.x,titulo.y]' texto='[titulo]' fuente='SansSerif,PLAIN,30' fijo='sí'">
+   <param name="G_06" value="espacio='E1' tipo='texto' fondo='sí' dibujar-si='0' expresión='[__E2__,20]' fijo='sí'">
+   <param name="G_07" value="espacio='E2' tipo='segmento' coord_abs='sí' expresión='(20,20+35*s)(390,20+35*s)' familia='s' s.intervalo='[0,5]' s.pasos='5' fijo='sí' tamaño='0' ancho='2'">
+   <param name="G_08" value="espacio='E2' tipo='segmento' coord_abs='sí' expresión='(20+45*s,20)(20+45*s,195)' familia='s' s.intervalo='[0,2]' s.pasos='2' fijo='sí' tamaño='0' ancho='2'">
+   <param name="G_09" value="espacio='E2' tipo='texto' expresión='[35,28]' texto='A     B' fuente='SansSerif,PLAIN,20' fijo='sí'">
+   <param name="G_10" value="espacio='E2' tipo='texto' expresión='[35,65]' texto='V     V' fuente='SansSerif,PLAIN,20' fijo='sí'">
+   <param name="G_11" value="espacio='E2' tipo='texto' expresión='[35,98]' texto='V     F' fuente='SansSerif,PLAIN,20' fijo='sí'">
+   <param name="G_12" value="espacio='E2' tipo='texto' expresión='[35,131]' texto='F     V' fuente='SansSerif,PLAIN,20' fijo='sí'">
+   <param name="G_13" value="espacio='E2' tipo='texto' expresión='[35,169]' texto='F     F' fuente='SansSerif,PLAIN,20' fijo='sí'">
+   <param name="G_14" value="espacio='E2' tipo='segmento' coord_abs='sí' expresión='(172,20)(172,195)' familia='s' s.intervalo='[0,2]' s.pasos='2' fijo='sí' tamaño='0' ancho='2'">
+   <param name="G_15" value="espacio='E2' tipo='texto' expresión='[120,28]' texto='A∧B' fuente='SansSerif,PLAIN,20' fijo='sí'">
+   <param name="G_16" value="espacio='E2' tipo='texto' dibujar-si='verificar' expresión='[130,65]' texto='[(R11=1)?&squot;V&squot;:&squot;F&squot;]' fuente='SansSerif,PLAIN,20' fijo='sí'">
+   <param name="G_17" value="espacio='E2' tipo='texto' dibujar-si='verificar' expresión='[130,98]' texto='[(R12=1)?&squot;V&squot;:&squot;F&squot;]' fuente='SansSerif,PLAIN,20' fijo='sí'">
+   <param name="G_18" value="espacio='E2' tipo='texto' dibujar-si='verificar' expresión='[130,131]' texto='[(R13=1)?&squot;V&squot;:&squot;F&squot;]' fuente='SansSerif,PLAIN,20' fijo='sí'">
+   <param name="G_19" value="espacio='E2' tipo='texto' dibujar-si='verificar' expresión='[130,169]' texto='[(R14=1)?&squot;V&squot;:&squot;F&squot;]' fuente='SansSerif,PLAIN,20' fijo='sí'">
+   <param name="G_20" value="espacio='E2' tipo='segmento' coord_abs='sí' expresión='(265,20)(265,195)' familia='s' s.intervalo='[0,2]' s.pasos='2' fijo='sí' tamaño='0' ancho='2'">
+   <param name="G_21" value="espacio='E2' tipo='texto' expresión='[182,28]' texto='¬(A∧B)' fuente='SansSerif,PLAIN,20' fijo='sí'">
+   <param name="G_22" value="espacio='E2' tipo='texto' dibujar-si='verificar' expresión='[212,65]' texto='[(R21=1)?&squot;V&squot;:&squot;F&squot;]' fuente='SansSerif,PLAIN,20' fijo='sí'">
+   <param name="G_23" value="espacio='E2' tipo='texto' dibujar-si='verificar' expresión='[212,98]' texto='[(R22=1)?&squot;V&squot;:&squot;F&squot;]' fuente='SansSerif,PLAIN,20' fijo='sí'">
+   <param name="G_24" value="espacio='E2' tipo='texto' dibujar-si='verificar' expresión='[212,131]' texto='[(R23=1)?&squot;V&squot;:&squot;F&squot;]' fuente='SansSerif,PLAIN,20' fijo='sí'">
+   <param name="G_25" value="espacio='E2' tipo='texto' dibujar-si='verificar' expresión='[212,169]' texto='[(R24=1)?&squot;V&squot;:&squot;F&squot;]' fuente='SansSerif,PLAIN,20' fijo='sí'">
+   <param name="G_26" value="espacio='E2' tipo='segmento' coord_abs='sí' expresión='(330,20)(330,195)' familia='s' s.intervalo='[0,2]' s.pasos='2' fijo='sí' tamaño='0' ancho='2'">
+   <param name="G_27" value="espacio='E2' tipo='texto' expresión='[280,28]' texto='¬A' fuente='SansSerif,PLAIN,20' fijo='sí'">
+   <param name="G_28" value="espacio='E2' tipo='texto' dibujar-si='verificar' expresión='[288,65]' texto='[(R31=1)?&squot;V&squot;:&squot;F&squot;]' fuente='SansSerif,PLAIN,20' fijo='sí'">
+   <param name="G_29" value="espacio='E2' tipo='texto' dibujar-si='verificar' expresión='[288,98]' texto='[(R32=1)?&squot;V&squot;:&squot;F&squot;]' fuente='SansSerif,PLAIN,20' fijo='sí'">
+   <param name="G_30" value="espacio='E2' tipo='texto' dibujar-si='verificar' expresión='[288,131]' texto='[(R33=1)?&squot;V&squot;:&squot;F&squot;]' fuente='SansSerif,PLAIN,20' fijo='sí'">
+   <param name="G_31" value="espacio='E2' tipo='texto' dibujar-si='verificar' expresión='[288,169]' texto='[(R34=1)?&squot;V&squot;:&squot;F&squot;]' fuente='SansSerif,PLAIN,20' fijo='sí'">
+   <param name="G_32" value="espacio='E2' tipo='segmento' coord_abs='sí' expresión='(390,20)(390,195)' familia='s' s.intervalo='[0,2]' s.pasos='2' fijo='sí' tamaño='0' ancho='2'">
+   <param name="G_33" value="espacio='E2' tipo='texto' expresión='[342,28]' texto='¬B' fuente='SansSerif,PLAIN,20' fijo='sí'">
+   <param name="G_34" value="espacio='E2' tipo='texto' dibujar-si='verificar' expresión='[352,65]' texto='[(R41=1)?&squot;V&squot;:&squot;F&squot;]' fuente='SansSerif,PLAIN,20' fijo='sí'">
+   <param name="G_35" value="espacio='E2' tipo='texto' dibujar-si='verificar' expresión='[352,98]' texto='[(R42=1)?&squot;V&squot;:&squot;F&squot;]' fuente='SansSerif,PLAIN,20' fijo='sí'">
+   <param name="G_36" value="espacio='E2' tipo='texto' dibujar-si='verificar' expresión='[352,131]' texto='[(R43=1)?&squot;V&squot;:&squot;F&squot;]' fuente='SansSerif,PLAIN,20' fijo='sí'">
+   <param name="G_37" value="espacio='E2' tipo='texto' dibujar-si='verificar' expresión='[352,169]' texto='[(R44=1)?&squot;V&squot;:&squot;F&squot;]' fuente='SansSerif,PLAIN,20' fijo='sí'">
+   <param name="G_38" value="espacio='E2' tipo='segmento' coord_abs='sí' expresión='(20,215+35*s)(300,215+35*s)' familia='s' s.intervalo='[0,5]' s.pasos='5' fijo='sí' tamaño='0' ancho='2'">
+   <param name="G_39" value="espacio='E2' tipo='segmento' coord_abs='sí' expresión='(20+95*s,215)(20+95*s,388)' familia='s' s.intervalo='[0,1]' s.pasos='1' fijo='sí' tamaño='0' ancho='2'">
+   <param name="G_40" value="espacio='E2' tipo='texto' expresión='[30,223]' texto='¬A∨¬B' fuente='SansSerif,PLAIN,20' fijo='sí'">
+   <param name="G_41" value="espacio='E2' tipo='texto' dibujar-si='verificar' expresión='[60,256]' texto='[(R51=1)?&squot;V&squot;:&squot;F&squot;]' fuente='SansSerif,PLAIN,20' fijo='sí'">
+   <param name="G_42" value="espacio='E2' tipo='texto' dibujar-si='verificar' expresión='[60,292]' texto='[(R52=1)?&squot;V&squot;:&squot;F&squot;]' fuente='SansSerif,PLAIN,20' fijo='sí'">
+   <param name="G_43" value="espacio='E2' tipo='texto' dibujar-si='verificar' expresión='[60,326]' texto='[(R53=1)?&squot;V&squot;:&squot;F&squot;]' fuente='SansSerif,PLAIN,20' fijo='sí'">
+   <param name="G_44" value="espacio='E2' tipo='texto' dibujar-si='verificar' expresión='[60,362]' texto='[(R54=1)?&squot;V&squot;:&squot;F&squot;]' fuente='SansSerif,PLAIN,20' fijo='sí'">
+   <param name="G_45" value="espacio='E2' tipo='segmento' coord_abs='sí' expresión='(300,215)(300,388)' familia='s' s.intervalo='[0,1]' s.pasos='1' fijo='sí' tamaño='0' ancho='2'">
+   <param name="G_46" value="espacio='E2' tipo='texto' expresión='[123,220]' texto='{\rtf1\uc0{\fonttbl\f0\fcharset0 Times New Roman;\f1\fcharset0 Arial;\f2\fcharset0 Times New Roman;}\f1\fs40\u172 (A\u8743 B) \f2\fs44\i\u8596 \f1\fs40\i0  \u172 A\u8744 \u172 B}' fuente='SansSerif,PLAIN,20' fijo='sí'">
+   <param name="G_47" value="espacio='E2' tipo='texto' dibujar-si='verificar' expresión='[195,256]' texto='[(R61=1)?&squot;V&squot;:&squot;F&squot;]' fuente='SansSerif,PLAIN,20' fijo='sí'">
+   <param name="G_48" value="espacio='E2' tipo='texto' dibujar-si='verificar' expresión='[195,292]' texto='[(R62=1)?&squot;V&squot;:&squot;F&squot;]' fuente='SansSerif,PLAIN,20' fijo='sí'">
+   <param name="G_49" value="espacio='E2' tipo='texto' dibujar-si='verificar' expresión='[195,326]' texto='[(R63=1)?&squot;V&squot;:&squot;F&squot;]' fuente='SansSerif,PLAIN,20' fijo='sí'">
+   <param name="G_50" value="espacio='E2' tipo='texto' dibujar-si='verificar' expresión='[195,362]' texto='[(R64=1)?&squot;V&squot;:&squot;F&squot;]' fuente='SansSerif,PLAIN,20' fijo='sí'">
+   <param name="G_51" value="espacio='E2' tipo='polígono' color='ff20303a' dibujar-si='(paso=1)|(paso=3)' coord_abs='sí' expresión='(20,20)(64,20)(64,196)(20,196)(20,20)' relleno='a6ffff80'">
+   <param name="G_52" value="espacio='E2' tipo='polígono' color='ff20303a' dibujar-si='(paso=1)|(paso=3)' coord_abs='sí' expresión='(65,20)(109,20)(109,196)(65,196)(65,20)' relleno='a6ffff80'">
+   <param name="G_53" value="espacio='E2' tipo='polígono' color='ff20303a' dibujar-si='(paso=1)|(paso=2)' coord_abs='sí' expresión='(110,20)(170,20)(170,196)(110,196)(110,20)' relleno='a6ffff80'">
+   <param name="G_54" value="espacio='E2' tipo='polígono' color='ff20303a' dibujar-si='(paso=2)|(paso=5)' coord_abs='sí' expresión='(171,20)(265,20)(265,196)(171,196)(171,20)' relleno='a6ffff80'">
+   <param name="G_55" value="espacio='E2' tipo='polígono' color='ff20303a' dibujar-si='(paso=3)|(paso=4)' coord_abs='sí' expresión='(266,20)(330,20)(330,196)(266,196)(266,20)' relleno='a6ffff80'">
+   <param name="G_56" value="espacio='E2' tipo='polígono' color='ff20303a' dibujar-si='(paso=3)|(paso=4)' coord_abs='sí' expresión='(331,20)(390,20)(390,196)(331,196)(331,20)' relleno='a6ffff80'">
+   <param name="G_57" value="espacio='E2' tipo='polígono' color='ff20303a' dibujar-si='(paso=4)|(paso=5)' coord_abs='sí' expresión='(20,215)(115,215)(115,390)(20,390)(20,215)' relleno='a6ffff80'">
+   <param name="G_58" value="espacio='E2' tipo='polígono' color='ff20303a' dibujar-si='(paso=5)' coord_abs='sí' expresión='(116,215)(300,215)(300,390)(116,390)(116,215)' relleno='a6ffff80'">
+   <param name="G_59" value="espacio='E2' tipo='imagen' dibujar-si='verificar' coord_abs='sí' expresión='(155,50)' archivo='img0'">
+   <param name="G_60" value="espacio='E2' tipo='imagen' dibujar-si='verificar' coord_abs='sí' expresión='(155,85)' archivo='img1'">
+   <param name="G_61" value="espacio='E2' tipo='imagen' dibujar-si='verificar' coord_abs='sí' expresión='(155,120)' archivo='img2'">
+   <param name="G_62" value="espacio='E2' tipo='imagen' dibujar-si='verificar' coord_abs='sí' expresión='(155,155)' archivo='img3'">
+   <param name="G_63" value="espacio='E2' tipo='imagen' dibujar-si='verificar' coord_abs='sí' expresión='(245,50)' archivo='img4'">
+   <param name="G_64" value="espacio='E2' tipo='imagen' dibujar-si='verificar' coord_abs='sí' expresión='(245,85)' archivo='img5'">
+   <param name="G_65" value="espacio='E2' tipo='imagen' dibujar-si='verificar' coord_abs='sí' expresión='(245,120)' archivo='img6'">
+   <param name="G_66" value="espacio='E2' tipo='imagen' dibujar-si='verificar' coord_abs='sí' expresión='(245,155)' archivo='img7'">
+   <param name="G_67" value="espacio='E2' tipo='imagen' dibujar-si='verificar' coord_abs='sí' expresión='(310,50)' archivo='img8'">
+   <param name="G_68" value="espacio='E2' tipo='imagen' dibujar-si='verificar' coord_abs='sí' expresión='(310,85)' archivo='img9'">
+   <param name="G_69" value="espacio='E2' tipo='imagen' dibujar-si='verificar' coord_abs='sí' expresión='(310,120)' archivo='img10'">
+   <param name="G_70" value="espacio='E2' tipo='imagen' dibujar-si='verificar' coord_abs='sí' expresión='(310,155)' archivo='img11'">
+   <param name="G_71" value="espacio='E2' tipo='imagen' dibujar-si='verificar' coord_abs='sí' expresión='(370,50)' archivo='img12'">
+   <param name="G_72" value="espacio='E2' tipo='imagen' dibujar-si='verificar' coord_abs='sí' expresión='(370,85)' archivo='img13'">
+   <param name="G_73" value="espacio='E2' tipo='imagen' dibujar-si='verificar' coord_abs='sí' expresión='(370,120)' archivo='img14'">
+   <param name="G_74" value="espacio='E2' tipo='imagen' dibujar-si='verificar' coord_abs='sí' expresión='(370,155)' archivo='img15'">
+   <param name="G_75" value="espacio='E2' tipo='imagen' dibujar-si='verificar' coord_abs='sí' expresión='(95,250)' archivo='img16'">
+   <param name="G_76" value="espacio='E2' tipo='imagen' dibujar-si='verificar' coord_abs='sí' expresión='(95,285)' archivo='img17'">
+   <param name="G_77" value="espacio='E2' tipo='imagen' dibujar-si='verificar' coord_abs='sí' expresión='(95,320)' archivo='img18'">
+   <param name="G_78" value="espacio='E2' tipo='imagen' dibujar-si='verificar' coord_abs='sí' expresión='(95,355)' archivo='img19'">
+   <param name="G_79" value="espacio='E2' tipo='imagen' dibujar-si='verificar' coord_abs='sí' expresión='(230,250)' archivo='img20'">
+   <param name="G_80" value="espacio='E2' tipo='imagen' dibujar-si='verificar' coord_abs='sí' expresión='(230,285)' archivo='img21'">
+   <param name="G_81" value="espacio='E2' tipo='imagen' dibujar-si='verificar' coord_abs='sí' expresión='(230,320)' archivo='img22'">
+   <param name="G_82" value="espacio='E2' tipo='imagen' dibujar-si='verificar' coord_abs='sí' expresión='(230,355)' archivo='img23'">
+   <param name="G_83" value="espacio='E1' tipo='texto' fondo='sí' dibujar-si='0' expresión='[__Esp_Txt__,20]' fijo='sí'">
+   <param name="G_84" value="espacio='EspTxt' tipo='texto' dibujar-si='paso=0' expresión='[5,5]' texto='{\rtf1\uc0{\fonttbl\f0\fcharset0 Times New Roman;\f1\fcharset0 Arial;\f2\fcharset0 Times New Roman;}\f1\fs40 Lo primero es traducir\par               \f2\fs44\i{\*\mjaformula (A\u8745 B){\supix c}=A{\supix c}\u8899 B{\supix c}}\f1\fs40\i0  \par a un lenguaje que se pueda usar en la \par tabla de verdad. \par A continuaci\u243 n aplicamos los condiciona-\par les, y si en el resultado final todo es ver-\par dadero, la proposici\u243 n es una tautolog\u237 a, \par por lo tanto se cumple el teorema. \par El complemento se puede interpretar \par como una negaci\u243 n, la uni\u243 n como una\par disyunci\u243 n, la intersecci\u243 n como una\par conjunci\u243 n y finalmente la igualdad como\par un bicondicional. La expresi\u243 n quedar\u237 a\par como\par      \f2\fs44\i{\*\mjaformula\u172 (A \u8743  B)  \u8596   \u172 A \u8744 \u172 B}\f1\fs40\i0}' fuente='SansSerif,PLAIN,20' fijo='sí'">
+   <param name="G_85" value="espacio='E1' tipo='texto' dibujar-si='dbubg' expresión='[20,20]' texto='R11=[R11]\nnumR=[numR]\nresp(0)=[resp[0]]\ncalif=[calif]\nper=[per]' fijo='sí'">
+</ajs>
+
+
+	<!------ INICIA LA INFO SOBRE LAS LICENCIAS Y LOS CRÉDITOS. ---------->
+    <a id="btCopyright" class="standardButton" title="Haz clic aquí para consultar los créditos y las condiciones de uso de este recurso." href="#" onClick="document.getElementById('copyright').className='visible';">©</a>
+    <div id="copyright" class="oculto">
+      
+      <div class='innerCopyright'>
+      
+          <a id="btCloseCopyright" class="standardButton" title="Haz clic aquí para cerrar esta ventana." href="#" onClick="document.getElementById('copyright').className='oculto'">×</a>
+  
+          <!-- Créditos UAM  (siempre deben ir en primer lugar) -->
+			<div class="creditos">
+				<h1>
+					Créditos 
+				</h1>
+
+				<h2>
+					Escena original
+				</h2>				<table class="autores" 	>
+
+					<tr> <td  class="rol"> Diseño del contenido			</td>		<td class="nombre"> Víctor Hugo García Jarillo (Facultad de Ciencias UNAM, LITE)</td></tr>
+					<tr> <td  class="rol"> Diseño funcional				</td>		<td class="nombre"> Víctor Hugo García Jarillo (Facultad de Ciencias UNAM, LITE)</td></tr>
+					<tr> <td  class="rol"> Programación					</td>		<td class="nombre"> Víctor Hugo García Jarillo (Facultad de Ciencias UNAM, LITE)</td></tr>
+					<tr> <td  class="rol"> Diseño gráfico				</td>		<td class="nombre"> Ricardo López Gómez</td></tr>
+					<tr> <td  class="rol" >Coordinación			</td>		<td class="nombre"> Leticia Montserrat Vargas Rocha</td></tr>
+					</table>
+				<h2>
+					Adaptación 
+				</h2>
+				<table class="autores" 	>
+				<tr> <td  class="rol"> Diseño funcional				</td>		<td class="nombre"> Victor Hugo García Jarillo (Facultad de                    Ciencias, UNAM)		</td></tr>
+					<tr> <td  class="rol"> Programación				</td>		<td class="nombre"> Victor Hugo García Jarillo (Facultad de                    Ciencias, UNAM)</td></tr>
+
+					<tr> <td  class="rol"> Diseño gráfico			</td>		<td class="nombre"> Francisco	Varela Fuentes</td></tr>
+					<tr> <td  class="rol" >Coordinación			</td>		<td class="nombre"> Leticia Montserrat Vargas Rocha</td></tr>
+		
+				</table>
+
+ <div class='logos'>
+	            <a href=''>
+	               <img src="../images/info/icns/logoLite.png">
+	            </a>
+	            <a href="http://www.unadmexico.mx/">
+	               <img src="../images/info/icns/logoUNADM.png">
+	            </a>
+	         </div>
+          </div>
+          
+          <!-- Linea separación créditos -->
+          <hr class="linea" />
+     
+          <!-- Aviso licencias -->
+          <div class="licencias">
+          
+				<p class="creativeCommons">Los contenidos de esta unidad didáctica interactiva están bajo una licencia <a href="http://creativecommons.org/licenses/by-nc-sa/2.5/es/" target="_blank">Creative Commons Reconocimiento-NoComercial-CompartirIgual</a>.</p>
+
+				<!--arquimedes (optativo)-->
+				<p>La unidad didáctica fue creada con <a href="http://arquimedes.matem.unam.mx/Descartes5/creditos/conCCL.html" target="_blank">Arquímedes</a>, una herramienta de código abierto.</p>
+
+				<!-- Descartes -->
+				<p>La unidad didáctica contiene escenas elaboradas con Descartes, una herramienta de código abierto.</p>
+
+
+          	<p style='text-align:center'> LITE - UnADM 2014</p>
+          </div>
+      </div>
+    </div> 
+   <!------ TERMINA LA INFO SOBRE LAS LICENCIAS Y LOS CRÉDITOS. ---------->
+  
+  
+  </div>
+  
+  
+</article>
+
+
+</body>
+
+</html>

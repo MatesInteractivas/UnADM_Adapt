@@ -1,0 +1,336 @@
+* {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	font-family: Arial, sans-serif;
+	scroll-behavior: smooth;
+}
+
+/* cuerpo de la pagina html */
+body {
+	color: black;
+	font-family: Arial, sans-serif;
+	padding: 0px 0px;
+	margin: 0px;
+	border: 0px;
+}
+
+/* contenedor del contenido, para estilar mejor como acomodar el contenido */
+.course_content_container {
+	position: relative;
+	background-color: #fff;
+	background-image: 
+		url("../imgs/tpl/fondo_suave.jpg") , 
+		url("../imgs/tpl/fondo_suave_repeat.jpg") ;
+	background-position : 	
+		center top,
+		center 100px;
+	background-repeat: no-repeat, repeat-y;	
+		
+	width: 100%;;
+	min-height: 550px;
+	text-align: center;
+	padding: 10px;
+	margin: 0px auto;
+}
+
+/* el texto del contenido */
+.course_content { 
+	width: 100%;
+	text-align: initial;
+	display: inline-block;
+	margin: 0px;
+	 
+	
+}
+
+/* el texto del �ndice */
+.course_content, .index_content {
+	text-align: initial;
+	display: inline-block;
+}
+
+
+.text_panel{
+	background-color: #fff;
+	border: 1px solid #cacaca;
+	box-shadow: 0 0 8px rgba(0,0,0,.2);
+	border-radius : 5px;
+	padding: 10px;
+	padding-top: 0px;
+}
+
+
+/* t�tulo de la p�gina */
+h1{
+	font-size: 30px;
+	font-family: Arial, sans-serif;
+	font-style: normal;
+	font-weight:normal;
+	text-align: center;
+	margin-bottom: 40px;
+/*	color: #c65302 */;
+}
+
+/* subt�tulos */
+h2{
+	font-size: 17px;
+	font-family: sans-serif;
+	font-style: normal;
+	/* color: #e8931a */;
+	
+}
+
+/* texto */
+p, pre{
+	margin : 0px;
+	margin-top:5px;
+	font-size: 14px;
+	color: #232323;
+	text-align: justify;
+	text-shadow: 0px 0px 2px #FFFFFF;
+}
+
+/* Ordered list */
+ol{
+	padding-left: 60px;
+	padding-right: 60px;
+	text-align: justify;
+}
+
+/* Unordered list */
+ul{
+	padding-right: 60px;
+	text-align: justify;
+}
+
+/* Instrucciones */
+.instrucciones{
+	color: #555;
+	font-style: italic;
+	margin: 20px 10px;
+	
+}
+
+/* f�rmulas matem�ticas */
+.formula{
+  font-family: serif;
+  font-size: 19px;
+  font-style: italic; 
+}
+
+/* contenedor para los elementos externos, como animaciones, interacciones y video */
+div .course_extern_content {
+	text-align: center;
+	padding: 0px;
+	overflow: hidden;
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+
+
+div .course_extern_content .DescartesAppContainer{
+	margin-left: auto;
+	margin-right: auto;
+}
+
+video {
+		background-color: black;	
+}
+.course_extern_content.video-content{
+	margin-top: 35px;
+}
+
+.course_iframe{
+	overflow: hidden;
+}
+
+img {
+	max-width: 100%;
+}
+.standardButton{
+	border-radius: 8px;
+	padding-top: 4px;
+	font-family: sans-serif;
+	font-weight:bold;
+	text-decoration: none;
+	font-size: 20px;
+	line-height: 20px;
+	text-align: center;
+	cursor: pointer;
+	color: #fff;	
+	background: #bdd609;
+}
+
+.standardButton:hover{
+			
+	background: #879906;
+}
+
+.standardButton:active{  
+	background: #bdd609;
+}
+
+/*********************************
+ BOT�N PARA CR�DITOS Y LICENCIAS
+ **********************************/
+#btCopyright,
+#btCloseCopyright{
+	position:absolute;
+	top: 10px;
+	right: 10px;
+	width: 28px;
+	height: 29px;
+	
+	border-radius:4px;
+	font-size: 25px;
+	font-weight:bolder;
+	line-height:1px;
+	padding:0;
+	padding-top: 14px;
+	padding-left: 0px;
+	z-index:100;
+}
+
+#btCloseCopyright{
+	font-size: 30px;
+	position:absolute;
+	top: 10px;
+	right: 10px;
+	width: 28px;
+	height: 29px;
+	padding-top: 13px;
+}
+
+/*********************************
+ DIV CON CR�DITOS Y LICENCIAS
+ **********************************/
+#copyright {
+	position: absolute;
+	left: 0px;
+	top: 0px;
+	width: 100%;
+	height: 100%;
+	background-image: url("../imgs/tpl/backwindow.png");
+	padding: 20px;
+	visibility: none;
+	z-index:100;
+}
+
+.innerCopyright{
+	background-color: white;
+	border: 3px solid #bdd609;
+  	border-radius: 6px;
+	color: #232323;
+	font: Arial, sans-serif;
+	text-align: center;
+	padding: 20px;
+	max-height: 100%;
+	overflow: auto;
+}
+
+.creditos{
+	width: 100%;
+	margin: 0% auto;
+}
+
+.creditos h1 {
+		color: rgb(245,139,0);
+		margin: 5px;
+		font-weight: bolder;
+}
+
+.creditos h2 {
+		color: rgb(245,139,0);
+		margin: 5px;
+		font-weight: bolder;
+		text-align: left;
+}
+
+.creditos > ul{
+		min-height: 60px;
+}
+
+.proyecto{
+	font-family: Arial, sans-serif;
+	font-size: 15px;
+	color: #232323;
+	text-align: justify;
+	font-style: !important;
+}
+
+table.autores{
+	font-family: Arial, sans-serif;
+	font-size: 15px;
+	color: #183152;
+	
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 20px;
+}
+
+
+table.autores td.rol{
+	text-align: right;
+	padding-right: 20px;
+	font-weight: bold;
+	vertical-align:top;
+}
+
+table.autores td.nombre{
+	color: #375D81;
+	text-align: left;
+}
+
+
+.logos{
+}
+
+.logos a {
+	text-decoration: none;
+}
+.linea{
+
+	height: 1px;
+	color: #ee7f30;
+	background-color:#ee7f30;
+}
+
+.licencias > p{
+	font-family: Arial, sans-serif;
+	font-size: 12px;
+	color: black;
+	text-align: justify;
+	margin: 5px;
+}
+
+.creativeCommons{
+	background: url("../images/info/icns/logoCreativeCommons.png") no-repeat;
+	padding-left: 100px;
+	height: 32px;
+}
+
+.oculto{
+	opacity: 0;
+	visibility: hidden;
+}
+
+.visible{
+	transition: -ms-transform, transform, visibility, opacity;
+	-webkit-transition: -webkit-transform, visibility, opacity;
+	transition-duration: 500ms;
+	-webkit-transition-duration: 200ms;
+	transition-timing-function: linear;
+	-webkit-transition-timing-function: linear;
+	transition-delay: 200ms;
+	-webkit-transition-delay: 200ms;
+	/*arregla artefactos con ipad safari*/
+	-webkit-perspective: 1000;
+	-webkit-backface-visibility: hidden;
+	z-index:100;
+}
+.marco {
+	border: 1px solid black;
+	padding: 5px;
+	margin: 10px;
+}

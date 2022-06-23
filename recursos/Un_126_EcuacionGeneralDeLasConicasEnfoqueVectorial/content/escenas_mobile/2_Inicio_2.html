@@ -1,0 +1,244 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+ 	<link href="../css/html5_mobile.css" rel="stylesheet" type="text/css" media="screen" />
+	<link href="../css/DescHTML5.css" rel="stylesheet" type="text/css" media="screen" />	
+	 <script type="text/javascript" src='../javascript/inject_functions_scorms_descartes.js'></script>
+	<script type='text/javascript' src='lib/descartes-min.js'></script>
+</head>
+
+<body>
+ <!-------- MathJax --- para fórmulas matemáticas ------>	
+	<script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script> 
+
+<article class="course_content_container">
+  
+  <div class="course_content">
+    
+    
+    <!------ INICIA EL CONTENIDO DE LA PÁGINA --------->
+    
+    
+    <!--- Título de la página --->
+    <center><h2>Análisis de la ecuación de segundo grado en dos variables. <br>Parte 1: Encontrar el centro</h2></center>
+    
+    
+	<div class='text_panel'>
+		<!--- Subtítulo (no necesario en introducción) --->
+	<h2>¿Cómo se encuentra el centro de la curva definida por la ecuación general de segundo grado?</h2>
+    	  
+    
+		<!--- Párrafo --->
+		<p>
+
+		Una traslación por \((h,k)\) consiste en cambiar las coordenadas  \(x\)  y  \(y\)  por  \(x+h\)  y  \(y+k\) 
+respectivamente. En particular. Tal transformación lleva la ecuación 
+
+\[ax^2+bxy+cy^2+dx+ey+f=0 \tag{1} \]                    
+ a la ecuación
+\[a(x+h)^2+b(x+h)(y+k)+c(y+k)^2+d(x+h)+e(y+k)+f=0 \tag{2} \]  
+
+Reagrupando términos, esto puede escribirse así:
+
+\[ax^2+bxy+cy^2+(2ah+bk+d)x+(bh+2ck+e)y+ah^2+bhk+ck^2+dh+ek+f=0 \tag{3} \]
+
+Por lo tanto, una traslación conserva intacta la parte cuadrática \(ax^2+bxy+cy^2\) y los nuevos
+términos en  \(x\)  y  \(y\)  quedan expresados como como funciones lineales de los originales.
+					
+		</p> 	
+		
+		<p>
+		Concretamente, la ecuación \((3)\) en las coordenadas trasladadas puede escribirse así:
+
+\[ax^2+bxy+cy^2+Dx+Ey+F=0  \tag{4} \]
+ 
+donde \(D=2ah+bk+d\), \(E=bh+2ck+e\)  y  \(F=ah^2+bhk+ck^2+dh+ek+f\). 
+Para encontrar el centro de nuestro lugar geométrico debemos encontrar  \(h\)  y  \(k\)  tales que
+\(D=0\) y \(E=0\) y para ello debemos resolver, para  \(h\)  y  \(k\),  el sistema de ecuaciones:
+
+             \[2ah+bk+d=0\]
+
+             \[bh+2ck+e=0 \tag{5} \]	
+		</p>
+	
+		<p>
+Podemos resolver este sistema siempre que \(\Delta =4ac−b^2\) sea distinto de cero. Como veremos más 
+adelante, cuando \(\Delta =0\), la ecuación es de tipo parabólico y requiere un tratamiento especial que,
+de hecho, es más sencillo. A lo largo de ésta escena y las siguientes, supondremos que
+
+\[\Delta =4ac−b^2 \tag{6} \] 
+es diferente de cero.
+
+<br><br>Entonces la solución al sistema de ecuaciones \((5)\) es 
+
+              \[h=\frac{−2cd+be}{\Delta}\]  y  \[k=\frac{bd−2ae}{\Delta}\]
+
+Es con estas expresiones que se han calculado las coordenadas  \(h\)  y  \(k\)  del centro de nuestro
+lugar geométrico en la escena interactiva y, como puede comprobarse visualmente, efectivamente
+marcan el centro de la curva.
+
+</p>
+
+<p>
+<br>Se sugiere al lector modificar los parámetros  \(a\), \(b\), \(c\), \(d\), \(e\)  y  \(f\)  usando los pulsadores y observar
+que estas fórmulas dan siempre el centro del lugar geométrico (excepto cuando \(\Delta =0\)).También
+se sugiere buscar valores \(d\)</p>
+
+<p>
+El procedimiento usado para encontrar el centro del lugar geométrico definido por la ecuación
+
+	\[ax^2+bxy+cy^2+dx+ey+f=0 \tag{1} \]
+
+puede verse en términos matriciales. Las ecuaciones \((5)\) que son las condiciones que debe cumplir 
+la traslación por \((h,k)\) para que los coeficientes en \(x\) y \(y\) se anulen, pueden verse como una ecuación 
+matricial:
+\[ \begin{bmatrix}
+    a       		& \frac{b}{2}   \\
+    \frac{b}{2}      	& c 		\\
+    
+    
+ \end{bmatrix}  \begin{bmatrix}
+    h   \\
+    k	\\
+    
+    
+ \end{bmatrix} + \begin{bmatrix}
+    d  \\
+    e  \\
+    
+    
+ \end{bmatrix} =0 \]
+ 
+	
+O bien 
+
+\[M \begin{bmatrix}
+    h   \\
+    k	\\
+    
+    
+ \end{bmatrix} = \begin{bmatrix}
+    -d  \\
+    -e  \\
+    
+    
+ \end{bmatrix} =0 \]
+
+	
+Donde 
+	\[ M=  \begin{bmatrix}
+    a       		& \frac{b}{2}   \\
+    \frac{b}{2}      	& a 		\\
+    
+    
+ \end{bmatrix} \]
+</p>  
+
+<br><p>
+Por tanto la solución se obtiene aplicando la matriz inversa \(M^{-1}\) al vector \(\begin{bmatrix}     -d  \\
+    -e  \\ \end{bmatrix}\)
+
+Es decir:   
+
+	\[\begin{bmatrix}
+    h   \\
+    k	\\
+    
+    
+ \end{bmatrix} = M^{-1} \begin{bmatrix}
+    -d  \\
+    -e  \\
+    
+    
+ \end{bmatrix} \]
+
+Es fácil ver que la matriz inversa es:  
+
+\[M^{-1}= \frac{1}{ \Delta ^2} \begin{bmatrix}
+    4c       	& -2b \\
+    -2b     	& 4a  \\
+    
+    
+ \end{bmatrix} \]
+
+
+donde \(\Delta=4ac-b^2\). Conviene notar que la matriz  \(M\)  y su inversa solamente dependen de los coeficientes de segundo 
+grado  \(a\), \(b\), \(c\). También conviene tomar nota del llamado discriminante \(\Delta=4ac-b^2\) que es, 
+esencialmente el determinante de la matriz  \(M\), salvo por un factor de \(4\). En las siguientes escenas
+demostraremos que el signo del discriminante determina si la ecuación es elíptica o hiperbólica.
+
+</p>
+  
+    
+    
+   
+    
+   <!------ INICIA LA INFO SOBRE LAS LICENCIAS Y LOS CRÉDITOS. ---------->
+    <a id="btCopyright" class="standardButton" title="Haz clic aquí para consultar los créditos y las condiciones de uso de este recurso." href="#" onclick="document.getElementById('copyright').className='visible';">&#169;</a>
+    <div id="copyright" class="oculto">
+      
+      <div class='innerCopyright'>
+      
+          <a id="btCloseCopyright" class="standardButton" title="Haz clic aquí para cerrar esta ventana." href="#" onclick="document.getElementById('copyright').className='oculto'">×</a>
+  
+          <!-- Créditos UAM  (siempre deben ir en primer lugar) -->
+			<div class="creditos">
+				<h1>
+					Créditos 
+				</h1>
+				<h2>
+					Escena original
+				</h2>				
+				<table class="autores" 	>
+					<tr> <td  class="rol"> Diseño del contenido		</td>		<td class="nombre">José Luis Abreu León</td></tr>
+					<tr> <td  class="rol"> Diseño funcional			</td>		<td class="nombre">José Luis Abreu León</td></tr>
+					<tr> <td  class="rol"> Programación			</td>		<td class="nombre">José Luis Abreu León<br>Leticia Montserrat Vargas Rocha</td></tr>
+					<tr> <td  class="rol"> Diseño gráfico			</td>		<td class="nombre">Ricardo López Gómez</td></tr>
+					<tr> <td  class="rol"> Coordinación			</td>		<td class="nombre">Leticia Montserrat Vargas Rocha</td></tr>
+				</table>
+				<h2>
+					Adaptación 
+				</h2>
+				<table class="autores" 	>
+					<tr> <td  class="rol"> Diseño funcional			</td>		<td class="nombre">Elsa Sirenia Vega Camacho</td></tr>
+					<tr> <td  class="rol"> Programación			</td>		<td class="nombre">Elsa Sirenia Vega Camacho</td></tr>
+					<tr> <td  class="rol"> Asesoría de programación		</td>		<td class="nombre">Leticia Montserrat Vargas Rocha</td></tr>		
+					<tr> <td  class="rol"> Diseño gráfico			</td>		<td class="nombre">Francisco Varela Fuentes</td></tr>
+					<tr> <td  class="rol" >Coordinación			</td>		<td class="nombre">Leticia Montserrat Vargas Rocha</td></tr>
+				</table>
+	         
+	         <div class='logos'>
+	            <a href=''>
+	               <img src="../images/info/icns/logoLite.png">
+	            </a>
+	            <a href="http://www.unadmexico.mx/">
+	               <img src="../images/info/icns/logoUNADM.png">
+	            </a>
+	         </div>
+          </div>
+          
+          <!-- Linea separación créditos -->
+          <hr class="linea" />
+     
+          <!-- Aviso licencias -->
+          <div class="licencias">
+          
+				<p class="creativeCommons">Los contenidos de esta unidad didáctica interactiva están bajo una licencia <a href="http://creativecommons.org/licenses/by-nc-sa/2.5/es/" target="_blank">Creative Commons Reconocimiento-NoComercial-CompartirIgual</a>.</p>
+
+				<!--arquimedes (optativo)-->
+				<p>La unidad didáctica fue creada con <a href="http://arquimedes.matem.unam.mx/Descartes5/creditos/conCCL.html" target="_blank">Arquímedes</a>, una herramienta de código abierto.</p>
+
+				<!-- Descartes -->
+				<p>La unidad didáctica contiene escenas elaboradas con Descartes, una herramienta de código abierto.</p>
+
+
+          	<p style='text-align:center'> LITE - UnADM 2014</p>
+          </div>
+      </div>
+    </div> 
+   <!------ TERMINA LA INFO SOBRE LAS LICENCIAS Y LOS CRÉDITOS. ---------->
+
+</body>
+</html>

@@ -1,0 +1,287 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+ 	<link href="../css/html5_mobile.css" rel="stylesheet" type="text/css" media="screen" />
+	<link href="../css/DescHTML5.css" rel="stylesheet" type="text/css" media="screen" />	
+	 <script type="text/javascript" src='../javascript/inject_functions_scorms_descartes.js'></script>
+
+	<script type='text/javascript' src='lib/descartes-min.js'></script>
+</head>
+
+<body>
+ <!-------- MathJax --- para fórmulas matemáticas ------>	
+	<script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script> 
+
+<article class="course_content_container">
+  
+  <div class="course_content">
+    
+    
+    <!------ INICIA EL CONTENIDO DE LA PÁGINA --------->
+    
+	<div class='text_panel'>
+    
+    
+		<!--- Párrafo --->
+<p>
+Si consideramos un conjunto de tareas que deben ser realizadas para llevar a cabo un
+proyecto, nos podemos preguntar si, dadas dos tareas \(S\) y \(T\),
+una debe llevarse a cabo antes de empezar con la otra. También podemos preguntar cómo asignarle personas de un
+equipo a las tareas. La afirmación "\(S\) debe realizarse antes de tarea \(T\)" puede ser cierta o falsa,
+así como la afirmación "persona \(P\) está asignada a realizar la tarea \(T\)".</p>
+ 
+<p>Como se mencionó en la escena de Motivación, el concepto de relación es ubicuo en todos los aspectos del mundo. El lenguaje de relaciones nos permite no solo estudiar situaciones como la del ejemplo anterior, sino cualquier
+situación donde existe alguna o múltiples relaciones entre los elementos de varios conjuntos.  Vamos a ilustrarlo viendo con cierto detalle el ejemplo considerado.</p>
+
+<p>Supongamos que un proyecto consiste de 5 tareas \(T_i\) (\(i=1,…,5\)), y cuatro personas \(P_j\) (\(j=1,…,4\)), que deben ser asignadas a varias tareas para llevar a cabo el proyecto. Supongamos que las tareas están representadas por segmentos cuya longitud representa el número de unidades de tiempo para completar las tareas.  Además, los segmentos se dibujan con relación a una línea de tiempo, como lo ilustra el diagrama.  Junto a cada segmento aparece el nombre de la tarea y la persona o personas asignadas a ella.</p>
+
+<div style="text-align: center;">
+<img title="Precedencia de Tareas" alt="" src="imgs/TaskChart.png">
+</div>
+
+<p>Usando el diagrama podemos ver las asignaciones de las diversas tareas, por ejemplo, la tarea \(T_1\) está asignada a la persona \(P_1\) y la tarea \(T_5\) está asignada a las personas \(P_3\) y \(P_4\).  También podemos decir que la persona \(P_1\) tiene asignadas las tareas \(T_1\) y \(T_2\) y que la persona \(P_3\) tiene asignadas las tareas \(T_4\) y \(T_5\).</p>
+          
+<p>Podemos describir estas relaciones por medio parejas como esta: \((Tarea, Persona)\), o con parejas como esta: \((Persona, Tarea)\). Consideremos los conjuntos \(T = \lbrace T_1, T_2, T_3, T_4, T_5\rbrace\) y \(P = \lbrace P_1, P_2, P_3, P_4\rbrace\) respectivamante. Los
+conjuntos que resultan de todas las asociaciones \((Tarea,Persona)\) o \((Persona, Tarea) \) definidas por el diagrama son: </p>
+
+<p>$$ \begin{align*}
+		R = \{ &(T_1, P_1), (T_2, P_1), (T_3, P_2), (T_3, P_4), (T_4, P_2), (T_4, P_3),	\\[-1px]
+			 &(T_5, P_3), (T_5, P_4) \}									\\[10px]
+
+		S = \{ &(P_1, T_1), (P_1, T_2), (P_2, T_3), (P_2, T_4), (P_3, T_4), (P_3, T_5),	\\[-1px]
+			&(P_4, T_3), (P_4, T_5) \}
+	\end{align*} $$
+<p>
+<p>Podemos también inferir del diagrama algunas de las <i>relaciones de precedencia</i>, por ejemplo, las tareas \(T_2\) y \(T_3\) deben ocurrir después de la tarea \(T_1\) y \(T_5\) debe ocurrir después de la tarea \(T_3\), pero \(T_1\) y \(T_4\) son independientes y pueden ocurrir simultáneamente. Sin embargo, no podemos decir si la tarea \(T_2\) debe ocurrir antes de la tarea \(T_5\). La relación de precedencia se puede representar completamente con el siguiente diagrama: </p>
+          
+<div style="text-align: center;">
+<img title="Task Presedence" alt="" src="imgs/TaskPrecedence.png">
+</div>
+
+<p>De ste diagrama podemos construir el siguiente conjunto de relación de precedencia</span> de tareas:</p>
+
+<p>\(U = \lbrace(T_1, T_2), (T_1, T_3), (T_1, T_5), (T_2, T_5), (T_3, T_5), (T_4, T_5) \rbrace\)</p>
+          
+<p>La relación de precedencia \((T_1, T_5)\) está implicada implícitamente porque si \(T_5\) no puede ocurrir antes de \(T_2\) o de \(T_3\), y \(T_2\) o \(T_3\) no pueden ocurrir antes de \(T_1\), entonces
+              \(T_5\) no puede ocurrir antes de \(T_1\).</p>
+              
+<p><br>Como se puede observar, \(R\) es un subconjunto del producto cartesiano
+                \(T \times P\), \(S\) es un subconjunto del producto
+              cartesiano \(P \times T\) y \(U\) es un subconjunto de \(T \times
+              T\).
+              También se puede
+              observar que \(S\) puede obtenerse directamente de \(R\)
+              simplemente cambiando el orden de los elementos de cada par ordenado en \(R\). En este caso decimos que \(S\) es la <i>relación inversa</i>
+              de \(R\) y escribimos \(S = R^{-1}.\)
+              </p>
+
+          <br><h2>Definición y algunas propiedades de relación</h2>
+
+          <p> Este ejemplo
+              nos permite visualizar la definición de <i>relación</i> entre los elementos de
+              dos conjuntos dados, digamos \(A\) y \(B\). Una <b>relación</b> \(R\) es  simplemente un <b>subconjunto del producto cartesiano</b> \(A  \times B\). Es posible que los dos conjuntos coincidan, como en el
+              caso del conjunto \(U\) del ejemplo anterior, sin embargo los
+              conjuntos \(A\) y \(B\) son dos conjuntos arbitrarios.
+              </p>
+          <p><br>En
+              el caso de que los conjuntos \(A\) y \(B\) coincidan, podemos
+              definir ciertas propiedades de las relaciones en el conjunto
+              \(A\). Para
+              ilustrarlo, consideremos el conjunto de todas las líneas del
+              plano. Una relación
+              básica entre ellas resulta de los axiomas de la geometría
+              euclidiana:
+              la relación de paralelismo entre líneas. Decimos que dos líneas \(L_1\) y \(L_2\) son paralelas si
+              su intersección, como subconjuntos del plano, es vacía o si las
+              líneas coinciden en todos sus puntos.</p>
+
+          <p><br>Si
+              \(\Lambda\) denota al conjunto de todas las líneas del
+              plano, podemos definir la relación de paralelismo como el
+              subconjunto de \(\Lambda \times \Lambda\) que consiste de todas las parejas \((L_1,L_2)\)
+              tales que \(L_1\) y \(l_2\) son paralelas.
+
+Para simplificar la notación escribimos \(L_1 \parallel
+              L_2\) para decir que las líneas son paralelas.
+          Por
+              definición de paralelismo, claramente tenemos que</p>
+
+          <p class="MsoListParagraphCxSpFirst" style="margin-left:38.5pt;mso-add-space:
+auto;text-indent:-.25in;mso-list:l1 level1 lfo1"><span style="mso-fareast-font-family:Calibri;mso-fareast-theme-font:minor-latin;
+mso-bidi-font-family:Calibri;mso-bidi-theme-font:minor-latin;mso-ansi-language:ES-MX"
+
+              lang="ES-MX"><span style="mso-list:Ignore">1.<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                  </span></span></span><span style="mso-ansi-language:ES-MX" lang="ES-MX">\(L_1
+\parallel
+              L_1\) </span></p>
+          <p class="MsoListParagraphCxSpMiddle" style="margin-left:38.5pt;mso-add-space:
+auto;text-indent:-.25in;mso-list:l1 level1 lfo1"><span style="mso-fareast-font-family:Calibri;mso-fareast-theme-font:minor-latin;
+mso-bidi-font-family:Calibri;mso-bidi-theme-font:minor-latin;mso-ansi-language:ES-MX"
+
+              lang="ES-MX"><span style="mso-list:Ignore">2.<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                  </span></span></span><span style="mso-ansi-language:ES-MX" lang="ES-MX">Si
+\(L_1
+              \parallel L_2\), entonces \(L_2 \parallel L_1\)</span></p>
+          <p class="MsoListParagraphCxSpLast" style="margin-left:38.5pt;mso-add-space:auto;
+text-indent:-.25in;mso-list:l1 level1 lfo1"><span style="mso-fareast-font-family:Calibri;mso-fareast-theme-font:minor-latin;
+mso-bidi-font-family:Calibri;mso-bidi-theme-font:minor-latin;mso-ansi-language:ES-MX"
+
+              lang="ES-MX"><span style="mso-list:Ignore">3.<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                  </span></span></span><span style="mso-ansi-language:ES-MX" lang="ES-MX">Si
+\(L_1
+              \parallel L_2\) y \(L_2 \parallel L_3\) entonces \(L_1 \parallel
+              L_3\)</span></p>
+          
+<p><br>A
+              la propiedad 1 se le llama <strong>reflexividad</strong>, a la 2
+              se le llama
+              <strong> simetría </strong>y a la 3 se le llama <strong>transitividad</strong>.
+
+            </p>
+          <p class="MsoNormal"><span style="mso-ansi-language:ES-MX" lang="ES-MX">En
+              general, una relación arbitraria en \(A\), i.e. la relación es un
+              subconjunto de \(A \times A\), no tiene ninguna de estas
+              propiedades.<span style="mso-spacerun:yes">&nbsp; </span>Vamos a
+              decir que la relación es reflexiva, simétrica o transitiva si
+              la relación tiene la propiedad 1, 2 o 3 respectivamente. Cuando
+              una relación tiene estas 3 propiedades, decimos que tenemos una <span
+
+                style="font-weight: bold;"> relación de equivalencia</span>.<span
+
+                style="mso-spacerun:yes">&nbsp; </span></span></p>
+          <p><br>Una
+relación
+              muy simple pero importante es la relación
+                de identidad \( \Delta_A\) que consiste de la <i>diagonal</i> de
+             \(A \times
+              A\), es decir todas las parejas \( (a, a)\), con \(a\) un elemento de
+              \(A\). </p>
+
+          <h2><br>Composición
+            de relaciones </h2>
+
+          <p>Una
+operación
+              importante entre relaciones es la <b>composición</b>. Consideremos una
+              relación \(R\) tal que \(R \subseteq A \times B\) y una relación \(S\) tal que \(S \subseteq B
+              \times C\). Podemos
+              formar una nueva relación, denotada por \(S \circ R\), subconjunto de \(A \times
+              C\) de la siguiente manera: Los elementos de \(S \circ R\) son
+              todas las parejas \((a, c)\) para las cuales existe un elemento
+              \(b\) en \(B\) tal que \((a, b)\) está en \(R\) y \((b, c)\) está
+              en \(S\). A la
+              relación \(S \circ R\) es la <b>composición</b> de \(R\) y
+              \(S\).</p>
+          <p><br>Es
+              fácil de ver que si componemos \( \Delta_A\) con
+              \(R\), obtenemos que \(R \circ \Delta_A = R\) y
+              \( \Delta_A \circ Q = Q\), donde \(Q\) es una relación en \(B
+              \times A\). Tampoco
+              es difícil verificar que la composición es <strong>asociativa</strong>,
+              es decir que si \(T\) es una relación contenida en \(C \times D\), entonces \((T
+              \circ S) \circ R = T \circ (S \circ R)\). Podemos expresar las
+              propiedades de <i>reflexividad</i>, <i>simetría</i> y <i>transitividad</i> en términos de la composición como sigue:</p>
+
+          
+            <p>
+
+<ol>
+<li>Una relación
+                \(R\) en \(A \times A\) es reflexiva, si y solo si \(\Delta_A
+                \subseteq R\) </li>
+            <li>Una relación
+                \(R\) en \(A \times A\) es simétrica, si y solo si \(R^{-1} =
+                R\)</li>
+            <li>Una relación
+                \(R\) en \(A \times A\) es transitiva, si y solo si \(R \circ R
+                \subseteq R\) </li></ol>
+</p>
+        
+    <!------ TERMINA EL CONTENIDO DE LA PÁGINA --------->
+</div>
+
+
+
+<!------ INICIA LA INFO SOBRE LAS LICENCIAS Y LOS CRÉDITOS. ---------->
+    <a id="btCopyright" class="standardButton" title="Haz clic aquí para consultar los créditos y las condiciones de uso de este recurso." href="#" onclick="document.getElementById('copyright').className='visible';">©</a>
+    <div id="copyright" class="oculto">
+      
+      <div class='innerCopyright'>
+      
+          <a id="btCloseCopyright" class="standardButton" title="Haz clic aquí para cerrar esta ventana." href="#" onclick="document.getElementById('copyright').className='oculto'">×</a>
+  
+          <!-- Créditos UAM  (siempre deben ir en primer lugar) -->
+			<div class="creditos">
+				<h1>
+					Créditos 
+				</h1>
+				<h2>
+					Escena original
+				</h2>				
+                <table class="autores" 	>
+					<tr> <td  class="rol"> Diseño del contenido			</td>		<td class="nombre"> Julio Arnoldo Prado Saavedra<br>Víctor Manuel Amezcua Y Raz</td></tr>
+					<tr> <td  class="rol"> Diseño funcional				</td>		<td class="nombre">Julio Arnoldo Prado Saavedra<br>Víctor Manuel Amezcua Y Raz</td></tr>
+					<tr> <td  class="rol"> Programación						</td>		<td class="nombre"> Julio Arnoldo Prado Saavedra</td></tr>
+<tr> <td class="rol"> Asesoría de programación		</td>		<td class="nombre"> 
+																								Víctor Manuel Amezcua Y Raz
+					<!-- Varias personas en el mismo rubro, separar por <br> -->
+					
+					<tr> <td  class="rol"> Diseño gráfico					</td>		<td class="nombre"> Ricardo López Gómez										</td></tr>
+					<tr> <td  class="rol" >Coordinación		</td>		<td class="nombre"> Leticia Montserrat Vargas Rocha						</td></tr>
+				</table>
+				<h2>
+					Adaptación 
+				</h2>
+				<table class='autores	'>
+		<tr> <td class="rol"> Diseño funcional					</td>		<td class="nombre">Julio Arnoldo Prado Saavedra	<br>Oscar Escamilla González		</td></tr>
+		<tr> <td class="rol"> Programación						</td>		<td class="nombre">Julio Arnoldo Prado Saavedra</td></tr>
+		<!-- Varias personas en el mismo rubro, separar por <br> -->
+		<tr> <td class="rol"> Asesoría de programación		</td>		<td class="nombre">Oscar Escamilla González <br>
+																								Leticia Montserrat Vargas Rocha
+		<tr> <td class="rol"> Diseño gráfico					</td>		<td class="nombre"> Francisco Varela Fuentes										</td></tr>
+		<tr> <td  class="rol" >Coordinación			</td>		<td class="nombre"> Leticia Montserrat Vargas Rocha						</td></tr>
+	</table>
+	         
+	         <div class='logos'>
+	            <a href=''>
+	               <img src="../images/info/icns/logoLite.png">
+	            </a>
+	            <a href="http://www.unadmexico.mx/">
+	               <img src="../images/info/icns/logoUNADM.png">
+	            </a>
+	         </div>
+          </div>
+          
+          <!-- Linea separación créditos -->
+          <hr class="linea" />
+     
+          <!-- Aviso licencias -->
+          <div class="licencias">
+          
+				<p class="creativeCommons">Los contenidos de esta unidad didáctica interactiva están bajo una licencia <a href="http://creativecommons.org/licenses/by-nc-sa/2.5/es/" target="_blank">Creative Commons Reconocimiento-NoComercial-CompartirIgual</a>.</p>
+
+				<!--arquimedes (optativo)-->
+				<p>La unidad didáctica fue creada con <a href="http://arquimedes.matem.unam.mx/Descartes5/creditos/conCCL.html" target="_blank">Arquímedes</a>, una herramienta de código abierto.</p>
+
+				<!-- Descartes -->
+				<p>La unidad didáctica contiene escenas elaboradas con Descartes, una herramienta de código abierto.</p>
+
+
+          	<p style='text-align:center'> LITE - UnADM 2014</p>
+          </div>
+      </div>
+    </div> 
+   <!------ TERMINA LA INFO SOBRE LAS LICENCIAS Y LOS CRÉDITOS. ---------->
+  
+  
+  </div>
+  
+  
+</article>
+
+
+</body>
+
+</html>

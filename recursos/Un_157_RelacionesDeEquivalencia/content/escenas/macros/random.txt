@@ -1,0 +1,10 @@
+tipo_de_macro=R2
+Idioma=español
+id='nums' vector='sí' evaluar='una-sola-vez' tamaño='50' 
+id='initNums(nP)' algoritmo='sí' expresión='0' local='i' inicio='i=0' hacer='nums[i]=i;i=i+1' mientras='i<nP' 
+id='creaAleatorios(nP)' algoritmo='sí' expresión='0' local='i,idx1,idx2,tmpN1,tmpN2' inicio='n=nP;initNums(n);i=0;' hacer='idx1=ent(rnd*n);idx2=ent(rnd*n);;tmpN1=nums[idx1];tmpN2=nums[idx2];;nums[idx1]=tmpN2;nums[idx2]=tmpN1;i=i+1' mientras='i<n*2' 
+id='INICIO' algoritmo='sí' evaluar='una-sola-vez' hacer='debug=1;n=10;creaAleatorios(n)' 
+id='CALCULOS' algoritmo='sí' evaluar='siempre' 
+espacio='E1' tipo='texto' fondo='no' color='20303a' expresión='[20,20]' texto='n = [n]' decimales='2' fijo='no' ancho='1' fuente='SansSerif,PLAIN,18' 
+espacio='E1' tipo='texto' fondo='no' color='20303a' expresión='[20,40+s*16]' familia='s' s.intervalo='[0,n-1]' s.pasos='n-1' texto='[s] : [nums[s]]' decimales='2' fijo='no' ancho='1' fuente='SansSerif,PLAIN,18' 
+

@@ -1,0 +1,196 @@
+.DescartesAppContainer .DescartesSpace2DContainer .DescartesTextFieldContainer,
+.DescartesAppContainer .DescartesSpace2DContainer .DescartesMenuContainer,
+.DescartesAppContainer .DescartesSpace2DContainer .DescartesSpinnerContainer{
+	background:none;
+}
+
+.DescartesAppContainer .DescartesSpace2DContainer .DescartesMenuContainer		.DescartesMenuLabel,
+.DescartesAppContainer .DescartesSpace2DContainer .DescartesTextFieldContainer	.DescartesTextFieldLabel,
+.DescartesAppContainer .DescartesSpace2DContainer .DescartesSpinnerContainer	.DescartesSpinnerLabel {
+	color: #fff;
+	font-weight:bold;
+	border-radius:5px 0px 0px 5px;
+	background: #9aae07; /* Old browsers */
+
+}
+
+.DescartesAppContainer .DescartesSpace2DContainer .DescartesSpinnerContainer .DescartesSpinnerField{
+	border-radius:0px 5px 5px 0px;
+}
+
+.DescartesAppContainer .DescartesSpace2DContainer .DescartesTextFieldContainer .DescartesTextFieldField{
+	border-radius: 2px;
+	padding-left: 5px;
+}
+
+.DescartesSpinnerContainer {
+}
+
+.DescartesSpinnerContainer  canvas {
+    display:none;
+}
+
+.DescartesSpinnerContainer input.DescartesSpinnerField {
+    text-align: center;
+    padding-right: 5px !important; 
+    font-weight: bold;
+    border-radius: 0px 2px 2px 0px !important;
+}
+
+.DescartesSpinnerContainer  div.up,
+.DescartesSpinnerContainer  div.down {
+    background-color: #bdd609 !important;
+    border: 1px solid #879906;
+    background-size: contain;
+    opacity: 1 !important;
+}
+
+
+.DescartesSpinnerContainer  div.up{
+    border-top-left-radius : 0px;
+    background-image: url('images/descartes/arriba.png') ;   
+}
+
+.DescartesSpinnerContainer  div.down {
+    background-image: url('images/descartes/abajo.png') ;
+    border-bottom-left-radius : 0px;
+}
+
+
+
+.DescartesAppContainer{
+	/* border: 1px solid #5566aa !important;*/ 
+	box-sizing:border-box;
+}
+
+
+
+.DescartesSpace2DContainer{
+	box-sizing: border-box;
+}
+.DescartesSpace2DContainer[id$='Graf'] > canvas, 
+.DescartesSpace2DContainer[id*='Graf'] > canvas{
+	/* border: 2px solid #5566aa;*/
+	box-sizing:border-box;
+}
+
+.DescartesButtonContainer:hover {
+	background-color:#bdd609 !important;
+}
+
+.DescartesButtonContainer {
+	background-color:#9aae07 !important;
+	border-radius : 5px;
+}
+
+
+
+
+.DescartesButtonContainer.close.north,
+.DescartesButtonContainer.open.north{
+	text-align: center;
+	border-radius: 2px;
+	border-top-left-radius: 0px;
+	border-top-right-radius: 0px;
+}
+
+
+.DescartesButtonContainer.close,
+.DescartesButtonContainer.open{
+	text-align: center;
+	border-bottom-left-radius: 0px;
+	border-bottom-right-radius: 0px;
+}
+
+.DescartesButtonContainer.close:before,
+.DescartesButtonContainer.open:before{
+	content: '\25BE';
+	color: white;
+	display: inline-block;
+	vertical-align: middle;
+	margin-top: 12px;
+	font-size: 30px;
+}
+
+
+
+.DescartesButtonContainer.close:before{
+	content: '\25BE';
+	
+}
+.DescartesButtonContainer.close.north:before{
+	content: '\25B4';	
+}
+
+
+.DescartesButtonContainer.open:before{
+	content: '\25B4';
+}
+.DescartesButtonContainer.open.north:before{
+	content: '\25BE';
+}
+
+
+
+#btnOpenClose.DescartesSpace2DContainer,
+#btnOpenCloseN.DescartesSpace2DContainer,
+#CTRS.DescartesSpace2DContainer,
+#CTRS_north.DescartesSpace2DContainer{
+	-webkit-transition: all 0.5s; /* Safari */
+            transition: all 0.5s;
+}
+
+#CTRS.DescartesSpace2DContainer{
+	border-top: 4px solid #9aae07;
+
+}
+
+#CTRS_north.DescartesSpace2DContainer{
+	border-bottom: 4px solid #9aae07;
+}
+
+
+
+/**
+************************************************************
+********    ICONOS PARA LOS BOTONES  ****************
+************************************************************
+*/
+
+.DescartesButtonContainer.icon:before{
+	display: block;
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	bottom: 0px;
+	right: 0px;
+	background: url("images/descartes/tpl/cerrar.png") center center no-repeat;
+	content: "";
+}
+
+.DescartesButtonContainer.icon.toRight:before{
+	left: auto;
+	min-width: 30px;	
+}
+
+.DescartesButtonContainer.icon.toLeft:before{
+	right: auto;
+	min-width: 30px;	
+}
+
+.DescartesButtonContainer.icon.anterior:before		{background-image: url("images/descartes/tpl/anterior.png");}
+.DescartesButtonContainer.icon.avanzar:before		{background-image: url("images/descartes/tpl/avanzar.png");}
+.DescartesButtonContainer.icon.ayuda:before			{background-image: url("images/descartes/tpl/ayuda.png");}
+.DescartesButtonContainer.icon.barras:before		{background-image: url("images/descartes/tpl/barras.png");}
+.DescartesButtonContainer.icon.cerrar:before		{background-image: url("images/descartes/tpl/cerrar.png");}
+.DescartesButtonContainer.icon.expandir:before		{background-image: url("images/descartes/tpl/expandir.png");}
+.DescartesButtonContainer.icon.graficas:before		{background-image: url("images/descartes/tpl/graficas.png");}
+.DescartesButtonContainer.icon.info:before			{background-image: url("images/descartes/tpl/info.png");}
+.DescartesButtonContainer.icon.play:before			{background-image: url("images/descartes/tpl/play.png");}
+.DescartesButtonContainer.icon.play_to:before		{background-image: url("images/descartes/tpl/play_to.png");}
+.DescartesButtonContainer.icon.reducir:before		{background-image: url("images/descartes/tpl/reducir.png");}
+.DescartesButtonContainer.icon.retroceder:before	{background-image: url("images/descartes/tpl/retroceder.png");}
+.DescartesButtonContainer.icon.siguiente:before		{background-image: url("images/descartes/tpl/siguiente.png");}
+.DescartesButtonContainer.icon.stop:before			{background-image: url("images/descartes/tpl/stop.png");}
+.DescartesButtonContainer.icon.mas:before			{background-image: url("images/descartes/tpl/mas.png");}
+.DescartesButtonContainer.icon.menos:before			{background-image: url("images/descartes/tpl/menos.png");}

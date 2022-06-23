@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+ 	<link href="../css/html5_mobile.css" rel="stylesheet" type="text/css" media="screen" />
+	<link href="../css/DescHTML5.css" rel="stylesheet" type="text/css" media="screen" />
+	<script type="text/javascript" src='../javascript/inject_functions_scorms_descartes.js'></script>
+	<script type='text/javascript' src='../lib/descartes-min.js'></script>
+</head>
+
+<body>
+ <!-------- MathJax --- para fórmulas matemáticas ------>	
+	<script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script> 
+
+<article class="course_content_container">
+  
+  <div class="course_content">
+  
+  
+    <!------ INICIA EL CONTENIDO DE LA PÁGINA ------- -->
+<div align="center">  <h2>Ejemplos de campos vectoriales</h2> </div>
+	<p>
+			A continuación se muestra 2 ejemplos de campos vectoriales:<br /><br />
+
+En el primero se muestra un tubo por donde circula un fluido. El diámetro del tubo disminuye gradualmente. Los vectores representan la
+velocidad \( v \) de las partículas en el fuido, el tamaño del vector representa su rapidez.<br /><br />
+
+La magnitud de los vectores aumenta debido a que las cavidades del tubo disminuyen y por lo tanto hay más presión.<br /><br />
+
+El segundo ejemplo muestra el campo vectorial <strong> \( F \) </strong>, dado por la ley de gravitación de Newton en un
+planeta de masa \( M \). Cuánto más cerca se está del planeta, la fuerza de atracción es mayor y también aumenta si la masa del
+planeta aumenta.
+		</p>
+		
+<p><span class="instrucciones">En los ejemplos que se muestran a continuación se puede observar como cambian los tamaños de los vectores, los cuales representan diferentes propiedades de campos vectoriales.</span></p>
+	
+<div class="Descartes_extern_content">
+  <ajs name="Descartes" width=495 height=320 code="Descartes">
+   <param name="tamaño" value="495x320">
+   <param name="image_loader" value="">
+   <param name="expand" value="">
+   <param name="decimal_symbol" value=".">
+   <param name="antialias" value="sí">
+   <param name="deshacer" value="no">
+   <param name="nombre" value="Descartes">
+   <param name="Versión" value="5.336, 2015-02-13">
+   <param name="Idioma" value="español">
+   <param name="Botones" value="créditos=no config=no inicio=no limpiar=no">
+   <param name="E_01" value="tipo='R2' id='E1' fijo='sí' escala='20' O.y='50' imagen='imgs/tpl/fondo_suave.jpg' despl_imagen='arr-izq' fondo='c0d0d8' red='no' red10='no' ejes='no' texto='no'">
+   <param name="E_02" value="tipo='R2' id='E2_Graf' x='0' y='222' ancho='485' alto='60' dibujar-si='0' despl_imagen='arr-izq' fondo='30f0f8fa' red='b8c4c8' red10='889498' ejes='405860' texto='no'">
+   <param name="E_03" value="tipo='R2' id='CTRS_north' x='CTRS.x' y='CTRS.y' ancho='485' alto='150' dibujar-si='1|CTRS.visible' fijo='sí' escala='-1' O.x='-50%' O.y='-50%' despl_imagen='arr-izq' fondo='88000000' red='no' red10='no' ejes='no' texto='no'">
+   <param name="E_04" value="tipo='R2' id='btnOpenClose' x='btnOpenClose.x' y='btnOpenClose.y' ancho='35' alto='30' fijo='sí' escala='1' O.x='-50%' O.y='-50%' despl_imagen='arr-izq' fondo='ff000000' red='no' red10='no' ejes='no' texto='no'">
+   <param name="E_05" value="tipo='R2' id='MASK' dibujar-si='INFO.visible' fijo='sí' imagen='imgs/tpl/backwindow.png' despl_imagen='mosaico' fondo='95000000' red='no' red10='no' ejes='no' texto='no'">
+   <param name="E_06" value="tipo='R2' id='INFO' x='INFO.x' y='INFO.y' ancho='485' alto='310' dibujar-si='INFO.visible' fijo='sí' imagen='imgs/tpl/retro_790x470.png' despl_imagen='mosaico' red='no' red10='no' ejes='no' texto='no'">
+   <param name="C_01" value="id='cerrarInfo' tipo='numérico' interfaz='botón' región='interior' espacio='INFO' nombre='×' expresión='(cerrarInfo.x,cerrarInfo.y,cerrarInfo.w,cerrarInfo.h)' fijo='sí' visible='sí' color='blanco' fuente puntos='26' imagen='_STYLE_|class=btnUNADM|shadowTextColor=rgba(0,0,0,0.2)|shadowTextOffsetY=2|shadowTextBlur=0|textBorder=0' acción='calcular' parámetro='INFO.visible=0\nValPer0=1\ncalPer()' dibujar-si='cerrarInfo.visible'">
+   <param name="C_02" value="id='btnOpen' tipo='numérico' interfaz='botón' región='interior' espacio='btnOpenClose' expresión='(0,0,35,30)' fijo='sí' visible='sí' fuente puntos='16' imagen='_STYLE_|class=btnUNADM open north|shadowTextColor=rgba(0,0,0,0.2)|shadowTextOffsetY=2|shadowTextBlur=0|textBorder=0' acción='calcular' parámetro='openPanelCtrs()' dibujar-si='!CTRS.opened' pos_mensajes='centro'">
+   <param name="C_03" value="id='btnClose' tipo='numérico' interfaz='botón' región='interior' espacio='btnOpenClose' expresión='(0,0,35,30)' fijo='sí' visible='sí' imagen='_STYLE_|class=btnUNADM close north|shadowTextColor=rgba(0,0,0,0.2)|shadowTextOffsetY=2|shadowTextBlur=0|textBorder=0' acción='calcular' parámetro='closePanelCtrs()' dibujar-si='CTRS.opened' pos_mensajes='centro'">
+   <param name="C_04" value="id='v' tipo='numérico' región='interior' espacio='CTRS_north' nombre='v' expresión='(70,60,95,40)' valor='ctr_v' min='1' max='2' decimales='6' fijo='no' visible='sí' acción='calcular' parámetro='ValPer1=1\ncalPer()' dibujar-si='paso=0' pos_mensajes='centro'">
+   <param name="C_05" value="id='f' tipo='numérico' región='interior' espacio='CTRS_north' nombre='M' expresión='(70,60,95,40)' valor='ctr_f' min='1' max='4' decimales='6' fijo='no' visible='sí' acción='calcular' parámetro='ValPer3=1\ncalPer()' dibujar-si='paso=1' pos_mensajes='centro'">
+   <param name="C_06" value="id='sig' tipo='numérico' interfaz='botón' región='interior' espacio='CTRS_north' nombre='Siguiente' expresión='(250,65,120,30)' valor='1' decimales='6' fijo='no' visible='sí' color='blanco' color-int='fff0f8ff' fuente puntos='18' imagen='imgs/tpl/btn120.png' acción='calcular' parámetro='paso=paso+1\nValPer2=1\ncalPer()' dibujar-si='paso=0' pos_mensajes='centro'">
+   <param name="C_07" value="id='ant' tipo='numérico' interfaz='botón' región='interior' espacio='CTRS_north' nombre='Anterior' expresión='(250,65,120,30)' valor='1' decimales='6' fijo='no' visible='sí' color='blanco' color-int='fff0f8ff' fuente puntos='18' imagen='imgs/tpl/btn120.png' acción='calcular' parámetro='paso=paso-1' dibujar-si='paso=1' pos_mensajes='centro'">
+   <param name="A_01" value="id='initEscena()' algoritmo='sí' algoritmo='sí' hacer='initBtns();initEsp();openPanelCtrs();titulo=&squot;Ejemplos de campos vectoriales&squot;;titulo.w=_AnchoDeCadena_(titulo,&squot;SansSerif&squot;,&squot;PLAIN&squot;,&squot;30&squot;);titulo.x=(E1._w-titulo.w)/2;titulo.y=30'">
+   <param name="A_02" value="id='irAEscena(idxEscena)' algoritmo='sí' algoritmo='sí' hacer='parent.set(&squot;scene&squot;,idxEscena);parent.update()'">
+   <param name="A_03" value="id='initBtns()' algoritmo='sí' algoritmo='sí' hacer='cerrarInfo.w=40;cerrarInfo.h=30;cerrarInfo.x=INFO._w-cerrarInfo.w-2;cerrarInfo.y=1;cerrarInfo.img=&squot;imgs/tpl/cerrar.png&squot;;cerrarInfo.visible=1;;;ctrF.w=275;ctrF.h=40;ctrF.txt.w=60;ctrF.txt.h=18 ;;ctrF.txt.x=10;ctrF.txt.y=(E2_Graf._h-ctrF.h-5)+10;ctrF.x=ctrF.txt.x+ctrF.txt.w;ctrF.y=ctrF.txt.y-10;;;;ctr_a.w=120;ctr_a.h=50;ctr_b.w=ctr_a.w;ctr_b.h=ctr_a.h;ctr_c.w=ctr_b.w;ctr_c.h=ctr_b.h;_gapX=30;_allW=(ctr_a.w+ctr_b.w+ctr_c.w+_gapX*2);;ctr_a.x=(CTRS_north._w-_allW)/2;ctr_a.y=(CTRS_north._h-ctr_a.h)/2;;;ctr_b.x=ctr_a.x+ctr_a.w+_gapX;ctr_b.y=ctr_a.y;;ctr_c.x=ctr_b.x+ctr_b.w+_gapX;ctr_c.y=ctr_a.y;'">
+   <param name="A_04" value="id='initEsp()' algoritmo='sí' algoritmo='sí' hacer='INFO.x=(E1._w-INFO._w)/2;INFO.y=(E1._h-INFO._h)/2;INFO.visible=1;;E2_Graf.x=5;E2_Graf.y=5;E2_Graf.visible=1;;EspTxt.x=E1._w-EspTxt._w-10;EspTxt.y=E1._h-EspTxt._h-10;EspTxt.visible=1;;;;CTRS.x=(E1._w-CTRS_north._w)/2;CTRS.y=(E1._h-CTRS_north._h);CTRS.visible=0;;CTRS.x=0;CTRS.y=0;;btnOpenClose.y=(CTRS.y-btnOpenClose._h);btnOpenClose.x=(E1._w-btnOpenClose._w);'">
+   <param name="A_05" value="id='closePanelCtrs()' algoritmo='sí' expresión='x' algoritmo='sí' hacer='CTRS.visible=1;;CTRS.opened=0;CTRS.y=-CTRS_north._h;;btnOpenClose.y=CTRS.y+CTRS_north._h;btnOpenClose.x=(E1._w-btnOpenClose._w)'">
+   <param name="A_06" value="id='openPanelCtrs()' algoritmo='sí' expresión='x' algoritmo='sí' hacer='CTRS.visible=1;CTRS.opened=1;;CTRS.x=(E1._w-CTRS_north._w)/2;CTRS.y=0;;btnOpenClose.y=CTRS.y+CTRS_north._h;btnOpenClose.x=(E1._w-btnOpenClose._w)'">
+   <param name="A_07" value="id='__FIN_TPL_()'">
+   <param name="A_08" value="id='ValPer' vector='sí' evaluar='una-sola-vez' tamaño='20'">
+   <param name="A_09" value="id='calPer()' algoritmo='sí' algoritmo='sí' hacer='ValPer[0]=(ValPer0)?1:ValPer[0];ValPer[1]=(ValPer1)?1:ValPer[1];ValPer[2]=(ValPer2)?1:ValPer[2];ValPer[3]=(ValPer3)?1:ValPer[3];per=25*(ValPer[0]+ValPer[1]+ValPer[2]+ValPer[3]);setSCORMPercentage(per)'">
+   <param name="A_10" value="id='getSCORMState()' algoritmo='sí' expresión='res' algoritmo='sí' Local='res,arroba' inicio='arroba=&squot;@&squot;' hacer='ö=|Estandar ---- [MIDC]XX.&lt;var&gt;  SI SOLO EXISTE UNA ESCENA EN EL HTML|;ö=|Estandar ---- [MIDC]XX_YY.&lt;var&gt;  SI HAY MAS DE UNA ESCENA EN EL HTML|;res=&squot;D02.v:&squot;+v+arroba;res=res+&squot;D02.f:&squot;+f+arroba;res=res+&squot;D02.paso:&squot;+paso+arroba;;res=res+&squot;D02.ValPer[0]:&squot;+ValPer[0]+arroba;res=res+&squot;D02.ValPer[1]:&squot;+ValPer[1]+arroba;res=res+&squot;D02.ValPer[2]:&squot;+ValPer[2]+arroba;res=res+&squot;D02.ValPer[3]:&squot;+ValPer[3]+arroba'">
+   <param name="A_11" value="id='initStateScorm()' algoritmo='sí' expresión='x' algoritmo='sí' hacer='v=getSCORMStateVar(&squot;D02.v&squot;);f=getSCORMStateVar(&squot;D02.f&squot;);paso=getSCORMStateVar(&squot;D02.paso&squot;);;ValPer[0]=getSCORMStateVar(&squot;D02.ValPer[0]&squot;);ValPer[1]=getSCORMStateVar(&squot;D02.ValPer[1]&squot;);ValPer[2]=getSCORMStateVar(&squot;D02.ValPer[2]&squot;);ValPer[3]=getSCORMStateVar(&squot;D02.ValPer[3]&squot;);calPer();;ctr_v=(v!=0)?v:1;ctr_f=(f!=0)?f:1;ctr_paso=(paso!=0)?paso:0'">
+   <param name="A_12" value="id='INICIO' algoritmo='sí' evaluar='una-sola-vez' hacer='initStateScorm();initEscena()'">
+   <param name="A_13" value="id='CALCULOS' algoritmo='sí' evaluar='siempre'">
+   <param name="G_01" value="espacio='E1' tipo='texto' fondo='sí' dibujar-si='0' expresión='[__GRAF__,20]' fijo='sí'">
+   <param name="G_02" value="espacio='E1' tipo='texto' fondo='sí' dibujar-si='0' expresión='[__INFO__,20]' fijo='sí'">
+   <param name="G_03" value="espacio='INFO' tipo='texto' fondo='sí' color='blanco' expresión='[20,5]' texto='Explicación o instrucciones' fuente='SansSerif,PLAIN,24' fijo='sí'">
+   <param name="G_04" value="espacio='INFO' tipo='texto' expresión='[25,40]' texto='{\rtf1\uc0{\fonttbl\f0\fcharset0 Times New Roman;\f1\fcharset0 Arial;}\f1\fs40\par Para el primer ejemplo puedes utilizar el\par pulsador que se muestra, \u233 ste aumenta la\par velocidad por lo que cambia la magnitud de los\par vectores conforme el fluido circula por el tubo.\par En el segundo ejemplo, con el pulsador puedes\par aumentar la masa del planeta y notar como\par cambia la fuerza en cada punto, la magnitud de\par la fuerza est\u225  representada por la norma del\par vector, es decir, su longitud.}' fuente='SansSerif,PLAIN,20' fijo='sí'">
+   <param name="G_05" value="espacio='E1' tipo='polígono' color='negro' dibujar-si='paso=0' coord_abs='sí' expresión='(0,0)(495,0)(495,320)(0,320)(0,0)' relleno='negro'">
+   <param name="G_06" value="espacio='E1' tipo='imagen' dibujar-si='paso=0' coord_abs='sí' expresión='(215,170,1.05,1.5)' archivo='imgs/tubo.jpg'">
+   <param name="G_07" value="espacio='E1' tipo='flecha' dibujar-si='paso=0' coord_abs='sí' expresión='(25,85+55*s)(25+30*v,85+55*s)' familia='s' s.intervalo='[0,3]' s.pasos='3' fijo='sí'">
+   <param name="G_08" value="espacio='E1' tipo='flecha' dibujar-si='paso=0' coord_abs='sí' expresión='(200,85)(220+20*v,85+22*v)' fijo='sí'">
+   <param name="G_09" value="espacio='E1' tipo='flecha' dibujar-si='paso=0' coord_abs='sí' expresión='(200,250)(220+20*v,250-22*v)' fijo='sí'">
+   <param name="G_10" value="espacio='E1' tipo='flecha' dibujar-si='paso=0' coord_abs='sí' expresión='(150,120)(170+30*v,130+12*v)' fijo='sí'">
+   <param name="G_11" value="espacio='E1' tipo='flecha' dibujar-si='paso=0' coord_abs='sí' expresión='(150,220)(170+30*v,210-12*v)' fijo='sí'">
+   <param name="G_12" value="espacio='E1' tipo='flecha' dibujar-si='paso=0' coord_abs='sí' expresión='(310,130+25*s)(330+50*v,130+25*s)' familia='s' s.intervalo='[0,3]' s.pasos='3' fijo='sí'">
+   <param name="G_13" value="espacio='E1' tipo='arco' color='grisClaro' dibujar-si='paso=1' coord_abs='sí' centro='(210,180)' radio='40+10*f' fin='360' fijo='sí' relleno='gris'">
+   <param name="G_14" value="espacio='E1' tipo='flecha' dibujar-si='paso=1' coord_abs='sí' expresión='(25+380*s,180)(45+340*s+(10*f*(1-(s*2))),180)' familia='s' s.intervalo='[0,1]' s.pasos='1' fijo='sí' flecha='blanco'">
+   <param name="G_15" value="espacio='E1' tipo='flecha' dibujar-si='paso=1' coord_abs='sí' expresión='(208,30+350*s)(208,30+280*s+(10*f*(1-(s*2))))' familia='s' s.intervalo='[0,1]' s.pasos='1' fijo='sí' flecha='blanco'">
+   <param name="G_16" value="espacio='E1' tipo='flecha' dibujar-si='paso=1' coord_abs='sí' expresión='(120+180*(s%2),90+180*ent(s/2))(150+120*(s%2)+10*f*(1-(2*(s%2))),120+120*ent(s/2)+10*f*(1-(2*ent(s/2))))' familia='s' s.intervalo='[0,3]' s.pasos='3' fijo='sí' flecha='blanco'">
+</ajs>
+</div>
+
+     <!------ TERMINA EL CONTENIDO DE LA PÁGINA --------->
+</div>
+
+
+   <!------ INICIA LA INFO SOBRE LAS LICENCIAS Y LOS CRÉDITOS. ---------->
+    <a id="btCopyright" class="standardButton" title="Haz clic aquí para consultar los créditos y las condiciones de uso de este recurso." href="#" onClick="document.getElementById('copyright').className='visible';">&#169;</a>
+    <div id="copyright" class="oculto">
+      
+      <div class='innerCopyright'>
+      
+          <a id="btCloseCopyright" class="standardButton" title="Haz clic aquí para cerrar esta ventana." href="#" onClick="document.getElementById('copyright').className='oculto'">×</a>
+  
+          <!-- Créditos UAM  (siempre deben ir en primer lugar) -->
+			<div class="creditos">
+				<h1>
+					Créditos 
+				</h1>
+				<h2>
+					Escena original
+				</h2>				<table class="autores" 	>
+					<tr> <td  class="rol"> Diseño del contenido			<td class="nombre"> Victor Hugo García Jarillo (Facultad de                    Ciencias, UNAM)</td></tr>
+					<tr> <td  class="rol"> Diseño funcional				<td class="nombre"> Victor Hugo García Jarillo (Facultad de                    Ciencias, UNAM)</td></tr>
+					<tr> <td  class="rol"> Programación					<td class="nombre"> Victor Hugo García Jarillo (Facultad de                    Ciencias, UNAM)</td></tr>
+
+					<tr> <td  class="rol"> Diseño gráfico					</td>		<td class="nombre"> Ricardo López Gómez										</td></tr>
+					<tr> <td  class="rol" >Coordinación			</td>		<td class="nombre"> Leticia Montserrat Vargas Rocha						</td></tr>
+				</table>
+				<h2>
+					Adaptación 
+				</h2>
+				<table class="autores" 	>
+					<tr> <td  class="rol"> Diseño funcional				</td>		<td class="nombre"> Victor Hugo García Jarillo (Facultad de                    Ciencias, UNAM)		</td></tr>
+					<tr> <td  class="rol"> Programación						</td>		<td class="nombre"> Victor Hugo García Jarillo (Facultad de                    Ciencias, UNAM)</td></tr>
+
+					<tr> <td  class="rol"> Diseño gráfico					</td>		<td class="nombre"> Francisco	Varela Fuentes						</td></tr>
+					<tr> <td  class="rol" >Coordinación			</td>		<td class="nombre"> Leticia Montserrat Vargas Rocha						</td></tr>
+		<tr> <td  class="rol" >Desarrollo del contenedor			</td>		<td class="nombre"> Oscar Escamilla González</td></tr>
+				</table>
+	         
+	         <div class='logos'>
+	            <a href=''>
+	               <img src="../images/info/icns/logoLite.png">
+	            </a>
+	            <a href="http://www.unadmexico.mx/">
+	               <img src="../images/info/icns/logoUNADM.png">
+	            </a>
+	         </div>
+          </div>
+          
+          <!-- Linea separación créditos -->
+          <hr class="linea" />
+     
+          <!-- Aviso licencias -->
+          <div class="licencias">
+          
+				<p class="creativeCommons">Los contenidos de esta unidad didáctica interactiva están bajo una licencia <a href="http://creativecommons.org/licenses/by-nc-sa/2.5/es/" target="_blank">Creative Commons Reconocimiento-NoComercial-CompartirIgual</a>.</p>
+
+				<!--arquimedes (optativo)-->
+				<p>La unidad didáctica fue creada con <a href="http://arquimedes.matem.unam.mx/Descartes5/creditos/conCCL.html" target="_blank">Arquímedes</a>, una herramienta de código abierto.</p>
+
+				<!-- Descartes -->
+				<p>La unidad didáctica contiene escenas elaboradas con Descartes, una herramienta de código abierto.</p>
+
+
+          	<p style='text-align:center'> LITE - UnADM 2014</p>
+          </div>
+      </div>
+    </div> 
+   <!------ TERMINA LA INFO SOBRE LAS LICENCIAS Y LOS CRÉDITOS. ---------->
+  
+  
+  </div>
+  
+  
+</article>
+
+
+</body>
+
+</html>

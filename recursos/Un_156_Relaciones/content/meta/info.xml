@@ -1,0 +1,85 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<recurso 
+	id="_Un_156_Relaciones " 
+	nivel="Licenciatura" 
+	area="Matemáticas, Álgebra, Relaciones" 
+	plataforma="HTML 5" 
+	>
+	<titulo><![CDATA[
+		Relaciones 
+	]]></titulo>
+	
+	<Descripcion><![CDATA[
+    Se ilustran y definen los conceptos de Relación, composición, identidad y asociatividad de relaciones y se definen propiedades básicas de Relaciones: reflexividad, simetría, transitividad.  Se ilustra en formas interactiva la representación gráfica de una relación, la composición de relaciones.Se presenta una pequeña reseña de la importancia de las relaciones en numerosos ejemplos, incluyendo la industria, la computación, la vida cotidiana y por supuesto las matemáticas. 
+	]]></Descripcion>
+	<tags>
+	<![CDATA[
+		Relaciones, Composición de relaciones, Reflexividad, Simetría, Transitividad, Relación idéntica, Representación gráfica de relaciones
+	]]></tags>
+</recurso>
+
+<!--
+********************************************************************************
+                               **** Áreas **** 
+Matemáticas 
+	Aritmética
+		Fracciones
+	Álgebra
+		Combinatoria
+		Ecuaciones lineales
+		Ecuaciones polinomiales
+		Polinomios
+		Álgebra lineal
+		Teoría de grupos
+		Álgebra abstracta
+	Geometría
+		Geometría elemental
+		Geometría clásica
+		Geometría analítica
+	Trigonometría 
+	Probabilidad 
+		Cálculo de probabilidades
+		Eventos
+		Variables aleatorias
+		Ley de los grandes números
+		Teorema del límite central
+	Estadística
+		Medidas de tendencia central
+		Muestreo
+		Distribuciones
+		Inferencia
+	Cálculo
+		Funciones 
+		Límites
+		Continuidad
+		Derivadas 
+		Integrales 
+	Teoría de números
+	Teoría de gráficas
+Física
+	Mecánica
+	Electromagnetismo
+	Óptica
+	Físico-química 
+	Termodinámica
+	Mecánica estadística
+	Mecánica cuántica
+	Relatividad
+
+********************************************************************************
+
+********************************************************************************
+                             **** Niveles ****
+
+	Primaria
+	Preescolar
+	Secundaria
+	Bachillerato
+	Licenciatura
+	Posgrado 
+	Maestria
+	Doctorado
+
+********************************************************************************
+
+-->

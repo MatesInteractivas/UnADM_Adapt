@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <link href="../css/html5.css" rel="stylesheet" type="text/css" media="screen" />
+  
+  <!-------- MathJax --- para fórmulas matemáticas ------>
+  <script type="text/javascript"
+    src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+  </script>
+   <script type="text/javascript" src='../javascript/inject_functions_scorms_descartes.js'></script>
+
+</head>
+
+
+
+<body>
+  
+
+<article class="course_content_container">
+  
+  <div class="course_content">
+    
+    
+    <!--INICIA EL CONTENIDO DE LA PÁGINA-->
+    
+    
+    <!--Título de la página-->
+    <h1>Criterio General de Divisibilidad</h1>
+    
+    <!--Para poner un panel con fondo-->
+    <div class='text_panel'>
+<h2>Criterio de Divisibilidad</h2>
+<p>
+Hemos visto en la sección de Inicio que para \(a\) y \(b\) números enteros, con \(b>0\), existen enteros \(q\) y \(r\) únicos tales que \(0 \leq r < b \). Por otra parte, \(a|b\) denota: \(a\) <b>divide</b> a \(b\), es decir, \(a\) es <b>divisor</b> de \(b\), que es equivalente a decir que \(b\) <b>es múltiplo</b> de \(a\) o que \(b\) <b>es divisible</b> por \(a\).
+</p>
+
+<p>
+<br><b>Teorema</b>
+<ol type =i>
+<li>Para \(a\), \(b\), \(c\) números enteros, si \(a|b\) y \(a|c\), entonces \(a|(b+c)\)</li>
+<li>Para \(a\), \(b\), \(c\) números enteros, si \(a|b\) pero \(a\nshortmid c\), entonces \(a\nshortmid (b+c)\) </li>
+<li>Para \(a\), \(b\), \(m\) números enteros, con \(m \neq 0\), \(a|b\) si y sólo si \(ma|mb\)</li>
+<li>Para \(a\), \(b\), \(c\) números enteros, si \(a|b\) y \(b|c\), entonces \(a|c\) </li>
+<li>Para \(a\), \(b\), \(c\) números enteros, si \(a|(bc)\) y \(mcd(a,b)=1\), entonces \(a|c\) </li>
+</ol>
+</p>
+
+<p>
+Usando este teorema y el algoritmo de la división podemos enunciar la siguiente generalización.
+</p>
+
+<h2>Generalización del criterio de Divisibilidad</h2>
+		<p>Un número entero positivo se puede representar por la suma de su unidades, más sus decenas, más sus centenas, etc. Por ejemplo si queremos representar el número \( 345 \), este se puede ver cómo la suma de \(5\) más \( 4 \)x\( 10^1 \) más \( 3 \)x\( 10^2 \). Este tipo de representación se denomina representación decimal y ésta nos ayuda a describir el criterio de divisibilidad para el caso general:</p>
+		
+        <p>Sea \( n \) un entero positivo, y sea  \( \sum_{i=1}^{k} a_i 10^i\) su representación decimal, y sean \(r_i\) los restos de la división de \( 10^i \) por \( p \geq  2\), \(i=1,2,.....,k\). Entonces:</p>
+        
+        <p>\( n \) es divisible por \( p \) si, y sólo si lo es \( \sum_{i=1}^{k} a_i r_i\)</p>
+        
+        
+          	<p style='text-align:center'> ***</p>
+
+    <div class="course_extern_content"> 
+      <img src="imgs/calendario_azteca.jpg"></img>
+    </div>
+
+
+		<h2>Divisibilidad y El Calendario Mexica</h2>
+        <p>La división del tiempo para los antiguos mexicanos estaba compuesto de 18 meses llamados metztli de 20 días cada uno. Cinco días componían una semana y de éstos, el quinto día, tianquiztli, era dedicado al mercado. Así, el año se completaba a 365 días con la adición de 5 días "vacíos" llamados nemontemi, en estos días cesaba toda actividad normal, eran dedicados al ayuno y la abstinencia. Así tenemos 18 x 20 = 360 + 5 = 365</p>
+    
+
+
+    
+
+
+ 	
+</div>
+    <!--TERMINA EL CONTENIDO DE LA PÁGINA-->
+
+
+
+   <!------ INICIA LA INFO SOBRE LAS LICENCIAS Y LOS CRÉDITOS. ---------->
+    <a id="btCopyright" class="standardButton" title="Haz clic aquí para consultar los créditos y las condiciones de uso de este recurso." href="#" onClick="document.getElementById('copyright').className='visible';">&#169;</a>
+    <div id="copyright" class="oculto">
+      
+      <div class='innerCopyright'>
+      
+          <a id="btCloseCopyright" class="standardButton" title="Haz clic aquí para cerrar esta ventana." href="#" onClick="document.getElementById('copyright').className='oculto'">×</a>
+  
+          <!-- Créditos UAM  (siempre deben ir en primer lugar) -->
+			<div class="creditos">
+				<h1>
+					Créditos 
+				</h1>
+				<h2>
+					Escena original
+				</h2>				
+                
+               <table class="autores" 	>
+					<tr> <td  class="rol"> Diseño del contenido			</td>		<td class="nombre"> Gustavo Magallanes Guijón</td></tr>
+					<tr> <td  class="rol"> Diseño funcional				</td>		<td class="nombre">Gustavo Magallanes Guijón</td></tr>
+					<tr> <td  class="rol"> Programación						</td>		<td class="nombre"> Gustavo Magallanes Guijón</td></tr>
+					<!-- Varias personas en el mismo rubro, separar por <br> -->
+							        
+					<tr> <td  class="rol"> Diseño gráfico					</td>		<td class="nombre"> Ricardo López Gómez										</td></tr>
+					<tr> <td  class="rol" >Coordinación			</td>		<td class="nombre"> Leticia Montserrat Vargas Rocha						</td></tr>
+				</table>
+				<h2>
+					Adaptación 
+				</h2>
+				<table class="autores" 	>
+					<tr> <td  class="rol"> Diseño funcional				</td>	<td class="nombre"> Julio Arnoldo Prado Saavedra<br>Victor Manuel Amezcua y Raz 
+                    </td></tr>
+					<tr> <td  class="rol"> Programación					</td>	<td class="nombre">Julio Arnoldo Prado Saavedra<br>Victor Manuel Amezcua y Raz</td></tr>
+					<tr> <td  class="rol"> Diseño gráfico				</td>	<td class="nombre"> Francisco	Varela Fuentes	        </td></tr>
+					<tr> <td  class="rol" >Coordinación			        </td>	<td class="nombre"> Leticia Montserrat Vargas Rocha		</td></tr>
+		            
+				</table>
+	         
+	         <div class='logos'>
+	            <a href=''>
+	               <img src="../images/info/icns/logoLite.png">
+	            </a>
+	            <a href="http://www.unadmexico.mx/">
+	               <img src="../images/info/icns/logoUNADM.png">
+	            </a>
+	         </div>
+          </div>
+          
+          <!-- Linea separación créditos -->
+          <hr class="linea" />
+     
+          <!-- Aviso licencias -->
+          <div class="licencias">
+          
+				<p class="creativeCommons">Los contenidos de esta unidad didáctica interactiva están bajo una licencia <a href="http://creativecommons.org/licenses/by-nc-sa/2.5/es/" target="_blank">Creative Commons Reconocimiento-NoComercial-CompartirIgual</a>.</p>
+
+				<!--arquimedes (optativo)-->
+				<p>La unidad didáctica fue creada con <a href="http://arquimedes.matem.unam.mx/Descartes5/creditos/conCCL.html" target="_blank">Arquímedes</a>, una herramienta de código abierto.</p>
+
+				<!-- Descartes -->
+				<p>La unidad didáctica contiene escenas elaboradas con Descartes, una herramienta de código abierto.</p>
+
+
+          	<p style='text-align:center'> LITE - UnADM 2014</p>
+          </div>
+      </div>
+    </div> 
+   <!------ TERMINA LA INFO SOBRE LAS LICENCIAS Y LOS CRÉDITOS. ---------->
+  
+  
+  </div>
+  
+  
+</article>
+
+
+</body>
+
+</html>

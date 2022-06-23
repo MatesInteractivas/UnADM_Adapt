@@ -1,0 +1,162 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+ 	<link href="../css/html5_mobile.css" rel="stylesheet" type="text/css" media="screen" />
+	<link href="../css/DescHTML5.css" rel="stylesheet" type="text/css" media="screen" />	
+	 <script type="text/javascript" src='../javascript/inject_functions_scorms_descartes.js'></script>
+	<script type='text/javascript' src='lib/descartes-min.js'></script>
+</head>
+
+<body>
+ <!-------- MathJax --- para fórmulas matemáticas ------>	
+	<script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script> 
+
+<article class="course_content_container">
+  
+  <div class="course_content">
+    
+    
+    <!------ INICIA EL CONTENIDO DE LA PÁGINA --------->
+    
+    
+    <!--- Título de la página --->
+    <center><h2>Análisis de la ecuación de segundo grado en dos variables. <br>Parte 3: El caso parabólico</h2></center>
+    
+    
+	<div class='text_panel'>
+		<!--- Subtítulo (no necesario en introducción) --->
+		  <h2>Ejes de simetría y vértice del lugar geométrico definido por una ecuación de tipo parabólico</h2>
+    
+		<!--- Párrafo --->
+		<p>
+
+		En el caso parabólico, es decir cuando \(ac-\frac{b^2}{4}=0\), hay que hacer la rotación sin haber hecho
+una traslación, para lo cual se usa el mismo ángulo: 
+                          <center>\(\theta =\frac{atan(\frac{b}{a-c})}{2}\)  si  \(a\neq c\)   y   \(\theta =\frac{\pi}{4} \)  si \(a=c\).</center>
+<br>Sustituyendo  \(x\)  por  \(xcos\theta +ysen \theta\)  y  \(y\)  por \(-xsen \theta +y cos \theta \), se obtiene la ecuación:
+	\[Ax^2+Cy^2+Dx+Ey+F=0\]
+donde 
+	\[A=a cos^2 \theta +bcos \theta sen \theta +csen^2\theta \]
+	\[C=asen^2 \theta -bcos \theta sen \theta +c cos^2 \theta \]
+	\[D=d cos \theta -e sen \theta \]
+	\[E=d sen \theta + e ocs \theta \]
+
+Pero siempre ocurre que \(A=0\) o \(C=0\), porque, como se puede demostar para este valor de \(\theta \):
+	<center>\(AC=ac-\frac{b^2}{4} \) </center> 	
+		</p>
+	
+		<p>
+<br>El resto del análisis conviene separarlo en dos casos: 
+
+<br><br><b>Caso 1) \(C=0\)</b>
+
+<br><br>Para completar cuadrados definimos  \(h=\frac{D}{2A} \) con lo que la ecuación queda así:
+
+	\[A(x-h)^2+Ey+F-Ah^2=0 \]
+
+Lo cual sugiere definir  \(k=\frac{Ah^2-F}{E}\) si  \(E \neq 0\),  y  \(k=0\)  cuando  \(E=0\). Con esto la ecuación
+adquiere la forma
+	\[A(x-h)^2+E(y-k)=0\]
+</p>
+
+<p>
+<b>Caso 2) \(A=0\)</b>
+<br><br>Para completar cuadrados definimos  \( k=\frac{E}{2C}\) con lo que la ecuación queda así:
+
+	\[C(y-k)^2+Dx+F-Ch^2=0\]
+
+Lo cual sugiere definir  \(h=\frac{Ck^2-F}{D}\) si  \(D \neq 0\),  y  \(h=0\)  cuando  \(D=0\). Con esto la ecuación
+adquiere la forma
+	\[C(y-k)^2+D(x-h)=0\]
+
+En ambos casos se obtuvo la ecuación de una parábola (o dos rectas paralelas) cuando en el
+caso 1  \(E=0\),  o en el caso 2  \(D=0\).
+</p>
+
+<p>
+<br>El punto \((h,k)\) es el vértice de la parábola girada por el ángulo \(θ\). Así que para obtener el vértice
+de la parábola original hay que aplicar la rotación inversa:
+
+	\[ \begin{bmatrix}
+    h_0       	\\
+    k_0  \\
+ \end{bmatrix} = \begin{bmatrix}
+    cos \theta       	& sen \theta \\
+    -sen \theta & cos \theta  \\
+ \end{bmatrix} \begin{bmatrix}
+    h       	\\
+    k  \\
+ \end{bmatrix}\]
+
+</p>   
+   
+    
+   <!------ INICIA LA INFO SOBRE LAS LICENCIAS Y LOS CRÉDITOS. ---------->
+    <a id="btCopyright" class="standardButton" title="Haz clic aquí para consultar los créditos y las condiciones de uso de este recurso." href="#" onclick="document.getElementById('copyright').className='visible';">&#169;</a>
+    <div id="copyright" class="oculto">
+      
+      <div class='innerCopyright'>
+      
+          <a id="btCloseCopyright" class="standardButton" title="Haz clic aquí para cerrar esta ventana." href="#" onclick="document.getElementById('copyright').className='oculto'">×</a>
+  
+          <!-- Créditos UAM  (siempre deben ir en primer lugar) -->
+			<div class="creditos">
+				<h1>
+					Créditos 
+				</h1>
+				<h2>
+					Escena original
+				</h2>				
+				<table class="autores" 	>
+					<tr> <td  class="rol"> Diseño del contenido		</td>		<td class="nombre">José Luis Abreu León</td></tr>
+					<tr> <td  class="rol"> Diseño funcional			</td>		<td class="nombre">José Luis Abreu León</td></tr>
+					<tr> <td  class="rol"> Programación			</td>		<td class="nombre">José Luis Abreu León<br>Leticia Montserrat Vargas Rocha</td></tr>
+					<tr> <td  class="rol"> Diseño gráfico			</td>		<td class="nombre">Ricardo López Gómez</td></tr>
+					<tr> <td  class="rol"> Coordinación			</td>		<td class="nombre">Leticia Montserrat Vargas Rocha</td></tr>
+				</table>
+				<h2>
+					Adaptación 
+				</h2>
+				<table class="autores" 	>
+					<tr> <td  class="rol"> Diseño funcional			</td>		<td class="nombre">Elsa Sirenia Vega Camacho</td></tr>
+					<tr> <td  class="rol"> Programación			</td>		<td class="nombre">Elsa Sirenia Vega Camacho</td></tr>
+					<tr> <td  class="rol"> Asesoría de programación		</td>		<td class="nombre">Leticia Montserrat Vargas Rocha</td></tr>		
+					<tr> <td  class="rol"> Diseño gráfico			</td>		<td class="nombre">Francisco Varela Fuentes</td></tr>
+					<tr> <td  class="rol" >Coordinación			</td>		<td class="nombre">Leticia Montserrat Vargas Rocha</td></tr>
+				</table>
+	         
+	         <div class='logos'>
+	            <a href=''>
+	               <img src="../images/info/icns/logoLite.png">
+	            </a>
+	            <a href="http://www.unadmexico.mx/">
+	               <img src="../images/info/icns/logoUNADM.png">
+	            </a>
+	         </div>
+          </div>
+          
+          <!-- Linea separación créditos -->
+          <hr class="linea" />
+     
+          <!-- Aviso licencias -->
+          <div class="licencias">
+          
+				<p class="creativeCommons">Los contenidos de esta unidad didáctica interactiva están bajo una licencia <a href="http://creativecommons.org/licenses/by-nc-sa/2.5/es/" target="_blank">Creative Commons Reconocimiento-NoComercial-CompartirIgual</a>.</p>
+
+				<!--arquimedes (optativo)-->
+				<p>La unidad didáctica fue creada con <a href="http://arquimedes.matem.unam.mx/Descartes5/creditos/conCCL.html" target="_blank">Arquímedes</a>, una herramienta de código abierto.</p>
+
+				<!-- Descartes -->
+				<p>La unidad didáctica contiene escenas elaboradas con Descartes, una herramienta de código abierto.</p>
+
+
+          	<p style='text-align:center'> LITE - UnADM 2014</p>
+          </div>
+      </div>
+    </div> 
+   <!------ TERMINA LA INFO SOBRE LAS LICENCIAS Y LOS CRÉDITOS. ---------->
+
+</body>
+</html>

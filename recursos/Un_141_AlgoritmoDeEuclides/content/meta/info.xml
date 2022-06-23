@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<recurso 
+	id="_Un_141_AlgoritmoDeEuclides" 
+	nivel="Licenciatura" 
+	area="Matemáticas, Álgebra abstracta" 
+	plataforma="HTML 5" 
+	>
+	<titulo><![CDATA[
+		Algoritmo de Euclides 
+	]]></titulo>
+	
+	<Descripcion><![CDATA[
+		Se estudia el algoritmo de Euclides para calcular el máximo común divisor (MCD). Este último se usa en esta unidad didáctica para tres cosas: reducir una fracción; mostrar que si d=MCD(a,b), entonces se cumple que a congruente b (mod d); y encontrar contraejemplos del converso de esta última afirmación, es decir: si a congruente b (mod d), entonces d = MCD(a,b).
+	]]></Descripcion>
+	<tags>
+	<![CDATA[
+		Algoritmo de Euclides, Máximo Común Divisor, MCD,       		Congruencias, Simplicación de fraciones.
+	]]></tags>
+</recurso>
+
+<!--
+********************************************************************************
+                               **** Áreas **** 
+Matemáticas 
+	Aritmética
+		Fracciones
+	Álgebra
+		Combinatoria
+		Ecuaciones lineales
+		Ecuaciones polinomiales
+		Polinomios
+		Álgebra lineal
+		Teoría de grupos
+		Álgebra abstracta
+	Geometría
+		Geometría elemental
+		Geometría clásica
+		Geometría analítica
+	Trigonometría 
+	Probabilidad 
+		Cálculo de probabilidades
+		Eventos
+		Variables aleatorias
+		Ley de los grandes números
+		Teorema del límite central
+	Estadística
+		Medidas de tendencia central
+		Muestreo
+		Distribuciones
+		Inferencia
+	Cálculo
+		Funciones 
+		Límites
+		Continuidad
+		Derivadas 
+		Integrales 
+	Teoría de números
+	Teoría de gráficas
+Física
+	Mecánica
+	Electromagnetismo
+	Óptica
+	Físico-química 
+	Termodinámica
+	Mecánica estadística
+	Mecánica cuántica
+	Relatividad
+
+********************************************************************************
+
+********************************************************************************
+                             **** Niveles ****
+
+	Primaria
+	Preescolar
+	Secundaria
+	Bachillerato
+	Licenciatura
+	Posgrado 
+	Maestria
+	Doctorado
+
+********************************************************************************
+
+-->

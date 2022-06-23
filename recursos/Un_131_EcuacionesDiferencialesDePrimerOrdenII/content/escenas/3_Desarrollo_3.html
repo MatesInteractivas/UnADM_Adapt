@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+ 	<link href="../css/html5_mobile.css" rel="stylesheet" type="text/css" media="screen" />
+	<link href="../css/DescHTML5.css" rel="stylesheet" type="text/css" media="screen" />
+	<script type="text/javascript" src='../javascript/inject_functions_scorms_descartes.js'></script>
+	<script type='text/javascript' src='../lib/descartes-min.js'></script>
+</head>
+
+<body BGCOLOR="c0c0c0" leftmargin="0" topmargin="0">
+
+<ajs name="Descartes" width=970 height=550 code="Descartes">
+   <param name="tamaño" value="970x550">
+   <param name="image_loader" value="">
+   <param name="expand" value="">
+   <param name="decimal_symbol" value=".">
+   <param name="antialias" value="sí">
+   <param name="deshacer" value="no">
+   <param name="nombre" value="Descartes">
+   <param name="Versión" value="5.336, 2015-02-13">
+   <param name="Idioma" value="español">
+   <param name="Botones" value="créditos=no config=no inicio=no limpiar=no">
+   <param name="E_01" value="tipo='R2' id='E1' fijo='sí' escala='1' O.x='-50%' O.y='-50%' imagen='imgs/tpl/fondo_04.jpg' despl_imagen='arr-izq' fondo='c0d0d8' red='no' red10='no' ejes='no' texto='no'">
+   <param name="E_02" value="tipo='R2' id='EspG' x='EspG.x' y='EspG.y' ancho='425' alto='400' escala='30' despl_imagen='arr-izq' fondo='dcdbe1' red='c0b8c4c8' red10='889498' ejes='1fdcdbe1' texto='no'">
+   <param name="E_03" value="tipo='R2' id='EspUp' x='EspUp.x' y='EspUp.y' ancho='375' alto='190' dibujar-si='EspUp.visible' escala='1' O.x='-50%' O.y='-50%' despl_imagen='arr-izq' fondo='fffbfadc' red='no' red10='no' ejes='no' texto='no'">
+   <param name="E_04" value="tipo='R2' id='EspDw' x='EspDw.x' y='EspDw.y' ancho='375' alto='190' dibujar-si='EspDw.visible' fijo='sí' despl_imagen='arr-izq' fondo='ffd5f3fe' red='no' red10='no' ejes='no' texto='no'">
+   <param name="C_01" value="id='ctr_a' tipo='numérico' región='interior' espacio='EspG' nombre='c=' expresión='(ctr_a.x,ctr_a.y,ctr_a.w,ctr_a.h)' valor='a' incr='0.25' min='-7' max='7' fijo='sí' visible='sí' acción='calcular' parámetro='a=ctr_a\nValPer0=1\ncalPer()'">
+   <param name="C_02" value="id='EspUp.Oy' tipo='numérico' región='interior' espacio='EspUp' nombre='_nada_' expresión='(EspUp.Oy.x,EspUp.Oy.y,EspUp.Oy.w,EspUp.Oy.h)' valor='EspUp.Oy' incr='EspUp._h/6' min='-830' max='-95' discreto='sí' fijo='sí' visible='no' acción='calcular' parámetro='ValPer1=1\ncalPer()' pos_mensajes='centro'">
+   <param name="A_01" value="id='initEscena()' algoritmo='sí' algoritmo='sí' hacer='initBtns();initEsp();y1=10;x1=-10;x2=x1-.2;k=20;r=20;calc_m();;ô=|***************************************|;ô=|*  Si el botón de para cerrar la info *|;ô=|*  esta VISIBLE                       *|;ô=|***************************************|;INFO.visible=0;;ô=|***************************************|;ô=|*  Calculamos la posicion del titulo  *|;ô=|***************************************|;titulo=&squot;Análisis del campo direccional&squot;;titulo.w=_AnchoDeCadena_(titulo,&squot;SansSerif&squot;,&squot;PLAIN&squot;,&squot;30&squot;);titulo.x=(E1._w-titulo.w)/2;titulo.y=20;'">
+   <param name="A_02" value="id='initEsp()' algoritmo='sí' algoritmo='sí' hacer='EspG.x=55;EspG.y=106;EspG.visible=1;;EspUp.x=540;EspUp.y=105;EspUp.visible=1;;EspDw.x=540;EspDw.y=316;EspDw.visible=1'">
+   <param name="A_03" value="id='initBtns()' algoritmo='sí' algoritmo='sí' hacer='ctr_a.w=120;ctr_a.h=40;ctr_a.x=EspG._w-125;ctr_a.y=EspG._h-45;;ô=|*****************************************************|;ô=|*Para que siga al scroll hay que agregar la mitad de*|;ô=|*altura a la posicion y sumarle el Oy del espacio   *|;ô=|*                                                   *|;ô=|* El espcio de tener :                              *|;ô=|*   escala = 1                                      *|;ô=|*   Ox = -50% Oy = -50%                             *|;ô=|*   El valor min en la config de EspUp.Oy indica    *|;ô=|*   cuanto permite bajar el espacio Up              *|;ô=|*****************************************************|;EspUp.Oy.w=27;EspUp.Oy.h=50;EspUp.Oy.x=EspUp._w-EspUp.Oy.w-5;EspUp.Oy.y=EspUp._h-EspUp.Oy.h-5;;spnSigScroll.w=150;spnSigScroll.h=50;spnSigScroll.x=(EspUp._w-spnSigScroll.w)/2;spnSigScroll.y=400+EspUp._h/2;'">
+   <param name="A_04" value="id='m' vector='sí' evaluar='una-sola-vez' tamaño='20'">
+   <param name="A_05" value="id='calc_m()' algoritmo='sí' algoritmo='sí' inicio='_i=0' hacer='m[_i]=(3-(y1-_i))/2;_i=_i+1' mientras='_i<r'">
+   <param name="A_06" value="id='ValPer' vector='sí' evaluar='una-sola-vez' tamaño='20'">
+   <param name="A_07" value="id='calPer()' algoritmo='sí' algoritmo='sí' hacer='ValPer[0]=(ValPer0)?1:ValPer[0];ValPer[1]=(EspUp.Oy<-600)?1:ValPer[1];per=50*(ValPer[0]+ValPer[1]);setSCORMPercentage(per)'">
+   <param name="A_08" value="id='getSCORMState()' algoritmo='sí' expresión='res' algoritmo='sí' Local='res,arroba' inicio='arroba=&squot;@&squot;' hacer='ö=|Estandar ---- [MIDC]XX.<var>  SI SOLO EXISTE UNA ESCENA EN  EL HTML|;ö=|Estandar ---- [MIDC]XX_YY.<var>  SI HAY MAS DE UNA ESCENA EN EL  HTML|;res=&squot;D03.ctr_a:&squot;+ctr_a+arroba;res=res+&squot;D03.EspUp.Oy:&squot;+EspUp.Oy+arroba;res=res+&squot;D03.ValPer[0]:&squot;+ValPer[0]+arroba;res=res+&squot;D03.ValPer[1]:&squot;+ValPer [1]+arroba'">
+   <param name="A_09" value="id='initStateScorm()' algoritmo='sí' expresión='x' algoritmo='sí' hacer='ctr_a=getSCORMStateVar (&squot;D03.ctr_a&squot;);EspUp.Oy=getSCORMStateVar(&squot;D03.EspUp.Oy&squot;);;ValPer [0]=getSCORMStateVar(&squot;D03.ValPer[0]&squot;);ValPer[1]=getSCORMStateVar(&squot;D03.ValPer [1]&squot;);calPer();;a=(ctr_a!=0)?ctr_a:0;ctr_EspUp.Oy= (EspUp.Oy!=0)?EspUp.Oy:-95'">
+   <param name="A_10" value="id='INICIO' algoritmo='sí' evaluar='una-sola-vez' hacer='initStateScorm();initEscena()'">
+   <param name="A_11" value="id='CALCULOS' algoritmo='sí' evaluar='siempre'">
+   <param name="G_01" value="espacio='E1' tipo='texto' fondo='sí' expresión='[titulo.x,titulo.y]' texto='[titulo]' fuente='SansSerif,PLAIN,30' fijo='sí'">
+   <param name="G_02" value="espacio='EspUp' tipo='texto' fondo='sí' dibujar-si='0' expresión='[_TEXT_____,20]' fijo='sí'">
+   <param name="G_03" value="espacio='EspUp' tipo='punto' fondo='sí' expresión='(5,-23)' texto='{\rtf1\uc0{\fonttbl\f0\fcharset0 Times New Roman;\f1\fcharset0 Arial;\f2\fcharset0 Times New Roman;}\f1\fs36 Como puede verse, el campo direccional\par proporciona informaci\u243 n cualitativa acerca de\par las soluciones. En nuestro ejemplo parece\par evidente que las soluciones son funciones\par decrecientes cuando \f2\fs40\i{\*\mjaformula y>3}, \f1\fs36\i0 son crecientes\par cuando \f2\fs40\i{\*\mjaformula y<3}\f1\fs36\i0 , y todas las soluciones tienden\par al valor \f2\fs40\i{\*\mjaformula 3}\f1\fs36\i0  cuando \f2\fs40\i{\*\mjaformula x\u8594 \u8734 }\f1\fs36\i0 . En el caso de\par situaciones poblacionales, el campo\par direccional es de este estilo, y es muy\par importante fijar nuestra atenci\u243 n en la recta\par donde las pendientes son \f2\fs40\i{\*\mjaformula 0}\f1\fs36\i0 .\par \par Un aspecto importante de los campos direc-\par cionales es el caso en el que las pendientes\par resultan ser \f2\fs40\i{\*\mjaformula 0}\f1\fs36\i0 , se denotan como &quote;puntos\par de equilibrio&quote;. En el ejercicio se hizo notar\par que las soluciones convergen a este valor,\par pero no siempre pasa \u233 sto, pues existen dos\par tipos de puntos de equilibro: los de tipo\par fuente, y los de tipo sumidero. En nuestro\par ejemplo es un sumidero y es cuando las\par soluci\u243 n convergen. El otro caso es cuando\par las soluciones se alejan lo m\u225 s posible\par conforme transcurra el tiempo, es decir\par en direcci\u243 n positiva del eje \f2\fs40\i{\*\mjaformula x}\f1\fs36\i0 .\par \par Para indicar un sumidero se coloca una\par flecha vertical con direcci\u243 n a dicho valor,\par si se quiere indicar una fuente la flecha\par se coloca en direcci\u243 n contraria.\par \par Cabe mencionar que un punto de equilibrio\par puede funcionar como fuente y sumidero\par dependiendo de como sea el campo\par direccional y de si se esta debajo o encima\par del valor.}' fuente='SansSerif,PLAIN,18' fijo='sí' tamaño='0'">
+   <param name="G_04" value="espacio='EspDw' tipo='texto' fondo='sí' dibujar-si='0' expresión='[_CTRS_____,20]' fijo='sí'">
+   <param name="G_05" value="espacio='EspDw' tipo='texto' expresión='[ctrF.txt.x,ctrF.txt.y]' texto='{\rtf1\uc0{\fonttbl\f0\fcharset0 Times New Roman;\f1\fcharset0 Arial;\f2\fcharset0 Times New Roman;}\f1\fs36 An\u225 liticamente podemos encontrar que la\par soluci\u243 n a la ecuaci\u243 n \f2\fs40\i{\*\mjaformula{\fraction{\num dy}{\den dx}}={\fraction{\num 3-y}{\den 2}}}\f1\fs36\i0\par es \f2\fs40\i{\*\mjaformula y=3+ce{\supix -{\fraction{\num x}{\den 2}}}}\f1\fs36\i0 , cuyas soluciones\par particulares componen el campo direccional.\par Si \f2\fs40\i{\*\mjaformula c={\expr a\decimals 2\fixed1}}\f1\fs36\i0  entonces:\f2\fs40\i{\*\mjaformula y=3{\expr (a>=0)?&squot;+&squot;+a:a\decimals 2\fixed1}e{\supix -{\fraction{\num x}{\den 2}}}}\f1\fs36\i0}' fuente='SansSerif,PLAIN,18' fijo='sí'">
+   <param name="G_06" value="espacio='EspG' tipo='texto' fondo='sí' dibujar-si='0' expresión='[_GRAF_____,20]' fijo='sí'">
+   <param name="G_07" value="espacio='E1' tipo='texto' fondo='sí' expresión='[_FIN_PLANTILLA__,20]' fijo='sí'">
+   <param name="G_08" value="espacio='EspG' tipo='texto' dibujar-si='debug' expresión='[20,20+20*s]' familia='s' s.intervalo='[0,9]' s.pasos='9' texto='m[s]=[m[s]]' fijo='sí'">
+   <param name="G_09" value="espacio='EspG' tipo='segmento' color='rojo' expresión='(x1+(s%k),y1-(ent(s/k)))(x2+(s%k),m[ent(s/(k))]*(x2-x1)+y1-(ent(s/k)))' familia='s' s.intervalo='[0,k*r]' s.pasos='k*r' fijo='sí' tamaño='0'">
+   <param name="G_10" value="espacio='EspG' tipo='punto' expresión='(0,6)' texto='y(x)' fuente='Serif,ITALIC,28' fijo='sí' tamaño='0'">
+   <param name="G_11" value="espacio='EspG' tipo='punto' expresión='(6,0)' texto='x' fuente='Serif,ITALIC,28' fijo='sí' tamaño='0'">
+   <param name="G_12" value="espacio='EspG' tipo='punto' expresión='(-6,3.1)' texto='Punto de equilibrio\n    (sumidero)' fuente='SansSerif,PLAIN,17' fijo='sí' tamaño='0'">
+   <param name="G_13" value="espacio='EspG' tipo='punto' color='ae0000' expresión='(1,3+a)' texto='{\rtf1\uc0{\fonttbl\f0\fcharset0 Times New Roman;\f1\fcharset0 Times New Roman;\f2\fcharset0 Times New Roman;}\f1\fs44\b\i{\*\mjaformula y=3{\expr (a>=0)?&squot;+&squot;+a:a\decimals 2\fixed1}e{\supix -{\fraction{\num x}{\den 2}}}}\fs56\b0}' fuente='Serif,BOLD+ITALIC,22' fijo='sí' tamaño='0'">
+   <param name="G_14" value="espacio='EspG' tipo='ecuación' color='d320303a' expresión='y=3'">
+   <param name="G_15" value="espacio='EspG' tipo='ecuación' color='0000a3' expresión='y=3+a*exp(-x/2)'">
+   <param name="G_16" value="espacio='EspG' tipo='flecha' color='rojo' expresión='(0,4)(0,3)' fijo='sí' tamaño='3' ancho='4' ancho='4' punta='4' flecha='azul'">
+   <param name="G_17" value="espacio='EspG' tipo='flecha' color='rojo' expresión='(0,2)(0,3)' fijo='sí' tamaño='3' ancho='4' ancho='4' punta='4' flecha='azul'">
+   <param name="Animación" value="controles='sí' auto='sí'">
+</ajs>
+
+
+	<!------ INICIA LA INFO SOBRE LAS LICENCIAS Y LOS CRÉDITOS. ---------->
+    <a id="btCopyright" class="standardButton" title="Haz clic aquí para consultar los créditos y las condiciones de uso de este recurso." href="#" onClick="document.getElementById('copyright').className='visible';">©</a>
+    <div id="copyright" class="oculto">
+      
+      <div class='innerCopyright'>
+      
+          <a id="btCloseCopyright" class="standardButton" title="Haz clic aquí para cerrar esta ventana." href="#" onClick="document.getElementById('copyright').className='oculto'">×</a>
+  
+          <!-- Créditos UAM  (siempre deben ir en primer lugar) -->
+			<div class="creditos">
+				<h1>
+					Créditos 
+				</h1>
+
+				<h2>
+					Escena original
+				</h2>				<table class="autores" 	>
+
+					<tr> <td  class="rol"> Diseño del contenido			</td>		<td class="nombre"> Víctor Hugo García Jarillo (Facultad de Ciencias UNAM, LITE)</td></tr>
+					<tr> <td  class="rol"> Diseño funcional				</td>		<td class="nombre"> Víctor Hugo García Jarillo (Facultad de Ciencias UNAM, LITE)</td></tr>
+					<tr> <td  class="rol"> Programación					</td>		<td class="nombre"> Víctor Hugo García Jarillo (Facultad de Ciencias UNAM, LITE)</td></tr>
+					<tr> <td  class="rol"> Diseño gráfico				</td>		<td class="nombre"> Ricardo López Gómez</td></tr>
+					<tr> <td  class="rol" >Coordinación			</td>		<td class="nombre"> Leticia Montserrat Vargas Rocha</td></tr>
+					</table>
+				<h2>
+					Adaptación 
+				</h2>
+				<table class="autores" 	>
+				<tr> <td  class="rol"> Diseño funcional				</td>		<td class="nombre"> Victor Hugo García Jarillo (Facultad de                    Ciencias, UNAM)		</td></tr>
+					<tr> <td  class="rol"> Programación				</td>		<td class="nombre"> Victor Hugo García Jarillo (Facultad de                    Ciencias, UNAM)</td></tr>
+
+					<tr> <td  class="rol"> Diseño gráfico			</td>		<td class="nombre"> Francisco	Varela Fuentes</td></tr>
+					<tr> <td  class="rol" >Coordinación			</td>		<td class="nombre"> Leticia Montserrat Vargas Rocha</td></tr>
+		
+				</table>
+
+ <div class='logos'>
+	            <a href=''>
+	               <img src="../images/info/icns/logoLite.png">
+	            </a>
+	            <a href="http://www.unadmexico.mx/">
+	               <img src="../images/info/icns/logoUNADM.png">
+	            </a>
+	         </div>
+          </div>
+          
+          <!-- Linea separación créditos -->
+          <hr class="linea" />
+     
+          <!-- Aviso licencias -->
+          <div class="licencias">
+          
+				<p class="creativeCommons">Los contenidos de esta unidad didáctica interactiva están bajo una licencia <a href="http://creativecommons.org/licenses/by-nc-sa/2.5/es/" target="_blank">Creative Commons Reconocimiento-NoComercial-CompartirIgual</a>.</p>
+
+				<!--arquimedes (optativo)-->
+				<p>La unidad didáctica fue creada con <a href="http://arquimedes.matem.unam.mx/Descartes5/creditos/conCCL.html" target="_blank">Arquímedes</a>, una herramienta de código abierto.</p>
+
+				<!-- Descartes -->
+				<p>La unidad didáctica contiene escenas elaboradas con Descartes, una herramienta de código abierto.</p>
+
+
+          	<p style='text-align:center'> LITE - UnADM 2014</p>
+          </div>
+      </div>
+    </div> 
+   <!------ TERMINA LA INFO SOBRE LAS LICENCIAS Y LOS CRÉDITOS. ---------->
+  
+  
+  </div>
+  
+  
+</article>
+
+
+</body>
+
+</html>

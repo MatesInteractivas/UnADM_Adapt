@@ -1,0 +1,86 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<recurso 
+	id="_Un_150_CambioDeBase" 
+	nivel="Licenciatura" 
+	area="Matemáticas, Matemáticas discretas" 
+	plataforma="HTML 5" 
+	>
+	<titulo><![CDATA[
+		Sumando y restando en otras bases
+	]]></titulo>
+	
+	<Descripcion><![CDATA[
+    Como continuación de la unidad sobre Cambio de base, en donde el alumno ya aprendió a contar en otras bases y a transformar valores entre ellas, esta unidad se dedica al cálculo de sumas y restas tanto en base binaria como hexadecimal. Se presta especial atención tanto al acarreo de unidades en los casos de las sumas como al préstamo de unidades en el caso de las restas. Se hace una analogía entre dichos procedimientos y aquél en la base decimal para que el alumno note la naturaleza del mismo. Se presentan ejemplos aleatorios en un inicio, pero posteriormente el alumno debe realizar ejercicios, mismos que conllevan una retroalimentación. Se hace énfasis en que la suma y resta en circuitos típicos binarios se realiza precisamente de esta forma, por lo que es útil saber cómo funciona. Asimismo, el entender los procesos de acarreo y préstamo en otras bases permite que el alumno refuerce el entendimiento de dichos procesos en el caso decimal y, así, no sólo sabrá el proceso sino que también lo entenderá. Se hace un ejemplo de la multiplicación en hexadecimal para que note el proceso de acarreo en una operación más compleja que la suma. Este ejemplo pretende servir de motivación para que el alumno realice ejercicio propios al respecto, así como que conjeture sobre el caso de la multiplicación en binario.
+	]]></Descripcion>
+	<tags>
+	<![CDATA[
+		Cambio de base, operaciones en otras bases, suma en otras bases, resta en otras bases, base binaria, base hexadecimal, base decimal, base 2, base 16,
+		base 10
+	]]></tags>
+</recurso>
+
+<!--
+********************************************************************************
+                               **** Áreas **** 
+Matemáticas 
+	Aritmética
+		Fracciones
+	Álgebra
+		Combinatoria
+		Ecuaciones lineales
+		Ecuaciones polinomiales
+		Polinomios
+		Álgebra lineal
+		Teoría de grupos
+		Álgebra abstracta
+	Geometría
+		Geometría elemental
+		Geometría clásica
+		Geometría analítica
+	Trigonometría 
+	Probabilidad 
+		Cálculo de probabilidades
+		Eventos
+		Variables aleatorias
+		Ley de los grandes números
+		Teorema del límite central
+	Estadística
+		Medidas de tendencia central
+		Muestreo
+		Distribuciones
+		Inferencia
+	Cálculo
+		Funciones 
+		Límites
+		Continuidad
+		Derivadas 
+		Integrales 
+	Teoría de números
+	Teoría de gráficas
+Física
+	Mecánica
+	Electromagnetismo
+	Óptica
+	Físico-química 
+	Termodinámica
+	Mecánica estadística
+	Mecánica cuántica
+	Relatividad
+
+********************************************************************************
+
+********************************************************************************
+                             **** Niveles ****
+
+	Primaria
+	Preescolar
+	Secundaria
+	Bachillerato
+	Licenciatura
+	Posgrado 
+	Maestria
+	Doctorado
+
+********************************************************************************
+
+-->

@@ -1,0 +1,156 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<title>Desarrollo</title>	
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<link href="../css/DescHTML5.css" rel="stylesheet" type="text/css" media="screen" />
+	<link href="../css/html5_mobile.css" rel="stylesheet" type="text/css" media="screen" />
+  <script type="text/javascript" src='../javascript/inject_functions_scorms_descartes.js'></script>
+	<script type='text/javascript' src='../lib/descartes-min.js'></script>
+</head>
+<body>
+	<ajs name="Descartes" width=520 height=320 code="Descartes">
+   <param name="tamaño" value="520x320">
+   <param name="image_loader" value="">
+   <param name="expand" value="">
+   <param name="decimal_symbol" value=".">
+   <param name="antialias" value="sí">
+   <param name="deshacer" value="no">
+   <param name="nombre" value="Descartes">
+   <param name="Versión" value="5.356, 2016-05-03">
+   <param name="Idioma" value="español">
+   <param name="Botones" value="créditos=no config=no inicio=no limpiar=no">
+   <param name="E_01" value="tipo='R2' id='E0' fijo='sí' escala='24' O.y='10%' despl_imagen='arr-izq' fondo='dcdbe1' red='no' red10='no' ejes='no' texto='no'">
+   <param name="E_02" value="tipo='R2' id='E' x='E.x' y='E.y' ancho='510' alto='310' despl_imagen='arr-izq' fondo='dcdbe1' red='b8c4c8' red10='a0a0a0' ejes='405860' texto='no' números='sí'">
+   <param name="E_03" value="tipo='R2' id='CTRS' x='CTRS.x' y='CTRS.y' ancho='520' alto='154' fijo='sí' escala='-1' O.x='-50%' O.y='-50%' despl_imagen='arr-izq' fondo='88000000' red='no' red10='no' ejes='no' texto='no'">
+   <param name="E_04" value="tipo='R2' id='CTRS_north' x='CTRSN.x' y='CTRSN.y' ancho='520' alto='95' fijo='sí' escala='-1' O.x='-50%' O.y='-50%' despl_imagen='arr-izq' fondo='88000000' red='no' red10='no' ejes='no' texto='no'">
+   <param name="E_05" value="tipo='R2' id='btnOpenClose' x='btnOpenClose.x' y='btnOpenClose.y' ancho='35' alto='30' fijo='sí' escala='1' O.x='-50%' O.y='-50%' despl_imagen='arr-izq' fondo='ff000000' red='no' red10='no' ejes='no' texto='no'">
+   <param name="E_06" value="tipo='R2' id='btnOpenCloseN' x='btnOpenCloseN.x' y='btnOpenCloseN.y' ancho='50' alto='30' fijo='sí' escala='1' O.x='-50%' O.y='-50%' despl_imagen='arr-izq' fondo='ff000000' red='no' red10='no' ejes='no' texto='no'">
+   <param name="C_01" value="id='btnOpen' tipo='numérico' interfaz='botón' región='interior' espacio='btnOpenClose' expresión='(0,0,35,30)' fijo='sí' visible='sí' fuente puntos='16' imagen='_STYLE_|class=btnUNADM open|shadowTextColor=rgba(0,0,0,0.2)|shadowTextOffsetY=2|shadowTextBlur=0|textBorder=0' acción='calcular' parámetro='openPanelCtrs()' dibujar-si='!CTRS.opened'">
+   <param name="C_02" value="id='btnClose' tipo='numérico' interfaz='botón' región='interior' espacio='btnOpenClose' expresión='(0,0,35,30)' fijo='sí' visible='sí' imagen='_STYLE_|class=btnUNADM close|shadowTextColor=rgba(0,0,0,0.2)|shadowTextOffsetY=2|shadowTextBlur=0|textBorder=0' acción='calcular' parámetro='closePanelCtrs()' dibujar-si='CTRS.opened' pos_mensajes='centro'">
+   <param name="C_03" value="id='btnOpenN' tipo='numérico' interfaz='botón' región='interior' espacio='btnOpenCloseN' nombre='(h,k)' expresión='(0,0,50,30)' fijo='sí' visible='sí' color='blanco' color-int='blanco' negrita='sí' fuente puntos='16' imagen='_STYLE_|class=btnUNADM|shadowTextColor=rgba(0,0,0,0.2)|shadowTextOffsetY=2|shadowTextBlur=0|textBorder=0' acción='calcular' parámetro='openPanelCtrsNoth()' dibujar-si='!CTRSN.opened' pos_mensajes='centro'">
+   <param name="C_04" value="id='btnCloseN' tipo='numérico' interfaz='botón' región='interior' espacio='btnOpenCloseN' expresión='(0,0,50,30)' fijo='sí' visible='sí' imagen='_STYLE_|class=btnUNADM close north|shadowTextColor=rgba(0,0,0,0.2)|shadowTextOffsetY=2|shadowTextBlur=0|textBorder=0' acción='calcular' parámetro='closePanelCtrsNorth()' dibujar-si='CTRSN.opened' pos_mensajes='centro'">
+   <param name="C_05" value="id='help' tipo='numérico' interfaz='botón' región='interior' espacio='CTRS' nombre='Explicación' expresión='(bx,CTRS._h-bh-4,bw,bh)' fijo='sí' visible='sí' color='blanco' negrita='sí' fuente puntos='16' imagen='_STYLE_|class=btnUNADM |shadowTextColor=rgba(0,0,0,0.2)|shadowTextOffsetY=2|shadowTextBlur=0|textBorder=0' acción='abrir URL' parámetro='2_Inicio_2.html' pos_mensajes='centro'">
+   <param name="C_06" value="id='a' tipo='numérico' región='interior' espacio='CTRS' nombre='_nada_' expresión='(cx0,h0+0*(ch+sep),cw,ch)' valor='a' fijo='sí' visible='sí' acción='calcular' parámetro='calcPer.Puls()\ncalcPer()' pos_mensajes='centro'">
+   <param name="C_07" value="id='b' tipo='numérico' región='interior' espacio='CTRS' nombre='_nada_' expresión='(cx0,h0+1*(ch+sep),cw,ch)' valor='b' fijo='sí' visible='sí' acción='calcular' parámetro='calcPer.Puls()\ncalcPer()' pos_mensajes='centro'">
+   <param name="C_08" value="id='c' tipo='numérico' región='interior' espacio='CTRS' nombre='_nada_' expresión='(cx0,h0+2*(ch+sep),cw,ch)' valor='c' fijo='sí' visible='sí' acción='calcular' parámetro='calcPer.Puls()\ncalcPer()' pos_mensajes='centro'">
+   <param name="C_09" value="id='d' tipo='numérico' región='interior' espacio='CTRS' nombre='_nada_' expresión='(cx1,h0+0*(ch+sep),cw,ch)' valor='d' fijo='sí' visible='sí' acción='calcular' parámetro='calcPer.Puls()\ncalcPer()' pos_mensajes='centro'">
+   <param name="C_10" value="id='e' tipo='numérico' región='interior' espacio='CTRS' nombre='_nada_' expresión='(cx1,h0+1*(ch+sep),cw,ch)' valor='e' fijo='sí' visible='sí' acción='calcular' parámetro='calcPer.Puls()\ncalcPer()' pos_mensajes='centro'">
+   <param name="C_11" value="id='f' tipo='numérico' región='interior' espacio='CTRS' nombre='_nada_' expresión='(cx1,h0+2*(ch+sep),cw,ch)' valor='f' fijo='sí' visible='sí' acción='calcular' parámetro='calcPer.Puls()\ncalcPer()' pos_mensajes='centro'">
+   <param name="C_12" value="id='E.escala' tipo='numérico' región='interior' espacio='E' nombre='_nada_' expresión='(0,E._h-60,30,60)' valor='E.escala' incr='0.1*E.escala' fijo='sí' visible='no' pos_mensajes='centro'">
+   <param name="A_01" value="id='irAEscena(idxEscena)' algoritmo='sí' algoritmo='sí' hacer='parent.set(&squot;scene&squot;,idxEscena);parent.update()'">
+   <param name="A_02" value="id='initBtns()' algoritmo='sí' algoritmo='sí' hacer='sep=2;bw=120;bh=30;cw=120;cx0=36;cx1=CTRS._w-cw;bx=cx0+cw+40;nb=1;nc=6;h0=0;ch=50;'">
+   <param name="A_03" value="id='initEsp()' algoritmo='sí' algoritmo='sí' hacer='CTRS.x=(E0._w-CTRS_north._w)/2;CTRS.y=(E0._h-CTRS_north._h);CTRS.visible=0;;CTRS.x=0;CTRS.y=0;;btnOpenClose.y=(CTRS.y-btnOpenClose._h);btnOpenClose.x=(E0._w-btnOpenClose._w);;btnOpenCloseN.y=0;btnOpenCloseN.x=(CTRS_north._w-btnOpenCloseN._w);;E.x=5;E.y=5;'">
+   <param name="A_04" value="id='initEscena()' algoritmo='sí' algoritmo='sí' hacer='initBtns();initEsp();openPanelCtrs();CTRSN.opened=0;;CTRSN.x=(E0._w-CTRS_north._w)/2;CTRSN.y=0;;Nestados=2;estado=0;'">
+   <param name="A_05" value="id='openPanelCtrs()' algoritmo='sí' expresión='x' algoritmo='sí' hacer='CTRS.opened=1;;CTRS.x=(E0._w-CTRS._w)/2;CTRS.y=(E0._h-CTRS._h);;btnOpenClose.y=(CTRS.y-btnOpenClose._h);btnOpenClose.x=(E0._w-btnOpenClose._w)'">
+   <param name="A_06" value="id='openPanelCtrsNoth()' algoritmo='sí' expresión='x' algoritmo='sí' hacer='CTRSN.opened=1;;CTRSN.x=(E0._w-CTRS_north._w)/2;CTRSN.y=0;;btnOpenCloseN.y=CTRSN.y+CTRS_north._h;btnOpenCloseN.x=(E0._w-btnOpenCloseN._w);;;_Trace_(&squot;Abriendo panel NORTE&squot;)'">
+   <param name="A_07" value="id='closePanelCtrsNorth()' algoritmo='sí' expresión='x' algoritmo='sí' hacer='CTRS.visible=1;;CTRSN.opened=0;CTRSN.y=-CTRS_north._h;;btnOpenCloseN.y=CTRSN.y+CTRS_north._h;btnOpenCloseN.x=(E0._w-btnOpenCloseN._w);;_Trace_(&squot;Cerrando panel NORTE&squot;)'">
+   <param name="A_08" value="id='closePanelCtrs()' algoritmo='sí' expresión='x' algoritmo='sí' hacer='CTRS.visible=1;;CTRS.opened=0;CTRS.y=E0._h;;btnOpenClose.y=(CTRS.y-btnOpenClose._h);btnOpenClose.x=(E0._w-btnOpenClose._w)'">
+   <param name="A_09" value="id='__FIN_TPL_()'">
+   <param name="A_10" value="id='PN' vector='sí' evaluar='una-sola-vez' tamaño='6' expresión='&squot;a&squot;;&squot;b&squot;;&squot;c&squot;;&squot;d&squot;;&squot;e&squot;;&squot;f&squot;'">
+   <param name="A_11" value="id='Exid='">
+   <param name="A_12" value="id='calcPer.Puls()' algoritmo='sí' algoritmo='sí' hacer='ï=|hiperbola|;cond1=(4*a*c-b^2<0);puls[0]=(cond1)?1:puls[0];per1=(puls[0]==1)?1:per1;;ï=|dos rectas que se intersectan|;cond2=(a*c<0)&(F==0)&(d==0)&(e==0);puls[1]=(cond2)?1:puls[1];per2=(puls[1]==1)?1:per2;;ï=|elipse|;cond3.1=(4*a*c-b^2>0);puls[2]=(cond3.1)?1:puls[2];per3.1=(puls[2]==1)?0.8:per3.1;;ï=|elipse con ejes de simetría parallelos al eje Y|;cond3.2=(cond3.1)&(b==0)&(a>c);puls[3]=(cond3.2)?1:puls[3];per3.2=(puls[3]==1)?0.1:per3.2;;ï=|elipse con ejes de simetría parallelos al eje X|;cond3.3=(cond3.1)&(b==0)&(a<c);puls[4]=(cond3.3)?1:puls[4];per3.3=(puls[4]==1)?0.1:per3.3;;per3=per3.1+per3.2+per3.3;;ï=|círculo|;cond4=(a==c)&(b==0);puls[5]=(cond4)?1:puls[5];per4=(puls[5]==1)?1:per4;;ï=|parábola horizontal|;cond5.1=(c!=0)&(a==0)&(d!=0)&(b==0);puls[6]=(cond5.1)?1:puls[6];per5.1=(puls[6]==1)?0.6:per5.1;;ï=|parábola horizontal con vértice en el eje Y|;cond5.2=(cond5.1)&(e==0);puls[7]=(cond5.2)?1:puls[7];per5.2=(puls[7]==1)?0.2:per5.2;;ï=|parábola horizontal con vértice en el origen|;cond5.3=(cond5.2)&(f==0);puls[8]=(cond5.3)?1:puls[8];per5.3=(puls[8]==1)?0.2:per5.3;;per5=per5.1+per5.2+per5.3;;ï=|parábola vertical|;cond6.1=(c==0)&(a!=0)&(e!=0)&(b==0);puls[9]=(cond6.1)?1:puls[9];per6.1=(puls[9]==1)?0.6:per6.1;;ï=|parábola vertical con vértice en el eje X|;cond6.2=(cond6.1)&(d==0);puls[10]=(cond6.2)?1:puls[10];per6.2=(puls[10]==1)?0.2:per6.2;;ï=|parábola vertical con vértice en el origen|;cond6.3=(cond6.2)&(f==0);puls[11]=(cond6.3)?1:puls[11];per6.3=(puls[11]==1)?0.2:per6.3;;per6=per6.1+per6.2+per6.3;;ï=|rectas verticales paralelas|;cond7.1=(a!=0)&(d!=0)&(b==0)&(c==0)&(e==0);puls[12]=(cond7.1)?1:puls[12];per7.1=(puls[12]==1)?0.4:per7.1;;ï=|recta x=0 (eje Y)|;cond7.2=(a!=0)&(b==0)&(c==0)&(e==0)&(d==0)&(f==0);puls[13]=(cond7.2)?1:puls[13];per7.2=(puls[13]==1)?0.1:per7.2;;ï=|rectas horizontales paralelas|;cond7.3=(c!=0)&(e!=0)&(b==0)&(a==0)&(d==0);puls[14]=(cond7.3)?1:puls[14];per7.3=(puls[14]==1)?0.4:per7.3;;ï=|recta y=0 (eje X)|;cond7.4=(c!=0)&(b==0)&(a==0)&(d==0)&(e==0)&(f==0);puls[15]=(cond7.4)?1:puls[15];per7.4=(puls[15]==1)?0.1:per7.4;;per7=per7.1+per7.2+per7.3+per7.4;;ï=|origen|;cond8=(a*c>0)&(b==0)&(d==0)&(e==0)&(f==0);puls[16]=(cond8)?1:puls[16];per8=(puls[16]==1)?1:per8;;ï=|vacío|;cond9=(((a>0)&(c>0)&(F>0))|((a<0)&(c<0)&(F<0)))&(b==0)&(d==0)&(e==0);puls[17]=(cond9)?1:puls[17];per9=(puls[17]==1)?1:per9;'">
+   <param name="A_13" value="id='calcPer()' algoritmo='sí' algoritmo='sí' inicio='condSigno=0;perTotal=0' hacer='numConds=9;;perTotal=(per1+per2+per3+per4+per5+per6+per7+per8+per9)*100/numConds;;setSCORMPercentage(perTotal)'">
+   <param name="A_14" value="id='getSCORMState()' algoritmo='sí' expresión='res' algoritmo='sí' Local='res,arr' inicio='arr=&squot;@&squot;' hacer='ö=|Estandar ---- [MIDC]XX.<var>  SI SOLO EXISTE UNA ESCENA EN EL HTML|;ö=|Estandar ---- [MIDC]XX_YY.<var>  SI HAY MAS DE UNA ESCENA EN EL HTML|;;res=&squot;D01.E1.escala:&squot;+E1.escala+arr;;res=res+&squot;D01.a:&squot;+a+arr;res=res+&squot;D01.b:&squot;+b+arr;res=res+&squot;D01.c:&squot;+c+arr;res=res+&squot;D01.d:&squot;+d+arr;res=res+&squot;D01.e:&squot;+e+arr;res=res+&squot;D01.f:&squot;+f+arr;;res=res+&squot;D01.puls[0]:&squot;+puls[0]+arr;res=res+&squot;D01.puls[1]:&squot;+puls[1]+arr;res=res+&squot;D01.puls[2]:&squot;+puls[2]+arr;res=res+&squot;D01.puls[3]:&squot;+puls[3]+arr;res=res+&squot;D01.puls[4]:&squot;+puls[4]+arr;res=res+&squot;D01.puls[5]:&squot;+puls[5]+arr;res=res+&squot;D01.puls[6]:&squot;+puls[6]+arr;res=res+&squot;D01.puls[7]:&squot;+puls[7]+arr;res=res+&squot;D01.puls[8]:&squot;+puls[8]+arr;res=res+&squot;D01.puls[9]:&squot;+puls[9]+arr;res=res+&squot;D01.puls[10]:&squot;+puls[10]+arr;res=res+&squot;D01.puls[11]:&squot;+puls[11]+arr;res=res+&squot;D01.puls[12]:&squot;+puls[12]+arr;res=res+&squot;D01.puls[13]:&squot;+puls[13]+arr;res=res+&squot;D01.puls[14]:&squot;+puls[14]+arr;res=res+&squot;D01.puls[15]:&squot;+puls[15]+arr;res=res+&squot;D01.puls[16]:&squot;+puls[16]+arr;res=res+&squot;D01.puls[17]:&squot;+puls[17]+arr'">
+   <param name="A_15" value="id='initStateScorm()' algoritmo='sí' algoritmo='sí' hacer='tmp.E.escala=getSCORMStateVar(&squot;D01.E.escala&squot;);tmp.a=getSCORMStateVar(&squot;D01.a&squot;);tmp.b=getSCORMStateVar(&squot;D01.b&squot;);tmp.c=getSCORMStateVar(&squot;D01.c&squot;);tmp.d=getSCORMStateVar(&squot;D01.d&squot;);tmp.e=getSCORMStateVar(&squot;D01.e&squot;);tmp.f=getSCORMStateVar(&squot;D01.f&squot;);;E.escala=(tmp.E.escala==0)?48:tmp.E.escala;a=(tmp.a==0)?1:tmp.a;b=(tmp.b==0)?0.75:tmp.b;c=(tmp.c==0)?2.5:tmp.c;d=(tmp.d==0)?-4:tmp.d;e=(tmp.e==0)?2:tmp.e;f=(tmp.f==0)?1:tmp.f;;puls[0]=getSCORMStateVar(&squot;D01.puls[0]&squot;);puls[1]=getSCORMStateVar(&squot;D01.puls[1]&squot;);puls[2]=getSCORMStateVar(&squot;D01.puls[2]&squot;);puls[3]=getSCORMStateVar(&squot;D01.puls[3]&squot;);puls[4]=getSCORMStateVar(&squot;D01.puls[4]&squot;);puls[5]=getSCORMStateVar(&squot;D01.puls[5]&squot;);puls[6]=getSCORMStateVar(&squot;D01.puls[6]&squot;);puls[7]=getSCORMStateVar(&squot;D01.puls[7]&squot;);puls[8]=getSCORMStateVar(&squot;D01.puls[8]&squot;);puls[9]=getSCORMStateVar(&squot;D01.puls[9]&squot;);puls[10]=getSCORMStateVar(&squot;D01.puls[10]&squot;);puls[11]=getSCORMStateVar(&squot;D01.puls[11]&squot;);puls[12]=getSCORMStateVar(&squot;D01.puls[12]&squot;);puls[13]=getSCORMStateVar(&squot;D01.puls[13]&squot;);puls[14]=getSCORMStateVar(&squot;D01.puls[14]&squot;);puls[15]=getSCORMStateVar(&squot;D01.puls[15]&squot;);puls[16]=getSCORMStateVar(&squot;D01.puls[16]&squot;);puls[17]=getSCORMStateVar(&squot;D01.puls[17]&squot;);;calcPer.Puls();calcPer();'">
+   <param name="A_16" value="id='__FIN_SCORM_()'">
+   <param name="A_17" value="id='calcTodo()' algoritmo='sí' algoritmo='sí' hacer='Δ=4*a*c-b^2;Δ=(abs(Δ)<epsilon)?1:Δ;h=(-2*c*d+b*e)/Δ;k=(b*d-2*a*e)/Δ;F=a*h^2+b*h*k+c*k^2+d*h+e*k+f'">
+   <param name="A_18" value="id='moveSpace()' algoritmo='sí' expresión='1' algoritmo='sí' hacer='ya=(mpa)?ya:E2.mouse_y;scroll=min(max(scroll-(E2.mouse_y-ya)/2,0),400);ya=E2.mouse_y;'">
+   <param name="A_20" value="id='INICIO' algoritmo='sí' evaluar='una-sola-vez' hacer='initStateScorm();initEscena()'">
+   <param name="A_21" value="id='CALCULOS' algoritmo='sí' evaluar='siempre' hacer='mpa=(E2.mouse_pressed)?moveSpace():0;dY=Expand(estado)*(400-scroll);calcTodo()'">
+   <param name="A_22" value="id='Notextos' evento='sí' condición='!CTRSN.opened' acción='limpiar' ejecución='alternar' pos_mensajes='centro'">
+   <param name="A_23" value="id='Notextos' evento='sí' condición='CTRSN.opened' acción='limpiar' ejecución='alternar' pos_mensajes='centro'">
+   <param name="G_01" value="espacio='E0' tipo='imagen' fondo='sí' coord_abs='sí' expresión='(-50,-100)' archivo='imgs/tpl/fondo_01.jpg'">
+   <param name="G_02" value="espacio='CTRS_north' tipo='texto' fondo='sí' color='blanco' expresión='[40,0]' texto='{\rtf1\uc0{\fonttbl\f0\fcharset0 Times New Roman;\f1\fcharset0 Times New Roman;\f2\fcharset0 Times New Roman;}\f1\fs48\i{\*\mjaformula h={\fraction{\num -2cd+be}{\den 4ac-b{\supix 2}}}}{\*\mjaformula k={\fraction{\num bd-2ae}{\den 4ac-b{\supix 2}}}}\fs44\b\i0}' fuente='Serif,ITALIC,24' fijo='sí' color_borde_texto='blanco' info='h y k'">
+   <param name="G_03" value="espacio='CTRS_north' tipo='texto' fondo='sí' color='blanco' expresión='[40,60]' texto='{\rtf1\uc0{\fonttbl\f0\fcharset0 Times New Roman;\f1\fcharset0 Times New Roman;\f2\fcharset0 Times New Roman;}\f1\fs44\i{\*\mjaformula F=ah{\supix 2}+bhk+ck{\supix 2}+dh+ek+f=0}\b\i0}' fuente='Serif,ITALIC,22' fijo='sí' color_borde_texto='blanco' info='F'">
+   <param name="G_04" value="espacio='CTRS' tipo='texto' color='406080' expresión='[8,8+h0+s*(sep+ch)]' familia='s' s.intervalo='[0,2]' s.pasos='2' texto='[PN[s]]' fuente='Serif,BOLD+ITALIC,26' fijo='sí' color_borde_texto='blanco'">
+   <param name="G_05" value="espacio='CTRS' tipo='texto' color='406080' expresión='[CTRS._w-cw-27,8+h0+s*(sep+ch)]' familia='s' s.intervalo='[0,2]' s.pasos='2' texto='[PN[s+3]]' fuente='Serif,BOLD+ITALIC,26' fijo='sí' color_borde_texto='blanco'">
+   <param name="G_06" value="espacio='E' tipo='texto' fondo='sí' color='406080' dibujar-si='!CTRSN.opened' expresión='[28,0]' texto='{\rtf1\uc0{\fonttbl\f0\fcharset0 Times New Roman;\f1\fcharset0 Times New Roman;\f2\fcharset0 Arial;\f3\fcharset0 Times New Roman;\f4\fcharset0 Times New Roman;}{\colortbl\red255\green255\blue255;}\f1\fs48\b\i{\*\mjaformula ax{\supix 2}+bxy+cy{\supix 2}+dx+ey+f=0}\f2\fs36\b0\i0  con \f3\fs48\i{\*\mjaformula 4ac-b{\supix 2}\u8800 0}\cf0\fs44\b\i0}' fuente='Serif,BOLD+ITALIC,24' fijo='sí' info='ax^2+bxy+cy^2+dx+ey+f=0'">
+   <param name="G_07" value="espacio='E' tipo='texto' fondo='sí' color='cc0022' dibujar-si='!CTRSN.opened' expresión='[28,30]' texto='{\rtf1\uc0{\fonttbl\f0\fcharset0 Times New Roman;\f1\fcharset0 Times New Roman;\f2\fcharset0 Times New Roman;}\f1\fs48\b\i{\*\mjaformula ax{\supix 2}+bxy+cy{\supix 2}+F=0}\fs44\i0}' fuente='Serif,BOLD+ITALIC,24' fijo='sí' color_borde_texto='blanco' info='ax^2+bxy+cy^2+F=0'">
+   <param name="G_08" value="espacio='E' tipo='ecuación' color='406080' expresión='a*x^2+b*x*y+c*y^2+d*x+e*y+f=0' ancho='2'">
+   <param name="G_09" value="espacio='E' tipo='ecuación' color='cc0022' expresión='a*x^2+b*x*y+c*y^2+F=0' ancho='2'">
+   <param name="G_10" value="espacio='E' tipo='punto' color='grisObscuro' expresión='(h,k)' texto='(h,k)' fuente='Serif,ITALIC,22' fijo='sí'">
+   <param name="G_11" value="espacio='E' tipo='texto' dibujar-si='0' expresión='[20,20]' texto='CTRSN.opened = [CTRSN.opened] [CTRS.opened]' fijo='no'">
+   <param name="G_12" value="espacio='E' tipo='texto' dibujar-si='0' expresión='[0,0]' texto='cond1=[cond1]   cond2=[cond2]   cond3.1=[cond3.1]   cond3.2=[cond3.2]   cond3.3=[cond3.3]   cond4=[cond4]   cond5.1=[cond5.1]   cond5.2=[cond5.2]   cond5.3=[cond5.3]   \ncond5=[cond5]   cond6.1=[cond6.1]   cond6.2=[cond6.2]   cond6.3=[cond6.3]   cond7.1=[cond7.1]   cond7.2=[cond7.2]   cond7.3=[cond7.3]   cond7.4=[cond7.4]   cond8=[cond8]\ncond9=[cond9]' fijo='no'">
+   <param name="G_13" value="espacio='E' tipo='texto' color='0000aa' dibujar-si='0' expresión='[5,50]' texto='per1=[per1]   per2=[per2]   per3.1=[per3.1]   per3.2=[per3.2]   per3.3=[per3.3]   per3=[per3]   per4=[per4]   per5.1=[per5.1]   per5.2=[per5.2]   \nper5.3=[per5.3]   per5=[per5]   per6.1=[per6.1]   per6.2=[per6.2]   per6.3=[per6.3]   per7.1=[per7.1]   per7.2=[per7.2]   per7.3=[per7.3]   \nper7.4=[per7.4]   per7=[per7]   per8=[per8]' fijo='no'">
+   <param name="G_14" value="espacio='E' tipo='texto' color='cb0057' dibujar-si='0' expresión='[5+s*50,80+20*s%2]' familia='s' s.intervalo='[0,15]' s.pasos='15' texto='puls([s])=[puls[s]]' fijo='no'">
+   <param name="Animación" value="pausa='100' controles='no' auto='sí' hacer='closePanelCtrsNorth()'">
+</ajs>
+			
+<!------ INICIA LA INFO SOBRE LAS LICENCIAS Y LOS CRÉDITOS. ---------->
+    <a id="btCopyright" class="standardButton" title="Haz clic aquí para consultar los créditos y las condiciones de uso de este recurso." href="#" onclick="document.getElementById('copyright').className='visible';">©</a>
+    <div id="copyright" class="oculto">
+      
+      <div class='innerCopyright'>
+      
+          <a id="btCloseCopyright" class="standardButton" title="Haz clic aquí para cerrar esta ventana." href="#" onclick="document.getElementById('copyright').className='oculto'">×</a>
+  
+          <!-- Créditos UAM  (siempre deben ir en primer lugar) -->
+			<div class="creditos">
+				<h1>
+					Créditos 
+				</h1>
+				<h2>
+					Escena original
+				</h2>				<table class="autores" 	>
+					<tr> <td  class="rol"> Diseño del contenido			</td>		<td class="nombre">Ana Belém Zavaleta Ramos<br>José Luis Abreu León</td></tr>
+					<tr> <td  class="rol"> Diseño funcional				</td>		<td class="nombre">Ana Belém Zavaleta Ramos<br>José Luis Abreu León</td></tr>
+					<tr> <td  class="rol"> Programación				</td>		<td class="nombre">Ana Belém Zavaleta Ramos<br>José Luis Abreu León</td></tr>
+					<!-- Varias personas en el mismo rubro, separar por <br> -->
+					<tr> <td  class="rol"> Asesoría de programación		</td>		<td class="nombre">José Luis Abreu León<br>David Mustri Trejo</td></tr>		
+					<tr> <td  class="rol"> Diseño gráfico			</td>		<td class="nombre"> Ricardo López Gómez	</td></tr>
+					<tr> <td  class="rol" >Coordinación			</td>		<td class="nombre"> Leticia Montserrat Vargas Rocha</td></tr>
+				</table>
+				<h2>
+					Adaptación 
+				</h2>
+				<table class="autores" 	>
+					<tr> <td  class="rol"> Diseño funcional				</td>		<td class="nombre">Elsa Sirenia Vega Camacho</td></tr>
+					<tr> <td  class="rol"> Programación				</td>		<td class="nombre">Elsa Sirenia Vega Camacho</td></tr>
+					<!-- Varias personas en el mismo rubro, separar por <br> -->
+					<tr> <td  class="rol"> Asesoría de programación			</td>		<td class="nombre">Leticia Montserrat Vargas Rocha</td></tr>
+					<tr> <td  class="rol"> Diseño gráfico				</td>		<td class="nombre"> Francisco	Varela Fuentes						</td></tr>
+					<tr> <td  class="rol" >Coordinación				</td>		<td class="nombre"> Leticia Montserrat Vargas Rocha						</td></tr>
+				</table>
+	         
+	         <div class='logos'>
+	            <a href=''>
+	               <img src="../images/info/icns/logoLite.png">
+	            </a>
+	            <a href="http://www.unadmexico.mx/">
+	               <img src="../images/info/icns/logoUNADM.png">
+	            </a>
+	         </div>
+          </div>
+          
+          <!-- Linea separación créditos -->
+          <hr class="linea" />
+     
+          <!-- Aviso licencias -->
+          <div class="licencias">
+          
+				<p class="creativeCommons">Los contenidos de esta unidad didáctica interactiva están bajo una licencia <a href="http://creativecommons.org/licenses/by-nc-sa/2.5/es/" target="_blank">Creative Commons Reconocimiento-NoComercial-CompartirIgual</a>.</p>
+
+				<!--arquimedes (optativo)-->
+				<p>La unidad didáctica fue creada con <a href="http://arquimedes.matem.unam.mx/Descartes5/creditos/conCCL.html" target="_blank">Arquímedes</a>, una herramienta de código abierto.</p>
+
+				<!-- Descartes -->
+				<p>La unidad didáctica contiene escenas elaboradas con Descartes, una herramienta de código abierto.</p>
+
+
+          	<p style='text-align:center'> LITE - UnADM 2014</p>
+          </div>
+      </div>
+    </div> 
+   <!------ TERMINA LA INFO SOBRE LAS LICENCIAS Y LOS CRÉDITOS. ---------->
+  
+  
+  </div>
+  
+  
+</article>
+
+
+</body>
+
+</html>
